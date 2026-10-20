@@ -53,8 +53,16 @@ th{background:var(--sheet);font-weight:500}
 .hist td,.hist th{text-align:left}
 
 .bar{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-size:.88rem;color:var(--muted)}
-.strip{display:flex;flex-wrap:wrap;gap:4px;margin:12px 0 26px}
-.strip button{min-width:2rem;height:2rem;padding:0 4px;background:transparent;border:1px solid var(--rule);border-radius:2px;font:.8rem "IBM Plex Mono",monospace;color:var(--muted)}
+.qhead{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule);margin:-28px -18px 22px;padding:12px 18px 0}
+.qhead .bar{align-items:center}
+.qhead .arrows{display:flex;gap:6px}
+.qhead .arrows button{width:2.2rem;height:2rem;background:transparent;border:1px solid var(--rule);border-radius:2px;color:var(--ink);font-size:1rem}
+.qhead .arrows button:disabled{opacity:.35;cursor:default}
+.qnav{position:sticky;bottom:0;z-index:5;background:var(--paper);border-top:1px solid var(--rule);margin:22px -18px -64px;padding:10px 18px calc(10px + env(safe-area-inset-bottom))}
+.part{scroll-margin-top:110px}
+.fbx{scroll-margin:120px 0 90px}
+.strip{display:flex;gap:4px;margin:10px 0 10px;overflow-x:auto;scrollbar-width:thin;padding-bottom:2px}
+.strip button{flex:none;min-width:2rem;height:2rem;padding:0 4px;background:transparent;border:1px solid var(--rule);border-radius:2px;font:.8rem "IBM Plex Mono",monospace;color:var(--muted)}
 .strip .r{background:var(--okbg);border-color:var(--ok);color:var(--ok)}
 .strip .w{background:var(--badbg);border-color:var(--bad);color:var(--bad)}
 .strip .cur{border-color:var(--ink);color:var(--ink);font-weight:600;box-shadow:inset 0 -2px 0 var(--ink)}
@@ -81,8 +89,15 @@ th{background:var(--sheet);font-weight:500}
 .fb.no{border-color:var(--bad)}
 .fb h3{font-size:1.1rem;margin-bottom:4px}
 .fb p{margin:4px 0}
-.steps{font-family:"IBM Plex Mono",monospace;font-size:.88rem;white-space:pre-wrap;background:var(--sheet);border:1px solid var(--rule);border-radius:3px;padding:10px 12px;margin:8px 0;overflow-x:auto}
-.steps table{margin:0 0 8px}
+.steps{font-size:.95rem;background:var(--sheet);border:1px solid var(--rule);border-radius:3px;padding:12px 14px;margin:8px 0;overflow-x:auto}
+.steps p{margin:4px 0}
+.steps table{margin:6px 0}
+.sol{margin:0;padding-left:1.4rem}
+.sol>li{margin:0 0 14px;padding-left:2px}
+.sol>li:last-child{margin-bottom:0}
+.sol>li::marker{font-family:"Source Serif 4",Georgia,serif;font-weight:600}
+.sol .sh{display:block;font-weight:600;margin-bottom:2px}
+.fx{font:.88rem/1.6 "IBM Plex Mono",monospace;white-space:pre-wrap;background:var(--paper);border:1px solid var(--rule);border-radius:2px;padding:7px 10px;margin:6px 0;overflow-x:auto}
 .label{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:12px}
 .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
 .hint{font-size:.8rem;color:var(--muted)}
@@ -203,32 +218,42 @@ function start(id) { S = { topic: id, n: store.n, qs: [], i: 0 }; show(0); }
 const answered = () => S.qs.filter(x => x.pick !== null);
 const isOk = x => !!x.x.opts[x.pick].ok;
 
+// A sáv aktuális gombját középre görgeti (sok kérdésnél a sáv vízszintesen görgethető).
+function centerStrip() {
+  const st = app.querySelector('.strip'), cur = st && st.querySelector('.cur');
+  if (cur) st.scrollLeft = cur.offsetLeft - st.offsetLeft - st.clientWidth / 2 + cur.offsetWidth / 2;
+}
+
 // Kvíz nézet: j-edik kérdés. A már megválaszolt kérdések visszanézhetők.
+// Fent és lent ragadós navigáció (.qhead, .qnav).
 function show(j, keepScroll) {
   while (S.qs.length <= j) S.qs.push({ x: nextGen(), pick: null, tip: false });
   S.i = j;
   const it = S.qs[j], t = topicById(S.topic), done = answered(), okN = done.filter(isOk).length, all = done.length === S.n;
   app.innerHTML = `
-    <div class="bar"><span>${t.name}</span><span class="mono">${okN} helyes · ${done.length} / ${S.n} kész</span></div>
-    <div class="strip">${Array.from({ length: S.n }, (_, k) => { const q = S.qs[k], st = q && q.pick !== null ? (isOk(q) ? ' r' : ' w') : '';
-      return `<button class="${k === j ? 'cur' : ''}${st}" data-go="${k}" aria-label="${k + 1}. feladat">${k + 1}</button>`; }).join('')}</div>
+    <div class="qhead">
+      <div class="bar"><span>${t.name}</span><span class="mono">${okN} helyes · ${done.length} / ${S.n}</span>
+        <span class="arrows"><button data-step="-1" aria-label="Előző"${j === 0 ? ' disabled' : ''}>←</button><button data-step="1" aria-label="Következő"${j === S.n - 1 ? ' disabled' : ''}>→</button></span></div>
+      <div class="strip">${Array.from({ length: S.n }, (_, k) => { const q = S.qs[k], st = q && q.pick !== null ? (isOk(q) ? ' r' : ' w') : '';
+        return `<button class="${k === j ? 'cur' : ''}${st}" data-go="${k}" aria-label="${k + 1}. feladat">${k + 1}</button>`; }).join('')}</div>
+    </div>
     <div id="q">${qblock(it.x, `Feladat ${j + 1}.`)}</div>
-    <div class="row" style="margin-top:18px">
-      <button class="btn ghost" id="prev"${j === 0 ? ' disabled' : ''}>Előző</button>
-      ${j < S.n - 1 ? `<button class="btn${it.pick === null ? ' ghost' : ''}" id="next">${it.pick === null ? 'Kihagyom' : 'Következő'}</button>` : ''}
+    <p class="hint">Billentyűk: A–D vagy 1–4 válasz, T tipp, ← → lapozás, Enter tovább</p>
+    <div class="qnav row">
+      <button class="btn ghost" data-step="-1"${j === 0 ? ' disabled' : ''}>Előző</button>
+      ${j < S.n - 1 ? `<button class="btn${it.pick === null ? ' ghost' : ''}" id="next" data-step="1">${it.pick === null ? 'Kihagyom' : 'Következő'}</button>` : ''}
       ${all ? '<button class="btn" id="res">Eredmény</button>' : j === S.n - 1 ? `<span style="color:var(--muted);font-size:.85rem">Még ${S.n - done.length} kérdés vár válaszra.</span>` : ''}
       <button class="link" id="quit">Kilépés</button>
-    </div>
-    <p class="hint">Billentyűk: A–D vagy 1–4 válasz, T tipp, ← → lapozás, Enter tovább</p>`;
+    </div>`;
   const q = $('#q');
   bindBlock(q, it.x, answer, () => { it.tip = true; });
   if (it.tip) showTip(q, it.x);
   if (it.pick !== null) paint(q, it.x, it.pick);
   app.querySelectorAll('[data-go]').forEach(b => b.onclick = () => show(+b.dataset.go));
-  $('#prev').onclick = () => show(j - 1);
-  const nx = $('#next'); if (nx) nx.onclick = () => show(j + 1);
+  app.querySelectorAll('[data-step]').forEach(b => b.onclick = () => show(j + +b.dataset.step));
   const rs = $('#res'); if (rs) rs.onclick = result;
   $('#quit').onclick = () => { if (!done.length || confirm('Kilépsz? Ez a gyakorlás nem kerül mentésre.')) home(); };
+  centerStrip();
   if (!keepScroll) scrollTo(0, 0);
 }
 
@@ -242,21 +267,26 @@ function answer(i) {
 // Teljes feladat: egy adatsor, több részkérdés, mindegyik külön megválaszolható.
 function caseView(id) {
   S = null;
-  const t = topicById(id), c = makeCase(pick(t.cases));
-  app.innerHTML = `<button class="link" id="back">Témák</button>
-    <div class="eyebrow" style="margin-top:18px">Teljes feladat · ${t.name}</div><h1>${c.title}</h1>
+  const t = topicById(id), c = makeCase(pick(t.cases)), L = 'abcdefgh';
+  app.innerHTML = `
+    <div class="qhead">
+      <div class="bar"><button class="link" id="back">← Témák</button><span class="mono" id="csum">0 / ${c.parts.length} rész kész</span></div>
+      <div class="strip">${c.parts.map((_, k) => `<button data-jump="${k}" aria-label="${L[k]}) rész">${L[k]})</button>`).join('')}</div>
+    </div>
+    <div class="eyebrow">Teljes feladat · ${t.name}</div><h1>${c.title}</h1>
     <div class="qtext stem">${c.stem}</div>
-    ${c.parts.map((p, k) => `<section class="part" data-p="${k}">${qblock(p, `${'abcdefgh'[k]})`)}</section>`).join('')}
-    <p class="lead" id="csum"></p>
-    <div class="row" style="margin-top:20px"><button class="btn" id="again">Új feladat</button><button class="btn ghost" id="th">Elmélet</button><button class="btn ghost" id="home">Témák</button></div>`;
+    ${c.parts.map((p, k) => `<section class="part" data-p="${k}">${qblock(p, `${L[k]})`)}</section>`).join('')}
+    <div class="qnav row"><button class="btn" id="again">Új feladat</button><button class="btn ghost" id="th">Elmélet</button><button class="btn ghost" id="home">Témák</button></div>`;
+  app.querySelectorAll('[data-jump]').forEach(b => b.onclick = () => app.querySelector(`.part[data-p="${b.dataset.jump}"]`).scrollIntoView({ behavior: 'smooth', block: 'start' }));
   app.querySelectorAll('.part').forEach(sec => {
-    const p = c.parts[+sec.dataset.p];
+    const k = +sec.dataset.p, p = c.parts[k];
     bindBlock(sec, p, i => {
       if (p.pick !== undefined) return;
       p.pick = i; paint(sec, p, i);
+      app.querySelector(`[data-jump="${k}"]`).classList.add(p.opts[i].ok ? 'r' : 'w');
       const d = c.parts.filter(x => x.pick !== undefined), okN = d.filter(x => x.opts[x.pick].ok).length;
       if (d.length === c.parts.length) { store.cases.push({ topic: id, title: c.title, ok: okN, n: d.length, pct: Math.round(okN / d.length * 100), date: now() }); store.cases = store.cases.slice(-200); save(); }
-      $('#csum').textContent = `${okN} / ${d.length} rész helyes` + (d.length < c.parts.length ? ` (még ${c.parts.length - d.length} van hátra)` : '.');
+      $('#csum').textContent = d.length < c.parts.length ? `${okN} helyes · ${d.length} / ${c.parts.length} rész kész` : `Kész: ${okN} / ${c.parts.length} rész helyes`;
     });
   });
   $('#back').onclick = home; $('#home').onclick = home; $('#again').onclick = () => caseView(id); $('#th').onclick = () => theory(id);
