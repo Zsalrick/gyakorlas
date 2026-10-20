@@ -4,7 +4,8 @@ let fails = 0, fb = {};
 const bad = x => {
   const ts = x.opts.map(o => o.t);
   return x.opts.length !== 4 || new Set(ts).size !== 4 || x.opts.filter(o => o.ok).length !== 1 || !x.hint ||
-    ts.some(s => s === '–' || /NaN|Infinity|undefined/.test(s)) || /NaN|undefined|Infinity/.test(x.q + x.sol + x.hint);
+    ts.some(s => s === '–' || /NaN|Infinity|undefined/.test(s)) || /NaN|undefined|Infinity/.test(x.q + x.sol + x.hint) ||
+    [x.q, x.sol, x.hint, ...x.opts.map(o => o.why || '')].some(s => s.split('$').length % 2 === 0); // páratlan számú $ = elrontott képlet
 };
 const fail = (name, x) => { fails++; if (fails < 8) console.log(name, x.opts.map(o => o.t), x.q.slice(0, 80)); };
 for (const t of TOPICS) {

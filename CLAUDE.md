@@ -4,7 +4,8 @@ Statikus weboldal (nincs build, nincs függőség): véletlenszerűen generált 
 
 ## Fájlok
 - `index.html` – teljes UI (CSS + app logika inline): témaválasztás, kvíz lapozással (ragadós fejléc: számozott sáv + nyilak, ragadós lábléc: Előző/Következő; tipp), teljes feladat nézet, eredmények (localStorage), elmélet nézet.
-- `gen.js` – 46 feladatgenerátor 8 témában (`TOPICS[].gens`), `make(g)` újragenerál, amíg mind a 4 válasz tipikus hibából jön, és rárakja a tippet (`HINTS[g.name]`). Témánként egy teljes feladat (`TOPICS[].cases`): közös adatsor + részkérdések, `makeCase(c)`. Minden rossz opcióhoz `why` magyarázat, minden kérdéshez `sol` részletes levezetés HTML-ben: `steps([cím, tartalom], …)` számozott lépések, `fx(...)` képletblokk, `tbl`/`legend` táblázat (a betűk jelentése), `hl` kiemelés. Csoportos medián/kvartilis: közös `posSol`.
+- `gen.js` – 46 feladatgenerátor 8 témában (`TOPICS[].gens`), `make(g)` újragenerál, amíg mind a 4 válasz tipikus hibából jön, és rárakja a tippet (`HINTS[g.name]`). Témánként egy teljes feladat (`TOPICS[].cases`): közös adatsor + részkérdések, `makeCase(c)`. Minden rossz opcióhoz `why` magyarázat, minden kérdéshez `sol` részletes levezetés HTML-ben: `steps([cím, tartalom], …)` számozott lépések, `fx(...)` képletblokk (soronként egy számolási lépés, az első `=`-nél igazítva), `tbl`/`legend` táblázat (a betűk jelentése), `hl` kiemelés. Csoportos medián/kvartilis: közös `posSol`.
+- Képletek: KaTeX (CDN, `index.html` rendereli MutationObserverrel). Szövegben `$…$`, blokkban `fx()`. TeX-et a `` TeX`…` `` (String.raw) taggel írj, így a backslash megmarad; sima `'…'` stringben `\frac` kell. `<` / `>` helyett `\lt` / `\gt` (HTML-be kerül). A `%`-ot és az ezres vesszőt a `tex()` kezeli.
 - `check.js` – önellenőrzés: `node check.js` (minden generátor 2000×, minden teljes feladat 1000×; 4 különböző opció, pontosan 1 helyes, van tipp, nincs NaN). Változtatás után futtasd.
 
 ## Közzététel
