@@ -21,6 +21,7 @@ const FALLBACK = 'Ez az érték egyik tipikus számolásból sem jön ki, valós
 function Q(q, correct, wrongs, sol, fm = x => x) {
   const opts = [{ t: fm(correct), ok: true }];
   for (const [v, why] of wrongs) {
+    if (v === undefined) continue;
     const t = fm(v);
     if (t !== '–' && !opts.some(o => o.t === t)) opts.push({ t, why });
     if (opts.length === 4) break;
@@ -159,6 +160,18 @@ const indices = [
       [e1 / e2, 'Csak az esetszámokat osztottad, a csoportok eltérő létszámát (' + n1 + ' vs ' + n2 + ') nem vetted figyelembe.'],
     ], `P(treatment) = ${e1}/${n1} = ${f(e1 / n1, 4)}\nP(control) = ${e2}/${n2} = ${f(e2 / n2, 4)}\nRR = ${f(e1 / n1, 4)} / ${f(e2 / n2, 4)} = ${f(rr, 3)}`, x => f(x, 3));
   },
+  function notation() {
+    const N = [['Vm', 'distribution ratio', 'part / whole', 'm = megoszlási'], ['Vk', 'coordination ratio', 'part / other part', 'k = koordinációs'],
+      ['Vdb', 'base ratio', 'current period / fixed base period', 'd = dinamikus, b = bázis'], ['Vdl', 'chain ratio', 'current period / previous period', 'd = dinamikus, l = lánc'],
+      ['Vf', 'task indicator ratio', 'plan / base period', 'f = (terv)feladat'], ['Vt', 'performance indicator ratio', 'actual / plan', 't = (terv)teljesítés'],
+      ['Vi', 'intensity ratio', 'phenomenon / reference quantity (different units)', 'i = intenzitási'], ['Vö', 'areal comparative ratio', 'data of an area / data of the base area', 'ö = összehasonlító']];
+    const c = pick(N), others = shuffle(N.filter(n => n !== c)).slice(0, 3), mode = R(0, 2);
+    const why = n => `Ez ${n[0]}: ${n[1]} (${n[3]}), képlete ${n[2]}.`;
+    const sol = `${c[0]} = ${c[1]}, képlete ${c[2]}\nA betű a magyar névből jön: V = viszonyszám, ${c[3]}.`;
+    if (mode === 0) return Q(`Which symbol is used for the <b>${c[1]}</b>?`, c[0], others.map(n => [n[0], why(n)]), sol);
+    if (mode === 1) return Q(`Which ratio is calculated as <b>${c[2]}</b>?`, `${c[0]} – ${c[1]}`, others.map(n => [`${n[0]} – ${n[1]}`, why(n)]), sol);
+    return Q(`What does <b>${c[0]}</b> stand for?`, c[1], others.map(n => [n[1], why(n)]), sol);
+  },
 ];
 
 // ---------- 3. Adatok, gyakorisági sorok ----------
@@ -239,6 +252,10 @@ function groupedTable(midPeak) {
   const n = sum(fs), cf = fs.map((_, i) => sum(fs.slice(0, i + 1)));
   return { L, w, fs, lo, mid, cls, n, cf, mean: sum(fs.map((x, i) => x * mid[i])) / n };
 }
+const medClass = t => t.cf.findIndex(c => c >= t.n / 2);
+const peakOK = fs => { const m = Math.max(...fs), j = fs.indexOf(m); return j >= 1 && j <= 3 && fs.filter(x => x === m).length === 1 && fs[j - 1] !== fs[j + 1]; };
+// A teljes feladatokban a táblázat a feladat elején van, a részkérdésből levágjuk.
+const bare = x => (x.q = x.q.replace(/^<table[\s\S]*?<\/table>\s*/, ''), x);
 const central = [
   function meanList() {
     let xs, s, md; do { xs = Array.from({ length: R(6, 9) }, () => R(1, 40)); s = [...xs].sort((a, b) => a - b); md = s.length % 2 ? s[(s.length - 1) / 2] : (s[s.length / 2 - 1] + s[s.length / 2]) / 2; } while (Math.abs(mean(xs) - md) < 0.5);
@@ -276,8 +293,7 @@ const central = [
       [1 / (1 / v1 + 1 / v2), 'A reciprokok összegével jól osztottál, de n = 2-vel nem szoroztál.'],
     ], `HM = n / Σ(1/x) = 2 / (1/${v1} + 1/${v2}) = ${f(hm, 2)} km/h\nellenőrzés: idő = ${d}/${v1} + ${d}/${v2} = ${f(d / v1 + d / v2, 4)} h → ${2 * d} km / ${f(d / v1 + d / v2, 4)} h = ${f(hm, 2)} km/h`, x => f(x, 2) + ' km/h');
   },
-  function groupedMean() {
-    const t = groupedTable();
+  function groupedMean(t = groupedTable()) {
     return Q(`${hrow('Class', t.cls, 'f', t.fs)} Find the <b>mean</b> (direct method).`, t.mean, [
       [sum(t.fs.map((x, i) => x * t.lo[i])) / t.n, 'Az alsó határokkal (lower limits) számoltál. Az osztályt az osztályközép (midpoint) képviseli.'],
       [sum(t.fs.map((x, i) => x * t.mid[i])) / 5, 'Az osztályok számával (5) osztottál, nem Σf-fel.'],
@@ -303,17 +319,16 @@ const central = [
     return Q(`Find the <b>median</b> of: ${xs.join(', ')}.`, md, w,
       `rendezve: ${s.join(', ')}   (n = ${n}, ${n % 2 ? 'páratlan' : 'páros'})\n${n % 2 ? `medián = ${(n + 1) / 2}. elem = ${md}` : `medián = (${n / 2}. + ${n / 2 + 1}. elem) / 2 = (${s[n / 2 - 1]} + ${s[n / 2]}) / 2 = ${f(md)}`}`, x => f(x, 2));
   },
-  function medianGrouped() {
-    let t, j; do { t = groupedTable(); j = t.cf.findIndex(c => c >= t.n / 2); } while (j < 1);
-    const cfb = t.cf[j - 1], l = t.lo[j], fj = t.fs[j], h = t.w, md = l + (t.n / 2 - cfb) / fj * h;
+  function medianGrouped(t) {
+    if (!t) do { t = groupedTable(); } while (medClass(t) < 1);
+    const j = medClass(t), cfb = t.cf[j - 1], l = t.lo[j], fj = t.fs[j], h = t.w, md = l + (t.n / 2 - cfb) / fj * h;
     return Q(`${hrow('Class', t.cls, 'f', t.fs)} Find the <b>median</b>.`, md, [
       [l + (t.n / 2 - t.cf[j]) / fj * h, 'A mediánosztály saját kumulált gyakoriságát vontad le. A cf a mediánosztály ELŐTTI osztály kumulált gyakorisága.'],
       [l + (t.n / 2 - cfb) / fj, 'Elfelejtettél h-val (osztályköz hossza) szorozni.'],
       [t.mid[j], 'Ez csak a mediánosztály közepe; a képlettel kell az osztályon belül pontosítani.'],
     ], `kumulált gyakoriság: ${t.cf.join(', ')}\nn/2 = ${t.n}/2 = ${f(t.n / 2)} → mediánosztály: ${t.cls[j]}\nl = ${l}, cf = ${cfb}, f = ${fj}, h = ${h}\nMedian = l + (n/2 − cf)/f × h = ${l} + (${f(t.n / 2)} − ${cfb})/${fj} × ${h} = ${f(md, 3)}`, x => f(x, 3));
   },
-  function modeGrouped() {
-    const t = groupedTable(fs => { const m = Math.max(...fs), j = fs.indexOf(m); return j >= 1 && j <= 3 && fs.filter(x => x === m).length === 1 && fs[j - 1] !== fs[j + 1]; });
+  function modeGrouped(t = groupedTable(peakOK)) {
     const j = t.fs.indexOf(Math.max(...t.fs)), f1 = t.fs[j], f0 = t.fs[j - 1], f2 = t.fs[j + 1], l = t.lo[j], h = t.w;
     const mo = l + (f1 - f0) / (2 * f1 - f0 - f2) * h;
     return Q(`${hrow('Class', t.cls, 'f', t.fs)} Find the <b>mode</b>.`, mo, [
@@ -540,9 +555,276 @@ const anovaGens = [
   },
 ];
 
+// ---------- Tippek (generátor neve szerint) ----------
+const HINTS = {
+  unitRatio: 'Először váltsd át mindkét mennyiséget ugyanarra a mértékegységre, aztán egyszerűsíts a legnagyobb közös osztóval. A sorrend a kérdés sorrendje.',
+  divide: 'Add össze az arány tagjait (összes rész), oszd el vele az összeget (egy rész értéke), majd szorozd meg az első tag számával.',
+  unknown: 'A megadott lányszám csak a lányokra eső részeknek felel meg. Egy rész = lányok / a lányok aránytagja.',
+  compound: 'Hozd a közös B tagot azonos értékre: bővítsd az első arányt a második B-jével, a másodikat az első B-jével.',
+  vm: 'Distribution ratio (Vm, megoszlási) = rész / egész. Előbb add össze az összes csoportot.',
+  vk: 'Coordination ratio (Vk, koordinációs) = egyik rész / másik rész, a kérdés sorrendjében. Az egész itt nem kell.',
+  dynamic: 'Base ratio (Vdb): mindig a bázisévhez (2020) osztasz. Chain ratio (Vdl): mindig az előző évhez.',
+  baseFromChain: 'A láncviszonyszámokat (Vdl) tizedes törtként szorozd össze; a szorzat a bázisviszonyszám (Vdb).',
+  plan: 'Három szám van: bázis (tavaly), terv, tény. Vf = terv / bázis, Vt = tény / terv, Vd = tény / bázis.',
+  intensity: 'Intensity ratio (Vi): jelenség / viszonyítási alap. „Per 1,000 people” → szorozd 1000-rel.',
+  oddsRatio: 'Odds = bekövetkezett / NEM bekövetkezett (nem az összes!). OR = az első csoport oddsa / a második csoport oddsa.',
+  relRisk: 'Relative risk: előbb a két valószínűség (esetek / csoport létszáma), aztán ezek hányadosa (kezelt / kontroll).',
+  notation: 'A betűk a magyar nevekből jönnek: V = viszonyszám, utána a magyar név kezdőbetűje (m = megoszlási, k = koordinációs, d = dinamikus: b = bázis, l = lánc, f = tervfeladat, t = tervteljesítés, i = intenzitási, ö = összehasonlító).',
+  relFreq: 'Relative frequency = f / n, ahol n az összes gyakoriság összege (Σf), nem a különböző értékek száma.',
+  cumulative: '„At most x” (x ≤): add össze a gyakoriságokat a legkisebb értéktől x-ig, x-et is beleértve.',
+  classWidth: 'Class width = (max − min) / osztályok száma, majd felfelé kerekítés 5 többszörösére.',
+  midpoint: 'Midpoint = (alsó határ + felső határ) / 2. Figyelj, hányadik osztályról van szó.',
+  groupedRange: 'Osztályközös sorban: range = az utolsó osztály felső határa − az első osztály alsó határa. A gyakoriságok itt nem számítanak.',
+  varType: 'Előbb: szám (quantitative) vagy kategória (categorical)? Számnál: megszámolt (discrete) vagy mért (continuous)? Kategóriánál: két kimenet (binary), van sorrend (ordinal) vagy nincs (nominal)?',
+  seriesType: 'Mi szerint vannak rendezve az adatok: idő (time), hely (spatial), egy jellemző értéke (condition), vagy minden adat külön (individual)?',
+  meanList: 'Arithmetic mean (x̄) = Σx / n: add össze az összes értéket, és oszd el a darabszámmal.',
+  weighted: 'Weighted mean = Σ(w·x) / Σw. Minden jegyet a saját kreditjével szorozz, és a kreditek összegével oszd.',
+  geometric: 'Egymásra épülő százalékos változás → geometric mean (mértani átlag). Írd fel a tényezőket (1 + r), szorozd össze, vonj köbgyököt, végül vonj le 1-et.',
+  harmonic: 'Azonos távolságokon mért sebességek átlaga → harmonic mean: n / Σ(1/x). Ellenőrzés: teljes út / teljes idő.',
+  groupedMean: 'Minden osztályt az osztályközép (midpoint) képvisel. x̄ = Σ(f·x) / Σf.',
+  stepDeviation: 'Számold ki minden osztályközépre: u = (x − A) / h, aztán Σfu-t. x̄ = A + h · Σfu / Σf.',
+  medianList: 'Előbb rendezd sorba! Páratlan n: a középső elem; páros n: a két középső átlaga.',
+  medianGrouped: 'Kumulált gyakoriságok; a mediánosztály az első, ahol cf ≥ n/2. Median = l + (n/2 − cf)/f × h, ahol cf az ELŐZŐ osztályé.',
+  modeGrouped: 'A modális osztály a legnagyobb gyakoriságú. f₀ az előtte, f₂ az utána lévő osztály gyakorisága. Mode = l + (f₁ − f₀)/(2f₁ − f₀ − f₂) × h.',
+  range: 'Range = max − min, a kiugró értéket is beleértve.',
+  variance: 'Átlag → eltérések → négyzetösszeg. Population: N-nel osztasz, sample: n − 1-gyel. A varianciánál nincs gyökvonás.',
+  sdFreq: 'Gyakorisági sornál minden négyzetes eltérést szorozz f-fel: σ² = Σf(x − x̄)² / Σf, a szórás ennek a gyöke.',
+  quartInd: 'Rendezd sorba. Q1 = (N+1)/4-edik, Q3 = 3(N+1)/4-edik elem. QD = (Q3 − Q1)/2, coefficient = (Q3 − Q1)/(Q3 + Q1).',
+  quartGrouped: 'Mint a medián, csak n/2 helyett N/4 (Q1) vagy 3N/4 (Q3). Keresd az első osztályt, ahol cf ≥ pozíció.',
+  nFromSS: 'σ² = SS / N. Rendezd át N-re.',
+  probSel: 'Simple random sampling: P(kiválasztás) = n / N. A „NOT selected” ennek a komplementere: 1 − n/N.',
+  atLeastOnce: 'Visszatevéssel előbb azt számold ki, hogy egyszer sem választják ki: (1 − 1/N)ⁿ. A „legalább egyszer” ennek a komplementere.',
+  stratified: 'Proportionate (arányos): s = (réteg mérete / N) × n. Előbb add össze a rétegeket, így kapod N-et.',
+  systematic: 'k = N / n. Az első elem maga a kezdőpont, az i-edik: start + (i − 1)·k.',
+  cluster: 'Single-stage: a kiválasztott klaszterekben mindenkit megkérdezünk. Two-stage: a klasztereken belül is mintát veszünk.',
+  methodId: 'Kulcsszavak: „every k-th” → systematic; MINDEN csoportból választunk → stratified; néhány teljes csoport → cluster; közvetlen húzás a teljes listából → simple.',
+  decideP: 'Csak két döntés van: Reject H₀ vagy Fail to reject H₀. Szabály: p ≤ α → reject.',
+  hypPair: 'Az egyenlőség (=, ≤, ≥) mindig H₀-ba kerül. Amit bizonyítani akarunk (more / less / different), az H₁.',
+  errorType: 'Type I: igaz H₀-t vetünk el. Type II: hamis H₀-t megtartunk. A másik két eset helyes döntés.',
+  pairedT: 'd = after − before minden párra. m = d átlaga, s = d szórása (n − 1-gyel), t = m / (s/√n).',
+  tDecision: 'Kétoldali próba: |t|-t hasonlítsd a kritikus értékhez. Ha nagyobb → reject H₀.',
+  dfs: 'df(between) = k − 1, df(within) = n − k, df(total) = n − 1; k a csoportok, n az összes elem száma.',
+  fFromSS: 'Előbb MS = SS / df mindkettőre: MS(B) = SS(B)/(k − 1), MS(W) = SS(W)/(n − k). Utána F = MS(B) / MS(W).',
+  fullAnova: 'Csoportátlagok → főátlag → SS(B) = Σnᵢ(x̄ᵢ − x̄)² → SS(W) = Σ(x − x̄ᵢ)² → MS = SS/df → F = MS(B)/MS(W).',
+  fDecision: 'Az F-próba mindig jobboldali: F > F(table) → reject H₀.',
+  ssw: 'SS(Total) = SS(B) + SS(W). Rendezd át SS(W)-re.',
+};
+
+// ---------- Teljes feladatok ----------
+// Egy közös adatsor (stem) több részkérdéssel; minden rész egy Q(...) tippel.
+const H = (hint, x) => (x.hint = hint, x);
+const byName = (gens, name) => t => H(HINTS[name], bare(gens.find(g => g.name === name)(t)));
+const tCrit = { 4: 2.776, 5: 2.571, 6: 2.447, 7: 2.365, 8: 2.306, 9: 2.262 }; // kétoldali, α = 0,05
+const fCrit = { 6: 5.14, 7: 4.74, 8: 4.46, 9: 4.26 }; // F(2, df2), α = 0,05
+
+function classCase() {
+  let b, g, add, p, q, k2;
+  do { b = R(2, 12) * 5; g = R(2, 12) * 5; add = R(1, 6) * 5; [p, q] = ratioStr(b, g).split(' : ').map(Number); k2 = R(2, 9); } while (b === g || b + add === g || q * k2 === g);
+  const G2 = q * k2;
+  return { title: 'Osztálylétszám', stem: `A class has <b>${b} boys</b> and <b>${g} girls</b>.`, parts: [
+    H('Írd fel fiúk : lányok sorrendben, aztán egyszerűsíts a legnagyobb közös osztóval.', Q('Find the ratio of boys to girls in simplest form.', ratioStr(b, g), [
+      [`${b} : ${g}`, 'Az arány jó, de nem egyszerűsítetted (simplest form, legegyszerűbb alak).'],
+      [ratioStr(g, b), 'Fordított sorrend: a kérdés boys to girls, tehát a fiúk vannak elöl.'],
+      [ratioStr(b, b + g), 'Ez part-to-whole ratio (rész az egészhez), itt két részt kell összehasonlítani.'],
+    ], `${b} : ${g}\nlegnagyobb közös osztó = ${gcd(b, g)}  →  ${p} : ${q}`)),
+    H('Part-to-whole: a rész (fiúk) kerül előre, az egész (összes tanuló) hátra.', Q('What is the <b>part-to-whole</b> ratio of boys (boys : all students)?', ratioStr(b, b + g), [
+      [ratioStr(b, g), 'Ez part-to-part ratio (rész a részhez): fiúk : lányok.'],
+      [ratioStr(g, b + g), 'Ez a lányok aránya az egészhez, nem a fiúké.'],
+      [ratioStr(b + g, b), 'Fordított sorrend: egész : rész.'],
+    ], `összes = ${b} + ${g} = ${b + g}\n${b} : ${b + g} = ${ratioStr(b, b + g)}`)),
+    H('Proportion (arány az egészben) = rész / egész, százalékban.', Q('What proportion of the class are <b>girls</b>?', g / (b + g), [
+      [b / (b + g), 'Ez a fiúk aránya.'],
+      [g / b, 'Ez lányok / fiúk (part-to-part), nem rész / egész.'],
+      [g / (b + g + add), 'A később érkező fiúkat is beszámoltad; ez a kérdés az eredeti osztályról szól.'],
+    ], `lányok / összes = ${g} / ${b + g} = ${pc(g / (b + g))}`, x => pc(x))),
+    H('Előbb a tényleges létszámhoz add hozzá az új fiúkat, utána írd fel és egyszerűsítsd az arányt.', Q(`<b>${add} more boys</b> join the class. What is the new ratio of boys to girls?`, ratioStr(b + add, g), [
+      [ratioStr(p + add, q), 'Az egyszerűsített arány tagjához adtad hozzá; a tényleges létszámhoz kell.'],
+      [ratioStr(b, g + add), 'A lányokhoz adtad hozzá az új tanulókat.'],
+      [ratioStr(g, b + add), 'Fordított sorrend.'],
+    ], `fiúk = ${b} + ${add} = ${b + add}\n${b + add} : ${g} = ${ratioStr(b + add, g)}`)),
+    H(`Az a) arány ${p} : ${q}. A lányok ${q} részt tesznek ki, egy rész = lányok / ${q}.`, Q(`Another class has the <b>same ratio</b> as in a) and <b>${G2} girls</b>. How many boys are there?`, p * k2, [
+      [G2 * q / p, 'Fordítva használtad az arányt.'],
+      [G2 * p, 'Nem osztottad el a lányok számát a lány-részek számával.'],
+      [G2 / (p + q) * p, `Az összes rész számával osztottál, de a lányok csak ${q} részt tesznek ki.`],
+    ], `egy rész = ${G2} / ${q} = ${k2}\nfiúk = ${p} × ${k2} = ${p * k2}`, x => f(x))),
+  ] };
+}
+
+function productionCase() {
+  const years = [2020, 2021, 2022, 2023, 2024]; let ys, P;
+  do { ys = [R(20, 60) * 10]; for (let i = 1; i < 5; i++) ys.push(Math.round(ys[i - 1] * (0.9 + Math.random() * 0.25))); P = Math.round(ys[3] * (1 + R(2, 15) / 100)); } while (P === ys[4] || ys[4] === ys[3]);
+  const y0 = ys[0], y3 = ys[3], y4 = ys[4], vdb = y4 / y0, vdl = y4 / y3, vf = P / y3, vt = y4 / P, F = x => pc(x);
+  return { title: 'Termelés és terv', stem: `Production of a factory (units): ${tbl(years, [ys])} The <b>plan for 2024</b> was <b>${P}</b> units (base period of the plan: 2023).`, parts: [
+    H('Base ratio (Vdb): a tárgyévet mindig a rögzített bázisévhez (2020) osztod.', Q('Calculate the <b>base ratio</b> for 2024 (base year 2020).', vdb, [
+      [vdl, 'Ez a chain ratio (Vdl): az előző évhez viszonyítottál.'], [y0 / y4, 'Fordítva osztottál: bázis / tárgyév.'], [vdb - 1, 'Ez a változás mértéke (Vdb − 100%), nem maga a base ratio.'],
+    ], `Vdb = y(2024) / y(2020) = ${y4} / ${y0} = ${pc(vdb)}`, F)),
+    H('Chain ratio (Vdl): a tárgyévet az előző évhez osztod.', Q('Calculate the <b>chain ratio</b> for 2024.', vdl, [
+      [vdb, 'Ez a base ratio (Vdb): 2020-hoz viszonyítottál.'], [y3 / y4, 'Fordítva osztottál.'], [vdl - 1, 'Ez a változás mértéke, nem maga a chain ratio.'],
+    ], `Vdl = y(2024) / y(2023) = ${y4} / ${y3} = ${pc(vdl)}`, F)),
+    H('Task indicator ratio (Vf, tervfeladat): terv / bázis. A bázis itt az előző év tényadata.', Q('Calculate the <b>task indicator ratio (Vf)</b> for 2024.', vf, [
+      [vt, 'Ez Vt (performance indicator): tény / terv.'], [P / y0, 'A 2020-as adathoz osztottál; a terv bázisa az előző év (2023).'], [y3 / P, 'Fordítva osztottál: bázis / terv.'],
+    ], `Vf = terv / bázis = ${P} / ${y3} = ${pc(vf)}`, F)),
+    H('Performance indicator ratio (Vt, tervteljesítés): tény / terv.', Q('Calculate the <b>performance indicator ratio (Vt)</b> for 2024.', vt, [
+      [vf, 'Ez Vf (task indicator): terv / bázis.'], [P / y4, 'Fordítva osztottál: terv / tény.'], [vdl, 'Ez a chain ratio (tény / előző év), nem a tervhez viszonyított teljesítés.'],
+    ], `Vt = tény / terv = ${y4} / ${P} = ${pc(vt)}`, F)),
+    H('Írd fel törtként: (terv / bázis) × (tény / terv). Mi marad, ha a „terv” kiesik?', Q('<b>Vf × Vt</b> equals which ratio?', 'Vdl – chain ratio for 2024 (actual / previous year)', [
+      ['Vdb – base ratio for 2024 (actual / 2020)', 'A terv bázisa 2023, nem 2020, ezért a szorzat a 2023-hoz viszonyított dinamikus viszonyszám.'],
+      ['Vm – distribution ratio', 'A distribution ratio (megoszlási) rész / egész, ennek itt nincs szerepe.'],
+      ['Vk – coordination ratio', 'A coordination ratio (koordinációs) két rész hányadosa, ennek itt nincs szerepe.'],
+    ], `Vf × Vt = (terv / bázis) × (tény / terv) = tény / bázis\nbázis = 2023 → Vdl(2024)\nellenőrzés: ${f(vf, 4)} × ${f(vt, 4)} = ${f(vf * vt, 4)} = ${pc(vdl)}`)),
+  ] };
+}
+
+function marksCase() {
+  let xs, fs, n, all, mo, md, j, k, i2;
+  do {
+    xs = pick([[10, 15, 18, 20, 22], [1, 2, 3, 4, 5], [2, 3, 4, 5, 6], [5, 10, 15, 20, 25]]); fs = xs.map(() => R(1, 7)); n = sum(fs);
+    all = xs.flatMap((x, i) => Array(fs[i]).fill(x)); mo = xs[fs.indexOf(Math.max(...fs))];
+    md = n % 2 ? all[(n - 1) / 2] : (all[n / 2 - 1] + all[n / 2]) / 2; j = R(1, 4); k = R(1, 3);
+    i2 = fs.indexOf(Math.max(...fs.filter(x => x !== Math.max(...fs))));
+  } while (fs.filter(x => x === Math.max(...fs)).length > 1 || i2 < 0);
+  const cf = fs.map((_, i) => sum(fs.slice(0, i + 1))), F = x => f(x);
+  const table = tbl(['x', 'f', 'cumulative f'], xs.map((x, i) => [x, fs[i], cf[i]]));
+  return { title: 'Nyers adatokból gyakorisági sor', stem: `The marks of <b>${n} students</b> in a test: ${shuffle([...all]).join(', ')}.`, parts: [
+    H('Készíts gyakorisági táblát (tally marks): írd le a különböző értékeket, és számold meg, melyik hányszor fordul elő.', Q(`How many students got <b>${xs[j]}</b>?`, fs[j], [
+      [cf[j], `Ez a kumulált gyakoriság (x ≤ ${xs[j]}), nem csak a ${xs[j]}-esek száma.`], [n - fs[j], 'Ez a többi tanuló száma.'], [fs[j] + 1, 'Eggyel elszámoltad; érdemes strigulázni (tally marks).'],
+    ], `${table}f(${xs[j]}) = ${fs[j]}`, F)),
+    H('Relative frequency = f / n, n = az összes tanuló száma.', Q(`What is the <b>relative frequency</b> of the mark ${xs[j]}?`, fs[j] / n, [
+      [cf[j] / n, 'Ez a cumulative relative frequency (kumulált relatív gyakoriság).'], [fs[j] / xs.length, `A különböző értékek számával (${xs.length}) osztottál, nem n-nel (${n}).`], [fs[j] / (n - fs[j]), 'A többiekhez viszonyítottál, nem az összeshez.'],
+    ], `${fs[j]} / ${n} = ${pc(fs[j] / n)}`, x => pc(x))),
+    H('„At most” (legfeljebb): a kérdezett értéket és az összes kisebbet is számold.', Q(`How many students got <b>at most ${xs[k]}</b>?`, cf[k], [
+      [fs[k], `Ez csak a ${xs[k]}-esek száma.`], [cf[k - 1], `Kimaradt maga a ${xs[k]}; a „legfeljebb” tartalmazza.`], [n - cf[k], `Ez a „több mint ${xs[k]}” válasza.`],
+    ], `${table}x ≤ ${xs[k]}: ${fs.slice(0, k + 1).join(' + ')} = ${cf[k]}`, F)),
+    H('Mode (módusz) = a leggyakoribb ÉRTÉK (nem a gyakorisága).', Q('What is the <b>mode</b>?', mo, [
+      [Math.max(...fs), 'Ez a módusz gyakorisága (hányszor fordul elő), nem maga az érték.'], [xs[i2], 'Ez a második leggyakoribb érték.'], [mean(all), 'Ez az átlag, nem a módusz.'],
+    ], `${table}legnagyobb f = ${Math.max(...fs)} → mode = ${mo}`, F)),
+    H(`n = ${n}, ${n % 2 ? `páratlan: a(z) ${(n + 1) / 2}. elem` : `páros: a(z) ${n / 2}. és ${n / 2 + 1}. elem átlaga`}. A kumulált gyakoriságból látod, melyik értékre esik.`, Q('What is the <b>median</b>?', md, [
+      [mean(all), 'Ez az átlag, nem a medián.'], [n % 2 ? (n + 1) / 2 : n / 2, 'Ez a medián pozíciója (sorszáma), nem az értéke.'], [xs[2], 'Ez a különböző értékek középsője; a gyakoriságokat is figyelembe kell venni.'],
+    ], `${table}${n % 2 ? `medián = ${(n + 1) / 2}. elem = ${md}` : `medián = (${n / 2}. + ${n / 2 + 1}. elem) / 2 = (${all[n / 2 - 1]} + ${all[n / 2]}) / 2 = ${f(md)}`}`, F)),
+  ] };
+}
+
+function groupedCase() {
+  let t; do { t = groupedTable(peakOK); } while (medClass(t) < 1);
+  const j = medClass(t), mj = t.fs.indexOf(Math.max(...t.fs));
+  return { title: 'Osztályközös gyakorisági sor', stem: `Test scores of students: ${hrow('Class', t.cls, 'f', t.fs)}`, parts: [
+    byName(central, 'groupedMean')(t),
+    H('Számold ki a kumulált gyakoriságokat. A mediánosztály az első osztály, ahol cf ≥ n/2.', Q('Which is the <b>median class</b>?', t.cls[j], [
+      [t.cls[mj], 'Ez a modális osztály (legnagyobb gyakoriság), nem a mediánosztály.'], [t.cls[2], 'Ez csak a középső osztály; a mediánosztályt a kumulált gyakoriság dönti el.'],
+      ...t.cls.map((c, k) => [c, k < j ? 'Itt a kumulált gyakoriság még kisebb, mint n/2.' : 'Már egy korábbi osztályban eléri a kumulált gyakoriság az n/2-t.']),
+    ], `kumulált gyakoriság: ${t.cf.join(', ')}\nn/2 = ${f(t.n / 2)} → első osztály, ahol cf ≥ n/2: ${t.cls[j]}`)),
+    byName(central, 'medianGrouped')(t),
+    byName(central, 'modeGrouped')(t),
+  ] };
+}
+
+function sampleCase() {
+  const xs = intList(R(5, 7)), n = xs.length, m = mean(xs), dev = xs.map(x => x - m), ss = sum(dev.map(d => d * d)), s2 = ss / (n - 1), s = Math.sqrt(s2);
+  const so = [...xs].sort((a, b) => a - b), mx = so[n - 1], mn = so[0], md = n % 2 ? so[(n - 1) / 2] : (so[n / 2 - 1] + so[n / 2]) / 2, F = x => f(x, 3);
+  const table = tbl(['x', 'x − x̄', '(x − x̄)²'], xs.map((x, i) => [x, dev[i], dev[i] ** 2]));
+  return { title: 'Minta szóródása', stem: `A <b>sample</b> of ${n} employees worked the following overtime hours last month: ${xs.join(', ')}.`, parts: [
+    H('Range = legnagyobb − legkisebb érték.', Q('What is the <b>range</b>?', mx - mn, [
+      [(mx - mn) / 2, 'Ez a terjedelem fele.'], [mx - m, 'A legnagyobb értékből az átlagot vontad le.'], [so[n - 2] - so[1], 'Kihagytad a szélső értékeket; a range pont azokból számol.'],
+    ], `max = ${mx}, min = ${mn}\nrange = ${mx - mn}`, F)),
+    H('x̄ = Σx / n.', Q('What is the <b>sample mean</b> x̄?', m, [
+      [sum(xs) / (n - 1), 'n − 1-gyel osztottál; az átlagnál mindig n-nel kell.'], [md, 'Ez a medián.'], [(mx + mn) / 2, 'Ez csak a legkisebb és a legnagyobb érték átlaga.'],
+    ], `x̄ = ${sum(xs)} / ${n} = ${f(m, 3)}`, F)),
+    H('Minden értékből vond le az átlagot, emeld négyzetre, és add össze.', Q('What is the <b>sum of squared deviations</b> Σ(x − x̄)²?', ss, [
+      [sum(dev.map(Math.abs)), 'Az eltérések abszolút értékét adtad össze, négyzetre emelés helyett.'], [sum(xs.map(x => x * x)), 'Ez az értékek négyzetösszege, nem az átlagtól való eltéréseké.'], [sum(dev), 'Az eltérések összege mindig 0, ezért kell négyzetre emelni.'],
+    ], `${table}Σ(x − x̄)² = ${ss}`, F)),
+    H('Sample variance: s² = Σ(x − x̄)² / (n − 1).', Q('What is the <b>sample variance</b> s²?', s2, [
+      [ss / n, 'Ez a population variance (sokasági variancia): n-nel osztottál. Mintánál n − 1 kell.'], [s, 'Ez már a szórás (gyököt vontál).'], [sum(dev.map(Math.abs)) / n, 'Ez az abszolút eltérések átlaga, nem a variancia.'],
+    ], `s² = ${ss} / ${n - 1} = ${f(s2, 3)}`, F)),
+    H('A szórás a variancia négyzetgyöke: s = √s².', Q('What is the <b>sample standard deviation</b> s?', s, [
+      [s2, 'Ez a variancia; még gyököt kell vonni.'], [Math.sqrt(ss / n), 'n-nel osztottál (population). Mintánál n − 1 kell.'], [Math.sqrt(ss) / (n - 1), 'Rossz sorrend: előbb osztani kell n − 1-gyel, aztán gyököt vonni.'],
+    ], `s = √${f(s2, 3)} = ${f(s, 3)}`, F)),
+  ] };
+}
+
+function universityCase() {
+  const names = ['Finance', 'Management', 'Tourism', 'IT']; let S, N, k, n, j, st, i;
+  do { k = pick([10, 20, 25, 50]); S = names.map(() => R(2, 20) * 100); N = sum(S); n = N / k; j = R(0, 3); st = R(1, k); i = R(5, 30); } while (n < i);
+  return { title: 'Egyetemi felmérés', stem: `${tbl(['Faculty', ...names], [['Students', ...S]])} The university wants to survey <b>${f(n)}</b> of its <b>${f(N)}</b> students.`, parts: [
+    H('Simple random sampling: P = n / N.', Q('With <b>simple random sampling</b>, what is the probability that a given student is selected?', n / N, [
+      [1 / N, `Ez egyetlen húzás esélye; ${f(n)} tanulót választunk.`], [n / (N - n), 'A nem kiválasztottak számával osztottál.'], [1 - n / N, 'Ez a NEM kiválasztás valószínűsége.'],
+    ], `P = n / N = ${f(n)} / ${f(N)} = ${pc(n / N)}`, x => pc(x))),
+    H('Proportionate: s = (a kar létszáma / N) × n.', Q(`With <b>proportionate stratified sampling</b> (strata = faculties), how many students come from <b>${names[j]}</b>?`, S[j] / k, [
+      [n / 4, 'Egyenlően osztottad el a karok között; arányos mintánál a kar méretével arányos rész jár.'], [S[j] / N * 100, 'Ez a kar aránya százalékban, nem darabszám.'], [S[j] / n, 'A kar létszámát a mintanagysággal osztottad.'],
+    ], `s = (${S[j]} / ${f(N)}) × ${f(n)} = ${f(S[j] / k)}`, x => f(x, 2))),
+    H('Systematic sampling: k = N / n.', Q('With <b>systematic sampling</b>, what is the sampling interval k?', k, [
+      [n, 'Ez a mintanagyság (n), nem a lépésköz.'], [N - n, 'A különbség nem lépésköz; k = N / n.'], [n / N, 'Fordítva osztottál: k = N / n.'],
+    ], `k = N / n = ${f(N)} / ${f(n)} = ${k}`, x => f(x, 4))),
+    H('Az első elem maga a kezdőpont; utána mindig k-t lépsz. i-edik = start + (i − 1)·k.', Q(`The random start is <b>${st}</b>. Which student (list number) is the <b>${i}th</b> in the sample?`, st + (i - 1) * k, [
+      [st + i * k, 'Eggyel elcsúsztál: az első elem maga a kezdőpont.'], [i * k, 'Nem a kezdőponttól indultál.'], [(i - 1) * k, 'Kimaradt a kezdőpont.'],
+    ], `${i}. elem = ${st} + ${i - 1}·${k} = ${st + (i - 1) * k}`, x => f(x))),
+    H('Hány kar kerül be: mind (minden karból választunk), vagy csak néhány teljes kar?', Q('<i>Instead, 2 faculties are chosen at random and every student in them is surveyed.</i> Which method is this?', 'cluster sampling', [
+      ['stratified sampling', 'Rétegzett mintánál MINDEN karból (rétegből) választanánk; itt csak néhány teljes kar kerül be.'],
+      ['systematic sampling', 'Szisztematikus mintánál minden k-adik elemet vennénk egy listáról.'],
+      ['simple random sampling', 'Egyszerű véletlen mintánál közvetlenül tanulókat húznánk a teljes listából.'],
+    ], 'Néhány teljes csoport (klaszter) kerül be, azokban mindenki → cluster sampling (csoportos mintavétel), single-stage.')),
+  ] };
+}
+
+function drugCase() {
+  let n, b, d, m, s, t;
+  do { n = R(6, 8); b = Array.from({ length: n }, () => R(112, 135)); d = b.map(() => R(-9, 3)); m = mean(d); s = Math.sqrt(sum(d.map(x => (x - m) ** 2)) / (n - 1)); t = m / (s / Math.sqrt(n)); } while (s === 0 || m === 0 || Math.abs(Math.abs(t) - tCrit[n - 1]) < 0.1);
+  const a = b.map((x, i) => x + d[i]), sp = Math.sqrt(sum(d.map(x => (x - m) ** 2)) / n), c = tCrit[n - 1], rej = Math.abs(t) > c, F = x => f(x, 3);
+  const ds = `d = after − before: ${d.join(', ')}`, sq = f(sum(d.map(x => (x - m) ** 2)), 3);
+  return { title: 'Páros t-próba: vérnyomás', stem: `A company tests whether a new drug <b>has an effect</b> on blood pressure. ${tbl(['Patient', ...b.map((_, i) => i + 1)], [['Before', ...b], ['After', ...a]])} Use a paired t-test, α = 0.05, d = after − before.`, parts: [
+    H('„Has an effect” = bármelyik irányú változás. Az egyenlőség mindig H₀-ba kerül.', Q('Which hypotheses are correct?', 'H₀: μd = 0,  H₁: μd ≠ 0', [
+      ['H₀: μd ≠ 0,  H₁: μd = 0', 'Felcserélted: az egyenlőség mindig H₀-ba kerül.'],
+      ['H₀: μd ≥ 0,  H₁: μd < 0', 'Ez egyoldali (left-tailed). A „has an effect” bármelyik irányú változást jelent, ezért kétoldali.'],
+      ['H₀: μd ≤ 0,  H₁: μd > 0', 'Ez egyoldali (right-tailed); itt kétoldali próba kell.'],
+    ], 'kérdés: van-e hatás (bármelyik irányban) → two-tailed\nH₀: μd = 0 (nincs hatás), H₁: μd ≠ 0')),
+    H('Számold ki minden betegre: d = after − before, aztán átlagold.', Q('What is the mean difference <b>m</b>?', m, [
+      [-m, 'Előjelhiba: d = after − before, nem before − after.'], [sum(d), 'Nem osztottál n-nel.'], [sum(d) / (n - 1), 'n − 1-gyel osztottál; az átlagnál n kell.'],
+    ], `${ds}\nm = ${sum(d)} / ${n} = ${f(m, 3)}`, F)),
+    H('s = √[Σ(d − m)² / (n − 1)].', Q('What is the standard deviation of the differences <b>s</b>?', s, [
+      [sp, 'n-nel osztottál; mintából n − 1-gyel kell.'], [s * s, 'Ez a variancia; még gyököt kell vonni.'], [s / Math.sqrt(n), 'Ez már a standard error (s/√n), nem a szórás.'],
+    ], `${ds}\nm = ${f(m, 3)}\nΣ(d − m)² = ${sq}\ns = √(${sq} / ${n - 1}) = ${f(s, 3)}`, F)),
+    H('t = m / (s / √n).', Q('What is the <b>t statistic</b>?', t, [
+      [m / (sp / Math.sqrt(n)), 'A szórásnál n-nel osztottál; mintából n − 1 kell.'], [m / s, 'Nem osztottad s-t √n-nel.'], [m / (s / n), 's-t n-nel osztottad √n helyett.'],
+    ], `t = ${f(m, 3)} / (${f(s, 3)} / √${n}) = ${f(t, 3)}`, F)),
+    H('Páros próbánál a különbségek számából indulsz ki: df = n − 1.', Q('How many <b>degrees of freedom</b> does the test have?', n - 1, [
+      [n, 'Ez az elemszám, a szabadságfok ennél eggyel kevesebb.'], [n - 2, 'Kettőt vontál le; páros próbánál df = n − 1.'], [2 * n - 2, 'Ez a független kétmintás t-próba df-je; páros próbánál df = n − 1.'],
+    ], `df = n − 1 = ${n - 1}`, x => f(x))),
+    H('Kétoldali próba: |t|-t hasonlítsd a kritikus értékhez.', Q(`Critical value (two-tailed, df = ${n - 1}, α = 0.05): <b>±${c}</b>. What is the decision?`, rej ? OPT.rej : OPT.fail, [
+      [rej ? OPT.fail : OPT.rej, rej ? '|t| > kritikus érték, ezért el kell vetni H₀-t.' : '|t| ≤ kritikus érték, ezért H₀ nem vethető el.'], [OPT.rejH1, 'A döntés mindig H₀-ról szól.'], [OPT.prove, 'H₀-t sosem bizonyítjuk, legfeljebb nem vetjük el.'],
+    ], `|t| = ${f(Math.abs(t), 3)} ${rej ? '>' : '≤'} ${c} → ${rej ? OPT.rej + ': a gyógyszernek van hatása' : OPT.fail + ': nincs elég bizonyíték hatásra'}`)),
+  ] };
+}
+
+function rowsCase() {
+  let gs, a;
+  do { gs = [R(3, 4), R(3, 4), R(3, 4)].map(sz => { const base = R(6, 16); return Array.from({ length: sz }, () => base + R(-3, 3)); }); a = anova(gs); } while (a.ssw === 0 || a.ssb < 0.01 || Math.abs(a.F - fCrit[a.n - 3]) < 0.1);
+  const all = gs.flat(), sst = sum(all.map(x => (x - a.gm) ** 2)), rows = ['Front', 'Middle', 'Back'], ct = fCrit[a.n - 3], rej = a.F > ct, F = x => f(x, 3);
+  const vars = gs.map((g, i) => sum(g.map(x => (x - a.ms[i]) ** 2)) / (g.length - 1));
+  const means = `csoportátlagok: ${gs.map((g, i) => `${rows[i]} = ${sum(g)}/${g.length} = ${f(a.ms[i], 3)}`).join(', ')}`;
+  return { title: 'One-way ANOVA: ülésrend', stem: `Exam scores of randomly chosen students sitting in three rows: ${tbl(['Row', 'Scores'], gs.map((g, i) => [rows[i], g.join(', ')]))} Test at α = 0.05 whether the mean scores of the rows differ.`, parts: [
+    H('Grand mean = az összes érték átlaga (a csoportokat figyelmen kívül hagyva).', Q('What is the <b>grand mean</b>?', a.gm, [
+      [mean(a.ms), 'A csoportátlagok sima átlaga; eltérő csoportméretnél ez nem egyenlő a főátlaggal.'], [sum(all) / 3, 'A csoportok számával osztottál, nem az összes elemszámmal.'], [a.ms[0], 'Ez csak a Front csoport átlaga.'],
+    ], `${means}\nfőátlag = ${sum(all)} / ${a.n} = ${f(a.gm, 3)}`, F)),
+    H('SS(B) = Σ nᵢ(x̄ᵢ − x̄)²: minden csoportátlag eltérése a főátlagtól, négyzetre emelve, a csoport elemszámával szorozva.', Q('What is <b>SS(Between)</b>?', a.ssb, [
+      [sum(a.ms.map(x => (x - a.gm) ** 2)), 'Nem szoroztál a csoportok elemszámával (nᵢ).'], [a.ssw, 'Ez SS(Within).'], [sst, 'Ez SS(Total).'],
+    ], `${means}\nfőátlag = ${f(a.gm, 3)}\nSS(B) = ${gs.map((g, i) => `${g.length}·(${f(a.ms[i], 3)} − ${f(a.gm, 3)})²`).join(' + ')} = ${f(a.ssb, 3)}`, F)),
+    H('SS(W) = Σ(x − x̄ᵢ)²: minden értéket a SAJÁT csoportja átlagától mérsz.', Q('What is <b>SS(Within)</b>?', a.ssw, [
+      [a.ssb, 'Ez SS(Between).'], [sst, 'Ez SS(Total): a főátlagtól mértél, nem a csoportátlagoktól.'], [sum(vars), 'A csoportvarianciákat adtad össze; SS(W) = Σ(nᵢ − 1)·sᵢ², vagyis az eltérésnégyzetek összege.'],
+    ], `${means}\nSS(W) = ${gs.map((g, i) => f(sum(g.map(x => (x - a.ms[i]) ** 2)), 3)).join(' + ')} = ${f(a.ssw, 3)}\nellenőrzés: SS(T) = ${f(sst, 3)} = SS(B) + SS(W)`, F)),
+    H('df(B) = k − 1, df(W) = n − k.', Q('What are the degrees of freedom?', `df(B) = 2,  df(W) = ${a.n - 3}`, [
+      [`df(B) = 3,  df(W) = ${a.n - 3}`, 'df(B) = k − 1 = 2, nem k.'], [`df(B) = 2,  df(W) = ${a.n - 1}`, `df(W) = n − k = ${a.n} − 3; ${a.n - 1} a df(total).`], [`df(B) = ${a.n - 3},  df(W) = 2`, 'Felcserélted a kettőt.'],
+    ], `k = 3, n = ${gs.map(g => g.length).join(' + ')} = ${a.n}\ndf(B) = k − 1 = 2\ndf(W) = n − k = ${a.n - 3}`)),
+    H('MS = SS / df mindkettőre, aztán F = MS(B) / MS(W).', Q('What is the <b>F statistic</b>?', a.F, [
+      [a.ssb / a.ssw, 'Az SS-eket osztottad; előbb el kell osztani őket a szabadságfokukkal.'], [1 / a.F, 'Fordítva: F = MS(B) / MS(W).'], [(a.ssb / 2) / (a.ssw / (a.n - 1)), 'MS(W)-nél n − 1-gyel osztottál; df(W) = n − k.'],
+    ], `MS(B) = ${f(a.ssb, 3)} / 2 = ${f(a.msb, 3)}\nMS(W) = ${f(a.ssw, 3)} / ${a.n - 3} = ${f(a.msw, 3)}\nF = ${f(a.msb, 3)} / ${f(a.msw, 3)} = ${f(a.F, 3)}`, F)),
+    H('Az F-próba jobboldali: F > F(table) → reject H₀.', Q(`F<sub>table</sub>(2, ${a.n - 3}) at α = 0.05 is <b>${ct}</b>. What is the decision?`, rej ? OPT.rej : OPT.fail, [
+      [rej ? OPT.fail : OPT.rej, rej ? 'F > F(table), ezért H₀-t elvetjük.' : 'F ≤ F(table), ezért H₀ nem vethető el.'], [OPT.rejH1, 'A döntés mindig H₀-ról szól.'], [OPT.prove, 'H₀-t sosem bizonyítjuk, legfeljebb nem vetjük el.'],
+    ], `${f(a.F, 3)} ${rej ? '>' : '≤'} ${ct} → ${rej ? OPT.rej + ': legalább egy sor átlaga eltér' : OPT.fail + ': nincs szignifikáns különbség a sorok között'}`)),
+  ] };
+}
+
 // ---------- Témák + elmélet ----------
 const TOPICS = [
-  { id: 'ratio', name: 'Arányok', en: 'Ratio I', gens: ratio, theory: `
+  { id: 'ratio', name: 'Arányok', en: 'Ratio I', gens: ratio, cases: [classCase], theory: `
 <p>A <b>ratio</b> (arány) két mennyiséget hasonlít össze: p : q, vagy p/q. A sorrend számít.</p>
 <ul><li>Előbb közös mértékegység: 2 km : 500 m = 2000 : 500 = 4 : 1.</li>
 <li>Egyszerűsítés a legnagyobb közös osztóval: 12 : 18 = 2 : 3.</li>
@@ -551,7 +833,7 @@ const TOPICS = [
 <li><b>Compound ratio</b> (összetett arány): A:B = 2:3, B:C = 4:5 → B-t közös értékre hozzuk: 8:12 és 12:15 → A:C = 8:15.</li>
 <li><b>Part-to-part</b> (rész a részhez) vs <b>part-to-whole</b> (rész az egészhez).</li>
 <li><b>Duplicate ratio</b> (négyzetes arány): a : b → a² : b².</li></ul>` },
-  { id: 'index', name: 'Viszonyszámok', en: 'Ratio II', gens: indices, theory: `
+  { id: 'index', name: 'Viszonyszámok', en: 'Ratio II', gens: indices, cases: [productionCase], theory: `
 <table><tr><th>Mutató</th><th>Képlet</th></tr>
 <tr><td>Distribution ratio (megoszlási, Vm)</td><td>rész / egész</td></tr>
 <tr><td>Coordination ratio (koordinációs, Vk)</td><td>rész / másik rész</td></tr>
@@ -565,10 +847,11 @@ const TOPICS = [
 <tr><td>Relative risk (relatív kockázat, RR)</td><td>P(A) / P(B)</td></tr></table>
 <ul><li>A láncviszonyszámok szorzata = az utolsó bázisviszonyszám. A bázisviszonyszámok hányadosa = láncviszonyszám.</li>
 <li>Vf × Vt = Vd (tény / bázis).</li>
+<li>A betűk a magyar nevek kezdőbetűi: V = viszonyszám; m = megoszlási, k = koordinációs, d = dinamikus (b = bázis, l = lánc), f = tervfeladat, t = tervteljesítés, i = intenzitási, ö = összehasonlító. A diákon a Coordination és a Task/Performance példák tévesen Vm-mel vannak jelölve.</li>
 <li>Egyenes intenzitási: orvos / 1000 lakos (nagyobb = jobb). Fordított: lakos / orvos (kisebb = jobb).</li>
 <li>Odds = bekövetkezett / nem bekövetkezett. Probability = bekövetkezett / összes. Ezért OR ≠ RR; ritka eseménynél közel esnek egymáshoz.</li>
 <li>OR vagy RR = 1: nincs különbség; &gt; 1: az első csoportban gyakoribb; &lt; 1: ritkább.</li></ul>` },
-  { id: 'series', name: 'Adatok és gyakorisági sorok', en: 'Course Introduction', gens: series, theory: `
+  { id: 'series', name: 'Adatok és gyakorisági sorok', en: 'Course Introduction', gens: series, cases: [marksCase], theory: `
 <p><b>Változótípusok.</b> Quantitative (mennyiségi): <b>discrete</b> (diszkrét, számlált) vagy <b>continuous</b> (folytonos, mért). Categorical (kategorikus): <b>binary</b> (két kimenet), <b>nominal</b> (sorrend nélkül), <b>ordinal</b> (sorrendbe állítható, pl. Likert-skála).</p>
 <p>Szerep szerint: <b>independent</b> (független, ok), <b>dependent</b> (függő, okozat), <b>control</b> (kontroll, állandó), <b>confounding</b> (zavaró, mindkettőre hat).</p>
 <p><b>Sorok.</b> Time series (idősor), spatial series (területi sor), condition series (feltétel szerinti sor), individual series (egyedi sor: minden érték külön).</p>
@@ -578,7 +861,7 @@ const TOPICS = [
 <li>Midpoint (osztályközép) = (alsó határ + felső határ) / 2.</li>
 <li>Range (terjedelem) osztályközös sorban = utolsó osztály felső határa − első osztály alsó határa.</li>
 <li>Osztályok: exhaustive (minden adatot lefednek) és mutually exclusive (egymást kizárók); 5–15 darab.</li></ul>` },
-  { id: 'central', name: 'Középértékek', en: 'Descriptive Statistics I', gens: central, theory: `
+  { id: 'central', name: 'Középértékek', en: 'Descriptive Statistics I', gens: central, cases: [groupedCase], theory: `
 <table><tr><th>Mutató</th><th>Képlet</th></tr>
 <tr><td>Arithmetic mean (számtani átlag)</td><td>x̄ = Σx / n</td></tr>
 <tr><td>Grouped mean (osztályközös)</td><td>x̄ = Σfx / Σf, x = osztályközép</td></tr>
@@ -593,7 +876,7 @@ const TOPICS = [
 <li>A csoportos medián képletében a cf a mediánosztály <b>előtti</b> osztály kumulált gyakorisága, az f a mediánosztályé.</li>
 <li>Mode (módusz): leggyakoribb érték; lehet unimodal, bimodal, trimodal, multimodal.</li>
 <li>Százalékos változások átlaga: mértani átlag a tényezőkből (1 + r). Azonos utakon mért sebességek átlaga: harmonikus átlag.</li></ul>` },
-  { id: 'dispersion', name: 'Szóródás', en: 'Descriptive Statistics II', gens: dispersion, theory: `
+  { id: 'dispersion', name: 'Szóródás', en: 'Descriptive Statistics II', gens: dispersion, cases: [sampleCase], theory: `
 <table><tr><th>Mutató</th><th>Képlet</th></tr>
 <tr><td>Range (terjedelem)</td><td>max − min</td></tr>
 <tr><td>Population variance (sokasági variancia)</td><td>σ² = Σ(x − μ)² / N</td></tr>
@@ -610,7 +893,7 @@ const TOPICS = [
 <li>Sample → n − 1 (Bessel-korrekció). A diákon a {4, 6, 8, 10} példa hibás: a helyes s² = 20/3 = 6,67.</li>
 <li>Empirical rule (normális eloszlás): ±1σ ≈ 68%, ±2σ ≈ 95%, ±3σ ≈ 99,7%.</li>
 <li>Binomiális variancia: np(1 − p).</li></ul>` },
-  { id: 'sampling', name: 'Mintavétel', en: 'Random Sampling', gens: sampling, theory: `
+  { id: 'sampling', name: 'Mintavétel', en: 'Random Sampling', gens: sampling, cases: [universityCase], theory: `
 <ul><li><b>Simple random sampling</b> (egyszerű véletlen): mindenki azonos eséllyel; P(kiválasztás) = n / N.</li>
 <li>Visszatevéssel, legalább egyszer: P = 1 − (1 − 1/N)ⁿ. A diák 9,56%-os eredménye hibás, 200 főből 50 húzásnál a helyes érték 22,17%.</li>
 <li><b>Systematic</b> (szisztematikus): k = N / n; véletlen kezdőpont 1 és k között, utána minden k-adik. Az i-edik elem: start + (i − 1)·k. Linear: nem ismétel; circular: a lista végén elölről folytatja.</li>
@@ -618,7 +901,7 @@ const TOPICS = [
 <li><b>Cluster</b> (csoportos): néhány teljes csoportot választunk. n = ACS × klaszterek száma. Single-stage: a kiválasztott klaszterben mindenki. Two-stage: klaszteren belül újra mintavétel. Multi-stage: több szinten.</li>
 <li>Rétegzett: minden rétegből választunk. Klaszteres: csak néhány klasztert választunk.</li>
 <li>Non-probability (nem valószínűségi) módszerek: convenience, judgmental, snowball, quota.</li></ul>` },
-  { id: 'hypothesis', name: 'Hipotézisvizsgálat', en: 'Hypothesis Testing', gens: hypothesis, theory: `
+  { id: 'hypothesis', name: 'Hipotézisvizsgálat', en: 'Hypothesis Testing', gens: hypothesis, cases: [drugCase], theory: `
 <ul><li><b>H₀</b> (null hypothesis, nullhipotézis): tartalmazza az egyenlőséget (=, ≤, ≥). <b>H₁</b> (alternative, alternatív): amit bizonyítani akarunk (≠, &gt;, &lt;).</li>
 <li>Two-tailed (kétoldali): H₁: μ ≠ μ₀. Right-tailed (jobboldali): H₁: μ &gt; μ₀. Left-tailed (baloldali): H₁: μ &lt; μ₀.</li>
 <li><b>Significance level</b> (szignifikanciaszint) α, általában 0,05.</li>
@@ -626,7 +909,7 @@ const TOPICS = [
 <li><b>Type I error</b> (elsőfajú hiba, α): igaz H₀-t elvetünk (false positive). <b>Type II error</b> (másodfajú hiba, β): hamis H₀-t megtartunk (false negative).</li>
 <li>Z-test: ismert szórás, nagy minta. T-test: kis minta vagy ismeretlen szórás. Chi-square: kategorikus adatok.</li>
 <li><b>Paired t-test</b> (páros t-próba): d = után − előtt; m = átlag(d); s = szórás(d) n − 1-gyel; t = m / (s / √n); df = n − 1.</li></ul>` },
-  { id: 'anova', name: 'ANOVA', en: 'ANOVA', gens: anovaGens, theory: `
+  { id: 'anova', name: 'ANOVA', en: 'ANOVA', gens: anovaGens, cases: [rowsCase], theory: `
 <p><b>One-way ANOVA</b> (egyszempontú varianciaelemzés): 3 vagy több csoport átlagát hasonlítja össze. H₀: μ₁ = μ₂ = … = μₖ; H₁: legalább egy átlag eltér.</p>
 <table><tr><th>Forrás</th><th>SS</th><th>df</th><th>MS</th><th>F</th></tr>
 <tr><td>Between (csoportok között)</td><td>Σ nᵢ(x̄ᵢ − x̄)²</td><td>k − 1</td><td>SS(B)/df(B)</td><td>MS(B)/MS(W)</td></tr>
@@ -643,8 +926,15 @@ const TOPICS = [
 // Újragenerál, amíg mind a 4 opció tipikus hibából jön (nem tartalék érték).
 function make(g) {
   let x;
-  for (let i = 0; i < 50; i++) { x = g(); if (x.opts.length === 4 && !x.opts.some(o => o.why === FALLBACK)) return x; }
-  return x.opts.length === 4 ? x : make(g);
+  for (let i = 0; i < 50; i++) { x = g(); if (x.opts.length === 4 && !x.opts.some(o => o.why === FALLBACK)) break; }
+  if (x.opts.length !== 4) return make(g);
+  x.hint = HINTS[g.name]; return x;
+}
+const goodCase = x => x.parts.every(p => p.opts.length === 4 && !p.opts.some(o => o.why === FALLBACK));
+function makeCase(c) {
+  let x;
+  for (let i = 0; i < 200; i++) { x = c(); if (goodCase(x)) return x; }
+  return x;
 }
 
-if (typeof module !== 'undefined') module.exports = { TOPICS, make };
+if (typeof module !== 'undefined') module.exports = { TOPICS, make, makeCase, goodCase, HINTS };

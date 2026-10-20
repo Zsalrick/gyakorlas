@@ -53,8 +53,16 @@ th{background:var(--sheet);font-weight:500}
 .hist td,.hist th{text-align:left}
 
 .bar{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-size:.88rem;color:var(--muted)}
-.progress{height:2px;background:var(--rule);margin:10px 0 26px}
-.progress i{display:block;height:100%;background:var(--ink);transition:width .25s}
+.strip{display:flex;flex-wrap:wrap;gap:4px;margin:12px 0 26px}
+.strip button{min-width:2rem;height:2rem;padding:0 4px;background:transparent;border:1px solid var(--rule);border-radius:2px;font:.8rem "IBM Plex Mono",monospace;color:var(--muted)}
+.strip .r{background:var(--okbg);border-color:var(--ok);color:var(--ok)}
+.strip .w{background:var(--badbg);border-color:var(--bad);color:var(--bad)}
+.strip .cur{border-color:var(--ink);color:var(--ink);font-weight:600;box-shadow:inset 0 -2px 0 var(--ink)}
+.btn:disabled{opacity:.35;cursor:default}
+.tip{border-left:3px solid var(--accent);padding:2px 0 2px 14px;margin:4px 0 16px}
+.tip .label{margin-top:0;color:var(--accent)}
+.part{border-top:1px solid var(--rule);margin-top:26px;padding-top:18px}
+.stem{margin-top:14px}
 .qnum{font-family:"Source Serif 4",Georgia,serif;font-size:1.05rem;color:var(--muted);margin-bottom:8px}
 .qtext{font-size:1.08rem}
 .qtext b{font-weight:600}
@@ -119,7 +127,7 @@ function home() {
     <span class="num">${t.id === 'all' ? '00' : String(i + 1).padStart(2, '0')}</span>
     <div><div class="name">${t.name}</div><div class="sub">${t.en}</div></div>
     <div class="stats">${stats(t.id)}</div>
-    <div class="act">${t.id === 'all' ? '' : `<button class="link" data-theory="${t.id}">Elmélet</button>`}<button class="btn" data-start="${t.id}">Indítás</button></div></li>`;
+    <div class="act">${t.id === 'all' ? '' : `<button class="link" data-theory="${t.id}">Elmélet</button><button class="link" data-case="${t.id}">Teljes feladat</button>`}<button class="btn" data-start="${t.id}">Indítás</button></div></li>`;
   const hist = store.hist.slice(-15).reverse();
   app.innerHTML = `
     <div class="eyebrow">Statistics · University of Pannonia</div>
@@ -136,6 +144,7 @@ function home() {
   app.querySelectorAll('input[name=n]').forEach(r => r.onchange = () => { store.n = +r.value; save(); });
   app.querySelectorAll('[data-start]').forEach(b => b.onclick = () => start(b.dataset.start));
   app.querySelectorAll('[data-theory]').forEach(b => b.onclick = () => theory(b.dataset.theory));
+  app.querySelectorAll('[data-case]').forEach(b => b.onclick = () => caseView(b.dataset.case));
   const c = $('#clear'); if (c) c.onclick = () => { if (confirm('Biztosan törlöd az összes eredményt?')) { store.hist = []; save(); home(); } };
   scrollTo(0, 0);
 }
@@ -145,8 +154,8 @@ function theory(id) {
   app.innerHTML = `<button class="link" id="back">Vissza</button>
     <div class="eyebrow" style="margin-top:18px">Elmélet · ${t.en}</div><h1>${t.name}</h1>
     <div class="theory">${t.theory}</div>
-    <div class="row" style="margin-top:24px"><button class="btn" id="go">Gyakorlás indítása</button></div>`;
-  $('#back').onclick = home; $('#go').onclick = () => start(id);
+    <div class="row" style="margin-top:24px"><button class="btn" id="go">Gyakorlás indítása</button><button class="btn ghost" id="case">Teljes feladat</button></div>`;
+  $('#back').onclick = home; $('#go').onclick = () => start(id); $('#case').onclick = () => caseView(id);
   scrollTo(0, 0);
 }
 
@@ -156,68 +165,127 @@ function nextGen() {
   S.lastGen = g; return make(g);
 }
 
-function start(id) { S = { topic: id, n: store.n, i: 0, ok: 0, missed: [] }; ask(); }
+// Egy kérdés blokkja (kvízben és a teljes feladat részeiben is ugyanez).
+const qblock = (q, label) => `<div class="qnum">${label}</div><div class="qtext">${q.q}</div>
+  <div class="opts">${q.opts.map((o, i) => `<button class="opt" data-i="${i}"><span class="k">${'ABCD'[i]}</span><span class="v">${o.t}</span></button>`).join('')}</div>
+  <div class="tipx"></div><div class="row"><button class="link tipbtn">Tipp</button></div><div class="fbx"></div>`;
 
-function ask() {
-  S.cur = nextGen(); S.done = false;
-  const t = topicById(S.topic);
-  app.innerHTML = `
-    <div class="bar"><span>${t.name}</span><span class="mono">${S.ok} helyes · ${S.i + 1} / ${S.n}</span></div>
-    <div class="progress"><i style="width:${S.i / S.n * 100}%"></i></div>
-    <div class="qnum">Feladat ${S.i + 1}.</div>
-    <div class="qtext">${S.cur.q}</div>
-    <div class="opts">${S.cur.opts.map((o, i) => `<button class="opt" data-i="${i}"><span class="k">${'ABCD'[i]}</span><span class="v">${o.t}</span></button>`).join('')}</div>
-    <div id="fb"></div>
-    <div class="row" style="margin-top:18px"><button class="link" id="quit">Kilépés</button><span class="hint">Billentyűk: A–D vagy 1–4, Enter a továbblépéshez</span></div>`;
-  app.querySelectorAll('.opt').forEach(b => b.onclick = () => answer(+b.dataset.i));
-  $('#quit').onclick = () => { if (S.i === 0 || confirm('Kilépsz? Ez a gyakorlás nem kerül mentésre.')) home(); };
-  scrollTo(0, 0);
+function showTip(root, q) {
+  root.querySelector('.tipx').innerHTML = `<div class="tip"><div class="label">Tipp</div>${q.hint || 'Ehhez a feladathoz nincs külön tipp, nézd meg az elméletet.'}</div>`;
+  root.querySelector('.tipbtn')?.remove();
 }
 
-function answer(i) {
-  if (S.done) return; S.done = true;
-  const q = S.cur, o = q.opts[i], ok = !!o.ok, right = q.opts.find(x => x.ok);
-  if (ok) S.ok++; else S.missed.push({ q: q.q, chosen: o, right: right.t, sol: q.sol });
-  app.querySelectorAll('.opt').forEach((b, j) => { b.disabled = true; if (q.opts[j].ok) b.classList.add('right'); else if (j === i) b.classList.add('wrong'); else b.classList.add('dim'); });
-  const last = S.i + 1 === S.n;
-  $('#fb').innerHTML = `<div class="fb${ok ? '' : ' no'}">
+function paint(root, q, i) {
+  const o = q.opts[i], ok = !!o.ok, right = q.opts.find(x => x.ok);
+  root.querySelectorAll('.opt').forEach((b, j) => { b.disabled = true; b.classList.add(q.opts[j].ok ? 'right' : j === i ? 'wrong' : 'dim'); });
+  root.querySelector('.tipbtn')?.remove();
+  root.querySelector('.fbx').innerHTML = `<div class="fb${ok ? '' : ' no'}">
       <h3>${ok ? 'Helyes' : 'Nem jó'}</h3>
       ${ok ? '' : `<p><b>Miért nem ${esc(o.t)}?</b> ${o.why}</p><p>A helyes válasz: <b class="mono">${right.t}</b></p>`}
       <div class="label">${ok ? 'Miért ez a helyes' : 'Így kellett kiszámolni'}</div>
-      <div class="steps">${q.sol}</div></div>
-    <div class="row"><button class="btn" id="next">${last ? 'Eredmény' : 'Következő'}</button></div>`;
-  $('#next').onclick = next; $('#next').focus({ preventScroll: true });
-  $('#fb').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      <div class="steps">${q.sol}</div></div>`;
 }
 
-function next() { S.i++; S.i < S.n ? ask() : result(); }
+function bindBlock(root, q, onAnswer, onTip) {
+  root.querySelectorAll('.opt').forEach(b => b.onclick = () => onAnswer(+b.dataset.i));
+  root.querySelector('.tipbtn').onclick = () => { showTip(root, q); onTip && onTip(); };
+}
+
+function start(id) { S = { topic: id, n: store.n, qs: [], i: 0 }; show(0); }
+
+const answered = () => S.qs.filter(x => x.pick !== null);
+const isOk = x => !!x.x.opts[x.pick].ok;
+
+// Kvíz nézet: j-edik kérdés. A már megválaszolt kérdések visszanézhetők.
+function show(j, keepScroll) {
+  while (S.qs.length <= j) S.qs.push({ x: nextGen(), pick: null, tip: false });
+  S.i = j;
+  const it = S.qs[j], t = topicById(S.topic), done = answered(), okN = done.filter(isOk).length, all = done.length === S.n;
+  app.innerHTML = `
+    <div class="bar"><span>${t.name}</span><span class="mono">${okN} helyes · ${done.length} / ${S.n} kész</span></div>
+    <div class="strip">${Array.from({ length: S.n }, (_, k) => { const q = S.qs[k], st = q && q.pick !== null ? (isOk(q) ? ' r' : ' w') : '';
+      return `<button class="${k === j ? 'cur' : ''}${st}" data-go="${k}" aria-label="${k + 1}. feladat">${k + 1}</button>`; }).join('')}</div>
+    <div id="q">${qblock(it.x, `Feladat ${j + 1}.`)}</div>
+    <div class="row" style="margin-top:18px">
+      <button class="btn ghost" id="prev"${j === 0 ? ' disabled' : ''}>Előző</button>
+      ${j < S.n - 1 ? `<button class="btn${it.pick === null ? ' ghost' : ''}" id="next">${it.pick === null ? 'Kihagyom' : 'Következő'}</button>` : ''}
+      ${all ? '<button class="btn" id="res">Eredmény</button>' : j === S.n - 1 ? `<span style="color:var(--muted);font-size:.85rem">Még ${S.n - done.length} kérdés vár válaszra.</span>` : ''}
+      <button class="link" id="quit">Kilépés</button>
+    </div>
+    <p class="hint">Billentyűk: A–D vagy 1–4 válasz, T tipp, ← → lapozás, Enter tovább</p>`;
+  const q = $('#q');
+  bindBlock(q, it.x, answer, () => { it.tip = true; });
+  if (it.tip) showTip(q, it.x);
+  if (it.pick !== null) paint(q, it.x, it.pick);
+  app.querySelectorAll('[data-go]').forEach(b => b.onclick = () => show(+b.dataset.go));
+  $('#prev').onclick = () => show(j - 1);
+  const nx = $('#next'); if (nx) nx.onclick = () => show(j + 1);
+  const rs = $('#res'); if (rs) rs.onclick = result;
+  $('#quit').onclick = () => { if (!done.length || confirm('Kilépsz? Ez a gyakorlás nem kerül mentésre.')) home(); };
+  if (!keepScroll) scrollTo(0, 0);
+}
+
+function answer(i) {
+  const it = S.qs[S.i]; if (it.pick !== null) return;
+  it.pick = i; show(S.i, true);
+  const b = $('#res') || $('#next'); if (b) b.focus({ preventScroll: true });
+  $('#q .fbx').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+// Teljes feladat: egy adatsor, több részkérdés, mindegyik külön megválaszolható.
+function caseView(id) {
+  S = null;
+  const t = topicById(id), c = makeCase(pick(t.cases));
+  app.innerHTML = `<button class="link" id="back">Témák</button>
+    <div class="eyebrow" style="margin-top:18px">Teljes feladat · ${t.name}</div><h1>${c.title}</h1>
+    <div class="qtext stem">${c.stem}</div>
+    ${c.parts.map((p, k) => `<section class="part" data-p="${k}">${qblock(p, `${'abcdefgh'[k]})`)}</section>`).join('')}
+    <p class="lead" id="csum"></p>
+    <div class="row" style="margin-top:20px"><button class="btn" id="again">Új feladat</button><button class="btn ghost" id="th">Elmélet</button><button class="btn ghost" id="home">Témák</button></div>`;
+  app.querySelectorAll('.part').forEach(sec => {
+    const p = c.parts[+sec.dataset.p];
+    bindBlock(sec, p, i => {
+      if (p.pick !== undefined) return;
+      p.pick = i; paint(sec, p, i);
+      const d = c.parts.filter(x => x.pick !== undefined);
+      $('#csum').textContent = `${d.filter(x => x.opts[x.pick].ok).length} / ${d.length} rész helyes` + (d.length < c.parts.length ? ` (még ${c.parts.length - d.length} van hátra)` : '.');
+    });
+  });
+  $('#back').onclick = home; $('#home').onclick = home; $('#again').onclick = () => caseView(id); $('#th').onclick = () => theory(id);
+  scrollTo(0, 0);
+}
 
 function result() {
-  const pct = Math.round(S.ok / S.n * 100), d = new Date();
-  store.hist.push({ topic: S.topic, ok: S.ok, n: S.n, pct, date: `${d.getFullYear()}.${String(d.getMonth() + 1).padStart(2, '0')}.${String(d.getDate()).padStart(2, '0')} ${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}` });
+  const okN = S.qs.filter(isOk).length, pct = Math.round(okN / S.n * 100), d = new Date();
+  const missed = S.qs.filter(x => !isOk(x)).map(x => ({ q: x.x.q, chosen: x.x.opts[x.pick], right: x.x.opts.find(o => o.ok).t, sol: x.x.sol }));
+  store.hist.push({ topic: S.topic, ok: okN, n: S.n, pct, date: `${d.getFullYear()}.${String(d.getMonth() + 1).padStart(2, '0')}.${String(d.getDate()).padStart(2, '0')} ${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}` });
   store.hist = store.hist.slice(-200); save();
   const t = topicById(S.topic), id = S.topic;
   app.innerHTML = `<div class="eyebrow">Eredmény · ${t.name}</div>
     <div class="score">${pct}%</div>
-    <p class="lead">${S.ok} / ${S.n} helyes válasz.</p>
+    <p class="lead">${okN} / ${S.n} helyes válasz.</p>
     <div class="row" style="margin:20px 0">
       <button class="btn" id="again">Újra</button>
-      ${id !== 'all' ? '<button class="btn ghost" id="th">Elmélet</button>' : ''}
+      ${id !== 'all' ? '<button class="btn ghost" id="cs">Teljes feladat</button><button class="btn ghost" id="th">Elmélet</button>' : ''}
       <button class="btn ghost" id="home">Témák</button></div>
-    ${S.missed.length ? `<h2 style="margin-top:28px">Hibás válaszok</h2>${S.missed.map(m => `<details><summary>${m.q.replace(/<table[\s\S]*?<\/table>/g, '[táblázat] ').replace(/<[^>]+>/g, '').slice(0, 110)}</summary>
+    ${missed.length ? `<h2 style="margin-top:28px">Hibás válaszok</h2>${missed.map(m => `<details><summary>${m.q.replace(/<table[\s\S]*?<\/table>/g, '[táblázat] ').replace(/<[^>]+>/g, '').slice(0, 110)}</summary>
       <div class="qtext" style="margin-top:8px">${m.q}</div>
       <p>A te válaszod: <span class="mono">${m.chosen.t}</span>. ${m.chosen.why}</p>
       <p>Helyes: <b class="mono">${m.right}</b></p><div class="steps">${m.sol}</div></details>`).join('')}` : ''}`;
   $('#again').onclick = () => start(id); $('#home').onclick = home;
   const th = $('#th'); if (th) th.onclick = () => theory(id);
+  const cs = $('#cs'); if (cs) cs.onclick = () => caseView(id);
   S = null; scrollTo(0, 0);
 }
 
 addEventListener('keydown', e => {
   if (!S || e.ctrlKey || e.metaKey || e.altKey) return;
-  const k = e.key.toLowerCase(), idx = 'abcd'.indexOf(k) >= 0 ? 'abcd'.indexOf(k) : '1234'.indexOf(k);
-  if (!S.done && idx >= 0) answer(idx);
-  else if (S.done && k === 'enter' && document.activeElement?.id !== 'next') next();
+  const it = S.qs[S.i], k = e.key.toLowerCase(), idx = 'abcd'.indexOf(k) >= 0 ? 'abcd'.indexOf(k) : '1234'.indexOf(k);
+  if (it.pick === null && idx >= 0) answer(idx);
+  else if (k === 't' && it.pick === null) $('#q .tipbtn')?.click();
+  else if (k === 'arrowleft' && S.i > 0) show(S.i - 1);
+  else if (k === 'arrowright' && S.i < S.n - 1) show(S.i + 1);
+  else if (k === 'enter' && it.pick !== null && document.activeElement?.tagName !== 'BUTTON') ($('#res') || $('#next'))?.click();
 });
 
 home();
