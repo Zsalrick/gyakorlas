@@ -650,6 +650,36 @@ const tWrongs = d => [
   [(d.xb - d.mu) / (d.s / d.n), `s-t n-nel osztottad ${im(TeX`\sqrt{n}`)} helyett.`],
 ];
 
+// z-próba (ismert σ) p-értékkel. Φ(z) = P(Z ≤ z), Abramowitz–Stegun 7.1.26 (hiba < 2·10⁻⁷).
+const Phi = z => {
+  const x = Math.abs(z) / Math.SQRT2, t = 1 / (1 + 0.3275911 * x);
+  const e = 1 - t * (0.254829592 + t * (-0.284496736 + t * (1.421413741 + t * (-1.453152027 + t * 1.061405429)))) * Math.exp(-x * x);
+  return z >= 0 ? (1 + e) / 2 : (1 - e) / 2;
+};
+const ZCLAIMS = [['A light bulb manufacturer claims that its bulbs last on average', 200, 'hours', 'bulbs'], ['A cereal company claims that its boxes contain on average', 100, 'g', 'boxes'],
+  ['A machine is set to fill bags with an average of', 1000, 'g', 'bags'], ['A university claims that the average exam score is', 70, 'points', 'students']];
+function zData() {
+  for (;;) {
+    const [claim, mu, unit, things] = pick(ZCLAIMS), n = pick([16, 25, 36, 49, 64, 100]), se = pick([0.5, 1, 1.5, 2, 2.5, 3]), dir = pick(['two', 'right', 'left']);
+    const delta = R(1, 8) * pick([-1, 1]), z = Math.round(delta / se * 100) / 100;
+    if (Math.abs(z) < 0.6 || Math.abs(z) > 3.4) continue;
+    const alpha = pick([0.05, 0.05, 0.01]), P = +Phi(Math.abs(z)).toFixed(5);
+    const p = +(dir === 'two' ? 2 * (1 - P) : (dir === 'right') === (z > 0) ? 1 - P : P).toFixed(5);
+    if (Math.abs(p - alpha) < 0.003) continue;
+    return { claim, mu, unit, things, n, sigma: se * Math.sqrt(n), se, xb: mu + delta, z, zs: Math.abs(z).toFixed(2), dir, alpha, P, p, rej: p <= alpha };
+  }
+}
+const phiTbl = d => tbl([im('z'), im(TeX`\Phi(z)`)], [-0.01, 0, 0.01].map(k => { const z = (Math.abs(d.z) + k).toFixed(2), r = [z, Phi(+z).toFixed(5)]; return k ? r : r.map(hl); }));
+// p-érték levezetése az iránytól és z előjelétől függően.
+function pSol(d) {
+  const rule = { right: TeX`Right-tailed: a p-érték a z-től <b>jobbra</b> eső terület, $p = 1 - \Phi(z)$.`, left: TeX`Left-tailed: a p-érték a z-től <b>balra</b> eső terület, $p = \Phi(z)$. Negatív z-nél a táblázat miatt $\Phi(-a) = 1 - \Phi(a)$.`, two: TeX`Two-tailed: mindkét farok számít, $p = 2 \cdot (1 - \Phi(|z|))$.` }[d.dir];
+  const zt = d.z.toFixed(2), lines = d.dir === 'two' ? [TeX`p = 2 \cdot (1 - \Phi(${d.zs}))`, TeX`= 2 \cdot (1 - ${d.P})`, `= ${f(d.p, 5)}`]
+    : d.dir === 'right' ? (d.z > 0 ? [TeX`p = 1 - \Phi(${zt}) = 1 - ${d.P}`, `= ${f(d.p, 5)}`] : [TeX`p = 1 - \Phi(${zt}) = 1 - (1 - \Phi(${d.zs}))`, TeX`= \Phi(${d.zs}) = ${d.P}`])
+    : (d.z < 0 ? [TeX`p = \Phi(${zt}) = 1 - \Phi(${d.zs})`, `= 1 - ${d.P}`, `= ${f(d.p, 5)}`] : [TeX`p = \Phi(${zt}) = ${d.P}`]);
+  return [['A táblázat', para(TeX`A standard normális táblázat $\Phi(z) = P(Z \le z)$ értéket ad, vagyis a z-től <b>balra</b> eső területet.`) + phiTbl(d)],
+    ['Melyik farok?', para(rule)], ['p-érték', fx(...lines)]];
+}
+
 const hypothesis = [
   function decideP() {
     const a = pick([0.01, 0.05, 0.1]); let p; do { p = pick([0.001, 0.004, 0.008, 0.012, 0.02, 0.03, 0.045, 0.06, 0.08, 0.12, 0.2, 0.35]); } while (p === a);
@@ -734,6 +764,14 @@ const hypothesis = [
     const d = tData();
     return Q(`${tStem(d)} Calculate the <b>t statistic</b> for $H_0: \\mu = ${d.mu}$.`, d.t, tWrongs(d),
       steps(...tSol(d), ['Szabadságfok', fx(`df = n - 1 = ${d.n} - 1 = ${d.df}`)]), x => f(x, 3));
+  },
+  function zPvalue() {
+    const d = zData(), lbl = DIR[d.dir][3], one = 1 - d.P;
+    return Q(`A <b>${lbl.split(' ')[0]}</b> z-test gives ${im(`z = ${d.z.toFixed(2)}`)}. From the table, ${im(TeX`\Phi(${d.zs}) = ${d.P}`)}. What is the <b>p-value</b>?`, d.p, [
+      [d.P, TeX`Ez maga $\Phi$, a z-től balra eső terület. A p-érték a farok (a szélső rész) területe.`],
+      [d.dir === 'two' ? one : 2 * Math.min(d.p, 1 - d.p), d.dir === 'two' ? 'Kétoldali próbánál a farok területét meg kell duplázni.' : 'Ez a kétoldali p-érték; egyoldali próbánál nem duplázunk.'],
+      [d.dir === 'two' ? 1 - 2 * one : 1 - d.p, d.dir === 'two' ? 'Ez a két farok közötti terület, nem a p-érték.' : 'Rossz farok: a másik oldali területet vetted.'],
+    ], steps(...pSol(d), ['Döntés (ha α = 0.05)', fx(TeX`p = ${f(d.p, 5)} ${d.p <= 0.05 ? '\\le' : '\\gt'} 0.05`, TeX`\to \text{${d.p <= 0.05 ? 'Reject' : 'Fail to reject'} } H_0`)]), x => f(x, 4));
   },
 ];
 
@@ -860,6 +898,7 @@ const HINTS = {
   hypPair: TeX`Az egyenlőség ($=$, $\le$, $\ge$) mindig $H_0$-ba kerül. Amit bizonyítani akarunk (more / less / different), az $H_1$.`,
   tailType: 'Nézd a kulcsszót vagy a H₁ jelét: „differs / changed / has an effect” vagy ≠ → two-tailed; „more / greater / exceeds” vagy > → right-tailed; „less / lower / below” vagy < → left-tailed.',
   errorType: TeX`Type I: igaz $H_0$-t vetünk el. Type II: hamis $H_0$-t megtartunk. A másik két eset helyes döntés.`,
+  zPvalue: TeX`A táblázat a z-től balra eső területet adja: $\Phi(z)$. Right-tailed: $p = 1 - \Phi(z)$; left-tailed: $p = \Phi(z)$ (negatív z-nél $1 - \Phi(|z|)$); two-tailed: $p = 2(1 - \Phi(|z|))$.`,
   oneSampleT: TeX`$t = \frac{\bar{x} - \mu_0}{s / \sqrt{n}}$: a minta átlagából vond ki az állított értéket ($\mu_0$), és oszd el a standard errorral.`,
   pairedT: TeX`$d = \text{after} - \text{before}$ minden párra. $m$ = d átlaga, $s$ = d szórása ($n - 1$-gyel), $t = \frac{m}{s / \sqrt{n}}$.`,
   tDecision: TeX`Kétoldali próba: $|t|$-t hasonlítsd a kritikus értékhez. Ha nagyobb → reject $H_0$.`,
@@ -1209,6 +1248,38 @@ function tCase() {
   ] };
 }
 
+function zCase() {
+  const d = zData(), [word, th1, th0, label, u1, u0] = DIR[d.dir];
+  const others = Object.keys(DIR).filter(k => k !== d.dir).map(k => DIR[k]), sig = f(d.sigma);
+  const what = { two: ['eltér az állított értéktől', 'eltérne az állított értéktől'], right: ['nagyobb az állított értéknél', 'nagyobb lenne az állított értéknél'], left: ['kisebb az állított értéknél', 'kisebb lenne az állított értéknél'] }[d.dir];
+  return { title: 'z-próba p-értékkel', stem: TeX`${d.claim} <b>${d.mu} ${d.unit}</b>. The population standard deviation is known: $\sigma = ${sig}$ ${d.unit}. A random sample of $n = ${d.n}$ ${d.things} has a mean of $\bar{x} = ${d.xb}$ ${d.unit}. Test at $\alpha = ${d.alpha}$ whether the mean ${word} ${d.mu} ${d.unit}.<p>Standard normal table, $\Phi(z) = P(Z \le z)$:</p>${phiTbl(d)}`, parts: [
+    H(TeX`A bizonyítandó állítás („${word}”) kerül $H_1$-be, az egyenlőség mindig $H_0$-ba.`, Q('Which hypotheses are correct?', `H₀: μ ${u0} ${d.mu},  H₁: μ ${u1} ${d.mu}`, [
+      ...others.map(o => [`H₀: μ ${o[5]} ${d.mu},  H₁: μ ${o[4]} ${d.mu}`, `Ez a ${o[3]} próba hipotézispárja; a kérdés szava („${word}”) mást jelent.`]),
+      [`H₀: μ ${u1} ${d.mu},  H₁: μ ${u0} ${d.mu}`, 'Felcserélted: az egyenlőség mindig H₀-ba kerül, a bizonyítandó állítás H₁-be.'],
+    ], steps(['Mit akarunk bizonyítani?', para(`„${word} ${d.mu}” → ${label} próba.`) + fx(`H_0: \\mu ${th0} ${d.mu}`, `H_1: \\mu ${th1} ${d.mu}`)]))),
+    H(TeX`Ismert-e a <b>sokaság</b> szórása ($\sigma$), vagy csak a mintáé ($s$)?`, Q('Which test should be used?', 'z-test', [
+      ['t-test', TeX`A t-próba akkor kell, ha $\sigma$ ismeretlen, és csak a minta szórása ($s$) van meg. Itt $\sigma$ ismert.`],
+      ['paired t-test', 'Páros próba akkor kell, ha ugyanazokat az elemeket mérjük kétszer (előtte–utána).'],
+      ['chi-square test', 'A chi-square próba kategorikus adatokhoz (gyakoriságokhoz) való, nem átlaghoz.'],
+    ], steps(['Melyik próba?', para(TeX`A feladat a <b>population</b> standard deviationt adja meg ($\sigma = ${sig}$), ezért z-próba kell, és a standard normális táblázatot ($\Phi$) használjuk.`) + tbl(['Próba', 'Mikor?'], [[hl('z-test'), hl('σ ismert, vagy nagy a minta')], ['t-test', 'σ ismeretlen (csak s), kis minta'], ['paired t-test', 'ugyanazok előtte–utána'], ['chi-square', 'kategorikus adatok']])]))),
+    H(TeX`$SE = \frac{\sigma}{\sqrt{n}}$.`, Q('What is the <b>standard error</b> of the mean?', d.se, [
+      [d.sigma / d.n, `σ-t n-nel osztottad ${im(TeX`\sqrt{n}`)} helyett.`], [d.sigma / Math.sqrt(d.n - 1), `${im(TeX`\sqrt{n - 1}`)}-gyel osztottál; itt ${im(TeX`\sqrt{n}`)} kell.`], [d.sigma, 'Ez maga a szórás; a standard error ennek a √n-ed része.'],
+    ], steps(['Standard error', fx(TeX`SE = \frac{\sigma}{\sqrt{n}} = \frac{${sig}}{\sqrt{${d.n}}}`, `= ${fr(sig, Math.sqrt(d.n))}`, `= ${f(d.se, 4)}`)]), x => f(x, 4))),
+    H(TeX`$z = \frac{\bar{x} - \mu_0}{\sigma / \sqrt{n}}$.`, Q('What is the <b>z statistic</b>?', d.z, [
+      [(d.xb - d.mu) / d.sigma, `Nem osztottad σ-t ${im(TeX`\sqrt{n}`)}-nel.`], [d.xb / d.se, `Kimaradt a ${im('\\mu_0')}: a számláló ${im(TeX`\bar{x} - \mu_0`)}.`], [-d.z, 'Előjelhiba: a számláló x̄ − μ₀, nem μ₀ − x̄.'],
+    ], steps(['z statisztika', fx(TeX`z = \frac{\bar{x} - \mu_0}{\sigma / \sqrt{n}} = \frac{${d.xb} - ${d.mu}}{${f(d.se, 4)}}`, `= ${fr(d.xb - d.mu, f(d.se, 4))}`, `= ${d.z.toFixed(2)}`) + para('A z azt mutatja, hány standard errornyira van a minta átlaga az állított értéktől.')]), x => f(x, 2))),
+    H(HINTS.zPvalue, Q('What is the <b>p-value</b>?', d.p, [
+      [d.P, TeX`Ez maga $\Phi$, a z-től balra eső terület. A p-érték a farok területe.`],
+      [d.dir === 'two' ? 1 - d.P : 2 * Math.min(d.p, 1 - d.p), d.dir === 'two' ? 'Kétoldali próbánál a farok területét meg kell duplázni.' : 'Ez a kétoldali p-érték; egyoldali próbánál nem duplázunk.'],
+      [d.dir === 'two' ? 1 - d.p : 1 - d.p, d.dir === 'two' ? 'Ez a két farok közötti terület, nem a p-érték.' : 'Rossz farok: a másik oldali területet vetted.'],
+    ], steps(...pSol(d)), x => f(x, 4))),
+    H(TeX`$p \le \alpha$ → reject $H_0$.`, Q(`What is the decision at ${im(`\\alpha = ${d.alpha}`)}?`, d.rej ? OPT.rej : OPT.fail, [
+      [d.rej ? OPT.fail : OPT.rej, d.rej ? 'p ≤ α, ezért H₀-t el kell vetni.' : 'p > α, ezért H₀ nem vethető el.'], [OPT.rejH1, 'A döntés mindig H₀-ról szól.'], [OPT.prove, 'H₀-t sosem bizonyítjuk, legfeljebb nem vetjük el.'],
+    ], steps(['Összehasonlítás', fx(TeX`p = ${f(d.p, 5)} ${d.rej ? '\\le' : '\\gt'} \alpha = ${d.alpha}`)],
+      ['Döntés és értelmezés', para(d.rej ? `${OPT.rej}: az átlag szignifikánsan ${what[0]} (${d.mu} ${d.unit}).` : `${OPT.fail}: nincs elég bizonyíték arra, hogy az átlag ${what[1]} (${d.mu} ${d.unit}).`)]))),
+  ] };
+}
+
 // ---------- Témák + elmélet ----------
 const TOPICS = [
   { id: 'ratio', name: 'Arányok', en: 'Ratio I', gens: ratio, cases: [classCase], theory: TeX`
@@ -1290,7 +1361,7 @@ const TOPICS = [
 <li><b>Cluster</b> (csoportos): néhány teljes csoportot választunk. $n = \text{ACS} \times \text{klaszterek száma}$. Single-stage: a kiválasztott klaszterben mindenki. Two-stage: klaszteren belül újra mintavétel. Multi-stage: több szinten.</li>
 <li>Rétegzett: minden rétegből választunk. Klaszteres: csak néhány klasztert választunk.</li>
 <li>Non-probability (nem valószínűségi) módszerek: convenience, judgmental, snowball, quota.</li></ul>` },
-  { id: 'hypothesis', name: 'Hipotézisvizsgálat', en: 'Hypothesis Testing', gens: hypothesis, cases: [drugCase, tCase], theory: TeX`
+  { id: 'hypothesis', name: 'Hipotézisvizsgálat', en: 'Hypothesis Testing', gens: hypothesis, cases: [drugCase, tCase, zCase], theory: TeX`
 <ul><li><b>$H_0$</b> (null hypothesis, nullhipotézis): tartalmazza az egyenlőséget ($=$, $\le$, $\ge$). <b>$H_1$</b> (alternative, alternatív): amit bizonyítani akarunk ($\ne$, $\gt$, $\lt$).</li>
 <li>Two-tailed (kétoldali): $H_1: \mu \ne \mu_0$. Right-tailed (jobboldali): $H_1: \mu \gt \mu_0$. Left-tailed (baloldali): $H_1: \mu \lt \mu_0$.</li>
 <li><b>Significance level</b> (szignifikanciaszint) $\alpha$, általában 0,05.</li>
@@ -1298,6 +1369,8 @@ const TOPICS = [
 <li><b>Type I error</b> (elsőfajú hiba, $\alpha$): igaz $H_0$-t elvetünk (false positive). <b>Type II error</b> (másodfajú hiba, $\beta$): hamis $H_0$-t megtartunk (false negative).</li>
 <li>Z-test: ismert szórás, nagy minta. T-test: kis minta vagy ismeretlen szórás. Chi-square: kategorikus adatok.</li>
 <li><b>One-sample t-test</b> (egymintás t-próba): a minta átlagát egy állított értékhez ($\mu_0$) hasonlítja. $t = \frac{\bar{x} - \mu_0}{s / \sqrt{n}}$, $df = n - 1$. A kritikus értéket a t-táblázatból olvassuk: sor = df, oszlop = egy- vagy kétoldali.</li>
+<li><b>z-test</b> (ismert $\sigma$, vagy nagy minta): $z = \frac{\bar{x} - \mu_0}{\sigma / \sqrt{n}}$. A p-érték a standard normális táblázatból: right-tailed $p = 1 - \Phi(z)$; left-tailed $p = \Phi(z)$, ahol $\Phi(-a) = 1 - \Phi(a)$; two-tailed $p = 2(1 - \Phi(|z|))$. Döntés: $p \le \alpha$ → reject $H_0$.</li>
+<li>Táblázatolvasás: a sor a z első tizedese (pl. 2.0), az oszlop a második (pl. 0.00 vagy 0.05). $\Phi(2.00) = 0.97725$, $\Phi(2.05) = 0.97982$.</li>
 <li>Kulcsszavak: „differs” → two-tailed ($\ne$); „more than” → right-tailed ($\gt$); „less than” → left-tailed ($\lt$).</li>
 <li><b>Paired t-test</b> (páros t-próba): az egymintás próba speciális esete, ahol az adatok a különbségek és $\mu_0 = 0$. $d = \text{után} - \text{előtt}$; $m = \bar{d}$; $s$ = d szórása $(n - 1)$-gyel; $t = \frac{m}{s / \sqrt{n}}$; $df = n - 1$.</li></ul>` },
   { id: 'anova', name: 'ANOVA', en: 'ANOVA', gens: anovaGens, cases: [rowsCase], theory: TeX`
