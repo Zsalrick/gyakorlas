@@ -789,8 +789,8 @@ const HINTS = {
   medianGrouped: TeX`A mediánosztály az első, ahol $cf \ge \frac{n}{2}$. $\text{Median} = l + \frac{n/2 - cf}{f} \times h$, ahol $cf$ az ELŐZŐ osztályé.`,
   modeGrouped: TeX`A modális osztály a legnagyobb gyakoriságú. $\text{Mode} = l + \frac{f_1 - f_0}{2f_1 - f_0 - f_2} \times h$, ahol $f_0$ az előző, $f_2$ a következő osztály gyakorisága.`,
   range: TeX`$\text{range} = \max - \min$, a kiugró értéket is beleértve.`,
-  variance: TeX`Átlag → eltérések → négyzetösszeg. Population: $\sigma^2 = \frac{\sum (x - \mu)^2}{N}$, sample: $s^2 = \frac{\sum (x - \bar{x})^2}{n - 1}$. A varianciánál nincs gyökvonás.`,
-  sdFreq: TeX`Gyakorisági sornál: $\sigma^2 = \frac{\sum f (x - \bar{x})^2}{\sum f}$, a szórás ennek a gyöke.`,
+  variance: TeX`A kérdés <b>variance</b> (variancia): átlag → eltérések → négyzetösszeg → osztás, és itt megállsz, <b>nincs gyökvonás</b>. Population: $\sigma^2 = \frac{\sum (x - \mu)^2}{N}$, sample: $s^2 = \frac{\sum (x - \bar{x})^2}{n - 1}$.`,
+  sdFreq: TeX`A kérdés <b>standard deviation</b> (szórás), ezért a végén <b>gyököt kell vonni</b>. Az adatok gyakorisági táblában vannak (f = hányszor fordul elő az érték), ezért minden négyzetes eltérést f-fel szorzol: előbb a variancia $\sigma^2 = \frac{\sum f (x - \bar{x})^2}{\sum f}$, aztán a szórás $\sigma = \sqrt{\sigma^2}$.`,
   quartInd: TeX`Rendezd sorba. $Q_1$ = az $\frac{N+1}{4}$-edik, $Q_3$ = a $\frac{3(N+1)}{4}$-edik elem. $QD = \frac{Q_3 - Q_1}{2}$, együttható: $\frac{Q_3 - Q_1}{Q_3 + Q_1}$.`,
   quartGrouped: TeX`Mint a medián, csak $\frac{n}{2}$ helyett $\frac{N}{4}$ ($Q_1$) vagy $\frac{3N}{4}$ ($Q_3$). Keresd az első osztályt, ahol $cf \ge$ pozíció.`,
   nFromSS: TeX`$\sigma^2 = \frac{SS}{N}$. Rendezd át N-re.`,
@@ -1181,6 +1181,8 @@ const TOPICS = [
 <tr><td>Coefficient of QD</td><td>$\frac{Q_3 - Q_1}{Q_3 + Q_1}$</td></tr></table>
 <ul><li>A range érzékeny az outlierekre (kiugró értékek).</li>
 <li>Variance négyzetes mértékegységben, standard deviation az eredeti egységben.</li>
+<li><b>Mikor kell gyököt vonni?</b> Ha a kérdés <b>standard deviation</b> (szórás, $\sigma$ vagy $s$): mindig, a legvégén. Ha <b>variance</b> (variancia, $\sigma^2$ vagy $s^2$): soha. Visszafelé: a szórás négyzete a variancia.</li>
+<li>Ne keverd: <b>frequency</b> = gyakoriság ($f$, hányszor fordul elő egy érték), ennek semmi köze a varianciához.</li>
 <li>Sample → $n - 1$ (Bessel-korrekció). A diákon a {4, 6, 8, 10} példa hibás: a helyes $s^2 = \frac{20}{3} = 6{,}67$.</li>
 <li>Empirical rule (normális eloszlás): $\pm 1\sigma \approx 68\%$, $\pm 2\sigma \approx 95\%$, $\pm 3\sigma \approx 99{,}7\%$.</li>
 <li>Binomiális variancia: $np(1 - p)$.</li></ul>` },
