@@ -615,6 +615,41 @@ const sampling = [
 
 // ---------- 7. Hipotézisvizsgálat ----------
 const OPT = { rej: 'Reject H₀', fail: 'Fail to reject H₀', rejH1: 'Reject H₁', prove: 'Accept H₀ as proven true' };
+
+// t-táblázat, α = 0,05 (TT2: kétoldali, TT1: egyoldali), df szerint.
+const TT2 = { 4: 2.776, 5: 2.571, 6: 2.447, 7: 2.365, 8: 2.306, 9: 2.262, 10: 2.228, 11: 2.201, 12: 2.179, 13: 2.160, 14: 2.145, 15: 2.131, 16: 2.120, 17: 2.110, 18: 2.101, 19: 2.093, 20: 2.086, 21: 2.080, 22: 2.074, 23: 2.069, 24: 2.064, 25: 2.060 };
+const TT1 = { 4: 2.132, 5: 2.015, 6: 1.943, 7: 1.895, 8: 1.860, 9: 1.833, 10: 1.812, 11: 1.796, 12: 1.782, 13: 1.771, 14: 1.761, 15: 1.753, 16: 1.746, 17: 1.740, 18: 1.734, 19: 1.729, 20: 1.725, 21: 1.721, 22: 1.717, 23: 1.714, 24: 1.711, 25: 1.708 };
+
+// Egymintás t-próba: állított érték (μ₀) vs. minta. [szöveg, μ₀, egység, mik, s min, s max, max eltérés]
+const CLAIMS = [
+  ['A soft drink company claims that its bottles contain', 500, 'ml', 'bottles', 2, 8, 6],
+  ['A coffee producer claims that its packs weigh', 250, 'g', 'packs', 2, 8, 6],
+  ['A manufacturer claims that its batteries last on average', 40, 'hours', 'batteries', 2, 6, 4],
+  ['A pizza shop claims that its average delivery time is', 30, 'minutes', 'deliveries', 2, 6, 4]];
+// [kérdés szava, H₁ jel (TeX), H₀ jel (TeX), próba neve, H₁ jel, H₀ jel]
+const DIR = { two: ['differs significantly from', '\\ne', '=', 'two-tailed (kétoldali)', '≠', '='], right: ['is significantly more than', '\\gt', '\\le', 'right-tailed (jobboldali)', '>', '≤'], left: ['is significantly less than', '\\lt', '\\ge', 'left-tailed (baloldali)', '<', '≥'] };
+function tData() {
+  for (;;) {
+    const [claim, mu, unit, things, s1, s2, dm] = pick(CLAIMS), n = pick([9, 10, 12, 15, 16, 20, 25]), s = R(s1, s2), xb = mu + R(-dm, dm), dir = pick(['two', 'right', 'left']);
+    if (xb === mu) continue;
+    const se = s / Math.sqrt(n), t = (xb - mu) / se, df = n - 1, crit = dir === 'two' ? TT2[df] : TT1[df];
+    if (Math.abs(Math.abs(t) - crit) < 0.1) continue;
+    const rej = dir === 'two' ? Math.abs(t) > crit : dir === 'right' ? t > crit : t < -crit;
+    return { claim, mu, unit, things, n, s, xb, se, t, df, dir, crit, rej };
+  }
+}
+const tStem = d => TeX`${d.claim} <b>${d.mu} ${d.unit}</b>. A sample of $n = ${d.n}$ ${d.things} gives a sample mean of $\bar{x} = ${d.xb}$ ${d.unit} and a sample standard deviation of $s = ${d.s}$ ${d.unit}.`;
+const tSol = d => [
+  ['Képlet (egymintás t-próba)', para(`A minta átlagát (${im(TeX`\bar{x}`)}) a H₀-ban állított értékhez (${im(`\\mu_0 = ${d.mu}`)}) hasonlítjuk:`) + fx(TeX`t = \frac{\bar{x} - \mu_0}{s / \sqrt{n}}`)],
+  ['Standard error', fx(TeX`SE = \frac{s}{\sqrt{n}} = \frac{${d.s}}{\sqrt{${d.n}}}`, `= ${fr(d.s, f(Math.sqrt(d.n), 4))}`, `= ${f(d.se, 4)}`)],
+  ['t statisztika', fx(TeX`t = \frac{\bar{x} - \mu_0}{SE} = \frac{${d.xb} - ${d.mu}}{${f(d.se, 4)}}`, `= ${fr(d.xb - d.mu, f(d.se, 4))}`, `= ${f(d.t, 3)}`)],
+];
+const tWrongs = d => [
+  [(d.xb - d.mu) / d.s, `Nem osztottad s-t ${im(TeX`\sqrt{n}`)}-nel: a nevező a standard error, ${im(TeX`s / \sqrt{n}`)}.`],
+  [d.xb / d.se, `Kimaradt a ${im('\\mu_0')}: a számláló ${im(TeX`\bar{x} - \mu_0`)}.`],
+  [(d.xb - d.mu) / (d.s / d.n), `s-t n-nel osztottad ${im(TeX`\sqrt{n}`)} helyett.`],
+];
+
 const hypothesis = [
   function decideP() {
     const a = pick([0.01, 0.05, 0.1]); let p; do { p = pick([0.001, 0.004, 0.008, 0.012, 0.02, 0.03, 0.045, 0.06, 0.08, 0.12, 0.2, 0.35]); } while (p === a);
@@ -678,6 +713,11 @@ const hypothesis = [
       ['Kétoldali próba', para(`Kétoldali (two-tailed) próbánál ${im('|t|')}-t hasonlítjuk a kritikus értékhez: a nagyon pozitív és a nagyon negatív t is H₀ ellen szól.`)],
       ['Összehasonlítás', fx(`|t| = |${t}| = ${Math.abs(t)}`, TeX`${Math.abs(t)} ${rej ? '\\gt' : '\\le'} ${crit[0]}`, TeX`\to \text{${rej ? 'Reject' : 'Fail to reject'} } H_0`)],
       ['Szemléletesen', para(`Az elfogadási tartomány ${im(`-${crit[0]}`)} és ${im(`+${crit[0]}`)} között van. A ${im(`t = ${t}`)} ${rej ? 'ezen kívül esik (elutasítási tartomány).' : 'ezen belül van.'}`)]));
+  },
+  function oneSampleT() {
+    const d = tData();
+    return Q(`${tStem(d)} Calculate the <b>t statistic</b> for $H_0: \\mu = ${d.mu}$.`, d.t, tWrongs(d),
+      steps(...tSol(d), ['Szabadságfok', fx(`df = n - 1 = ${d.n} - 1 = ${d.df}`)]), x => f(x, 3));
   },
 ];
 
@@ -803,6 +843,7 @@ const HINTS = {
   decideP: TeX`Csak két döntés van: Reject $H_0$ vagy Fail to reject $H_0$. Szabály: $p \le \alpha$ → reject.`,
   hypPair: TeX`Az egyenlőség ($=$, $\le$, $\ge$) mindig $H_0$-ba kerül. Amit bizonyítani akarunk (more / less / different), az $H_1$.`,
   errorType: TeX`Type I: igaz $H_0$-t vetünk el. Type II: hamis $H_0$-t megtartunk. A másik két eset helyes döntés.`,
+  oneSampleT: TeX`$t = \frac{\bar{x} - \mu_0}{s / \sqrt{n}}$: a minta átlagából vond ki az állított értéket ($\mu_0$), és oszd el a standard errorral.`,
   pairedT: TeX`$d = \text{after} - \text{before}$ minden párra. $m$ = d átlaga, $s$ = d szórása ($n - 1$-gyel), $t = \frac{m}{s / \sqrt{n}}$.`,
   tDecision: TeX`Kétoldali próba: $|t|$-t hasonlítsd a kritikus értékhez. Ha nagyobb → reject $H_0$.`,
   dfs: TeX`$df(B) = k - 1$, $df(W) = n - k$, $df(T) = n - 1$; k a csoportok, n az összes elem száma.`,
@@ -816,7 +857,6 @@ const HINTS = {
 // Egy közös adatsor (stem) több részkérdéssel; minden rész egy Q(...) tippel.
 const H = (hint, x) => (x.hint = hint, x);
 const byName = (gens, name) => t => H(HINTS[name], bare(gens.find(g => g.name === name)(t)));
-const tCrit = { 4: 2.776, 5: 2.571, 6: 2.447, 7: 2.365, 8: 2.306, 9: 2.262 }; // kétoldali, α = 0,05
 const fCrit = { 6: 5.14, 7: 4.74, 8: 4.46, 9: 4.26 }; // F(2, df2), α = 0,05
 
 function classCase() {
@@ -1034,8 +1074,8 @@ function universityCase() {
 
 function drugCase() {
   let n, b, d, m, s, t;
-  do { n = R(6, 8); b = Array.from({ length: n }, () => R(112, 135)); d = b.map(() => R(-9, 3)); m = mean(d); s = Math.sqrt(sum(d.map(x => (x - m) ** 2)) / (n - 1)); t = m / (s / Math.sqrt(n)); } while (s === 0 || m === 0 || Math.abs(Math.abs(t) - tCrit[n - 1]) < 0.1);
-  const a = b.map((x, i) => x + d[i]), sp = Math.sqrt(sum(d.map(x => (x - m) ** 2)) / n), c = tCrit[n - 1], rej = Math.abs(t) > c, F = x => f(x, 3);
+  do { n = R(6, 8); b = Array.from({ length: n }, () => R(112, 135)); d = b.map(() => R(-9, 3)); m = mean(d); s = Math.sqrt(sum(d.map(x => (x - m) ** 2)) / (n - 1)); t = m / (s / Math.sqrt(n)); } while (s === 0 || m === 0 || Math.abs(Math.abs(t) - TT2[n - 1]) < 0.1);
+  const a = b.map((x, i) => x + d[i]), sp = Math.sqrt(sum(d.map(x => (x - m) ** 2)) / n), c = TT2[n - 1], rej = Math.abs(t) > c, F = x => f(x, 3);
   const ssd = sum(d.map(x => (x - m) ** 2)), se = s / Math.sqrt(n);
   const dt = tbl(['Patient', ...b.map((_, i) => i + 1)], [['Before', ...b], ['After', ...a], [hl(im(TeX`d = \text{after} - \text{before}`)), ...d.map(hl)]]);
   return { title: 'Páros t-próba: vérnyomás', stem: `A company tests whether a new drug <b>has an effect</b> on blood pressure. ${tbl(['Patient', ...b.map((_, i) => i + 1)], [['Before', ...b], ['After', ...a]])} Use a paired t-test, α = 0.05, d = after − before.`, parts: [
@@ -1110,6 +1150,45 @@ function rowsCase() {
     ], steps(
       ['Összehasonlítás', para('Az F-próba mindig jobboldali.') + fx(TeX`F = ${f(a.F, 3)} ${rej ? '\\gt' : '\\le'} F_{table} = ${ct}`)],
       ['Döntés', para(rej ? `${OPT.rej}: legalább egy sor átlaga szignifikánsan eltér. Hogy melyik, ahhoz post hoc teszt kellene.` : `${OPT.fail}: nincs szignifikáns különbség a sorok átlagai között.`)]))),
+  ] };
+}
+
+function tCase() {
+  const d = tData(), [word, th1, th0, label, u1, u0] = DIR[d.dir], two = d.dir === 'two';
+  const others = Object.keys(DIR).filter(k => k !== d.dir).map(k => DIR[k]);
+  const ttab = tbl(['df', 'one-tailed', 'two-tailed'], [d.df - 1, d.df, d.df + 1].map(k => [k, TT1[k].toFixed(3), TT2[k].toFixed(3)]));
+  const lim = two ? `\\pm ${d.crit}` : d.dir === 'right' ? `+${d.crit}` : `-${d.crit}`;
+  const cmp = two ? TeX`|t| = ${f(Math.abs(d.t), 3)} ${d.rej ? '\\gt' : '\\le'} ${d.crit}` : d.dir === 'right' ? TeX`t = ${f(d.t, 3)} ${d.rej ? '\\gt' : '\\le'} ${d.crit}` : TeX`t = ${f(d.t, 3)} ${d.rej ? '\\lt' : '\\ge'} -${d.crit}`;
+  const what = { two: ['eltér az állított értéktől', 'eltérne az állított értéktől'], right: ['nagyobb az állított értéknél', 'nagyobb lenne az állított értéknél'], left: ['kisebb az állított értéknél', 'kisebb lenne az állított értéknél'] }[d.dir];
+  return { title: 'Egymintás t-próba', stem: `${tStem(d)} Test at ${im(TeX`\alpha = 0.05`)} whether the mean ${word} ${d.mu} ${d.unit}.<p>Part of the t-table (α = 0.05):</p>${ttab}`, parts: [
+    H(TeX`A bizonyítandó állítás („${word}”) kerül $H_1$-be, az egyenlőség mindig $H_0$-ba.`, Q('Which hypotheses are correct?', `H₀: μ ${u0} ${d.mu},  H₁: μ ${u1} ${d.mu}`, [
+      ...others.map(o => [`H₀: μ ${o[5]} ${d.mu},  H₁: μ ${o[4]} ${d.mu}`, `Ez a ${o[3]} próba hipotézispárja; a kérdés szava („${word}”) mást jelent.`]),
+      [`H₀: μ ${u1} ${d.mu},  H₁: μ ${u0} ${d.mu}`, 'Felcserélted: az egyenlőség mindig H₀-ba kerül, a bizonyítandó állítás H₁-be.'],
+    ], steps(
+      ['Mit akarunk bizonyítani?', para(`„${word} ${d.mu}” → ${label} próba.`) + fx(`H_0: \\mu ${th0} ${d.mu}`, `H_1: \\mu ${th1} ${d.mu}`)],
+      ['Kulcsszavak', tbl(['A feladatban', 'Próba', 'H₁'], [['differs, different, changed', 'two-tailed', '≠'], ['more than, greater, exceeds', 'right-tailed', '>'], ['less than, fewer, below', 'left-tailed', '<']].map(x => x[2] === u1 ? x.map(hl) : x))]))),
+    H(TeX`$SE = \frac{s}{\sqrt{n}}$.`, Q('What is the <b>standard error</b> of the mean?', d.se, [
+      [d.s / d.n, `s-t n-nel osztottad ${im(TeX`\sqrt{n}`)} helyett.`], [d.s / Math.sqrt(d.n - 1), `${im(TeX`\sqrt{n - 1}`)}-gyel osztottál; a standard error nevezője ${im(TeX`\sqrt{n}`)}.`], [d.s, 'Ez maga a szórás; a standard error ennek a √n-ed része.'],
+    ], steps(tSol(d)[1]), x => f(x, 4))),
+    H(TeX`$t = \frac{\bar{x} - \mu_0}{SE}$, ahol $\mu_0 = ${d.mu}$ az állított érték.`, Q('What is the <b>t statistic</b>?', d.t, tWrongs(d), steps(tSol(d)[0], tSol(d)[2]), x => f(x, 3))),
+    H('Egymintás t-próbánál df = n − 1.', Q('How many <b>degrees of freedom</b> does the test have?', d.df, [
+      [d.n, 'Ez az elemszám, a szabadságfok ennél eggyel kevesebb.'], [d.n - 2, 'Kettőt vontál le; egymintás próbánál df = n − 1.'], [d.n + 1, 'Hozzáadtál egyet; df = n − 1.'],
+    ], steps(['Képlet', fx(`df = n - 1 = ${d.n} - 1 = ${d.df}`)]), x => f(x))),
+    H('Két dolog kell a táblázatból: a sor (df = n − 1) és az oszlop („differs” → two-tailed, „more / less than” → one-tailed).', Q('Which <b>critical value</b> from the table do you use?', d.crit, [
+      [two ? TT1[d.df] : TT2[d.df], two ? 'Ez az egyoldali oszlop, de a „differs” kétoldali próba.' : 'Ez a kétoldali oszlop, de a „more / less than” egyoldali próba.'],
+      [two ? TT2[d.df + 1] : TT1[d.df + 1], `Rossz sor: df = n − 1 = ${d.df}, nem ${d.df + 1}.`],
+      [two ? TT2[d.df - 1] : TT1[d.df - 1], `Rossz sor: df = ${d.df}, nem ${d.df - 1}.`],
+      [1.96, 'Ez a z-próba (normális eloszlás) kritikus értéke. Ismeretlen szórásnál és kis mintánál t-táblázat kell.'],
+    ], steps(
+      ['Melyik oszlop?', para(`A próba ${label}, ezért a(z) ${hl(two ? 'two-tailed' : 'one-tailed')} oszlop kell.`)],
+      ['Melyik sor?', para(`${im(`df = n - 1 = ${d.df}`)}.`) + tbl(['df', 'one-tailed', 'two-tailed'], [d.df - 1, d.df, d.df + 1].map(k => k === d.df ? [hl(k), two ? TT1[k].toFixed(3) : hl(TT1[k].toFixed(3)), two ? hl(TT2[k].toFixed(3)) : TT2[k].toFixed(3)] : [k, TT1[k].toFixed(3), TT2[k].toFixed(3)]))],
+      ['Kritikus érték', fx(`t_{crit} = ${lim}`) + para(two ? 'Kétoldali próbánál a határ mindkét irányban ott van.' : d.dir === 'right' ? 'Jobboldali próbánál csak a pozitív oldalon van határ.' : 'Baloldali próbánál csak a negatív oldalon van határ.')]), x => x.toFixed(3))),
+    H(TeX`Two-tailed: reject, ha $|t| \gt t_{crit}$. Right-tailed: ha $t \gt t_{crit}$. Left-tailed: ha $t \lt -t_{crit}$.`, Q('What is the decision?', d.rej ? OPT.rej : OPT.fail, [
+      [d.rej ? OPT.fail : OPT.rej, d.rej ? 't az elutasítási tartományba esik, ezért H₀-t el kell vetni.' : 't nem esik az elutasítási tartományba, ezért H₀ nem vethető el.'],
+      [OPT.rejH1, 'A döntés mindig H₀-ról szól.'], [OPT.prove, 'H₀-t sosem bizonyítjuk, legfeljebb nem vetjük el.'],
+    ], steps(
+      ['Összehasonlítás', fx(cmp) + para(`Határ: ${im(lim)}. ${!two && Math.sign(d.t) !== (d.dir === 'right' ? 1 : -1) ? 'A t rossz irányba mutat, ilyenkor egyoldali próbánál H₀ sosem vethető el.' : ''}`)],
+      ['Döntés és értelmezés', para(d.rej ? `${OPT.rej}: az átlag szignifikánsan ${what[0]} (${d.mu} ${d.unit}).` : `${OPT.fail}: nincs elég bizonyíték arra, hogy az átlag ${what[1]} (${d.mu} ${d.unit}).`)]))),
   ] };
 }
 
@@ -1194,14 +1273,16 @@ const TOPICS = [
 <li><b>Cluster</b> (csoportos): néhány teljes csoportot választunk. $n = \text{ACS} \times \text{klaszterek száma}$. Single-stage: a kiválasztott klaszterben mindenki. Two-stage: klaszteren belül újra mintavétel. Multi-stage: több szinten.</li>
 <li>Rétegzett: minden rétegből választunk. Klaszteres: csak néhány klasztert választunk.</li>
 <li>Non-probability (nem valószínűségi) módszerek: convenience, judgmental, snowball, quota.</li></ul>` },
-  { id: 'hypothesis', name: 'Hipotézisvizsgálat', en: 'Hypothesis Testing', gens: hypothesis, cases: [drugCase], theory: TeX`
+  { id: 'hypothesis', name: 'Hipotézisvizsgálat', en: 'Hypothesis Testing', gens: hypothesis, cases: [drugCase, tCase], theory: TeX`
 <ul><li><b>$H_0$</b> (null hypothesis, nullhipotézis): tartalmazza az egyenlőséget ($=$, $\le$, $\ge$). <b>$H_1$</b> (alternative, alternatív): amit bizonyítani akarunk ($\ne$, $\gt$, $\lt$).</li>
 <li>Two-tailed (kétoldali): $H_1: \mu \ne \mu_0$. Right-tailed (jobboldali): $H_1: \mu \gt \mu_0$. Left-tailed (baloldali): $H_1: \mu \lt \mu_0$.</li>
 <li><b>Significance level</b> (szignifikanciaszint) $\alpha$, általában 0,05.</li>
 <li>Döntés: $p \le \alpha$ → reject $H_0$. Vagy: $|\text{test statistic}| \gt \text{critical value}$ → reject $H_0$. Egyébként: fail to reject $H_0$ (nem vetjük el; nem bizonyítjuk!).</li>
 <li><b>Type I error</b> (elsőfajú hiba, $\alpha$): igaz $H_0$-t elvetünk (false positive). <b>Type II error</b> (másodfajú hiba, $\beta$): hamis $H_0$-t megtartunk (false negative).</li>
 <li>Z-test: ismert szórás, nagy minta. T-test: kis minta vagy ismeretlen szórás. Chi-square: kategorikus adatok.</li>
-<li><b>Paired t-test</b> (páros t-próba): $d = \text{után} - \text{előtt}$; $m = \bar{d}$; $s$ = d szórása $(n - 1)$-gyel; $t = \frac{m}{s / \sqrt{n}}$; $df = n - 1$.</li></ul>` },
+<li><b>One-sample t-test</b> (egymintás t-próba): a minta átlagát egy állított értékhez ($\mu_0$) hasonlítja. $t = \frac{\bar{x} - \mu_0}{s / \sqrt{n}}$, $df = n - 1$. A kritikus értéket a t-táblázatból olvassuk: sor = df, oszlop = egy- vagy kétoldali.</li>
+<li>Kulcsszavak: „differs” → two-tailed ($\ne$); „more than” → right-tailed ($\gt$); „less than” → left-tailed ($\lt$).</li>
+<li><b>Paired t-test</b> (páros t-próba): az egymintás próba speciális esete, ahol az adatok a különbségek és $\mu_0 = 0$. $d = \text{után} - \text{előtt}$; $m = \bar{d}$; $s$ = d szórása $(n - 1)$-gyel; $t = \frac{m}{s / \sqrt{n}}$; $df = n - 1$.</li></ul>` },
   { id: 'anova', name: 'ANOVA', en: 'ANOVA', gens: anovaGens, cases: [rowsCase], theory: TeX`
 <p><b>One-way ANOVA</b> (egyszempontú varianciaelemzés): 3 vagy több csoport átlagát hasonlítja össze. $H_0: \mu_1 = \mu_2 = \dots = \mu_k$; $H_1$: legalább egy átlag eltér.</p>
 <table><tr><th>Forrás</th><th>SS</th><th>df</th><th>MS</th><th>F</th></tr>
