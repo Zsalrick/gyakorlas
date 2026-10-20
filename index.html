@@ -22,7 +22,7 @@ h2{font-size:1.45rem}
 .mono,table,.opt .k,.num{font-family:"IBM Plex Mono",ui-monospace,monospace}
 hr{border:0;border-top:1px solid var(--rule);margin:28px 0}
 button{font:inherit;color:inherit;cursor:pointer}
-.btn{background:var(--ink);color:var(--paper);border:1px solid var(--ink);padding:9px 16px;border-radius:3px;font-weight:500}
+.btn{white-space:nowrap;background:var(--ink);color:var(--paper);border:1px solid var(--ink);padding:9px 16px;border-radius:3px;font-weight:500}
 .btn.ghost{background:transparent;color:var(--ink);border-color:var(--rule)}
 .btn:hover{opacity:.88}
 .link{background:none;border:0;padding:0;color:var(--accent);text-decoration:underline;text-underline-offset:3px}
@@ -45,7 +45,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 .topic .stats b{color:var(--ink);font-weight:500}
 .topic .act{grid-column:3;grid-row:1 / span 2;display:flex;gap:14px;align-items:center}
 .topic.all{border-bottom:1px solid var(--ink)}
-@media (max-width:560px){.topic{grid-template-columns:2rem 1fr}.topic .act{grid-column:2;grid-row:auto;margin-top:6px}.topic .stats{flex-wrap:wrap;gap:4px 14px}}
+@media (max-width:560px){.topic{grid-template-columns:2rem minmax(0,1fr)}.topic .act{grid-column:2;grid-row:auto;margin-top:6px;flex-wrap:wrap;gap:10px 14px}.topic .stats{flex-wrap:wrap;gap:4px 14px}}
 
 table{border-collapse:collapse;font-size:.88rem;margin:10px 0;display:block;overflow-x:auto;max-width:100%}
 th,td{border:1px solid var(--rule);padding:4px 9px;text-align:center;white-space:nowrap}
@@ -113,6 +113,9 @@ const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;',
 function load() { try { return JSON.parse(localStorage.getItem(KEY)) || { hist: [], n: 10 }; } catch { return { hist: [], n: 10 }; } }
 function save() { try { localStorage.setItem(KEY, JSON.stringify(store)); } catch {} }
 let store = load(), S = null;
+store.cases = store.cases || [];
+const p2 = x => String(x).padStart(2, '0');
+const now = (d = new Date()) => `${d.getFullYear()}.${p2(d.getMonth() + 1)}.${p2(d.getDate())} ${p2(d.getHours())}:${p2(d.getMinutes())}`;
 const topicById = id => id === 'all' ? ALL : TOPICS.find(t => t.id === id);
 
 function stats(id) {
@@ -127,8 +130,9 @@ function home() {
     <span class="num">${t.id === 'all' ? '00' : String(i + 1).padStart(2, '0')}</span>
     <div><div class="name">${t.name}</div><div class="sub">${t.en}</div></div>
     <div class="stats">${stats(t.id)}</div>
-    <div class="act">${t.id === 'all' ? '' : `<button class="link" data-theory="${t.id}">Elmélet</button><button class="link" data-case="${t.id}">Teljes feladat</button>`}<button class="btn" data-start="${t.id}">Indítás</button></div></li>`;
-  const hist = store.hist.slice(-15).reverse();
+    <div class="act">${t.id === 'all' ? '' : `<button class="link" data-theory="${t.id}">Elmélet</button><button class="btn ghost" data-case="${t.id}">Teljes feladat</button>`}<button class="btn" data-start="${t.id}">Gyakorlás</button></div></li>`;
+  const hist = store.hist.slice(-15).reverse(), cases = store.cases.slice(-15).reverse();
+  const tname = id => esc(topicById(id)?.name || id);
   app.innerHTML = `
     <div class="eyebrow">Statistics · University of Pannonia</div>
     <h1>Statisztika gyakorló</h1>
@@ -138,14 +142,17 @@ function home() {
     <ul class="topics">${row(ALL)}${TOPICS.map(row).join('')}</ul>
     <hr>
     <h2>Eredmények</h2>
-    ${hist.length ? `<table class="hist"><tr><th>Dátum</th><th>Téma</th><th>Helyes</th><th>%</th></tr>${hist.map(h => `<tr><td>${h.date}</td><td>${esc(topicById(h.topic)?.name || h.topic)}</td><td>${h.ok} / ${h.n}</td><td>${h.pct}%</td></tr>`).join('')}</table>
-    <button class="link" id="clear">Eredmények törlése</button>` : '<p class="lead">Itt jelennek majd meg a kitöltött gyakorlások eredményei.</p>'}
+    <h3 style="margin-top:16px">Gyakorlások</h3>
+    ${hist.length ? `<table class="hist"><tr><th>Dátum</th><th>Téma</th><th>Helyes</th><th>%</th></tr>${hist.map(h => `<tr><td>${h.date}</td><td>${tname(h.topic)}</td><td>${h.ok} / ${h.n}</td><td>${h.pct}%</td></tr>`).join('')}</table>` : '<p class="lead">Itt jelennek majd meg a kitöltött gyakorlások eredményei.</p>'}
+    <h3 style="margin-top:22px">Teljes feladatok</h3>
+    ${cases.length ? `<table class="hist"><tr><th>Dátum</th><th>Téma</th><th>Feladat</th><th>Helyes rész</th><th>%</th></tr>${cases.map(h => `<tr><td>${h.date}</td><td>${tname(h.topic)}</td><td>${esc(h.title)}</td><td>${h.ok} / ${h.n}</td><td>${h.pct}%</td></tr>`).join('')}</table>` : '<p class="lead">Itt jelennek majd meg a végigcsinált teljes feladatok (ha minden részére válaszoltál).</p>'}
+    ${hist.length || cases.length ? '<button class="link" id="clear" style="margin-top:12px">Eredmények törlése</button>' : ''}
     <footer>Az eredmények csak ebben a böngészőben tárolódnak.</footer>`;
   app.querySelectorAll('input[name=n]').forEach(r => r.onchange = () => { store.n = +r.value; save(); });
   app.querySelectorAll('[data-start]').forEach(b => b.onclick = () => start(b.dataset.start));
   app.querySelectorAll('[data-theory]').forEach(b => b.onclick = () => theory(b.dataset.theory));
   app.querySelectorAll('[data-case]').forEach(b => b.onclick = () => caseView(b.dataset.case));
-  const c = $('#clear'); if (c) c.onclick = () => { if (confirm('Biztosan törlöd az összes eredményt?')) { store.hist = []; save(); home(); } };
+  const c = $('#clear'); if (c) c.onclick = () => { if (confirm('Biztosan törlöd az összes eredményt?')) { store.hist = []; store.cases = []; save(); home(); } };
   scrollTo(0, 0);
 }
 
@@ -247,8 +254,9 @@ function caseView(id) {
     bindBlock(sec, p, i => {
       if (p.pick !== undefined) return;
       p.pick = i; paint(sec, p, i);
-      const d = c.parts.filter(x => x.pick !== undefined);
-      $('#csum').textContent = `${d.filter(x => x.opts[x.pick].ok).length} / ${d.length} rész helyes` + (d.length < c.parts.length ? ` (még ${c.parts.length - d.length} van hátra)` : '.');
+      const d = c.parts.filter(x => x.pick !== undefined), okN = d.filter(x => x.opts[x.pick].ok).length;
+      if (d.length === c.parts.length) { store.cases.push({ topic: id, title: c.title, ok: okN, n: d.length, pct: Math.round(okN / d.length * 100), date: now() }); store.cases = store.cases.slice(-200); save(); }
+      $('#csum').textContent = `${okN} / ${d.length} rész helyes` + (d.length < c.parts.length ? ` (még ${c.parts.length - d.length} van hátra)` : '.');
     });
   });
   $('#back').onclick = home; $('#home').onclick = home; $('#again').onclick = () => caseView(id); $('#th').onclick = () => theory(id);
@@ -256,9 +264,9 @@ function caseView(id) {
 }
 
 function result() {
-  const okN = S.qs.filter(isOk).length, pct = Math.round(okN / S.n * 100), d = new Date();
+  const okN = S.qs.filter(isOk).length, pct = Math.round(okN / S.n * 100);
   const missed = S.qs.filter(x => !isOk(x)).map(x => ({ q: x.x.q, chosen: x.x.opts[x.pick], right: x.x.opts.find(o => o.ok).t, sol: x.x.sol }));
-  store.hist.push({ topic: S.topic, ok: okN, n: S.n, pct, date: `${d.getFullYear()}.${String(d.getMonth() + 1).padStart(2, '0')}.${String(d.getDate()).padStart(2, '0')} ${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}` });
+  store.hist.push({ topic: S.topic, ok: okN, n: S.n, pct, date: now() });
   store.hist = store.hist.slice(-200); save();
   const t = topicById(S.topic), id = S.topic;
   app.innerHTML = `<div class="eyebrow">Eredmény · ${t.name}</div>
