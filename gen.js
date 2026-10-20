@@ -678,6 +678,22 @@ const hypothesis = [
       ['A próba iránya', para(`${tail}: ${{ 'right-tailed': 'H₁-ben > van, csak a nagy értékek szólnak H₀ ellen.', 'left-tailed': 'H₁-ben < van, csak a kis értékek szólnak H₀ ellen.', 'two-tailed': 'H₁-ben ≠ van, mindkét irány számít.' }[tail]}`)],
       ['Kulcsszavak', tbl(['Kulcsszó', 'H₀', 'H₁', 'Próba'], [['more than, greater, increased', '≤', '>', 'right-tailed'], ['less than, fewer, decreased', '≥', '<', 'left-tailed'], ['different, changed, has an effect', '=', '≠', 'two-tailed']].map(x => x[2] === h1 ? x.map(hl) : x))]));
   },
+  function tailType() {
+    const S = [['A company tests whether its new battery lasts <b>longer than</b> 40 hours.', 'right', 40], ['A teacher tests whether the average score <b>has changed</b> from last year’s 72.', 'two', 72],
+      ['A quality inspector checks whether bottles contain <b>less than</b> 500 ml on average.', 'left', 500], ['A shop tests whether the average waiting time <b>exceeds</b> 5 minutes.', 'right', 5],
+      ['A drug company tests whether a medicine <b>has an effect</b> on the mean blood pressure of 120.', 'two', 120], ['A bakery tests whether its loaves weigh <b>differently</b> from 1000 g.', 'two', 1000],
+      ['A city tests whether the average commute time is <b>below</b> 30 minutes.', 'left', 30], ['An airline tests whether the mean delay is <b>greater than</b> 15 minutes.', 'right', 15],
+      ['A school tests whether the mean IQ of its students <b>differs</b> from 100.', 'two', 100], ['A mobile operator tests whether the average download speed is <b>lower than</b> the advertised 50 Mbps.', 'left', 50]];
+    const [txt, dir, mu] = pick(S), fromH1 = Math.random() < 0.4, [, th1, th0, label, u1] = DIR[dir];
+    const O = { two: 'two-tailed (H₁: μ ≠ μ₀)', right: 'right-tailed (H₁: μ > μ₀)', left: 'left-tailed (H₁: μ < μ₀)' };
+    const W = { two: 'Kétoldali próba akkor kell, ha bármelyik irányú eltérés érdekel (differs, changed, has an effect).', right: 'Jobboldali próba akkor kell, ha a nagyobb értéket akarjuk bizonyítani (more, greater, exceeds, longer).', left: 'Baloldali próba akkor kell, ha a kisebb értéket akarjuk bizonyítani (less, lower, below, fewer).' };
+    const q = fromH1 ? `The alternative hypothesis is ${im(`H_1: \\mu ${th1} ${mu}`)}. What type of test is this?` : `${txt} What type of test is this?`;
+    return Q(q, O[dir], [...Object.keys(O).filter(k => k !== dir).map(k => [O[k], W[k] + ' Itt nem ez a helyzet.']), ['two-tailed (H₁: μ = μ₀)', 'H₁ sosem lehet egyenlőség, az egyenlőség mindig H₀-ba kerül.']], steps(
+      fromH1 ? ['Mit mutat a H₁ jele?', para(`${im(`H_1: \\mu ${th1} ${mu}`)}: ${{ two: 'a ≠ mindkét irányt jelenti', right: 'a > csak a nagyobb irányt jelenti', left: 'a < csak a kisebb irányt jelenti' }[dir]} → ${hl(label)} próba.`)]
+        : ['A kulcsszó', para(`A kiemelt szó dönti el az irányt: ${W[dir]} → ${hl(label)} próba.`)],
+      ['A hipotézispár', fx(`H_0: \\mu ${th0} ${mu}`, `H_1: \\mu ${th1} ${mu}`) + para('Az egyenlőség (=, ≤, ≥) mindig H₀-ban van, a bizonyítandó állítás H₁-ben.')],
+      ['Kulcsszavak', tbl(['A feladatban', 'H₁', 'Próba', 'Elutasítási tartomány'], [['differs, changed, has an effect', '≠', 'two-tailed', 'mindkét szélen'], ['more, greater, exceeds, longer, increases', '>', 'right-tailed', 'jobb szélen'], ['less, lower, below, fewer, reduces', '<', 'left-tailed', 'bal szélen']].map(x => x[1] === u1 ? x.map(hl) : x))]));
+  },
   function errorType() {
     const h0true = Math.random() < 0.5, rej = Math.random() < 0.5;
     const ans = h0true && rej ? 'Type I error' : !h0true && !rej ? 'Type II error' : 'Correct decision';
@@ -842,6 +858,7 @@ const HINTS = {
   methodId: 'Kulcsszavak: „every k-th” → systematic; MINDEN csoportból választunk → stratified; néhány teljes csoport → cluster; közvetlen húzás a teljes listából → simple.',
   decideP: TeX`Csak két döntés van: Reject $H_0$ vagy Fail to reject $H_0$. Szabály: $p \le \alpha$ → reject.`,
   hypPair: TeX`Az egyenlőség ($=$, $\le$, $\ge$) mindig $H_0$-ba kerül. Amit bizonyítani akarunk (more / less / different), az $H_1$.`,
+  tailType: 'Nézd a kulcsszót vagy a H₁ jelét: „differs / changed / has an effect” vagy ≠ → two-tailed; „more / greater / exceeds” vagy > → right-tailed; „less / lower / below” vagy < → left-tailed.',
   errorType: TeX`Type I: igaz $H_0$-t vetünk el. Type II: hamis $H_0$-t megtartunk. A másik két eset helyes döntés.`,
   oneSampleT: TeX`$t = \frac{\bar{x} - \mu_0}{s / \sqrt{n}}$: a minta átlagából vond ki az állított értéket ($\mu_0$), és oszd el a standard errorral.`,
   pairedT: TeX`$d = \text{after} - \text{before}$ minden párra. $m$ = d átlaga, $s$ = d szórása ($n - 1$-gyel), $t = \frac{m}{s / \sqrt{n}}$.`,
