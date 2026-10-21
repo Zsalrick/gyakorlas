@@ -3,338 +3,44 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Statisztika – gyakorló</title>
+<title>Gyakorló</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
 <style>
-:root{--paper:#f5f2ea;--sheet:#fbfaf6;--ink:#1b1a17;--muted:#6d685d;--rule:#d8d1c2;--accent:#24524a;--ok:#2e6b3b;--okbg:#e5eee1;--bad:#a3392a;--badbg:#f5e2dc}
-@media (prefers-color-scheme:dark){:root{--paper:#171614;--sheet:#1e1d1a;--ink:#ebe6da;--muted:#a19a8b;--rule:#3a3731;--accent:#7fb3a6;--ok:#86c08f;--okbg:#1f2c21;--bad:#e08c7c;--badbg:#33201c}}
+:root{--paper:#f5f2ea;--ink:#1b1a17;--muted:#6d685d;--rule:#d8d1c2;--accent:#24524a}
+@media (prefers-color-scheme:dark){:root{--paper:#171614;--ink:#ebe6da;--muted:#a19a8b;--rule:#3a3731;--accent:#7fb3a6}}
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 "IBM Plex Sans",system-ui,sans-serif}
 main{max-width:760px;margin:0 auto;padding:28px 18px 64px}
-h1,h2,h3{font-family:"Source Serif 4",Georgia,serif;font-weight:600;line-height:1.2;margin:0}
-h1{font-size:2.1rem}
-h2{font-size:1.45rem}
+h1{font-family:"Source Serif 4",Georgia,serif;font-weight:600;font-size:2.1rem;line-height:1.2;margin:0}
 .eyebrow{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
 .lead{color:var(--muted);margin:10px 0 0;max-width:56ch}
-.mono,table,.opt .k,.num{font-family:"IBM Plex Mono",ui-monospace,monospace}
-hr{border:0;border-top:1px solid var(--rule);margin:28px 0}
-button{font:inherit;color:inherit;cursor:pointer}
-.btn{white-space:nowrap;background:var(--ink);color:var(--paper);border:1px solid var(--ink);padding:9px 16px;border-radius:3px;font-weight:500}
-.btn.ghost{background:transparent;color:var(--ink);border-color:var(--rule)}
-.btn:hover{opacity:.88}
-.link{background:none;border:0;padding:0;color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+ul{list-style:none;margin:28px 0 0;padding:0;border-top:1px solid var(--ink)}
+li a{display:grid;grid-template-columns:2.4rem 1fr auto;gap:4px 14px;align-items:center;padding:16px 0;border-bottom:1px solid var(--rule);color:inherit;text-decoration:none}
+li a:hover .go{text-decoration:underline}
+.num{font-family:"IBM Plex Mono",monospace;color:var(--muted);font-size:.9rem}
+.name{font-weight:600}
+.sub{color:var(--muted);font-size:.85rem}
+.go{color:var(--accent);text-underline-offset:3px}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-
-.settings{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:22px;font-size:.92rem;color:var(--muted)}
-.seg{display:inline-flex;border:1px solid var(--rule);border-radius:3px;overflow:hidden}
-.seg label{padding:5px 12px;cursor:pointer;border-left:1px solid var(--rule);color:var(--ink);font-family:"IBM Plex Mono",monospace}
-.seg label:first-child{border-left:0}
-.seg input{position:absolute;opacity:0;pointer-events:none}
-.seg input:checked+span{font-weight:600}
-.seg label:has(input:checked){background:var(--ink);color:var(--paper)}
-
-.topics{list-style:none;margin:18px 0 0;padding:0;border-top:1px solid var(--ink)}
-.topic{display:grid;grid-template-columns:2.4rem 1fr auto;gap:4px 14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--rule)}
-.topic .num{color:var(--muted);font-size:.9rem}
-.topic .name{font-weight:600}
-.topic .sub{color:var(--muted);font-size:.85rem}
-.topic .stats{grid-column:2;display:flex;gap:16px;font-size:.82rem;color:var(--muted);font-family:"IBM Plex Mono",monospace}
-.topic .stats b{color:var(--ink);font-weight:500}
-.topic .act{grid-column:3;grid-row:1 / span 2;display:flex;gap:14px;align-items:center}
-.topic.all{border-bottom:1px solid var(--ink)}
-@media (max-width:560px){.topic{grid-template-columns:2rem minmax(0,1fr)}.topic .act{grid-column:2;grid-row:auto;margin-top:6px;flex-wrap:wrap;gap:10px 14px}.topic .stats{flex-wrap:wrap;gap:4px 14px}}
-
-table{border-collapse:collapse;font-size:.88rem;margin:10px 0;display:block;overflow-x:auto;max-width:100%}
-th,td{border:1px solid var(--rule);padding:4px 9px;text-align:center;white-space:nowrap}
-th{background:var(--sheet);font-weight:500}
-.hist td,.hist th{text-align:left}
-
-.bar{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-size:.88rem;color:var(--muted)}
-.qhead{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule);margin:-28px -18px 22px;padding:12px 18px 0}
-.qhead .bar{align-items:center}
-.qhead .arrows{display:flex;gap:6px}
-.qhead .arrows button{width:2.2rem;height:2rem;background:transparent;border:1px solid var(--rule);border-radius:2px;color:var(--ink);font-size:1rem}
-.qhead .arrows button:disabled{opacity:.35;cursor:default}
-.qnav{position:sticky;bottom:0;z-index:5;background:var(--paper);border-top:1px solid var(--rule);margin:22px -18px -64px;padding:10px 18px calc(10px + env(safe-area-inset-bottom))}
-.part{scroll-margin-top:110px}
-.fbx{scroll-margin:120px 0 90px}
-.strip{display:flex;gap:4px;margin:10px 0 10px;overflow-x:auto;scrollbar-width:thin;padding-bottom:2px}
-.strip button{flex:none;min-width:2rem;height:2rem;padding:0 4px;background:transparent;border:1px solid var(--rule);border-radius:2px;font:.8rem "IBM Plex Mono",monospace;color:var(--muted)}
-.strip .r{background:var(--okbg);border-color:var(--ok);color:var(--ok)}
-.strip .w{background:var(--badbg);border-color:var(--bad);color:var(--bad)}
-.strip .cur{border-color:var(--ink);color:var(--ink);font-weight:600;box-shadow:inset 0 -2px 0 var(--ink)}
-.btn:disabled{opacity:.35;cursor:default}
-.tip{border-left:3px solid var(--accent);padding:2px 0 2px 14px;margin:4px 0 16px}
-.tip .label{margin-top:0;color:var(--accent)}
-.part{border-top:1px solid var(--rule);margin-top:26px;padding-top:18px}
-.stem{margin-top:14px}
-.qnum{font-family:"Source Serif 4",Georgia,serif;font-size:1.05rem;color:var(--muted);margin-bottom:8px}
-.qtext{font-size:1.08rem}
-.qtext b{font-weight:600}
-.opts{display:grid;gap:8px;margin:22px 0}
-.opt{display:flex;gap:12px;align-items:center;width:100%;text-align:left;background:var(--sheet);border:1px solid var(--rule);border-radius:3px;padding:11px 12px}
-.opt:hover:not(:disabled){border-color:var(--ink)}
-.opt .k{flex:none;width:1.7rem;height:1.7rem;display:grid;place-items:center;border:1px solid var(--rule);border-radius:2px;font-size:.85rem;color:var(--muted)}
-.opt .v{font-family:"IBM Plex Mono",monospace;font-size:1rem}
-.opt:disabled{cursor:default}
-.opt.right{border-color:var(--ok);background:var(--okbg)}
-.opt.right .k{border-color:var(--ok);color:var(--ok)}
-.opt.wrong{border-color:var(--bad);background:var(--badbg)}
-.opt.wrong .k{border-color:var(--bad);color:var(--bad)}
-.opt.dim{opacity:.55}
-.fb{border-left:3px solid var(--ok);padding:2px 0 2px 14px;margin:6px 0 18px}
-.fb.no{border-color:var(--bad)}
-.fb h3{font-size:1.1rem;margin-bottom:4px}
-.fb p{margin:4px 0}
-.steps{font-size:.95rem;background:var(--sheet);border:1px solid var(--rule);border-radius:3px;padding:12px 14px;margin:8px 0;overflow-x:auto}
-.steps p{margin:4px 0}
-.steps table{margin:6px 0}
-.sol{margin:0;padding-left:1.4rem}
-.sol>li{margin:0 0 14px;padding-left:2px}
-.sol>li:last-child{margin-bottom:0}
-.sol>li::marker{font-family:"Source Serif 4",Georgia,serif;font-weight:600}
-.sol .sh{display:block;font-weight:600;margin-bottom:2px}
-.fx{background:var(--paper);border:1px solid var(--rule);border-radius:2px;padding:0 12px;margin:6px 0;overflow-x:auto;overflow-y:hidden}
-.fx .katex-display{margin:.7em 0}
-.katex{font-size:1.07em}
-.label{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:12px}
-.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-.hint{font-size:.8rem;color:var(--muted)}
-@media (hover:none){.hint{display:none}}
-
-.score{font-family:"Source Serif 4",Georgia,serif;font-size:4.5rem;line-height:1;margin:14px 0 4px}
-details{border-top:1px solid var(--rule);padding:10px 0}
-details summary{cursor:pointer;font-weight:500}
-.theory p,.theory li{max-width:66ch}
-.theory ul{padding-left:1.2rem}
-.theory li{margin:5px 0}
-.theory table{white-space:normal}
-.theory td,.theory th{white-space:normal;text-align:left}
-.theory td+td,.theory th+th{white-space:nowrap}
 footer{margin-top:40px;font-size:.8rem;color:var(--muted)}
 </style>
 </head>
 <body>
-<main id="app"></main>
-<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
-<script src="gen.js"></script>
-<script>
-const $ = s => document.querySelector(s);
-const app = $('#app');
-// Képletek: minden DOM-változás után a $…$ és $$…$$ részeket KaTeX rendereli (a már renderelteket nem bántja).
-const KX = { delimiters: [{ left: '$$', right: '$$', display: true }, { left: '$', right: '$', display: false }], throwOnError: false, strict: 'ignore', fleqn: true, macros: { '\\frac': '\\dfrac' } };
-new MutationObserver(() => window.renderMathInElement && renderMathInElement(app, KX)).observe(app, { childList: true, subtree: true });
-const KEY = 'stat-gyakorlo-v1';
-const ALL = { id: 'all', name: 'Összes téma', en: 'vegyes' };
-const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-
-function load() { try { return JSON.parse(localStorage.getItem(KEY)) || { hist: [], n: 10 }; } catch { return { hist: [], n: 10 }; } }
-function save() { try { localStorage.setItem(KEY, JSON.stringify(store)); } catch {} }
-let store = load(), S = null;
-store.cases = store.cases || [];
-const p2 = x => String(x).padStart(2, '0');
-const now = (d = new Date()) => `${d.getFullYear()}.${p2(d.getMonth() + 1)}.${p2(d.getDate())} ${p2(d.getHours())}:${p2(d.getMinutes())}`;
-const topicById = id => id === 'all' ? ALL : TOPICS.find(t => t.id === id);
-
-function stats(id) {
-  const h = store.hist.filter(x => x.topic === id);
-  if (!h.length) return '<span>Még nincs kitöltés</span>';
-  return `<span>Utolsó <b>${h[h.length - 1].pct}%</b></span><span>Legjobb <b>${Math.max(...h.map(x => x.pct))}%</b></span><span>Átlag <b>${Math.round(h.reduce((s, x) => s + x.pct, 0) / h.length)}%</b></span><span>Kitöltés <b>${h.length}</b></span>`;
-}
-
-function home() {
-  S = null;
-  const row = (t, i) => `<li class="topic${t.id === 'all' ? ' all' : ''}">
-    <span class="num">${t.id === 'all' ? '00' : String(i + 1).padStart(2, '0')}</span>
-    <div><div class="name">${t.name}</div><div class="sub">${t.en}</div></div>
-    <div class="stats">${stats(t.id)}</div>
-    <div class="act">${t.id === 'all' ? '' : `<button class="link" data-theory="${t.id}">Elmélet</button><button class="btn ghost" data-case="${t.id}">Teljes feladat</button>`}<button class="btn" data-start="${t.id}">Gyakorlás</button></div></li>`;
-  const hist = store.hist.slice(-15).reverse(), cases = store.cases.slice(-15).reverse();
-  const tname = id => esc(topicById(id)?.name || id);
-  app.innerHTML = `
-    <div class="eyebrow">Statistics · University of Pannonia</div>
-    <h1>Statisztika gyakorló</h1>
-    <p class="lead">Véletlenszerűen generált feladatok a zh anyagából. Számold ki, válaszd ki az eredményt, és minden kérdés után megkapod a levezetést.</p>
-    <div class="settings">Kérdések száma
-      <span class="seg">${[5, 10, 20, 30].map(n => `<label><input type="radio" name="n" value="${n}"${store.n === n ? ' checked' : ''}><span>${n}</span></label>`).join('')}</span></div>
-    <ul class="topics">${row(ALL)}${TOPICS.map(row).join('')}</ul>
-    <hr>
-    <h2>Eredmények</h2>
-    <h3 style="margin-top:16px">Gyakorlások</h3>
-    ${hist.length ? `<table class="hist"><tr><th>Dátum</th><th>Téma</th><th>Helyes</th><th>%</th></tr>${hist.map(h => `<tr><td>${h.date}</td><td>${tname(h.topic)}</td><td>${h.ok} / ${h.n}</td><td>${h.pct}%</td></tr>`).join('')}</table>` : '<p class="lead">Itt jelennek majd meg a kitöltött gyakorlások eredményei.</p>'}
-    <h3 style="margin-top:22px">Teljes feladatok</h3>
-    ${cases.length ? `<table class="hist"><tr><th>Dátum</th><th>Téma</th><th>Feladat</th><th>Helyes rész</th><th>%</th></tr>${cases.map(h => `<tr><td>${h.date}</td><td>${tname(h.topic)}</td><td>${esc(h.title)}</td><td>${h.ok} / ${h.n}</td><td>${h.pct}%</td></tr>`).join('')}</table>` : '<p class="lead">Itt jelennek majd meg a végigcsinált teljes feladatok (ha minden részére válaszoltál).</p>'}
-    ${hist.length || cases.length ? '<button class="link" id="clear" style="margin-top:12px">Eredmények törlése</button>' : ''}
-    <footer>Az eredmények csak ebben a böngészőben tárolódnak.</footer>`;
-  app.querySelectorAll('input[name=n]').forEach(r => r.onchange = () => { store.n = +r.value; save(); });
-  app.querySelectorAll('[data-start]').forEach(b => b.onclick = () => start(b.dataset.start));
-  app.querySelectorAll('[data-theory]').forEach(b => b.onclick = () => theory(b.dataset.theory));
-  app.querySelectorAll('[data-case]').forEach(b => b.onclick = () => caseView(b.dataset.case));
-  const c = $('#clear'); if (c) c.onclick = () => { if (confirm('Biztosan törlöd az összes eredményt?')) { store.hist = []; store.cases = []; save(); home(); } };
-  scrollTo(0, 0);
-}
-
-function theory(id) {
-  const t = topicById(id);
-  app.innerHTML = `<button class="link" id="back">Vissza</button>
-    <div class="eyebrow" style="margin-top:18px">Elmélet · ${t.en}</div><h1>${t.name}</h1>
-    <div class="theory">${t.theory}</div>
-    <div class="row" style="margin-top:24px"><button class="btn" id="go">Gyakorlás indítása</button><button class="btn ghost" id="case">Teljes feladat</button></div>`;
-  $('#back').onclick = home; $('#go').onclick = () => start(id); $('#case').onclick = () => caseView(id);
-  scrollTo(0, 0);
-}
-
-function nextGen() {
-  const pool = S.topic === 'all' ? TOPICS.flatMap(t => t.gens) : topicById(S.topic).gens;
-  let g; do { g = pool[Math.floor(Math.random() * pool.length)]; } while (pool.length > 1 && g === S.lastGen);
-  S.lastGen = g; return make(g);
-}
-
-// Egy kérdés blokkja (kvízben és a teljes feladat részeiben is ugyanez).
-const qblock = (q, label) => `<div class="qnum">${label}</div><div class="qtext">${q.q}</div>
-  <div class="opts">${q.opts.map((o, i) => `<button class="opt" data-i="${i}"><span class="k">${'ABCD'[i]}</span><span class="v">${o.t}</span></button>`).join('')}</div>
-  <div class="tipx"></div><div class="row"><button class="link tipbtn">Tipp</button></div><div class="fbx"></div>`;
-
-function showTip(root, q) {
-  root.querySelector('.tipx').innerHTML = `<div class="tip"><div class="label">Tipp</div>${q.hint || 'Ehhez a feladathoz nincs külön tipp, nézd meg az elméletet.'}</div>`;
-  root.querySelector('.tipbtn')?.remove();
-}
-
-function paint(root, q, i) {
-  const o = q.opts[i], ok = !!o.ok, right = q.opts.find(x => x.ok);
-  root.querySelectorAll('.opt').forEach((b, j) => { b.disabled = true; b.classList.add(q.opts[j].ok ? 'right' : j === i ? 'wrong' : 'dim'); });
-  root.querySelector('.tipbtn')?.remove();
-  root.querySelector('.fbx').innerHTML = `<div class="fb${ok ? '' : ' no'}">
-      <h3>${ok ? 'Helyes' : 'Nem jó'}</h3>
-      ${ok ? '' : `<p><b>Miért nem ${esc(o.t)}?</b> ${o.why}</p><p>A helyes válasz: <b class="mono">${right.t}</b></p>`}
-      <div class="label">${ok ? 'Miért ez a helyes' : 'Így kellett kiszámolni'}</div>
-      <div class="steps">${q.sol}</div></div>`;
-}
-
-function bindBlock(root, q, onAnswer, onTip) {
-  root.querySelectorAll('.opt').forEach(b => b.onclick = () => onAnswer(+b.dataset.i));
-  root.querySelector('.tipbtn').onclick = () => { showTip(root, q); onTip && onTip(); };
-}
-
-function start(id) { S = { topic: id, n: store.n, qs: [], i: 0 }; show(0); }
-
-const answered = () => S.qs.filter(x => x.pick !== null);
-const isOk = x => !!x.x.opts[x.pick].ok;
-
-// A sáv aktuális gombját középre görgeti (sok kérdésnél a sáv vízszintesen görgethető).
-function centerStrip() {
-  const st = app.querySelector('.strip'), cur = st && st.querySelector('.cur');
-  if (cur) st.scrollLeft = cur.offsetLeft - st.offsetLeft - st.clientWidth / 2 + cur.offsetWidth / 2;
-}
-
-// Kvíz nézet: j-edik kérdés. A már megválaszolt kérdések visszanézhetők.
-// Fent és lent ragadós navigáció (.qhead, .qnav).
-function show(j, keepScroll) {
-  while (S.qs.length <= j) S.qs.push({ x: nextGen(), pick: null, tip: false });
-  S.i = j;
-  const it = S.qs[j], t = topicById(S.topic), done = answered(), okN = done.filter(isOk).length, all = done.length === S.n;
-  app.innerHTML = `
-    <div class="qhead">
-      <div class="bar"><span>${t.name}</span><span class="mono">${okN} helyes · ${done.length} / ${S.n}</span>
-        <span class="arrows"><button data-step="-1" aria-label="Előző"${j === 0 ? ' disabled' : ''}>←</button><button data-step="1" aria-label="Következő"${j === S.n - 1 ? ' disabled' : ''}>→</button></span></div>
-      <div class="strip">${Array.from({ length: S.n }, (_, k) => { const q = S.qs[k], st = q && q.pick !== null ? (isOk(q) ? ' r' : ' w') : '';
-        return `<button class="${k === j ? 'cur' : ''}${st}" data-go="${k}" aria-label="${k + 1}. feladat">${k + 1}</button>`; }).join('')}</div>
-    </div>
-    <div id="q">${qblock(it.x, `Feladat ${j + 1}.`)}</div>
-    <p class="hint">Billentyűk: A–D vagy 1–4 válasz, T tipp, ← → lapozás, Enter tovább</p>
-    <div class="qnav row">
-      <button class="btn ghost" data-step="-1"${j === 0 ? ' disabled' : ''}>Előző</button>
-      ${j < S.n - 1 ? `<button class="btn${it.pick === null ? ' ghost' : ''}" id="next" data-step="1">${it.pick === null ? 'Kihagyom' : 'Következő'}</button>` : ''}
-      ${all ? '<button class="btn" id="res">Eredmény</button>' : j === S.n - 1 ? `<span style="color:var(--muted);font-size:.85rem">Még ${S.n - done.length} kérdés vár válaszra.</span>` : ''}
-      <button class="link" id="quit">Kilépés</button>
-    </div>`;
-  const q = $('#q');
-  bindBlock(q, it.x, answer, () => { it.tip = true; });
-  if (it.tip) showTip(q, it.x);
-  if (it.pick !== null) paint(q, it.x, it.pick);
-  app.querySelectorAll('[data-go]').forEach(b => b.onclick = () => show(+b.dataset.go));
-  app.querySelectorAll('[data-step]').forEach(b => b.onclick = () => show(j + +b.dataset.step));
-  const rs = $('#res'); if (rs) rs.onclick = result;
-  $('#quit').onclick = () => { if (!done.length || confirm('Kilépsz? Ez a gyakorlás nem kerül mentésre.')) home(); };
-  centerStrip();
-  if (!keepScroll) scrollTo(0, 0);
-}
-
-function answer(i) {
-  const it = S.qs[S.i]; if (it.pick !== null) return;
-  it.pick = i; show(S.i, true);
-  const b = $('#res') || $('#next'); if (b) b.focus({ preventScroll: true });
-  $('#q .fbx').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-}
-
-// Teljes feladat: egy adatsor, több részkérdés, mindegyik külön megválaszolható.
-function caseView(id) {
-  S = null;
-  const t = topicById(id), c = makeCase(pick(t.cases)), L = 'abcdefgh';
-  app.innerHTML = `
-    <div class="qhead">
-      <div class="bar"><button class="link" id="back">← Témák</button><span class="mono" id="csum">0 / ${c.parts.length} rész kész</span></div>
-      <div class="strip">${c.parts.map((_, k) => `<button data-jump="${k}" aria-label="${L[k]}) rész">${L[k]})</button>`).join('')}</div>
-    </div>
-    <div class="eyebrow">Teljes feladat · ${t.name}</div><h1>${c.title}</h1>
-    <div class="qtext stem">${c.stem}</div>
-    ${c.parts.map((p, k) => `<section class="part" data-p="${k}">${qblock(p, `${L[k]})`)}</section>`).join('')}
-    <div class="qnav row"><button class="btn" id="again">Új feladat</button><button class="btn ghost" id="th">Elmélet</button><button class="btn ghost" id="home">Témák</button></div>`;
-  app.querySelectorAll('[data-jump]').forEach(b => b.onclick = () => app.querySelector(`.part[data-p="${b.dataset.jump}"]`).scrollIntoView({ behavior: 'smooth', block: 'start' }));
-  app.querySelectorAll('.part').forEach(sec => {
-    const k = +sec.dataset.p, p = c.parts[k];
-    bindBlock(sec, p, i => {
-      if (p.pick !== undefined) return;
-      p.pick = i; paint(sec, p, i);
-      app.querySelector(`[data-jump="${k}"]`).classList.add(p.opts[i].ok ? 'r' : 'w');
-      const d = c.parts.filter(x => x.pick !== undefined), okN = d.filter(x => x.opts[x.pick].ok).length;
-      if (d.length === c.parts.length) { store.cases.push({ topic: id, title: c.title, ok: okN, n: d.length, pct: Math.round(okN / d.length * 100), date: now() }); store.cases = store.cases.slice(-200); save(); }
-      $('#csum').textContent = d.length < c.parts.length ? `${okN} helyes · ${d.length} / ${c.parts.length} rész kész` : `Kész: ${okN} / ${c.parts.length} rész helyes`;
-    });
-  });
-  $('#back').onclick = home; $('#home').onclick = home; $('#again').onclick = () => caseView(id); $('#th').onclick = () => theory(id);
-  scrollTo(0, 0);
-}
-
-function result() {
-  const okN = S.qs.filter(isOk).length, pct = Math.round(okN / S.n * 100);
-  const missed = S.qs.filter(x => !isOk(x)).map(x => ({ q: x.x.q, chosen: x.x.opts[x.pick], right: x.x.opts.find(o => o.ok).t, sol: x.x.sol }));
-  store.hist.push({ topic: S.topic, ok: okN, n: S.n, pct, date: now() });
-  store.hist = store.hist.slice(-200); save();
-  const t = topicById(S.topic), id = S.topic;
-  app.innerHTML = `<div class="eyebrow">Eredmény · ${t.name}</div>
-    <div class="score">${pct}%</div>
-    <p class="lead">${okN} / ${S.n} helyes válasz.</p>
-    <div class="row" style="margin:20px 0">
-      <button class="btn" id="again">Újra</button>
-      ${id !== 'all' ? '<button class="btn ghost" id="cs">Teljes feladat</button><button class="btn ghost" id="th">Elmélet</button>' : ''}
-      <button class="btn ghost" id="home">Témák</button></div>
-    ${missed.length ? `<h2 style="margin-top:28px">Hibás válaszok</h2>${missed.map(m => `<details><summary>${m.q.replace(/<table[\s\S]*?<\/table>/g, '[táblázat] ').replace(/<[^>]+>/g, '').slice(0, 110)}</summary>
-      <div class="qtext" style="margin-top:8px">${m.q}</div>
-      <p>A te válaszod: <span class="mono">${m.chosen.t}</span>. ${m.chosen.why}</p>
-      <p>Helyes: <b class="mono">${m.right}</b></p><div class="steps">${m.sol}</div></details>`).join('')}` : ''}`;
-  $('#again').onclick = () => start(id); $('#home').onclick = home;
-  const th = $('#th'); if (th) th.onclick = () => theory(id);
-  const cs = $('#cs'); if (cs) cs.onclick = () => caseView(id);
-  S = null; scrollTo(0, 0);
-}
-
-addEventListener('keydown', e => {
-  if (!S || e.ctrlKey || e.metaKey || e.altKey) return;
-  const it = S.qs[S.i], k = e.key.toLowerCase(), idx = 'abcd'.indexOf(k) >= 0 ? 'abcd'.indexOf(k) : '1234'.indexOf(k);
-  if (it.pick === null && idx >= 0) answer(idx);
-  else if (k === 't' && it.pick === null) $('#q .tipbtn')?.click();
-  else if (k === 'arrowleft' && S.i > 0) show(S.i - 1);
-  else if (k === 'arrowright' && S.i < S.n - 1) show(S.i + 1);
-  else if (k === 'enter' && it.pick !== null && document.activeElement?.tagName !== 'BUTTON') ($('#res') || $('#next'))?.click();
-});
-
-home();
-</script>
+<main>
+  <div class="eyebrow">University of Pannonia</div>
+  <h1>Gyakorló</h1>
+  <p class="lead">Véletlenszerűen generált gyakorlófeladatok zh-ra, tippekkel és lépésenkénti levezetéssel. Válaszd ki a tárgyat.</p>
+  <ul>
+    <!-- Új tárgy: új <li> ide, a mappa neve legyen a link (lásd CLAUDE.md). -->
+    <li><a href="statistics/">
+      <span class="num">01</span>
+      <span><span class="name">Statistics</span><br><span class="sub">Statisztika · angol nyelvű · arányok, viszonyszámok, középértékek, szóródás, mintavétel, hipotézisvizsgálat, ANOVA</span></span>
+      <span class="go">Megnyitás</span>
+    </a></li>
+  </ul>
+  <footer>Az eredmények csak ebben a böngészőben tárolódnak.</footer>
+</main>
 </body>
 </html>

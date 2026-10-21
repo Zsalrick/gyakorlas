@@ -1,20 +1,31 @@
-# statistics – Statisztika zh gyakorló
+# gyakorlas – zh-gyakorló hub
 
-Statikus weboldal (nincs build, nincs függőség): véletlenszerűen generált statisztika gyakorlófeladatok a University of Pannonia Statistics tárgyához.
+Statikus weboldal (nincs build, nincs szerveroldal): a felhasználó egyetemi tárgyaihoz (University of Pannonia) generált gyakorlófeladatok, tárgyanként külön mappában. A főoldal (`index.html`) a tárgyak listája.
 
-## Fájlok
-- `index.html` – teljes UI (CSS + app logika inline): témaválasztás, kvíz lapozással (ragadós fejléc: számozott sáv + nyilak, ragadós lábléc: Előző/Következő; tipp), teljes feladat nézet, eredmények (localStorage), elmélet nézet.
-- `gen.js` – 46 feladatgenerátor 8 témában (`TOPICS[].gens`), `make(g)` újragenerál, amíg mind a 4 válasz tipikus hibából jön, és rárakja a tippet (`HINTS[g.name]`). Témánként egy teljes feladat (`TOPICS[].cases`): közös adatsor + részkérdések, `makeCase(c)`. Minden rossz opcióhoz `why` magyarázat, minden kérdéshez `sol` részletes levezetés HTML-ben: `steps([cím, tartalom], …)` számozott lépések, `fx(...)` képletblokk (soronként egy számolási lépés, az első `=`-nél igazítva), `tbl`/`legend` táblázat (a betűk jelentése), `hl` kiemelés. Csoportos medián/kvartilis: közös `posSol`.
-- Képletek: KaTeX (CDN, `index.html` rendereli MutationObserverrel). Szövegben `$…$`, blokkban `fx()`. TeX-et a `` TeX`…` `` (String.raw) taggel írj, így a backslash megmarad; sima `'…'` stringben `\\frac` kell (különben a `\f` vezérlőkarakter lesz). `<` / `>` helyett `\lt` / `\gt` (HTML-be kerül). A `%`-ot és az ezres vesszőt a `tex()` kezeli.
-- `check.js` – önellenőrzés: `node check.js` (minden generátor 2000×, minden teljes feladat 1000×; 4 különböző opció, pontosan 1 helyes, van tipp, nincs NaN). Változtatás után futtasd.
+Élő: https://zsalrick.github.io/gyakorlas/ (repó: Zsalrick/gyakorlas, GitHub Pages a `main` ág gyökeréből, push után 1-2 perc).
 
-## Közzététel
-GitHub Pages a `main` ág gyökeréből: https://zsalrick.github.io/statistics/ (repó: Zsalrick/statistics). Push után 1-2 perc.
+## Szerkezet
+```
+index.html          hub: a tárgyak listája (kézzel szerkesztett <ul>)
+CLAUDE.md           ez a fájl: a hub szabályai
+<tárgy>/            minden tárgy önálló, saját index.html-lel
+  CLAUDE.md         a tárgy saját leírása: fájlok, bővítés, tananyag-sajátosságok
+statistics/         Statistics (angol nyelvű)
+```
+Egy tárgyon dolgozva **először a tárgy `CLAUDE.md`-jét olvasd el**.
 
-## Tananyag
-A diák (Hasan Askarli, University of Pannonia) a viszonyszámoknál magyar rövidítéseket használnak (Vm, Vk, Vdb, Vdl, Vf, Vt, Vi, Vö); a diákon több jelölési hiba van, ezek az elméletben jelölve.
+## Új tárgy felvétele
+1. Új mappa angol, kisbetűs, kötőjeles névvel (pl. `accounting/`). Kiindulásnak másold a `statistics/` mappát: a felület (`index.html`) általános, a tartalom (`gen.js`) cserélendő. Ugyanaz a felépítés: `TOPICS` (gens, cases, theory), `HINTS`, `make`/`makeCase`.
+2. A `localStorage` kulcsát az `index.html`-ben **írd át** a tárgyra egyedire (pl. `acc-gyakorlo-v1`): minden tárgy ugyanazon az originen (zsalrick.github.io) fut, különben összekeverednek az eredmények.
+3. A tárgy `index.html` fejlécében legyen link vissza a hubra (`../`).
+4. Írj a mappába `CLAUDE.md`-t a tárgyról (a `statistics/CLAUDE.md` a minta).
+5. Vedd fel a hub `index.html` listájába (sorszám, név, egysoros leírás).
+6. Futtasd a tárgy ellenőrzőit (`node check.js`), nézd meg böngészőben, majd commit és push.
 
-## Stílusszabályok
-- Nincs emoji, nincs sablonos „AI” szöveg vagy dizájn (lila gradiens, kártyasorok, árnyékok).
-- Papír háttér, egy kiemelőszín, Source Serif 4 + IBM Plex Sans/Mono, vékony vonalak. Mobilbarát, sötét mód.
-- Kérdések angolul (a zh is angol), magyarázatok magyarul: angol szakszó, utána zárójelben a magyar jelentés.
+## Közös szabályok
+- **Nyelv:** a kérdések a zh nyelvén (Statistics: angol), a magyarázatok magyarul: angol szakszó, utána zárójelben a magyar jelentés. A felhasználó magyarul tanulta az anyagot, a magyar megfelelőkre mindig szüksége van.
+- **Minden kérdéshez:** tipp (válasz előtt elkérhető), minden rossz válaszhoz „miért nem” magyarázat, és részletes, lépésenkénti levezetés táblázattal és képletekkel (KaTeX, soronként egy számolási lépés). A felhasználó ezt kifejezetten kérte.
+- **Stílus:** nincs emoji, nincs sablonos „AI” szöveg vagy dizájn (lila gradiens, kártyasorok, árnyékok). Papír háttér, egy kiemelőszín, Source Serif 4 + IBM Plex Sans/Mono, vékony vonalak. Mobilbarát (ragadós navigáció fent és lent), sötét mód.
+- **Tananyag:** a felhasználó PDF-ben adja (diák). Ezek az oktatók anyagai, **nem kerülnek a repóba** (nyilvános). A diákon lévő hibákat javítsd, és jelöld az elméletben.
+- **Külső függőség** csak CDN-ről, rögzített verzióval és SRI-hash-sel (pl. KaTeX 0.16.11 jsdelivr). Nincs npm build; a `node_modules` csak helyi ellenőrzéshez kell, és gitignore-olva van.
+- Commit üzenet magyarul.

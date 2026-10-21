@@ -1,7 +1,11 @@
-# Statisztika gyakorló
+# Gyakorló
 
-Véletlenszerűen generált gyakorlófeladatok a Statistics (University of Pannonia) zh anyagához: arányok, viszonyszámok, gyakorisági sorok, középértékek, szóródás, mintavétel, hipotézisvizsgálat, ANOVA. Minden kérdéshez tipp és levezetés, a kérdések között lehet lapozni, és minden témához van teljes (többlépéses) feladat is.
+Zh-gyakorló feladatok egyetemi tárgyakhoz: véletlenszerűen generált kérdések tippekkel, a rossz válaszok magyarázatával és lépésenkénti levezetéssel.
 
-Megnyitás: https://zsalrick.github.io/statistics/
+Megnyitás: https://zsalrick.github.io/gyakorlas/
 
-Fejlesztés: `node check.js` minden feladatgenerátort és teljes feladatot lefuttat, és ellenőrzi, hogy 4 különböző válasz jön-e ki, pontosan egy helyessel.
+| Tárgy | Mappa |
+|---|---|
+| Statistics (angol nyelvű) | [`statistics/`](statistics/) |
+
+Fejlesztés: lásd [`CLAUDE.md`](CLAUDE.md) és a tárgyak saját `CLAUDE.md`-jét.
