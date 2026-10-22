@@ -110,7 +110,7 @@ const TWHY = [
 const kkGens = [
   function kkClassify(x, i) {
     const e = x ? x.e : pick(EVENTS), a = x ? x.a : R(2, 40) * 50, c = kkCat(e);
-    return Q(`${x ? `Az események közül a ${i + 1}. sorszámú:<br>` : ''}${e[0](F(a))}<br>Hogyan minősül ez az esemény az adott időszakban?`, KK[c],
+    return Q(`${x ? `Az események közül ${AZ(i + 1)} ${i + 1}. sorszámú:<br>` : ''}${e[0](F(a))}<br>Hogyan minősül ez az esemény az adott időszakban?`, KK[c],
       KK.map((k, j) => [k, kkWhy(e, j)]).filter((_, j) => j !== c), kkSol(e));
   },
   function kkExample() {
@@ -245,9 +245,9 @@ const EFF = [a => `+${f(a)}`, a => `−${f(a)}`, () => '0', () => '0'];
 const bsGens = [
   function bsClassify() {
     const it = pick(BS);
-    return Q(`Hová kerül a mérlegben: <b>${it.n}</b>?`, GR[it.g], GR.map((g, j) => [g, `${GDEF[j]} Ez a tétel viszont ${it.w}`]).filter((_, j) => j !== it.g), steps(
+    return Q(`Hová kerül a mérlegben: <b>${it.n}</b>?`, GR[it.g], GR.map((g, j) => [g, `${GDEF[j]} „${it.n}”: ${it.w}`]).filter((_, j) => j !== it.g), steps(
       ['Eszköz vagy forrás?', para(it.g < 2 ? 'Eszköz: a vállalkozás rendelkezik vele, és hasznot hoz (mi van?).' : 'Forrás: azt mutatja, honnan van a vállalkozás vagyona (kié?).')],
-      ['Melyik csoport?', para(`${hl(GR[it.g])} (${it.s}). Ez a tétel ${it.w}`)],
+      ['Melyik csoport?', para(`${hl(GR[it.g])} (${it.s}). „${it.n}”: ${it.w}`)],
       ['A mérleg szerkezete', BS_STRUCT]));
   },
   function bsEvent() {
@@ -558,7 +558,124 @@ const plGens = [
   },
 ];
 
+// ---------- 4. Szerkezet: mérleg, ÖKE, FKE (fejből leírni) ----------
+const ROM = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII'];
+const AZ = c => ['I', 'V', 'A', 'E', 'F', '1', '5'].includes(String(c)) ? 'az' : 'a';
+// Sor: [jel, név, alsorok, képlet]. numbered: az alsorok is számozott tételek (mérleg), különben csak a sor tartalma.
+function schema(o, rows) {
+  const S = { ...o };
+  S.main = rows.map(([c, n, kids = [], fx]) => ({ c, n, kids, fx, S }));
+  S.seq = o.numbered ? S.main.flatMap(m => [m, ...m.kids.map((n, i) => ({ c: ROM[i], n, kids: [], parent: m, S }))]) : S.main;
+  return S;
+}
+const MERLEG = schema({ title: 'Mérleg', short: 'mérleg', numbered: true, unit: 'csoport', unitBa: 'csoportba', inT: 'a mérlegben', ask: c => `Mi a mérleg <b>${c}.</b> csoportja?` }, [
+  ['A', 'Befektetett eszközök', ['Immateriális javak', 'Tárgyi eszközök', 'Befektetett pénzügyi eszközök']],
+  ['B', 'Forgóeszközök', ['Készletek', 'Követelések', 'Értékpapírok', 'Pénzeszközök']],
+  ['C', 'Aktív időbeli elhatárolások'],
+  ['D', 'Saját tőke', ['Jegyzett tőke', 'Jegyzett, de még be nem fizetett tőke (−)', 'Tőketartalék', 'Eredménytartalék', 'Lekötött tartalék', 'Értékelési tartalék', 'Adózott eredmény']],
+  ['E', 'Céltartalékok'],
+  ['F', 'Kötelezettségek', ['Hátrasorolt kötelezettségek', 'Hosszú lejáratú kötelezettségek', 'Rövid lejáratú kötelezettségek']],
+  ['G', 'Passzív időbeli elhatárolások'],
+]);
+const OKE = schema({ title: 'Összköltség eljárás (ÖKE)', short: 'ÖKE', unit: 'sor', unitBa: 'sorba', inT: 'az összköltség eljárású eredménykimutatásban', ask: c => `Mi az összköltség eljárású eredménykimutatás <b>${c}.</b> sora?` }, [
+  ['I', 'Értékesítés nettó árbevétele', ['Belföldi értékesítés nettó árbevétele', 'Exportértékesítés nettó árbevétele']],
+  ['II', 'Aktivált saját teljesítmények értéke', ['Saját termelésű készletek állományváltozása', 'Saját előállítású eszközök aktivált értéke']],
+  ['III', 'Egyéb bevételek'],
+  ['IV', 'Anyagjellegű ráfordítások', ['Anyagköltség', 'Igénybe vett szolgáltatások értéke', 'Egyéb szolgáltatások értéke', 'Eladott áruk beszerzési értéke', 'Eladott (közvetített) szolgáltatások értéke']],
+  ['V', 'Személyi jellegű ráfordítások', ['Bérköltség', 'Személyi jellegű egyéb kifizetések', 'Bérjárulékok']],
+  ['VI', 'Értékcsökkenési leírás'],
+  ['VII', 'Egyéb ráfordítások'],
+  ['A', 'Üzemi (üzleti) tevékenység eredménye', [], 'I ± II + III − IV − V − VI − VII'],
+  ['VIII', 'Pénzügyi műveletek bevételei'],
+  ['IX', 'Pénzügyi műveletek ráfordításai'],
+  ['B', 'Pénzügyi műveletek eredménye', [], 'VIII − IX'],
+  ['C', 'Adózás előtti eredmény', [], 'A ± B'],
+  ['X', 'Adófizetési kötelezettség'],
+  ['D', 'Adózott eredmény', [], 'C − X'],
+]);
+const FKE = schema({ title: 'Forgalmi költség eljárás (FKE)', short: 'FKE', unit: 'sor', unitBa: 'sorba', inT: 'a forgalmi költség eljárású eredménykimutatásban', ask: c => `Mi a forgalmi költség eljárású eredménykimutatás <b>${c}.</b> sora?` }, [
+  ['I', 'Értékesítés nettó árbevétele', ['Belföldi értékesítés nettó árbevétele', 'Exportértékesítés nettó árbevétele']],
+  ['II', 'Értékesítés közvetlen költségei', ['Értékesítés elszámolt közvetlen önköltsége', 'Eladott áruk beszerzési értéke', 'Eladott (közvetített) szolgáltatások értéke']],
+  ['III', 'Értékesítés bruttó eredménye', [], 'I − II'],
+  ['IV', 'Értékesítés közvetett költségei', ['Értékesítési, forgalmazási költségek', 'Igazgatási költségek', 'Egyéb általános költségek']],
+  ['V', 'Egyéb bevételek'],
+  ['VI', 'Egyéb ráfordítások'],
+  ['A', 'Üzemi (üzleti) tevékenység eredménye', [], 'III − IV + V − VI'],
+  ['VII', 'Pénzügyi műveletek bevételei'],
+  ['VIII', 'Pénzügyi műveletek ráfordításai'],
+  ['B', 'Pénzügyi műveletek eredménye', [], 'VII − VIII'],
+  ['C', 'Adózás előtti eredmény', [], 'A ± B'],
+  ['IX', 'Adófizetési kötelezettség'],
+  ['D', 'Adózott eredmény', [], 'C − IX'],
+]);
+const lab = x => `${x.c}. ${x.n}`;
+const where = x => x.parent ? `a ${x.parent.n.toLowerCase()} (${x.parent.c}.) ${x.c}. tétele` : `${AZ(x.c)} ${x.c}. ${x.S.unit}${x.S.numbered ? '' : ` (${x.S.short})`}`;
+const askOf = x => x.parent ? `Mi a mérlegben a ${x.parent.n.toLowerCase()} (${x.parent.c}.) <b>${x.c}.</b> tétele?` : x.S.ask(x.c);
+// A lista k darab x-hez közeli eleme (a sorrendben szomszédosakat a legkönnyebb összekeverni).
+const near = (list, x, k = 3) => { const i = list.indexOf(x); return sample(list.filter(y => y !== x).sort((a, b) => Math.abs(list.indexOf(a) - i) - Math.abs(list.indexOf(b) - i)).slice(0, k + 2), k); };
+const fxAll = () => [OKE, FKE].flatMap(S => S.main.filter(m => m.fx));
+function schemaTbl(S, hi, seq = S.seq) {
+  const rows = seq.map(x => {
+    const r = [x.parent ? `<span class="in">${lab(x)}</span>` : lab(x)];
+    if (!S.numbered) r.push(x.fx ? `= ${x.fx}` : x.kids.join(', '));
+    return x === hi ? r.map(hl) : r;
+  });
+  return tbl(S.numbered ? [S.title] : [S.title, 'Tartalom, számítás'], rows).replace('<table>', '<table class="l sch">');
+}
+const structSol = (x, ...more) => steps(['A helyes válasz', para(`${hl(lab(x))}${x.fx ? ` = ${x.fx}` : ''}`)], ...more, ['A teljes szerkezet', schemaTbl(x.S, x)]);
+
+function structGens(list) {
+  return [
+    function stName() {
+      const S = pick(list), x = pick(S.seq), pool = x.parent ? S.seq.filter(y => y.parent) : S.main;
+      return Q(askOf(x), x.n, near(pool, x).map(y => [y.n, `Ez ${where(y)}.`]), structSol(x));
+    },
+    function stCode() {
+      const S = pick(list), x = pick(S.seq), sib = x.parent ? S.seq.filter(y => y.parent === x.parent) : S.main;
+      const codes = x.parent ? ROM.slice(0, Math.max(4, sib.length)) : sib.map(y => y.c), i = codes.indexOf(x.c);
+      const wr = sample(codes.filter(c => c !== x.c).sort((a, b) => Math.abs(codes.indexOf(a) - i) - Math.abs(codes.indexOf(b) - i)).slice(0, 5), 3);
+      return Q(x.parent ? `Hányadik tétel a mérlegben a ${x.parent.n.toLowerCase()} (${x.parent.c}.) csoporton belül: <b>${x.n}</b>?` : `Mi a jele ${S.inT}: <b>${x.n}</b>?`, x.c + '.',
+        wr.map(c => { const y = sib.find(s => s.c === c); return [c + '.', y ? `${cap(AZ(c))} ${c}. ${x.parent ? 'tétel' : S.unit}: ${y.n}.` : `Ebben a csoportban csak ${sib.length} tétel van.`]; }), structSol(x));
+    },
+    function stNext() {
+      const S = pick(list), i = R(0, S.seq.length - 2), x = S.seq[i], nx = S.seq[i + 1];
+      return Q(`${cap(S.inT)} mi következik közvetlenül ${AZ(x.c)} <b>${lab(x)}</b> után?`, nx.n,
+        [S.seq[i + 2], S.seq[i - 1], S.seq[i + 3], S.seq[i - 2]].filter(Boolean).map(y => [y.n, `Ez ${where(y)}; ${S.seq.indexOf(y) < i ? 'előrébb van' : 'később jön'}.`]), structSol(nx));
+    },
+    function stParent() {
+      const S = pick(list), ps = S.main.filter(m => m.kids.length), p = pick(ps), k = pick(p.kids);
+      const cand = [...shuffle(ps.filter(m => m !== p)), ...near(S.main, p, 4)].filter((y, j, a) => a.indexOf(y) === j);
+      return Q(`Melyik ${S.unitBa} tartozik ${S.inT}: <b>${k}</b>?`, lab(p), cand.map(y => [lab(y), y.kids.length ? `${cap(where(y))} tételei: ${y.kids.join(', ')}.` : `${cap(where(y))} nem bomlik tovább tételekre.`]),
+        structSol(p, ['Mi tartozik bele?', para(p.kids.join(', ') + '.')]));
+    },
+    ...(list.some(S => S.main.some(m => m.fx)) ? [function stFormula() {
+      const all = fxAll(), x = pick(all.filter(m => list.includes(m.S)));
+      const cand = [...all.filter(y => y.c === x.c && y !== x), ...shuffle(all.filter(y => y.c !== x.c))].filter(y => y.fx !== x.fx);
+      return Q(`Hogyan számoljuk ${x.S.inT} ${AZ(x.c)} <b>${lab(x)}</b> sort?`, x.fx, cand.map(y => [y.fx, `Ez ${where(y)} képlete (${y.n}).`]), structSol(x));
+    }] : []),
+  ];
+}
+// Teljes feladat: a kimutatás leírása sorról sorra; minden rész a következő sort kérdezi.
+function fillPart(S, seq, k) {
+  const x = seq[k], prev = seq[k - 1], pool = x.parent ? S.seq.filter(y => y.parent) : S.main;
+  const ans = y => y.fx ? `${y.n} = ${y.fx}` : y.n;
+  const cand = x.fx ? [...fxAll().filter(y => y.n === x.n && y !== x), ...near(fxAll().filter(y => y.S === S), x)] : near(pool, x);
+  return H(prev ? `Előtte: ${lab(prev)}.` : `Ez az első ${x.parent ? 'tétel' : S.unit}.`, Q(x.fx ? `${askOf(x)} Hogyan számoljuk?` : askOf(x), ans(x),
+    cand.map(y => [ans(y), y.fx ? `Ez ${where(y)} képlete.` : `Ez ${where(y)}.`]), steps(
+      ['Eddig így néz ki', schemaTbl(S, x, seq.slice(0, k + 1))],
+      !S.numbered && x.kids.length && ['Mi tartozik bele?', para(x.kids.join(', ') + '.')])));
+}
+const fillCase = (S, title, seq = S.seq) => function fill() {
+  return { title, stem: `Írd le fejből, sorról sorra: ${title.toLowerCase()}. Minden rész a következő ${seq[0].parent || S.numbered ? 'tételt' : 'sort'} kérdezi, a levezetés megmutatja, hogyan néz ki eddig.`, parts: seq.map((_, k) => fillPart(S, seq, k)) };
+};
+const STRUCT_HINT = 'Mérleg: A–C eszközök, D–G források. ÖKE: I–VII, A, VIII–IX, B, C, X, D. FKE: I–VI, A, VII–VIII, B, C, IX, D.';
+
 const HINTS = {
+  stName: 'Mondd fel fejben a szerkezetet felülről a kérdezett jelig. ' + STRUCT_HINT,
+  stCode: 'Mondd fel fejben a szerkezetet felülről, és figyeld, hányadik helyen áll a tétel. ' + STRUCT_HINT,
+  stNext: 'Mondd fel fejben a szerkezetet a megadott sorig, és nézd meg, mi jön utána. ' + STRUCT_HINT,
+  stParent: 'Mérleg: A. immateriális, tárgyi, pénzügyi; B. készletek, követelések, értékpapírok, pénzeszközök; F. hátrasorolt, hosszú, rövid. ÖKE: IV. anyag, szolgáltatások, ELÁBÉ; V. bér, egyéb kifizetés, járulék. FKE: II. közvetlen önköltség, ELÁBÉ; IV. értékesítési, igazgatási, egyéb általános.',
+  stFormula: 'Az eredménysorok a fölöttük lévő sorokból jönnek. ÖKE A.: I-től VII-ig. FKE III.: I − II, FKE A.: III-tól VI-ig. B.: pénzügyi bevétel − ráfordítás. C. = A ± B. D. = C − adó.',
   kkClassify: 'Két külön kérdés: (1) megy ki pénz ebben az időszakban? Ha igen, kiadás. (2) Felhasználtak erőforrást a tevékenységhez ebben az időszakban? Ha igen, költség.',
   kkExample: 'Mind a négy eseményre tedd fel a két kérdést: megy ki pénz (kiadás)? Felhasználtak erőforrást (költség)?',
   kkSum: 'Minden eseménynél döntsd el külön, hogy kiadás-e (megy ki pénz?) és költség-e (felhasználtak erőforrást?). Csak a kérdezett fajtát add össze; a befolyó pénzek egyikbe sem kellenek.',
@@ -586,6 +703,10 @@ const H = (hint, x) => (x.hint = hint, x);
 const byName = (gens, name) => (...a) => H(HINTS[name], gens.find(g => g.name === name)(...a));
 const kk = n => byName(kkGens, n), bs = n => byName(bsGens, n), pl = n => byName(plGens, n);
 
+function kkSortCase() {
+  const xs = kkData();
+  return { title: 'Sorold be az eseményeket', stem: `Egy vállalkozás egy hónapjának eseményei:${kkList(xs)}Minden eseményről döntsd el, hogy kiadás, költség, mindkettő vagy egyik sem.`, parts: xs.map((x, i) => kk('kkClassify')(x, i)) };
+}
 function kkCase() {
   const xs = kkData(), i = R(0, 5);
   return { title: 'Kiadás vagy költség?', stem: `Egy vállalkozás egy hónapjának eseményei:${kkList(xs)}`, parts: [
@@ -617,9 +738,7 @@ function plCase() {
 }
 
 // ---------- Témák és elmélet ----------
-const EXAMS = [{ id: 1, name: 'Röpdolgozat' }];
-const TOPICS = [
-  { exam: 1, id: 'kk', name: 'Kiadás és költség', en: 'kiadás, költség, ráfordítás, bevétel', gens: kkGens, cases: [kkCase], theory: TeX`
+const TH_KK = TeX`
 <p>Négy fogalom, amelyeket a köznyelv keverten használ, de a vállalkozásnál mást jelentenek. Mindig az a kérdés, hogy <b>mihez</b> kötődik a tétel.</p>
 <table><tr><th>Fogalom</th><th>Mihez kötődik?</th><th>Példa</th></tr>
 <tr><td><b>Kiadás</b></td><td>pénz kiáramlása (kifizetés)</td><td>gépvásárlás átutalással</td></tr>
@@ -635,12 +754,18 @@ const TOPICS = [
 <li>Vannak kiadások, amelyekből <b>soha</b> nem lesz költség: hiteltörlesztés, osztalékfizetés, értékpapír-vásárlás.</li>
 <li>Vannak költségek, amelyekhez az adott időszakban nincs kiadás: értékcsökkenés, korábban vett anyag felhasználása.</li>
 <li><b>Tágabb értelmezés:</b> sok tankönyv a kiadásba a kötelezettségvállalást is beleszámolja (pl. hitelre vásárolt anyag: még nem fizettek, de tartozás keletkezett). A gyakorló feladatai csak azonnal fizetett tételeket használnak, így a két értelmezés ugyanazt adja.</li>
-<li><b>Költség vagy ráfordítás:</b> a költség a felhasználáskor keletkezik, ráfordítás akkor lesz belőle, amikor az eredménnyel szemben elszámolják (pl. a termék eladásakor). A raktárra termelt késztermék költsége még nem ráfordítás; ezért kell az eredménykimutatásban az állományváltozás. Ráfordítás, de nem költség például a bírság vagy a behajthatatlan követelés leírása.</li></ul>` },
-  { exam: 1, id: 'merleg', name: 'Mérleg', en: 'eszközök és források, gazdasági események', gens: bsGens, cases: [bsCase], theory: TeX`
+<li><b>Költség vagy ráfordítás:</b> a költség a felhasználáskor keletkezik, ráfordítás akkor lesz belőle, amikor az eredménnyel szemben elszámolják (pl. a termék eladásakor). A raktárra termelt késztermék költsége még nem ráfordítás; ezért kell az eredménykimutatásban az állományváltozás. Ráfordítás, de nem költség például a bírság vagy a behajthatatlan követelés leírása.</li></ul>`;
+const TH_BS = TeX`
 <p>A <b>mérleg</b> egy adott napra (pl. december 31.) mutatja a vállalkozás vagyonát kétféle csoportosításban:</p>
 <ul><li><b>Eszközök</b> (aktívák): mi van? Miben ölt testet a vagyon.</li><li><b>Források</b> (passzívák): kié? Honnan származik a vagyon.</li></ul>
 <p>A kettő ugyanaz a vagyon, ezért mindig $\text{Eszközök} = \text{Források}$ (mérlegegyezőség). Ez az összeg a <b>mérlegfőösszeg</b>.</p>
-${BS_STRUCT}
+<h3>A mérleg szerkezete (ezt kell tudni fejből leírni)</h3>
+${schemaTbl(MERLEG)}
+<p><b>Hogyan jegyezd meg?</b></p>
+<ul><li>Eszközök: A–C, források: D–G. Mindkét oldal egy időbeli elhatárolással zárul (C. aktív, G. passzív).</li>
+<li>Az eszközök a tartóstól a pénz felé haladnak: befektetett (A.), forgó (B.); a forgóeszközökön belül is: készlet → követelés → értékpapír → pénz (egyre „likvidebb”).</li>
+<li>A források a sajáttól az idegen felé: saját tőke (D.), céltartalék (E.), kötelezettségek (F.); a kötelezettségeken belül a hosszútól a rövid felé: hátrasorolt → hosszú → rövid lejáratú.</li>
+<li>Saját tőke (7 tétel): jegyzett tőke, a még be nem fizetett része (mínusz), tőketartalék, eredménytartalék, lekötött tartalék, értékelési tartalék, végül az idei adózott eredmény.</li></ul>
 <h3>A csoportok</h3>
 <ul><li><b>A. Befektetett eszközök:</b> tartósan, egy évnél tovább szolgálnak. Immateriális javak (szoftver, szabadalom), tárgyi eszközök (telek, épület, gép, jármű, beruházás), befektetett pénzügyi eszközök (tartós részesedés, tartósan adott kölcsön).</li>
 <li><b>B. Forgóeszközök:</b> egy éven belül elhasználódnak vagy pénzzé válnak. Készletek (anyag, áru, késztermék, befejezetlen termelés), követelések (vevők), értékpapírok (forgatási célú), pénzeszközök (pénztár, bankszámla).</li>
@@ -659,8 +784,8 @@ ${BS_STRUCT}
 <tr><td>Eszköz nő, forrás nő</td><td>hitelfelvétel; anyagvásárlás hitelre; tőkeemelés</td><td>nő</td></tr>
 <tr><td>Eszköz csökken, forrás csökken</td><td>szállítói tartozás vagy hitel kifizetése a bankszámláról</td><td>csökken</td></tr>
 <tr><td>Eszközcsere</td><td>készpénzfelvétel; a vevő fizet; gépvásárlás készpénzért</td><td>nem változik</td></tr>
-<tr><td>Forráscsere</td><td>szállítói tartozás kifizetése hitelből; osztalék jóváhagyása az eredménytartalékból</td><td>nem változik</td></tr></table>` },
-  { exam: 1, id: 'eredmeny', name: 'Eredménykimutatás', en: 'összköltség és forgalmi költség eljárás', gens: plGens, cases: [plCase], theory: TeX`
+<tr><td>Forráscsere</td><td>szállítói tartozás kifizetése hitelből; osztalék jóváhagyása az eredménytartalékból</td><td>nem változik</td></tr></table>`;
+const TH_PL = TeX`
 <p>Az <b>eredménykimutatás</b> egy időszakra (pl. egy évre) mutatja, hogyan jött ki az eredmény: bevételek mínusz ráfordítások. Két formája van (a vállalkozás választ), és <b>mindkettő ugyanazt az eredményt adja</b>: csak a költségeket csoportosítják másképp.</p>
 <table><tr><th></th><th>Összköltség eljárás (ÖKE)</th><th>Forgalmi költség eljárás (FKE)</th></tr>
 <tr><td>Csoportosítás</td><td>költségnemek szerint: mire költöttünk? (anyag, bér, értékcsökkenés)</td><td>funkció szerint: mire használtuk? (termelés, értékesítés, igazgatás)</td></tr>
@@ -668,25 +793,12 @@ ${BS_STRUCT}
 <tr><td>Készletváltozás</td><td>külön sorban korrigál (II.)</td><td>a közvetlen önköltségben</td></tr>
 <tr><td>Köztes eredmény</td><td>nincs</td><td>értékesítés bruttó eredménye (III.)</td></tr></table>
 <h3>Összköltség eljárás (ÖKE)</h3>
-<table><tr><th>Sor</th><th>Tartalom</th></tr>
-<tr><td>I. Értékesítés nettó árbevétele</td><td></td></tr>
-<tr><td>II. Aktivált saját teljesítmények értéke</td><td>saját termelésű készletek állományváltozása (záró − nyitó) + saját előállítású eszközök aktivált értéke</td></tr>
-<tr><td>III. Egyéb bevételek</td><td></td></tr>
-<tr><td>IV. Anyagjellegű ráfordítások</td><td>anyagköltség + igénybe vett szolgáltatások + egyéb szolgáltatások + ELÁBÉ + közvetített szolgáltatások</td></tr>
-<tr><td>V. Személyi jellegű ráfordítások</td><td>bérköltség + személyi jellegű egyéb kifizetések + bérjárulékok</td></tr>
-<tr><td>VI. Értékcsökkenési leírás</td><td></td></tr>
-<tr><td>VII. Egyéb ráfordítások</td><td>bírság, kötbér, iparűzési adó, behajthatatlan követelés…</td></tr>
-<tr><td><b>A. Üzemi (üzleti) tevékenység eredménye</b></td><td>$\text{I} \pm \text{II} + \text{III} - \text{IV} - \text{V} - \text{VI} - \text{VII}$</td></tr></table>
+${schemaTbl(OKE)}
+<p><b>Hogyan jegyezd meg?</b> Három bevétel jellegű sor (I–III: árbevétel, aktivált saját teljesítmény, egyéb bevétel), aztán négy ráfordítás (IV–VII): a költségnemek sorrendje anyag → ember → gép (értékcsökkenés) → egyéb. Ezekből jön az A. Utána a pénzügyi pár (VIII–IX) adja a B.-t, A + B = C, végül az adó (X) levonásával a D.</p>
 <p><b>Miért kell a II. sor?</b> Az ÖKE az év összes költségét levonja, akkor is, ha a termék nem kelt el, hanem raktárra került. Készletnövekedésnél ezt a részt bevételként visszaadja (növeli az eredményt), készletcsökkenésnél levonja (a tavalyi gyártású, idén eladott termékek költsége nincs benne az idei költségekben).</p>
 <h3>Forgalmi költség eljárás (FKE)</h3>
-<table><tr><th>Sor</th><th>Tartalom</th></tr>
-<tr><td>I. Értékesítés nettó árbevétele</td><td></td></tr>
-<tr><td>II. Értékesítés közvetlen költségei</td><td>eladott termékek közvetlen önköltsége + ELÁBÉ + közvetített szolgáltatások</td></tr>
-<tr><td><b>III. Értékesítés bruttó eredménye</b></td><td>$\text{I} - \text{II}$</td></tr>
-<tr><td>IV. Értékesítés közvetett költségei</td><td>értékesítési, forgalmazási + igazgatási + egyéb általános költségek</td></tr>
-<tr><td>V. Egyéb bevételek</td><td></td></tr>
-<tr><td>VI. Egyéb ráfordítások</td><td></td></tr>
-<tr><td><b>A. Üzemi (üzleti) tevékenység eredménye</b></td><td>$\text{III} - \text{IV} + \text{V} - \text{VI}$</td></tr></table>
+${schemaTbl(FKE)}
+<p><b>Hogyan jegyezd meg?</b> Árbevétel (I.) mínusz közvetlen költség (II.) = bruttó eredmény (III.), mínusz közvetett költség (IV.), plusz-mínusz az egyéb bevétel és ráfordítás (V–VI) = A. Az A. alatt ugyanaz jön, mint az ÖKE-ben, csak a római számok eggyel kisebbek (VII–VIII pénzügyi, IX adó), mert az A. fölött itt hat római sor van, az ÖKE-ben hét.</p>
 <p>Az eladott termékek közvetlen önköltsége: az idei közvetlen költségekből levonjuk a raktárra került részt (készletnövekedés) és a saját eszközként aktivált részt; készletcsökkenésnél hozzáadjuk.</p>
 <p>$\text{közvetlen önköltség} = \text{közvetlen költségek} - (\text{záró} - \text{nyitó}) - \text{aktivált érték}$</p>
 <h3>A kettő kapcsolata</h3>
@@ -698,7 +810,21 @@ ${BS_STRUCT}
 <tr><td>B. Pénzügyi műveletek eredménye</td><td>pénzügyi műveletek bevételei − ráfordításai</td></tr>
 <tr><td>C. Adózás előtti eredmény</td><td>$\text{A} + \text{B}$</td></tr>
 <tr><td>D. Adózott eredmény</td><td>$\text{C} -$ adófizetési kötelezettség</td></tr></table>
-<p>2016 óta nincs rendkívüli eredmény (a rendkívüli tételek az egyéb bevételek és ráfordítások vagy a pénzügyi tételek közé kerültek). Ha régi jegyzetben rendkívüli sort látsz, az a régi forma.</p>` },
+<p>2016 óta nincs rendkívüli eredmény (a rendkívüli tételek az egyéb bevételek és ráfordítások vagy a pénzügyi tételek közé kerültek). Ha régi jegyzetben rendkívüli sort látsz, az a régi forma.</p>`;
+
+// Röpdolgozat: szerkezet fejből és fogalmak, számolás nélkül. Számolás: külön fül, a röpdolgozathoz nem kell.
+const EXAMS = [{ id: 1, name: 'Röpdolgozat' }, { id: 2, name: 'Számolás' }];
+const only = (gens, ...names) => gens.filter(g => names.includes(g.name));
+const SIDE = MERLEG.seq.findIndex(x => x.c === 'D' && !x.parent);
+const TOPICS = [
+  { exam: 1, id: 'kk', name: 'Kiadás és költség', en: 'kiadás, költség, ráfordítás, bevétel fogalma', gens: only(kkGens, 'kkClassify', 'kkExample', 'kkDef'), cases: [kkSortCase], theory: TH_KK },
+  { exam: 1, id: 'merleg', name: 'A mérleg szerkezete', en: 'A–G csoportok és tételeik, besorolás', gens: [...structGens([MERLEG]), ...only(bsGens, 'bsClassify')],
+    cases: [fillCase(MERLEG, 'A mérleg eszközoldala', MERLEG.seq.slice(0, SIDE)), fillCase(MERLEG, 'A mérleg forrásoldala', MERLEG.seq.slice(SIDE))], theory: TH_BS },
+  { exam: 1, id: 'eredmeny', name: 'Az eredménykimutatás szerkezete', en: 'összköltség és forgalmi költség eljárás sorai', gens: [...structGens([OKE, FKE]), ...only(plGens, 'lineWhere', 'costLine')],
+    cases: [fillCase(OKE, 'Összköltség eljárás'), fillCase(FKE, 'Forgalmi költség eljárás')], theory: TH_PL },
+  { exam: 2, id: 'kk-szam', name: 'Kiadás és költség összege', en: 'a röpdolgozathoz nem kell', gens: only(kkGens, 'kkSum'), cases: [kkCase], theory: TH_KK },
+  { exam: 2, id: 'merleg-szam', name: 'Mérleg számolás', en: 'a röpdolgozathoz nem kell', gens: only(bsGens, 'bsEvent', 'bsTotal', 'bsMissing', 'bsAfter'), cases: [bsCase], theory: TH_BS },
+  { exam: 2, id: 'eredmeny-szam', name: 'Eredménykimutatás számolás', en: 'a röpdolgozathoz nem kell', gens: only(plGens, 'allomany', 'okeAnyag', 'okeSzem', 'okeAktivalt', 'okeUzemi', 'fkeKozv', 'fkeBrutto', 'fkeUzemi', 'adozott'), cases: [plCase], theory: TH_PL },
 ];
 
 function make(g) {

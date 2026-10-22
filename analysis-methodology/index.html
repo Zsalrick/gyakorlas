@@ -78,6 +78,7 @@ td:first-child,th:first-child{padding-left:4px}
 .hist td,.hist th{text-align:left}
 .l td:first-child,.l th:first-child{text-align:left}
 .in{padding-left:1.2em}
+.l.sch td,.l.sch th{white-space:normal;text-align:left}
 
 /* Kvíz: ragadós fejléc (sáv + nyilak) és lábléc (lapozás) */
 .bar{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:.88rem;color:var(--muted)}
@@ -313,7 +314,7 @@ function answer(i) {
 // Teljes feladat: egy adatsor, több részkérdés, mindegyik külön megválaszolható.
 function caseView(id) {
   S = null;
-  const t = topicById(id), c = makeCase(pick(t.cases)), L = 'abcdefgh';
+  const t = topicById(id), c = makeCase(pick(t.cases)), L = 'abcdefghijklmnop';
   app.innerHTML = `
     <div class="qhead">
       <div class="bar"><button class="link" id="back">← Témák</button><span class="mono" id="csum">0 / ${c.parts.length} rész kész</span></div>
