@@ -7,115 +7,143 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
 <style>
-:root{--paper:#f5f2ea;--sheet:#fbfaf6;--ink:#1b1a17;--muted:#6d685d;--rule:#d8d1c2;--accent:#24524a;--ok:#2e6b3b;--okbg:#e5eee1;--bad:#a3392a;--badbg:#f5e2dc}
-@media (prefers-color-scheme:dark){:root{--paper:#171614;--sheet:#1e1d1a;--ink:#ebe6da;--muted:#a19a8b;--rule:#3a3731;--accent:#7fb3a6;--ok:#86c08f;--okbg:#1f2c21;--bad:#e08c7c;--badbg:#33201c}}
+/* Nyomtatott jegyzet jellegű felület: papír, tinta, egy kiemelőszín, vízszintes vonalak, szögletes formák.
+   Két betűtípus: Source Serif 4 (címek), IBM Plex Sans (szöveg, táblázatos számjegyekkel). */
+:root{--paper:#f6f3ec;--sheet:#fbf9f4;--ink:#1c1b18;--muted:#6b665b;--rule:#d9d2c3;--accent:#24524a;--ok:#2d6a3a;--okbg:#e6efe2;--bad:#a2392b;--badbg:#f6e4de}
+@media (prefers-color-scheme:dark){:root{--paper:#161513;--sheet:#1d1c19;--ink:#ece7db;--muted:#a39c8d;--rule:#38352f;--accent:#80b4a7;--ok:#88c191;--okbg:#1e2b20;--bad:#e2907f;--badbg:#321f1b}}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 "IBM Plex Sans",system-ui,sans-serif}
-main{max-width:760px;margin:0 auto;padding:28px 18px 64px}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 "IBM Plex Sans",system-ui,sans-serif;font-variant-numeric:tabular-nums}
+main{max-width:740px;margin:0 auto;padding:24px 20px 72px}
 h1,h2,h3{font-family:"Source Serif 4",Georgia,serif;font-weight:600;line-height:1.2;margin:0}
-h1{font-size:2.1rem}
-h2{font-size:1.45rem}
-.eyebrow{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
-.lead{color:var(--muted);margin:10px 0 0;max-width:56ch}
-.mono,table,.opt .k,.num{font-family:"IBM Plex Mono",ui-monospace,monospace}
-hr{border:0;border-top:1px solid var(--rule);margin:28px 0}
+h1{font-size:2.2rem;letter-spacing:-.01em}
+h2{font-size:1.4rem}
+h3{font-size:1.1rem}
+p{margin:.6em 0}
+a{color:var(--accent);text-underline-offset:3px}
+.crumbs{font-size:.85rem;color:var(--muted);margin-bottom:28px}
+.crumbs a{color:var(--muted)}
+.crumbs span{margin:0 .4em;color:var(--rule)}
+.eyebrow{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.lead{color:var(--muted);margin:10px 0 0;max-width:58ch}
+hr{border:0;border-top:1px solid var(--rule);margin:36px 0 28px}
 button{font:inherit;color:inherit;cursor:pointer}
-.btn{white-space:nowrap;background:var(--ink);color:var(--paper);border:1px solid var(--ink);padding:9px 16px;border-radius:3px;font-weight:500}
-.btn.ghost{background:transparent;color:var(--ink);border-color:var(--rule)}
-.btn:hover{opacity:.88}
-.link{background:none;border:0;padding:0;color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+.btn{white-space:nowrap;background:var(--ink);color:var(--paper);border:1px solid var(--ink);padding:9px 18px;font-weight:500}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn:hover{background:var(--accent);border-color:var(--accent);color:var(--paper)}
+.btn:disabled{opacity:.3;cursor:default;background:transparent;color:var(--ink);border-color:var(--rule)}
+.link{background:none;border:0;padding:0;color:var(--ink);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:4px}
+.link:hover{text-decoration-color:var(--ink)}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 
-.settings{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:22px;font-size:.92rem;color:var(--muted)}
-.seg{display:inline-flex;border:1px solid var(--rule);border-radius:3px;overflow:hidden}
-.seg label{padding:5px 12px;cursor:pointer;border-left:1px solid var(--rule);color:var(--ink);font-family:"IBM Plex Mono",monospace}
+/* Zh-fülek és beállítások */
+.tabs{display:flex;gap:28px;margin:30px 0 0;border-bottom:1px solid var(--rule)}
+.tabs button{background:none;border:0;border-bottom:2px solid transparent;margin-bottom:-1px;padding:8px 0;font-family:"Source Serif 4",Georgia,serif;font-size:1.15rem;font-weight:600;color:var(--muted)}
+.tabs button small{font:400 .8rem "IBM Plex Sans",sans-serif;margin-left:6px}
+.tabs button[aria-selected=true]{color:var(--ink);border-bottom-color:var(--ink)}
+.settings{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:20px;font-size:.9rem;color:var(--muted)}
+.seg{display:inline-flex;border:1px solid var(--ink)}
+.seg label{min-width:2.6rem;text-align:center;padding:3px 10px;cursor:pointer;border-left:1px solid var(--ink);color:var(--ink)}
 .seg label:first-child{border-left:0}
 .seg input{position:absolute;opacity:0;pointer-events:none}
-.seg input:checked+span{font-weight:600}
 .seg label:has(input:checked){background:var(--ink);color:var(--paper)}
+.seg label:has(input:focus-visible){outline:2px solid var(--accent);outline-offset:-3px}
 
-.topics{list-style:none;margin:18px 0 0;padding:0;border-top:1px solid var(--ink)}
-.topic{display:grid;grid-template-columns:2.4rem 1fr auto;gap:4px 14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--rule)}
-.topic .num{color:var(--muted);font-size:.9rem}
-.topic .name{font-weight:600}
+/* Témalista: sorszám + tartalom, a sorokat vonal választja el */
+.topics{list-style:none;margin:16px 0 0;padding:0;border-top:1px solid var(--ink)}
+.topic{display:grid;grid-template-columns:2.2rem minmax(0,1fr);gap:0 12px;padding:18px 0;border-bottom:1px solid var(--rule)}
+.topic .num{color:var(--muted);font-size:.85rem;padding-top:3px}
+.topic .name{font-weight:600;font-size:1.05rem}
 .topic .sub{color:var(--muted);font-size:.85rem}
-.topic .stats{grid-column:2;display:flex;gap:16px;font-size:.82rem;color:var(--muted);font-family:"IBM Plex Mono",monospace}
+.topic .stats{font-size:.82rem;color:var(--muted);margin-top:4px}
 .topic .stats b{color:var(--ink);font-weight:500}
-.topic .act{grid-column:3;grid-row:1 / span 2;display:flex;gap:14px;align-items:center}
+.topic .act{display:flex;flex-wrap:wrap;align-items:center;gap:8px 20px;margin-top:12px}
+.topic .act .btn{padding:6px 16px;font-size:.92rem}
+.topic .act .link{font-size:.92rem}
+.topic.all .name{font-family:"Source Serif 4",Georgia,serif;font-size:1.2rem}
 .topic.all{border-bottom:1px solid var(--ink)}
-@media (max-width:560px){.topic{grid-template-columns:2rem minmax(0,1fr)}.topic .act{grid-column:2;grid-row:auto;margin-top:6px;flex-wrap:wrap;gap:10px 14px}.topic .stats{flex-wrap:wrap;gap:4px 14px}}
+@media (min-width:640px){.topic .body{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:24px}.topic .act{grid-column:2;grid-row:1 / span 3;margin:0;justify-content:flex-end}}
+.empty{border-top:1px solid var(--ink);border-bottom:1px solid var(--rule);margin-top:16px;padding:28px 0;color:var(--muted)}
+.empty p{max-width:52ch;margin:6px 0 0}
 
-table{border-collapse:collapse;font-size:.88rem;margin:10px 0;display:block;overflow-x:auto;max-width:100%}
-th,td{border:1px solid var(--rule);padding:4px 9px;text-align:center;white-space:nowrap}
-th{background:var(--sheet);font-weight:500}
+/* Táblázatok: csak vízszintes vonalak */
+table{border-collapse:collapse;font-size:.9rem;margin:10px 0;display:block;overflow-x:auto;width:max-content;max-width:100%;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+th,td{border-bottom:1px solid var(--rule);padding:6px 12px;text-align:center;white-space:nowrap}
+tr:last-child>td,tr:last-child>th{border-bottom:0}
+th{font-weight:600}
+tr:first-child>th{border-bottom:1px solid var(--ink)}
+td:first-child,th:first-child{padding-left:4px}
 .hist td,.hist th{text-align:left}
 
-.bar{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-size:.88rem;color:var(--muted)}
-.qhead{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule);margin:-28px -18px 22px;padding:12px 18px 0}
-.qhead .bar{align-items:center}
+/* Kvíz: ragadós fejléc (sáv + nyilak) és lábléc (lapozás) */
+.bar{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:.88rem;color:var(--muted)}
+.qhead{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule);margin:-24px -20px 26px;padding:12px 20px 0}
 .qhead .arrows{display:flex;gap:6px}
-.qhead .arrows button{width:2.2rem;height:2rem;background:transparent;border:1px solid var(--rule);border-radius:2px;color:var(--ink);font-size:1rem}
-.qhead .arrows button:disabled{opacity:.35;cursor:default}
-.qnav{position:sticky;bottom:0;z-index:5;background:var(--paper);border-top:1px solid var(--rule);margin:22px -18px -64px;padding:10px 18px calc(10px + env(safe-area-inset-bottom))}
+.qhead .arrows button{width:2.4rem;height:2.1rem;background:transparent;border:1px solid var(--ink);color:var(--ink);font-size:1rem}
+.qhead .arrows button:disabled{opacity:.25;cursor:default}
+.qnav{position:sticky;bottom:0;z-index:5;background:var(--paper);border-top:1px solid var(--rule);margin:26px -20px -72px;padding:10px 20px calc(10px + env(safe-area-inset-bottom))}
 .part{scroll-margin-top:110px}
 .fbx{scroll-margin:120px 0 90px}
-.strip{display:flex;gap:4px;margin:10px 0 10px;overflow-x:auto;scrollbar-width:thin;padding-bottom:2px}
-.strip button{flex:none;min-width:2rem;height:2rem;padding:0 4px;background:transparent;border:1px solid var(--rule);border-radius:2px;font:.8rem "IBM Plex Mono",monospace;color:var(--muted)}
+.strip{display:flex;gap:4px;margin:10px 0;overflow-x:auto;scrollbar-width:thin;padding-bottom:2px}
+.strip button{flex:none;min-width:2.1rem;height:2.1rem;padding:0 4px;background:transparent;border:1px solid var(--rule);font-size:.82rem;color:var(--muted)}
 .strip .r{background:var(--okbg);border-color:var(--ok);color:var(--ok)}
 .strip .w{background:var(--badbg);border-color:var(--bad);color:var(--bad)}
-.strip .cur{border-color:var(--ink);color:var(--ink);font-weight:600;box-shadow:inset 0 -2px 0 var(--ink)}
-.btn:disabled{opacity:.35;cursor:default}
-.tip{border-left:3px solid var(--accent);padding:2px 0 2px 14px;margin:4px 0 16px}
-.tip .label{margin-top:0;color:var(--accent)}
-.part{border-top:1px solid var(--rule);margin-top:26px;padding-top:18px}
-.stem{margin-top:14px}
-.qnum{font-family:"Source Serif 4",Georgia,serif;font-size:1.05rem;color:var(--muted);margin-bottom:8px}
-.qtext{font-size:1.08rem}
+.strip .cur{border-color:var(--ink);color:var(--ink);font-weight:600;box-shadow:inset 0 -3px 0 var(--ink)}
+.qnum{font-family:"Source Serif 4",Georgia,serif;font-size:1rem;color:var(--muted);margin-bottom:8px}
+.qtext{font-size:1.1rem;line-height:1.55}
 .qtext b{font-weight:600}
+.stem{margin-top:14px}
+.part{border-top:1px solid var(--ink);margin-top:34px;padding-top:20px}
+
+/* Válaszok: teljes szélességű sorok, a betű nincs külön dobozban */
 .opts{display:grid;gap:8px;margin:22px 0}
-.opt{display:flex;gap:12px;align-items:center;width:100%;text-align:left;background:var(--sheet);border:1px solid var(--rule);border-radius:3px;padding:11px 12px}
+.opt{display:grid;grid-template-columns:1.6rem 1fr;align-items:baseline;width:100%;text-align:left;background:var(--sheet);border:1px solid var(--rule);padding:13px 14px;font-size:1.02rem}
 .opt:hover:not(:disabled){border-color:var(--ink)}
-.opt .k{flex:none;width:1.7rem;height:1.7rem;display:grid;place-items:center;border:1px solid var(--rule);border-radius:2px;font-size:.85rem;color:var(--muted)}
-.opt .v{font-family:"IBM Plex Mono",monospace;font-size:1rem}
+.opt .k{font-size:.85rem;font-weight:600;color:var(--muted)}
 .opt:disabled{cursor:default}
-.opt.right{border-color:var(--ok);background:var(--okbg)}
-.opt.right .k{border-color:var(--ok);color:var(--ok)}
-.opt.wrong{border-color:var(--bad);background:var(--badbg)}
-.opt.wrong .k{border-color:var(--bad);color:var(--bad)}
-.opt.dim{opacity:.55}
-.fb{border-left:3px solid var(--ok);padding:2px 0 2px 14px;margin:6px 0 18px}
+.opt.right{border-color:var(--ok);background:var(--okbg);box-shadow:inset 4px 0 0 var(--ok)}
+.opt.right .k{color:var(--ok)}
+.opt.wrong{border-color:var(--bad);background:var(--badbg);box-shadow:inset 4px 0 0 var(--bad)}
+.opt.wrong .k{color:var(--bad)}
+.opt.dim{opacity:.5}
+
+/* Visszajelzés és levezetés: bal oldali vonal, nincs doboz a dobozban */
+.tip{border-left:2px solid var(--accent);padding:2px 0 2px 16px;margin:4px 0 18px}
+.tip .label{margin-top:0;color:var(--accent)}
+.fb{border-left:2px solid var(--ok);padding:2px 0 2px 16px;margin:6px 0 18px}
 .fb.no{border-color:var(--bad)}
-.fb h3{font-size:1.1rem;margin-bottom:4px}
-.fb p{margin:4px 0}
-.steps{font-size:.95rem;background:var(--sheet);border:1px solid var(--rule);border-radius:3px;padding:12px 14px;margin:8px 0;overflow-x:auto}
-.steps p{margin:4px 0}
-.steps table{margin:6px 0}
-.sol{margin:0;padding-left:1.4rem}
-.sol>li{margin:0 0 14px;padding-left:2px}
+.fb h3{font-size:1.15rem;margin-bottom:4px}
+.fb p{margin:4px 0;max-width:66ch}
+.label{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:16px}
+.steps{font-size:.97rem;margin:8px 0 0;overflow-x:auto}
+.steps p{margin:4px 0;max-width:66ch}
+.steps table{margin:8px 0}
+.sol{margin:0;padding-left:1.5rem}
+.sol>li{margin:0 0 18px;padding-left:4px}
 .sol>li:last-child{margin-bottom:0}
-.sol>li::marker{font-family:"Source Serif 4",Georgia,serif;font-weight:600}
+.sol>li::marker{font-family:"Source Serif 4",Georgia,serif;font-weight:600;color:var(--muted)}
 .sol .sh{display:block;font-weight:600;margin-bottom:2px}
-.fx{background:var(--paper);border:1px solid var(--rule);border-radius:2px;padding:0 12px;margin:6px 0;overflow-x:auto;overflow-y:hidden}
-.fx .katex-display{margin:.7em 0}
-.katex{font-size:1.07em}
-.label{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:12px}
-.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.fx{margin:4px 0;overflow-x:auto;overflow-y:hidden}
+.fx .katex-display{margin:.5em 0}
+.crumbs .link{color:var(--muted);text-decoration-color:var(--rule)}
+.katex{font-size:1.06em}
+.row{display:flex;gap:10px 16px;flex-wrap:wrap;align-items:center}
 .hint{font-size:.8rem;color:var(--muted)}
 @media (hover:none){.hint{display:none}}
 
 .score{font-family:"Source Serif 4",Georgia,serif;font-size:4.5rem;line-height:1;margin:14px 0 4px}
-details{border-top:1px solid var(--rule);padding:10px 0}
+details{border-top:1px solid var(--rule);padding:12px 0}
 details summary{cursor:pointer;font-weight:500}
 .theory p,.theory li{max-width:66ch}
 .theory ul{padding-left:1.2rem}
-.theory li{margin:5px 0}
+.theory li{margin:6px 0}
 .theory table{white-space:normal}
 .theory td,.theory th{white-space:normal;text-align:left}
 .theory td+td,.theory th+th{white-space:nowrap}
-footer{margin-top:40px;font-size:.8rem;color:var(--muted)}
+footer{margin-top:44px;font-size:.8rem;color:var(--muted)}
+@media (max-width:480px){body{font-size:16px}h1{font-size:1.9rem}main{padding:18px 16px 72px}.qhead{margin:-18px -16px 22px;padding:10px 16px 0}.qnav{margin:22px -16px -72px;padding:10px 16px calc(10px + env(safe-area-inset-bottom))}}
 </style>
 </head>
 <body>
@@ -130,47 +158,56 @@ const app = $('#app');
 const KX = { delimiters: [{ left: '$$', right: '$$', display: true }, { left: '$', right: '$', display: false }], throwOnError: false, strict: 'ignore', fleqn: true, macros: { '\\frac': '\\dfrac' } };
 new MutationObserver(() => window.renderMathInElement && renderMathInElement(app, KX)).observe(app, { childList: true, subtree: true });
 const KEY = 'stat-gyakorlo-v1';
-const ALL = { id: 'all', name: 'Összes téma', en: 'vegyes' };
+// Vegyes gyakorlás zh-nként: id = all-<zh>. A régi 'all' bejegyzések a ZH I-hez tartoznak.
+const allTopic = e => ({ id: `all-${e}`, name: 'Vegyes gyakorlás', en: `${EXAMS.find(x => x.id === e).name} összes témája, vegyesen`, exam: e });
+const isAll = id => id.startsWith('all');
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
 function load() { try { return JSON.parse(localStorage.getItem(KEY)) || { hist: [], n: 10 }; } catch { return { hist: [], n: 10 }; } }
 function save() { try { localStorage.setItem(KEY, JSON.stringify(store)); } catch {} }
 let store = load(), S = null;
-store.cases = store.cases || [];
+store.cases = store.cases || []; store.exam = store.exam || 1;
+store.hist.forEach(h => { if (h.topic === 'all') h.topic = 'all-1'; });
 const p2 = x => String(x).padStart(2, '0');
 const now = (d = new Date()) => `${d.getFullYear()}.${p2(d.getMonth() + 1)}.${p2(d.getDate())} ${p2(d.getHours())}:${p2(d.getMinutes())}`;
-const topicById = id => id === 'all' ? ALL : TOPICS.find(t => t.id === id);
+const topicById = id => isAll(id) ? allTopic(+id.split('-')[1] || 1) : TOPICS.find(t => t.id === id);
+const examName = e => EXAMS.find(x => x.id === e).name;
 
 function stats(id) {
   const h = store.hist.filter(x => x.topic === id);
-  if (!h.length) return '<span>Még nincs kitöltés</span>';
-  return `<span>Utolsó <b>${h[h.length - 1].pct}%</b></span><span>Legjobb <b>${Math.max(...h.map(x => x.pct))}%</b></span><span>Átlag <b>${Math.round(h.reduce((s, x) => s + x.pct, 0) / h.length)}%</b></span><span>Kitöltés <b>${h.length}</b></span>`;
+  if (!h.length) return 'Még nincs kitöltés';
+  const avg = Math.round(h.reduce((s, x) => s + x.pct, 0) / h.length);
+  return `Utolsó <b>${h[h.length - 1].pct}%</b> · legjobb <b>${Math.max(...h.map(x => x.pct))}%</b> · átlag <b>${avg}%</b> · ${h.length} kitöltés`;
 }
 
 function home() {
   S = null;
-  const row = (t, i) => `<li class="topic${t.id === 'all' ? ' all' : ''}">
-    <span class="num">${t.id === 'all' ? '00' : String(i + 1).padStart(2, '0')}</span>
-    <div><div class="name">${t.name}</div><div class="sub">${t.en}</div></div>
-    <div class="stats">${stats(t.id)}</div>
-    <div class="act">${t.id === 'all' ? '' : `<button class="link" data-theory="${t.id}">Elmélet</button><button class="btn ghost" data-case="${t.id}">Teljes feladat</button>`}<button class="btn" data-start="${t.id}">Gyakorlás</button></div></li>`;
+  const ex = store.exam, list = TOPICS.filter(t => t.exam === ex);
+  const row = (t, i) => `<li class="topic${isAll(t.id) ? ' all' : ''}">
+    <span class="num">${isAll(t.id) ? '00' : p2(i + 1)}</span>
+    <div class="body"><div class="name">${t.name}</div><div class="sub">${t.en}</div><div class="stats">${stats(t.id)}</div>
+      <div class="act"><button class="btn" data-start="${t.id}">Gyakorlás</button>${isAll(t.id) ? '' : `<button class="link" data-case="${t.id}">Teljes feladat</button><button class="link" data-theory="${t.id}">Elmélet</button>`}</div></div></li>`;
   const hist = store.hist.slice(-15).reverse(), cases = store.cases.slice(-15).reverse();
-  const tname = id => esc(topicById(id)?.name || id);
+  const tname = id => { const t = topicById(id); return !t ? esc(id) : isAll(id) ? `Vegyes (${examName(t.exam)})` : esc(t.name); };
   app.innerHTML = `
-    <div class="eyebrow"><a class="link" href="../">← Tárgyak</a> · Statistics · University of Pannonia</div>
-    <h1>Statisztika gyakorló</h1>
-    <p class="lead">Véletlenszerűen generált feladatok a zh anyagából. Számold ki, válaszd ki az eredményt, és minden kérdés után megkapod a levezetést.</p>
-    <div class="settings">Kérdések száma
+    <nav class="crumbs"><a href="../">Gyakorló</a><span>/</span>Statistics</nav>
+    <div class="eyebrow">University of Pannonia · angol nyelvű tárgy</div>
+    <h1>Statisztika</h1>
+    <p class="lead">Véletlenszerűen generált feladatok a zh anyagából. Számold ki, válaszd ki az eredményt, és minden kérdés után megkapod a lépésenkénti levezetést.</p>
+    <div class="tabs" role="tablist">${EXAMS.map(e => { const k = TOPICS.filter(t => t.exam === e.id).length; return `<button role="tab" aria-selected="${e.id === ex}" data-exam="${e.id}">${e.name}<small>${k ? k + ' téma' : 'hamarosan'}</small></button>`; }).join('')}</div>
+    ${list.length ? `<div class="settings">Kérdések száma
       <span class="seg">${[5, 10, 20, 30].map(n => `<label><input type="radio" name="n" value="${n}"${store.n === n ? ' checked' : ''}><span>${n}</span></label>`).join('')}</span></div>
-    <ul class="topics">${row(ALL)}${TOPICS.map(row).join('')}</ul>
+    <ul class="topics">${row(allTopic(ex))}${list.map(row).join('')}</ul>`
+    : `<div class="empty"><h3>${examName(ex)}</h3><p>Ennek a zh-nak még nincs feltöltött anyaga. Amint megjön a tananyag, ide kerülnek a témák, a gyakorlások és a teljes feladatok.</p></div>`}
     <hr>
     <h2>Eredmények</h2>
-    <h3 style="margin-top:16px">Gyakorlások</h3>
+    <h3 style="margin-top:18px">Gyakorlások</h3>
     ${hist.length ? `<table class="hist"><tr><th>Dátum</th><th>Téma</th><th>Helyes</th><th>%</th></tr>${hist.map(h => `<tr><td>${h.date}</td><td>${tname(h.topic)}</td><td>${h.ok} / ${h.n}</td><td>${h.pct}%</td></tr>`).join('')}</table>` : '<p class="lead">Itt jelennek majd meg a kitöltött gyakorlások eredményei.</p>'}
-    <h3 style="margin-top:22px">Teljes feladatok</h3>
+    <h3 style="margin-top:26px">Teljes feladatok</h3>
     ${cases.length ? `<table class="hist"><tr><th>Dátum</th><th>Téma</th><th>Feladat</th><th>Helyes rész</th><th>%</th></tr>${cases.map(h => `<tr><td>${h.date}</td><td>${tname(h.topic)}</td><td>${esc(h.title)}</td><td>${h.ok} / ${h.n}</td><td>${h.pct}%</td></tr>`).join('')}</table>` : '<p class="lead">Itt jelennek majd meg a végigcsinált teljes feladatok (ha minden részére válaszoltál).</p>'}
-    ${hist.length || cases.length ? '<button class="link" id="clear" style="margin-top:12px">Eredmények törlése</button>' : ''}
+    ${hist.length || cases.length ? '<button class="link" id="clear" style="margin-top:14px">Eredmények törlése</button>' : ''}
     <footer>Az eredmények csak ebben a böngészőben tárolódnak.</footer>`;
+  app.querySelectorAll('[data-exam]').forEach(b => b.onclick = () => { store.exam = +b.dataset.exam; save(); home(); });
   app.querySelectorAll('input[name=n]').forEach(r => r.onchange = () => { store.n = +r.value; save(); });
   app.querySelectorAll('[data-start]').forEach(b => b.onclick = () => start(b.dataset.start));
   app.querySelectorAll('[data-theory]').forEach(b => b.onclick = () => theory(b.dataset.theory));
@@ -181,16 +218,16 @@ function home() {
 
 function theory(id) {
   const t = topicById(id);
-  app.innerHTML = `<button class="link" id="back">Vissza</button>
-    <div class="eyebrow" style="margin-top:18px">Elmélet · ${t.en}</div><h1>${t.name}</h1>
+  app.innerHTML = `<nav class="crumbs"><a href="../">Gyakorló</a><span>/</span><button class="link" id="back">Statistics</button><span>/</span>${examName(t.exam)}</nav>
+    <div class="eyebrow">Elmélet · ${t.en}</div><h1>${t.name}</h1>
     <div class="theory">${t.theory}</div>
-    <div class="row" style="margin-top:24px"><button class="btn" id="go">Gyakorlás indítása</button><button class="btn ghost" id="case">Teljes feladat</button></div>`;
+    <div class="row" style="margin-top:28px"><button class="btn" id="go">Gyakorlás indítása</button><button class="link" id="case">Teljes feladat</button></div>`;
   $('#back').onclick = home; $('#go').onclick = () => start(id); $('#case').onclick = () => caseView(id);
   scrollTo(0, 0);
 }
 
 function nextGen() {
-  const pool = S.topic === 'all' ? TOPICS.flatMap(t => t.gens) : topicById(S.topic).gens;
+  const pool = isAll(S.topic) ? TOPICS.filter(t => t.exam === topicById(S.topic).exam).flatMap(t => t.gens) : topicById(S.topic).gens;
   let g; do { g = pool[Math.floor(Math.random() * pool.length)]; } while (pool.length > 1 && g === S.lastGen);
   S.lastGen = g; return make(g);
 }
@@ -312,7 +349,7 @@ function result() {
     <p class="lead">${okN} / ${S.n} helyes válasz.</p>
     <div class="row" style="margin:20px 0">
       <button class="btn" id="again">Újra</button>
-      ${id !== 'all' ? '<button class="btn ghost" id="cs">Teljes feladat</button><button class="btn ghost" id="th">Elmélet</button>' : ''}
+      ${!isAll(id) ? '<button class="btn ghost" id="cs">Teljes feladat</button><button class="link" id="th">Elmélet</button>' : ''}
       <button class="btn ghost" id="home">Témák</button></div>
     ${missed.length ? `<h2 style="margin-top:28px">Hibás válaszok</h2>${missed.map(m => `<details><summary>${m.q.replace(/<table[\s\S]*?<\/table>/g, '[táblázat] ').replace(/<[^>]+>/g, '').slice(0, 110)}</summary>
       <div class="qtext" style="margin-top:8px">${m.q}</div>

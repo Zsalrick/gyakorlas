@@ -1280,9 +1280,11 @@ function zCase() {
   ] };
 }
 
-// ---------- Témák + elmélet ----------
+// ---------- Zh-k és témák ----------
+// Minden téma egy zh-hoz tartozik (exam). Új zh anyaga: új témák exam: 2-vel; a felület magától szétválasztja.
+const EXAMS = [{ id: 1, name: 'ZH I' }, { id: 2, name: 'ZH II' }];
 const TOPICS = [
-  { id: 'ratio', name: 'Arányok', en: 'Ratio I', gens: ratio, cases: [classCase], theory: TeX`
+  { exam: 1, id: 'ratio', name: 'Arányok', en: 'Ratio I', gens: ratio, cases: [classCase], theory: TeX`
 <p>A <b>ratio</b> (arány) két mennyiséget hasonlít össze: $p : q$, vagy $\frac{p}{q}$. A sorrend számít.</p>
 <ul><li>Előbb közös mértékegység: $2\text{ km} : 500\text{ m} = 2000 : 500 = 4 : 1$.</li>
 <li>Egyszerűsítés a legnagyobb közös osztóval: $12 : 18 = 2 : 3$.</li>
@@ -1291,7 +1293,7 @@ const TOPICS = [
 <li><b>Compound ratio</b> (összetett arány): $A:B = 2:3$, $B:C = 4:5$ → B-t közös értékre hozzuk: $8:12$ és $12:15$ → $A:C = 8:15$.</li>
 <li><b>Part-to-part</b> (rész a részhez) vs <b>part-to-whole</b> (rész az egészhez).</li>
 <li><b>Duplicate ratio</b> (négyzetes arány): $a : b \to a^2 : b^2$.</li></ul>` },
-  { id: 'index', name: 'Viszonyszámok', en: 'Ratio II', gens: indices, cases: [productionCase], theory: TeX`
+  { exam: 1, id: 'index', name: 'Viszonyszámok', en: 'Ratio II', gens: indices, cases: [productionCase], theory: TeX`
 <table><tr><th>Mutató</th><th>Jel</th><th>Képlet</th></tr>
 <tr><td>Distribution ratio (megoszlási)</td><td>$V_m$</td><td>$\frac{\text{rész}}{\text{egész}}$</td></tr>
 <tr><td>Coordination ratio (koordinációs)</td><td>$V_k$</td><td>$\frac{\text{rész}}{\text{másik rész}}$</td></tr>
@@ -1309,7 +1311,7 @@ const TOPICS = [
 <li>Egyenes intenzitási: orvos / 1000 lakos (nagyobb = jobb). Fordított: lakos / orvos (kisebb = jobb).</li>
 <li>Odds = bekövetkezett / nem bekövetkezett. Probability = bekövetkezett / összes. Ezért $OR \ne RR$; ritka eseménynél közel esnek egymáshoz.</li>
 <li>$OR$ vagy $RR = 1$: nincs különbség; $\gt 1$: az első csoportban gyakoribb; $\lt 1$: ritkább.</li></ul>` },
-  { id: 'series', name: 'Adatok és gyakorisági sorok', en: 'Course Introduction', gens: series, cases: [marksCase], theory: TeX`
+  { exam: 1, id: 'series', name: 'Adatok és gyakorisági sorok', en: 'Course Introduction', gens: series, cases: [marksCase], theory: TeX`
 <p><b>Változótípusok.</b> Quantitative (mennyiségi): <b>discrete</b> (diszkrét, számlált) vagy <b>continuous</b> (folytonos, mért). Categorical (kategorikus): <b>binary</b> (két kimenet), <b>nominal</b> (sorrend nélkül), <b>ordinal</b> (sorrendbe állítható, pl. Likert-skála).</p>
 <p>Szerep szerint: <b>independent</b> (független, ok), <b>dependent</b> (függő, okozat), <b>control</b> (kontroll, állandó), <b>confounding</b> (zavaró, mindkettőre hat).</p>
 <p><b>Sorok.</b> Time series (idősor), spatial series (területi sor), condition series (feltétel szerinti sor), individual series (egyedi sor: minden érték külön).</p>
@@ -1319,7 +1321,7 @@ const TOPICS = [
 <li>Midpoint (osztályközép) $= \frac{\text{alsó határ} + \text{felső határ}}{2}$.</li>
 <li>Range (terjedelem) osztályközös sorban = utolsó osztály felső határa − első osztály alsó határa.</li>
 <li>Osztályok: exhaustive (minden adatot lefednek) és mutually exclusive (egymást kizárók); 5–15 darab.</li></ul>` },
-  { id: 'central', name: 'Középértékek', en: 'Descriptive Statistics I', gens: central, cases: [groupedCase], theory: TeX`
+  { exam: 1, id: 'central', name: 'Középértékek', en: 'Descriptive Statistics I', gens: central, cases: [groupedCase], theory: TeX`
 <table><tr><th>Mutató</th><th>Képlet</th></tr>
 <tr><td>Arithmetic mean (számtani átlag)</td><td>$\bar{x} = \frac{\sum x}{n}$</td></tr>
 <tr><td>Grouped mean (osztályközös)</td><td>$\bar{x} = \frac{\sum f x}{\sum f}$, x = osztályközép</td></tr>
@@ -1334,7 +1336,7 @@ const TOPICS = [
 <li>A csoportos medián képletében a $cf$ a mediánosztály <b>előtti</b> osztály kumulált gyakorisága, az $f$ a mediánosztályé.</li>
 <li>Mode (módusz): leggyakoribb érték; lehet unimodal, bimodal, trimodal, multimodal.</li>
 <li>Százalékos változások átlaga: mértani átlag a tényezőkből $(1 + r)$. Azonos utakon mért sebességek átlaga: harmonikus átlag.</li></ul>` },
-  { id: 'dispersion', name: 'Szóródás', en: 'Descriptive Statistics II', gens: dispersion, cases: [sampleCase], theory: TeX`
+  { exam: 1, id: 'dispersion', name: 'Szóródás', en: 'Descriptive Statistics II', gens: dispersion, cases: [sampleCase], theory: TeX`
 <table><tr><th>Mutató</th><th>Képlet</th></tr>
 <tr><td>Range (terjedelem)</td><td>$\max - \min$</td></tr>
 <tr><td>Population variance (sokasági variancia)</td><td>$\sigma^2 = \frac{\sum (x - \mu)^2}{N}$</td></tr>
@@ -1353,7 +1355,7 @@ const TOPICS = [
 <li>Sample → $n - 1$ (Bessel-korrekció). A diákon a {4, 6, 8, 10} példa hibás: a helyes $s^2 = \frac{20}{3} = 6{,}67$.</li>
 <li>Empirical rule (normális eloszlás): $\pm 1\sigma \approx 68\%$, $\pm 2\sigma \approx 95\%$, $\pm 3\sigma \approx 99{,}7\%$.</li>
 <li>Binomiális variancia: $np(1 - p)$.</li></ul>` },
-  { id: 'sampling', name: 'Mintavétel', en: 'Random Sampling', gens: sampling, cases: [universityCase], theory: TeX`
+  { exam: 1, id: 'sampling', name: 'Mintavétel', en: 'Random Sampling', gens: sampling, cases: [universityCase], theory: TeX`
 <ul><li><b>Simple random sampling</b> (egyszerű véletlen): mindenki azonos eséllyel; $P(\text{kiválasztás}) = \frac{n}{N}$.</li>
 <li>Visszatevéssel, legalább egyszer: $P = 1 - \left(1 - \frac{1}{N}\right)^n$. A diák 9,56%-os eredménye hibás, 200 főből 50 húzásnál a helyes érték 22,17%.</li>
 <li><b>Systematic</b> (szisztematikus): $k = \frac{N}{n}$; véletlen kezdőpont 1 és k között, utána minden k-adik. Az i-edik elem: $\text{start} + (i - 1) \cdot k$. Linear: nem ismétel; circular: a lista végén elölről folytatja.</li>
@@ -1361,7 +1363,7 @@ const TOPICS = [
 <li><b>Cluster</b> (csoportos): néhány teljes csoportot választunk. $n = \text{ACS} \times \text{klaszterek száma}$. Single-stage: a kiválasztott klaszterben mindenki. Two-stage: klaszteren belül újra mintavétel. Multi-stage: több szinten.</li>
 <li>Rétegzett: minden rétegből választunk. Klaszteres: csak néhány klasztert választunk.</li>
 <li>Non-probability (nem valószínűségi) módszerek: convenience, judgmental, snowball, quota.</li></ul>` },
-  { id: 'hypothesis', name: 'Hipotézisvizsgálat', en: 'Hypothesis Testing', gens: hypothesis, cases: [drugCase, tCase, zCase], theory: TeX`
+  { exam: 1, id: 'hypothesis', name: 'Hipotézisvizsgálat', en: 'Hypothesis Testing', gens: hypothesis, cases: [drugCase, tCase, zCase], theory: TeX`
 <ul><li><b>$H_0$</b> (null hypothesis, nullhipotézis): tartalmazza az egyenlőséget ($=$, $\le$, $\ge$). <b>$H_1$</b> (alternative, alternatív): amit bizonyítani akarunk ($\ne$, $\gt$, $\lt$).</li>
 <li>Two-tailed (kétoldali): $H_1: \mu \ne \mu_0$. Right-tailed (jobboldali): $H_1: \mu \gt \mu_0$. Left-tailed (baloldali): $H_1: \mu \lt \mu_0$.</li>
 <li><b>Significance level</b> (szignifikanciaszint) $\alpha$, általában 0,05.</li>
@@ -1373,7 +1375,7 @@ const TOPICS = [
 <li>Táblázatolvasás: a sor a z első tizedese (pl. 2.0), az oszlop a második (pl. 0.00 vagy 0.05). $\Phi(2.00) = 0.97725$, $\Phi(2.05) = 0.97982$.</li>
 <li>Kulcsszavak: „differs” → two-tailed ($\ne$); „more than” → right-tailed ($\gt$); „less than” → left-tailed ($\lt$).</li>
 <li><b>Paired t-test</b> (páros t-próba): az egymintás próba speciális esete, ahol az adatok a különbségek és $\mu_0 = 0$. $d = \text{után} - \text{előtt}$; $m = \bar{d}$; $s$ = d szórása $(n - 1)$-gyel; $t = \frac{m}{s / \sqrt{n}}$; $df = n - 1$.</li></ul>` },
-  { id: 'anova', name: 'ANOVA', en: 'ANOVA', gens: anovaGens, cases: [rowsCase], theory: TeX`
+  { exam: 1, id: 'anova', name: 'ANOVA', en: 'ANOVA', gens: anovaGens, cases: [rowsCase], theory: TeX`
 <p><b>One-way ANOVA</b> (egyszempontú varianciaelemzés): 3 vagy több csoport átlagát hasonlítja össze. $H_0: \mu_1 = \mu_2 = \dots = \mu_k$; $H_1$: legalább egy átlag eltér.</p>
 <table><tr><th>Forrás</th><th>SS</th><th>df</th><th>MS</th><th>F</th></tr>
 <tr><td>Between (csoportok között)</td><td>$\sum n_i (\bar{x}_i - \bar{x})^2$</td><td>$k - 1$</td><td>$\frac{SS(B)}{df(B)}$</td><td>$\frac{MS(B)}{MS(W)}$</td></tr>
@@ -1401,4 +1403,4 @@ function makeCase(c) {
   return x;
 }
 
-if (typeof module !== 'undefined') module.exports = { TOPICS, make, makeCase, goodCase, HINTS };
+if (typeof module !== 'undefined') module.exports = { EXAMS, TOPICS, make, makeCase, goodCase, HINTS };

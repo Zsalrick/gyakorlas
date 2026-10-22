@@ -25,7 +25,9 @@ Egy tárgyon dolgozva **először a tárgy `CLAUDE.md`-jét olvasd el**.
 ## Közös szabályok
 - **Nyelv:** a kérdések a zh nyelvén (Statistics: angol), a magyarázatok magyarul: angol szakszó, utána zárójelben a magyar jelentés. A felhasználó magyarul tanulta az anyagot, a magyar megfelelőkre mindig szüksége van.
 - **Minden kérdéshez:** tipp (válasz előtt elkérhető), minden rossz válaszhoz „miért nem” magyarázat, és részletes, lépésenkénti levezetés táblázattal és képletekkel (KaTeX, soronként egy számolási lépés). A felhasználó ezt kifejezetten kérte.
-- **Stílus:** nincs emoji, nincs sablonos „AI” szöveg vagy dizájn (lila gradiens, kártyasorok, árnyékok). Papír háttér, egy kiemelőszín, Source Serif 4 + IBM Plex Sans/Mono, vékony vonalak. Mobilbarát (ragadós navigáció fent és lent), sötét mód.
+- **Stílus: nyomtatott jegyzet, nem „AI-sablon”.** A felhasználó ezt kifejezetten kérte. Tilos: emoji, Inter/Roboto/Space Grotesk vagy rendszerbetű, lila vagy bármilyen gradiens, ragyogás, üveghatás, árnyék, kártya a kártyában, egyforma nagy lekerekítés, színes oldalcsíkok mindenhol, státuszpöttyök, harmadik font (mono).
+  Helyette: papír háttér, tinta, **egy** kiemelőszín (`--accent`), a zöld és a piros csak helyes/hibás válaszra. Source Serif 4 a címekhez, IBM Plex Sans a szöveghez (`tabular-nums`). Szögletes formák, vékony vízszintes vonalak, a táblázatokban csak vízszintes vonal. Soronként egy kitöltött gomb (fő művelet), a többi szöveges link. 17 px szöveg, 1.6 sortáv, ~66 karakteres sorhossz (Butterick: Practical Typography).
+  Mobilbarát (ragadós navigáció fent és lent, a tárgyoldalak `<nav class="crumbs">` morzsamenüvel), sötét mód. A tokenek (`:root`) és a stílus a `statistics/index.html`-ben van; új tárgynál ezt másold, ne találj ki újat.
 - **Tananyag:** a felhasználó PDF-ben adja (diák). Ezek az oktatók anyagai, **nem kerülnek a repóba** (nyilvános). A diákon lévő hibákat javítsd, és jelöld az elméletben.
 - **Külső függőség** csak CDN-ről, rögzített verzióval és SRI-hash-sel (pl. KaTeX 0.16.11 jsdelivr). Nincs npm build; a `node_modules` csak helyi ellenőrzéshez kell, és gitignore-olva van.
 - Commit üzenet magyarul.

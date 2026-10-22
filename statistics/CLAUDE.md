@@ -7,6 +7,7 @@ A hub (`../CLAUDE.md`) egyik tárgya. Statikus oldal (nincs build): véletlensze
 ## Fájlok
 - `index.html` – teljes UI (CSS + app logika inline): témalista, kvíz lapozással (ragadós fejléc: számozott sáv + nyilak, ragadós lábléc: Előző/Következő; tipp), teljes feladat nézet, eredmények két táblában (`localStorage`, kulcs: `stat-gyakorlo-v1`, ezt ne nevezd át, különben elvesznek az eredmények), elmélet nézet. Fejlécben link vissza a hubra (`../`).
 - `gen.js` – minden tartalom: 54 kérdésgenerátor 8 témában (`TOPICS[].gens`), 10 teljes feladat (`TOPICS[].cases`), tippek (`HINTS`), elmélet (`TOPICS[].theory`).
+- **Zh-k:** `EXAMS` (`ZH I`, `ZH II`), minden téma `exam` mezővel. A kezdőlapon fülek választják el őket, zh-nként van „Vegyes gyakorlás” (`all-<zh>` azonosító, a régi `all` = `all-1`). A ZH I anyaga kész (8 téma), a ZH II-nek még nincs anyaga (üres fül, „hamarosan”).
 - `check.js` – önellenőrzés: `node check.js` (minden generátor 2000×, minden teljes feladat 1000×: 4 különböző opció, pontosan 1 helyes, van tipp, nincs NaN/undefined, páros számú `$`). **Minden változtatás után futtasd.**
 - `texcheck.js` – képlet-ellenőrzés KaTeX-szel (minden generált képletet lefordít, backslash nélküli TeX-parancsot is keres). Egyszer: `npm i --no-save katex@0.16.11`, utána `node texcheck.js`. Képletek módosítása után futtasd.
 
@@ -23,7 +24,8 @@ A hub (`../CLAUDE.md`) egyik tárgya. Statikus oldal (nincs build): véletlensze
 
 ## Bővítés új tananyaggal
 A felhasználó PDF-ben (diák) adja a tananyagot; ezek **nem kerülnek a repóba** (nyilvános repó, az oktató anyaga). Szöveg kinyerése: `python -c "import fitz; ..."` (PyMuPDF) vagy `pdftotext`. A képletek sokszor csak képként vannak a diákon, ilyenkor a dia képét is nézd meg.
-1. **Új téma** (új előadás): új generátor-tömb, `HINTS` bejegyzések, legalább egy teljes feladat a diák példája alapján, és egy új elem a `TOPICS` tömbben (`id`, `name` magyarul, `en` = az előadás angol címe, `gens`, `cases`, `theory`). A témalista és az eredmények automatikusan frissülnek.
+0. **Melyik zh?** Kérdezd meg, ha nem egyértelmű. A ZH II anyaga `exam: 2` témákba kerül; amint van legalább egy, a fül magától megtelik. A hub `index.html`-jében a „ZH II hamarosan” sort is írd át.
+1. **Új téma** (új előadás): új generátor-tömb, `HINTS` bejegyzések, legalább egy teljes feladat a diák példája alapján, és egy új elem a `TOPICS` tömbben (`exam`, `id`, `name` magyarul, `en` = az előadás angol címe, `gens`, `cases`, `theory`). A témalista és az eredmények automatikusan frissülnek.
 2. **Új kérdéstípus meglévő témába**: generátor a téma `gens` tömbjébe + `HINTS` bejegyzés. Ha új képlet, az elméletbe (`theory`) is írd be.
 3. **Diahibák**: ha a diákon hibás eredmény vagy jelölés van, a helyeset tanítsd, és az elméletben jelezd (lásd a viszonyszámoknál és a szórásnál).
 4. Futtasd: `node check.js` és `node texcheck.js`. Utána ellenőrizd böngészőben is (helyi szerver: `python -m http.server` a hub gyökeréből, majd `/statistics/`).

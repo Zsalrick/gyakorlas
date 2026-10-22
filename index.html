@@ -6,38 +6,46 @@
 <title>Gyakorló</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
 <style>
-:root{--paper:#f5f2ea;--ink:#1b1a17;--muted:#6d685d;--rule:#d8d1c2;--accent:#24524a}
-@media (prefers-color-scheme:dark){:root{--paper:#171614;--ink:#ebe6da;--muted:#a19a8b;--rule:#3a3731;--accent:#7fb3a6}}
+/* Ugyanaz a nyomtatott jegyzet stílus, mint a tárgyak oldalain (lásd statistics/index.html). */
+:root{--paper:#f6f3ec;--ink:#1c1b18;--muted:#6b665b;--rule:#d9d2c3;--accent:#24524a}
+@media (prefers-color-scheme:dark){:root{--paper:#161513;--ink:#ece7db;--muted:#a39c8d;--rule:#38352f;--accent:#80b4a7}}
 *{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 "IBM Plex Sans",system-ui,sans-serif}
-main{max-width:760px;margin:0 auto;padding:28px 18px 64px}
-h1{font-family:"Source Serif 4",Georgia,serif;font-weight:600;font-size:2.1rem;line-height:1.2;margin:0}
-.eyebrow{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
-.lead{color:var(--muted);margin:10px 0 0;max-width:56ch}
-ul{list-style:none;margin:28px 0 0;padding:0;border-top:1px solid var(--ink)}
-li a{display:grid;grid-template-columns:2.4rem 1fr auto;gap:4px 14px;align-items:center;padding:16px 0;border-bottom:1px solid var(--rule);color:inherit;text-decoration:none}
-li a:hover .go{text-decoration:underline}
-.num{font-family:"IBM Plex Mono",monospace;color:var(--muted);font-size:.9rem}
-.name{font-weight:600}
-.sub{color:var(--muted);font-size:.85rem}
-.go{color:var(--accent);text-underline-offset:3px}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 "IBM Plex Sans",system-ui,sans-serif;font-variant-numeric:tabular-nums}
+main{max-width:740px;margin:0 auto;padding:56px 20px 72px}
+h1{font-family:"Source Serif 4",Georgia,serif;font-weight:600;font-size:2.6rem;line-height:1.1;letter-spacing:-.01em;margin:0}
+.eyebrow{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.lead{color:var(--muted);margin:14px 0 0;max-width:52ch}
+ul{list-style:none;margin:40px 0 0;padding:0;border-top:1px solid var(--ink)}
+li{border-bottom:1px solid var(--rule)}
+li a{display:grid;grid-template-columns:2.2rem minmax(0,1fr);gap:0 12px;padding:20px 0;color:inherit;text-decoration:none}
+.num{color:var(--muted);font-size:.85rem;padding-top:5px}
+.name{font-family:"Source Serif 4",Georgia,serif;font-weight:600;font-size:1.35rem;line-height:1.3}
+li a:hover .name{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
+.sub{color:var(--muted);font-size:.9rem;margin-top:2px}
+.parts{font-size:.88rem;margin-top:8px}
+.parts span{color:var(--muted)}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-footer{margin-top:40px;font-size:.8rem;color:var(--muted)}
+footer{margin-top:44px;font-size:.8rem;color:var(--muted)}
+@media (max-width:480px){body{font-size:16px}main{padding:36px 16px 64px}h1{font-size:2.2rem}}
 </style>
 </head>
 <body>
 <main>
   <div class="eyebrow">University of Pannonia</div>
   <h1>Gyakorló</h1>
-  <p class="lead">Véletlenszerűen generált gyakorlófeladatok zh-ra, tippekkel és lépésenkénti levezetéssel. Válaszd ki a tárgyat.</p>
+  <p class="lead">Zh-gyakorló feladatok tárgyanként: véletlenszerűen generált kérdések, tipp, a rossz válaszok magyarázata és lépésenkénti levezetés.</p>
   <ul>
     <!-- Új tárgy: új <li> ide, a mappa neve legyen a link (lásd CLAUDE.md). -->
     <li><a href="statistics/">
       <span class="num">01</span>
-      <span><span class="name">Statistics</span><br><span class="sub">Statisztika · angol nyelvű · arányok, viszonyszámok, középértékek, szóródás, mintavétel, hipotézisvizsgálat, ANOVA</span></span>
-      <span class="go">Megnyitás</span>
+      <span>
+        <span class="name">Statisztika</span>
+        <span class="sub" style="display:block">Statistics · angol nyelvű</span>
+        <span class="parts" style="display:block">ZH I <span>arányok, viszonyszámok, középértékek, szóródás, mintavétel, hipotézisvizsgálat, ANOVA</span></span>
+        <span class="parts" style="display:block">ZH II <span>hamarosan</span></span>
+      </span>
     </a></li>
   </ul>
   <footer>Az eredmények csak ebben a böngészőben tárolódnak.</footer>
