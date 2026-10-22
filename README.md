@@ -7,5 +7,6 @@ Megnyitás: https://zsalrick.github.io/gyakorlas/
 | Tárgy | Mappa |
 |---|---|
 | Statistics (angol nyelvű) | [`statistics/`](statistics/) |
+| Elemzés módszertan | [`analysis-methodology/`](analysis-methodology/) |
 
 Fejlesztés: lásd [`CLAUDE.md`](CLAUDE.md) és a tárgyak saját `CLAUDE.md`-jét.

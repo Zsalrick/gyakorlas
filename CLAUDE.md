@@ -11,6 +11,7 @@ CLAUDE.md           ez a fájl: a hub szabályai
 <tárgy>/            minden tárgy önálló, saját index.html-lel
   CLAUDE.md         a tárgy saját leírása: fájlok, bővítés, tananyag-sajátosságok
 statistics/         Statistics (angol nyelvű)
+analysis-methodology/  Elemzés módszertan (magyar nyelvű)
 ```
 Egy tárgyon dolgozva **először a tárgy `CLAUDE.md`-jét olvasd el**.
 
