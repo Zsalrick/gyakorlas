@@ -739,6 +739,20 @@ function plCase() {
 
 // ---------- Témák és elmélet ----------
 const TH_KK = TeX`
+<h3>A fogalmak meghatározása</h3>
+<p><b>Kiadás:</b> a vállalkozás pénzeszközeinek csökkenése, vagyis a gazdasági tevékenység során teljesített kifizetés. Tágabb értelemben a kiadáshoz tartozik a fizetési kötelezettség vállalása is (pl. számlára, később fizetve vásárolt anyag).</p>
+<p><b>Pénzkiadás (kifizetés):</b> a pénzeszközök (pénztár, bankszámla) tényleges csökkenése.</p>
+<p><b>Költség:</b> a vállalkozás tevékenysége érdekében egy adott időszakban felmerült erőforrás-felhasználás pénzben kifejezett értéke. Erőforrás: anyag, élőmunka (bér és járulékai), a tárgyi eszközök használata (értékcsökkenés), igénybe vett szolgáltatások.</p>
+<p><b>Ráfordítás:</b> az adott időszak bevételeivel szemben elszámolt, az eredményt csökkentő tételek összessége. Ide tartozik az értékesített termékek, szolgáltatások költsége, valamint a nem költség jellegű ráfordítások (egyéb ráfordítások, pl. bírság; pénzügyi műveletek ráfordításai, pl. kamat).</p>
+<p><b>Bevétel:</b> az adott időszakban értékesített termékek, szolgáltatások ellenértéke, valamint az egyéb, az eredményt növelő tételek (egyéb bevételek, pénzügyi műveletek bevételei).</p>
+<p><b>Pénzbevétel:</b> a pénzeszközök tényleges növekedése (pl. a vevő fizet, hitelfelvétel).</p>
+<p><b>Eredmény:</b> $\text{bevételek} - \text{ráfordítások}$.</p>
+<table><tr><th>Szemlélet</th><th>Mit figyel?</th><th>Fogalompár</th></tr>
+<tr><td>Pénzügyi</td><td>mennyi pénz megy ki és jön be</td><td>kiadás (pénzkiadás) – pénzbevétel</td></tr>
+<tr><td>Erőforrás-felhasználás</td><td>mennyi erőforrást használtunk fel</td><td>költség</td></tr>
+<tr><td>Eredmény</td><td>mennyi a nyereség</td><td>ráfordítás – bevétel</td></tr></table>
+<p>A meghatározások a magyar számviteli és vállalatgazdaságtani tankönyvek szokásos megfogalmazásai. Ha az órán más szöveget adtak meg, a dolgozatban azt használd.</p>
+<h3>Egyszerűen</h3>
 <p>Négy fogalom, amelyeket a köznyelv keverten használ, de a vállalkozásnál mást jelentenek. Mindig az a kérdés, hogy <b>mihez</b> kötődik a tétel.</p>
 <table><tr><th>Fogalom</th><th>Mihez kötődik?</th><th>Példa</th></tr>
 <tr><td><b>Kiadás</b></td><td>pénz kiáramlása (kifizetés)</td><td>gépvásárlás átutalással</td></tr>
