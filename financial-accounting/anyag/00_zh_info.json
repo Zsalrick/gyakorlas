@@ -1,0 +1,592 @@
+{
+ "targy": "Pénzügyi számvitel I. – Pannon Egyetem",
+ "zh_datum": "2026-10-29",
+ "szerkezet": {
+  "datum": "2026-10-29",
+  "idotartam": "90 perc: elmélet 30, gyakorlat 60",
+  "elmelet": {
+   "pontok": "teszt 7-8, mérlegséma 9, alapelv 7, fogalom 7",
+   "teszt": [
+    {
+     "tema": "Tárgyi eszközök",
+     "helyes": [
+      "b) a karbantartás költsége a tárgyévi eredményt csökkenti",
+      "e) a terven felüli ÉCS egyéb ráfordítás"
+     ],
+     "hamis_allitasok_es_cafolatuk": [
+      "a) beruházás és felújítás a beruházások között",
+      "c) beruházásnál nincs terv szerinti ÉCS",
+      "d) tenyészállatnál lehet terven felüli ÉCS"
+     ]
+    },
+    {
+     "tema": "Vásárolt készletek",
+     "helyes": [
+      "a) változatlanul továbbértékesített termék áru",
+      "c) FIFO: elsőként beszerzett ára megy ki először",
+      "e) közvetített szolgáltatás az áruk sajátos csoportja"
+     ],
+     "hamis_allitasok_es_cafolatuk": [
+      "b) alapanyag nem késztermék",
+      "d) levonható áfa nem része a bekerülési értéknek"
+     ]
+    },
+    {
+     "tema": "Saját termelésű készletek",
+     "helyes": [
+      "a) késztermék minden megmunkáláson átesett",
+      "c) befejezetlen termelés a köztes állapot",
+      "d) növendék- és hízóállat saját termelésű készlet"
+     ],
+     "hamis_allitasok_es_cafolatuk": [
+      "b) „A félkész termék már nem igényelhet további megmunkálást” – HAMIS, mert igényelhet",
+      "e) STKÁV nem azonos az árbevétellel"
+     ]
+    }
+   ],
+   "merlegsema": "B.I. Készletek: 1 Anyagok, 2 Befejezetlen termelés és félkész termékek, 3 Növendék-, hízó- és egyéb állatok, 4 Késztermékek, 5 Áruk, 6 Készletekre adott előlegek; oszlopok: Előző év | Előző év(ek) módosításai | Tárgyév",
+   "alapelv": "Vállalkozás folytatásának elve (általános alapelv)",
+   "fogalom": "Alapítás-átszervezés aktivált értéke",
+   "teszt_megjegyzes": "A 'hamis_allitasok_es_cafolatuk' a rossz opciók betűjelét és azt írja le, MIÉRT hamisak (nem az opció szövegét). Eredeti szöveg: tárgyi c) 'a beruházások terv szerinti ÉCS-ének elszámolása tartalmilag megegyezik az ingatlanokéval', d) 'tenyészállatok esetén nem lehet terven felüli ÉCS-t elszámolni'."
+  },
+  "gyakorlat": {
+   "pont": 71,
+   "feladat1": "Késztermék kalkuláció + könyvelés + összköltséges eredménykimutatás az üzemi eredményig (31 pont)",
+   "feladat2": "Kft. alapítása Bt. által + 15 vegyes esemény naplóban (40,5 pont)",
+   "elteresek_a_kulcsban": [
+    "2. feladat 14.: a mellékszámításban 907 740 áll, de a helyes 29 718 000 × 12% × 3/12 = 891 540",
+    "13.b: a gépelt kulcsban K 368, a kézírásosban K 3683 – a 3683 a pontos",
+    "1. feladat eredménykimutatás: a kulcs IV. sora 10 000 000 + 1 000 000 = 11 000 000 és A = −712 000. A hulladék (T 227 / K 511, 100 000) miatt az 511 egyenlege 9 900 000, így könyvelési logika szerint IV = 10 900 000 és A = −612 000. A ZH-n a kulcs módszerét követi a javító – érdemes a hulladékot zárójelben jelezni."
+   ],
+   "minta_megoldas": [
+    {
+     "cim": "1. feladat – késztermékkészletek (31 pont)",
+     "szoveg": "Kiemelt számlák nyitása: 231 Befejezetlen termelés 1 000 000; 251 Késztermékek 2 100 000 (500 db). Befejezetlen termelés visszavezetése. Termelés költségei (közvetlen / közvetett): anyag 8 000 000 / 2 000 000; igénybe vett szolgáltatás (+27% áfa) 500 000 / 500 000; bér 3 000 000 / 2 000 000; járulék 1 300 000 / 700 000; ÉCS (termelőgép) 0 / 1 000 000. Utókalkulációban felosztott általános költség 3 000 000. Hulladék 100 000. Raktárra 5 000 db. Eladás 2 000 db × 5 000 Ft + 27% áfa. Záró befejezetlen 100 000. Leltár szerinti késztermék 3 400 db. Összköltség eljárás, csak költségnem-elszámolás, FIFO, folyamatos mennyiségi és értékbeni analitika.",
+     "kerdesek": [
+      "a) kalkuláció",
+      "b) könyvelés",
+      "c) összköltséges eredménykimutatás az üzemi eredményig"
+     ],
+     "kalkulacio": [
+      [
+       "Nyitó befejezetlen termelés",
+       1000000
+      ],
+      [
+       "Anyagköltség (közvetlen)",
+       8000000
+      ],
+      [
+       "Igénybe vett szolgáltatás (közvetlen)",
+       500000
+      ],
+      [
+       "Egyéb szolgáltatás",
+       0
+      ],
+      [
+       "Bérköltség (közvetlen)",
+       3000000
+      ],
+      [
+       "Bérjárulék (közvetlen)",
+       1300000
+      ],
+      [
+       "ÉCS (közvetlen)",
+       0
+      ],
+      [
+       "Felosztott közvetett költség",
+       3000000
+      ],
+      [
+       "Hulladékmegtérülés",
+       -100000
+      ],
+      [
+       "Összesen",
+       16700000
+      ],
+      [
+       "Záró befejezetlen termelés",
+       -100000
+      ],
+      [
+       "Befejezett termelés költsége",
+       16600000
+      ],
+      [
+       "Önköltség 5 000 db-ra (Ft/db)",
+       3320
+      ]
+     ],
+     "kalkulacio_pont": 5,
+     "tetelek": [
+      {
+       "sorszam": "1.a",
+       "esemeny": "Befejezetlen termelés nyitása",
+       "T": "231",
+       "K": "491",
+       "osszeg": 1000000
+      },
+      {
+       "sorszam": "1.b",
+       "esemeny": "Késztermékek nyitása",
+       "T": "251",
+       "K": "491",
+       "osszeg": 2100000
+      },
+      {
+       "sorszam": "2",
+       "esemeny": "Nyitó befejezetlen visszavezetése",
+       "T": "581",
+       "K": "231",
+       "osszeg": 1000000
+      },
+      {
+       "sorszam": "3.a",
+       "esemeny": "Anyagköltség",
+       "T": "511",
+       "K": "211",
+       "osszeg": 10000000
+      },
+      {
+       "sorszam": "3.b",
+       "esemeny": "Igénybe vett szolgáltatás",
+       "T": "52",
+       "K": "4541",
+       "osszeg": 1000000
+      },
+      {
+       "sorszam": "3.c",
+       "esemeny": "Szolgáltatás áfája",
+       "T": "466",
+       "K": "4541",
+       "osszeg": 270000,
+       "szamitas": "1 000 000 × 27%"
+      },
+      {
+       "sorszam": "3.d",
+       "esemeny": "Bérköltség",
+       "T": "541",
+       "K": "471",
+       "osszeg": 5000000
+      },
+      {
+       "sorszam": "3.e",
+       "esemeny": "Bérjárulék",
+       "T": "56",
+       "K": "463",
+       "osszeg": 2000000
+      },
+      {
+       "sorszam": "3.f",
+       "esemeny": "Termelőgép terv szerinti ÉCS",
+       "T": "571",
+       "K": "139",
+       "osszeg": 1000000
+      },
+      {
+       "sorszam": "4",
+       "esemeny": "Gyártási hulladék készletre",
+       "T": "227",
+       "K": "511",
+       "osszeg": 100000
+      },
+      {
+       "sorszam": "5",
+       "esemeny": "Késztermék raktárra",
+       "T": "251",
+       "K": "581",
+       "osszeg": 16600000
+      },
+      {
+       "sorszam": "6.a",
+       "esemeny": "Értékesítés nettó árbevétele",
+       "T": "311",
+       "K": "91-92",
+       "osszeg": 10000000,
+       "szamitas": "2 000 × 5 000"
+      },
+      {
+       "sorszam": "6.b",
+       "esemeny": "Értékesítés áfája",
+       "T": "311",
+       "K": "467",
+       "osszeg": 2700000
+      },
+      {
+       "sorszam": "6.c",
+       "esemeny": "Eladott késztermék (FIFO)",
+       "T": "581",
+       "K": "251",
+       "osszeg": 7080000,
+       "szamitas": "2 100 000 + 1 500 × 3 320"
+      },
+      {
+       "sorszam": "7",
+       "esemeny": "Felosztott általános költség – csak kalkulációs tétel, nincs könyvelés",
+       "T": "—",
+       "K": "—",
+       "osszeg": 0
+      },
+      {
+       "sorszam": "8",
+       "esemeny": "Záró befejezetlen termelés",
+       "T": "231",
+       "K": "581",
+       "osszeg": 100000
+      },
+      {
+       "sorszam": "9.a",
+       "esemeny": "Hiány állományváltozásként",
+       "T": "581",
+       "K": "251",
+       "osszeg": 332000,
+       "szamitas": "(500+5000−2000−3400)=100 db × 3 320"
+      },
+      {
+       "sorszam": "9.b",
+       "esemeny": "Hiány ráfordításként",
+       "T": "8693",
+       "K": "582",
+       "osszeg": 332000
+      }
+     ],
+     "tetelek_pont": "16 (tételenként 1, nyitás 0,5) + áfa-mellékszámítás 5×0,5 = 2,5",
+     "eredmenykimutatas": [
+      [
+       "I. Értékesítés nettó árbevétele",
+       10000000
+      ],
+      [
+       "II. Aktivált saját teljesítmények értéke (STKÁV −1 000 000 + 16 600 000 − 7 080 000 + 100 000 − 332 000 = 8 288 000; + SEEAÉ 332 000)",
+       8620000
+      ],
+      [
+       "III. Egyéb bevételek",
+       0
+      ],
+      [
+       "IV. Anyagjellegű ráfordítások (10 000 000 + 1 000 000)",
+       11000000
+      ],
+      [
+       "V. Személyi jellegű ráfordítások (5 000 000 + 2 000 000)",
+       7000000
+      ],
+      [
+       "VI. Értékcsökkenési leírás",
+       1000000
+      ],
+      [
+       "VII. Egyéb ráfordítások",
+       332000
+      ],
+      [
+       "A. Üzemi (üzleti) tevékenység eredménye",
+       -712000
+      ]
+     ],
+     "eredmenykimutatas_pont": "séma 8×0,5 = 4, összegek 7×0,5 = 3,5"
+    },
+    {
+     "cim": "2. feladat – Friss és Ropogós Kft. (40,5 pont)",
+     "szoveg": "Egy Bt. alapítja 5 000 000 Ft törzstőkével. 1) Alapító befizet a pénztárba 1 000 000-t, átad egy targoncát (könyv szerinti 3 500 000, csereszerződés szerinti 2 800 000, apportjegyzék szerinti 3 000 000). 2) EU-n kívülről termelőgép 10 000 DEV, 300 Ft/DEV; áfa 830 000, vám 220 000. 3) Cégbírósági bejegyzés. 4) Szept. 1. targonca üzembe helyezése. 5) Arculatterv és szervezetkialakítás szakértői díja 700 000 + áfa. 6) 200 db nagykereskedelmi áru 2 200 Ft/db. 7) 2 000 000 + áfa előleg beruházási szállítónak. 8) Alapító átutalja a fennmaradó törzstőkét. 9) Ingatlanberuházás számla 25 400 000 + áfa, előleg beszámítva, a többi beruházási hitelből közvetlen szállítói kiegyenlítéssel okt. 1-jén, kamat 12%/év. 10) Az áruk felét eladja 3 000 Ft/db-ért. 11) Műszaki berendezés eladása 2 100 000-ért (bruttó 2 000 000, halmozott ÉCS 300 000). 12) Termelőgép használatba vétele jún. 1. 13) Importáfa átutalása és rendezése. 14) Ingatlan aktiválása dec. 31. 15) Év végi tételek. Összköltség eljárás, költségnem-elszámolás; targonca és termelőgép lineárisan 5 év; alapítás-átszervezést aktiválja; árukról csak mennyiségi nyilvántartás, leltárkülönbözet nincs. Egész számra kerekíts.",
+     "tetelek": [
+      {
+       "sorszam": "1.a",
+       "esemeny": "Alapító pénzbeli hozzájárulása",
+       "T": "381",
+       "K": "479",
+       "osszeg": 1000000
+      },
+      {
+       "sorszam": "1.b",
+       "esemeny": "Targonca apport (apportjegyzék szerint)",
+       "T": "161",
+       "K": "479",
+       "osszeg": 3000000
+      },
+      {
+       "sorszam": "2.a",
+       "esemeny": "Import termelőgép",
+       "T": "161",
+       "K": "4552",
+       "osszeg": 3000000,
+       "szamitas": "10 000 × 300"
+      },
+      {
+       "sorszam": "2.b",
+       "esemeny": "Vám",
+       "T": "161",
+       "K": "4651",
+       "osszeg": 220000
+      },
+      {
+       "sorszam": "2.c",
+       "esemeny": "Importáfa",
+       "T": "3683",
+       "K": "4652",
+       "osszeg": 830000
+      },
+      {
+       "sorszam": "3.a",
+       "esemeny": "Jegyzett tőke bejegyzése",
+       "T": "32-33",
+       "K": "411",
+       "osszeg": 5000000
+      },
+      {
+       "sorszam": "3.b",
+       "esemeny": "Alapítói teljesítések átvezetése",
+       "T": "479",
+       "K": "32-33",
+       "osszeg": 4000000
+      },
+      {
+       "sorszam": "4",
+       "esemeny": "Targonca üzembe helyezése",
+       "T": "132",
+       "K": "161",
+       "osszeg": 3000000
+      },
+      {
+       "sorszam": "5.a",
+       "esemeny": "Alapítás-átszervezés (elfogadható 5299 is, akkor utána 111/582)",
+       "T": "111",
+       "K": "4543",
+       "osszeg": 700000
+      },
+      {
+       "sorszam": "5.b",
+       "esemeny": "Áfa",
+       "T": "466",
+       "K": "4543",
+       "osszeg": 189000
+      },
+      {
+       "sorszam": "5.c",
+       "esemeny": "Lekötött tartalék",
+       "T": "413",
+       "K": "4142",
+       "osszeg": 700000
+      },
+      {
+       "sorszam": "6.a",
+       "esemeny": "Áru beszerzése költségként",
+       "T": "814",
+       "K": "4541",
+       "osszeg": 440000,
+       "szamitas": "200 × 2 200"
+      },
+      {
+       "sorszam": "6.b",
+       "esemeny": "Áfa",
+       "T": "466",
+       "K": "4541",
+       "osszeg": 118800
+      },
+      {
+       "sorszam": "7.a",
+       "esemeny": "Beruházási előleg",
+       "T": "352",
+       "K": "384",
+       "osszeg": 2000000
+      },
+      {
+       "sorszam": "7.b",
+       "esemeny": "Előleg áfája",
+       "T": "466",
+       "K": "384",
+       "osszeg": 540000
+      },
+      {
+       "sorszam": "8",
+       "esemeny": "Hátralévő törzstőke",
+       "T": "384",
+       "K": "32-33",
+       "osszeg": 1000000,
+       "szamitas": "5 000 000 − 4 000 000"
+      },
+      {
+       "sorszam": "9.a",
+       "esemeny": "Ingatlanberuházás nettó",
+       "T": "161",
+       "K": "4551",
+       "osszeg": 25400000
+      },
+      {
+       "sorszam": "9.b",
+       "esemeny": "Áfa",
+       "T": "466",
+       "K": "4551",
+       "osszeg": 6858000
+      },
+      {
+       "sorszam": "9.c",
+       "esemeny": "Előleg beszámítása",
+       "T": "4551",
+       "K": "352",
+       "osszeg": 2000000
+      },
+      {
+       "sorszam": "9.d",
+       "esemeny": "Előleg áfája",
+       "T": "4551",
+       "K": "466",
+       "osszeg": 540000
+      },
+      {
+       "sorszam": "9.e",
+       "esemeny": "Beruházási hitel, közvetlen szállítói kiegyenlítés",
+       "T": "4551",
+       "K": "4441",
+       "osszeg": 29718000,
+       "szamitas": "32 258 000 − 2 540 000"
+      },
+      {
+       "sorszam": "10.a",
+       "esemeny": "Áru eladása",
+       "T": "311",
+       "K": "91-92",
+       "osszeg": 300000,
+       "szamitas": "100 × 3 000"
+      },
+      {
+       "sorszam": "10.b",
+       "esemeny": "Áfa",
+       "T": "311",
+       "K": "467",
+       "osszeg": 81000
+      },
+      {
+       "sorszam": "11.a",
+       "esemeny": "Műszaki berendezés eladása",
+       "T": "311",
+       "K": "368",
+       "osszeg": 2100000
+      },
+      {
+       "sorszam": "11.b",
+       "esemeny": "Áfa",
+       "T": "311",
+       "K": "467",
+       "osszeg": 567000
+      },
+      {
+       "sorszam": "11.c",
+       "esemeny": "Nettó érték kivezetése",
+       "T": "368",
+       "K": "131",
+       "osszeg": 1700000
+      },
+      {
+       "sorszam": "11.d",
+       "esemeny": "Halmozott ÉCS kivezetése",
+       "T": "139",
+       "K": "131",
+       "osszeg": 300000
+      },
+      {
+       "sorszam": "11.e",
+       "esemeny": "Nyereség",
+       "T": "368",
+       "K": "961",
+       "osszeg": 400000
+      },
+      {
+       "sorszam": "12",
+       "esemeny": "Termelőgép üzembe helyezése",
+       "T": "131",
+       "K": "161",
+       "osszeg": 3220000
+      },
+      {
+       "sorszam": "13.a",
+       "esemeny": "Importáfa átutalása",
+       "T": "4652",
+       "K": "384",
+       "osszeg": 830000
+      },
+      {
+       "sorszam": "13.b",
+       "esemeny": "Importáfa rendezése (a gépelt kulcsban K 368, kézírásban 3683)",
+       "T": "466",
+       "K": "3683",
+       "osszeg": 830000
+      },
+      {
+       "sorszam": "14.a",
+       "esemeny": "Hitelkamat okt.1–dec.31 aktiválásig (fizetve: K 384)",
+       "T": "161",
+       "K": "4823",
+       "osszeg": 891540,
+       "szamitas": "29 718 000 × 12% × 3/12"
+      },
+      {
+       "sorszam": "14.b",
+       "esemeny": "Ingatlan (épület) aktiválása",
+       "T": "1231",
+       "K": "161",
+       "osszeg": 26291540,
+       "szamitas": "25 400 000 + 891 540"
+      },
+      {
+       "sorszam": "15.a",
+       "esemeny": "Záró árukészlet",
+       "T": "261",
+       "K": "814",
+       "osszeg": 220000,
+       "szamitas": "100 × 2 200"
+      },
+      {
+       "sorszam": "15.b",
+       "esemeny": "Termelőgép ÉCS",
+       "T": "5711",
+       "K": "139",
+       "osszeg": 375667,
+       "szamitas": "3 220 000 / 5 × 7/12"
+      },
+      {
+       "sorszam": "15.c",
+       "esemeny": "Targonca ÉCS",
+       "T": "5711",
+       "K": "139",
+       "osszeg": 200000,
+       "szamitas": "3 000 000 / 5 × 4/12"
+      }
+     ],
+     "pont": "tételek 33 + mellékszámítások 15×0,5 = 7,5"
+    }
+   ]
+  }
+ },
+ "tanari_tippek_2026_10_29": [
+  {
+   "tipp": "Nagyon hasonló lesz a ZH, mint a minta-ZH.",
+   "kovetkezmeny": "A minta-ZH feladattípusai (teszt, mérlegséma-kiegészítés, alapelv, fogalom; késztermék kalkuláció + vegyes alapítási naplófeladat) a fő gyakorlóanyag."
+  },
+  {
+   "tipp": "Alapelvek: tartalmi és formai alapelvekre lehet számítani, plusz egy konkrét alapelv bemutatására.",
+   "ertelmezes": "Valószínű kérdés: az alapelvek csoportosítása tartalmi/formai elvekre (a diák jelölik: pl. teljesség, valódiság, összemérés, óvatosság = TARTALMI; világosság, következetesség, folytonosság = FORMAI), valamint egy alapelv 7 pontos kifejtése. Részletek: alapelvek_beszamolo.json."
+  },
+  {
+   "tipp": "Cégalapításból NEM lesz fogalom.",
+   "kovetkezmeny": "A fogalom-kérdés tárgyi eszközök, immateriális javak, vásárolt vagy saját termelésű készletek témából jön. A cégalapítás csak a gyakorlati feladatban szerepel."
+  },
+  {
+   "tipp": "Saját termelésű készleteknél az elszámolás csak az 5-ös számlaosztályba megy (költségnem-elszámolás), 6-os és 7-es számlaosztály nem lesz.",
+   "kovetkezmeny": "Összköltséges eredménykimutatás, 581/582 állományváltozás; nincs költséghely-/költségviselő-elszámolás."
+  },
+  {
+   "tipp": "Vásárolt készletekből gyakorlati feladatra nem nagyon kell számítani (max. 1–2 sor).",
+   "kovetkezmeny": "Pl. áru beszerzése 814 vagy 261, záró árukészlet 261/814 – mint a minta-ZH 6. és 15.a tételében."
+  },
+  {
+   "tipp": "Mérlegsorok: bármi lehet.",
+   "kovetkezmeny": "A teljes eszköz- és forrásoldali mérlegsémát (főcsoport, csoport, sor + oszlopnevek) tudni kell. Részletek: merlegsema.json."
+  }
+ ]
+}

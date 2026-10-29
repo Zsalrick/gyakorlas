@@ -1,0 +1,2063 @@
+{
+ "tema": "Könyvviteli ismeretek – ismétlő feladatsor",
+ "forrasok": [
+  "Könyvviteli ismeretek ismétlő feladatsor.pdf",
+  "feladatsor.pdf",
+  "Ismétlő feladatsor_1. feladat megoldása.pdf",
+  "Ismétlő feladatsor_2. feladat megoldása.pdf",
+  "Ismétlő feladatsor_3. feladat megoldása.pdf",
+  "tukor.txt (számlatükör)",
+  "szamlaszamok.json"
+ ],
+ "zh_relevancia": "Alapozó tudás a ZH gyakorlati részéhez (71 pont): a vegyes naplófeladat (Kft. alapítás + 15 esemény) és a késztermék-kalkuláció + összköltséges eredménykimutatás az üzemi eredményig pontosan ezekre az alapokra épül – számlák nyitása/zárása, T/K logika, áfa (4661/467), szállítók (4541/4551), 161 → aktiválás, helyesbítő számlák, eredménykimutatás-sorok besorolása. A kiemelt számlák 491-es nyitása VÁRHATÓ (a minta-ZH 1. feladata 231/491 és 251/491 tétellel kezdődik), teljes nyitómérleg és főkönyvi kivonat viszont nem, a forgalmi költséges kimutatás sem (a tanár szerint csak összköltséges, 5-ös számlaosztály); a 2. feladat összköltséges része és a besorolások viszont közvetlenül hasznosak.",
+ "fogalmak": [
+  {
+   "id": "F1",
+   "nev": "Gazdasági esemény",
+   "definicio": "A vagyon összetételét vagy forrásait megváltoztató, bizonylattal alátámasztott történés; megrendelés, engedmény kérése nem az.",
+   "kulcselemek": [
+    "bizonylat",
+    "vagyonváltozás"
+   ],
+   "pelda": "IF1/2, IF3/4: nincs könyvelés",
+   "zh_valoszinuseg": "magas",
+   "forras": "feladat"
+  },
+  {
+   "id": "F2",
+   "nev": "Nyitás utáni rendező tétel",
+   "definicio": "Az előző évi adózott eredmény átvezetése az eredménytartalékba a számlák megnyitása után.",
+   "kulcselemek": [
+    "419",
+    "413"
+   ],
+   "pelda": "T 413 / K 419 18.550.000",
+   "zh_valoszinuseg": "kozepes",
+   "forras": "feladat"
+  },
+  {
+   "id": "F3",
+   "nev": "Átvezetési számla (389)",
+   "definicio": "Két bizonylattal rögzített pénzmozgás (bank ↔ pénztár) eltérő időpontú könyvelését hidalja át; végül 0 egyenlegű.",
+   "kulcselemek": [
+    "381",
+    "384",
+    "389"
+   ],
+   "pelda": "IF3/5, 8",
+   "zh_valoszinuseg": "kozepes",
+   "forras": "feladat"
+  }
+ ],
+ "szabalyok": [
+  {
+   "id": "SZ1",
+   "cim": "Nettó számlát nem nyitunk",
+   "tartalom": "Tárgyi eszközöknél a bruttó értéket és az ÉCS-t külön számlán vezetjük; a mérlegbe a nettó érték kerül.",
+   "forras": "Ismétlő feladatsor_1. feladat megoldása.pdf"
+  },
+  {
+   "id": "SZ2",
+   "cim": "Teljesítés elve az értékesítésnél",
+   "tartalom": "Az árbevételt a teljesítéskor könyveljük, függetlenül attól, hogy a vevő fizetett-e.",
+   "forras": "Ismétlő feladatsor_1. feladat megoldása.pdf"
+  },
+  {
+   "id": "SZ3",
+   "cim": "Az áfa nem árbevétel és nem költség",
+   "tartalom": "Levonható áfa nem része a bekerülési értéknek, fizetendő áfa nem része az árbevételnek.",
+   "forras": "Ismétlő feladatsor_2. feladat megoldása.pdf"
+  },
+  {
+   "id": "SZ4",
+   "cim": "Csak elismert érték számolható el árbevételként",
+   "tartalom": "A vevő által el nem ismert érték nettóját le kell vonni az árbevételből.",
+   "forras": "Ismétlő feladatsor_2. feladat megoldása.pdf"
+  }
+ ],
+ "osszefuggesek": [
+  {
+   "id": "O1",
+   "cim": "Mérlegegyenlet",
+   "leiras": "Eszközök összesen = Források összesen (saját tőke + céltartalékok + kötelezettségek + PIE).",
+   "keplet": "A + B + C = D + E + F + G",
+   "kapcsolodo": [
+    "IF1"
+   ]
+  },
+  {
+   "id": "O2",
+   "cim": "Saját tőke a mérlegegyezőségből",
+   "leiras": "Hiányzó saját tőke / adózott eredmény meghatározása.",
+   "keplet": "D = mérlegfőösszeg − E − F − G; adózott eredmény = D − jegyzett tőke − tőketartalék − eredménytartalék − lekötött − értékelési tartalék",
+   "kapcsolodo": [
+    "IF1"
+   ]
+  },
+  {
+   "id": "O3",
+   "cim": "Bruttó – ÉCS – nettó",
+   "leiras": "Tárgyi eszköz mérlegbeli értéke a nettó érték; a könyvekben a bruttó érték és a halmozott ÉCS külön számlán.",
+   "keplet": "nettó = bruttó − halmozott ÉCS",
+   "kapcsolodo": [
+    "IF1"
+   ]
+  },
+  {
+   "id": "O4",
+   "cim": "Számlák megnyitása 491-gyel",
+   "leiras": "Eszközszámla T oldalon nyit, forrásszámla K oldalon; az eszközt csökkentő (ÉCS, értékvesztés) számla K oldalon, a negatív eredmény T oldalon nyit. A 491 TF = KF.",
+   "keplet": "eszköz: T x / K 491; forrás: T 491 / K x",
+   "kapcsolodo": [
+    "IF1"
+   ]
+  },
+  {
+   "id": "O5",
+   "cim": "Számlák zárása 492-vel",
+   "leiras": "Év végén az állományi számlák egyenlegét a zárómérleg számlára vezetjük: eszköz T 492 / K x, forrás T x / K 492. Az eredményszámlákat előbb a 493-ra zárjuk.",
+   "keplet": "eszköz: T 492 / K x; forrás: T x / K 492",
+   "kapcsolodo": []
+  },
+  {
+   "id": "O6",
+   "cim": "Eszköz- és forrásszámlák működése",
+   "leiras": "Eszközszámla: nyitó és növekedés T, csökkenés K, egyenleg T. Forrásszámla: nyitó és növekedés K, csökkenés T, egyenleg K. Költség/ráfordítás T, bevétel K.",
+   "keplet": "záró = nyitó + növekedés − csökkenés",
+   "kapcsolodo": [
+    "IF1",
+    "IF3"
+   ]
+  },
+  {
+   "id": "O7",
+   "cim": "Főkönyvi kivonat egyezőségei",
+   "leiras": "A kettős könyvvitel miatt a tartozik és követel forgalmak összege, valamint a T és K egyenlegek összege egyenlő.",
+   "keplet": "ΣTF = ΣKF; ΣTE = ΣKE",
+   "kapcsolodo": [
+    "IF1"
+   ]
+  },
+  {
+   "id": "O8",
+   "cim": "Áfa-elszámolás",
+   "leiras": "Vásárláskor előzetesen felszámított áfa (466/4661, T), értékesítéskor fizetendő áfa (467, K). Időszak végén mindkettőt a 468-ra vezetjük; 468 K egyenlege áfa-tartozás (F.III.), T egyenlege visszaigényelhető (B.II.).",
+   "keplet": "befizetendő áfa = 467 KE − 466 TE; T 467 / K 468, T 468 / K 466",
+   "kapcsolodo": [
+    "IF1",
+    "IF3"
+   ]
+  },
+  {
+   "id": "O9",
+   "cim": "Bruttóból nettó",
+   "leiras": "27%-os áfánál a bruttó összegből a nettó és az áfa.",
+   "keplet": "nettó = bruttó / 1,27; áfa = bruttó − nettó",
+   "kapcsolodo": [
+    "IF1",
+    "IF2"
+   ]
+  },
+  {
+   "id": "O10",
+   "cim": "Áru eladásának eredménye",
+   "leiras": "Árbevétel − ELÁBÉ = árrés; az ELÁBÉ (814) a kivezetett áru beszerzési értéke.",
+   "keplet": "eredmény = 91-92 − 814",
+   "kapcsolodo": [
+    "IF1"
+   ]
+  },
+  {
+   "id": "O11",
+   "cim": "Tárgyi eszköz bekerülési értéke",
+   "leiras": "Vételár + szállítás + szerelés, üzembe helyezésig 161-en gyűjtve.",
+   "keplet": "bekerülési érték = Σ161 T forgalom",
+   "kapcsolodo": [
+    "IF1"
+   ]
+  },
+  {
+   "id": "O12",
+   "cim": "Eredményszámlák és az eredménykimutatás",
+   "leiras": "Üzemi eredmény (összköltséges) = I ± II + III − IV − V − VI − VII; pénzügyi eredmény = VIII − IX; adózás előtti = A ± B; adózott = C − X.",
+   "keplet": "A = I ± II + III − IV − V − VI − VII",
+   "kapcsolodo": [
+    "IF2"
+   ]
+  },
+  {
+   "id": "O13",
+   "cim": "Összköltséges ↔ forgalmi kapcsolat",
+   "leiras": "Az értékesítés költsége a forgalmi eljárásban az időszak összes költségéből vonja le az aktivált saját teljesítményeket.",
+   "keplet": "közvetlen + közvetett = (IV + V + VI) − II",
+   "kapcsolodo": [
+    "IF2"
+   ]
+  },
+  {
+   "id": "O14",
+   "cim": "Saját termelésű készletek állományváltozása",
+   "leiras": "Késztermék és befejezetlen termelés változása; növekedés + előjellel az aktivált saját teljesítmények között.",
+   "keplet": "állományváltozás = Σ(záró − nyitó)",
+   "kapcsolodo": [
+    "IF2"
+   ]
+  },
+  {
+   "id": "O15",
+   "cim": "Társasági adó",
+   "leiras": "Adóalap = adózás előtti eredmény + növelő − csökkentő tételek.",
+   "keplet": "tao = adóalap × 9%",
+   "kapcsolodo": [
+    "IF2"
+   ]
+  },
+  {
+   "id": "O16",
+   "cim": "Nyitás utáni rendező tétel",
+   "leiras": "Az előző évi adózott eredményt (419) az eredménytartalékba (413) vezetjük.",
+   "keplet": "nyereség: T 419 / K 413; veszteség: T 413 / K 419",
+   "kapcsolodo": [
+    "IF1"
+   ]
+  }
+ ],
+ "konyvelesi_minta": [
+  {
+   "id": "KM1",
+   "esemeny": "Eszközszámla nyitása",
+   "T": "x (eszköz)",
+   "K": "491",
+   "osszeg": "nyitómérleg szerinti érték",
+   "megjegyzes": "ÉCS-számla fordítva: T 491 / K 129/139/149"
+  },
+  {
+   "id": "KM2",
+   "esemeny": "Forrásszámla nyitása",
+   "T": "491",
+   "K": "x (forrás)",
+   "osszeg": "nyitómérleg szerinti érték",
+   "megjegyzes": "negatív adózott eredmény: T 419 / K 491"
+  },
+  {
+   "id": "KM3",
+   "esemeny": "Eszközszámla zárása",
+   "T": "492",
+   "K": "x (eszköz)",
+   "osszeg": "záró T egyenleg",
+   "megjegyzes": null
+  },
+  {
+   "id": "KM4",
+   "esemeny": "Forrásszámla zárása",
+   "T": "x (forrás)",
+   "K": "492",
+   "osszeg": "záró K egyenleg",
+   "megjegyzes": null
+  },
+  {
+   "id": "KM5",
+   "esemeny": "Pozitív adózott eredmény átvezetése",
+   "T": "419",
+   "K": "413",
+   "osszeg": "előző évi adózott eredmény",
+   "megjegyzes": "nyitás utáni rendező tétel"
+  },
+  {
+   "id": "KM6",
+   "esemeny": "Negatív adózott eredmény átvezetése",
+   "T": "413",
+   "K": "419",
+   "osszeg": "veszteség összege",
+   "megjegyzes": "IF1: 18.550.000"
+  },
+  {
+   "id": "KM7",
+   "esemeny": "Anyagvásárlás",
+   "T": "211",
+   "K": "4541",
+   "osszeg": "nettó számlaérték",
+   "megjegyzes": null
+  },
+  {
+   "id": "KM8",
+   "esemeny": "Áruvásárlás (+ szállítási költség)",
+   "T": "261",
+   "K": "4541",
+   "osszeg": "nettó számlaérték",
+   "megjegyzes": "csak mennyiségi nyilvántartásnál T 814 (szamlaszamok.json)"
+  },
+  {
+   "id": "KM9",
+   "esemeny": "Előzetesen felszámított áfa",
+   "T": "4661",
+   "K": "4541 / 4551",
+   "osszeg": "nettó × 27%",
+   "megjegyzes": null
+  },
+  {
+   "id": "KM10",
+   "esemeny": "Visszáru / engedmény a szállítótól",
+   "T": "4541",
+   "K": "211 / 261",
+   "osszeg": "nettó érték",
+   "megjegyzes": "áfája: T 4541 / K 4661"
+  },
+  {
+   "id": "KM11",
+   "esemeny": "Tárgyi eszköz beszerzése (vételár, szállítás, szerelés)",
+   "T": "161",
+   "K": "4551",
+   "osszeg": "nettó",
+   "megjegyzes": "áfa: T 4661 / K 4551"
+  },
+  {
+   "id": "KM12",
+   "esemeny": "Tárgyi eszköz használatba vétele",
+   "T": "14x / 13x / 12x",
+   "K": "161",
+   "osszeg": "161 gyűjtött bekerülési érték",
+   "megjegyzes": "IF1: T 141 / K 161 7.200.000"
+  },
+  {
+   "id": "KM13",
+   "esemeny": "Áru értékesítése – árbevétel",
+   "T": "311",
+   "K": "91-92",
+   "osszeg": "nettó eladási ár",
+   "megjegyzes": null
+  },
+  {
+   "id": "KM14",
+   "esemeny": "Értékesítés fizetendő áfája",
+   "T": "311",
+   "K": "467",
+   "osszeg": "nettó × 27%",
+   "megjegyzes": null
+  },
+  {
+   "id": "KM15",
+   "esemeny": "ELÁBÉ elszámolása",
+   "T": "814",
+   "K": "261",
+   "osszeg": "eladott áru beszerzési értéke",
+   "megjegyzes": null
+  },
+  {
+   "id": "KM16",
+   "esemeny": "Vevői visszáru",
+   "T": "91-92 / 467",
+   "K": "311",
+   "osszeg": "nettó / áfa",
+   "megjegyzes": "visszavételezés: T 261 / K 814"
+  },
+  {
+   "id": "KM17",
+   "esemeny": "Vevő fizet",
+   "T": "384",
+   "K": "311",
+   "osszeg": "befolyt összeg",
+   "megjegyzes": null
+  },
+  {
+   "id": "KM18",
+   "esemeny": "Szállító kiegyenlítése",
+   "T": "4541 / 4551",
+   "K": "384",
+   "osszeg": "tartozás",
+   "megjegyzes": null
+  },
+  {
+   "id": "KM19",
+   "esemeny": "Bér átutalása",
+   "T": "471",
+   "K": "384",
+   "osszeg": "nettó bér",
+   "megjegyzes": null
+  },
+  {
+   "id": "KM20",
+   "esemeny": "Hiteltörlesztés",
+   "T": "452",
+   "K": "384",
+   "osszeg": "törlesztő részlet",
+   "megjegyzes": null
+  },
+  {
+   "id": "KM21",
+   "esemeny": "Költségvetési kötelezettség átutalása",
+   "T": "463",
+   "K": "384",
+   "osszeg": "tartozás",
+   "megjegyzes": null
+  },
+  {
+   "id": "KM22",
+   "esemeny": "Fizetett hitel-/kölcsönkamat",
+   "T": "8731",
+   "K": "384",
+   "osszeg": "kamat",
+   "megjegyzes": "pénzügyi műveletek ráfordítása"
+  },
+  {
+   "id": "KM23",
+   "esemeny": "Készpénzfelvétel bankból",
+   "T": "381",
+   "K": "389",
+   "osszeg": "összeg",
+   "megjegyzes": "majd bankterhelés: T 389 / K 384"
+  },
+  {
+   "id": "KM24",
+   "esemeny": "Fizetendő áfa átvezetése",
+   "T": "467",
+   "K": "468",
+   "osszeg": "467 egyenlege",
+   "megjegyzes": null
+  },
+  {
+   "id": "KM25",
+   "esemeny": "Előzetes áfa átvezetése",
+   "T": "468",
+   "K": "4661",
+   "osszeg": "466 egyenlege",
+   "megjegyzes": "468 KE = áfa-tartozás"
+  },
+  {
+   "id": "KM26",
+   "esemeny": "Áfa befizetése",
+   "T": "468",
+   "K": "384",
+   "osszeg": "468 K egyenlege",
+   "megjegyzes": null
+  }
+ ],
+ "feladatok": [
+  {
+   "id": "IF1",
+   "forras": "Könyvviteli ismeretek ismétlő feladatsor.pdf; Ismétlő feladatsor_1. feladat megoldása.pdf",
+   "cim": "FOROG Kft. – nyitómérleg, számlanyitás 491-gyel, januári események, főkönyvi kivonat, áfa-egyenleg",
+   "szoveg": "FOROG Kft. fogaskerekek forgalmazásával foglalkozik. a) Állítsa össze a 20X6. január 1-jei nyitómérleget! b) Nyissa meg a főkönyvi számlákat a nyitómérleg számla alkalmazásával! c) Könyvelje le a januári gazdasági eseményeket! d) Állítsa össze a január 31-i főkönyvi kivonatot! e) Határozza meg a januári áfa egyenlegét (hol szerepel az áfa a mérlegben?)! Áfa 27%.",
+   "adatok": {
+    "vagyonelemek_jan1_Ft": {
+     "Épületek bruttó értéke": 60000000,
+     "Épületek terv szerinti ÉCS": 16000000,
+     "Irodai berendezések nettó értéke": 8100000,
+     "Irodai berendezések bruttó értéke": 10500000,
+     "Műszaki berendezések nettó értéke": 10700000,
+     "Műszaki berendezések terv szerinti ÉCS": 2500000,
+     "Anyagok": 11000000,
+     "Raktáron levő fogaskerekek (áru)": 21900000,
+     "Vevők": 3200000,
+     "Elszámolási betétszámla": 51900000,
+     "Pénztár": 250000,
+     "Eredménytartalék": 5000000,
+     "Jegyzett tőke": 120000000,
+     "Adózott eredmény": "? (számítandó)",
+     "Rövid lejáratú hitel": 6500000,
+     "Szállítók": 5700000,
+     "Beruházási szállítók": 14000000,
+     "Költségvetési befizetési kötelezettségek": 1200000,
+     "Jövedelemtartozás": 17200000
+    },
+    "januari_esemenyek": [
+     "1. jan. 1. Nyitás utáni rendező tétel.",
+     "2. jan. 3. Megrendelte az új raktári polcrendszert 6.600.000 Ft + áfa értékben.",
+     "3. jan. 3. 1.200 kg anyagot vásárolt 10.160.000 Ft + áfa értékben.",
+     "4. jan. 4. Átutalta a dolgozókkal szembeni jövedelemtartozást, a bankértesítés megérkezett.",
+     "5. jan. 5. A polcrendszer megérkezett, a szállító a számlát mellékelte.",
+     "6. jan. 7. A nyitó árukészlet 60%-át értékesítette 19.500.000 Ft + áfa-ért.",
+     "7. jan. 10. A jan. 3-i anyagból 100 kg hibás volt, visszaküldte; a helyesbítő számla megérkezett.",
+     "8. jan. 12. Az értékesített áru 10%-a minőségi hiba miatt visszaérkezett, jogos kifogás, visszavételezték, helyesbítő számla elkészült.",
+     "9. jan. 12. Rövid lejáratú hitel törlesztő részletét (500.000 Ft) leemelte a bank.",
+     "10. jan. 12. A polcrendszer szállítási költségéről a számla megérkezett, áfával növelt értéke 317.500 Ft.",
+     "11. jan. 13. A januári fogaskerék-értékesítésből származó vevőkövetelés beérkezett a bankszámlára.",
+     "12. jan. 14. A polcrendszert külső vállalkozó szerelte össze, számla 350.000 Ft + áfa.",
+     "13. jan. 18. Átutalta a költségvetési befizetési kötelezettségeket a NAV-nak.",
+     "14. jan. 19. Kiegyenlítette a január 1-jén meglévő szállítói tartozást.",
+     "15. jan. 20. Használatba vette a polcrendszert.",
+     "16. jan. 24. Rendezte a beruházási szállítókkal szembeni tartozást."
+    ],
+    "afa_kulcs": 0.27
+   },
+   "megoldas": {
+    "szamitasok": [
+     {
+      "mit": "Irodai berendezések ÉCS-e",
+      "keplet": "10.500.000 − 8.100.000",
+      "eredmeny": 2400000
+     },
+     {
+      "mit": "Műszaki berendezések bruttó értéke",
+      "keplet": "10.700.000 + 2.500.000",
+      "eredmeny": 13200000
+     },
+     {
+      "mit": "Épületek nettó értéke (mérlegbe)",
+      "keplet": "60.000.000 − 16.000.000",
+      "eredmeny": 44000000
+     },
+     {
+      "mit": "A.II. Tárgyi eszközök",
+      "keplet": "44.000 + 8.100 + 10.700 eFt",
+      "eredmeny": 62800000
+     },
+     {
+      "mit": "B.I. Készletek",
+      "keplet": "11.000 + 21.900 eFt",
+      "eredmeny": 32900000
+     },
+     {
+      "mit": "B.IV. Pénzeszközök",
+      "keplet": "51.900 + 250 eFt",
+      "eredmeny": 52150000
+     },
+     {
+      "mit": "Mérlegfőösszeg (eszközök)",
+      "keplet": "62.800 + 32.900 + 3.200 + 52.150 eFt",
+      "eredmeny": 151050000
+     },
+     {
+      "mit": "F.III. Rövid lejáratú kötelezettségek",
+      "keplet": "6.500 + 5.700 + 14.000 + 1.200 + 17.200 eFt",
+      "eredmeny": 44600000
+     },
+     {
+      "mit": "Saját tőke (mérlegegyezőség)",
+      "keplet": "151.050 − 0 céltartalék − 44.600 − 0 PIE",
+      "eredmeny": 106450000
+     },
+     {
+      "mit": "Adózott eredmény",
+      "keplet": "106.450 − 120.000 jegyzett tőke − 5.000 eredménytartalék",
+      "eredmeny": -18550000
+     },
+     {
+      "mit": "491 forgalma (TF = KF)",
+      "keplet": "nyitó tételek összege mindkét oldalon",
+      "eredmeny": 190500000
+     },
+     {
+      "mit": "Áruk eladási eredménye (árrés)",
+      "keplet": "19.500.000 − 13.140.000",
+      "eredmeny": 6360000
+     },
+     {
+      "mit": "Visszaküldött anyag értéke",
+      "keplet": "10.160.000 / 1.200 × 100",
+      "eredmeny": 846667
+     },
+     {
+      "mit": "Polcrendszer bekerülési értéke",
+      "keplet": "6.600.000 + 250.000 + 350.000",
+      "eredmeny": 7200000
+     },
+     {
+      "mit": "Anyagok záró egyenlege",
+      "keplet": "11.000.000 + 10.160.000 − 846.667",
+      "eredmeny": 20313333
+     },
+     {
+      "mit": "Áruk záró egyenlege",
+      "keplet": "21.900.000 − 13.140.000 + 1.314.000",
+      "eredmeny": 10074000
+     },
+     {
+      "mit": "Elszámolási betétszámla záró egyenlege",
+      "keplet": "TF 74.188.500 − KF 47.744.000",
+      "eredmeny": 26444500
+     },
+     {
+      "mit": "Szállítók (4541) záró egyenlege",
+      "keplet": "18.603.200 − 6.775.267",
+      "eredmeny": 11827933
+     },
+     {
+      "mit": "Áfa-egyenleg január",
+      "keplet": "467 KE 4.738.500 − 466 TE 4.458.600",
+      "eredmeny": 279900
+     }
+    ],
+    "tetelek": [
+     {
+      "sorszam": "NY/123",
+      "esemeny": "Nyitás: Épületek, épületrészek, tulajdoni hányadok",
+      "T": "123",
+      "K": "491",
+      "osszeg": 60000000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "NY/129",
+      "esemeny": "Nyitás: Ingatlanok terv szerinti értékcsökkenése",
+      "T": "491",
+      "K": "129",
+      "osszeg": 16000000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "NY/131",
+      "esemeny": "Nyitás: Termelő gépek, berendezések, szerszámok, gyártóeszközök",
+      "T": "131",
+      "K": "491",
+      "osszeg": 13200000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "NY/139",
+      "esemeny": "Nyitás: Műszaki berendezések, gépek, járművek terv szerinti ÉCS",
+      "T": "491",
+      "K": "139",
+      "osszeg": 2500000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "NY/143",
+      "esemeny": "Nyitás: Irodai, igazgatási berendezések és felszerelések",
+      "T": "143",
+      "K": "491",
+      "osszeg": 10500000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "NY/149",
+      "esemeny": "Nyitás: Egyéb berendezések, felszerelések, járművek terv szerinti ÉCS",
+      "T": "491",
+      "K": "149",
+      "osszeg": 2400000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "NY/211",
+      "esemeny": "Nyitás: Nyers- és alapanyagok",
+      "T": "211",
+      "K": "491",
+      "osszeg": 11000000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "NY/261",
+      "esemeny": "Nyitás: Áruk beszerzési áron (fogaskerekek)",
+      "T": "261",
+      "K": "491",
+      "osszeg": 21900000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "NY/311",
+      "esemeny": "Nyitás: Belföldi követelések (vevők)",
+      "T": "311",
+      "K": "491",
+      "osszeg": 3200000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "NY/384",
+      "esemeny": "Nyitás: Elszámolási betétszámla",
+      "T": "384",
+      "K": "491",
+      "osszeg": 51900000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "NY/381",
+      "esemeny": "Nyitás: Pénztár",
+      "T": "381",
+      "K": "491",
+      "osszeg": 250000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "NY/411",
+      "esemeny": "Nyitás: Jegyzett tőke",
+      "T": "491",
+      "K": "411",
+      "osszeg": 120000000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "NY/413",
+      "esemeny": "Nyitás: Eredménytartalék",
+      "T": "491",
+      "K": "413",
+      "osszeg": 5000000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "NY/419",
+      "esemeny": "Nyitás: Adózott eredmény (negatív!)",
+      "T": "419",
+      "K": "491",
+      "osszeg": 18550000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "NY/452",
+      "esemeny": "Nyitás: Rövid lejáratú hitelek",
+      "T": "491",
+      "K": "452",
+      "osszeg": 6500000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "NY/4541",
+      "esemeny": "Nyitás: Belföldi anyag- és áruszállítók",
+      "T": "491",
+      "K": "4541",
+      "osszeg": 5700000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "NY/4551",
+      "esemeny": "Nyitás: Belföldi beruházási szállítók",
+      "T": "491",
+      "K": "4551",
+      "osszeg": 14000000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "NY/463",
+      "esemeny": "Nyitás: Költségvetési befizetési kötelezettségek",
+      "T": "491",
+      "K": "463",
+      "osszeg": 1200000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "NY/471",
+      "esemeny": "Nyitás: Jövedelemelszámolási számla",
+      "T": "491",
+      "K": "471",
+      "osszeg": 17200000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "1",
+      "esemeny": "Nyitás utáni rendező tétel: negatív adózott eredmény átvezetése az eredménytartalékba",
+      "T": "413",
+      "K": "419",
+      "osszeg": 18550000,
+      "szamitas": "Előző évi adózott eredmény −18.550.000 → csökkenti az eredménytartalékot (T 413 / K 419)"
+     },
+     {
+      "sorszam": "2",
+      "esemeny": "Polcrendszer megrendelése 6.600.000 + áfa – NEM gazdasági esemény (nincs számla), nincs könyvelés",
+      "T": null,
+      "K": null,
+      "osszeg": 0,
+      "szamitas": "Megrendelés ≠ teljesítés"
+     },
+     {
+      "sorszam": "3a",
+      "esemeny": "Anyagvásárlás 1.200 kg",
+      "T": "211",
+      "K": "4541",
+      "osszeg": 10160000,
+      "szamitas": "számla szerinti nettó érték"
+     },
+     {
+      "sorszam": "3b",
+      "esemeny": "Anyagvásárlás előzetesen felszámított áfája",
+      "T": "4661",
+      "K": "4541",
+      "osszeg": 2743200,
+      "szamitas": "10.160.000 × 0,27 = 2.743.200"
+     },
+     {
+      "sorszam": "4",
+      "esemeny": "Jövedelemtartozás átutalása a dolgozóknak",
+      "T": "471",
+      "K": "384",
+      "osszeg": 17200000,
+      "szamitas": "471 nyitó egyenlege"
+     },
+     {
+      "sorszam": "5a",
+      "esemeny": "Polcrendszer megérkezett, számlával – befejezetlen beruházás",
+      "T": "161",
+      "K": "4551",
+      "osszeg": 6600000,
+      "szamitas": "beszerzés mindig 161-en át"
+     },
+     {
+      "sorszam": "5b",
+      "esemeny": "Polcrendszer előzetesen felszámított áfája",
+      "T": "4661",
+      "K": "4551",
+      "osszeg": 1782000,
+      "szamitas": "6.600.000 × 0,27 = 1.782.000"
+     },
+     {
+      "sorszam": "6a",
+      "esemeny": "Nyitó árukészlet 60%-ának értékesítése – árbevétel",
+      "T": "311",
+      "K": "91-92",
+      "osszeg": 19500000,
+      "szamitas": "nettó eladási ár"
+     },
+     {
+      "sorszam": "6b",
+      "esemeny": "Értékesítés fizetendő áfája",
+      "T": "311",
+      "K": "467",
+      "osszeg": 5265000,
+      "szamitas": "19.500.000 × 0,27 = 5.265.000"
+     },
+     {
+      "sorszam": "6c",
+      "esemeny": "Eladott áruk beszerzési értéke (ELÁBÉ)",
+      "T": "814",
+      "K": "261",
+      "osszeg": 13140000,
+      "szamitas": "21.900.000 × 0,6 = 13.140.000"
+     },
+     {
+      "sorszam": "7a",
+      "esemeny": "100 kg hibás anyag visszaküldése (helyesbítő számla)",
+      "T": "4541",
+      "K": "211",
+      "osszeg": 846667,
+      "szamitas": "10.160.000 / 1.200 kg = 8.466,67 Ft/kg × 100 kg = 846.667"
+     },
+     {
+      "sorszam": "7b",
+      "esemeny": "Visszaküldött anyag áfája",
+      "T": "4541",
+      "K": "4661",
+      "osszeg": 228600,
+      "szamitas": "846.667 × 0,27 = 228.600"
+     },
+     {
+      "sorszam": "8a",
+      "esemeny": "Eladott áru 10%-a visszaérkezett – árbevétel helyesbítése",
+      "T": "91-92",
+      "K": "311",
+      "osszeg": 1950000,
+      "szamitas": "19.500.000 × 0,1 = 1.950.000"
+     },
+     {
+      "sorszam": "8b",
+      "esemeny": "Visszáru fizetendő áfájának helyesbítése",
+      "T": "467",
+      "K": "311",
+      "osszeg": 526500,
+      "szamitas": "1.950.000 × 0,27 = 526.500"
+     },
+     {
+      "sorszam": "8c",
+      "esemeny": "Visszavételezett áru – ELÁBÉ csökkentése",
+      "T": "261",
+      "K": "814",
+      "osszeg": 1314000,
+      "szamitas": "13.140.000 × 0,1 = 1.314.000"
+     },
+     {
+      "sorszam": "9",
+      "esemeny": "Rövid lejáratú hitel törlesztése (terhelési értesítés)",
+      "T": "452",
+      "K": "384",
+      "osszeg": 500000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "10a",
+      "esemeny": "Polcrendszer szállítási költsége (bekerülési érték része)",
+      "T": "161",
+      "K": "4551",
+      "osszeg": 250000,
+      "szamitas": "317.500 / 1,27 = 250.000"
+     },
+     {
+      "sorszam": "10b",
+      "esemeny": "Szállítási költség áfája",
+      "T": "4661",
+      "K": "4551",
+      "osszeg": 67500,
+      "szamitas": "317.500 − 250.000 = 67.500"
+     },
+     {
+      "sorszam": "11",
+      "esemeny": "Januári vevőkövetelés beérkezése",
+      "T": "384",
+      "K": "311",
+      "osszeg": 22288500,
+      "szamitas": "19.500.000 + 5.265.000 − 1.950.000 − 526.500 = 22.288.500"
+     },
+     {
+      "sorszam": "12a",
+      "esemeny": "Polcrendszer szerelése külső vállalkozóval (bekerülési érték része)",
+      "T": "161",
+      "K": "4551",
+      "osszeg": 350000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "12b",
+      "esemeny": "Szerelés áfája",
+      "T": "4661",
+      "K": "4551",
+      "osszeg": 94500,
+      "szamitas": "350.000 × 0,27 = 94.500"
+     },
+     {
+      "sorszam": "13",
+      "esemeny": "Költségvetési befizetési kötelezettség átutalása a NAV-nak",
+      "T": "463",
+      "K": "384",
+      "osszeg": 1200000,
+      "szamitas": "463 nyitó egyenlege"
+     },
+     {
+      "sorszam": "14",
+      "esemeny": "Január 1-jei szállítói tartozás kiegyenlítése",
+      "T": "4541",
+      "K": "384",
+      "osszeg": 5700000,
+      "szamitas": "4541 nyitó egyenlege"
+     },
+     {
+      "sorszam": "15",
+      "esemeny": "Polcrendszer használatba vétele – aktiválás",
+      "T": "141",
+      "K": "161",
+      "osszeg": 7200000,
+      "szamitas": "6.600.000 + 250.000 + 350.000 = 7.200.000"
+     },
+     {
+      "sorszam": "16",
+      "esemeny": "Beruházási szállítók kiegyenlítése",
+      "T": "4551",
+      "K": "384",
+      "osszeg": 23144000,
+      "szamitas": "14.000.000 + 6.600.000 + 1.782.000 + 250.000 + 67.500 + 350.000 + 94.500 = 23.144.000"
+     }
+    ],
+    "egyeb": {
+     "nyitomerleg_eFt": {
+      "eszkozok": {
+       "A. Befektetett eszközök": 62800,
+       "A.I. Immateriális javak": 0,
+       "A.II. Tárgyi eszközök": 62800,
+       "A.III. Befektetett pénzügyi eszközök": 0,
+       "B. Forgóeszközök": 88250,
+       "B.I. Készletek": 32900,
+       "B.II. Követelések": 3200,
+       "B.III. Értékpapírok": 0,
+       "B.IV. Pénzeszközök": 52150,
+       "C. Aktív időbeli elhatárolások": 0,
+       "ESZKÖZÖK ÖSSZESEN": 151050
+      },
+      "forrasok": {
+       "D. Saját tőke": 106450,
+       "D.I. Jegyzett tőke": 120000,
+       "D.IV. Eredménytartalék": 5000,
+       "D.VII. Adózott eredmény": -18550,
+       "E. Céltartalékok": 0,
+       "F. Kötelezettségek": 44600,
+       "F.III. Rövid lejáratú kötelezettségek": 44600,
+       "G. Passzív időbeli elhatárolások": 0,
+       "FORRÁSOK ÖSSZESEN": 151050
+      }
+     },
+     "mersorba_sorolas": {
+      "Épületek, irodai és műszaki berendezések (nettó)": "A.II.",
+      "Anyagok, áruk": "B.I.",
+      "Vevők": "B.II.",
+      "Bank, pénztár": "B.IV.",
+      "Jegyzett tőke": "D.I.",
+      "Eredménytartalék": "D.IV.",
+      "Adózott eredmény": "D.VII.",
+      "Hitel, szállítók, beruházási szállítók, költségvetés, jövedelemtartozás": "F.III.",
+      "Bruttó érték és ÉCS külön": "NEM kerül a mérlegbe, csak a nettó érték"
+     },
+     "fokonyvi_kivonat_jan31_Ft": [
+      {
+       "szamla": "123",
+       "TF": 60000000,
+       "KF": 0,
+       "TE": 60000000,
+       "KE": 0
+      },
+      {
+       "szamla": "129",
+       "TF": 0,
+       "KF": 16000000,
+       "TE": 0,
+       "KE": 16000000
+      },
+      {
+       "szamla": "131",
+       "TF": 13200000,
+       "KF": 0,
+       "TE": 13200000,
+       "KE": 0
+      },
+      {
+       "szamla": "139",
+       "TF": 0,
+       "KF": 2500000,
+       "TE": 0,
+       "KE": 2500000
+      },
+      {
+       "szamla": "141",
+       "TF": 7200000,
+       "KF": 0,
+       "TE": 7200000,
+       "KE": 0
+      },
+      {
+       "szamla": "143",
+       "TF": 10500000,
+       "KF": 0,
+       "TE": 10500000,
+       "KE": 0
+      },
+      {
+       "szamla": "149",
+       "TF": 0,
+       "KF": 2400000,
+       "TE": 0,
+       "KE": 2400000
+      },
+      {
+       "szamla": "161",
+       "TF": 7200000,
+       "KF": 7200000,
+       "TE": 0,
+       "KE": 0
+      },
+      {
+       "szamla": "211",
+       "TF": 21160000,
+       "KF": 846667,
+       "TE": 20313333,
+       "KE": 0
+      },
+      {
+       "szamla": "261",
+       "TF": 23214000,
+       "KF": 13140000,
+       "TE": 10074000,
+       "KE": 0
+      },
+      {
+       "szamla": "311",
+       "TF": 27965000,
+       "KF": 24765000,
+       "TE": 3200000,
+       "KE": 0
+      },
+      {
+       "szamla": "381",
+       "TF": 250000,
+       "KF": 0,
+       "TE": 250000,
+       "KE": 0
+      },
+      {
+       "szamla": "384",
+       "TF": 74188500,
+       "KF": 47744000,
+       "TE": 26444500,
+       "KE": 0
+      },
+      {
+       "szamla": "411",
+       "TF": 0,
+       "KF": 120000000,
+       "TE": 0,
+       "KE": 120000000
+      },
+      {
+       "szamla": "413",
+       "TF": 18550000,
+       "KF": 5000000,
+       "TE": 13550000,
+       "KE": 0
+      },
+      {
+       "szamla": "419",
+       "TF": 18550000,
+       "KF": 18550000,
+       "TE": 0,
+       "KE": 0
+      },
+      {
+       "szamla": "452",
+       "TF": 500000,
+       "KF": 6500000,
+       "TE": 0,
+       "KE": 6000000
+      },
+      {
+       "szamla": "4541",
+       "TF": 6775267,
+       "KF": 18603200,
+       "TE": 0,
+       "KE": 11827933
+      },
+      {
+       "szamla": "4551",
+       "TF": 23144000,
+       "KF": 23144000,
+       "TE": 0,
+       "KE": 0
+      },
+      {
+       "szamla": "463",
+       "TF": 1200000,
+       "KF": 1200000,
+       "TE": 0,
+       "KE": 0
+      },
+      {
+       "szamla": "4661",
+       "TF": 4687200,
+       "KF": 228600,
+       "TE": 4458600,
+       "KE": 0
+      },
+      {
+       "szamla": "467",
+       "TF": 526500,
+       "KF": 5265000,
+       "TE": 0,
+       "KE": 4738500
+      },
+      {
+       "szamla": "471",
+       "TF": 17200000,
+       "KF": 17200000,
+       "TE": 0,
+       "KE": 0
+      },
+      {
+       "szamla": "814",
+       "TF": 13140000,
+       "KF": 1314000,
+       "TE": 11826000,
+       "KE": 0
+      },
+      {
+       "szamla": "91-92",
+       "TF": 1950000,
+       "KF": 19500000,
+       "TE": 0,
+       "KE": 17550000
+      },
+      {
+       "szamla": "491",
+       "TF": 190500000,
+       "KF": 190500000,
+       "TE": 0,
+       "KE": 0
+      }
+     ],
+     "fokonyvi_kivonat_osszesen": {
+      "TF": 541600467,
+      "KF": 541600467,
+      "TE": 181016433,
+      "KE": 181016433
+     },
+     "afa_egyenleg": {
+      "467 Fizetendő áfa KE": 4738500,
+      "466 Előzetesen felszámított áfa TE": 4458600,
+      "468 pénzügyi elszámolás": 0,
+      "befizetendő áfa": 279900,
+      "mérlegben": "F.III. Rövid lejáratú kötelezettségek (áfa-tartozás)",
+      "rendezo_tetelek_kiegeszites": [
+       {
+        "T": "467",
+        "K": "468",
+        "osszeg": 4738500,
+        "megj": "fizetendő áfa átvezetése (nem a forrásban, standard lépés)"
+       },
+       {
+        "T": "468",
+        "K": "4661",
+        "osszeg": 4458600,
+        "megj": "levonható áfa átvezetése; 468 KE 279.900 = áfa-tartozás"
+       }
+      ]
+     }
+    }
+   },
+   "tanulsagok": [
+    "Ha csak nettó érték és ÉCS (vagy nettó és bruttó) adott, a hiányzót számolni kell: bruttó = nettó + ÉCS. Nettó számlát nem nyitunk.",
+    "Ismeretlen adózott eredmény: saját tőke = eszközök − céltartalék − kötelezettségek − PIE, majd adózott eredmény = saját tőke − többi tőkeelem.",
+    "491-gyel nyitás: eszközszámla T x / K 491, forrásszámla T 491 / K x; az ÉCS-számlák (129, 139, 149) és a negatív adózott eredmény a fordított oldalra kerül.",
+    "Nyitás utáni rendező tétel: pozitív eredmény T 419 / K 413, negatív T 413 / K 419.",
+    "Megrendelés nem gazdasági esemény – csak a számla/teljesítés könyvelendő.",
+    "Tárgyi eszköz beszerzése mindig 161 Befejezetlen beruházásokon keresztül, beruházási szállítóval szemben (455/4551); a szállítás és szerelés is bekerülési érték; használatba vételkor T 14x / K 161.",
+    "Áru eladása: árbevétel T 311 / K 91-92, áfa T 311 / K 467, ELÁBÉ T 814 / K 261. Visszáru: ugyanezek fordítva.",
+    "Bruttó összegből a nettó: bruttó / 1,27."
+   ],
+   "elteresek_a_forrasban": [
+    "Számlaszámok: a forrás 3 jegyű számlákat használ (26, 454, 455, 466); a szamlaszamok.json / számlatükör szerint pontosabb: 261 Áruk beszerzési áron, 4541 Belföldi anyag- és áruszállítók, 4551 Belföldi beruházási szállítók, 4661 Beszerzések előzetesen felszámított áfája. A JSON ezeket használja.",
+    "A forrás az áruk nyitását '26. Kereskedelmi áruk' számlán vezeti; a 26 számlacsoport, a könyvelhető számla a 261.",
+    "Feladatlap (feladatsor.pdf változat): a nyitómérleg számla '419. Nyitómérleg számla' néven szerepel – helyesen 491 (a másik feladatlap-változat és a megoldás 491-et ír).",
+    "7. tétel szövegében elírás: '8.467,67 Ft/kg × 100 kg' – helyesen 8.466,67 Ft/kg; az eredmény (846.667) helyes.",
+    "466 számlaváz a 10. és 12. diákon: '3a/454. 2.743.000' – helyesen 2.743.200 (3b tétel); az 5b diáján a 466 számlán '3a/455' hivatkozás áll 3b/454 helyett.",
+    "Hivatkozási elírások: a 455 számlán '9a/161', '9b/466' és '2b/466' áll 10a/10b/12b helyett; a 467 számlavázon '8b/467' áll 8b/311 helyett.",
+    "13. tétel egyik diáján 464 'Költségvetési befizetési kötelezettségek teljesítése' számla jelenik meg, a végső megoldás 463-at könyvel (T 463 / K 384) – a 463 a helyes ebben a feladatban.",
+    "A forrás a 467/466 rendező tételeit (468-on keresztül) nem könyveli, csak kiszámolja az egyenleget (279.900); a kiegészítő rendező tételek a JSON-ban jelölve.",
+    "Ellenőrizve: a főkönyvi kivonat összesen TF = KF = 541.600.467, TE = KE = 181.016.433 – egyezik a forrással."
+   ]
+  },
+  {
+   "id": "IF2",
+   "forras": "Könyvviteli ismeretek ismétlő feladatsor.pdf; Ismétlő feladatsor_2. feladat megoldása.pdf",
+   "cim": "Eredménykimutatás összköltség és forgalmi költség eljárással",
+   "szoveg": "Az értékesített késztermékek belföldre számlázott értéke 27% áfa nélkül 300 millió Ft, ebből a vevő által el nem ismert érték bruttó 25,4 millió Ft. Állítsa össze az összköltség és a forgalmi költség eljárású eredménykimutatást (eFt)! A közvetett költségek aránya 30%.",
+   "adatok": {
+    "millió_Ft": {
+     "Belföldi árbevétel (nettó)": 300,
+     "Vevő által el nem ismert (bruttó)": 25.4,
+     "Anyagköltség": 56,
+     "Fizetett bírság": 1.2,
+     "Saját vállalkozásban végzett raktárépítés aktivált értéke": 50,
+     "Elszámolt értékvesztés": 2,
+     "Eladott értékpapírok árfolyamvesztesége": 18,
+     "Adott kölcsön után kapott kamat": 22,
+     "Társasági adó": "9%",
+     "Export árbevétel": 350,
+     "Értékcsökkenési leírás": 3,
+     "Bérköltség": 35,
+     "Dolgozóknak fizetett baleseti kártérítés": 2,
+     "Kapott késedelmi kamat": 5,
+     "Bérjárulékok": 11,
+     "Igénybe vett szolgáltatások": 15,
+     "Kapott kötbér": 3.4
+    },
+    "keszletvaltozas_millio_Ft": {
+     "Késztermék": {
+      "nyito": 40,
+      "zaro": 55
+     },
+     "Befejezetlen termelés": {
+      "nyito": 17,
+      "zaro": 10
+     }
+    },
+    "adoalap_modositok_millio_Ft": {
+     "novelo": 25.6,
+     "csokkento": 22.3
+    },
+    "kozvetett_arany": 0.3
+   },
+   "megoldas": {
+    "szamitasok": [
+     {
+      "mit": "El nem ismert érték nettója",
+      "keplet": "25.400.000 / 1,27",
+      "eredmeny": 20000000
+     },
+     {
+      "mit": "Belföldi elismert árbevétel",
+      "keplet": "300.000 − 20.000 eFt",
+      "eredmeny": 280000
+     },
+     {
+      "mit": "I. Értékesítés nettó árbevétele",
+      "keplet": "350.000 export + 280.000 belföld",
+      "eredmeny": 630000
+     },
+     {
+      "mit": "Saját termelésű készletek állományváltozása",
+      "keplet": "(55 − 40) + (10 − 17) = +15 − 7",
+      "eredmeny": 8000
+     },
+     {
+      "mit": "II. Aktivált saját teljesítmények",
+      "keplet": "50.000 + 8.000",
+      "eredmeny": 58000
+     },
+     {
+      "mit": "III. Egyéb bevételek",
+      "keplet": "5.000 késedelmi kamat + 3.400 kötbér",
+      "eredmeny": 8400
+     },
+     {
+      "mit": "IV. Anyagjellegű ráfordítások",
+      "keplet": "56.000 + 15.000",
+      "eredmeny": 71000
+     },
+     {
+      "mit": "V. Személyi jellegű ráfordítások",
+      "keplet": "35.000 + 11.000",
+      "eredmeny": 46000
+     },
+     {
+      "mit": "VI. Értékcsökkenési leírás",
+      "keplet": "3.000",
+      "eredmeny": 3000
+     },
+     {
+      "mit": "VII. Egyéb ráfordítások",
+      "keplet": "1.200 bírság + 2.000 értékvesztés + 2.000 baleseti kártérítés",
+      "eredmeny": 5200
+     },
+     {
+      "mit": "A. Üzemi eredmény",
+      "keplet": "630.000 + 58.000 + 8.400 − 71.000 − 46.000 − 3.000 − 5.200",
+      "eredmeny": 571200
+     },
+     {
+      "mit": "B. Pénzügyi eredmény",
+      "keplet": "22.000 − 18.000",
+      "eredmeny": 4000
+     },
+     {
+      "mit": "C. Adózás előtti eredmény",
+      "keplet": "571.200 + 4.000",
+      "eredmeny": 575200
+     },
+     {
+      "mit": "Adóalap",
+      "keplet": "575.200 + 25.600 − 22.300",
+      "eredmeny": 578500
+     },
+     {
+      "mit": "X. Adófizetési kötelezettség",
+      "keplet": "578.500 × 0,09",
+      "eredmeny": 52065
+     },
+     {
+      "mit": "D. Adózott eredmény",
+      "keplet": "575.200 − 52.065",
+      "eredmeny": 523135
+     },
+     {
+      "mit": "Időszak összes költsége (IV+V+VI)",
+      "keplet": "71.000 + 46.000 + 3.000",
+      "eredmeny": 120000
+     },
+     {
+      "mit": "Értékesítés összes költsége",
+      "keplet": "120.000 − 58.000 aktivált saját teljesítmény",
+      "eredmeny": 62000
+     },
+     {
+      "mit": "Közvetett költségek (30%)",
+      "keplet": "62.000 × 0,3",
+      "eredmeny": 18600
+     },
+     {
+      "mit": "Közvetlen költségek (70%)",
+      "keplet": "62.000 − 18.600",
+      "eredmeny": 43400
+     },
+     {
+      "mit": "Bruttó eredmény (forgalmi)",
+      "keplet": "630.000 − 43.400",
+      "eredmeny": 586600
+     },
+     {
+      "mit": "A. Üzemi eredmény (forgalmi, ellenőrzés)",
+      "keplet": "586.600 − 18.600 + 8.400 − 5.200",
+      "eredmeny": 571200
+     }
+    ],
+    "tetelek": [],
+    "egyeb": {
+     "besorolas": {
+      "Anyagköltség": "IV.",
+      "Igénybe vett szolgáltatások": "IV.",
+      "Bérköltség": "V.",
+      "Bérjárulékok": "V.",
+      "Értékcsökkenési leírás": "VI.",
+      "Fizetett bírság": "VII. Egyéb ráfordítás",
+      "Elszámolt értékvesztés": "VII. Egyéb ráfordítás",
+      "Dolgozóknak fizetett baleseti kártérítés": "VII. Egyéb ráfordítás",
+      "Kapott késedelmi kamat": "III. Egyéb bevétel",
+      "Kapott kötbér": "III. Egyéb bevétel",
+      "Saját vállalkozásban végzett raktárépítés": "II. Aktivált saját teljesítmények",
+      "Készletváltozás": "II. Aktivált saját teljesítmények",
+      "Adott kölcsön után kapott kamat": "VIII. Pénzügyi műveletek bevételei",
+      "Eladott értékpapírok árfolyamvesztesége": "IX. Pénzügyi műveletek ráfordításai",
+      "Export árbevétel": "I.",
+      "Társasági adó": "X. Adófizetési kötelezettség"
+     },
+     "osszkoltseges_eFt": [
+      [
+       "I. Értékesítés nettó árbevétele",
+       630000
+      ],
+      [
+       "II. Aktivált saját teljesítmények értéke",
+       58000
+      ],
+      [
+       "III. Egyéb bevételek",
+       8400
+      ],
+      [
+       "IV. Anyagjellegű ráfordítások",
+       71000
+      ],
+      [
+       "V. Személyi jellegű ráfordítások",
+       46000
+      ],
+      [
+       "VI. Értékcsökkenési leírás",
+       3000
+      ],
+      [
+       "VII. Egyéb ráfordítások",
+       5200
+      ],
+      [
+       "A. Üzemi (üzleti) tevékenység eredménye",
+       571200
+      ],
+      [
+       "VIII. Pénzügyi műveletek bevételei",
+       22000
+      ],
+      [
+       "IX. Pénzügyi műveletek ráfordításai",
+       18000
+      ],
+      [
+       "B. Pénzügyi műveletek eredménye",
+       4000
+      ],
+      [
+       "C. Adózás előtti eredmény",
+       575200
+      ],
+      [
+       "X. Adófizetési kötelezettség",
+       52065
+      ],
+      [
+       "D. Adózott eredmény",
+       523135
+      ]
+     ],
+     "forgalmi_eFt_torvenyi_szamozassal": [
+      [
+       "I. Értékesítés nettó árbevétele",
+       630000
+      ],
+      [
+       "II. Értékesítés közvetlen költségei",
+       43400
+      ],
+      [
+       "III. Értékesítés bruttó eredménye",
+       586600
+      ],
+      [
+       "IV. Értékesítés közvetett költségei",
+       18600
+      ],
+      [
+       "V. Egyéb bevételek",
+       8400
+      ],
+      [
+       "VI. Egyéb ráfordítások",
+       5200
+      ],
+      [
+       "A. Üzemi (üzleti) tevékenység eredménye",
+       571200
+      ],
+      [
+       "VII. Pénzügyi műveletek bevételei",
+       22000
+      ],
+      [
+       "VIII. Pénzügyi műveletek ráfordításai",
+       18000
+      ],
+      [
+       "B. Pénzügyi műveletek eredménye",
+       4000
+      ],
+      [
+       "C. Adózás előtti eredmény",
+       575200
+      ],
+      [
+       "IX. Adófizetési kötelezettség",
+       52065
+      ],
+      [
+       "D. Adózott eredmény",
+       523135
+      ]
+     ]
+    }
+   },
+   "tanulsagok": [
+    "Az áfa nem része az árbevételnek; a vevő által el nem ismert bruttó értékből előbb az áfát kell levenni (/1,27).",
+    "Készletváltozás = záró − nyitó (késztermék + befejezetlen); növekedés növeli az aktivált saját teljesítményt.",
+    "Kapott késedelmi kamat és kötbér egyéb bevétel; bírság, értékvesztés, dolgozóknak fizetett kártérítés egyéb ráfordítás.",
+    "Forgalmi eljárás: értékesítés költsége = összes költség (IV+V+VI) − aktivált saját teljesítmények; ebből közvetett/közvetlen arány szerint.",
+    "Az üzemi eredmény a két eljárásnál azonos (571.200 eFt) – jó ellenőrzés.",
+    "Tao-alap = adózás előtti eredmény + növelő − csökkentő tételek; tao 9%."
+   ],
+   "elteresek_a_forrasban": [
+    "A forrás a forgalmi költséges kimutatásban is VIII./IX./X. számozást használ a pénzügyi bevételekre/ráfordításokra/adóra; a törvényi forgalmi séma szerint ezek VII., VIII., IX. (mert a forgalmiban nincs VII. Egyéb ráfordítás után külön sor). A JSON mindkét kimutatást a törvényi számozással közli.",
+    "A forrás saját diáján 'Pénzügyi műveltek bevételei' elírás.",
+    "Ellenőrizve: minden összeg (630.000; 58.000; 571.200; 575.200; 52.065; 523.135; 43.400; 18.600) helyes."
+   ]
+  },
+  {
+   "id": "IF3",
+   "forras": "Könyvviteli ismeretek ismétlő feladatsor.pdf; Ismétlő feladatsor_3. feladat megoldása.pdf",
+   "cim": "Idősoros (napló) könyvelés – áruvásárlás, visszáru, engedmény, pénzmozgások",
+   "szoveg": "Könyvelje le idősorosan: 1. 15.000.000 Ft + áfa értékben árut vásárolt; a szállítási költség 180.000 Ft + áfa. 2. Terhelési értesítés a kapott kölcsön után leemelt 350.000 Ft kamatról. 3. Visszaküldte a vásárolt árukészlet negyedét, a helyesbítő számla megérkezett; a szállítási költség arányos része a szállítót terheli. 4. A megmaradt árukészletre 10% engedményt kért. 5. 50.000 Ft készpénzt vett fel a bankszámláról a pénztárba. 6. Átutalta a munkavállalók bérét, 4.500.000 Ft-ot. 7. Az áruszállító részben elismerte a hibás teljesítést, 6% engedményről a helyesbítő számlát elküldte. 8. Terhelési értesítés érkezett a készpénzfelvételről.",
+   "adatok": {
+    "aru_netto": 15000000,
+    "szallitas_netto": 180000,
+    "kamat": 350000,
+    "visszakuldes_arany": 0.25,
+    "kert_engedmeny": 0.1,
+    "kapott_engedmeny": 0.06,
+    "keszpenzfelvetel": 50000,
+    "ber": 4500000,
+    "afa_kulcs": 0.27
+   },
+   "megoldas": {
+    "szamitasok": [
+     {
+      "mit": "Áru áfája",
+      "keplet": "15.000.000 × 0,27",
+      "eredmeny": 4050000
+     },
+     {
+      "mit": "Szállítás áfája",
+      "keplet": "180.000 × 0,27",
+      "eredmeny": 48600
+     },
+     {
+      "mit": "Visszaküldött áru",
+      "keplet": "15.000.000 / 4",
+      "eredmeny": 3750000
+     },
+     {
+      "mit": "Visszaküldött rész áfája",
+      "keplet": "3.750.000 × 0,27",
+      "eredmeny": 1012500
+     },
+     {
+      "mit": "Szállítás arányos része",
+      "keplet": "180.000 / 4",
+      "eredmeny": 45000
+     },
+     {
+      "mit": "Annak áfája",
+      "keplet": "45.000 × 0,27",
+      "eredmeny": 12150
+     },
+     {
+      "mit": "Megmaradt áru",
+      "keplet": "15.000.000 − 3.750.000",
+      "eredmeny": 11250000
+     },
+     {
+      "mit": "Engedmény (6%)",
+      "keplet": "11.250.000 × 0,06",
+      "eredmeny": 675000
+     },
+     {
+      "mit": "Engedmény áfája",
+      "keplet": "675.000 × 0,27",
+      "eredmeny": 182250
+     },
+     {
+      "mit": "261 egyenleg a végén (helyes könyveléssel)",
+      "keplet": "15.000.000 + 180.000 − 3.750.000 − 45.000 − 675.000",
+      "eredmeny": 10710000
+     },
+     {
+      "mit": "4541 szállítói tartozás a végén",
+      "keplet": "19.278.600 − 4.819.650 − 857.250",
+      "eredmeny": 13601700
+     },
+     {
+      "mit": "4661 egyenleg a végén",
+      "keplet": "4.098.600 − 1.024.650 − 182.250",
+      "eredmeny": 2891700
+     }
+    ],
+    "tetelek": [
+     {
+      "sorszam": "1a",
+      "esemeny": "Áruvásárlás ellenértéke",
+      "T": "261",
+      "K": "4541",
+      "osszeg": 15000000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "1b",
+      "esemeny": "Áruvásárlás előzetesen felszámított áfája",
+      "T": "4661",
+      "K": "4541",
+      "osszeg": 4050000,
+      "szamitas": "15.000.000 × 0,27"
+     },
+     {
+      "sorszam": "1c",
+      "esemeny": "Szállítási költség (az áru bekerülési értékének része)",
+      "T": "261",
+      "K": "4541",
+      "osszeg": 180000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "1d",
+      "esemeny": "Szállítási költség áfája",
+      "T": "4661",
+      "K": "4541",
+      "osszeg": 48600,
+      "szamitas": "180.000 × 0,27"
+     },
+     {
+      "sorszam": "2",
+      "esemeny": "Kapott kölcsön után fizetett kamat (terhelési értesítés)",
+      "T": "8731",
+      "K": "384",
+      "osszeg": 350000,
+      "szamitas": "forrás: T 87"
+     },
+     {
+      "sorszam": "3a",
+      "esemeny": "Áru negyedének visszaküldése",
+      "T": "4541",
+      "K": "261",
+      "osszeg": 3750000,
+      "szamitas": "15.000.000 / 4"
+     },
+     {
+      "sorszam": "3b",
+      "esemeny": "Visszaküldött áru áfája",
+      "T": "4541",
+      "K": "4661",
+      "osszeg": 1012500,
+      "szamitas": "3.750.000 × 0,27"
+     },
+     {
+      "sorszam": "3c",
+      "esemeny": "Szállítási költség arányos része a szállítót terheli",
+      "T": "4541",
+      "K": "261",
+      "osszeg": 45000,
+      "szamitas": "180.000 / 4"
+     },
+     {
+      "sorszam": "3d",
+      "esemeny": "Szállítási költség arányos részének áfája",
+      "T": "4541",
+      "K": "4661",
+      "osszeg": 12150,
+      "szamitas": "45.000 × 0,27"
+     },
+     {
+      "sorszam": "4",
+      "esemeny": "10% engedmény KÉRÉSE – nem gazdasági esemény, nincs könyvelés",
+      "T": null,
+      "K": null,
+      "osszeg": 0,
+      "szamitas": "még bizonytalan, hogy megkapja-e és mennyit"
+     },
+     {
+      "sorszam": "5",
+      "esemeny": "Készpénzfelvétel a bankszámláról a pénztárba",
+      "T": "381",
+      "K": "389",
+      "osszeg": 50000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "6",
+      "esemeny": "Munkavállalók bérének átutalása",
+      "T": "471",
+      "K": "384",
+      "osszeg": 4500000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "7a",
+      "esemeny": "6% engedmény (helyesbítő számla) – áru értékének csökkentése",
+      "T": "4541",
+      "K": "261",
+      "osszeg": 675000,
+      "szamitas": "(15.000.000 − 3.750.000) × 0,06 = 11.250.000 × 0,06"
+     },
+     {
+      "sorszam": "7b",
+      "esemeny": "Engedményre jutó előzetesen felszámított áfa",
+      "T": "4541",
+      "K": "4661",
+      "osszeg": 182250,
+      "szamitas": "675.000 × 0,27"
+     },
+     {
+      "sorszam": "8",
+      "esemeny": "Terhelési értesítés a készpénzfelvételről",
+      "T": "389",
+      "K": "384",
+      "osszeg": 50000,
+      "szamitas": null
+     }
+    ],
+    "egyeb": {
+     "389_atvezetesi_szamla": "5. és 8. tétel után 0 egyenlegű – a két bizonylat (pénztárbevételi és bankterhelés) összetalálkozik."
+    }
+   },
+   "tanulsagok": [
+    "A szállítási költség az áru bekerülési értékének része (T 261), visszaküldéskor arányos része is visszajár.",
+    "Engedmény kérése nem gazdasági esemény; csak az elismert engedmény helyesbítő számláját könyveljük.",
+    "Az engedmény alapja a még meglévő (vissza nem küldött) áru értéke.",
+    "Készpénzfelvétel: két bizonylat, 389 Átvezetési számlán keresztül (T 381 / K 389, majd T 389 / K 384).",
+    "Helyesbítő számla áfája mindig a 466-ot (4661) csökkenti: T 4541 / K 4661."
+   ],
+   "elteresek_a_forrasban": [
+    "HIBA: 7. tétel áfa-része a forrásban T 454 / K 26 (Kereskedelmi áruk) 182.250 – helyesen T 4541 / K 4661 (az engedmény áfája az előzetesen felszámított áfát csökkenti, nem az áru értékét).",
+    "A forrás az engedmény áfájánál '675.000 Ft × 0,27%' elírást tartalmaz – helyesen × 0,27 (27%); az eredmény 182.250 helyes.",
+    "Mindkét 7. tételsor '7.' sorszámú a forrásban; a JSON 7a/7b-ként jelöli.",
+    "Számlaszámok: forrás 26 / 454 / 466 / 87 – a számlatükör szerint pontosabban 261 / 4541 / 4661 / 8731 (Kölcsönök, hitelek fizetendő kamata; a 873 csoportba tartozik).",
+    "Ellenőrizve: a többi összeg helyes."
+   ]
+  }
+ ],
+ "gyakorlo_kerdesek": [
+  {
+   "id": "GY1",
+   "tipus": "szamitas",
+   "kerdes": "FOROG Kft.: eszközök 151.050 eFt, kötelezettségek 44.600 eFt, jegyzett tőke 120.000, eredménytartalék 5.000 eFt, céltartalék és PIE 0. Mennyi az adózott eredmény?",
+   "opciok": null,
+   "helyes": "−18.550 eFt",
+   "magyarazat": "Saját tőke = 151.050 − 44.600 = 106.450; 106.450 − 120.000 − 5.000 = −18.550.",
+   "forras": "feladat"
+  },
+  {
+   "id": "GY2",
+   "tipus": "szamitas",
+   "kerdes": "Irodai berendezések nettó értéke 8.100.000, bruttó értéke 10.500.000 Ft. Mennyivel nyitjuk a 149-es számlát?",
+   "opciok": null,
+   "helyes": "2.400.000 Ft, K oldalon (T 491 / K 149)",
+   "magyarazat": "ÉCS = bruttó − nettó.",
+   "forras": "feladat"
+  },
+  {
+   "id": "GY3",
+   "tipus": "szamitas",
+   "kerdes": "Műszaki berendezések nettó értéke 10.700.000, ÉCS 2.500.000 Ft. Mennyi a 131 nyitó értéke?",
+   "opciok": null,
+   "helyes": "13.200.000 Ft (T 131 / K 491)",
+   "magyarazat": "Bruttó = nettó + ÉCS.",
+   "forras": "feladat"
+  },
+  {
+   "id": "GY4",
+   "tipus": "egyvalasztos",
+   "kerdes": "Hogyan nyitjuk a negatív (−18.550.000 Ft) adózott eredményt?",
+   "opciok": [
+    "T 491 / K 419",
+    "T 419 / K 491",
+    "T 413 / K 419",
+    "T 419 / K 413"
+   ],
+   "helyes": "T 419 / K 491",
+   "magyarazat": "A veszteség a forrásoldalon negatív, ezért a forrásszámla tartozik oldalán nyit.",
+   "forras": "feladat"
+  },
+  {
+   "id": "GY5",
+   "tipus": "egyvalasztos",
+   "kerdes": "Melyik a nyitás utáni rendező tétel negatív adózott eredménynél?",
+   "opciok": [
+    "T 419 / K 413",
+    "T 413 / K 419",
+    "T 491 / K 419",
+    "T 493 / K 419"
+   ],
+   "helyes": "T 413 / K 419",
+   "magyarazat": "Veszteség csökkenti az eredménytartalékot.",
+   "forras": "feladat"
+  },
+  {
+   "id": "GY6",
+   "tipus": "igaz_hamis",
+   "kerdes": "A polcrendszer megrendelését (6.600.000 + áfa) le kell könyvelni a beruházási szállítókkal szemben.",
+   "opciok": null,
+   "helyes": false,
+   "magyarazat": "Megrendelés nem gazdasági esemény, nincs számla.",
+   "forras": "feladat"
+  },
+  {
+   "id": "GY7",
+   "tipus": "szamitas",
+   "kerdes": "1.200 kg anyagot vettünk 10.160.000 Ft + áfa értékben, 100 kg-ot visszaküldtünk. Könyvelés és összeg?",
+   "opciok": null,
+   "helyes": "T 4541 / K 211 846.667 Ft; áfa T 4541 / K 4661 228.600 Ft",
+   "magyarazat": "10.160.000/1.200×100 = 846.667; ×0,27 = 228.600.",
+   "forras": "feladat"
+  },
+  {
+   "id": "GY8",
+   "tipus": "szamitas",
+   "kerdes": "A 21.900.000 Ft-os nyitó árukészlet 60%-át eladtuk. ELÁBÉ könyvelése?",
+   "opciok": null,
+   "helyes": "T 814 / K 261 13.140.000 Ft",
+   "magyarazat": "21.900.000 × 0,6.",
+   "forras": "feladat"
+  },
+  {
+   "id": "GY9",
+   "tipus": "szamitas",
+   "kerdes": "Áru eladás 19.500.000 Ft + 27% áfa. Fizetendő áfa könyvelése?",
+   "opciok": null,
+   "helyes": "T 311 / K 467 5.265.000 Ft",
+   "magyarazat": "19.500.000 × 0,27.",
+   "forras": "feladat"
+  },
+  {
+   "id": "GY10",
+   "tipus": "szamitas",
+   "kerdes": "Az eladott áru 10%-a visszaérkezett (eladási ár 19.500.000, ELÁBÉ 13.140.000). Mely tételek?",
+   "opciok": null,
+   "helyes": "T 91-92 / K 311 1.950.000; T 467 / K 311 526.500; T 261 / K 814 1.314.000",
+   "magyarazat": "Árbevétel, áfa és ELÁBÉ 10%-a fordítva.",
+   "forras": "feladat"
+  },
+  {
+   "id": "GY11",
+   "tipus": "szamitas",
+   "kerdes": "Szállítási költség bruttó 317.500 Ft (27% áfa). Nettó érték és áfa?",
+   "opciok": null,
+   "helyes": "250.000 Ft nettó (T 161 / K 4551), 67.500 Ft áfa (T 4661 / K 4551)",
+   "magyarazat": "317.500 / 1,27 = 250.000.",
+   "forras": "feladat"
+  },
+  {
+   "id": "GY12",
+   "tipus": "szamitas",
+   "kerdes": "Polcrendszer: vételár 6.600.000, szállítás 250.000, szerelés 350.000 Ft. Aktiválás?",
+   "opciok": null,
+   "helyes": "T 141 / K 161 7.200.000 Ft",
+   "magyarazat": "Minden üzembe helyezésig felmerült költség a bekerülési érték része.",
+   "forras": "feladat"
+  },
+  {
+   "id": "GY13",
+   "tipus": "szamitas",
+   "kerdes": "Vevőkövetelés beérkezése: 19.500.000 + 5.265.000 − 1.950.000 − 526.500. Könyvelés?",
+   "opciok": null,
+   "helyes": "T 384 / K 311 22.288.500 Ft",
+   "magyarazat": null,
+   "forras": "feladat"
+  },
+  {
+   "id": "GY14",
+   "tipus": "szamitas",
+   "kerdes": "Beruházási szállító: nyitó 14.000.000 + 6.600.000 + 1.782.000 + 250.000 + 67.500 + 350.000 + 94.500. Kiegyenlítés?",
+   "opciok": null,
+   "helyes": "T 4551 / K 384 23.144.000 Ft",
+   "magyarazat": null,
+   "forras": "feladat"
+  },
+  {
+   "id": "GY15",
+   "tipus": "szamitas",
+   "kerdes": "Januárban 467 KE 4.738.500, 466 TE 4.458.600 Ft. Mennyi az áfa-egyenleg és hol a mérlegben?",
+   "opciok": null,
+   "helyes": "279.900 Ft fizetendő; F.III. Rövid lejáratú kötelezettségek",
+   "magyarazat": "467 − 466.",
+   "forras": "feladat"
+  },
+  {
+   "id": "GY16",
+   "tipus": "szamitas",
+   "kerdes": "FOROG Kft. elszámolási betétszámla: TF 74.188.500, KF 47.744.000. Záró egyenleg?",
+   "opciok": null,
+   "helyes": "26.444.500 Ft T egyenleg",
+   "magyarazat": null,
+   "forras": "feladat"
+  },
+  {
+   "id": "GY17",
+   "tipus": "igaz_hamis",
+   "kerdes": "A főkönyvi kivonatban a tartozik és követel forgalmak összege mindig egyenlő.",
+   "opciok": null,
+   "helyes": true,
+   "magyarazat": "IF1: 541.600.467 = 541.600.467.",
+   "forras": "feladat"
+  },
+  {
+   "id": "GY18",
+   "tipus": "szamitas",
+   "kerdes": "Belföldi nettó árbevétel 300 mFt, a vevő által el nem ismert bruttó 25,4 mFt (27% áfa). Mennyi a belföldi árbevétel?",
+   "opciok": null,
+   "helyes": "280.000 eFt",
+   "magyarazat": "25.400/1,27 = 20.000; 300.000 − 20.000.",
+   "forras": "feladat"
+  },
+  {
+   "id": "GY19",
+   "tipus": "szamitas",
+   "kerdes": "Késztermék nyitó 40, záró 55; befejezetlen nyitó 17, záró 10 mFt. Állományváltozás?",
+   "opciok": null,
+   "helyes": "+8.000 eFt",
+   "magyarazat": "+15 − 7.",
+   "forras": "feladat"
+  },
+  {
+   "id": "GY20",
+   "tipus": "parositas",
+   "kerdes": "Párosítsa az eredménykimutatás soraival: kapott kötbér, fizetett bírság, adott kölcsön kapott kamata, eladott értékpapír árfolyamvesztesége.",
+   "opciok": null,
+   "helyes": {
+    "kapott kötbér": "III. Egyéb bevételek",
+    "fizetett bírság": "VII. Egyéb ráfordítások",
+    "kapott kamat": "VIII. Pénzügyi műveletek bevételei",
+    "árfolyamveszteség": "IX. Pénzügyi műveletek ráfordításai"
+   },
+   "magyarazat": null,
+   "forras": "feladat"
+  },
+  {
+   "id": "GY21",
+   "tipus": "szamitas",
+   "kerdes": "Összes költség 120.000 eFt, aktivált saját teljesítmény 58.000 eFt, közvetett arány 30%. Közvetlen és közvetett költség?",
+   "opciok": null,
+   "helyes": "közvetlen 43.400 eFt, közvetett 18.600 eFt",
+   "magyarazat": "62.000 × 0,3 = 18.600.",
+   "forras": "feladat"
+  },
+  {
+   "id": "GY22",
+   "tipus": "szamitas",
+   "kerdes": "Adózás előtti eredmény 575.200 eFt, növelő 25.600, csökkentő 22.300, tao 9%. Társasági adó?",
+   "opciok": null,
+   "helyes": "52.065 eFt",
+   "magyarazat": "578.500 × 0,09.",
+   "forras": "feladat"
+  },
+  {
+   "id": "GY23",
+   "tipus": "szamitas",
+   "kerdes": "IF2: I 630.000, II 58.000, III 8.400, IV 71.000, V 46.000, VI 3.000, VII 5.200 eFt. Üzemi eredmény?",
+   "opciok": null,
+   "helyes": "571.200 eFt",
+   "magyarazat": null,
+   "forras": "feladat"
+  },
+  {
+   "id": "GY24",
+   "tipus": "szamitas",
+   "kerdes": "15.000.000 Ft + áfa áru, szállítás 180.000 + áfa; negyedét visszaküldtük, a szállítás arányos része a szállítót terheli. Tételek?",
+   "opciok": null,
+   "helyes": "T 4541 / K 261 3.750.000; T 4541 / K 4661 1.012.500; T 4541 / K 261 45.000; T 4541 / K 4661 12.150",
+   "magyarazat": null,
+   "forras": "feladat"
+  },
+  {
+   "id": "GY25",
+   "tipus": "igaz_hamis",
+   "kerdes": "A vállalkozás 10% engedményt kért a szállítótól – ezt helyesbítő számla nélkül is könyvelni kell.",
+   "opciok": null,
+   "helyes": false,
+   "magyarazat": "Kérés nem gazdasági esemény.",
+   "forras": "feladat"
+  },
+  {
+   "id": "GY26",
+   "tipus": "szamitas",
+   "kerdes": "Megmaradt áru 11.250.000 Ft, a szállító 6% engedményt adott. Könyvelés?",
+   "opciok": null,
+   "helyes": "T 4541 / K 261 675.000; T 4541 / K 4661 182.250",
+   "magyarazat": "A forrás az áfát hibásan K 26-ra könyveli.",
+   "forras": "feladat"
+  },
+  {
+   "id": "GY27",
+   "tipus": "egyvalasztos",
+   "kerdes": "Készpénzfelvétel bankszámláról a pénztárba (pénztárbizonylat előbb érkezik). Első tétel?",
+   "opciok": [
+    "T 381 / K 384",
+    "T 381 / K 389",
+    "T 389 / K 381",
+    "T 384 / K 381"
+   ],
+   "helyes": "T 381 / K 389",
+   "magyarazat": "Átvezetési számlán keresztül; a bankterhelés T 389 / K 384.",
+   "forras": "feladat"
+  },
+  {
+   "id": "GY28",
+   "tipus": "szamitas",
+   "kerdes": "Kapott kölcsön kamatát (350.000 Ft) leemelte a bank. Könyvelés?",
+   "opciok": null,
+   "helyes": "T 8731 (87) / K 384 350.000 Ft",
+   "magyarazat": "Pénzügyi műveletek ráfordítása.",
+   "forras": "feladat"
+  },
+  {
+   "id": "GY29",
+   "tipus": "egyvalasztos",
+   "kerdes": "Hol szerepel az áfa-tartozás a mérlegben?",
+   "opciok": [
+    "B.II. Követelések",
+    "F.III. Rövid lejáratú kötelezettségek",
+    "E. Céltartalékok",
+    "G. Passzív időbeli elhatárolások"
+   ],
+   "helyes": "F.III. Rövid lejáratú kötelezettségek",
+   "magyarazat": null,
+   "forras": "feladat"
+  },
+  {
+   "id": "GY30",
+   "tipus": "egyvalasztos",
+   "kerdes": "Melyik számlán nyitjuk a 129 Ingatlanok terv szerinti ÉCS-ét?",
+   "opciok": [
+    "T 129 / K 491",
+    "T 491 / K 129",
+    "T 492 / K 129",
+    "T 129 / K 492"
+   ],
+   "helyes": "T 491 / K 129",
+   "magyarazat": "Az ÉCS az eszközt csökkentő (passzív jellegű) korrekciós számla.",
+   "forras": "feladat"
+  },
+  {
+   "id": "GY31",
+   "tipus": "igaz_hamis",
+   "kerdes": "A forgalmi és az összköltséges eredménykimutatás üzemi eredménye megegyezik.",
+   "opciok": null,
+   "helyes": true,
+   "magyarazat": "IF2: mindkettő 571.200 eFt.",
+   "forras": "feladat"
+  },
+  {
+   "id": "GY32",
+   "tipus": "szamitas",
+   "kerdes": "Mennyi a 491 Nyitómérleg számla TF és KF forgalma az IF1-ben?",
+   "opciok": null,
+   "helyes": "190.500.000 Ft mindkét oldalon",
+   "magyarazat": null,
+   "forras": "feladat"
+  }
+ ],
+ "csapdak": [
+  "Megrendelés és engedmény kérése nem gazdasági esemény.",
+  "Negatív adózott eredmény a 491-gyel T 419 / K 491-ként nyit, a rendező tétel T 413 / K 419.",
+  "ÉCS-számlák (129, 139, 149) követel oldalon nyitnak, bár eszközcsoporthoz tartoznak.",
+  "Bruttó összegből a nettót /1,27-tel kapjuk, nem ×0,73-mal.",
+  "A szállítás és a szerelés a beruházás bekerülési értéke (161), nem költség.",
+  "Visszárunál az ELÁBÉ-t is vissza kell vezetni (T 261 / K 814).",
+  "Helyesbítő számla áfája a 4661-et csökkenti, nem az árut (a 3. feladat forrásmegoldása itt hibás).",
+  "Az engedmény alapja a visszaküldés után megmaradt áru.",
+  "A vevő által el nem ismert bruttó értékből előbb az áfát kell levonni.",
+  "Kapott késedelmi kamat egyéb bevétel, nem pénzügyi bevétel."
+ ]
+}

@@ -1,0 +1,2206 @@
+{
+ "tema": "Számviteli törvény, beszámolók, számviteli alapelvek, számviteli politika, bizonylati fegyelem, könyvvizsgálat, nyilvánosságra hozatal",
+ "forrasok": [
+  "src/elmelet/alapelvek.pdf (alapelvek.txt) – 78 dia, 2026.09.16.",
+  "zh-anyag/tesztkerdesek_moodle.json – 'Számviteli alapelvek, beszámoló' teszt (21 kérdés)",
+  "zh-anyag/00_zh_info.json – tanári tippek, minta-ZH",
+  "zh/I_Elméleti_Minta ZH (elm-3.png: alapelv-feladat megoldása)"
+ ],
+ "zh_relevancia": "MAGAS. A ZH elméleti részében 7 pontos alapelv-feladat van (minta-ZH: 'Mutassa be a vállalkozás folytatásának elvét!' – a megoldókulcs szó szerint a dia tartalma). A tanár szerint 'alapelvek tartalmi és formaira lehet számítani, meg egy alapelv': várható a tartalmi/formai (és általános/kiegészítő) csoportosítás és egy alapelv teljes kifejtése. A beszámolóforma-, könyvvizsgálat-, számviteli politika-kérdések a tesztrészben (7–8 pont) jöhetnek.",
+ "fogalmak": [
+  {
+   "id": "elv_vallalkozas_folytatasa",
+   "nev": "A vállalkozás folytatásának elve",
+   "besorolas": "ÁLTALÁNOS ALAPELV",
+   "definicio": "A vállalkozás fent tudja és fent akarja tartani a működését a belátható jövőben, folytatni tudja a működését, tevékenységét, és nem várható a tevékenység beszüntetése, jelentős csökkentése. A többi alapelv érvényesülésének alapja.",
+   "kulcselemek": [
+    "fent TUDJA és fent AKARJA tartani a működését",
+    "a belátható jövőben",
+    "nem várható a tevékenység beszüntetése vagy jelentős csökkentése",
+    "a többi alapelv érvényesülésének alapja (általános alapelv)",
+    "ha a vállalkozás nem tudja folytatni vagy jelentősen csökkenti a tevékenységét, a többi alapelv sem tud maradéktalanul érvényesülni",
+    "csak működő vállalkozásokra vonatkozik",
+    "csődeljárás, végelszámolás, felszámolás, átalakulás esetén más törvényi előírások érvényesek"
+   ],
+   "pelda": "Egy működő kft. a mérleget úgy állítja össze, hogy az eszközöket bekerülési értéken, terv szerinti ÉCS-sel csökkentve mutatja ki, mert a működés folytatását feltételezi (nem egy azonnali eladás értékén).",
+   "kivetel": "Csődeljárás, végelszámolás, felszámolás, átalakulás – ezekre más törvényi előírások vonatkoznak.",
+   "kapcsolodo": [
+    "elv_teljesseg",
+    "elv_valodisag",
+    "elv_ovatossag",
+    "elv_osszemeres"
+   ],
+   "minta_kifejtes_7pont": "1) Az Szt. általános alapelve. 2) A vállalkozás fent TUDJA és fent AKARJA tartani működését 3) a belátható jövőben, 4) nem várható a tevékenység beszüntetése vagy jelentős csökkentése. 5) A többi alapelv érvényesülésének alapja – ha a vállalkozás nem tudja folytatni a tevékenységét vagy jelentősen csökkenti, a többi alapelv sem érvényesülhet maradéktalanul. 6) Csak működő vállalkozásokra vonatkozik. 7) Csődeljárás, végelszámolás, felszámolás, átalakulás esetén más törvényi előírások érvényesek.",
+   "zh_valoszinuseg": "magas",
+   "forras": "alapelvek.pdf, 17. dia"
+  },
+  {
+   "id": "elv_teljesseg",
+   "nev": "Teljesség elve",
+   "besorolas": "TARTALMI ELV (a beszámoló tartalmára ható)",
+   "definicio": "Könyvelni kell minden olyan gazdasági eseményt, amelynek az eszközökre, forrásokra, valamint a tárgyévi eredményre gyakorolt hatását a beszámolóban be kell mutatni. Azokat is, amelyek a lezárt üzleti évhez kapcsolódnak: a fordulónap és a mérlegkészítés között ismertté vált gazdasági eseményeket is könyvelni kell, amelyek a fordulónap előtt még nem következtek be, de a tárgyidőszakra vonatkoznak.",
+   "kulcselemek": [
+    "MINDEN gazdasági eseményt könyvelni kell",
+    "amelynek hatása van az eszközökre, forrásokra és a tárgyévi eredményre",
+    "a lezárt üzleti évhez kapcsolódó eseményeket is",
+    "a fordulónap és a mérlegkészítés között ismertté vált eseményeket is könyvelni kell",
+    "ezek a fordulónap előtt még nem következtek be (nem voltak ismertek), de a tárgyidőszakra vonatkoznak"
+   ],
+   "pelda": "A következő üzleti év elején kapunk értesítést az előző üzleti évhez kapcsolódó késedelmi kamatról; a következő év elején derül ki, hogy egy vevőkövetelésünk csak max. 50%-ban fog teljesülni – mindkettőt a tárgyévben kell elszámolni.",
+   "kivetel": null,
+   "kapcsolodo": [
+    "elv_ovatossag",
+    "elv_idobeli_elhatarolas"
+   ],
+   "minta_kifejtes_7pont": "1) Tartalmi elv. 2) Könyvelni kell minden gazdasági eseményt, 3) amelynek az eszközökre, forrásokra és 4) a tárgyévi eredményre gyakorolt hatását a beszámolóban be kell mutatni. 5) A lezárt üzleti évhez kapcsolódó eseményeket is, 6) azaz a fordulónap és a mérlegkészítés között ismertté vált, a tárgyidőszakra vonatkozó eseményeket is. 7) Pl. január elején érkező, az előző évre vonatkozó késedelmikamat-értesítés, vagy a januárban kiderülő, csak 50%-ban behajtható vevőkövetelés.",
+   "zh_valoszinuseg": "magas",
+   "forras": "alapelvek.pdf, 18. dia"
+  },
+  {
+   "id": "elv_valodisag",
+   "nev": "Valódiság elve",
+   "besorolas": "TARTALMI ELV (a beszámoló tartalmára ható)",
+   "definicio": "A könyvvitelben rögzített gazdasági eseményeknek, a beszámolóban szereplő tételeknek a valóságban is megtalálhatóknak, bizonyíthatóknak, kívülállók által is megállapíthatóknak kell lenniük. A vagyont az Szt. előírásai szerint értékelni kell.",
+   "kulcselemek": [
+    "a tételek a valóságban is megtalálhatók",
+    "bizonyíthatók",
+    "kívülállók által is megállapíthatók",
+    "a vagyont az Szt. előírásai szerint kell értékelni",
+    "a beszámoló tételeit leltárral kell alátámasztani",
+    "az eszközök és kötelezettségek értékelése a Számviteli törvény szerint",
+    "a főkönyvi könyvelés a leltárral egyező, összevont adatokat tartalmazza"
+   ],
+   "pelda": "Az év végi mérlegben kimutatott készletérték mögött tételes leltár áll, a főkönyvi egyenleg megegyezik a leltár összesített értékével.",
+   "kivetel": null,
+   "kapcsolodo": [
+    "elv_egyedi_ertekeles",
+    "elv_teljesseg"
+   ],
+   "minta_kifejtes_7pont": "1) Tartalmi elv. 2) A könyvvitelben rögzített eseményeknek, beszámolóban szereplő tételeknek a valóságban megtalálhatóknak, 3) bizonyíthatóknak, 4) kívülállók által is megállapíthatóknak kell lenniük. 5) A vagyont az Szt. szerint kell értékelni. 6) A beszámoló tételeit leltárral kell alátámasztani. 7) A főkönyvi könyvelés a leltárral egyező, összevont adatokat tartalmazza.",
+   "zh_valoszinuseg": "magas",
+   "forras": "alapelvek.pdf, 20. dia"
+  },
+  {
+   "id": "elv_ovatossag",
+   "nev": "Óvatosság elve",
+   "besorolas": "TARTALMI ELV (a beszámoló tartalmára ható)",
+   "definicio": "Nem lehet eredményt kimutatni, ha az árbevétel, bevétel pénzügyi realizálása bizonytalan. Az előre látható kockázatot és feltételezhető veszteséget el kell számolni értékvesztés, céltartalék formájában akkor is, ha a fordulónap és a mérlegkészítés között vált ismertté. Az ÉCS-t, értékvesztéseket és céltartalékokat attól függetlenül el kell számolni, hogy az adott üzleti év eredménye nyereség vagy veszteség.",
+   "kulcselemek": [
+    "nem mutatható ki eredmény, ha a bevétel pénzügyi realizálása bizonytalan",
+    "az előre látható kockázatot, feltételezhető veszteséget el kell számolni (értékvesztés, céltartalék)",
+    "akkor is, ha a fordulónap és a mérlegkészítés között vált ismertté",
+    "ÉCS, értékvesztés, céltartalék elszámolása független attól, hogy az év nyereséges vagy veszteséges",
+    "a nem realizált eredmény nem lehet adózás, osztalékfizetés alapja, így a beszámolóban sem mutatható ki",
+    "ha bizonytalan nyereség után adózna/osztalékot fizetne, hitelt kellene felvennie (kamatköltség)"
+   ],
+   "pelda": "A vevő által el nem ismert követelés nem állítható be a beszámolóba. Minden olyan költséget el kell számolni, amelyről tudomásunk van – nem csak azokat, amelyek az eredmény szempontjából kényelmesek.",
+   "kivetel": null,
+   "kapcsolodo": [
+    "elv_teljesseg",
+    "elv_osszemeres"
+   ],
+   "minta_kifejtes_7pont": "1) Tartalmi elv. 2) Nem lehet eredményt kimutatni, ha a bevétel pénzügyi realizálása bizonytalan. 3) Az előre látható kockázatot, feltételezhető veszteséget értékvesztés, céltartalék formájában el kell számolni, 4) akkor is, ha a fordulónap és a mérlegkészítés között vált ismertté. 5) ÉCS-t, értékvesztést, céltartalékot az eredménytől (nyereség/veszteség) függetlenül el kell számolni. 6) A nem realizált eredmény nem lehet adózás, osztalékfizetés alapja. 7) Pl. a vevő által el nem ismert követelés nem állítható be a beszámolóba.",
+   "zh_valoszinuseg": "magas",
+   "forras": "alapelvek.pdf, 24. dia"
+  },
+  {
+   "id": "elv_osszemeres",
+   "nev": "Összemérés elve",
+   "besorolas": "TARTALMI ELV (a beszámoló tartalmára ható)",
+   "definicio": "Az időszak eredménye = az időszaki teljesítések elismert bevételei (függetlenül a pénzmozgástól) – a teljesítésekkel szembeállítható költségek, ráfordítások (függetlenül a pénzmozgástól). A bevételeket és költségeket, ráfordításokat abban az időszakban kell elszámolni, amikor azok gazdaságilag felmerültek.",
+   "kulcselemek": [
+    "eredmény = elismert bevételek – szembeállítható költségek, ráfordítások",
+    "a pénzmozgástól függetlenül",
+    "abban az időszakban kell elszámolni, amikor gazdaságilag felmerültek",
+    "árbevétel: amikor az áruszállítás, szolgáltatásnyújtás szerződés szerinti teljesítése megtörtént, függetlenül a pénzügyi teljesítéstől",
+    "az árbevétellel szembe kell állítani az érdekében felmerült költségeket"
+   ],
+   "pelda": "A tárgyévben el kell számolni eredménynövelő tételként a tárgyévre járó, de csak a következő évben pénzügyileg rendezett kamatot; a tárgyévben nem kell elszámolni az eredmény terhére a következő évre fizetett bérleti díjat. (Moodle: decemberi teljesítés, februári fizetés → a teljesítés évének bevétele.)",
+   "kivetel": null,
+   "kapcsolodo": [
+    "elv_idobeli_elhatarolas",
+    "elv_ovatossag"
+   ],
+   "minta_kifejtes_7pont": "1) Tartalmi elv. 2) Az időszak eredménye = elismert bevételek – szembeállítható költségek, ráfordítások, 3) mindkettő a pénzmozgástól függetlenül. 4) A bevételt, költséget abban az időszakban kell elszámolni, amikor gazdaságilag felmerült. 5) Árbevétel akkor, amikor a szerződés szerinti teljesítés megtörtént, függetlenül a pénzügyi teljesítéstől. 6) Az árbevétellel szembe kell állítani az érdekében felmerült költségeket. 7) Pl. a tárgyévre járó, de jövőre fizetett kamat tárgyévi bevétel; a jövő évre előre fizetett bérleti díj nem tárgyévi költség.",
+   "zh_valoszinuseg": "magas",
+   "forras": "alapelvek.pdf, 23. dia"
+  },
+  {
+   "id": "elv_vilagossag",
+   "nev": "Világosság elve",
+   "besorolas": "FORMAI ELV (a beszámoló formájára ható)",
+   "definicio": "A könyvvezetést és a beszámolót érthető és áttekinthető (azaz a számvitelhez értő szakemberek számára informatív) módon, a törvényben előírt részletességgel és formában kell elkészíteni. Ha szükséges, egyes mérleg/eredménykimutatás sorokat meg kell bontani, és a kiegészítő mellékletben magyarázni kell.",
+   "kulcselemek": [
+    "érthető és áttekinthető",
+    "a számvitelhez értő szakemberek számára informatív",
+    "a törvényben előírt részletességgel és formában",
+    "szükség esetén mérleg/eredménykimutatás sorok megbontása",
+    "kiegészítő mellékletben magyarázat",
+    "eredmény: informatív beszámoló, számlarend alapján történő könyvelés, lehetővé válik a külső és belső ellenőrzés"
+   ],
+   "pelda": "Egy jelentős összegű 'Egyéb követelések' sort a vállalkozás megbont és a kiegészítő mellékletben magyarázza.",
+   "kivetel": null,
+   "kapcsolodo": [
+    "elv_lenyegesseg"
+   ],
+   "minta_kifejtes_7pont": "1) Formai elv. 2) A könyvvezetést és beszámolót érthetően, 3) áttekinthetően (szakember számára informatívan), 4) a törvényben előírt részletességgel és formában kell elkészíteni. 5) Szükség esetén a mérleg/eredménykimutatás sorait meg kell bontani, 6) és a kiegészítő mellékletben magyarázni kell. 7) Így a beszámoló informatív, a könyvelés számlarend alapján történik, és lehetővé válik a külső és belső ellenőrzés.",
+   "zh_valoszinuseg": "magas",
+   "forras": "alapelvek.pdf, 19. dia"
+  },
+  {
+   "id": "elv_kovetkezetesseg",
+   "nev": "Következetesség elve",
+   "besorolas": "FORMAI ELV (a beszámoló formájára ható)",
+   "definicio": "A beszámoló tartalma és formája, valamint az azt alátámasztó könyvvezetés tekintetében az állandóságot és az összehasonlíthatóságot biztosítani kell. Következetesen alkalmazott számviteli politika (a beszámoló választott formája, értékelési szabályok állandósága).",
+   "kulcselemek": [
+    "a beszámoló tartalma és formája, valamint a könyvvezetés állandósága",
+    "összehasonlíthatóság biztosítása",
+    "következetesen alkalmazott számviteli politika",
+    "a beszámoló választott formájának és az értékelési szabályoknak az állandósága",
+    "összefügg a folytonosság elvével: a számlarend és a számviteli politika egymást követő időszakokban következetes alkalmazását követeli meg",
+    "kikényszeríti, hogy a lényegesség megítélése ne alkalomszerű döntésen alapuljon"
+   ],
+   "pelda": "Ha a vállalkozás a készletek kivezetésére FIFO-t választott, azt évről évre alkalmazza, nem vált indokolatlanul átlagárra.",
+   "kivetel": null,
+   "kapcsolodo": [
+    "elv_folytonossag",
+    "elv_lenyegesseg"
+   ],
+   "minta_kifejtes_7pont": "1) Formai elv. 2) A beszámoló tartalma és formája, 3) valamint az azt alátámasztó könyvvezetés tekintetében 4) az állandóságot és 5) az összehasonlíthatóságot biztosítani kell. 6) Következetesen alkalmazott számviteli politika: a beszámoló választott formája, az értékelési szabályok állandósága. 7) Összefügg a folytonosság elvével, mert a számlarend és a számviteli politika egymást követő időszakokban következetes alkalmazását követeli meg.",
+   "zh_valoszinuseg": "magas",
+   "forras": "alapelvek.pdf, 21. dia"
+  },
+  {
+   "id": "elv_folytonossag",
+   "nev": "Folytonosság elve",
+   "besorolas": "FORMAI ELV (a beszámoló formájára ható)",
+   "definicio": "Az üzleti év nyitóadatai = az előző üzleti év megfelelő záróadatai. A beszámolóban az előző üzleti év adatait is fel kell tüntetni, így az adatok összehasonlíthatóvá, elemezhetővé válnak. Egymást követő üzleti években az eszközök és források értékelése, az eredmények számbavétele csak az Szt. szerint meghatározott szabályok szerint változhat.",
+   "kulcselemek": [
+    "nyitóadatok = előző üzleti év záróadatai",
+    "a beszámolóban az előző év adatait is fel kell tüntetni (→ 'Előző év' oszlop)",
+    "összehasonlíthatóság, elemezhetőség",
+    "egymást követő években az eszközök és források értékelése csak az Szt. szerint változhat",
+    "az eredmények számbavétele csak az Szt. szerint változhat"
+   ],
+   "pelda": "A 2026. január 1-jei nyitómérleg (491) tételei megegyeznek a 2025. december 31-i zárómérleg (492) tételeivel; a mérlegben 'Előző év' oszlop is szerepel.",
+   "kivetel": null,
+   "kapcsolodo": [
+    "elv_kovetkezetesseg"
+   ],
+   "minta_kifejtes_7pont": "1) Formai elv. 2) Az üzleti év nyitóadatai megegyeznek 3) az előző üzleti év megfelelő záróadataival. 4) A beszámolóban az előző üzleti év adatait is fel kell tüntetni, 5) így az adatok összehasonlíthatók, elemezhetők. 6) Egymást követő években az eszközök és források értékelése 7) és az eredmények számbavétele csak az Szt. szerinti szabályok szerint változhat.",
+   "zh_valoszinuseg": "magas",
+   "forras": "alapelvek.pdf, 22. dia"
+  },
+  {
+   "id": "elv_egyedi_ertekeles",
+   "nev": "Egyedi értékelés elve",
+   "besorolas": "KIEGÉSZÍTŐ ELV",
+   "definicio": "Az eszközöket és kötelezettségeket egyedileg kell rögzíteni és értékelni a könyvvezetés és a beszámoló elkészítése során. A vagyoni elemeket külön-külön, egyedileg kell nyilvántartásba venni, amelynek alapja az eszközökről és forrásokról vezetett analitikus nyilvántartás és a tételes leltár. Az egyedi értékelés elve e törvény szerinti esetekben sajátosan érvényesülhet.",
+   "kulcselemek": [
+    "eszközök és kötelezettségek egyedi rögzítése és értékelése",
+    "alapja: analitikus nyilvántartás és tételes leltár",
+    "az eszközök meglétét csak egyedileg lehet megállapítani",
+    "egyedi értékelésnek minősül az átlagos beszerzési áras és a FIFO-módszerrel történő értékelés is (azonos paraméterű, csoportosan nyilvántartott eszközöknél)",
+    "egyszerűsített alkalmazás (adminisztráció csökkentése): kis összegű követeléseknél %-os értékvesztés; fajlagosan kis értékű készleteknél készletcsoportonként, könyv szerinti érték arányában értékvesztés; értékpapír, valuta, deviza, készlet átlagáras/FIFO értékelése"
+   ],
+   "pelda": "Háromféle késztermék nyilvántartása együttesen nem lehet – csak így vethető össze a könyv szerinti állomány a leltározott mennyiséggel.",
+   "kivetel": "Az Szt. lehetővé teszi az egyszerűsített alkalmazást: vevőnként kis összegű követelések %-os értékvesztése, fajlagosan kis értékű készletek csoportos értékvesztése, átlagár/FIFO.",
+   "kapcsolodo": [
+    "elv_valodisag"
+   ],
+   "minta_kifejtes_7pont": "1) Kiegészítő elv. 2) Az eszközöket és kötelezettségeket egyedileg kell rögzíteni és értékelni. 3) Alapja az analitikus nyilvántartás és a tételes leltár. 4) Az eszközök meglétét csak egyedileg lehet megállapítani. 5) Egyedi értékelésnek minősül az átlagos beszerzési áras és a FIFO-értékelés is. 6) Egyszerűsítés: kis összegű követeléseknél %-os értékvesztés, kis értékű készleteknél csoportos értékvesztés. 7) Pl. háromféle késztermék nem tartható nyilván együtt.",
+   "zh_valoszinuseg": "magas",
+   "forras": "alapelvek.pdf, 26. dia"
+  },
+  {
+   "id": "elv_brutto_elszamolas",
+   "nev": "Bruttó elszámolás elve",
+   "besorolas": "KIEGÉSZÍTŐ ELV",
+   "definicio": "A bevételek és költségek (ráfordítások), illetve a követelések és a kötelezettségek egymással szemben nem számolhatók el (sérülne a megbízható és valós összkép, és az eredménykimutatás is félrevezető lenne).",
+   "kulcselemek": [
+    "bevételek és költségek, ráfordítások egymással szemben nem számolhatók el",
+    "követelések és kötelezettségek nem vonhatók össze – akkor sem, ha ugyanaz a partner",
+    "különben sérülne a megbízható és valós összkép, az eredménykimutatás félrevezető lenne",
+    "kivétel a bevétel/költség oldalon: értékpapírok értékesítése",
+    "kivétel a követelés/kötelezettség oldalon: az Szt.-ben szabályozott esetek"
+   ],
+   "pelda": "A dolgozó kap egy munkaeszközt, amit a cég 50 000 Ft-ért vásárolt; munkaviszonya megszűnése után 22 000 Ft-os maradványértéken kivásárolja. A cég nem 50 000 – 22 000 Ft-ot könyvel, hanem 1) anyagköltség 50 000 Ft, 2) bevétel 22 000 Ft. (Moodle: ugyanannak a partnernek 1 M értékesítés és 600 e szolgáltatás → külön kell kimutatni.)",
+   "kivetel": "Értékpapírok értékesítése (bevétel–költség), illetve az Szt.-ben szabályozott esetek (követelés–kötelezettség).",
+   "kapcsolodo": [
+    "elv_valodisag"
+   ],
+   "minta_kifejtes_7pont": "1) Kiegészítő elv. 2) A bevételek és a költségek, ráfordítások 3) egymással szemben nem számolhatók el. 4) A követelések és kötelezettségek sem vonhatók össze, ha ugyanaz a partner akkor sem. 5) Különben sérülne a megbízható és valós összkép, az eredménykimutatás félrevezető lenne. 6) Kivétel: értékpapírok értékesítése, ill. Szt.-ben szabályozott esetek. 7) Pl. 50 000 Ft-os munkaeszköz, amit a dolgozó 22 000 Ft-ért kivásárol: 50 000 anyagköltség és 22 000 bevétel, nem 28 000 nettó.",
+   "zh_valoszinuseg": "magas",
+   "forras": "alapelvek.pdf, 25. dia"
+  },
+  {
+   "id": "elv_idobeli_elhatarolas",
+   "nev": "Időbeli elhatárolás elve",
+   "besorolas": "KIEGÉSZÍTŐ ELV",
+   "definicio": "Több évet érintő gazdasági események eredményre gyakorolt kihatását (bevétel, ráfordítás) arányosan kell megosztani az érintett üzleti évek között. Az összemérés, a teljesség és a valódiság elvének érvényesítését szolgálja (aktív és passzív időbeli elhatárolások).",
+   "kulcselemek": [
+    "több évet érintő gazdasági események",
+    "eredményre gyakorolt hatás (bevétel, ráfordítás) arányos megosztása az érintett évek között",
+    "az összemérés, a teljesség és a valódiság elvét szolgálja",
+    "eszközei: aktív időbeli elhatárolás (AIE) és passzív időbeli elhatárolás (PIE)"
+   ],
+   "pelda": "A tárgyévre járó, de csak a következő évben esedékes kamat tárgyévi bevétel → AIE (bevételek aktív időbeli elhatárolása, 391). A következő évre előre fizetett bérleti díj nem tárgyévi költség → AIE (költségek aktív időbeli elhatárolása, 392).",
+   "kivetel": null,
+   "kapcsolodo": [
+    "elv_osszemeres",
+    "elv_teljesseg",
+    "elv_valodisag"
+   ],
+   "minta_kifejtes_7pont": "1) Kiegészítő elv. 2) Több évet érintő gazdasági események 3) eredményre gyakorolt kihatását (bevétel, ráfordítás) 4) arányosan kell megosztani az érintett üzleti évek között. 5) Az összemérés, teljesség és valódiság elvét szolgálja. 6) Eszközei az aktív (AIE) és passzív (PIE) időbeli elhatárolások. 7) Pl. tárgyévre járó, jövőre fizetett kamat → bevételek AIE; jövő évre előre fizetett bérleti díj → költségek AIE.",
+   "zh_valoszinuseg": "magas",
+   "forras": "alapelvek.pdf, 28. dia"
+  },
+  {
+   "id": "elv_tartalom_elsodlegessege",
+   "nev": "A tartalom elsődlegessége a formával szemben elve",
+   "besorolas": "KIEGÉSZÍTŐ ELV",
+   "definicio": "A gazdasági eseményeket a (köz)gazdasági tartalmuknak megfelelően kell elszámolni, nem a jogi formula alapján. A szerződéseket, megállapodásokat valós tartalmuk alapján, és nem azok elnevezése és jogi formája szerint kell megítélni.",
+   "kulcselemek": [
+    "közgazdasági tartalom szerinti elszámolás, nem a jogi forma szerint",
+    "szerződések megítélése valós tartalmuk alapján, nem elnevezésük szerint",
+    "fontos szerepe van a számlarendnek, számlakeretnek (megfelelő mélységű rögzítés)",
+    "sokszor nem elég a számla: a valós ügyletet leíró szerződés és a teljesítést igazoló egyéb dokumentum is kell"
+   ],
+   "pelda": "A könyvelőnek nem elég a számla; a valós teljesítés megállapításához szükség van a valós ügyletet leíró szerződésre és a teljesítést igazoló egyéb dokumentumokra.",
+   "kivetel": null,
+   "kapcsolodo": [
+    "elv_valodisag"
+   ],
+   "minta_kifejtes_7pont": "1) Kiegészítő elv. 2) A gazdasági eseményeket (köz)gazdasági tartalmuk szerint kell elszámolni, 3) nem a jogi formula alapján. 4) A szerződéseket valós tartalmuk, nem elnevezésük és jogi formájuk szerint kell megítélni. 5) Fontos szerepe van a számlarendnek. 6) A könyveléshez sokszor nem elég a számla, 7) kell a valós ügyletet leíró szerződés és a teljesítést igazoló egyéb dokumentum is.",
+   "zh_valoszinuseg": "magas",
+   "forras": "alapelvek.pdf, 29. dia"
+  },
+  {
+   "id": "elv_lenyegesseg",
+   "nev": "Lényegesség elve",
+   "besorolas": "KIEGÉSZÍTŐ ELV",
+   "definicio": "Lényeges minden olyan információ, amelynek elhagyása vagy téves bemutatása befolyásolja a beszámoló információit felhasználók döntéseit. A lényegesség megítélése a gazdálkodó joga és felelőssége; a következetesség elve kikényszeríti, hogy ne alkalomszerű döntésen alapuljon – ezt a számviteli politikában rögzíteni kell.",
+   "kulcselemek": [
+    "lényeges: elhagyása vagy téves bemutatása befolyásolja a felhasználók döntéseit",
+    "pl. a jelentős összegű hiba értékhatárának meghatározása",
+    "megítélése a gazdálkodó joga és felelőssége",
+    "a következetesség elve miatt nem lehet alkalomszerű",
+    "a számviteli politikában rögzíteni kell"
+   ],
+   "pelda": "A mérlegből nem olvasható ki, mely ingatlanok terheltek zálogjoggal – ezt a kiegészítő mellékletben részletezni kell; ha a gazdálkodó nem teszi meg, megsértette a lényegesség elvét.",
+   "kivetel": null,
+   "kapcsolodo": [
+    "elv_kovetkezetesseg",
+    "elv_koltseg_haszon"
+   ],
+   "minta_kifejtes_7pont": "1) Kiegészítő elv. 2) Lényeges minden információ, amelynek elhagyása vagy 3) téves bemutatása 4) befolyásolja a beszámoló felhasználóinak döntéseit. 5) Megítélése a gazdálkodó joga és felelőssége, 6) a következetesség elve miatt nem lehet alkalomszerű, a számviteli politikában rögzíteni kell (pl. jelentős összegű hiba értékhatára). 7) Pl. a zálogjoggal terhelt ingatlanokat a kiegészítő mellékletben részletezni kell.",
+   "zh_valoszinuseg": "magas",
+   "forras": "alapelvek.pdf, 30. dia"
+  },
+  {
+   "id": "elv_koltseg_haszon",
+   "nev": "A költség-haszon összevetésének elve",
+   "besorolas": "KIEGÉSZÍTŐ ELV",
+   "definicio": "A beszámolóban szereplő információkból nyerhető haszon haladja meg az információ előállításának költségeit. DE az Szt. meghatározza azokat az információkat, amelyek a legszükségesebbek (ennek oka az üzleti szubjektivitás).",
+   "kulcselemek": [
+    "az információ haszna haladja meg az előállítás költségét",
+    "DE: a legszükségesebb információkat az Szt. kötelezően előírja (üzleti szubjektivitás miatt)",
+    "a kötelezőn felüli részletezésnél a gazdaságosság követelményét és a lényegesség elvét kell szem előtt tartani"
+   ],
+   "pelda": "A kiegészítő mellékletben kötelező közölni az átlagos statisztikai létszámot, bérköltséget, személyi jellegű egyéb kifizetéseket állománycsoportonként; ha ezen felül jogcímenként (végkielégítés, táppénz-hozzájárulás, étkezési hozzájárulás stb.) is részletezné, a gazdaságosságot és a lényegességet kell mérlegelnie.",
+   "kivetel": null,
+   "kapcsolodo": [
+    "elv_lenyegesseg"
+   ],
+   "minta_kifejtes_7pont": "1) Kiegészítő elv. 2) A beszámoló információiból nyerhető haszon 3) haladja meg az információ előállításának költségét. 4) DE az Szt. meghatározza a legszükségesebb információkat, 5) ennek oka az üzleti szubjektivitás. 6) A kötelezőn felüli részletezésnél a gazdaságosságot és a lényegesség elvét kell szem előtt tartani. 7) Pl. személyi jellegű kifizetések jogcímenkénti részletezése a kiegészítő mellékletben.",
+   "zh_valoszinuseg": "magas",
+   "forras": "alapelvek.pdf, 31. dia"
+  },
+  {
+   "id": "f_nem_nevesitett_alapelvek",
+   "nev": "Nem nevesített alapelvek",
+   "definicio": "Az Szt.-ben nem nevesített, de a számviteli gyakorlatban ismert elvek: realizációs elv (a ténylegesen felosztható eredmény megállapítása az elsődleges cél, bekerülési áron értékel, figyelemmel van a tőkemegtartásra); időérték elve (a vagyonnagyság megállapítása az elsődleges, napi piaci áron értékel); tárgyilagosság (elfogulatlan, előítélettől mentes információ – semlegesség); időszerűség (az információ időben álljon rendelkezésre, de megbízható is legyen); helytállóság (tévedéstől és előítéletektől mentes, még potenciálisan se félrevezető); relevancia (a döntéshozatalnál alkalmazható információ).",
+   "kulcselemek": [
+    "realizációs",
+    "időérték",
+    "tárgyilagosság",
+    "időszerűség",
+    "helytállóság",
+    "relevancia"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "alacsony",
+   "forras": "alapelvek.pdf, 16. dia"
+  },
+  {
+   "id": "f_alapelvek_jellemzoi",
+   "nev": "A számviteli alapelvek jellemzői",
+   "definicio": "Alapul szolgálnak a számviteli politika kialakításához; a könyvvezetés és a beszámoló készítésekor is érvényesíteni kell őket; megsértésük az Szt. megsértését jelenti; eltérni csak az Szt. szerint szabályozott módon lehet. Céljuk, hogy az Szt. keretjellegét erősítsék (ne legyenek áttekinthetetlen részletszabályok); céljukban és tartalmukban megfelelnek a nemzetközi számviteli kereteknek és gyakorlatnak.",
+   "kulcselemek": [
+    "számviteli politika alapja",
+    "könyvvezetésnél és beszámolónál is érvényesíteni kell",
+    "megsértésük = Szt. megsértése",
+    "eltérés csak az Szt. szerint",
+    "keretjelleg erősítése",
+    "nemzetközi gyakorlattal összhangban"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "kozepes",
+   "forras": "alapelvek.pdf, 14. dia"
+  },
+  {
+   "id": "f_szt_celja",
+   "nev": "A számviteli törvény (2000. évi C. tv.) célja",
+   "definicio": "A beszámolási és könyvvezetési kötelezettség meghatározása; a beszámoló összeállítása, könyvvezetés során érvényesítendő elvek, szabályok meghatározása; a nyilvánosságra hozatalra, közzétételre és könyvvizsgálatra vonatkozó követelmények meghatározása.",
+   "kulcselemek": [
+    "beszámolási és könyvvezetési kötelezettség",
+    "érvényesítendő elvek, szabályok",
+    "nyilvánosságra hozatal, közzététel, könyvvizsgálat követelményei"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "kozepes",
+   "forras": "alapelvek.pdf, 7. dia"
+  },
+  {
+   "id": "f_szt_hatalya",
+   "nev": "Az Szt. hatálya",
+   "definicio": "Hatálya alá tartozik a gazdálkodó (működéséről a nemzetgazdaság más szereplői tájékoztatást igényelnek). Hatálya NEM terjed ki: az egyéni vállalkozóra (SZJA tv.), a polgári jogi társaságra, az építőközösségre, a külföldi székhelyű vállalkozás magyarországi kereskedelmi képviseletére (TAO tv.), valamint arra a Kkt.-ra, Bt.-re, egyéni cégre, ügyvédi irodára, amely az üzleti évben a KIVA tv. előírásai szerint vezeti nyilvántartásait.",
+   "kulcselemek": [
+    "gazdálkodó",
+    "NEM: egyéni vállalkozó",
+    "NEM: polgári jogi társaság",
+    "NEM: építőközösség",
+    "NEM: külföldi székhelyű vállalkozás magyarországi kereskedelmi képviselete",
+    "NEM: KIVA szerint nyilvántartást vezető Kkt., Bt., egyéni cég, ügyvédi iroda"
+   ],
+   "pelda": "Egy átalányadózó egyéni vállalkozó nem az Szt., hanem az SZJA tv. szerint vezeti nyilvántartásait.",
+   "zh_valoszinuseg": "kozepes",
+   "forras": "alapelvek.pdf, 8. dia; alapelvek.pdf, 10. dia; alapelvek.pdf, 11. dia"
+  },
+  {
+   "id": "f_gazdalkodo",
+   "nev": "Gazdálkodó",
+   "definicio": "A vállalkozó, az államháztartás szervezetei, az egyéb szervezet, az MNB, és az általuk, illetve a természetes személy által alapított egészségügyi, szociális és kulturális intézmény.",
+   "kulcselemek": [
+    "vállalkozó",
+    "államháztartás szervezetei",
+    "egyéb szervezet",
+    "MNB",
+    "általuk / természetes személy által alapított egészségügyi, szociális, kulturális intézmény"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "kozepes",
+   "forras": "alapelvek.pdf, 9. dia"
+  },
+  {
+   "id": "f_vallalkozo",
+   "nev": "Vállalkozó",
+   "definicio": "Minden olyan gazdálkodó, amely saját nevében és kockázatára, nyereség- és vagyonszerzés céljából, üzletszerűen, ellenérték fejében termelő- vagy szolgáltató (vállalkozási) tevékenységet végez. Ide tartozik a hitelintézet, a pénzügyi vállalkozás, a befektetési vállalkozás, a biztosító, a nonprofit gt., az egyesülés, a szociális szövetkezet, az iskolaszövetkezet, a közérdekű nyugdíjas szövetkezet stb. is.",
+   "kulcselemek": [
+    "saját nevében és kockázatára",
+    "nyereség- és vagyonszerzés céljából",
+    "üzletszerűen",
+    "ellenérték fejében",
+    "termelő- vagy szolgáltató tevékenység"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "kozepes",
+   "forras": "alapelvek.pdf, 12. dia"
+  },
+  {
+   "id": "f_szamviteli_politika",
+   "nev": "Számviteli politika",
+   "definicio": "Az Szt.-ben rögzített alapelvek, értékelési előírások alapján kialakított és írásba foglalt módszerek, eszközök és eljárások összessége, amelyek kihatással vannak a vállalkozás vagyoni, pénzügyi és jövedelmi helyzetére, befolyásolják a vállalkozás eredményét. Keretszabály, amely egymással összefüggő részszabályzatokat tartalmaz; döntések összessége, amelyek a vállalkozóra kötelezőek, eltérni csak módosítás után lehet.",
+   "kulcselemek": [
+    "Szt. alapelvei, értékelési előírásai alapján",
+    "írásba foglalt",
+    "módszerek, eszközök, eljárások összessége",
+    "hat a vagyoni, pénzügyi, jövedelmi helyzetre és az eredményre",
+    "keretszabály részszabályzatokkal",
+    "kötelező érvényű, eltérés csak módosítás után"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "kozepes",
+   "forras": "alapelvek.pdf, 33. dia; alapelvek.pdf, 35. dia"
+  },
+  {
+   "id": "f_szamviteli_politika_elkeszitese",
+   "nev": "A számviteli politika elkészítése (felelős, határidő)",
+   "definicio": "A vállalkozó feladata a részletes kimunkálás, választási lehetőségeknél a döntés és rögzítése, változtatás esetén indoklás. Az elkészítéséért és módosításáért a GAZDÁLKODÓ KÉPVISELETÉRE jogosult személy felel (akkor is, ha külső szervezetet bíztak meg). A megalakulástól számított 90 napon belül kell elkészíteni; törvénymódosítás esetén a hatálybalépést követő 90 napon belül kell a változásokat átvezetni.",
+   "kulcselemek": [
+    "felelős: a gazdálkodó képviseletére jogosult személy",
+    "külső megbízás esetén is",
+    "megalakulástól 90 nap",
+    "törvénymódosítás hatálybalépésétől 90 nap",
+    "változtatásnál indoklás"
+   ],
+   "pelda": "Egy 2026. március 1-jén bejegyzett kft.-nek 2026. május 30-ig kell elkészítenie a számviteli politikáját; a felelős az ügyvezető, akkor is, ha a könyvelőiroda írja meg.",
+   "zh_valoszinuseg": "magas",
+   "forras": "alapelvek.pdf, 38. dia"
+  },
+  {
+   "id": "f_szamviteli_politika_szabalyzatai",
+   "nev": "A számviteli politika szabályzatai",
+   "definicio": "Kötelező: az eszközök és források értékelési szabályzata; az eszközök és források leltárkészítési és leltározási szabályzata; az önköltségszámítás rendjére vonatkozó belső szabályzat; a pénzkezelési szabályzat. Ezen kívül a számviteli politika része a számlarend és a bizonylati szabályzat. Más szabályzat is készíthető, a kötelezők összevonhatók, tovább tagolhatók.",
+   "kulcselemek": [
+    "értékelési szabályzat",
+    "leltárkészítési és leltározási szabályzat",
+    "önköltségszámítási szabályzat",
+    "pénzkezelési szabályzat",
+    "+ számlarend",
+    "+ bizonylati szabályzat"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "kozepes",
+   "forras": "alapelvek.pdf, 39. dia"
+  },
+  {
+   "id": "f_onkoltsegszamitasi_szabalyzat",
+   "nev": "Önköltségszámítási szabályzat elkészítésének kötelezettsége",
+   "definicio": "Nem kell elkészíteni egyszerűsített beszámoló, egyszerűsített éves beszámoló esetén, illetve mentesülhet, ha a nettó árbevétel – ELÁBÉ – közvetített szolgáltatások értéke nem haladja meg az 1 mrd Ft-ot, vagy a költségnemek szerinti költségek együttes összege nem haladja meg az 500 mFt-ot. Ha az értékhatárokat egyszer meghaladja, akkor is el kell készíteni, ha a mutatók újra a határ alá esnek.",
+   "kulcselemek": [
+    "egyszerűsített (éves) beszámolónál nem kötelező",
+    "árbevétel – ELÁBÉ – közvetített szolg. ≤ 1 mrd Ft",
+    "vagy költségnemek ≤ 500 mFt",
+    "egyszeri túllépés után végleges kötelezettség"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "alacsony",
+   "forras": "alapelvek.pdf, 40. dia"
+  },
+  {
+   "id": "f_beszamolasi_kotelezettseg",
+   "nev": "Beszámolási kötelezettség",
+   "definicio": "A gazdálkodó működéséről, vagyoni, pénzügyi és jövedelmi helyzetéről, az üzleti év könyveinek zárását követően, az Szt. szerinti könyvvezetéssel alátámasztva, magyar nyelven beszámolót köteles készíteni. A törvény szabályaitól eltérni csak kivételes esetben, könyvvizsgálói jóváhagyással lehet (kiegészítő mellékletben magyarázva). Meghatározott esetekben devizában is vezethetők a könyvek és készíthető a beszámoló (EUR, USD: számviteli politika; más deviza: létesítő okirat – funkcionális pénznem, 25%-os feltétel).",
+   "kulcselemek": [
+    "működés, vagyoni, pénzügyi, jövedelmi helyzet",
+    "könyvek zárását követően",
+    "könyvvezetéssel alátámasztva",
+    "magyar nyelven",
+    "üzleti évről"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "kozepes",
+   "forras": "alapelvek.pdf, 42. dia; alapelvek.pdf, 43. dia"
+  },
+  {
+   "id": "f_eves_beszamolo",
+   "nev": "Éves beszámoló",
+   "definicio": "Kettős könyvvitelre épülő beszámoló, részei: mérleg, eredménykimutatás, kiegészítő melléklet + üzleti jelentés. Minden gazdálkodó készíthet; a legtöbb vállalkozás ezt készíti (összefoglaló dia). Kötelező, ha két egymást követő évben két mutató túllépi az egyszerűsített éves beszámoló határait.",
+   "kulcselemek": [
+    "mérleg",
+    "eredménykimutatás",
+    "kiegészítő melléklet",
+    "+ üzleti jelentés",
+    "kettős könyvvitel"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "kozepes",
+   "forras": "alapelvek.pdf, 45. dia; alapelvek.pdf, 55. dia"
+  },
+  {
+   "id": "f_egyszerusitett_eves_beszamolo",
+   "nev": "Egyszerűsített éves beszámoló",
+   "definicio": "Kettős könyvvitelre épül; részei: mérleg, eredménykimutatás, kiegészítő melléklet (üzleti jelentés nélkül). Akkor készíthető, ha két egymást követő üzleti évben a három mutató közül bármelyik kettő (nem feltétel, hogy mindig ugyanaz a kettő) NEM haladja meg: éves nettó árbevétel 4 000 mFt, mérlegfőösszeg 2 000 mFt, tárgyévi átlagos foglalkoztatott létszám 50 fő. Nem készíthet: NYRt., anyavállalat, közérdeklődésre számot tartó gazdálkodó, olyan vállalkozó, amelynek értékpapírjainak tőzsdei kereskedelme engedélyezett vagy azt már kérelmezték.",
+   "kulcselemek": [
+    "mérleg + eredménykimutatás + kiegészítő melléklet",
+    "2 000 mFt mérlegfőösszeg",
+    "4 000 mFt nettó árbevétel",
+    "50 fő",
+    "két egymást követő évben 3-ból 2 ne lépje túl",
+    "NEM: NYRt., anyavállalat, közérdeklődésre számot tartó, tőzsdei"
+   ],
+   "pelda": "Moodle 6. kérdés: 2100/2050 M mérleg, 3900/3800 M árbevétel, 45/49 fő → mindkét évben csak a mérlegfőösszeg lépi túl → készíthet egyszerűsített éves beszámolót.",
+   "zh_valoszinuseg": "magas",
+   "forras": "alapelvek.pdf, 45. dia; alapelvek.pdf, 46. dia"
+  },
+  {
+   "id": "f_mikro_beszamolo",
+   "nev": "Mikrogazdálkodói egyszerűsített éves beszámoló",
+   "definicio": "Kormányrendelet szerint készíthető, ha két egymást követő üzleti évben bármely két mutató (nem feltétel, hogy mindig ugyanaz) NEM haladja meg: éves nettó árbevétel 360 mFt, mérlegfőösszeg 180 mFt, tárgyévi átlagos foglalkoztatott létszám 10 fő. Csak könyvvizsgálatra nem kötelezett vállalkozó választhatja. Tartalma: mérleg, eredménykimutatás.",
+   "kulcselemek": [
+    "180 mFt mérlegfőösszeg",
+    "360 mFt nettó árbevétel",
+    "10 fő",
+    "csak könyvvizsgálatra nem kötelezett",
+    "tartalma: mérleg + eredménykimutatás",
+    "kormányrendelet szabályozza"
+   ],
+   "pelda": "Moodle 17. kérdés: 170/175 M mérleg, 340/370 M árbevétel, 12/9 fő → mindkét évben csak egy mutató lép túl → készíthet.",
+   "zh_valoszinuseg": "magas",
+   "forras": "alapelvek.pdf, 49. dia"
+  },
+  {
+   "id": "f_konszolidalt_beszamolo",
+   "nev": "Összevont (konszolidált) éves beszámoló",
+   "definicio": "Konszolidált mérleg, konszolidált eredménykimutatás, konszolidált kiegészítő melléklet + üzleti jelentés. Az anyavállalat készíti, ha egy vagy több vállalkozáshoz fűződő viszonyában anyavállalatnak minősül (meghatározó befolyást gyakorol közvetlenül vagy leányvállalatán keresztül közvetetten). Célja, hogy a gazdaságilag szorosan összetartozó, de jogilag önálló vállalkozások összességének vagyoni, pénzügyi, jövedelmi helyzetét úgy mutassa be, mintha egyetlen önálló vállalkozás lennének. Minden tagvállalat éves beszámolót is készít.",
+   "kulcselemek": [
+    "anyavállalat készíti",
+    "meghatározó befolyás",
+    "gazdaságilag összetartozó, jogilag önálló vállalkozások",
+    "mintha egyetlen vállalkozás lenne",
+    "tagvállalatok saját éves beszámolója mellett"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "alacsony",
+   "forras": "alapelvek.pdf, 51. dia; alapelvek.pdf, 53. dia"
+  },
+  {
+   "id": "f_meghatarozo_befolyas",
+   "nev": "Meghatározó befolyás",
+   "definicio": "Fennáll, ha a tulajdonos: tulajdoni hányada alapján a szavazatok többségével rendelkezik; a tulajdonosokkal kötött megállapodás alapján a szavazatok többségét egyedül birtokolja; tulajdonosként jogosult a vezető tisztségviselők vagy a felügyelőbizottsági tagok többségét megválasztani vagy visszahívni; tulajdonosokkal kötött szerződés alapján döntő irányítást, ellenőrzést gyakorol.",
+   "kulcselemek": [
+    "szavazattöbbség tulajdoni hányad alapján",
+    "szavazattöbbség megállapodás alapján",
+    "vezetők / FB többségének kinevezése, visszahívása",
+    "szerződés alapján döntő irányítás"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "alacsony",
+   "forras": "alapelvek.pdf, 52. dia"
+  },
+  {
+   "id": "f_egyszerusitett_beszamolo",
+   "nev": "Egyszerűsített beszámoló",
+   "definicio": "Egyszeres könyvvitelre épülő beszámoló (egyszerűsített mérleg, eredménylevezetés), csak egyéb szervezetek készíthetik (pl. egyesület, alapítvány, köztestület, közalapítvány, lakásszövetkezet, társasház, ügyvédi iroda, egyházi jogi személy, nyugdíjpénztárak, víziközmű-társulat stb.).",
+   "kulcselemek": [
+    "egyszeres könyvvitel",
+    "egyszerűsített mérleg + eredménylevezetés",
+    "csak egyéb szervezetek"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "alacsony",
+   "forras": "alapelvek.pdf, 54. dia"
+  },
+  {
+   "id": "f_ifrs",
+   "nev": "IFRS-ek alkalmazása",
+   "definicio": "2005-től az EGT-ben tőzsdére bevezetett értékpapírokkal rendelkező vállalkozások IFRS szerint kötelesek készíteni konszolidált beszámolójukat. Egyedi éves beszámolót IFRS szerint KÖTELES összeállítani: akinek értékpapírjait az EGT szabályozott piacán forgalmazzák, a hitelintézet és a vele egyenértékű prudenciális szabályozású pénzügyi vállalkozás. VÁLASZTHATJA pl. akinek anyavállalata IFRS szerint konszolidál, a biztosító, MNB-felügyelt pénzügyi vállalkozások, a könyvvizsgálatra kötelezett gazdasági társaság, a külföldi vállalkozás magyarországi fióktelepe. NEM alkalmazhatja: állami/önkormányzati vagyonkezelő, nonprofit gt., kölcsönös biztosító egyesület. Az IFRS-ben nem szabályozott kérdésekben az Szt. az irányadó.",
+   "kulcselemek": [
+    "kötelező: EGT-tőzsdei, hitelintézet",
+    "választható: pl. könyvvizsgálatra kötelezett gt.",
+    "tilos: állami/önkormányzati vagyonkezelő, nonprofit gt., kölcsönös biztosító egyesület"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "alacsony",
+   "forras": "alapelvek.pdf, 5. dia; alapelvek.pdf, 56. dia"
+  },
+  {
+   "id": "f_szamviteli_bizonylat",
+   "nev": "Számviteli bizonylat",
+   "definicio": "Minden olyan külső és belső okmány – függetlenül annak nyomdai vagy egyéb előállítási módjától –, amelyet a gazdasági esemény számviteli elszámolásának alátámasztására készítettek, és rendelkezik az Szt. által meghatározott alaki és tartalmi kellékekkel. Magyar nyelven kell kiállítani a gazdasági esemény megtörténtekor; indokolt esetben idegen nyelven is, de az adatokat magyarul is fel kell tüntetni (belső szabályzatban rögzítve).",
+   "kulcselemek": [
+    "külső és belső okmány",
+    "előállítási módtól független",
+    "a gazdasági esemény elszámolásának alátámasztására",
+    "Szt. szerinti alaki és tartalmi kellékek",
+    "magyar nyelven, az esemény megtörténtekor"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "kozepes",
+   "forras": "alapelvek.pdf, 58. dia"
+  },
+  {
+   "id": "f_bizonylat_kellekei",
+   "nev": "A bizonylat alaki és tartalmi kellékei",
+   "definicio": "Megnevezés, sorszám; kiállító gazdasági szervezet; a bizonylat kiállítója, illetve az elrendelő személy vagy szervezet; utalványozó, a rendelkezés végrehajtását igazoló személy; átvevő/befizető (pénzkezelési, készletgazdálkodási bizonylatokon); kiállítás időpontja; a gazdasági esemény rövid leírása (mennyiségi, minőségi, értékadatok); a könyvelés módjára, könyvviteli számlákra hivatkozás; a könyviteli rögzítés időpontja, igazolása; összesítő bizonylatnál az időszak és a kör megjelölése; külső bizonylaton a kiállító neve és címe; minden jogszabály által előírt adat; elektronikus bizonylatnál az egyértelmű azonosíthatóság, olvashatóság, értelmezhetőség.",
+   "kulcselemek": [
+    "megnevezés, sorszám",
+    "kiállító",
+    "elrendelő",
+    "utalványozó",
+    "átvevő/befizető",
+    "kiállítás időpontja",
+    "esemény leírása",
+    "számlákra hivatkozás",
+    "rögzítés időpontja"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "alacsony",
+   "forras": "alapelvek.pdf, 59. dia"
+  },
+  {
+   "id": "f_szigoru_szamadas",
+   "nev": "Szigorú számadási kötelezettség alá tartozó bizonylatok",
+   "definicio": "Készpénzkezelés bizonylatai (bevételi, kiadási pénztárbizonylat); más jogszabály által meghatározott bizonylatok (számla, egyszerűsített számla, nyugta); minden olyan nyomtatvány, amelyért a nyomtatvány értékét meghaladó vagy a rajta szereplő névértéknek megfelelő ellenértéket kell fizetni (étkezési, ajándék-, üdülési utalvány, belépőjegy); amelynek illetéktelen felhasználása visszaélésre adhat alkalmat.",
+   "kulcselemek": [
+    "pénztárbizonylatok",
+    "számla, egyszerűsített számla, nyugta",
+    "utalványok, belépőjegy",
+    "illetéktelen felhasználás visszaélésre adhat alkalmat"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "alacsony",
+   "forras": "alapelvek.pdf, 60. dia"
+  },
+  {
+   "id": "f_bizonylat_megorzes",
+   "nev": "Bizonylatmegőrzés",
+   "definicio": "Legalább 8 évig, olvasható formában, az utólagos módosítás lehetőségét kizárva, visszakereshető módon kell megőrizni: a beszámolót, a főkönyvi kivonatot, a leltárt, leltárértékelést, a naplófőkönyvet, az Szt. szerinti nyilvántartásokat, az ezeket alátámasztó leltárt, analitikus és kiegészítő nyilvántartásokat. Az elektronikusan kiállított bizonylatot elektronikusan kell megőrizni; a papíralapú is őrizhető elektronikusan.",
+   "kulcselemek": [
+    "legalább 8 év",
+    "olvasható",
+    "utólagos módosítás kizárva",
+    "visszakereshető",
+    "elektronikus bizonylat elektronikusan"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "kozepes",
+   "forras": "alapelvek.pdf, 61. dia; alapelvek.pdf, 62. dia"
+  },
+  {
+   "id": "f_bizonylati_elv_fegyelem",
+   "nev": "Bizonylati elv és bizonylati fegyelem",
+   "definicio": "Minden gazdasági eseményről, amely megváltoztatja az eszközök, források állományát, összetételét, bizonylatot kell kiállítani. A bizonylatokat késedelem nélkül kell a könyvviteli rendszerben rögzíteni; csak szabályszerűen kiállított bizonylatot szabad rögzíteni. Határidők: pénzeszközöket érintő gazdasági eseményeket a pénzmozgással egyidejűleg / a pénzintézeti értesítés megérkezésekor; 'egyéb pénzeszközöket érintő' tételeket a tárgyhót követő hó 15-ig (a dia szövege szerint); egyéb gazdasági eseményeket legalább negyedévenként, a tárgynegyedévet követő hó végéig.",
+   "kulcselemek": [
+    "minden eszköz-/forrásváltozásról bizonylat",
+    "késedelem nélkül rögzíteni",
+    "csak szabályszerű bizonylatot",
+    "készpénz: pénzmozgással egyidejűleg",
+    "bank: pénzintézeti értesítés megérkezésekor",
+    "egyéb pénzeszközt érintő: tárgyhót követő hó 15-ig",
+    "egyéb: legalább negyedévente, a negyedévet követő hó végéig"
+   ],
+   "pelda": "Egy szeptemberi szállítói számla (nem pénzeszközt érintő esemény) legkésőbb október 31-ig rögzítendő (III. negyedév → következő hó vége).",
+   "zh_valoszinuseg": "kozepes",
+   "forras": "alapelvek.pdf, 63. dia"
+  },
+  {
+   "id": "f_szamviteli_szolgaltatas",
+   "nev": "Számviteli szolgáltatás",
+   "definicio": "A könyvvezetési, beszámolókészítési kötelezettség teljesítése érdekében elvégzendő feladatok összessége, ide tartozik a könyvvizsgálói tevékenység is. Ezekre a vállalkozás köteles legalább mérlegképes végzettségű természetes személyt vagy ilyen személyt alkalmazó társaságot megbízni – kivéve, ha az éves nettó árbevétel nem haladja meg a 20 mFt-ot.",
+   "kulcselemek": [
+    "könyvvezetés, beszámolókészítés feladatai",
+    "+ könyvvizsgálat",
+    "mérlegképes könyvelő kötelező",
+    "kivéve: nettó árbevétel ≤ 20 mFt"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "alacsony",
+   "forras": "alapelvek.pdf, 65. dia"
+  },
+  {
+   "id": "f_konyvviteli_szolgaltatas",
+   "nev": "Könyvviteli szolgáltatás és ki végezheti",
+   "definicio": "A könyvvezetés megszervezésével, végzésével, irányításával, szabályzatok készítésével, beszámoló összeállításával, elemzésével kapcsolatos feladatok; információ-előállítás, a beszámoló jogszerűségének, szabályszerűségének, megbízhatóságának biztosítása, bizonylatokkal alátámasztása, az alapelvek megtartása. Végezheti: mérlegképes könyvelői vagy okleveles könyvvizsgálói képesítéssel és igazolvánnyal rendelkező (nyilvántartásba vett) természetes személy, ill. számviteli szolgáltató társaság, ha ilyen tagját/alkalmazottját bízza meg. Éves szakmai továbbképzési kötelezettség terheli.",
+   "kulcselemek": [
+    "könyvvezetés szervezése, végzése, irányítása",
+    "szabályzatok",
+    "beszámoló összeállítása",
+    "mérlegképes / okleveles könyvvizsgáló",
+    "nyilvántartásba vétel",
+    "éves továbbképzés"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "alacsony",
+   "forras": "alapelvek.pdf, 66. dia; alapelvek.pdf, 67. dia"
+  },
+  {
+   "id": "f_konyvvizsgalat_celja",
+   "nev": "A könyvvizsgálat célja",
+   "definicio": "Annak megállapítása, hogy a vállalkozó által készített beszámoló a Számviteli törvény előírásai szerint készült, megbízható és valós összképet mutat a vállalkozás vagyoni, pénzügyi és jövedelmi helyzetéről, a működés eredményéről, és üzleti jelentése összhangban van a beszámoló többi részével. Nem a teljes hibamentességet garantálja, hanem azt, hogy nincs benne lényeges hiba.",
+   "kulcselemek": [
+    "Szt. szerint készült",
+    "megbízható és valós összkép",
+    "üzleti jelentés összhangja",
+    "nem teljes hibamentesség, hanem nincs lényeges hiba"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "kozepes",
+   "forras": "alapelvek.pdf, 68. dia"
+  },
+  {
+   "id": "f_konyvvizsgalati_kotelezettseg",
+   "nev": "Könyvvizsgálati kötelezettség",
+   "definicio": "Kötelező: akinek jogszabály előírja; minden kettős könyvvitelt vezető vállalkozónak, KIVÉVE ha éves nettó árbevétele az üzleti évet megelőző két üzleti év átlagában nem haladta meg a 600 mFt-ot ÉS az átlagos foglalkoztatott létszám nem haladta meg az 50 főt; a következő üzleti évben annak, akinek a tárgyévi mérlegfordulónapon 10 mFt-ot meghaladó, 60 napnál régebben lejárt köztartozása van; a konszolidálásba bevont vállalkozásnak; a takarékszövetkezetnek; a közérdeklődésre számot tartó gazdálkodónak.",
+   "kulcselemek": [
+    "mentesség: 2 előző év átlaga – árbevétel ≤ 600 mFt ÉS létszám ≤ 50 fő",
+    "10 mFt feletti, 60 napnál régebben lejárt köztartozás → következő évben kötelező",
+    "konszolidálásba bevont",
+    "takarékszövetkezet",
+    "közérdeklődésre számot tartó"
+   ],
+   "pelda": "2024: 640 mFt, 2025: 540 mFt árbevétel → átlag 590 mFt; létszám átlag 30 fő → 2026-ban nem kötelező a könyvvizsgálat.",
+   "zh_valoszinuseg": "kozepes",
+   "forras": "alapelvek.pdf, 55. dia; alapelvek.pdf, 69. dia"
+  },
+  {
+   "id": "f_konyvvizsgalo_feladata",
+   "nev": "A könyvvizsgáló feladata",
+   "definicio": "A beszámoló felülvizsgálata; az Szt. és a létesítő okirat előírásai betartásának vizsgálata; a könyvvizsgáló állásfoglalását tükröző vélemény kialakítása; a független könyvvizsgálói jelentés elkészítése.",
+   "kulcselemek": [
+    "beszámoló felülvizsgálata",
+    "Szt. és létesítő okirat betartása",
+    "vélemény kialakítása",
+    "független könyvvizsgálói jelentés"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "alacsony",
+   "forras": "alapelvek.pdf, 70. dia"
+  },
+  {
+   "id": "f_konyvvizsgaloi_velemenyek",
+   "nev": "Könyvvizsgálói vélemény (záradék) típusai",
+   "definicio": "Minősítés nélküli vélemény = (hitelesítő) záradék: 'a beszámoló lényeges hibás állítást nem tartalmaz' (MKVK minta: 'megbízható és valós képet adnak'). Minősített vélemények (pontos okát rögzíteni kell): korlátozott záradék – lényeges, de NEM átfogó hiba/hiányosság, vagy a bizonyítékok hiányának ilyen lehetséges hatása ('…kérdés hatásától eltekintve…'); elutasító záradék (ellenvélemény) – lényeges ÉS átfogó hibás állítások, összességében nem adnak megbízható és valós képet; záradékadás (véleménynyilvánítás) elutasítása – nem tudott elegendő és megfelelő bizonyítékot szerezni és ennek hatása lényeges (és átfogó), nem tudta elvégezni a megfelelő eljárásokat, vagy egyik záradéktípus sem adható. A záradék helye: a jelentés alsó részén, keltezés és aláírás fölött.",
+   "kulcselemek": [
+    "minősítés nélküli (hitelesítő) záradék",
+    "korlátozott: lényeges, nem átfogó",
+    "elutasító: lényeges és átfogó hibás állítás",
+    "véleménynyilvánítás elutasítása: nincs elegendő bizonyíték",
+    "záradékadás elutasítása ≠ elutasító záradék",
+    "helye: keltezés és aláírás fölött"
+   ],
+   "pelda": "Moodle 11.: nincs hozzáférés (bizonyíték), a hatás lényeges és átfogó → véleménynyilvánítás visszautasítása.",
+   "zh_valoszinuseg": "kozepes",
+   "forras": "alapelvek.pdf, 71. dia; alapelvek.pdf, 72. dia; alapelvek.pdf, 73. dia"
+  },
+  {
+   "id": "f_nyilvanossagra_hozatal",
+   "nev": "Nyilvánosságra hozatal (letétbe helyezés és közzététel)",
+   "definicio": "A lezárt üzleti évhez kötődő utolsó számviteli feladat; részei a letétbe helyezés és a közzététel. A mérlegfordulónapot követő ötödik hónap utolsó napjáig (naptári üzleti évnél május 31.) letétbe kell helyezni a jóváhagyásra jogosult testület által elfogadott éves / egyszerűsített éves beszámolót, kötelező könyvvizsgálat esetén a független könyvvizsgálói jelentést, és az adózott eredmény felhasználására vonatkozó határozatot. Elektronikusan kell elküldeni a Céginformációs Szolgálathoz (e-beszamolo.im.gov.hu) – ezzel a közzététel is teljesül. A munkavállalók, tagok számára a székhelyen megtekinthetővé kell tenni.",
+   "kulcselemek": [
+    "fordulónapot követő 5. hónap utolsó napja",
+    "elfogadott beszámoló",
+    "könyvvizsgálói jelentés (ha kötelező)",
+    "eredményfelhasználási határozat",
+    "elektronikusan a Céginformációs Szolgálatnak",
+    "ezzel közzé is van téve"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "kozepes",
+   "forras": "alapelvek.pdf, 75. dia; alapelvek.pdf, 76. dia; alapelvek.pdf, 77. dia"
+  },
+  {
+   "id": "f_kozzetetel_elmaradasa",
+   "nev": "A közzététel elmaradásának következményei",
+   "definicio": "Kezdeményezhető a cégbíróság törvényességi felügyeleti eljárása. A NAV felszólítja a vállalkozást, hogy 30 napon belül teljesítsen; ezt követően az adószámot felfüggesztheti vagy felfüggesztés nélkül törölheti. A cégbíróság a NAV értesítése alapján 20 munkanapon belül megszünteti a vállalkozást, ha addig sem teljesít.",
+   "kulcselemek": [
+    "törvényességi felügyeleti eljárás",
+    "NAV: 30 napos felszólítás",
+    "adószám felfüggesztése/törlése",
+    "cégbíróság: 20 munkanapon belül megszüntetés"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "alacsony",
+   "forras": "alapelvek.pdf, 78. dia"
+  },
+  {
+   "id": "f_beszamolokeszites_sorrendje",
+   "nev": "A beszámolókészítés folyamata (sorrend)",
+   "definicio": "Gazdasági esemény → bizonylat → könyvviteli rögzítés → év végi zárás (könyvviteli zárlat) → beszámoló → könyvvizsgálat, ha kötelező → letétbe helyezés / közzététel.",
+   "kulcselemek": [
+    "gazdasági esemény",
+    "bizonylat",
+    "könyvviteli rögzítés",
+    "év végi zárás",
+    "beszámoló",
+    "könyvvizsgálat (ha kötelező)",
+    "letétbe helyezés/közzététel"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "kozepes",
+   "forras": "tesztkerdesek_moodle.json (Számviteli alapelvek, beszámoló, 21. kérdés); a diák a könyvviteli zárlatot külön nem részletezik"
+  },
+  {
+   "id": "f_szt_tortenete",
+   "nev": "A számviteli törvény története",
+   "definicio": "1991. évi XVIII. tv. (piacgazdaságra átállás, elsősorban a piaci szereplők érdekeit szolgálja); 2000. évi C. tv. (a magyar számvitel közelítése az EU gyakorlatához); 2003: nemzeti standardok jogrendbe illesztése; 2016–19: nemzetközi számviteli rendszerhez közelítés. A szabályozás oka: az érintettek eltérő érdekei érdekütközéshez és információs aszimmetriához vezethetnek.",
+   "kulcselemek": [
+    "1991. évi XVIII. tv.",
+    "2000. évi C. tv.",
+    "2003 nemzeti standardok",
+    "2016–19 módosítás",
+    "információs aszimmetria"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "alacsony",
+   "forras": "alapelvek.pdf, 3. dia; alapelvek.pdf, 4. dia"
+  }
+ ],
+ "szabalyok": [
+  {
+   "id": "sz_alapelvek_csoportositasa",
+   "cim": "A számviteli alapelvek csoportosítása (diák szerint)",
+   "tartalom": "ÁLTALÁNOS ALAPELV: a vállalkozás folytatásának elve. A BESZÁMOLÓ TARTALMÁRA HATÓ (TARTALMI) ELVEK: 1) teljesség, 2) valódiság, 3) óvatosság, 4) összemérés. A BESZÁMOLÓ FORMÁJÁRA HATÓ (FORMAI) ELVEK: 1) világosság, 2) folytonosság, 3) következetesség. KIEGÉSZÍTŐ ELVEK: 1) egyedi értékelés, 2) bruttó elszámolás, 3) időbeli elhatárolás, 4) a tartalom elsődlegessége a formával szemben, 5) lényegesség, 6) költség-haszon összevetése. Összesen 1 + 4 + 3 + 6 = 14 nevesített alapelv.",
+   "csoportok": {
+    "altalanos": [
+     "A vállalkozás folytatásának elve"
+    ],
+    "tartalmi": [
+     "Teljesség elve",
+     "Valódiság elve",
+     "Óvatosság elve",
+     "Összemérés elve"
+    ],
+    "formai": [
+     "Világosság elve",
+     "Folytonosság elve",
+     "Következetesség elve"
+    ],
+    "kiegeszito": [
+     "Egyedi értékelés elve",
+     "Bruttó elszámolás elve",
+     "Időbeli elhatárolás elve",
+     "A tartalom elsődlegessége a formával szemben",
+     "Lényegesség elve",
+     "A költség-haszon összevetésének elve"
+    ]
+   },
+   "forras": "alapelvek.pdf, 15. dia"
+  },
+  {
+   "id": "sz_beszamolo_ertekhatarok",
+   "cim": "Beszámolófajták értékhatárai",
+   "tartalom": "Ha két egymást követő üzleti évben a mérleg fordulónapján a három mutató közül bármelyik kettő (nem kell mindig ugyanannak lennie) NEM haladja meg a határt: MIKROGAZDÁLKODÓI egyszerűsített éves beszámoló: mérlegfőösszeg 180 mFt, nettó árbevétel 360 mFt, átlagos létszám 10 fő (csak könyvvizsgálatra nem kötelezett). EGYSZERŰSÍTETT ÉVES beszámoló: 2 000 mFt, 4 000 mFt, 50 fő. ÉVES beszámoló: ha a határokat túllépi (bárki készítheti). KONSZOLIDÁLT: a dia összefoglaló táblája szerint >12 000 mFt mérlegfőösszeg, >24 000 mFt árbevétel, >250 fő. Ezek a 2026-ban érvényes értékek (mikro 180/360/10; egyszerűsített 2000/4000/50) – a diák már ezeket mutatják.",
+   "ertekhatarok": {
+    "mikro": {
+     "merlegfoosszeg_mFt": 180,
+     "arbevetel_mFt": 360,
+     "letszam_fo": 10
+    },
+    "egyszerusitett_eves": {
+     "merlegfoosszeg_mFt": 2000,
+     "arbevetel_mFt": 4000,
+     "letszam_fo": 50
+    },
+    "konszolidalt_dia_szerint": {
+     "merlegfoosszeg_mFt": 12000,
+     "arbevetel_mFt": 24000,
+     "letszam_fo": 250
+    }
+   },
+   "forras": "alapelvek.pdf, 45. dia; alapelvek.pdf, 49. dia; alapelvek.pdf, 55. dia"
+  },
+  {
+   "id": "sz_beszamolo_dontesi_algoritmus",
+   "cim": "Beszámolóforma-választás lépései (számolós feladathoz)",
+   "tartalom": "1) Mindkét vizsgált évre külön számold meg, hány mutató lépi TÚL a határt (a határral egyenlő érték még NEM túllépés – 'nem haladja meg'). 2) Egy év 'megfelel', ha legfeljebb 1 mutató lépi túl (azaz legalább 2 nem). 3) Ha MINDKÉT egymást követő évben megfelel → készítheti az adott (alacsonyabb szintű) beszámolót. 4) Először a mikro határaival (180/360/10), aztán az egyszerűsített éves határaival (2000/4000/50) vizsgálj. 5) Ellenőrizd a kizáró okokat: NYRt., anyavállalat, közérdeklődésre számot tartó, tőzsdei → nem lehet egyszerűsített éves; könyvvizsgálatra kötelezett → nem lehet mikro.",
+   "forras": "alapelvek.pdf, 45. dia; alapelvek.pdf, 46. dia; alapelvek.pdf, 49. dia"
+  },
+  {
+   "id": "sz_atteres",
+   "cim": "Áttérés a beszámolófajták között",
+   "tartalom": "Egyszerűsített éves → éves (magasabb szint): ha két egymást követő évben nem felel meg bármelyik két határértéknek, a második üzleti évet követő év január 1-jével KÖTELEZŐ áttérni; saját elhatározásból bármely év január 1-jével áttérhet. Éves → egyszerűsített éves (alacsonyabb szint): nem kötelező; saját elhatározásból azt az évet követő január 1-jével térhet át, amikor a feltételek két egymást követő évben már fennállnak. Mikro → egyszerűsített éves/éves: saját elhatározásból leghamarabb három, mikrogazdálkodói beszámolóval lezárt év után; ha két egymást követő évben nem felel meg a feltételeknek, a következő üzleti évtől át kell térni.",
+   "forras": "alapelvek.pdf, 47. dia; alapelvek.pdf, 48. dia; alapelvek.pdf, 50. dia"
+  },
+  {
+   "id": "sz_beszamolo_reszei",
+   "cim": "A beszámolók részei",
+   "tartalom": "Éves beszámoló: mérleg, eredménykimutatás, kiegészítő melléklet + üzleti jelentés. Egyszerűsített éves: mérleg, eredménykimutatás, kiegészítő melléklet. Mikrogazdálkodói: mérleg, eredménykimutatás. Konszolidált: konszolidált mérleg, eredménykimutatás, kiegészítő melléklet + üzleti jelentés. Egyszerűsített beszámoló (egyszeres könyvvitel, csak egyéb szervezetek): egyszerűsített mérleg, eredménylevezetés. Kettős könyvvitel: éves, egyszerűsített éves, mikro, IFRS, konszolidált.",
+   "forras": "alapelvek.pdf, 44. dia; alapelvek.pdf, 45. dia; alapelvek.pdf, 49. dia; alapelvek.pdf, 51. dia; alapelvek.pdf, 54. dia"
+  },
+  {
+   "id": "sz_nem_keszithet_egyszerusitett",
+   "cim": "Ki NEM készíthet egyszerűsített éves beszámolót",
+   "tartalom": "NYRt.; anyavállalat; közérdeklődésre számot tartó gazdálkodó; olyan vállalkozó, amelynek értékpapírjainak tőzsdei kereskedelme engedélyezett vagy azt már kérelmezték.",
+   "forras": "alapelvek.pdf, 46. dia"
+  },
+  {
+   "id": "sz_konyvvizsgalat_hatar",
+   "cim": "Könyvvizsgálati kötelezettség értékhatára",
+   "tartalom": "Mentes, ha az üzleti évet megelőző két üzleti év átlagában a nettó árbevétel ≤ 600 mFt ÉS az átlagos foglalkoztatott létszám ≤ 50 fő (mindkét feltételnek teljesülnie kell). Ha bármelyik átlag túllépi, kötelező. 10 mFt-ot meghaladó, 60 napnál régebben lejárt köztartozás a tárgyév fordulónapján → a következő évben kötelező.",
+   "forras": "alapelvek.pdf, 55. dia; alapelvek.pdf, 69. dia"
+  },
+  {
+   "id": "sz_szamviteli_politika_hatarido",
+   "cim": "Számviteli politika – felelős és határidők",
+   "tartalom": "Felelős: a gazdálkodó képviseletére jogosult személy (külső megbízás esetén is). Határidő: megalakulástól 90 nap; törvénymódosításnál a hatálybalépéstől 90 nap.",
+   "forras": "alapelvek.pdf, 38. dia"
+  },
+  {
+   "id": "sz_szamvitelpolitikai_dontesek",
+   "cim": "Számviteli politikai döntések csoportjai",
+   "tartalom": "Általános jellegű: beszámoló fajtája, naptári évtől eltérő üzleti év, mérlegkészítés időpontja, mérleg és eredménykimutatás formája, tételeinek bővítése/szűkítése, kiegészítő melléklet tartalma, számlarend és bizonylati szabályzat, könyvvezetés pénzneme. Eszközök, kötelezettségek értékelése: piaci értéken értékelés, amortizációs politika, devizás tételek árfolyama, készletek évközi nyilvántartása, STK értékelése, követelések minősítése, időbeli elhatárolások, céltartalékok. A lényegesség, illetve költség-haszon elvekkel összefüggő: jelentős összegű hiba, 200 eFt alatti tárgyi eszközök/immateriális javak egyösszegű leírása, terven felüli ÉCS tartóssága, fajlagosan kis értékű készletek, kisösszegű követelések köre, maradványérték, behajthatatlan követelés határa, egyéb gazdasági események könyvelési határideje, kivételes nagyságú tételek.",
+   "forras": "alapelvek.pdf, 36. dia; alapelvek.pdf, 37. dia"
+  },
+  {
+   "id": "sz_szamviteli_politika_kovetelmenyek",
+   "cim": "A számviteli politikával szembeni követelmények",
+   "tartalom": "Tükrözze a vállalkozás adottságait; hasznosítható legyen a külső és belső információigények szempontjából; teljes körű legyen (minden számvitel-politikai döntést tartalmazzon); érthetően értelmezze az Szt. előírásait a vállalkozásra; időszerű legyen (kövesse a jogszabályváltozásokat); következetes legyen (állandóság, indokolatlan változások kerülése).",
+   "forras": "alapelvek.pdf, 34. dia"
+  },
+  {
+   "id": "sz_bizonylati_hataridok",
+   "cim": "Könyvelési határidők (bizonylati fegyelem)",
+   "tartalom": "Pénzeszközöket érintő gazdasági események: a pénzmozgással egyidejűleg (készpénz) / a pénzintézeti értesítés megérkezésekor (bank). 'Egyéb pénzeszközöket érintő' tételek: a tárgyhót követő hó 15-ig. Egyéb gazdasági események: legalább negyedévenként, a tárgynegyedévet követő hó végéig.",
+   "forras": "alapelvek.pdf, 63. dia"
+  },
+  {
+   "id": "sz_szt_felepitese",
+   "cim": "A számviteli törvény felépítése",
+   "tartalom": "I. Általános rendelkezések; II. Beszámolás és könyvvezetés; III. Az éves beszámoló; IV. Egyszerűsített éves beszámoló; V. Egyszerűsített beszámoló; V/A. IFRS szerinti éves beszámolót készítőkre vonatkozó eltérő szabályok; VI. Összevont (konszolidált) éves beszámoló; VI/A. A kormány részére fizetett összegekről szóló jelentés; VI/B. Társaságiadó-információkat tartalmazó jelentés; VII. Sajátos beszámolási kötelezettségek; VIII. Számviteli szolgáltatás; IX. Nyilvánosságra hozatal és közzététel; X. Könyvvizsgálat; XI. Könyvvezetés és bizonylatolás; XII. Jogkövetkezmények; XIII. Az Országos Számviteli Bizottság; XIV. Záró rendelkezések; mellékletek.",
+   "forras": "alapelvek.pdf, 6. dia"
+  }
+ ],
+ "osszefuggesek": [
+  {
+   "id": "o_folytatas_alap",
+   "cim": "A vállalkozás folytatása a többi elv alapja",
+   "leiras": "Ha a vállalkozás nem tudja folytatni a tevékenységét vagy azt jelentősen csökkenti, a többi alapelv sem tud maradéktalanul érvényesülni.",
+   "keplet": null,
+   "kapcsolodo": [
+    "elv_vallalkozas_folytatasa"
+   ]
+  },
+  {
+   "id": "o_kovetkezetesseg_folytonossag",
+   "cim": "Következetesség – folytonosság",
+   "leiras": "A következetesség összefügg a folytonossággal: a számlarend és a számviteli politika egymást követő időszakokban következetes alkalmazását követeli meg. Folytonosság = nyitó = előző záró + előző évi adatok feltüntetése; következetesség = állandóság, összehasonlíthatóság.",
+   "keplet": null,
+   "kapcsolodo": [
+    "elv_kovetkezetesseg",
+    "elv_folytonossag"
+   ]
+  },
+  {
+   "id": "o_idobeli_elhatarolas_szolgalja",
+   "cim": "Az időbeli elhatárolás más elveket szolgál",
+   "leiras": "Az időbeli elhatárolás elve az összemérés, a teljesség és a valódiság elvének érvényesítését szolgálja (AIE, PIE).",
+   "keplet": null,
+   "kapcsolodo": [
+    "elv_idobeli_elhatarolas",
+    "elv_osszemeres",
+    "elv_teljesseg",
+    "elv_valodisag"
+   ]
+  },
+  {
+   "id": "o_lenyegesseg_kovetkezetesseg",
+   "cim": "Lényegesség – következetesség – számviteli politika",
+   "leiras": "A lényegesség megítélése a gazdálkodó joga, de a következetesség elve kikényszeríti, hogy ne alkalomszerű legyen; ezért a számviteli politikában kell rögzíteni.",
+   "keplet": null,
+   "kapcsolodo": [
+    "elv_lenyegesseg",
+    "elv_kovetkezetesseg",
+    "f_szamviteli_politika"
+   ]
+  },
+  {
+   "id": "o_teljesseg_ovatossag_fordulonap",
+   "cim": "Fordulónap és mérlegkészítés közötti események",
+   "leiras": "A teljesség elve szerint a fordulónap és mérlegkészítés között ismertté vált, tárgyévre vonatkozó eseményeket könyvelni kell; az óvatosság elve szerint az ekkor ismertté vált kockázatokra, veszteségekre értékvesztést, céltartalékot kell képezni. A Moodle-teszt az általános 'figyelembevétel' kérdésre a teljességet fogadta el.",
+   "keplet": null,
+   "kapcsolodo": [
+    "elv_teljesseg",
+    "elv_ovatossag"
+   ]
+  },
+  {
+   "id": "o_osszemeres_keplet",
+   "cim": "Az összemérés elve képletben",
+   "leiras": "Az időszak eredménye a pénzmozgástól független.",
+   "keplet": "Eredmény = időszaki teljesítések elismert bevételei – a teljesítésekkel szembeállítható költségek, ráfordítások",
+   "kapcsolodo": [
+    "elv_osszemeres"
+   ]
+  },
+  {
+   "id": "o_beszamolo_mutato",
+   "cim": "A beszámolóforma három mutatója",
+   "leiras": "Mérlegfőösszeg, éves nettó árbevétel, tárgyévi átlagos foglalkoztatott létszám; két egymást követő évben bármelyik kettő ne haladja meg a határt.",
+   "keplet": "megfelel(év) = [túllépő mutatók száma ≤ 1]; készítheti = megfelel(év1) ÉS megfelel(év2)",
+   "kapcsolodo": [
+    "f_egyszerusitett_eves_beszamolo",
+    "f_mikro_beszamolo"
+   ]
+  },
+  {
+   "id": "o_konyvvizsgalat_keplet",
+   "cim": "Könyvvizsgálati mentesség",
+   "leiras": "Az üzleti évet megelőző két év átlaga számít.",
+   "keplet": "mentes = [(árbevétel(t-1)+árbevétel(t-2))/2 ≤ 600 mFt] ÉS [(létszám(t-1)+létszám(t-2))/2 ≤ 50 fő]",
+   "kapcsolodo": [
+    "f_konyvvizsgalati_kotelezettseg"
+   ]
+  }
+ ],
+ "konyvelesi_minta": [
+  {
+   "id": "k_brutto_anyagkoltseg",
+   "esemeny": "Munkaeszköz vásárlása a dolgozónak (bruttó elszámolás példája, 50 000 Ft)",
+   "T": "51 (511 Felhasznált anyagok költségei)",
+   "K": "454 / 381",
+   "osszeg": "50 000 Ft teljes beszerzési érték",
+   "megjegyzes": "A dia csak 'Anyagköltség 50 000' tételt ír; a számlaszámok a kurzus számlatükre szerint, generált."
+  },
+  {
+   "id": "k_brutto_bevetel",
+   "esemeny": "A dolgozó kivásárolja a munkaeszközt maradványértéken (22 000 Ft)",
+   "T": "381 (vagy 361)",
+   "K": "969 Különféle egyéb bevételek",
+   "osszeg": "22 000 Ft – külön bevételként, NEM a költség csökkentéseként",
+   "megjegyzes": "A dia csak 'Bevétel 22 000' tételt ír; a 969 számla választása generált."
+  },
+  {
+   "id": "k_aie_kamat",
+   "esemeny": "Tárgyévre járó, de csak jövőre esedékes kamat (időbeli elhatárolás)",
+   "T": "391 Bevételek aktív időbeli elhatárolása",
+   "K": "974 Egyéb kapott (járó) kamatok",
+   "osszeg": "a tárgyévre jutó időarányos kamat",
+   "megjegyzes": "Generált a 28. dia példájából."
+  },
+  {
+   "id": "k_aie_berleti_dij",
+   "esemeny": "Következő évre előre kifizetett bérleti díj év végén",
+   "T": "392 Költségek, ráfordítások aktív időbeli elhatárolása",
+   "K": "522 Bérleti díjak",
+   "osszeg": "a következő évre jutó rész",
+   "megjegyzes": "Generált a 28. dia példájából."
+  }
+ ],
+ "feladatok": [
+  {
+   "id": "fa_1",
+   "forras": "teszt",
+   "cim": "Egyszerűsített éves beszámoló? (Moodle 6.)",
+   "szoveg": "Egy kft. adatai: mérlegfőösszeg 20X5: 2 100 mFt, 20X6: 2 050 mFt; nettó árbevétel 20X5: 3 900 mFt, 20X6: 3 800 mFt; átlagos létszám 20X5: 45 fő, 20X6: 49 fő. Készíthet-e egyszerűsített éves beszámolót 20X6-ban?",
+   "adatok": {
+    "merleg_mFt": [
+     2100,
+     2050
+    ],
+    "arbevetel_mFt": [
+     3900,
+     3800
+    ],
+    "letszam_fo": [
+     45,
+     49
+    ]
+   },
+   "megoldas": {
+    "szamitasok": [
+     {
+      "mit": "20X5 túllépések (2000/4000/50)",
+      "keplet": "2100>2000 igen; 3900>4000 nem; 45>50 nem",
+      "eredmeny": "1 túllépés → megfelel"
+     },
+     {
+      "mit": "20X6 túllépések",
+      "keplet": "2050>2000 igen; 3800>4000 nem; 49>50 nem",
+      "eredmeny": "1 túllépés → megfelel"
+     },
+     {
+      "mit": "Mikro vizsgálat (180/360/10)",
+      "keplet": "mindhárom mutató túllépi",
+      "eredmeny": "nem lehet mikro"
+     }
+    ],
+    "tetelek": [],
+    "egyeb": {
+     "valasz": "IGAZ – készíthet egyszerűsített éves beszámolót."
+    }
+   },
+   "tanulsagok": [
+    "Mindkét évben elég, ha 2 mutató a határon belül van; az, hogy a mérlegfőösszeg mindkét évben túllépi, nem baj."
+   ],
+   "elteresek_a_forrasban": []
+  },
+  {
+   "id": "fa_2",
+   "forras": "teszt",
+   "cim": "Milyen beszámolót készít? (Moodle 10.)",
+   "szoveg": "Kft.: mérlegfőösszeg 2 100 / 2 150 mFt, nettó árbevétel 3 900 / 4 200 mFt, létszám 52 / 55 fő (20X5 / 20X6). Milyen beszámolót készít 20X6-ban?",
+   "adatok": {
+    "merleg_mFt": [
+     2100,
+     2150
+    ],
+    "arbevetel_mFt": [
+     3900,
+     4200
+    ],
+    "letszam_fo": [
+     52,
+     55
+    ]
+   },
+   "megoldas": {
+    "szamitasok": [
+     {
+      "mit": "20X5 túllépések",
+      "keplet": "mérleg igen, árbevétel nem, létszám igen",
+      "eredmeny": "2 túllépés → nem felel meg"
+     },
+     {
+      "mit": "20X6 túllépések",
+      "keplet": "mérleg igen, árbevétel igen, létszám igen",
+      "eredmeny": "3 túllépés → nem felel meg"
+     }
+    ],
+    "tetelek": [],
+    "egyeb": {
+     "valasz": "Éves beszámolót."
+    }
+   },
+   "tanulsagok": [
+    "Már egyetlen év, amelyben 2 mutató túllép, kizárja az egyszerűsített éves beszámolót."
+   ],
+   "elteresek_a_forrasban": []
+  },
+  {
+   "id": "fa_3",
+   "forras": "teszt",
+   "cim": "Mikrogazdálkodói beszámoló? (Moodle 17.)",
+   "szoveg": "Kft. (könyvvizsgálatra nem kötelezett): mérlegfőösszeg 170 / 175 mFt, nettó árbevétel 340 / 370 mFt, létszám 12 / 9 fő. Készíthet-e mikrogazdálkodói egyszerűsített éves beszámolót 20X6-ban?",
+   "adatok": {
+    "merleg_mFt": [
+     170,
+     175
+    ],
+    "arbevetel_mFt": [
+     340,
+     370
+    ],
+    "letszam_fo": [
+     12,
+     9
+    ]
+   },
+   "megoldas": {
+    "szamitasok": [
+     {
+      "mit": "20X5 (180/360/10)",
+      "keplet": "170 nem; 340 nem; 12>10 igen",
+      "eredmeny": "1 túllépés → megfelel"
+     },
+     {
+      "mit": "20X6",
+      "keplet": "175 nem; 370>360 igen; 9 nem",
+      "eredmeny": "1 túllépés → megfelel"
+     }
+    ],
+    "tetelek": [],
+    "egyeb": {
+     "valasz": "IGAZ – készíthet mikrogazdálkodói beszámolót."
+    }
+   },
+   "tanulsagok": [
+    "Nem kell mindig ugyanannak a két mutatónak a határon belül lennie.",
+    "A mikro beszámoló feltétele az is, hogy ne legyen könyvvizsgálatra kötelezett."
+   ],
+   "elteresek_a_forrasban": []
+  },
+  {
+   "id": "fa_4",
+   "forras": "generalt",
+   "cim": "Határon lévő érték",
+   "szoveg": "Bt.: mérlegfőösszeg 180 / 185 mFt, nettó árbevétel 360 / 365 mFt, létszám 8 / 11 fő. Könyvvizsgálatra nem kötelezett. Készíthet-e mikro beszámolót?",
+   "adatok": {
+    "merleg_mFt": [
+     180,
+     185
+    ],
+    "arbevetel_mFt": [
+     360,
+     365
+    ],
+    "letszam_fo": [
+     8,
+     11
+    ]
+   },
+   "megoldas": {
+    "szamitasok": [
+     {
+      "mit": "1. év",
+      "keplet": "180 nem haladja meg a 180-at; 360 nem haladja meg; 8 nem",
+      "eredmeny": "0 túllépés → megfelel"
+     },
+     {
+      "mit": "2. év",
+      "keplet": "185>180 igen; 365>360 igen; 11>10 igen",
+      "eredmeny": "3 túllépés → nem felel meg"
+     }
+    ],
+    "tetelek": [],
+    "egyeb": {
+     "valasz": "NEM – a 2. évben mindhárom mutató túllép. (Egyszerűsített éves beszámolót készíthet.)"
+    }
+   },
+   "tanulsagok": [
+    "A határral egyenlő érték NEM túllépés ('nem haladja meg').",
+    "Két egymást követő évben kell megfelelni."
+   ],
+   "elteresek_a_forrasban": []
+  },
+  {
+   "id": "fa_5",
+   "forras": "generalt",
+   "cim": "Kizáró ok",
+   "szoveg": "Egy NYRt. mérlegfőösszege 1 500 / 1 600 mFt, nettó árbevétele 3 000 / 3 200 mFt, létszáma 40 / 42 fő. Milyen beszámolót készít?",
+   "adatok": {
+    "merleg_mFt": [
+     1500,
+     1600
+    ],
+    "arbevetel_mFt": [
+     3000,
+     3200
+    ],
+    "letszam_fo": [
+     40,
+     42
+    ],
+    "forma": "NYRt."
+   },
+   "megoldas": {
+    "szamitasok": [
+     {
+      "mit": "Értékhatár-vizsgálat",
+      "keplet": "egyik mutató sem lépi túl a 2000/4000/50 határt",
+      "eredmeny": "értékhatár szerint megfelelne"
+     },
+     {
+      "mit": "Kizáró ok",
+      "keplet": "NYRt. nem készíthet egyszerűsített éves beszámolót",
+      "eredmeny": "kizárva"
+     }
+    ],
+    "tetelek": [],
+    "egyeb": {
+     "valasz": "Éves beszámolót (NYRt. nem készíthet egyszerűsített éves beszámolót)."
+    }
+   },
+   "tanulsagok": [
+    "Az értékhatárok előtt/mellett a kizáró okokat is vizsgálni kell."
+   ],
+   "elteresek_a_forrasban": []
+  },
+  {
+   "id": "fa_6",
+   "forras": "generalt",
+   "cim": "Kötelező áttérés éves beszámolóra",
+   "szoveg": "Egy egyszerűsített éves beszámolót készítő kft. 2025-ben és 2026-ban is két mutató szerint túllépi az egyszerűsített éves határait. Mikortól kell éves beszámolót készítenie?",
+   "adatok": {
+    "tullepes_evek": [
+     2025,
+     2026
+    ]
+   },
+   "megoldas": {
+    "szamitasok": [
+     {
+      "mit": "Áttérés időpontja",
+      "keplet": "a második üzleti évet követő év január 1-je",
+      "eredmeny": "2027. január 1."
+     }
+    ],
+    "tetelek": [],
+    "egyeb": {
+     "valasz": "2027. január 1-jétől kötelező (saját döntéssel bármely év január 1-jével korábban is áttérhet)."
+    }
+   },
+   "tanulsagok": [
+    "Áttérés magasabb szintre kötelező, alacsonyabb szintre csak választható."
+   ],
+   "elteresek_a_forrasban": []
+  },
+  {
+   "id": "fa_7",
+   "forras": "generalt",
+   "cim": "Könyvvizsgálati kötelezettség",
+   "szoveg": "Egy kft. nettó árbevétele 2024-ben 700 mFt, 2025-ben 520 mFt; átlagos létszáma 2024: 40 fő, 2025: 46 fő. Kötelező-e a 2026. évi beszámoló könyvvizsgálata? (Köztartozása nincs.)",
+   "adatok": {
+    "arbevetel_mFt": {
+     "2024": 700,
+     "2025": 520
+    },
+    "letszam_fo": {
+     "2024": 40,
+     "2025": 46
+    }
+   },
+   "megoldas": {
+    "szamitasok": [
+     {
+      "mit": "Árbevétel átlaga",
+      "keplet": "(700 + 520) / 2",
+      "eredmeny": "610 mFt > 600 mFt"
+     },
+     {
+      "mit": "Létszám átlaga",
+      "keplet": "(40 + 46) / 2",
+      "eredmeny": "43 fő ≤ 50 fő"
+     }
+    ],
+    "tetelek": [],
+    "egyeb": {
+     "valasz": "KÖTELEZŐ – a mentességhez mindkét feltételnek (árbevétel ≤ 600 mFt ÉS létszám ≤ 50 fő) teljesülnie kell; az árbevétel-átlag túllépi."
+    }
+   },
+   "tanulsagok": [
+    "Az üzleti évet megelőző KÉT év átlaga számít, nem a tárgyév.",
+    "A mentesség 'ÉS' feltétel – egy túllépés elég a kötelezettséghez.",
+    "Könyvvizsgálatra kötelezett nem választhat mikro beszámolót."
+   ],
+   "elteresek_a_forrasban": []
+  },
+  {
+   "id": "fa_8",
+   "forras": "generalt",
+   "cim": "Számviteli politika határideje",
+   "szoveg": "Egy kft.-t 2026. április 10-én jegyezték be (megalakulás). Meddig kell elkészítenie a számviteli politikáját, és ki felel érte, ha a könyvelést egy könyvelőiroda végzi?",
+   "adatok": {
+    "megalakulas": "2026-04-10"
+   },
+   "megoldas": {
+    "szamitasok": [
+     {
+      "mit": "Határidő",
+      "keplet": "megalakulástól 90 nap",
+      "eredmeny": "2026. július 9."
+     }
+    ],
+    "tetelek": [],
+    "egyeb": {
+     "valasz": "90 napon belül (2026. július 9-ig); a felelős a gazdálkodó képviseletére jogosult személy (ügyvezető), akkor is, ha külső szervezet készíti."
+    }
+   },
+   "tanulsagok": [
+    "A felelősség nem ruházható át a könyvelőre."
+   ],
+   "elteresek_a_forrasban": []
+  }
+ ],
+ "gyakorlo_kerdesek": [
+  {
+   "id": "ab_q01",
+   "tipus": "egyvalasztos",
+   "kerdes": "Ki felel a számviteli politika elkészítéséért?",
+   "opciok": null,
+   "helyes": "A gazdálkodó képviseletére jogosult személy",
+   "magyarazat": "A Moodle-javítás szerinti helyes válasz.",
+   "forras": "teszt"
+  },
+  {
+   "id": "ab_q02",
+   "tipus": "egyvalasztos",
+   "kerdes": "Decemberi teljesítés, februári fizetés – melyik év bevétele?",
+   "opciok": null,
+   "helyes": "A teljesítés évében",
+   "magyarazat": "A Moodle-javítás szerinti helyes válasz.",
+   "forras": "teszt"
+  },
+  {
+   "id": "ab_q03",
+   "tipus": "egyvalasztos",
+   "kerdes": "Nyitóadatok = előző év záróadatai",
+   "opciok": null,
+   "helyes": "Folytonosság",
+   "magyarazat": "A Moodle-javítás szerinti helyes válasz.",
+   "forras": "teszt"
+  },
+  {
+   "id": "ab_q04",
+   "tipus": "egyvalasztos",
+   "kerdes": "Könyvvizsgálat célja",
+   "opciok": null,
+   "helyes": "Megfelel-e az előírásoknak, megbízható és valós összképet mutat-e",
+   "magyarazat": "A Moodle-javítás szerinti helyes válasz.",
+   "forras": "teszt"
+  },
+  {
+   "id": "ab_q05",
+   "tipus": "egyvalasztos",
+   "kerdes": "Költség-haszon összevetés elve",
+   "opciok": null,
+   "helyes": "Az információ haszna haladja meg előállítási költségét",
+   "magyarazat": "A Moodle-javítás szerinti helyes válasz.",
+   "forras": "teszt"
+  },
+  {
+   "id": "ab_q06",
+   "tipus": "igaz_hamis",
+   "kerdes": "Egyszerűsített éves beszámoló 20X6 (2100/2050 M mérleg, 3900/3800 M árbevétel, 45/49 fő)",
+   "opciok": null,
+   "helyes": "Igaz",
+   "magyarazat": "Határ: 2000 M / 4000 M / 50 fő; csak 1 mutató lépi túl",
+   "forras": "teszt"
+  },
+  {
+   "id": "ab_q07",
+   "tipus": "egyvalasztos",
+   "kerdes": "Ugyanannak a partnernek 1 M értékesítés, 600 e szolgáltatás",
+   "opciok": null,
+   "helyes": "Külön kell kimutatni (bruttó elszámolás)",
+   "magyarazat": "A Moodle-javítás szerinti helyes válasz.",
+   "forras": "teszt"
+  },
+  {
+   "id": "ab_q08",
+   "tipus": "tobbvalasztos",
+   "kerdes": "Bizonylati fegyelem",
+   "opciok": null,
+   "helyes": [
+    "Készpénz: pénzmozgással egyidejűleg",
+    "Bank: értesítés megérkezésekor",
+    "Egyéb: legalább negyedévente"
+   ],
+   "magyarazat": "A Moodle-javítás szerinti helyes válasz.",
+   "forras": "teszt"
+  },
+  {
+   "id": "ab_q09",
+   "tipus": "egyvalasztos",
+   "kerdes": "Ki NEM készíthet egyszerűsített éves beszámolót?",
+   "opciok": null,
+   "helyes": "NYRT",
+   "magyarazat": "A Moodle-javítás szerinti helyes válasz.",
+   "forras": "teszt"
+  },
+  {
+   "id": "ab_q10",
+   "tipus": "egyvalasztos",
+   "kerdes": "Kft. 2100/2150 M, 3900/4200 M, 52/55 fő – mit készít 20X6-ban?",
+   "opciok": null,
+   "helyes": "Éves beszámolót",
+   "magyarazat": "A Moodle-javítás szerinti helyes válasz.",
+   "forras": "teszt"
+  },
+  {
+   "id": "ab_q11",
+   "tipus": "egyvalasztos",
+   "kerdes": "Nincs hozzáférés, lényeges és átfogó hatás",
+   "opciok": null,
+   "helyes": "Véleménynyilvánítás visszautasítása",
+   "magyarazat": "A Moodle-javítás szerinti helyes válasz.",
+   "forras": "teszt"
+  },
+  {
+   "id": "ab_q12",
+   "tipus": "egyvalasztos",
+   "kerdes": "Általános alapelv",
+   "opciok": null,
+   "helyes": "Vállalkozás folytatásának elve",
+   "magyarazat": "A Moodle-javítás szerinti helyes válasz.",
+   "forras": "teszt"
+  },
+  {
+   "id": "ab_q13",
+   "tipus": "egyvalasztos",
+   "kerdes": "Szt. alapvető célja",
+   "opciok": null,
+   "helyes": "Beszámolási és könyvvezetési kötelezettség szabályozása",
+   "magyarazat": "A Moodle-javítás szerinti helyes válasz.",
+   "forras": "teszt"
+  },
+  {
+   "id": "ab_q14",
+   "tipus": "tobbvalasztos",
+   "kerdes": "Óvatosság elve",
+   "opciok": null,
+   "helyes": [
+    "Előre látható kockázatok figyelembevétele",
+    "Céltartalék az eredménytől függetlenül",
+    "Értékvesztés veszteséges évben is"
+   ],
+   "magyarazat": "A Moodle-javítás szerinti helyes válasz.",
+   "forras": "teszt"
+  },
+  {
+   "id": "ab_q15",
+   "tipus": "egyvalasztos",
+   "kerdes": "Tételek a valóságban is megtalálhatók, bizonyíthatók",
+   "opciok": null,
+   "helyes": "Valódiság",
+   "magyarazat": "A Moodle-javítás szerinti helyes válasz.",
+   "forras": "teszt"
+  },
+  {
+   "id": "ab_q16",
+   "tipus": "egyvalasztos",
+   "kerdes": "Számviteli politika elkészítési határideje",
+   "opciok": null,
+   "helyes": "90 nap",
+   "magyarazat": "A Moodle-javítás szerinti helyes válasz.",
+   "forras": "teszt"
+  },
+  {
+   "id": "ab_q17",
+   "tipus": "igaz_hamis",
+   "kerdes": "Mikrogazdálkodói beszámoló 20X6 (170/175 M, 340/370 M, 12/9 fő)",
+   "opciok": null,
+   "helyes": "Igaz",
+   "magyarazat": "2026-tól határ: 180 M / 360 M / 10 fő",
+   "forras": "teszt"
+  },
+  {
+   "id": "ab_q18",
+   "tipus": "egyvalasztos",
+   "kerdes": "Lényegesség elve",
+   "opciok": null,
+   "helyes": "Elhagyása/téves bemutatása befolyásolhatja a felhasználók döntéseit",
+   "magyarazat": "A Moodle-javítás szerinti helyes válasz.",
+   "forras": "teszt"
+  },
+  {
+   "id": "ab_q19",
+   "tipus": "egyvalasztos",
+   "kerdes": "Fordulónap és mérlegkészítés közötti események figyelembevétele",
+   "opciok": null,
+   "helyes": "Teljesség",
+   "magyarazat": "A Moodle-javítás szerinti helyes válasz.",
+   "forras": "teszt"
+  },
+  {
+   "id": "ab_q20",
+   "tipus": "tobbvalasztos",
+   "kerdes": "Kire NEM terjed ki az Szt.?",
+   "opciok": null,
+   "helyes": [
+    "Egyéni vállalkozó",
+    "Polgári jogi társaság"
+   ],
+   "magyarazat": "A Moodle-javítás szerinti helyes válasz.",
+   "forras": "teszt"
+  },
+  {
+   "id": "ab_q21",
+   "tipus": "kifejtes",
+   "kerdes": "Beszámolókészítés sorrendje",
+   "opciok": null,
+   "helyes": [
+    "gazdasági esemény",
+    "bizonylat",
+    "könyvviteli rögzítés",
+    "év végi zárás",
+    "beszámoló",
+    "könyvvizsgálat, ha kötelező",
+    "letétbe helyezés/közzététel"
+   ],
+   "magyarazat": "A Moodle-javítás szerinti helyes válasz.",
+   "forras": "teszt"
+  },
+  {
+   "id": "ab_q22",
+   "tipus": "parositas",
+   "kerdes": "Csoportosítsd a számviteli alapelveket (általános / tartalmi / formai / kiegészítő)!",
+   "opciok": null,
+   "helyes": {
+    "Általános": [
+     "Vállalkozás folytatása"
+    ],
+    "Tartalmi": [
+     "Teljesség",
+     "Valódiság",
+     "Óvatosság",
+     "Összemérés"
+    ],
+    "Formai": [
+     "Világosság",
+     "Folytonosság",
+     "Következetesség"
+    ],
+    "Kiegészítő": [
+     "Egyedi értékelés",
+     "Bruttó elszámolás",
+     "Időbeli elhatárolás",
+     "Tartalom elsődlegessége a formával szemben",
+     "Lényegesség",
+     "Költség-haszon összevetése"
+    ]
+   },
+   "magyarazat": "15. dia. Ez a tanár szerint magas valószínűségű ZH-kérdés.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q23",
+   "tipus": "tobbvalasztos",
+   "kerdes": "Melyek a beszámoló TARTALMÁRA ható (tartalmi) alapelvek?",
+   "opciok": [
+    "Teljesség",
+    "Világosság",
+    "Valódiság",
+    "Óvatosság",
+    "Következetesség",
+    "Összemérés",
+    "Lényegesség"
+   ],
+   "helyes": [
+    "Teljesség",
+    "Valódiság",
+    "Óvatosság",
+    "Összemérés"
+   ],
+   "magyarazat": "15. dia: négy tartalmi elv.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q24",
+   "tipus": "tobbvalasztos",
+   "kerdes": "Melyek a beszámoló FORMÁJÁRA ható (formai) alapelvek?",
+   "opciok": [
+    "Világosság",
+    "Bruttó elszámolás",
+    "Folytonosság",
+    "Következetesség",
+    "Egyedi értékelés",
+    "Összemérés"
+   ],
+   "helyes": [
+    "Világosság",
+    "Folytonosság",
+    "Következetesség"
+   ],
+   "magyarazat": "15. dia: három formai elv.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q25",
+   "tipus": "egyvalasztos",
+   "kerdes": "Melyik csoportba tartozik: Óvatosság elve?",
+   "opciok": [
+    "Általános alapelv",
+    "Tartalmi elv",
+    "Formai elv",
+    "Kiegészítő elv"
+   ],
+   "helyes": "Tartalmi elv",
+   "magyarazat": "A diák címében zárójelben szereplő besorolás (15., 17–31. dia).",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q26",
+   "tipus": "egyvalasztos",
+   "kerdes": "Melyik csoportba tartozik: Folytonosság elve?",
+   "opciok": [
+    "Általános alapelv",
+    "Tartalmi elv",
+    "Formai elv",
+    "Kiegészítő elv"
+   ],
+   "helyes": "Formai elv",
+   "magyarazat": "A diák címében zárójelben szereplő besorolás (15., 17–31. dia).",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q27",
+   "tipus": "egyvalasztos",
+   "kerdes": "Melyik csoportba tartozik: Időbeli elhatárolás elve?",
+   "opciok": [
+    "Általános alapelv",
+    "Tartalmi elv",
+    "Formai elv",
+    "Kiegészítő elv"
+   ],
+   "helyes": "Kiegészítő elv",
+   "magyarazat": "A diák címében zárójelben szereplő besorolás (15., 17–31. dia).",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q28",
+   "tipus": "egyvalasztos",
+   "kerdes": "Melyik csoportba tartozik: Vállalkozás folytatásának elve?",
+   "opciok": [
+    "Általános alapelv",
+    "Tartalmi elv",
+    "Formai elv",
+    "Kiegészítő elv"
+   ],
+   "helyes": "Általános alapelv",
+   "magyarazat": "A diák címében zárójelben szereplő besorolás (15., 17–31. dia).",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q29",
+   "tipus": "egyvalasztos",
+   "kerdes": "Melyik csoportba tartozik: Összemérés elve?",
+   "opciok": [
+    "Általános alapelv",
+    "Tartalmi elv",
+    "Formai elv",
+    "Kiegészítő elv"
+   ],
+   "helyes": "Tartalmi elv",
+   "magyarazat": "A diák címében zárójelben szereplő besorolás (15., 17–31. dia).",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q30",
+   "tipus": "egyvalasztos",
+   "kerdes": "Melyik csoportba tartozik: Világosság elve?",
+   "opciok": [
+    "Általános alapelv",
+    "Tartalmi elv",
+    "Formai elv",
+    "Kiegészítő elv"
+   ],
+   "helyes": "Formai elv",
+   "magyarazat": "A diák címében zárójelben szereplő besorolás (15., 17–31. dia).",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q31",
+   "tipus": "egyvalasztos",
+   "kerdes": "Melyik csoportba tartozik: Bruttó elszámolás elve?",
+   "opciok": [
+    "Általános alapelv",
+    "Tartalmi elv",
+    "Formai elv",
+    "Kiegészítő elv"
+   ],
+   "helyes": "Kiegészítő elv",
+   "magyarazat": "A diák címében zárójelben szereplő besorolás (15., 17–31. dia).",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q32",
+   "tipus": "egyvalasztos",
+   "kerdes": "Melyik csoportba tartozik: Valódiság elve?",
+   "opciok": [
+    "Általános alapelv",
+    "Tartalmi elv",
+    "Formai elv",
+    "Kiegészítő elv"
+   ],
+   "helyes": "Tartalmi elv",
+   "magyarazat": "A diák címében zárójelben szereplő besorolás (15., 17–31. dia).",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q33",
+   "tipus": "parositas",
+   "kerdes": "Párosítsd a leírást az alapelvvel!",
+   "opciok": null,
+   "helyes": {
+    "A beszámoló tételeit leltárral kell alátámasztani.": "Valódiság",
+    "Az ÉCS-t, értékvesztést, céltartalékot veszteséges évben is el kell számolni.": "Óvatosság",
+    "A követelések és kötelezettségek ugyanazon partnerrel szemben sem vonhatók össze.": "Bruttó elszámolás",
+    "Több évet érintő események eredményhatását arányosan kell megosztani.": "Időbeli elhatárolás",
+    "A szerződéseket valós tartalmuk, nem elnevezésük szerint kell megítélni.": "Tartalom elsődlegessége a formával szemben",
+    "A beszámolót érthetően, áttekinthetően, előírt formában kell elkészíteni.": "Világosság",
+    "Az értékelési szabályok és a beszámoló formája állandó legyen.": "Következetesség",
+    "Az eszközöket és kötelezettségeket egyedileg kell rögzíteni és értékelni.": "Egyedi értékelés"
+   },
+   "magyarazat": "17–31. diák.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q34",
+   "tipus": "egyvalasztos",
+   "kerdes": "Melyik alapelvet sérti, ha a vállalkozás nem részletezi a kiegészítő mellékletben a zálogjoggal terhelt ingatlanokat?",
+   "opciok": [
+    "Világosság",
+    "Lényegesség",
+    "Valódiság",
+    "Teljesség"
+   ],
+   "helyes": "Lényegesség",
+   "magyarazat": "30. dia példája.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q35",
+   "tipus": "egyvalasztos",
+   "kerdes": "Január 15-én (mérlegkészítés előtt) értesítést kapunk az előző évhez kapcsolódó késedelmi kamatról. Melyik elv szerint kell a tárgyévben könyvelni?",
+   "opciok": [
+    "Folytonosság",
+    "Teljesség",
+    "Következetesség",
+    "Bruttó elszámolás"
+   ],
+   "helyes": "Teljesség",
+   "magyarazat": "18. dia példája.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q36",
+   "tipus": "egyvalasztos",
+   "kerdes": "Melyik elv mondja ki, hogy a vevő által el nem ismert követelés nem állítható be a beszámolóba?",
+   "opciok": [
+    "Óvatosság",
+    "Összemérés",
+    "Egyedi értékelés",
+    "Valódiság"
+   ],
+   "helyes": "Óvatosság",
+   "magyarazat": "24. dia példája.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q37",
+   "tipus": "egyvalasztos",
+   "kerdes": "A dolgozó 22 000 Ft-ért kivásárolja az 50 000 Ft-ért vett munkaeszközt; a cég 50 000 Ft költséget és 22 000 Ft bevételt könyvel. Melyik elv?",
+   "opciok": [
+    "Összemérés",
+    "Bruttó elszámolás",
+    "Óvatosság",
+    "Lényegesség"
+   ],
+   "helyes": "Bruttó elszámolás",
+   "magyarazat": "25. dia példája.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q38",
+   "tipus": "egyvalasztos",
+   "kerdes": "Melyik elv szerint minősül egyedi értékelésnek a FIFO és az átlagos beszerzési áras értékelés?",
+   "opciok": [
+    "Egyedi értékelés",
+    "Következetesség",
+    "Valódiság",
+    "Folytonosság"
+   ],
+   "helyes": "Egyedi értékelés",
+   "magyarazat": "26. dia.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q39",
+   "tipus": "igaz_hamis",
+   "kerdes": "Az időbeli elhatárolás elve tartalmi alapelv.",
+   "opciok": [
+    "Igaz",
+    "Hamis"
+   ],
+   "helyes": "Hamis",
+   "magyarazat": "Kiegészítő elv (15., 28. dia).",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q40",
+   "tipus": "igaz_hamis",
+   "kerdes": "A következetesség elve formai alapelv, és összefügg a folytonosság elvével.",
+   "opciok": [
+    "Igaz",
+    "Hamis"
+   ],
+   "helyes": "Igaz",
+   "magyarazat": "21. dia.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q41",
+   "tipus": "igaz_hamis",
+   "kerdes": "A vállalkozás folytatásának elve felszámolás alatt álló cégre is ugyanúgy vonatkozik.",
+   "opciok": [
+    "Igaz",
+    "Hamis"
+   ],
+   "helyes": "Hamis",
+   "magyarazat": "Csak működő vállalkozásokra; csőd-, végelszámolás, felszámolás, átalakulás esetén más előírások (17. dia).",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q42",
+   "tipus": "igaz_hamis",
+   "kerdes": "A bruttó elszámolás elve alól kivétel az értékpapírok értékesítése.",
+   "opciok": [
+    "Igaz",
+    "Hamis"
+   ],
+   "helyes": "Igaz",
+   "magyarazat": "25. dia.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q43",
+   "tipus": "igaz_hamis",
+   "kerdes": "A lényegesség megítélése a könyvvizsgáló joga és felelőssége.",
+   "opciok": [
+    "Igaz",
+    "Hamis"
+   ],
+   "helyes": "Hamis",
+   "magyarazat": "A gazdálkodó joga és felelőssége, a számviteli politikában rögzíti (30. dia).",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q44",
+   "tipus": "igaz_hamis",
+   "kerdes": "Az összemérés elve szerint a bevételt a pénz beérkezésének évében kell elszámolni.",
+   "opciok": [
+    "Igaz",
+    "Hamis"
+   ],
+   "helyes": "Hamis",
+   "magyarazat": "A pénzmozgástól függetlenül, a teljesítés (gazdasági felmerülés) időszakában (23. dia).",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q45",
+   "tipus": "igaz_hamis",
+   "kerdes": "A számviteli politikát a megalakulástól számított 90 napon belül kell elkészíteni.",
+   "opciok": [
+    "Igaz",
+    "Hamis"
+   ],
+   "helyes": "Igaz",
+   "magyarazat": "38. dia.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q46",
+   "tipus": "igaz_hamis",
+   "kerdes": "A mikrogazdálkodói beszámolót könyvvizsgálatra kötelezett vállalkozó is választhatja.",
+   "opciok": [
+    "Igaz",
+    "Hamis"
+   ],
+   "helyes": "Hamis",
+   "magyarazat": "Csak könyvvizsgálatra nem kötelezett (49. dia).",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q47",
+   "tipus": "igaz_hamis",
+   "kerdes": "Az egyszerűsített beszámoló és az egyszerűsített éves beszámoló ugyanaz.",
+   "opciok": [
+    "Igaz",
+    "Hamis"
+   ],
+   "helyes": "Hamis",
+   "magyarazat": "Az egyszerűsített beszámoló egyszeres könyvvitelű, csak egyéb szervezeteké (54. dia).",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q48",
+   "tipus": "igaz_hamis",
+   "kerdes": "A záradék megadásának elutasítása azonos az elutasító záradékkal.",
+   "opciok": [
+    "Igaz",
+    "Hamis"
+   ],
+   "helyes": "Hamis",
+   "magyarazat": "73. dia: NEM azonos!",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q49",
+   "tipus": "igaz_hamis",
+   "kerdes": "A bizonylatokat legalább 8 évig kell megőrizni.",
+   "opciok": [
+    "Igaz",
+    "Hamis"
+   ],
+   "helyes": "Igaz",
+   "magyarazat": "61. dia.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q50",
+   "tipus": "egyvalasztos",
+   "kerdes": "Milyen véleményt ad a könyvvizsgáló, ha lényeges, de nem átfogó hibát tár fel?",
+   "opciok": [
+    "Minősítés nélküli",
+    "Korlátozott záradék",
+    "Elutasító záradék",
+    "Véleménynyilvánítás elutasítása"
+   ],
+   "helyes": "Korlátozott záradék",
+   "magyarazat": "71. dia.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q51",
+   "tipus": "egyvalasztos",
+   "kerdes": "Milyen véleményt ad a könyvvizsgáló, ha lényeges és átfogó hibás állításokat talál?",
+   "opciok": [
+    "Korlátozott záradék",
+    "Elutasító záradék",
+    "Véleménynyilvánítás elutasítása",
+    "Minősítés nélküli"
+   ],
+   "helyes": "Elutasító záradék",
+   "magyarazat": "71. dia.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q52",
+   "tipus": "szamitas",
+   "kerdes": "Mérlegfőösszeg 1 900 / 2 300 mFt, árbevétel 4 100 / 3 700 mFt, létszám 48 / 52 fő. Készíthet-e egyszerűsített éves beszámolót a 2. évben?",
+   "opciok": null,
+   "helyes": "Nem",
+   "magyarazat": "1. év: csak az árbevétel lép túl (1); 2. év: mérleg és létszám lép túl (2) → a 2. évben nem felel meg → NEM (éves beszámoló).",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q53",
+   "tipus": "szamitas",
+   "kerdes": "Mérlegfőösszeg 150 / 190 mFt, árbevétel 380 / 350 mFt, létszám 9 / 10 fő; könyvvizsgálatra nem kötelezett. Készíthet-e mikro beszámolót?",
+   "opciok": null,
+   "helyes": "Igen",
+   "magyarazat": "1. év: csak árbevétel lép túl (380>360); 2. év: csak mérleg (190>180), a 10 fő nem haladja meg a 10-et → mindkét évben 1 túllépés → igen.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q54",
+   "tipus": "szamitas",
+   "kerdes": "Árbevétel az előző két évben 580 és 640 mFt, létszám 52 és 46 fő. Kötelező-e a könyvvizsgálat?",
+   "opciok": null,
+   "helyes": "Kötelező",
+   "magyarazat": "Árbevétel-átlag 610 mFt > 600 mFt (a létszám-átlag 49 fő rendben) → a mentesség ÉS-feltétele nem teljesül → kötelező.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q55",
+   "tipus": "kifejtes",
+   "kerdes": "Mutassa be a vállalkozás folytatásának elvét! (7 pont – minta-ZH 3. feladat)",
+   "opciok": null,
+   "helyes": "1) Az Szt. általános alapelve. 2) A vállalkozás fent TUDJA és fent AKARJA tartani működését 3) a belátható jövőben, 4) nem várható a tevékenység beszüntetése vagy jelentős csökkentése. 5) A többi alapelv érvényesülésének alapja – ha a vállalkozás nem tudja folytatni a tevékenységét vagy jelentősen csökkenti, a többi alapelv sem érvényesülhet maradéktalanul. 6) Csak működő vállalkozásokra vonatkozik. 7) Csődeljárás, végelszámolás, felszámolás, átalakulás esetén más törvényi előírások érvényesek.",
+   "magyarazat": "Minta-ZH 3. feladat; a megoldókulcs a 17. dia tartalma.",
+   "forras": "feladat"
+  },
+  {
+   "id": "ab_q56",
+   "tipus": "kifejtes",
+   "kerdes": "Mutassa be a számviteli alapelvek közül: Teljesség elve! (7 pont)",
+   "opciok": null,
+   "helyes": "1) Tartalmi elv. 2) Könyvelni kell minden gazdasági eseményt, 3) amelynek az eszközökre, forrásokra és 4) a tárgyévi eredményre gyakorolt hatását a beszámolóban be kell mutatni. 5) A lezárt üzleti évhez kapcsolódó eseményeket is, 6) azaz a fordulónap és a mérlegkészítés között ismertté vált, a tárgyidőszakra vonatkozó eseményeket is. 7) Pl. január elején érkező, az előző évre vonatkozó késedelmikamat-értesítés, vagy a januárban kiderülő, csak 50%-ban behajtható vevőkövetelés.",
+   "magyarazat": "alapelvek.pdf, 18. dia; besorolás: TARTALMI ELV (a beszámoló tartalmára ható).",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q57",
+   "tipus": "kifejtes",
+   "kerdes": "Mutassa be a számviteli alapelvek közül: Valódiság elve! (7 pont)",
+   "opciok": null,
+   "helyes": "1) Tartalmi elv. 2) A könyvvitelben rögzített eseményeknek, beszámolóban szereplő tételeknek a valóságban megtalálhatóknak, 3) bizonyíthatóknak, 4) kívülállók által is megállapíthatóknak kell lenniük. 5) A vagyont az Szt. szerint kell értékelni. 6) A beszámoló tételeit leltárral kell alátámasztani. 7) A főkönyvi könyvelés a leltárral egyező, összevont adatokat tartalmazza.",
+   "magyarazat": "alapelvek.pdf, 20. dia; besorolás: TARTALMI ELV (a beszámoló tartalmára ható).",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q58",
+   "tipus": "kifejtes",
+   "kerdes": "Mutassa be a számviteli alapelvek közül: Óvatosság elve! (7 pont)",
+   "opciok": null,
+   "helyes": "1) Tartalmi elv. 2) Nem lehet eredményt kimutatni, ha a bevétel pénzügyi realizálása bizonytalan. 3) Az előre látható kockázatot, feltételezhető veszteséget értékvesztés, céltartalék formájában el kell számolni, 4) akkor is, ha a fordulónap és a mérlegkészítés között vált ismertté. 5) ÉCS-t, értékvesztést, céltartalékot az eredménytől (nyereség/veszteség) függetlenül el kell számolni. 6) A nem realizált eredmény nem lehet adózás, osztalékfizetés alapja. 7) Pl. a vevő által el nem ismert követelés nem állítható be a beszámolóba.",
+   "magyarazat": "alapelvek.pdf, 24. dia; besorolás: TARTALMI ELV (a beszámoló tartalmára ható).",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q59",
+   "tipus": "kifejtes",
+   "kerdes": "Mutassa be a számviteli alapelvek közül: Összemérés elve! (7 pont)",
+   "opciok": null,
+   "helyes": "1) Tartalmi elv. 2) Az időszak eredménye = elismert bevételek – szembeállítható költségek, ráfordítások, 3) mindkettő a pénzmozgástól függetlenül. 4) A bevételt, költséget abban az időszakban kell elszámolni, amikor gazdaságilag felmerült. 5) Árbevétel akkor, amikor a szerződés szerinti teljesítés megtörtént, függetlenül a pénzügyi teljesítéstől. 6) Az árbevétellel szembe kell állítani az érdekében felmerült költségeket. 7) Pl. a tárgyévre járó, de jövőre fizetett kamat tárgyévi bevétel; a jövő évre előre fizetett bérleti díj nem tárgyévi költség.",
+   "magyarazat": "alapelvek.pdf, 23. dia; besorolás: TARTALMI ELV (a beszámoló tartalmára ható).",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q60",
+   "tipus": "kifejtes",
+   "kerdes": "Mutassa be a számviteli alapelvek közül: Világosság elve! (7 pont)",
+   "opciok": null,
+   "helyes": "1) Formai elv. 2) A könyvvezetést és beszámolót érthetően, 3) áttekinthetően (szakember számára informatívan), 4) a törvényben előírt részletességgel és formában kell elkészíteni. 5) Szükség esetén a mérleg/eredménykimutatás sorait meg kell bontani, 6) és a kiegészítő mellékletben magyarázni kell. 7) Így a beszámoló informatív, a könyvelés számlarend alapján történik, és lehetővé válik a külső és belső ellenőrzés.",
+   "magyarazat": "alapelvek.pdf, 19. dia; besorolás: FORMAI ELV (a beszámoló formájára ható).",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q61",
+   "tipus": "kifejtes",
+   "kerdes": "Mutassa be a számviteli alapelvek közül: Következetesség elve! (7 pont)",
+   "opciok": null,
+   "helyes": "1) Formai elv. 2) A beszámoló tartalma és formája, 3) valamint az azt alátámasztó könyvvezetés tekintetében 4) az állandóságot és 5) az összehasonlíthatóságot biztosítani kell. 6) Következetesen alkalmazott számviteli politika: a beszámoló választott formája, az értékelési szabályok állandósága. 7) Összefügg a folytonosság elvével, mert a számlarend és a számviteli politika egymást követő időszakokban következetes alkalmazását követeli meg.",
+   "magyarazat": "alapelvek.pdf, 21. dia; besorolás: FORMAI ELV (a beszámoló formájára ható).",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q62",
+   "tipus": "kifejtes",
+   "kerdes": "Mutassa be a számviteli alapelvek közül: Folytonosság elve! (7 pont)",
+   "opciok": null,
+   "helyes": "1) Formai elv. 2) Az üzleti év nyitóadatai megegyeznek 3) az előző üzleti év megfelelő záróadataival. 4) A beszámolóban az előző üzleti év adatait is fel kell tüntetni, 5) így az adatok összehasonlíthatók, elemezhetők. 6) Egymást követő években az eszközök és források értékelése 7) és az eredmények számbavétele csak az Szt. szerinti szabályok szerint változhat.",
+   "magyarazat": "alapelvek.pdf, 22. dia; besorolás: FORMAI ELV (a beszámoló formájára ható).",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q63",
+   "tipus": "kifejtes",
+   "kerdes": "Mutassa be a számviteli alapelvek közül: Egyedi értékelés elve! (7 pont)",
+   "opciok": null,
+   "helyes": "1) Kiegészítő elv. 2) Az eszközöket és kötelezettségeket egyedileg kell rögzíteni és értékelni. 3) Alapja az analitikus nyilvántartás és a tételes leltár. 4) Az eszközök meglétét csak egyedileg lehet megállapítani. 5) Egyedi értékelésnek minősül az átlagos beszerzési áras és a FIFO-értékelés is. 6) Egyszerűsítés: kis összegű követeléseknél %-os értékvesztés, kis értékű készleteknél csoportos értékvesztés. 7) Pl. háromféle késztermék nem tartható nyilván együtt.",
+   "magyarazat": "alapelvek.pdf, 26. dia; besorolás: KIEGÉSZÍTŐ ELV.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q64",
+   "tipus": "kifejtes",
+   "kerdes": "Mutassa be a számviteli alapelvek közül: Bruttó elszámolás elve! (7 pont)",
+   "opciok": null,
+   "helyes": "1) Kiegészítő elv. 2) A bevételek és a költségek, ráfordítások 3) egymással szemben nem számolhatók el. 4) A követelések és kötelezettségek sem vonhatók össze, ha ugyanaz a partner akkor sem. 5) Különben sérülne a megbízható és valós összkép, az eredménykimutatás félrevezető lenne. 6) Kivétel: értékpapírok értékesítése, ill. Szt.-ben szabályozott esetek. 7) Pl. 50 000 Ft-os munkaeszköz, amit a dolgozó 22 000 Ft-ért kivásárol: 50 000 anyagköltség és 22 000 bevétel, nem 28 000 nettó.",
+   "magyarazat": "alapelvek.pdf, 25. dia; besorolás: KIEGÉSZÍTŐ ELV.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q65",
+   "tipus": "kifejtes",
+   "kerdes": "Mutassa be a számviteli alapelvek közül: Időbeli elhatárolás elve! (7 pont)",
+   "opciok": null,
+   "helyes": "1) Kiegészítő elv. 2) Több évet érintő gazdasági események 3) eredményre gyakorolt kihatását (bevétel, ráfordítás) 4) arányosan kell megosztani az érintett üzleti évek között. 5) Az összemérés, teljesség és valódiság elvét szolgálja. 6) Eszközei az aktív (AIE) és passzív (PIE) időbeli elhatárolások. 7) Pl. tárgyévre járó, jövőre fizetett kamat → bevételek AIE; jövő évre előre fizetett bérleti díj → költségek AIE.",
+   "magyarazat": "alapelvek.pdf, 28. dia; besorolás: KIEGÉSZÍTŐ ELV.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q66",
+   "tipus": "kifejtes",
+   "kerdes": "Mutassa be a számviteli alapelvek közül: A tartalom elsődlegessége a formával szemben elve! (7 pont)",
+   "opciok": null,
+   "helyes": "1) Kiegészítő elv. 2) A gazdasági eseményeket (köz)gazdasági tartalmuk szerint kell elszámolni, 3) nem a jogi formula alapján. 4) A szerződéseket valós tartalmuk, nem elnevezésük és jogi formájuk szerint kell megítélni. 5) Fontos szerepe van a számlarendnek. 6) A könyveléshez sokszor nem elég a számla, 7) kell a valós ügyletet leíró szerződés és a teljesítést igazoló egyéb dokumentum is.",
+   "magyarazat": "alapelvek.pdf, 29. dia; besorolás: KIEGÉSZÍTŐ ELV.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q67",
+   "tipus": "kifejtes",
+   "kerdes": "Mutassa be a számviteli alapelvek közül: Lényegesség elve! (7 pont)",
+   "opciok": null,
+   "helyes": "1) Kiegészítő elv. 2) Lényeges minden információ, amelynek elhagyása vagy 3) téves bemutatása 4) befolyásolja a beszámoló felhasználóinak döntéseit. 5) Megítélése a gazdálkodó joga és felelőssége, 6) a következetesség elve miatt nem lehet alkalomszerű, a számviteli politikában rögzíteni kell (pl. jelentős összegű hiba értékhatára). 7) Pl. a zálogjoggal terhelt ingatlanokat a kiegészítő mellékletben részletezni kell.",
+   "magyarazat": "alapelvek.pdf, 30. dia; besorolás: KIEGÉSZÍTŐ ELV.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q68",
+   "tipus": "kifejtes",
+   "kerdes": "Mutassa be a számviteli alapelvek közül: A költség-haszon összevetésének elve! (7 pont)",
+   "opciok": null,
+   "helyes": "1) Kiegészítő elv. 2) A beszámoló információiból nyerhető haszon 3) haladja meg az információ előállításának költségét. 4) DE az Szt. meghatározza a legszükségesebb információkat, 5) ennek oka az üzleti szubjektivitás. 6) A kötelezőn felüli részletezésnél a gazdaságosságot és a lényegesség elvét kell szem előtt tartani. 7) Pl. személyi jellegű kifizetések jogcímenkénti részletezése a kiegészítő mellékletben.",
+   "magyarazat": "alapelvek.pdf, 31. dia; besorolás: KIEGÉSZÍTŐ ELV.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q69",
+   "tipus": "kifejtes",
+   "kerdes": "Ismertesse a könyvvizsgálói vélemények típusait!",
+   "opciok": null,
+   "helyes": "Minősítés nélküli (hitelesítő) záradék; minősített: korlátozott (lényeges, nem átfogó), elutasító (lényeges és átfogó), záradékadás/véleménynyilvánítás elutasítása (nincs elegendő bizonyíték). Helye: keltezés és aláírás fölött.",
+   "magyarazat": "71–73. dia.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ab_q70",
+   "tipus": "kifejtes",
+   "kerdes": "Sorolja fel a beszámolófajtákat és értékhatáraikat!",
+   "opciok": null,
+   "helyes": "Mikro: 180 mFt / 360 mFt / 10 fő; egyszerűsített éves: 2 000 / 4 000 / 50; éves: felette; konszolidált: anyavállalat (dia: >12 000 / >24 000 / >250); egyszerűsített beszámoló: egyszeres könyvvitel, egyéb szervezetek. Két egymást követő évben 3-ból 2 mutató ne lépje túl.",
+   "magyarazat": "45–55. dia.",
+   "forras": "generalt"
+  }
+ ],
+ "csapdak": [
+  "Az időbeli elhatárolás, az egyedi értékelés, a bruttó elszámolás, a lényegesség, a tartalom elsődlegessége és a költség-haszon KIEGÉSZÍTŐ elvek – nem tartalmi és nem formai elvek.",
+  "A vállalkozás folytatása ÁLTALÁNOS alapelv – nem tartalmi! (Moodle 12.)",
+  "Nyitóadat = előző év záróadata → FOLYTONOSSÁG, nem következetesség (Moodle 3.).",
+  "Fordulónap és mérlegkészítés közötti események figyelembevétele → a Moodle a TELJESSÉGET fogadta el; az ekkor ismertté vált kockázatok értékvesztése/céltartaléka viszont óvatosság.",
+  "'Nem haladja meg' = a határral egyenlő érték még megfelel; a dia összefoglaló táblája '<' jelet használ, ami ennél pontatlanabb.",
+  "Két egymást követő évben kell megfelelni, és nem kell mindig ugyanannak a két mutatónak a határon belül lennie.",
+  "Könyvvizsgálat: az üzleti évet MEGELŐZŐ két év ÁTLAGA számít, és a mentességhez árbevétel ≤ 600 mFt ÉS létszám ≤ 50 fő kell (egy túllépés → kötelező).",
+  "A számviteli politikáért a gazdálkodó képviseletére jogosult felel – akkor is, ha külső könyvelő készíti (Moodle 1.).",
+  "Záradék megadásának (véleménynyilvánításnak) elutasítása ≠ elutasító záradék (ellenvélemény).",
+  "Egyszerűsített beszámoló (egyszeres, egyéb szervezetek) ≠ egyszerűsített éves beszámoló (kettős, vállalkozók).",
+  "Egyéni vállalkozó és polgári jogi társaság NEM tartozik az Szt. hatálya alá (Moodle 20.).",
+  "NYRt., anyavállalat, közérdeklődésre számot tartó és tőzsdei vállalkozó nem készíthet egyszerűsített éves beszámolót – az értékhatároktól függetlenül.",
+  "Mikro beszámolót csak könyvvizsgálatra nem kötelezett vállalkozó választhat, és leghamarabb 3 mikro beszámolóval lezárt év után térhet el saját döntésből.",
+  "A bruttó elszámolás elve ugyanazon partnerrel szemben is tiltja a követelés és kötelezettség összevonását (Moodle 7.).",
+  "Óvatosság: ÉCS, értékvesztés, céltartalék a nyereségtől/veszteségtől függetlenül kötelező – nem lehet 'kényelmi' alapon kihagyni."
+ ],
+ "elteresek_a_forrasban": [
+  "Értékhatárok: a diák (45., 49., 55.) már a 2026-os értékeket mutatják (mikro 180/360/10, egyszerűsített 2000/4000/50) – nincs régi érték; az összefoglaló táblázat (55. dia) '<' jelet használ, a szöveg 'nem haladja meg' (≤) – a szöveg a pontos.",
+  "A konszolidált beszámoló határai (>12 000 mFt / >24 000 mFt / >250 fő) csak az 55. dián szerepelnek, más forrás nem erősíti meg.",
+  "63. dia: 'Egyéb pénzeszközöket érintő tételeket a tárgyhót követő hó 15-ig' – a megfogalmazás zavaros (a pénzeszközöket érintő eseményekre már az előző doboz vonatkozik); a Moodle-teszt csak a három fő határidőt kérdezi (készpénz, bank, egyéb negyedévente).",
+  "28. dia: 'tárgyévre járó, de csak a következő évben járó kamat' – elírás, értelemszerűen 'esedékes/pénzügyileg rendezett' (vö. 23. dia).",
+  "A diákon két 2.10. sorszámú dia van (egyedi értékelés folytatása), a számozás innen eggyel elcsúszik.",
+  "A könyvviteli zárlatot a diák nem tárgyalják; a beszámolókészítés sorrendje csak a Moodle-tesztből (21. kérdés) ismert."
+ ]
+}

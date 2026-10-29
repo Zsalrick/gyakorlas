@@ -1,0 +1,1959 @@
+{
+ "tema": "Mérlegséma (Szt. 1. sz. melléklet, 'A' változat) és összköltséges eredménykimutatás (Szt. 2. sz. melléklet, 'A' változat) számlatükör-hozzárendeléssel",
+ "forrasok": [
+  "src/elmelet/immaterialis.pdf, targyi.pdf, vasarolt.pdf, sajat.pdf – 3–4. dia (mérleg eszközoldal, mérlegsorok, sorszámok)",
+  "zh/tukor.txt – a kurzus számlatükre (érvényes 2016.01.01-től)",
+  "zh-anyag/szamlaszamok.json",
+  "zh/I_Elméleti_Minta ZH (2. feladat)",
+  "Szt. 1. és 2. sz. melléklet (a forrásoldal és az eredménykimutatás teljes sorai – a diák ezeket nem tartalmazzák)"
+ ],
+ "zh_relevancia": "MAGAS – 9 pont az elméleti részben. A minta-ZH-ban a B.I. Készletek 6 sorát és a három oszlopnevet kellett kitölteni. A tanár szerint 'mérlegsorok: bármi lehet' – a teljes eszköz- és forrásoldali sémát (főcsoport → csoport → sor) és az oszlopneveket tudni kell. Az összköltséges eredménykimutatás az üzemi eredményig a gyakorlati 1. feladathoz kell.",
+ "oszlopok": [
+  "Előző év",
+  "Előző év(ek) módosításai",
+  "Tárgyév"
+ ],
+ "oszlop_megjegyzes": "A sajat.pdf 4. diáján a teljes fejléc: Sorszám (a) | A tétel megnevezése (b) | Előző év (c) | Előző év(ek) módosításai (d) | Tárgyév (e); adatok e Ft-ban.",
+ "sorszam_megjegyzes": "Az 1–60. eszközoldali sorszámokat a diák igazolják (A.I. = 3–9., A.II. = 11–17., B. = 29. (30.+37.+46.+53.), B.I. = 30. (31–36.)). A 61–109. forrásoldali sorszámok az Szt. 1. sz. melléklete szerinti folytatólagos számozás – diáról nem ellenőrizhető.",
+ "szamla_megjegyzes": "A 'szamlak' a kurzus számlatükrének számlái/csoportjai; a 'csokkento_korrekcios_szamlak' (ÉCS, értékvesztés) a sor nettó értékét csökkentik, önálló mérlegsort nem kapnak.",
+ "eszkoz_oldal": [
+  {
+   "sorszam": 1,
+   "jel": "A.",
+   "megnevezes": "Befektetett eszközök (2.+10.+18. sor)",
+   "szint": "főcsoport",
+   "szamlak": [
+    "1. számlaosztály",
+    "351",
+    "352"
+   ]
+  },
+  {
+   "sorszam": 2,
+   "jel": "A.I.",
+   "megnevezes": "IMMATERIÁLIS JAVAK (3–9. sorok)",
+   "szint": "csoport",
+   "szamlak": [
+    "11",
+    "351"
+   ]
+  },
+  {
+   "sorszam": 3,
+   "jel": "A.I.1.",
+   "megnevezes": "Alapítás-átszervezés aktivált értéke",
+   "szint": "tétel",
+   "szamlak": [
+    "111"
+   ],
+   "csokkento_korrekcios_szamlak": [
+    "118",
+    "119"
+   ]
+  },
+  {
+   "sorszam": 4,
+   "jel": "A.I.2.",
+   "megnevezes": "Kísérleti fejlesztés aktivált értéke",
+   "szint": "tétel",
+   "szamlak": [
+    "112"
+   ],
+   "csokkento_korrekcios_szamlak": [
+    "118",
+    "119"
+   ]
+  },
+  {
+   "sorszam": 5,
+   "jel": "A.I.3.",
+   "megnevezes": "Vagyoni értékű jogok",
+   "szint": "tétel",
+   "szamlak": [
+    "113"
+   ],
+   "csokkento_korrekcios_szamlak": [
+    "118",
+    "119"
+   ],
+   "megjegyzes": "Az ingatlanhoz kapcsolódó vagyoni értékű jog nem itt, hanem A.II.1-ben (126)."
+  },
+  {
+   "sorszam": 6,
+   "jel": "A.I.4.",
+   "megnevezes": "Szellemi termékek",
+   "szint": "tétel",
+   "szamlak": [
+    "114"
+   ],
+   "csokkento_korrekcios_szamlak": [
+    "118",
+    "119"
+   ]
+  },
+  {
+   "sorszam": 7,
+   "jel": "A.I.5.",
+   "megnevezes": "Üzleti vagy cégérték",
+   "szint": "tétel",
+   "szamlak": [
+    "115"
+   ],
+   "csokkento_korrekcios_szamlak": [
+    "118",
+    "119"
+   ]
+  },
+  {
+   "sorszam": 8,
+   "jel": "A.I.6.",
+   "megnevezes": "Immateriális javakra adott előlegek",
+   "szint": "tétel",
+   "szamlak": [
+    "351"
+   ]
+  },
+  {
+   "sorszam": 9,
+   "jel": "A.I.7.",
+   "megnevezes": "Immateriális javak értékhelyesbítése",
+   "szint": "tétel",
+   "szamlak": [
+    "117"
+   ]
+  },
+  {
+   "sorszam": 10,
+   "jel": "A.II.",
+   "megnevezes": "TÁRGYI ESZKÖZÖK (11–17. sorok)",
+   "szint": "csoport",
+   "szamlak": [
+    "12–16",
+    "352"
+   ]
+  },
+  {
+   "sorszam": 11,
+   "jel": "A.II.1.",
+   "megnevezes": "Ingatlanok és a kapcsolódó vagyoni értékű jogok",
+   "szint": "tétel",
+   "szamlak": [
+    "121",
+    "122",
+    "123",
+    "124",
+    "125",
+    "126"
+   ],
+   "csokkento_korrekcios_szamlak": [
+    "128",
+    "129"
+   ],
+   "megjegyzes": "Üzembe helyezett eszköz."
+  },
+  {
+   "sorszam": 12,
+   "jel": "A.II.2.",
+   "megnevezes": "Műszaki berendezések, gépek, járművek",
+   "szint": "tétel",
+   "szamlak": [
+    "131",
+    "132"
+   ],
+   "csokkento_korrekcios_szamlak": [
+    "138",
+    "139"
+   ],
+   "megjegyzes": "Üzembe helyezett eszköz."
+  },
+  {
+   "sorszam": 13,
+   "jel": "A.II.3.",
+   "megnevezes": "Egyéb berendezések, felszerelések, járművek",
+   "szint": "tétel",
+   "szamlak": [
+    "141",
+    "142",
+    "143",
+    "144",
+    "145"
+   ],
+   "csokkento_korrekcios_szamlak": [
+    "148",
+    "149"
+   ],
+   "megjegyzes": "Üzembe helyezett eszköz."
+  },
+  {
+   "sorszam": 14,
+   "jel": "A.II.4.",
+   "megnevezes": "Tenyészállatok",
+   "szint": "tétel",
+   "szamlak": [
+    "151",
+    "152",
+    "153"
+   ],
+   "csokkento_korrekcios_szamlak": [
+    "158",
+    "159"
+   ],
+   "megjegyzes": "Üzembe helyezett eszköz."
+  },
+  {
+   "sorszam": 15,
+   "jel": "A.II.5.",
+   "megnevezes": "Beruházások, felújítások",
+   "szint": "tétel",
+   "szamlak": [
+    "161",
+    "162"
+   ],
+   "csokkento_korrekcios_szamlak": [
+    "168"
+   ],
+   "megjegyzes": "Üzembe NEM helyezett eszköz (befejezetlen beruházás, felújítás)."
+  },
+  {
+   "sorszam": 16,
+   "jel": "A.II.6.",
+   "megnevezes": "Beruházásokra adott előlegek",
+   "szint": "tétel",
+   "szamlak": [
+    "352"
+   ],
+   "csokkento_korrekcios_szamlak": [
+    "359"
+   ],
+   "megjegyzes": "Üzembe NEM helyezett eszköz."
+  },
+  {
+   "sorszam": 17,
+   "jel": "A.II.7.",
+   "megnevezes": "Tárgyi eszközök értékhelyesbítése",
+   "szint": "tétel",
+   "szamlak": [
+    "127",
+    "137",
+    "147",
+    "157"
+   ]
+  },
+  {
+   "sorszam": 18,
+   "jel": "A.III.",
+   "megnevezes": "BEFEKTETETT PÉNZÜGYI ESZKÖZÖK (19–28. sorok)",
+   "szint": "csoport",
+   "szamlak": [
+    "17–19"
+   ]
+  },
+  {
+   "sorszam": 19,
+   "jel": "A.III.1.",
+   "megnevezes": "Tartós részesedés kapcsolt vállalkozásban",
+   "szint": "tétel",
+   "szamlak": [
+    "171"
+   ],
+   "csokkento_korrekcios_szamlak": [
+    "179"
+   ]
+  },
+  {
+   "sorszam": 20,
+   "jel": "A.III.2.",
+   "megnevezes": "Tartósan adott kölcsön kapcsolt vállalkozásban",
+   "szint": "tétel",
+   "szamlak": [
+    "191",
+    "194"
+   ],
+   "csokkento_korrekcios_szamlak": [
+    "199"
+   ]
+  },
+  {
+   "sorszam": 21,
+   "jel": "A.III.3.",
+   "megnevezes": "Tartós jelentős tulajdoni részesedés",
+   "szint": "tétel",
+   "szamlak": [
+    "172 (alszámla)"
+   ],
+   "csokkento_korrekcios_szamlak": [
+    "179"
+   ],
+   "megjegyzes": "A 'jelentős tulajdoni részesedés' sorok a számlatükörben nem szerepelnek külön; a megfelelő részesedési csoport alszámláján vezethetők."
+  },
+  {
+   "sorszam": 22,
+   "jel": "A.III.4.",
+   "megnevezes": "Tartósan adott kölcsön jelentős tulajdoni részesedési viszonyban álló vállalkozásban",
+   "szint": "tétel",
+   "szamlak": [
+    "192 (alszámla)"
+   ],
+   "csokkento_korrekcios_szamlak": [
+    "199"
+   ],
+   "megjegyzes": "A 'jelentős tulajdoni részesedés' sorok a számlatükörben nem szerepelnek külön; a megfelelő részesedési csoport alszámláján vezethetők."
+  },
+  {
+   "sorszam": 23,
+   "jel": "A.III.5.",
+   "megnevezes": "Egyéb tartós részesedés",
+   "szint": "tétel",
+   "szamlak": [
+    "172"
+   ],
+   "csokkento_korrekcios_szamlak": [
+    "179"
+   ]
+  },
+  {
+   "sorszam": 24,
+   "jel": "A.III.6.",
+   "megnevezes": "Tartósan adott kölcsön egyéb részesedési viszonyban álló vállalkozásban",
+   "szint": "tétel",
+   "szamlak": [
+    "192",
+    "195"
+   ],
+   "csokkento_korrekcios_szamlak": [
+    "199"
+   ]
+  },
+  {
+   "sorszam": 25,
+   "jel": "A.III.7.",
+   "megnevezes": "Egyéb tartósan adott kölcsön",
+   "szint": "tétel",
+   "szamlak": [
+    "193",
+    "196",
+    "197"
+   ],
+   "csokkento_korrekcios_szamlak": [
+    "199"
+   ]
+  },
+  {
+   "sorszam": 26,
+   "jel": "A.III.8.",
+   "megnevezes": "Tartós hitelviszonyt megtestesítő értékpapír",
+   "szint": "tétel",
+   "szamlak": [
+    "181",
+    "182",
+    "183",
+    "184"
+   ],
+   "csokkento_korrekcios_szamlak": [
+    "189"
+   ]
+  },
+  {
+   "sorszam": 27,
+   "jel": "A.III.9.",
+   "megnevezes": "Befektetett pénzügyi eszközök értékhelyesbítése",
+   "szint": "tétel",
+   "szamlak": [
+    "177"
+   ]
+  },
+  {
+   "sorszam": 28,
+   "jel": "A.III.10.",
+   "megnevezes": "Befektetett pénzügyi eszközök értékelési különbözete",
+   "szint": "tétel",
+   "szamlak": [],
+   "megjegyzes": "A kurzus (2016-os) számlatükrében nincs külön számlacsoport; valós értékelésnél / alszámlán vezetik."
+  },
+  {
+   "sorszam": 29,
+   "jel": "B.",
+   "megnevezes": "Forgóeszközök (30.+37.+46.+53. sor)",
+   "szint": "főcsoport",
+   "szamlak": [
+    "2. számlaosztály",
+    "31–38",
+    "353"
+   ]
+  },
+  {
+   "sorszam": 30,
+   "jel": "B.I.",
+   "megnevezes": "KÉSZLETEK (31–36. sorok)",
+   "szint": "csoport",
+   "szamlak": [
+    "21–28",
+    "353"
+   ],
+   "megjegyzes": "Minta-ZH 2. feladat: ennek a 6 sorának és az oszlopneveknek a kitöltése (9 pont)."
+  },
+  {
+   "sorszam": 31,
+   "jel": "B.I.1.",
+   "megnevezes": "Anyagok",
+   "szint": "tétel",
+   "szamlak": [
+    "211–227",
+    "228 (árkülönbözet)"
+   ],
+   "csokkento_korrekcios_szamlak": [
+    "229"
+   ]
+  },
+  {
+   "sorszam": 32,
+   "jel": "B.I.2.",
+   "megnevezes": "Befejezetlen termelés és félkész termékek",
+   "szint": "tétel",
+   "szamlak": [
+    "231–234",
+    "235–237",
+    "238"
+   ],
+   "csokkento_korrekcios_szamlak": [
+    "239"
+   ]
+  },
+  {
+   "sorszam": 33,
+   "jel": "B.I.3.",
+   "megnevezes": "Növendék-, hízó- és egyéb állatok",
+   "szint": "tétel",
+   "szamlak": [
+    "241",
+    "242",
+    "243",
+    "246",
+    "248"
+   ],
+   "csokkento_korrekcios_szamlak": [
+    "249"
+   ],
+   "megjegyzes": "Mindig saját termelésű készletként kell nyilvántartásba venni (vasarolt.pdf)."
+  },
+  {
+   "sorszam": 34,
+   "jel": "B.I.4.",
+   "megnevezes": "Késztermékek",
+   "szint": "tétel",
+   "szamlak": [
+    "251–257",
+    "258"
+   ],
+   "csokkento_korrekcios_szamlak": [
+    "259"
+   ]
+  },
+  {
+   "sorszam": 35,
+   "jel": "B.I.5.",
+   "megnevezes": "Áruk",
+   "szint": "tétel",
+   "szamlak": [
+    "261–268 (kereskedelmi áruk)",
+    "27 (közvetített szolgáltatások: 271)",
+    "28 (betétdíjas göngyölegek: 281–288)"
+   ],
+   "csokkento_korrekcios_szamlak": [
+    "269",
+    "279",
+    "289"
+   ],
+   "megjegyzes": "Az áruk csoportjai: kereskedelmi áruk, betétdíjas göngyölegek, közvetített szolgáltatások (vasarolt.pdf 15. dia)."
+  },
+  {
+   "sorszam": 36,
+   "jel": "B.I.6.",
+   "megnevezes": "Készletekre adott előlegek",
+   "szint": "tétel",
+   "szamlak": [
+    "353"
+   ],
+   "csokkento_korrekcios_szamlak": [
+    "359"
+   ],
+   "megjegyzes": "A készletek között jelenik meg, de tartalmilag követelés (vasarolt.pdf)."
+  },
+  {
+   "sorszam": 37,
+   "jel": "B.II.",
+   "megnevezes": "KÖVETELÉSEK (38–45. sorok)",
+   "szint": "csoport",
+   "szamlak": [
+    "31–34",
+    "36"
+   ]
+  },
+  {
+   "sorszam": 38,
+   "jel": "B.II.1.",
+   "megnevezes": "Követelések áruszállításból és szolgáltatásból (vevők)",
+   "szint": "tétel",
+   "szamlak": [
+    "311",
+    "312",
+    "316",
+    "317"
+   ],
+   "csokkento_korrekcios_szamlak": [
+    "315",
+    "318"
+   ]
+  },
+  {
+   "sorszam": 39,
+   "jel": "B.II.2.",
+   "megnevezes": "Követelések kapcsolt vállalkozással szemben",
+   "szint": "tétel",
+   "szamlak": [
+    "321",
+    "322",
+    "323",
+    "324"
+   ],
+   "csokkento_korrekcios_szamlak": [
+    "329"
+   ],
+   "megjegyzes": "A 325–328 (jegyzett, de be nem fizetett tőke) nem itt, hanem a D.II. sorban (negatív előjellel) jelenik meg."
+  },
+  {
+   "sorszam": 40,
+   "jel": "B.II.3.",
+   "megnevezes": "Követelések jelentős tulajdoni részesedési viszonyban lévő vállalkozással szemben",
+   "szint": "tétel",
+   "szamlak": [
+    "331 (alszámla)"
+   ],
+   "csokkento_korrekcios_szamlak": [
+    "339"
+   ],
+   "megjegyzes": "A 'jelentős tulajdoni részesedés' sorok a számlatükörben nem szerepelnek külön; a megfelelő részesedési csoport alszámláján vezethetők."
+  },
+  {
+   "sorszam": 41,
+   "jel": "B.II.4.",
+   "megnevezes": "Követelések egyéb részesedési viszonyban lévő vállalkozással szemben",
+   "szint": "tétel",
+   "szamlak": [
+    "331"
+   ],
+   "csokkento_korrekcios_szamlak": [
+    "339"
+   ],
+   "megjegyzes": "A 332 (jegyzett, de be nem fizetett tőke) a D.II. sorhoz tartozik."
+  },
+  {
+   "sorszam": 42,
+   "jel": "B.II.5.",
+   "megnevezes": "Váltókövetelések",
+   "szint": "tétel",
+   "szamlak": [
+    "341",
+    "346"
+   ],
+   "csokkento_korrekcios_szamlak": [
+    "345",
+    "349"
+   ]
+  },
+  {
+   "sorszam": 43,
+   "jel": "B.II.6.",
+   "megnevezes": "Egyéb követelések",
+   "szint": "tétel",
+   "szamlak": [
+    "361–368",
+    "46x adószámlák tartozik egyenlege (pl. 466 előzetes áfa visszaigényelhető része)"
+   ],
+   "csokkento_korrekcios_szamlak": [
+    "369"
+   ]
+  },
+  {
+   "sorszam": 44,
+   "jel": "B.II.7.",
+   "megnevezes": "Követelések értékelési különbözete",
+   "szint": "tétel",
+   "szamlak": [],
+   "megjegyzes": "A kurzus (2016-os) számlatükrében nincs külön számlacsoport; valós értékelésnél / alszámlán vezetik."
+  },
+  {
+   "sorszam": 45,
+   "jel": "B.II.8.",
+   "megnevezes": "Származékos ügyletek pozitív értékelési különbözete",
+   "szint": "tétel",
+   "szamlak": [],
+   "megjegyzes": "A kurzus (2016-os) számlatükrében nincs külön számlacsoport; valós értékelésnél / alszámlán vezetik."
+  },
+  {
+   "sorszam": 46,
+   "jel": "B.III.",
+   "megnevezes": "ÉRTÉKPAPÍROK (47–52. sorok)",
+   "szint": "csoport",
+   "szamlak": [
+    "37"
+   ]
+  },
+  {
+   "sorszam": 47,
+   "jel": "B.III.1.",
+   "megnevezes": "Részesedés kapcsolt vállalkozásban",
+   "szint": "tétel",
+   "szamlak": [
+    "371"
+   ]
+  },
+  {
+   "sorszam": 48,
+   "jel": "B.III.2.",
+   "megnevezes": "Jelentős tulajdoni részesedés",
+   "szint": "tétel",
+   "szamlak": [
+    "372 (alszámla)"
+   ],
+   "megjegyzes": "A 'jelentős tulajdoni részesedés' sorok a számlatükörben nem szerepelnek külön; a megfelelő részesedési csoport alszámláján vezethetők."
+  },
+  {
+   "sorszam": 49,
+   "jel": "B.III.3.",
+   "megnevezes": "Egyéb részesedés",
+   "szint": "tétel",
+   "szamlak": [
+    "372"
+   ]
+  },
+  {
+   "sorszam": 50,
+   "jel": "B.III.4.",
+   "megnevezes": "Saját részvények, saját üzletrészek",
+   "szint": "tétel",
+   "szamlak": [
+    "373"
+   ]
+  },
+  {
+   "sorszam": 51,
+   "jel": "B.III.5.",
+   "megnevezes": "Forgatási célú hitelviszonyt megtestesítő értékpapírok",
+   "szint": "tétel",
+   "szamlak": [
+    "374"
+   ],
+   "megjegyzes": "A 379 Értékpapír-elszámolási számla év végén nem maradhat egyenleggel."
+  },
+  {
+   "sorszam": 52,
+   "jel": "B.III.6.",
+   "megnevezes": "Értékpapírok értékelési különbözete",
+   "szint": "tétel",
+   "szamlak": [],
+   "megjegyzes": "A kurzus (2016-os) számlatükrében nincs külön számlacsoport; valós értékelésnél / alszámlán vezetik."
+  },
+  {
+   "sorszam": 53,
+   "jel": "B.IV.",
+   "megnevezes": "PÉNZESZKÖZÖK (54–55. sorok)",
+   "szint": "csoport",
+   "szamlak": [
+    "38"
+   ]
+  },
+  {
+   "sorszam": 54,
+   "jel": "B.IV.1.",
+   "megnevezes": "Pénztár, csekkek",
+   "szint": "tétel",
+   "szamlak": [
+    "381",
+    "382",
+    "383"
+   ]
+  },
+  {
+   "sorszam": 55,
+   "jel": "B.IV.2.",
+   "megnevezes": "Bankbetétek",
+   "szint": "tétel",
+   "szamlak": [
+    "384",
+    "385",
+    "386"
+   ],
+   "megjegyzes": "A 389 Átvezetési számla év végén nem maradhat egyenleggel."
+  },
+  {
+   "sorszam": 56,
+   "jel": "C.",
+   "megnevezes": "Aktív időbeli elhatárolások (57–59. sorok)",
+   "szint": "főcsoport",
+   "szamlak": [
+    "39"
+   ]
+  },
+  {
+   "sorszam": 57,
+   "jel": "C.1.",
+   "megnevezes": "Bevételek aktív időbeli elhatárolása",
+   "szint": "tétel",
+   "szamlak": [
+    "391"
+   ],
+   "csokkento_korrekcios_szamlak": [
+    "399"
+   ]
+  },
+  {
+   "sorszam": 58,
+   "jel": "C.2.",
+   "megnevezes": "Költségek, ráfordítások aktív időbeli elhatárolása",
+   "szint": "tétel",
+   "szamlak": [
+    "392"
+   ],
+   "csokkento_korrekcios_szamlak": [
+    "399"
+   ]
+  },
+  {
+   "sorszam": 59,
+   "jel": "C.3.",
+   "megnevezes": "Halasztott ráfordítások",
+   "szint": "tétel",
+   "szamlak": [
+    "393"
+   ]
+  },
+  {
+   "sorszam": 60,
+   "jel": "",
+   "megnevezes": "ESZKÖZÖK (AKTÍVÁK) ÖSSZESEN (1.+29.+56. sor)",
+   "szint": "összesen",
+   "szamlak": []
+  }
+ ],
+ "forras_oldal": [
+  {
+   "sorszam": 61,
+   "jel": "D.",
+   "megnevezes": "Saját tőke (62.+64.+65.+66.+67.+68.+71. sor)",
+   "szint": "főcsoport",
+   "szamlak": [
+    "41"
+   ]
+  },
+  {
+   "sorszam": 62,
+   "jel": "D.I.",
+   "megnevezes": "JEGYZETT TŐKE",
+   "szint": "csoport",
+   "szamlak": [
+    "411"
+   ]
+  },
+  {
+   "sorszam": 63,
+   "jel": "",
+   "megnevezes": "ebből: visszavásárolt tulajdoni részesedés névértéken",
+   "szint": "ebből-sor",
+   "szamlak": [],
+   "megjegyzes": "A 373 saját részvények/üzletrészek névértéke – külön számla nincs."
+  },
+  {
+   "sorszam": 64,
+   "jel": "D.II.",
+   "megnevezes": "JEGYZETT, DE MÉG BE NEM FIZETETT TŐKE (–)",
+   "szint": "csoport",
+   "szamlak": [
+    "325–328",
+    "332",
+    "358"
+   ],
+   "megjegyzes": "Negatív előjellel; a tagokkal szembeni 'követelés' számlák egyenlege (szamlaszamok.json: anyavállalattól 325, egyéb részesedési viszony 33x, részesedési viszonyban nem lévő 358)."
+  },
+  {
+   "sorszam": 65,
+   "jel": "D.III.",
+   "megnevezes": "TŐKETARTALÉK",
+   "szint": "csoport",
+   "szamlak": [
+    "412"
+   ]
+  },
+  {
+   "sorszam": 66,
+   "jel": "D.IV.",
+   "megnevezes": "EREDMÉNYTARTALÉK",
+   "szint": "csoport",
+   "szamlak": [
+    "413"
+   ],
+   "megjegyzes": "A 418 (előző évek helyesbítéséből származó adózott eredmény) a mérlegben külön sort nem kap."
+  },
+  {
+   "sorszam": 67,
+   "jel": "D.V.",
+   "megnevezes": "LEKÖTÖTT TARTALÉK",
+   "szint": "csoport",
+   "szamlak": [
+    "414"
+   ],
+   "megjegyzes": "Pl. aktivált alapítás-átszervezés: T 413 / K 414 (szamlaszamok.json: 4142)."
+  },
+  {
+   "sorszam": 68,
+   "jel": "D.VI.",
+   "megnevezes": "ÉRTÉKELÉSI TARTALÉK (69–70. sorok)",
+   "szint": "csoport",
+   "szamlak": [
+    "417"
+   ]
+  },
+  {
+   "sorszam": 69,
+   "jel": "D.VI.1.",
+   "megnevezes": "Értékhelyesbítés értékelési tartaléka",
+   "szint": "tétel",
+   "szamlak": [
+    "417 (4171)"
+   ],
+   "megjegyzes": "Ellenszámlája a 117/127/137/147/157 értékhelyesbítés."
+  },
+  {
+   "sorszam": 70,
+   "jel": "D.VI.2.",
+   "megnevezes": "Valós értékelés értékelési tartaléka",
+   "szint": "tétel",
+   "szamlak": [
+    "417 (alszámla)"
+   ]
+  },
+  {
+   "sorszam": 71,
+   "jel": "D.VII.",
+   "megnevezes": "ADÓZOTT EREDMÉNY",
+   "szint": "csoport",
+   "szamlak": [
+    "419",
+    "493"
+   ]
+  },
+  {
+   "sorszam": 72,
+   "jel": "E.",
+   "megnevezes": "Céltartalékok (73–75. sorok)",
+   "szint": "főcsoport",
+   "szamlak": [
+    "42"
+   ]
+  },
+  {
+   "sorszam": 73,
+   "jel": "E.1.",
+   "megnevezes": "Céltartalék a várható kötelezettségekre",
+   "szint": "tétel",
+   "szamlak": [
+    "421"
+   ]
+  },
+  {
+   "sorszam": 74,
+   "jel": "E.2.",
+   "megnevezes": "Céltartalék a várható jövőbeni költségekre",
+   "szint": "tétel",
+   "szamlak": [
+    "422"
+   ]
+  },
+  {
+   "sorszam": 75,
+   "jel": "E.3.",
+   "megnevezes": "Egyéb céltartalék",
+   "szint": "tétel",
+   "szamlak": [
+    "424",
+    "429"
+   ]
+  },
+  {
+   "sorszam": 76,
+   "jel": "F.",
+   "megnevezes": "Kötelezettségek (77.+82.+92. sor)",
+   "szint": "főcsoport",
+   "szamlak": [
+    "43–47"
+   ]
+  },
+  {
+   "sorszam": 77,
+   "jel": "F.I.",
+   "megnevezes": "HÁTRASOROLT KÖTELEZETTSÉGEK (78–81. sorok)",
+   "szint": "csoport",
+   "szamlak": [
+    "43"
+   ]
+  },
+  {
+   "sorszam": 78,
+   "jel": "F.I.1.",
+   "megnevezes": "Hátrasorolt kötelezettségek kapcsolt vállalkozással szemben",
+   "szint": "tétel",
+   "szamlak": [
+    "431"
+   ]
+  },
+  {
+   "sorszam": 79,
+   "jel": "F.I.2.",
+   "megnevezes": "Hátrasorolt kötelezettségek jelentős tulajdoni részesedési viszonyban lévő vállalkozással szemben",
+   "szint": "tétel",
+   "szamlak": [
+    "432 (alszámla)"
+   ],
+   "megjegyzes": "A 'jelentős tulajdoni részesedés' sorok a számlatükörben nem szerepelnek külön; a megfelelő részesedési csoport alszámláján vezethetők."
+  },
+  {
+   "sorszam": 80,
+   "jel": "F.I.3.",
+   "megnevezes": "Hátrasorolt kötelezettségek egyéb részesedési viszonyban lévő vállalkozással szemben",
+   "szint": "tétel",
+   "szamlak": [
+    "432"
+   ]
+  },
+  {
+   "sorszam": 81,
+   "jel": "F.I.4.",
+   "megnevezes": "Hátrasorolt kötelezettségek egyéb gazdálkodóval szemben",
+   "szint": "tétel",
+   "szamlak": [
+    "433"
+   ]
+  },
+  {
+   "sorszam": 82,
+   "jel": "F.II.",
+   "megnevezes": "HOSSZÚ LEJÁRATÚ KÖTELEZETTSÉGEK (83–91. sorok)",
+   "szint": "csoport",
+   "szamlak": [
+    "44"
+   ]
+  },
+  {
+   "sorszam": 83,
+   "jel": "F.II.1.",
+   "megnevezes": "Hosszú lejáratra kapott kölcsönök",
+   "szint": "tétel",
+   "szamlak": [
+    "441"
+   ]
+  },
+  {
+   "sorszam": 84,
+   "jel": "F.II.2.",
+   "megnevezes": "Átváltoztatható és átváltozó kötvények",
+   "szint": "tétel",
+   "szamlak": [
+    "442"
+   ]
+  },
+  {
+   "sorszam": 85,
+   "jel": "F.II.3.",
+   "megnevezes": "Tartozások kötvénykibocsátásból",
+   "szint": "tétel",
+   "szamlak": [
+    "443"
+   ]
+  },
+  {
+   "sorszam": 86,
+   "jel": "F.II.4.",
+   "megnevezes": "Beruházási és fejlesztési hitelek",
+   "szint": "tétel",
+   "szamlak": [
+    "444"
+   ]
+  },
+  {
+   "sorszam": 87,
+   "jel": "F.II.5.",
+   "megnevezes": "Egyéb hosszú lejáratú hitelek",
+   "szint": "tétel",
+   "szamlak": [
+    "445"
+   ]
+  },
+  {
+   "sorszam": 88,
+   "jel": "F.II.6.",
+   "megnevezes": "Tartós kötelezettségek kapcsolt vállalkozással szemben",
+   "szint": "tétel",
+   "szamlak": [
+    "446"
+   ]
+  },
+  {
+   "sorszam": 89,
+   "jel": "F.II.7.",
+   "megnevezes": "Tartós kötelezettségek jelentős tulajdoni részesedési viszonyban lévő vállalkozással szemben",
+   "szint": "tétel",
+   "szamlak": [
+    "447 (alszámla)"
+   ],
+   "megjegyzes": "A 'jelentős tulajdoni részesedés' sorok a számlatükörben nem szerepelnek külön; a megfelelő részesedési csoport alszámláján vezethetők."
+  },
+  {
+   "sorszam": 90,
+   "jel": "F.II.8.",
+   "megnevezes": "Tartós kötelezettségek egyéb részesedési viszonyban lévő vállalkozással szemben",
+   "szint": "tétel",
+   "szamlak": [
+    "447"
+   ]
+  },
+  {
+   "sorszam": 91,
+   "jel": "F.II.9.",
+   "megnevezes": "Egyéb hosszú lejáratú kötelezettségek",
+   "szint": "tétel",
+   "szamlak": [
+    "448",
+    "449"
+   ]
+  },
+  {
+   "sorszam": 92,
+   "jel": "F.III.",
+   "megnevezes": "RÖVID LEJÁRATÚ KÖTELEZETTSÉGEK (93.+95–104. sorok)",
+   "szint": "csoport",
+   "szamlak": [
+    "45–47"
+   ]
+  },
+  {
+   "sorszam": 93,
+   "jel": "F.III.1.",
+   "megnevezes": "Rövid lejáratú kölcsönök",
+   "szint": "tétel",
+   "szamlak": [
+    "451"
+   ]
+  },
+  {
+   "sorszam": 94,
+   "jel": "",
+   "megnevezes": "ebből: az átváltoztatható és átváltozó kötvények",
+   "szint": "ebből-sor",
+   "szamlak": []
+  },
+  {
+   "sorszam": 95,
+   "jel": "F.III.2.",
+   "megnevezes": "Rövid lejáratú hitelek",
+   "szint": "tétel",
+   "szamlak": [
+    "452"
+   ]
+  },
+  {
+   "sorszam": 96,
+   "jel": "F.III.3.",
+   "megnevezes": "Vevőktől kapott előlegek",
+   "szint": "tétel",
+   "szamlak": [
+    "453"
+   ]
+  },
+  {
+   "sorszam": 97,
+   "jel": "F.III.4.",
+   "megnevezes": "Kötelezettségek áruszállításból és szolgáltatásból (szállítók)",
+   "szint": "tétel",
+   "szamlak": [
+    "454 (4541, 4543)",
+    "455 (4551 belföldi, 4552 külföldi beruházási szállító)"
+   ]
+  },
+  {
+   "sorszam": 98,
+   "jel": "F.III.5.",
+   "megnevezes": "Váltótartozások",
+   "szint": "tétel",
+   "szamlak": [
+    "457"
+   ]
+  },
+  {
+   "sorszam": 99,
+   "jel": "F.III.6.",
+   "megnevezes": "Rövid lejáratú kötelezettségek kapcsolt vállalkozással szemben",
+   "szint": "tétel",
+   "szamlak": [
+    "458"
+   ]
+  },
+  {
+   "sorszam": 100,
+   "jel": "F.III.7.",
+   "megnevezes": "Rövid lejáratú kötelezettségek jelentős tulajdoni részesedési viszonyban lévő vállalkozással szemben",
+   "szint": "tétel",
+   "szamlak": [
+    "459 (alszámla)"
+   ],
+   "megjegyzes": "A 'jelentős tulajdoni részesedés' sorok a számlatükörben nem szerepelnek külön; a megfelelő részesedési csoport alszámláján vezethetők."
+  },
+  {
+   "sorszam": 101,
+   "jel": "F.III.8.",
+   "megnevezes": "Rövid lejáratú kötelezettségek egyéb részesedési viszonyban lévő vállalkozással szemben",
+   "szint": "tétel",
+   "szamlak": [
+    "459"
+   ]
+  },
+  {
+   "sorszam": 102,
+   "jel": "F.III.9.",
+   "megnevezes": "Egyéb rövid lejáratú kötelezettségek",
+   "szint": "tétel",
+   "szamlak": [
+    "456 (faktoring)",
+    "461–479 (adók, áfa-egyenleg, bérek, TB, 479 különféle)"
+   ]
+  },
+  {
+   "sorszam": 103,
+   "jel": "F.III.10.",
+   "megnevezes": "Kötelezettségek értékelési különbözete",
+   "szint": "tétel",
+   "szamlak": [],
+   "megjegyzes": "A kurzus (2016-os) számlatükrében nincs külön számlacsoport; valós értékelésnél / alszámlán vezetik."
+  },
+  {
+   "sorszam": 104,
+   "jel": "F.III.11.",
+   "megnevezes": "Származékos ügyletek negatív értékelési különbözete",
+   "szint": "tétel",
+   "szamlak": [],
+   "megjegyzes": "A kurzus (2016-os) számlatükrében nincs külön számlacsoport; valós értékelésnél / alszámlán vezetik."
+  },
+  {
+   "sorszam": 105,
+   "jel": "G.",
+   "megnevezes": "Passzív időbeli elhatárolások (106–108. sorok)",
+   "szint": "főcsoport",
+   "szamlak": [
+    "48"
+   ]
+  },
+  {
+   "sorszam": 106,
+   "jel": "G.1.",
+   "megnevezes": "Bevételek passzív időbeli elhatárolása",
+   "szint": "tétel",
+   "szamlak": [
+    "481"
+   ]
+  },
+  {
+   "sorszam": 107,
+   "jel": "G.2.",
+   "megnevezes": "Költségek, ráfordítások passzív időbeli elhatárolása",
+   "szint": "tétel",
+   "szamlak": [
+    "482"
+   ]
+  },
+  {
+   "sorszam": 108,
+   "jel": "G.3.",
+   "megnevezes": "Halasztott bevételek",
+   "szint": "tétel",
+   "szamlak": [
+    "483"
+   ],
+   "megjegyzes": "Pl. térítés nélkül átvett, ajándékba kapott eszköz, leltártöbblet, fejlesztési támogatás."
+  },
+  {
+   "sorszam": 109,
+   "jel": "",
+   "megnevezes": "FORRÁSOK (PASSZÍVÁK) ÖSSZESEN (61.+72.+76.+105. sor)",
+   "szint": "összesen",
+   "szamlak": []
+  }
+ ],
+ "eredmenykimutatas_osszkoltseges": {
+  "megjegyzes": "Szt. 2. sz. melléklet ('A' változat, összköltség eljárás). 2016 óta nincs rendkívüli eredmény: római sorok I–X, eredménykategóriák A–D. A diák csak a sorok egy részét mutatják (sajat.pdf 27–30. dia: árbevétel, STKÁV, költségnemek, A. üzemi eredmény; targyi.pdf 78. dia: ÉCS / egyéb bevétel / egyéb ráfordítás).",
+  "sorok": [
+   {
+    "jel": "01.",
+    "megnevezes": "Belföldi értékesítés nettó árbevétele",
+    "szamlak": [
+     "91–92"
+    ]
+   },
+   {
+    "jel": "02.",
+    "megnevezes": "Exportértékesítés nettó árbevétele",
+    "szamlak": [
+     "93–94"
+    ]
+   },
+   {
+    "jel": "I.",
+    "megnevezes": "ÉRTÉKESÍTÉS NETTÓ ÁRBEVÉTELE (01+02)",
+    "szamlak": [
+     "91–94"
+    ]
+   },
+   {
+    "jel": "03.",
+    "megnevezes": "Saját termelésű készletek állományváltozása (±)",
+    "szamlak": [
+     "581"
+    ],
+    "megjegyzes": "STKÁV = záró – nyitó STK; lehet negatív is."
+   },
+   {
+    "jel": "04.",
+    "megnevezes": "Saját előállítású eszközök aktivált értéke",
+    "szamlak": [
+     "582"
+    ]
+   },
+   {
+    "jel": "II.",
+    "megnevezes": "AKTIVÁLT SAJÁT TELJESÍTMÉNYEK ÉRTÉKE (±03+04)",
+    "szamlak": [
+     "58"
+    ]
+   },
+   {
+    "jel": "III.",
+    "megnevezes": "EGYÉB BEVÉTELEK",
+    "szamlak": [
+     "96"
+    ],
+    "megjegyzes": "ebből: visszaírt értékvesztés (966)."
+   },
+   {
+    "jel": "05.",
+    "megnevezes": "Anyagköltség",
+    "szamlak": [
+     "51 (811)"
+    ],
+    "megjegyzes": "A 513 anyagköltség-megtérülés csökkenti."
+   },
+   {
+    "jel": "06.",
+    "megnevezes": "Igénybe vett szolgáltatások értéke",
+    "szamlak": [
+     "52 (812)"
+    ]
+   },
+   {
+    "jel": "07.",
+    "megnevezes": "Egyéb szolgáltatások értéke",
+    "szamlak": [
+     "53 (813)"
+    ]
+   },
+   {
+    "jel": "08.",
+    "megnevezes": "Eladott áruk beszerzési értéke (ELÁBÉ)",
+    "szamlak": [
+     "814"
+    ]
+   },
+   {
+    "jel": "09.",
+    "megnevezes": "Eladott (közvetített) szolgáltatások értéke",
+    "szamlak": [
+     "815"
+    ]
+   },
+   {
+    "jel": "IV.",
+    "megnevezes": "ANYAGJELLEGŰ RÁFORDÍTÁSOK (05+06+07+08+09)",
+    "szamlak": [
+     "51–53",
+     "814",
+     "815"
+    ]
+   },
+   {
+    "jel": "10.",
+    "megnevezes": "Bérköltség",
+    "szamlak": [
+     "54 (821)"
+    ]
+   },
+   {
+    "jel": "11.",
+    "megnevezes": "Személyi jellegű egyéb kifizetések",
+    "szamlak": [
+     "55 (822)"
+    ]
+   },
+   {
+    "jel": "12.",
+    "megnevezes": "Bérjárulékok",
+    "szamlak": [
+     "56 (823)"
+    ]
+   },
+   {
+    "jel": "V.",
+    "megnevezes": "SZEMÉLYI JELLEGŰ RÁFORDÍTÁSOK (10+11+12)",
+    "szamlak": [
+     "54–56"
+    ]
+   },
+   {
+    "jel": "VI.",
+    "megnevezes": "ÉRTÉKCSÖKKENÉSI LEÍRÁS",
+    "szamlak": [
+     "57 (83)"
+    ],
+    "megjegyzes": "Csak a terv szerinti ÉCS (5711, 5712); a terven felüli ÉCS egyéb ráfordítás (8663/8664)."
+   },
+   {
+    "jel": "VII.",
+    "megnevezes": "EGYÉB RÁFORDÍTÁSOK",
+    "szamlak": [
+     "86"
+    ],
+    "megjegyzes": "ebből: értékvesztés (866)."
+   },
+   {
+    "jel": "A.",
+    "megnevezes": "ÜZEMI (ÜZLETI) TEVÉKENYSÉG EREDMÉNYE (I±II+III–IV–V–VI–VII)",
+    "szamlak": [],
+    "megjegyzes": "Minta-ZH 1. feladat: az eredménykimutatást eddig a sorig kellett elkészíteni."
+   },
+   {
+    "jel": "13.",
+    "megnevezes": "Kapott (járó) osztalék és részesedés",
+    "szamlak": [
+     "971"
+    ],
+    "megjegyzes": "ebből: kapcsolt vállalkozástól kapott."
+   },
+   {
+    "jel": "14.",
+    "megnevezes": "Részesedésekből származó bevételek, árfolyamnyereségek",
+    "szamlak": [
+     "972"
+    ],
+    "megjegyzes": "ebből: kapcsolt vállalkozástól kapott."
+   },
+   {
+    "jel": "15.",
+    "megnevezes": "Befektetett pénzügyi eszközökből (értékpapírokból, kölcsönökből) származó bevételek, árfolyamnyereségek",
+    "szamlak": [
+     "973"
+    ],
+    "megjegyzes": "ebből: kapcsolt vállalkozástól kapott."
+   },
+   {
+    "jel": "16.",
+    "megnevezes": "Egyéb kapott (járó) kamatok és kamatjellegű bevételek",
+    "szamlak": [
+     "974"
+    ],
+    "megjegyzes": "ebből: kapcsolt vállalkozástól kapott."
+   },
+   {
+    "jel": "17.",
+    "megnevezes": "Pénzügyi műveletek egyéb bevételei",
+    "szamlak": [
+     "975–979"
+    ],
+    "megjegyzes": "ebből: értékelési különbözet."
+   },
+   {
+    "jel": "VIII.",
+    "megnevezes": "PÉNZÜGYI MŰVELETEK BEVÉTELEI (13+14+15+16+17)",
+    "szamlak": [
+     "97"
+    ]
+   },
+   {
+    "jel": "18.",
+    "megnevezes": "Részesedésekből származó ráfordítások, árfolyamveszteségek",
+    "szamlak": [
+     "871"
+    ],
+    "megjegyzes": "ebből: kapcsolt vállalkozásnak adott."
+   },
+   {
+    "jel": "19.",
+    "megnevezes": "Befektetett pénzügyi eszközökből (értékpapírokból, kölcsönökből) származó ráfordítások, árfolyamveszteségek",
+    "szamlak": [
+     "872"
+    ],
+    "megjegyzes": "ebből: kapcsolt vállalkozásnak adott."
+   },
+   {
+    "jel": "20.",
+    "megnevezes": "Fizetendő (fizetett) kamatok és kamatjellegű ráfordítások",
+    "szamlak": [
+     "873"
+    ],
+    "megjegyzes": "ebből: kapcsolt vállalkozásnak adott."
+   },
+   {
+    "jel": "21.",
+    "megnevezes": "Részesedések, értékpapírok, tartósan adott kölcsönök, bankbetétek értékvesztése",
+    "szamlak": [
+     "874"
+    ]
+   },
+   {
+    "jel": "22.",
+    "megnevezes": "Pénzügyi műveletek egyéb ráfordításai",
+    "szamlak": [
+     "875–879"
+    ],
+    "megjegyzes": "ebből: értékelési különbözet."
+   },
+   {
+    "jel": "IX.",
+    "megnevezes": "PÉNZÜGYI MŰVELETEK RÁFORDÍTÁSAI (18+19+20+21+22)",
+    "szamlak": [
+     "87"
+    ]
+   },
+   {
+    "jel": "B.",
+    "megnevezes": "PÉNZÜGYI MŰVELETEK EREDMÉNYE (VIII–IX)",
+    "szamlak": []
+   },
+   {
+    "jel": "C.",
+    "megnevezes": "ADÓZÁS ELŐTTI EREDMÉNY (±A±B)",
+    "szamlak": []
+   },
+   {
+    "jel": "X.",
+    "megnevezes": "Adófizetési kötelezettség",
+    "szamlak": [
+     "891"
+    ]
+   },
+   {
+    "jel": "D.",
+    "megnevezes": "ADÓZOTT EREDMÉNY (±C–X)",
+    "szamlak": [],
+    "megjegyzes": "Mérlegben: D.VII. Adózott eredmény (419)."
+   }
+  ]
+ },
+ "gyakorlo_kerdesek": [
+  {
+   "id": "ms_q01",
+   "tipus": "merlegsor",
+   "kerdes": "Egészítsd ki: B.I. Készletek sorai és a mérleg oszlopnevei! (minta-ZH 2. feladat, 9 pont)",
+   "opciok": null,
+   "helyes": {
+    "sorok": [
+     "Anyagok",
+     "Befejezetlen termelés és félkész termékek",
+     "Növendék-, hízó- és egyéb állatok",
+     "Késztermékek",
+     "Áruk",
+     "Készletekre adott előlegek"
+    ],
+    "oszlopok": [
+     "Előző év",
+     "Előző év(ek) módosításai",
+     "Tárgyév"
+    ]
+   },
+   "magyarazat": "Minta-ZH megoldása szerint 6 sor + 3 oszlopnév.",
+   "forras": "feladat"
+  },
+  {
+   "id": "ms_q02",
+   "tipus": "merlegsor",
+   "kerdes": "Sorold fel az A.I. Immateriális javak sorait!",
+   "opciok": null,
+   "helyes": [
+    "Alapítás-átszervezés aktivált értéke",
+    "Kísérleti fejlesztés aktivált értéke",
+    "Vagyoni értékű jogok",
+    "Szellemi termékek",
+    "Üzleti vagy cégérték",
+    "Immateriális javakra adott előlegek",
+    "Immateriális javak értékhelyesbítése"
+   ],
+   "magyarazat": "immaterialis.pdf 4. dia: 7 sor (3–9. mérlegsorok).",
+   "forras": "tananyag"
+  },
+  {
+   "id": "ms_q03",
+   "tipus": "merlegsor",
+   "kerdes": "Sorold fel az A.II. Tárgyi eszközök sorait!",
+   "opciok": null,
+   "helyes": [
+    "Ingatlanok és a kapcsolódó vagyoni értékű jogok",
+    "Műszaki berendezések, gépek, járművek",
+    "Egyéb berendezések, felszerelések, járművek",
+    "Tenyészállatok",
+    "Beruházások, felújítások",
+    "Beruházásokra adott előlegek",
+    "Tárgyi eszközök értékhelyesbítése"
+   ],
+   "magyarazat": "targyi.pdf 4. dia: 7 sor (11–17.); 1–4. üzembe helyezett, 5–6. üzembe nem helyezett.",
+   "forras": "tananyag"
+  },
+  {
+   "id": "ms_q04",
+   "tipus": "merlegsor",
+   "kerdes": "Sorold fel az eszközoldal főcsoportjait és csoportjait!",
+   "opciok": null,
+   "helyes": [
+    "A. Befektetett eszközök: I. Immateriális javak, II. Tárgyi eszközök, III. Befektetett pénzügyi eszközök",
+    "B. Forgóeszközök: I. Készletek, II. Követelések, III. Értékpapírok, IV. Pénzeszközök",
+    "C. Aktív időbeli elhatárolások"
+   ],
+   "magyarazat": "A témadiák 3. diája (mérleg eszközoldal).",
+   "forras": "tananyag"
+  },
+  {
+   "id": "ms_q05",
+   "tipus": "merlegsor",
+   "kerdes": "Sorold fel a D. Saját tőke sorait!",
+   "opciok": null,
+   "helyes": [
+    "I. Jegyzett tőke (ebből: visszavásárolt tulajdoni részesedés névértéken)",
+    "II. Jegyzett, de még be nem fizetett tőke (–)",
+    "III. Tőketartalék",
+    "IV. Eredménytartalék",
+    "V. Lekötött tartalék",
+    "VI. Értékelési tartalék (1. Értékhelyesbítés értékelési tartaléka, 2. Valós értékelés értékelési tartaléka)",
+    "VII. Adózott eredmény"
+   ],
+   "magyarazat": "Szt. 1. sz. melléklet szerinti 7 csoport.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ms_q06",
+   "tipus": "merlegsor",
+   "kerdes": "Sorold fel a forrásoldal főcsoportjait!",
+   "opciok": null,
+   "helyes": [
+    "D. Saját tőke",
+    "E. Céltartalékok",
+    "F. Kötelezettségek",
+    "G. Passzív időbeli elhatárolások"
+   ],
+   "magyarazat": "Szt. 1. sz. melléklet.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ms_q07",
+   "tipus": "merlegsor",
+   "kerdes": "Sorold fel a B.IV. Pénzeszközök sorait!",
+   "opciok": null,
+   "helyes": [
+    "Pénztár, csekkek",
+    "Bankbetétek"
+   ],
+   "magyarazat": "2 sor.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ms_q08",
+   "tipus": "merlegsor",
+   "kerdes": "Sorold fel a C. Aktív időbeli elhatárolások sorait!",
+   "opciok": null,
+   "helyes": [
+    "Bevételek aktív időbeli elhatárolása",
+    "Költségek, ráfordítások aktív időbeli elhatárolása",
+    "Halasztott ráfordítások"
+   ],
+   "magyarazat": "3 sor (391, 392, 393).",
+   "forras": "generalt"
+  },
+  {
+   "id": "ms_q09",
+   "tipus": "merlegsor",
+   "kerdes": "Sorold fel a G. Passzív időbeli elhatárolások sorait!",
+   "opciok": null,
+   "helyes": [
+    "Bevételek passzív időbeli elhatárolása",
+    "Költségek, ráfordítások passzív időbeli elhatárolása",
+    "Halasztott bevételek"
+   ],
+   "magyarazat": "3 sor (481, 482, 483).",
+   "forras": "generalt"
+  },
+  {
+   "id": "ms_q10",
+   "tipus": "merlegsor",
+   "kerdes": "Sorold fel az E. Céltartalékok sorait!",
+   "opciok": null,
+   "helyes": [
+    "Céltartalék a várható kötelezettségekre",
+    "Céltartalék a várható jövőbeni költségekre",
+    "Egyéb céltartalék"
+   ],
+   "magyarazat": "3 sor (421, 422, 424/429).",
+   "forras": "generalt"
+  },
+  {
+   "id": "ms_q11",
+   "tipus": "merlegsor",
+   "kerdes": "Sorold fel az F. Kötelezettségek csoportjait!",
+   "opciok": null,
+   "helyes": [
+    "I. Hátrasorolt kötelezettségek",
+    "II. Hosszú lejáratú kötelezettségek",
+    "III. Rövid lejáratú kötelezettségek"
+   ],
+   "magyarazat": "Szt. 1. sz. melléklet.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ms_q12",
+   "tipus": "merlegsor",
+   "kerdes": "Melyik mérlegsorba kerül: üzembe nem helyezett gép (befejezetlen beruházás, 161)?",
+   "opciok": null,
+   "helyes": "A.II.5. Beruházások, felújítások",
+   "magyarazat": "targyi.pdf 4. dia: üzembe nem helyezett eszköz.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ms_q13",
+   "tipus": "merlegsor",
+   "kerdes": "Melyik mérlegsorba kerül: gépbeszerzésre adott előleg (352)?",
+   "opciok": null,
+   "helyes": "A.II.6. Beruházásokra adott előlegek",
+   "magyarazat": "Üzembe nem helyezett eszköz.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ms_q14",
+   "tipus": "merlegsor",
+   "kerdes": "Melyik mérlegsorba kerül: szoftverlicenc-vásárlásra adott előleg (351)?",
+   "opciok": null,
+   "helyes": "A.I.6. Immateriális javakra adott előlegek",
+   "magyarazat": "szamlaszamok.json: immateriális javakra adott előleg 351.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ms_q15",
+   "tipus": "merlegsor",
+   "kerdes": "Melyik mérlegsorba kerül: anyagbeszerzésre adott előleg (353)?",
+   "opciok": null,
+   "helyes": "B.I.6. Készletekre adott előlegek",
+   "magyarazat": "A készletek között jelenik meg, bár tartalmilag követelés.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ms_q16",
+   "tipus": "merlegsor",
+   "kerdes": "Melyik mérlegsorba kerül: hízóállat (242)?",
+   "opciok": null,
+   "helyes": "B.I.3. Növendék-, hízó- és egyéb állatok",
+   "magyarazat": "Forgóeszköz, saját termelésű készlet – NEM tenyészállat (A.II.4.).",
+   "forras": "generalt"
+  },
+  {
+   "id": "ms_q17",
+   "tipus": "merlegsor",
+   "kerdes": "Melyik mérlegsorba kerül: tenyészállat (151)?",
+   "opciok": null,
+   "helyes": "A.II.4. Tenyészállatok",
+   "magyarazat": "Befektetett eszköz (tárgyi eszköz).",
+   "forras": "generalt"
+  },
+  {
+   "id": "ms_q18",
+   "tipus": "merlegsor",
+   "kerdes": "Melyik mérlegsorba kerül: közvetített szolgáltatás (271)?",
+   "opciok": null,
+   "helyes": "B.I.5. Áruk",
+   "magyarazat": "Minta-ZH teszt: a közvetített szolgáltatás az áruk sajátos csoportja.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ms_q19",
+   "tipus": "merlegsor",
+   "kerdes": "Melyik mérlegsorba kerül: saját betétdíjas göngyöleg (281)?",
+   "opciok": null,
+   "helyes": "B.I.5. Áruk",
+   "magyarazat": "Az áruk csoportjai: kereskedelmi áru, betétdíjas göngyöleg, közvetített szolgáltatás.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ms_q20",
+   "tipus": "merlegsor",
+   "kerdes": "Melyik mérlegsorba kerül: szabadalom, szoftver (114)?",
+   "opciok": null,
+   "helyes": "A.I.4. Szellemi termékek",
+   "magyarazat": "szamlaszamok.json: 114 szellemi termék.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ms_q21",
+   "tipus": "merlegsor",
+   "kerdes": "Melyik mérlegsorba kerül: bérleti jog, használati jog, licenc (113)?",
+   "opciok": null,
+   "helyes": "A.I.3. Vagyoni értékű jogok",
+   "magyarazat": "szamlaszamok.json: 113.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ms_q22",
+   "tipus": "merlegsor",
+   "kerdes": "Melyik mérlegsorba kerül: földhasználati jog (ingatlanhoz kapcsolódó vagyoni értékű jog, 126)?",
+   "opciok": null,
+   "helyes": "A.II.1. Ingatlanok és a kapcsolódó vagyoni értékű jogok",
+   "magyarazat": "immaterialis.pdf: az ingatlanhoz kapcsolódó vagyoni értékű jog kivétel az A.I.3. alól.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ms_q23",
+   "tipus": "merlegsor",
+   "kerdes": "Melyik mérlegsorba kerül: termelésben közvetlenül részt vevő targonca (132)?",
+   "opciok": null,
+   "helyes": "A.II.2. Műszaki berendezések, gépek, járművek",
+   "magyarazat": "szamlaszamok.json: targonca 132.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ms_q24",
+   "tipus": "merlegsor",
+   "kerdes": "Melyik mérlegsorba kerül: irodai számítógép, bútor (143)?",
+   "opciok": null,
+   "helyes": "A.II.3. Egyéb berendezések, felszerelések, járművek",
+   "magyarazat": "14-es számlacsoport.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ms_q25",
+   "tipus": "merlegsor",
+   "kerdes": "Melyik mérlegsorba kerül: aktivált alapítás-átszervezés (111)?",
+   "opciok": null,
+   "helyes": "A.I.1. Alapítás-átszervezés aktivált értéke",
+   "magyarazat": "Minta-ZH 4. feladat fogalma.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ms_q26",
+   "tipus": "merlegsor",
+   "kerdes": "Melyik mérlegsorba kerül: félkész termék (235)?",
+   "opciok": null,
+   "helyes": "B.I.2. Befejezetlen termelés és félkész termékek",
+   "magyarazat": "23-as számlacsoport.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ms_q27",
+   "tipus": "merlegsor",
+   "kerdes": "Melyik mérlegsorba kerül: beruházási szállítói tartozás (4551)?",
+   "opciok": null,
+   "helyes": "F.III.4. Kötelezettségek áruszállításból és szolgáltatásból (szállítók)",
+   "magyarazat": "A 455 beruházási szállító is szállítói kötelezettség.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ms_q28",
+   "tipus": "merlegsor",
+   "kerdes": "Melyik mérlegsorba kerül: 5 éves beruházási hitel (444)?",
+   "opciok": null,
+   "helyes": "F.II.4. Beruházási és fejlesztési hitelek",
+   "magyarazat": "44-es csoport.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ms_q29",
+   "tipus": "merlegsor",
+   "kerdes": "Melyik mérlegsorba kerül: vevőtől kapott előleg (453)?",
+   "opciok": null,
+   "helyes": "F.III.3. Vevőktől kapott előlegek",
+   "magyarazat": "Rövid lejáratú kötelezettség.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ms_q30",
+   "tipus": "merlegsor",
+   "kerdes": "Melyik mérlegsorba kerül: fizetendő társasági adó (461)?",
+   "opciok": null,
+   "helyes": "F.III.9. Egyéb rövid lejáratú kötelezettségek",
+   "magyarazat": "461–479 egyéb rövid lejáratú kötelezettségek.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ms_q31",
+   "tipus": "merlegsor",
+   "kerdes": "Melyik mérlegsorba kerül: a tag által még be nem fizetett jegyzett tőke (358)?",
+   "opciok": null,
+   "helyes": "D.II. Jegyzett, de még be nem fizetett tőke (–)",
+   "magyarazat": "Negatív előjellel a saját tőkében.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ms_q32",
+   "tipus": "merlegsor",
+   "kerdes": "Melyik mérlegsorba kerül: az aktivált alapítás-átszervezés miatt képzett tartalék (414)?",
+   "opciok": null,
+   "helyes": "D.V. Lekötött tartalék",
+   "magyarazat": "szamlaszamok.json: T 413 / K 4142.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ms_q33",
+   "tipus": "merlegsor",
+   "kerdes": "Melyik mérlegsorba kerül: értékhelyesbítés ellenszámlája (4171)?",
+   "opciok": null,
+   "helyes": "D.VI.1. Értékhelyesbítés értékelési tartaléka",
+   "magyarazat": "szamlaszamok.json: T 137/117 / K 4171.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ms_q34",
+   "tipus": "merlegsor",
+   "kerdes": "Melyik mérlegsorba kerül: térítés nélkül átvett eszköz értéke (483)?",
+   "opciok": null,
+   "helyes": "G.3. Halasztott bevételek",
+   "magyarazat": "48331 alszámla.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ms_q35",
+   "tipus": "merlegsor",
+   "kerdes": "Melyik mérlegsorba kerül: következő évre előre fizetett bérleti díj (392)?",
+   "opciok": null,
+   "helyes": "C.2. Költségek, ráfordítások aktív időbeli elhatárolása",
+   "magyarazat": "Időbeli elhatárolás elve.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ms_q36",
+   "tipus": "merlegsor",
+   "kerdes": "Melyik mérlegsorba kerül: elszámolási betétszámla egyenlege (384)?",
+   "opciok": null,
+   "helyes": "B.IV.2. Bankbetétek",
+   "magyarazat": "38-as csoport.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ms_q37",
+   "tipus": "egyvalasztos",
+   "kerdes": "Melyik mérlegsorba kerül: a gépek terv szerinti ÉCS-e (139)?",
+   "opciok": [
+    "A.II.7. Tárgyi eszközök értékhelyesbítése",
+    "E.3. Egyéb céltartalék",
+    "Nem önálló sor – az A.II.2. sor értékét csökkenti (nettó érték)",
+    "F.III.9. Egyéb rövid lejáratú kötelezettségek"
+   ],
+   "helyes": "Nem önálló sor – az A.II.2. sor értékét csökkenti (nettó érték)",
+   "magyarazat": "Korrekciós számla.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ms_q38",
+   "tipus": "merlegsor",
+   "kerdes": "Mik a mérleg oszlopai?",
+   "opciok": null,
+   "helyes": [
+    "Előző év",
+    "Előző év(ek) módosításai",
+    "Tárgyév"
+   ],
+   "magyarazat": "Minta-ZH 2. feladat: az oszlopnevekre is figyelni kell. A témadiák fejléce: 'Előző év | Előző évek módosításai | Tárgyév', adatok e Ft-ban.",
+   "forras": "feladat"
+  },
+  {
+   "id": "ms_q39",
+   "tipus": "egyvalasztos",
+   "kerdes": "Melyik oszlop köti a mérleget a folytonosság elvéhez?",
+   "opciok": [
+    "Előző év",
+    "Előző év(ek) módosításai",
+    "Tárgyév"
+   ],
+   "helyes": "Előző év",
+   "magyarazat": "A folytonosság elve szerint a beszámolóban az előző üzleti év adatait is fel kell tüntetni.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ms_q40",
+   "tipus": "merlegsor",
+   "kerdes": "Sorold fel az összköltséges eredménykimutatás sorait az üzemi eredményig!",
+   "opciok": null,
+   "helyes": [
+    "01. Belföldi értékesítés nettó árbevétele",
+    "02. Exportértékesítés nettó árbevétele",
+    "I. ÉRTÉKESÍTÉS NETTÓ ÁRBEVÉTELE (01+02)",
+    "03. Saját termelésű készletek állományváltozása (±)",
+    "04. Saját előállítású eszközök aktivált értéke",
+    "II. AKTIVÁLT SAJÁT TELJESÍTMÉNYEK ÉRTÉKE (±03+04)",
+    "III. EGYÉB BEVÉTELEK",
+    "05. Anyagköltség",
+    "06. Igénybe vett szolgáltatások értéke",
+    "07. Egyéb szolgáltatások értéke",
+    "08. Eladott áruk beszerzési értéke (ELÁBÉ)",
+    "09. Eladott (közvetített) szolgáltatások értéke",
+    "IV. ANYAGJELLEGŰ RÁFORDÍTÁSOK (05+06+07+08+09)",
+    "10. Bérköltség",
+    "11. Személyi jellegű egyéb kifizetések",
+    "12. Bérjárulékok",
+    "V. SZEMÉLYI JELLEGŰ RÁFORDÍTÁSOK (10+11+12)",
+    "VI. ÉRTÉKCSÖKKENÉSI LEÍRÁS",
+    "VII. EGYÉB RÁFORDÍTÁSOK",
+    "A. ÜZEMI (ÜZLETI) TEVÉKENYSÉG EREDMÉNYE (I±II+III–IV–V–VI–VII)"
+   ],
+   "magyarazat": "Minta-ZH gyakorlati 1. feladat: összköltséges eredménykimutatás az üzemi eredményig.",
+   "forras": "feladat"
+  },
+  {
+   "id": "ms_q41",
+   "tipus": "egyvalasztos",
+   "kerdes": "Melyik eredménykimutatás-sorba kerül a terven felüli értékcsökkenés?",
+   "opciok": [
+    "VI. Értékcsökkenési leírás",
+    "VII. Egyéb ráfordítások",
+    "IX. Pénzügyi műveletek ráfordításai",
+    "IV. Anyagjellegű ráfordítások"
+   ],
+   "helyes": "VII. Egyéb ráfordítások",
+   "magyarazat": "targyi.pdf 78. dia; minta-ZH teszt e) válasza.",
+   "forras": "generalt"
+  },
+  {
+   "id": "ms_q42",
+   "tipus": "merlegsor",
+   "kerdes": "Melyik eredménykimutatás-sorba kerül a raktárra vett késztermék (T 251 / K 581)?",
+   "opciok": null,
+   "helyes": "03. Saját termelésű készletek állományváltozása (II. Aktivált saját teljesítmények értéke)",
+   "magyarazat": "Összköltséges eljárás, 58-as számlacsoport.",
+   "forras": "generalt"
+  }
+ ],
+ "csapdak": [
+  "Az oszlopnevek pontosan: 'Előző év' | 'Előző év(ek) módosításai' | 'Tárgyév' – a minta-ZH-ban ezekért is pont járt.",
+  "B.I. Készletek sorrendje: Anyagok – Befejezetlen termelés és félkész termékek – Növendék-, hízó- és egyéb állatok – Késztermékek – Áruk – Készletekre adott előlegek.",
+  "Tenyészállat = A.II.4. (befektetett), növendék- és hízóállat = B.I.3. (forgóeszköz).",
+  "Az előlegek három helyen vannak: 351 → A.I.6., 352 → A.II.6., 353 → B.I.6.; a vevőktől KAPOTT előleg kötelezettség (F.III.3.).",
+  "Az ingatlanhoz kapcsolódó vagyoni értékű jog A.II.1., nem A.I.3.",
+  "A közvetített szolgáltatás és a betétdíjas göngyöleg az Áruk (B.I.5.) sorban van.",
+  "A jegyzett, de be nem fizetett tőke a saját tőkében negatív előjellel (D.II.) szerepel.",
+  "Az ÉCS- és értékvesztés-számlák (x18, x19, x29, x59 stb.) nem önálló mérlegsorok.",
+  "Terv szerinti ÉCS = VI. Értékcsökkenési leírás; terven felüli ÉCS = VII. Egyéb ráfordítások."
+ ],
+ "elteresek_a_forrasban": [
+  "A feladatleírás 'I–XIII' római sorú összköltséges eredménykimutatást említ; a hatályos (2016 óta) séma I–X sorokat és A–D eredménykategóriát tartalmaz (a rendkívüli tételek megszűntek). Itt a hatályos séma szerepel.",
+  "A kurzus számlatükre 2016.01.01-i, a 'jelentős tulajdoni részesedés' mérlegsoraihoz (A.III.3–4., B.II.3., B.III.2., F.I.2., F.II.7., F.III.7.) és az értékelési különbözet sorokhoz nincs külön számlája.",
+  "A számlatükörben 466 'Előzetesen felszámított általános forgalmi adó'; a szamlaszamok.json 4661-et használ – egyezik, csak alszámla-mélységben tér el.",
+  "A számlatükör a 418 'Előző évek helyesbítéséből származó adózott eredmény' számlát még tartalmazza, de a hatályos mérlegséma ezt külön sorban nem mutatja."
+ ]
+}

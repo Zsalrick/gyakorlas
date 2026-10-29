@@ -1,0 +1,459 @@
+{
+ "tema": "Cégalapítás (jogelőd nélküli alapítás, előtársaság számvitele)",
+ "forrasok": [
+  "src/elmelet/cegalapitas.pdf (tanári diák, 2026.09.05.)",
+  "src/feladat_cegalapitas/2_Cégalapítás feladatsor.pdf",
+  "src/feladat_cegalapitas/Cégalapítás feladatsor megoldás.pdf (tanári megoldás-diák, 2026.09.22.)",
+  "src/feladat_cegalapitas/órai jegyzet.pdf",
+  "zh-anyag/szamlaszamok.json",
+  "zh-anyag/tesztkerdesek_moodle.json",
+  "zh-anyag/00_zh_info.json",
+  "zh/tukor.txt (számlatükör)"
+ ],
+ "zh_relevancia": "A tanár szerint cégalapításból NEM lesz fogalom-kérdés (a fogalom tárgyi eszköz / immateriális / készlet témából jön). Viszont a gyakorlati rész 2. feladata (40,5 pont) – a minta-ZH alapján – egy Kft. alapításával indul (Kft.-t egy Bt. alapítja), utána 15 vegyes esemény következik. Ezért a hangsúly a KÖNYVELÉSEN van: alapítói befizetés K 479, apport T 161 (vagy készlet/immateriális) / K 479, cégbírósági bejegyzés T 32-33 (pontosan 325 / 332 / 358) / K 411, technikai átvezetés T 479 / K 32-33, bejegyzés utáni befizetés T 381/384 / K 32-33, alapítási költségek (5299 vagy aktiválás 111 + lekötött tartalék). A Moodle-tesztekben előfordult: apport értéke, apport tárgyai, jegyzett, de be nem fizetett tőke mérlegbeli helye, hátralék számítása, alapítás-átszervezés aktiválása és lekötött tartalék.",
+
+ "fogalmak": [
+  {
+   "id": "F01",
+   "nev": "Cégalapítás",
+   "definicio": "Az a jogi és gazdasági folyamat, amelynek során a tagok (alapítók), akik lehetnek természetes, jogi- vagy nem jogi személy(ek), megteremti(k) annak a lehetőségét, hogy saját cégnevük alatt jogokat szerezzenek és kötelezettségeket vállaljanak.",
+   "kulcselemek": ["alapítók: természetes, jogi vagy nem jogi személy", "saját cégnév alatt", "jogok szerzése, kötelezettségek vállalása", "módjai: jogelőd nélkül; átalakulással, egyesüléssel, szétválással; cégforma-váltással"],
+   "pelda": null,
+   "zh_valoszinuseg": "alacsony",
+   "forras": "cegalapitas.pdf 7. dia"
+  },
+  {
+   "id": "F02",
+   "nev": "Előtársasági időszak",
+   "definicio": "A létesítő okirat ellenjegyzése vagy közokiratba foglalása napjától a cégjegyzékbe történő bejegyzés napjáig, vagy a bejegyzés jogerős elutasításának napjáig, vagy a cégbejegyzési eljárás megszüntetésének napjáig tartó időszak.",
+   "kulcselemek": ["kezdete: létesítő okirat ellenjegyzése / közokiratba foglalása", "vége: bejegyzés / jogerős elutasítás / eljárás megszüntetése", "átalakulással vagy cégforma-váltással létrejött társaságnál NINCS előtársasági időszak", "mindig egy beszámolási időszaknak számít"],
+   "pelda": "Új Seprű Kft.: 12.02. alapítás – 12.15. bejegyzés; előtársasági mérleg fordulónapja 12.15.",
+   "zh_valoszinuseg": "alacsony",
+   "forras": "cegalapitas.pdf 12., 20. dia"
+  },
+  {
+   "id": "F03",
+   "nev": "Előtársaság",
+   "definicio": "A bejegyzés előtt működő társaság: jogképes, mindenben a létrehozni kívánt gazdasági társaság szabályai alapján működik, kijelölt vezető tisztségviselői annak nevében és javára járnak el; az iratokon fel kell tüntetni az előtársasági jelleget („cégbejegyzés alatt”, „b.a.”).",
+   "kulcselemek": ["jogképes", "üzletszerű tevékenység végezhető (cégjegyzékszám, adószám, statisztikai számjel birtokában)", "hatósági engedélyhez kötött tevékenység nem folytatható", "alapvető stratégiai döntés nem hozható: TSZ nem módosítható, tagok nem változhatnak, nem dönthet megszűnésről, átalakulásról, egyesülésről, szétválásról", "nem alapíthat GT-t, nem vehet részt GT működésében"],
+   "pelda": null,
+   "zh_valoszinuseg": "alacsony",
+   "forras": "cegalapitas.pdf 13. dia"
+  },
+  {
+   "id": "F04",
+   "nev": "Apport (nem pénzbeli vagyoni hozzájárulás)",
+   "definicio": "A tulajdonos által a társaság rendelkezésére bocsátott nem pénzbeli vagyoni hozzájárulás: bármilyen értékkel rendelkező dolog, szellemi alkotáshoz fűződő vagy egyéb vagyoni értékű jog vagy követelés.",
+   "kulcselemek": ["nem pénzbeli", "lehet dolog (gép, ingatlan, készlet), szellemi alkotáshoz fűződő jog, vagyoni értékű jog, követelés", "NEM csak tárgyi eszköz lehet", "értéke = létesítő okiratban (apportjegyzékben) rögzített érték"],
+   "pelda": "4 db számítógép apportjegyzék szerinti 1 000 000 Ft értéken: T 161 / K 479.",
+   "zh_valoszinuseg": "alacsony",
+   "forras": "cegalapitas.pdf 9. dia; Moodle tárgyi eszköz teszt 3., 10., 12., 32. kérdés"
+  },
+  {
+   "id": "F05",
+   "nev": "Jegyzett, de még be nem fizetett tőke",
+   "definicio": "A társasági szerződésben vállalt, de a tulajdonosok által még rendelkezésre nem bocsátott jegyzett tőkerész. Cégbejegyzésig a befizetett, de még be nem jegyzett tőke kötelezettség (479); cégbejegyzés után a még hátralévő rész a tulajdonosokkal szembeni követelés (325-328 / 332 / 358). Nem működő tőkeelem: nem jár utána szavazati jog és osztalék.",
+   "kulcselemek": ["bejegyzés előtt: kötelezettség (479)", "bejegyzés után: követelés a tulajdonossal szemben", "nem működő tőkeelem, nincs szavazati jog, nincs osztalék", "mérlegben: D.II. sor, negatív előjellel, a saját tőkét csökkenti", "hátralék 1 éven belül befizetendő"],
+   "pelda": "10 M jegyzett tőke, 7 M befizetve → jegyzett, de be nem fizetett tőke 3 M (Moodle).",
+   "zh_valoszinuseg": "alacsony",
+   "forras": "cegalapitas.pdf 17-18. dia; Moodle 13., 23. kérdés"
+  }
+ ],
+
+ "szabalyok": [
+  {
+   "id": "S01",
+   "cim": "Az alapítás könyvelési lépései (3 lépés)",
+   "tartalom": "1) Alapításkor: a társasági szerződés alapján a tulajdonosok által rendelkezésre bocsátott eszközök állományba vétele (pénzbeli hozzájárulás + apport): T 381/384 ill. T 161 (2x, 11x) / K 479. 2) A cégbírósági bejegyzéssel egyidejűleg a TSZ-ben meghatározott jegyzett tőke elszámolása: T 32-33 (325/332/358) / K 411 a teljes jegyzett tőkével. 3) A rendelkezésre bocsátott vagyonelemek értékének technikai átvezetése: T 479 / K 32-33 az addig befizetett/apportált összeggel. Ezután a bejegyzés utáni befizetések: T 381/384 / K 32-33.",
+   "forras": "Cégalapítás feladatsor megoldás, 2. dia; szamlaszamok.json"
+  },
+  {
+   "id": "S02",
+   "cim": "Miért kell a 479-es számla a bejegyzés előtt?",
+   "tartalom": "A bejegyzés előtt még nincs jegyzett tőke (411), mert az csak a cégbírósági bejegyzéssel jön létre. A befizetett összeg addig a társaság kötelezettsége a tulajdonosokkal szemben (ha a bejegyzést elutasítják, vissza kell adni), ezért K 479 Különféle rövid lejáratú kötelezettségek. A mintakulcs 479-et használ, NEM 4795-öt.",
+   "forras": "Cégalapítás feladatsor megoldás, 2. dia (kérdés); cegalapitas.pdf 17. dia; szamlaszamok.json"
+  },
+  {
+   "id": "S03",
+   "cim": "Bejegyzés előtti és utáni befizetés könyvelése",
+   "tartalom": "Bejegyzés ELŐTT: T 381/384 / K 479 (kötelezettség). Bejegyzés UTÁN: T 381/384 / K 32-33 (a tulajdonossal szembeni követelés csökken). A bejegyzés napján a 479 egyenlegét át kell vezetni a 32-33-ra (T 479 / K 32-33).",
+   "forras": "Cégalapítás feladatsor megoldás, 1. és 2. feladat"
+  },
+  {
+   "id": "S04",
+   "cim": "Jegyzett, de be nem fizetett tőke számlája a tulajdonosi viszony szerint",
+   "tartalom": "325 = anyavállalattól (pl. 75%-os Bt.); 326 = leányvállalattól; 327 = közös vezetésű vállalkozástól; 328 = társult vállalkozástól; 332 = egyéb részesedési viszonyban lévő vállalkozástól (pl. 25%-os Zrt.); 358 = részesedési viszonyban NEM lévő vállalkozástól, magánszemélytől. A tanári mintakulcs ezek helyett egyszerűen „32-33”-at ír – a ZH-n ez elfogadott, de a pontos számla jobb.",
+   "forras": "tukor.txt 32., 33., 35. számlacsoport; szamlaszamok.json; Moodle javaslat (anyavállalattól 325, nem 332)"
+  },
+  {
+   "id": "S05",
+   "cim": "Pénzbeli és nem pénzbeli hozzájárulás (apport)",
+   "tartalom": "Pénzbeli: Ft, deviza, készpénz (T 381), számlapénz (T 384). Nem pénzbeli (apport): bármilyen értékkel rendelkező dolog, szellemi alkotáshoz fűződő vagy egyéb vagyoni értékű jog, követelés. Apport könyvelése az eszköz jellege szerint: üzembe még nem helyezett tárgyi eszköz T 161 (üzembe helyezéskor T 12x-14x / K 161); készlet T 2x; immateriális jószág T 11x; követelés T 3654. Ellenszámla bejegyzés előtt K 479.",
+   "forras": "cegalapitas.pdf 9. dia; feladatsor megoldás; tukor.txt"
+  },
+  {
+   "id": "S06",
+   "cim": "Az apport értéke",
+   "tartalom": "Az apport bekerülési értéke a létesítő okiratban (társasági szerződés / alapító okirat / alapszabály) – gyakorlatilag az apportjegyzékben – rögzített érték. Apportként átvett készletnél is a létesítő okirat szerinti érték. (Bekerülés módjai: vásárlás – beszerzési érték; saját előállítás – előállítási költség; térítés nélküli – piaci érték; apport – létesítő okirat szerinti érték.)",
+   "forras": "Moodle tárgyi eszköz teszt 10.; vásárolt készlet teszt 17.; 35. párosítás"
+  },
+  {
+   "id": "S07",
+   "cim": "Jegyzett, de be nem fizetett tőke a mérlegben",
+   "tartalom": "Forrásoldalon, a saját tőkén belül a D.II. sorban, NEGATÍV előjellel (saját tőkét csökkentő tétel). Bejegyzés előtt a 479 rövid lejáratú kötelezettség lenne, de a bejegyzés napjára készült előtársasági mérlegben már átvezetve D.II.-ként jelenik meg (pl. Új Seprű Kft.: D.I. 8 000 eFt, D.II. -3 500 eFt).",
+   "forras": "Moodle 23. kérdés; feladatsor megoldás 19. dia"
+  },
+  {
+   "id": "S08",
+   "cim": "Alapítás-átszervezés költségei: költség vagy aktiválás",
+   "tartalom": "Az alapítással kapcsolatos költségek (pl. TSZ ügyvédi díja, számviteli rendszer kialakításának szakértői díja, folyamat-újratervezés szakértői díja) elszámolhatók költségként (T 5299 / K 4543, áfa T 4661 / K 4543) – a tanári feladatmegoldás ezt teszi –, VAGY a vállalkozó döntése alapján aktiválhatók immateriális jószágként: T 111 Alapítás-átszervezés aktivált értéke / K 4543 (vagy előbb 5299-re, majd T 111 / K 582). Aktiválás esetén az aktivált értékkel azonos összegű lekötött tartalékot kell képezni: T 413 / K 4142. Az aktiválás a vállalkozó döntésétől függ.",
+   "forras": "szamlaszamok.json alapitas_atszervezes; Moodle immateriális teszt 10., 17., 20. kérdés"
+  },
+  {
+   "id": "S09",
+   "cim": "Alapítás dokumentuma",
+   "tartalom": "Minden egyszemélyes GT: alapító okirat; Rt-n kívül minden 2 vagy több tulajdonosú társaság: társasági szerződés; minden Rt: alapszabály. Közokiratba kell foglalni, szerződésminta esetén ügyvédnek kell ellenjegyeznie. GT alapításához legalább két tag kell (kivétel Rt és Kft, ezek egyszemélyesek is lehetnek).",
+   "forras": "cegalapitas.pdf 8. dia"
+  },
+  {
+   "id": "S10",
+   "cim": "A cégalapítás dokumentumának tartalma",
+   "tartalom": "Cégnév; székhely; induló vagyon (pénzbeli és nem pénzbeli/apport); a jegyzett tőke rendelkezésre bocsátásának módja, ideje; főtevékenység és további tevékenységek (TEÁOR); alapítók, vezető tisztségviselők, cégjegyzésre és képviseletre jogosultak adatai; FEB-tagok és könyvvizsgáló adatai; pénzforgalmi számlák és az azokat vezető szolgáltatók.",
+   "forras": "cegalapitas.pdf 9. dia"
+  },
+  {
+   "id": "S11",
+   "cim": "Kft. és Rt. minimális feltételei",
+   "tartalom": "Kft.: törzstőke min. 3 mFt, dokumentum társasági szerződés (szerződésmintával is), pénzeszköz arányára nincs megkötés. Rt.: alaptőke ZRt. min. 5 mFt, NyRt. min. 20 mFt, dokumentum alapszabály (ZRt-nél szerződésmintával is), pénzeszköz nem lehet kevesebb az alaptőke 30%-ánál. Döntéshozatalban részvétel a vagyoni hozzájárulás mértéke alapján. A Ptk. csak Kft. és Rt. esetében állapít meg minimális jegyzett tőkét.",
+   "forras": "cegalapitas.pdf 10. dia"
+  },
+  {
+   "id": "S12",
+   "cim": "Bejegyzési kérelem és rendelkezésre bocsátás",
+   "tartalom": "A cégbíróságnak 30 napon belül elektronikusan, jogi képviselő által aláírva kell bejelenteni (különben bírság 50-500 eFt). A bejegyzési kérelem benyújtásáig rendelkezésre kell bocsátani – Kft.: pénzbetét: nincs megkötés; Rt.: pénzbetét legalább 25%-a. Apport: 100%-a (a dia szerint kivéve, ha kisebb mint a törzstőke 50%-a / alaptőke 25%-a, mert ekkor 3 éven belül is teljesíthető). Bejegyzésig előtársaságként működik; bejegyzés utáni befizetés házipénztárba/bankba. A még hátralévő jegyzett tőkét 1 éven belül rendelkezésre kell bocsátani; késedelem kamatfizetéssel vagy akár a tagsági viszony megszüntetésével járhat. Hiánypótlás: NyRt 45, többi 30 naptári nap. Illeték Kft/Zrt 100 eFt (egyszerűsített 50 eFt), közzététel 5 eFt (egyszerűsítettnél ingyenes). Bejegyzés: szerződésminta nélkül 8 munkanap, szerződésmintával 1 munkanap.",
+   "forras": "cegalapitas.pdf 11., 14-16., 18. dia"
+  },
+  {
+   "id": "S13",
+   "cim": "Bejegyzés előtti / utáni időszak, előtársaság megszűnése",
+   "tartalom": "Az előtársaság a bejegyzés napján megszűnik, a végleges társaság a bejegyzést követő napon kezdi meg működését. Visszautasítás vagy visszavonás esetén haladéktalanul meg kell szüntetni a működést. Az előtársasági időszakról beszámolót kell készíteni 90 napon belül (TAO-bevallással együtt), fordulónap: bejegyzés napja / elutasítás napja / eljárás megszüntetése. A beszámoló egyetlen különbsége a későbbiektől: nincsenek előző időszaki adatok. Nem kell előtársasági beszámoló, ha a tevékenységét még nem kezdte meg és a bejegyzés a mérlegfordulónapig megtörtént.",
+   "forras": "cegalapitas.pdf 16., 20-21. dia"
+  },
+  {
+   "id": "S14",
+   "cim": "Az alapító többet fizetett be",
+   "tartalom": "Szándékos (ázsió, devizaárfolyam-nyereség), TSZ-ben rögzítve: tőketartalékba (412). Ha a túlfizetéskor nyilatkozik, hogy lemond róla: elengedett kötelezettség, egyéb bevétel. Ha nem mondott le: rövid lejáratú kötelezettség.",
+   "forras": "cegalapitas.pdf 19. dia"
+  },
+  {
+   "id": "S15",
+   "cim": "Előtársasági zárás és nyitás a feladatban",
+   "tartalom": "A bejegyzés napján (előtársasági fordulónap) a költségszámlákat lezárják (T 59 / K 5299; T 812 / K 59; T 493 / K 812 – vagy ÉCS-nél T 83), az eredményt 419-re vezetik (veszteségnél T 419 / K 493), elkészül az előtársasági mérleg. A társaság nyitása után a negatív (vagy pozitív) adózott eredményt az eredménytartalékba vezetik: veszteségnél T 413 / K 419. A 466 T egyenlegű = követelés a mérlegben.",
+   "forras": "Cégalapítás feladatsor megoldás 18-22. dia; órai jegyzet"
+  },
+  {
+   "id": "S16",
+   "cim": "Adóbevallások az előtársasághoz kapcsolódóan",
+   "tartalom": "ÁFA: negyedéves bevallás, amíg a havi összeghatárt el nem éri; bejegyzéstől 30 napon belül soron kívüli záró áfa-bevallás. Magánszemélynek teljesített kifizetések: tárgyhót követő hó 12-éig. Éves elszámolású adók (TAO stb.): bejegyzéstől 90 napon belül soron kívüli bevallás. Innovációs járulék és különadó előtársasági időszakban NEM terheli.",
+   "forras": "cegalapitas.pdf 22-23. dia"
+  }
+ ],
+
+ "osszefuggesek": [
+  {
+   "id": "O01",
+   "cim": "Technikai átvezetés összege",
+   "leiras": "A bejegyzés napján a 479-ről a 32-33-ra átvezetett összeg = a bejegyzésig befizetett pénz + rendelkezésre bocsátott apport.",
+   "keplet": "átvezetés (T 479 / K 32-33) = Σ bejegyzés előtti pénzbeli hozzájárulás + Σ apport",
+   "kapcsolodo": ["S01", "S03"]
+  },
+  {
+   "id": "O02",
+   "cim": "Jegyzett, de be nem fizetett tőke egyenlege",
+   "leiras": "A 32-33 egyenlege a bejegyzés után a tulajdonosok még fennálló tartozása.",
+   "keplet": "jegyzett, de be nem fizetett tőke = jegyzett tőke − bejegyzés előtt rendelkezésre bocsátott − bejegyzés után befizetett",
+   "kapcsolodo": ["F05", "S07"]
+  },
+  {
+   "id": "O03",
+   "cim": "Saját tőke az előtársasági mérlegben",
+   "leiras": "Saját tőke = jegyzett tőke − jegyzett, de be nem fizetett tőke ± adózott eredmény (± tartalékok).",
+   "keplet": "D = D.I − D.II ± D.VII",
+   "kapcsolodo": ["S07", "S15"]
+  },
+  {
+   "id": "O04",
+   "cim": "Tulajdoni részesedés felosztása",
+   "leiras": "Ha a jegyzett tőkét arányban vállalják (pl. ¾ Bt, ¼ Zrt), a tulajdonosonkénti vállalás = jegyzett tőke × arány; a tartozás tulajdonosonként külön számlán (325 / 332 / 358) követendő.",
+   "keplet": "vállalás_i = JT × arány_i; hátralék_i = vállalás_i − befizetés_i − apport_i",
+   "kapcsolodo": ["S04"]
+  },
+  {
+   "id": "O05",
+   "cim": "Alapítás-átszervezés aktiválása és lekötött tartalék",
+   "leiras": "Az aktivált alapítás-átszervezés értékével azonos összegű lekötött tartalékot kell képezni az eredménytartalékból.",
+   "keplet": "lekötött tartalék (T 413 / K 4142) = 111 aktivált (még le nem írt) értéke",
+   "kapcsolodo": ["S08"]
+  }
+ ],
+
+ "konyvelesi_minta": [
+  {"id": "K01", "esemeny": "Alapítói pénzbeli hozzájárulás befizetése a pénztárba bejegyzés ELŐTT", "T": "381", "K": "479", "osszeg": "a befizetett összeg", "megjegyzes": "A mintakulcs 479-et használ, nem 4795-öt."},
+  {"id": "K02", "esemeny": "Alapítói pénzbeli hozzájárulás átutalása bankszámlára bejegyzés ELŐTT", "T": "384", "K": "479", "osszeg": "az átutalt összeg", "megjegyzes": "Jóváírási értesítés alapján."},
+  {"id": "K03", "esemeny": "Apport: üzembe még nem helyezett tárgyi eszköz (gép, számítógép) átvétele bejegyzés előtt", "T": "161", "K": "479", "osszeg": "létesítő okirat / apportjegyzék szerinti érték", "megjegyzes": "Üzembe helyezéskor T 131/132/143 stb. / K 161."},
+  {"id": "K04", "esemeny": "Apport: készlet (anyag, áru) átvétele bejegyzés előtt", "T": "21-22 / 26", "K": "479", "osszeg": "létesítő okirat szerinti érték", "megjegyzes": "Apportként átvett készlet = létesítő okirat szerinti érték."},
+  {"id": "K05", "esemeny": "Apport: immateriális jószág (pl. szabadalom, szoftver, licenc) átvétele bejegyzés előtt", "T": "114 (szellemi termék) / 113 (vagyoni értékű jog)", "K": "479", "osszeg": "létesítő okirat szerinti érték", "megjegyzes": "Szabadalom = szellemi termék (114), nem vagyoni értékű jog."},
+  {"id": "K06", "esemeny": "Apport: üzembe helyezett / használatba vehető ingatlan átvétele", "T": "12x (pl. 1231)", "K": "479", "osszeg": "létesítő okirat szerinti érték", "megjegyzes": "Ha még nincs üzembe helyezve: T 161."},
+  {"id": "K07", "esemeny": "Cégbírósági bejegyzés – jegyzett tőke elszámolása, ANYAVÁLLALAT tulajdonostól (pl. 75%-os Bt.)", "T": "325", "K": "411", "osszeg": "az anyavállalat által vállalt teljes jegyzett tőkerész", "megjegyzes": "Mintakulcs: „32-33”."},
+  {"id": "K08", "esemeny": "Cégbírósági bejegyzés – jegyzett tőke elszámolása EGYÉB RÉSZESEDÉSI VISZONYBAN lévő tulajdonostól (pl. 25%-os Zrt.)", "T": "332", "K": "411", "osszeg": "az adott tulajdonos vállalása", "megjegyzes": "Mintakulcs: „32-33”. A 33x csoportban a jegyzett, de be nem fizetett tőke a 332."},
+  {"id": "K09", "esemeny": "Cégbírósági bejegyzés – jegyzett tőke elszámolása részesedési viszonyban NEM lévő vállalkozástól, magánszemélytől", "T": "358", "K": "411", "osszeg": "az adott tulajdonos vállalása", "megjegyzes": "Mintakulcs: „32-33”."},
+  {"id": "K10", "esemeny": "Cégbírósági bejegyzés – jegyzett tőke (tulajdonosi viszony nem ismert, mintakulcs szerint)", "T": "32-33", "K": "411", "osszeg": "a teljes jegyzett tőke (TSZ szerint)", "megjegyzes": "Ha a feladat nem ad tulajdonosi viszonyt, a tanár „32-33”-at ír."},
+  {"id": "K11", "esemeny": "Technikai átvezetés a bejegyzés napján (rendelkezésre bocsátott vagyon)", "T": "479", "K": "32-33 (325 / 332 / 358)", "osszeg": "bejegyzésig befizetett pénz + apport (= 479 egyenlege)", "megjegyzes": "Tulajdonosonként a saját számlájára."},
+  {"id": "K12", "esemeny": "Jegyzett tőke hátralékának befizetése bejegyzés UTÁN (bank / pénztár)", "T": "384 / 381", "K": "32-33 (325 / 332 / 358)", "osszeg": "a befizetett hátralék", "megjegyzes": "Bejegyzés után már nem 479!"},
+  {"id": "K13", "esemeny": "Apport bejegyzés UTÁN (hátralék teljesítése nem pénzben)", "T": "161 / 2x / 11x", "K": "32-33 (325 / 332 / 358)", "osszeg": "létesítő okirat szerinti érték", "megjegyzes": "Levezetett tétel a K12 mintájára."},
+  {"id": "K14", "esemeny": "Alapítással kapcsolatos ügyvédi díj számlája – költségként", "T": "5299", "K": "4543", "osszeg": "nettó díj", "megjegyzes": "A tanári megoldás K 4541-et ír; a szamlaszamok.json szerint szolgáltatás szállító 4543."},
+  {"id": "K15", "esemeny": "Ügyvédi díj áfája", "T": "4661", "K": "4543", "osszeg": "nettó × 27%", "megjegyzes": "Tanári megoldás: T 466 / K 4541."},
+  {"id": "K16", "esemeny": "Szállítói (ügyvédi) számla kiegyenlítése bankszámláról", "T": "4543", "K": "384", "osszeg": "bruttó összeg", "megjegyzes": "Tanári megoldás: T 4541."},
+  {"id": "K17", "esemeny": "Alapítás-átszervezés aktiválása (közvetlenül)", "T": "111", "K": "4543", "osszeg": "nettó díj", "megjegyzes": "Csak ha a vállalkozó aktiválni döntött."},
+  {"id": "K18", "esemeny": "Alapítás-átszervezés aktiválása (ha előbb költségként 5299-re könyvelték)", "T": "111", "K": "582", "osszeg": "az aktivált érték", "megjegyzes": "582 Saját előállítású eszközök aktivált értéke."},
+  {"id": "K19", "esemeny": "Lekötött tartalék képzése az aktivált alapítás-átszervezés után", "T": "413", "K": "4142", "osszeg": "az aktivált érték", "megjegyzes": "Moodle: alapítás-átszervezés aktivált értéke mellé lekötött tartalék."},
+  {"id": "K20", "esemeny": "Apportként kapott, üzembe nem helyezett eszköz üzembe helyezése (pl. számítógép)", "T": "143", "K": "161", "osszeg": "161 egyenlege", "megjegyzes": "Gép: 131; termelésben részt vevő jármű: 132; irodai berendezés: 143."},
+  {"id": "K21", "esemeny": "Terv szerinti ÉCS a tárgyév végén", "T": "5711", "K": "149 (143-nál) / 139 (131-nél)", "osszeg": "megadott / számított ÉCS", "megjegyzes": "Tanári megoldás: T 571."},
+  {"id": "K22", "esemeny": "Előtársasági zárás: költségnem zárása", "T": "59", "K": "5299 / 5711", "osszeg": "költség egyenlege", "megjegyzes": "Ezután T 812 (szolgáltatás) vagy T 83 (ÉCS) / K 59."},
+  {"id": "K23", "esemeny": "Ráfordítás zárása az eredményszámlára", "T": "493", "K": "812 / 83", "osszeg": "ráfordítás egyenlege", "megjegyzes": null},
+  {"id": "K24", "esemeny": "Negatív adózott eredmény (veszteség) átvezetése 419-re", "T": "419", "K": "493", "osszeg": "veszteség", "megjegyzes": "Nyereségnél fordítva: T 493 / K 419."},
+  {"id": "K25", "esemeny": "Nyitás utáni rendezőtétel: előtársasági veszteség eredménytartalékba", "T": "413", "K": "419", "osszeg": "előtársasági adózott eredmény (veszteség)", "megjegyzes": "Órai jegyzet: T 413 / K 419; a megoldás-dia K 493-at ír (lásd eltérések)."}
+ ],
+
+ "feladatok": [
+  {
+   "id": "FEL1",
+   "forras": "2_Cégalapítás feladatsor 1. feladat; megoldás 3-8. dia; órai jegyzet",
+   "cim": "Kft. alapítása 4 millió Ft törzstőkével",
+   "szoveg": "A tulajdonosok egy Kft-t alapítanak 4 millió Ft törzstőkével: 1) Alapítói vagyon egy részének átutalása bankszámlára 2.000.000 Ft. 2) Tárgyi eszköz rendelkezésre bocsátása 1.500.000 Ft (aktiválás dec. 20-án lesz). 3) Megérkezik a cégbírósági bejegyzésről az értesítés. 4) Az alapítói vagyon fennmaradó részének átutalása. Feladat: Könyvelje le a gazdasági eseményeket vegyes naplóban!",
+   "adatok": {
+    "torzstoke": 4000000,
+    "penzbeli_befizetes_bejegyzes_elott": 2000000,
+    "apport_targyi_eszkoz": 1500000,
+    "aktivalas": "dec. 20.",
+    "tulajdonosi_viszony": "nincs megadva (mintakulcs: 32-33)"
+   },
+   "megoldas": {
+    "szamitasok": [
+     {"mit": "Bejegyzésig rendelkezésre bocsátott vagyon (technikai átvezetés)", "keplet": "2 000 000 + 1 500 000", "eredmeny": 3500000},
+     {"mit": "Fennmaradó befizetés bejegyzés után", "keplet": "4 000 000 − 3 500 000", "eredmeny": 500000}
+    ],
+    "tetelek": [
+     {"sorszam": "1", "esemeny": "Alapítói vagyon egy részének átutalása bankszámlára (bejegyzés előtt)", "T": "384", "K": "479", "osszeg": 2000000, "szamitas": "adat"},
+     {"sorszam": "2", "esemeny": "Tárgyi eszköz (apport) rendelkezésre bocsátása, még nincs üzembe helyezve", "T": "161", "K": "479", "osszeg": 1500000, "szamitas": "adat; aktiválás csak dec. 20-án → beruházás"},
+     {"sorszam": "3a", "esemeny": "Cégbírósági bejegyzés: jegyzett tőke állományba vétele", "T": "32-33", "K": "411", "osszeg": 4000000, "szamitas": "teljes törzstőke; tulajdonosi viszony ismeretében 325 / 332 / 358"},
+     {"sorszam": "3b", "esemeny": "Technikai átvezetés (rendelkezésre bocsátott vagyon)", "T": "479", "K": "32-33", "osszeg": 3500000, "szamitas": "2 000 000 + 1 500 000"},
+     {"sorszam": "4", "esemeny": "Fennmaradó alapítói vagyon átutalása (bejegyzés után)", "T": "384", "K": "32-33", "osszeg": 500000, "szamitas": "4 000 000 − 3 500 000"}
+    ],
+    "egyeb": {
+     "479_szamla": "K: 2 000 000 + 1 500 000 = 3 500 000; T: 3 500 000 → egyenleg 0",
+     "32-33_szamla": "T: 4 000 000; K: 3 500 000 + 500 000 → egyenleg 0",
+     "kimarado_tetel": "A dec. 20-i aktiválást a megoldás nem könyveli; ha kérdeznék: T 13x/14x (az eszköz jellege szerint) / K 161 1 500 000."
+    }
+   },
+   "tanulsagok": [
+    "Bejegyzés előtt minden befizetés és apport K 479.",
+    "A bejegyzéskor a TELJES jegyzett tőkét kell felvenni (T 32-33 / K 411), nem csak a befizetettet.",
+    "Az átvezetés összege = a 479 egyenlege (befizetés + apport).",
+    "Bejegyzés után a befizetés már K 32-33.",
+    "Üzembe még nem helyezett apport: 161 Befejezetlen beruházás."
+   ],
+   "elteresek_a_forrasban": [
+    "Órai jegyzet 1. tétel: „2.000.00” – elírás, helyesen 2.000.000 Ft.",
+    "Órai jegyzet 3a: „K 4114.000.000” – összetapadt: K 411, 4.000.000 Ft.",
+    "A megoldás-diák 5 lépésre bontják (4 = technikai átvezetés, 5 = fennmaradó átutalás), az órai jegyzet 3a/3b/4 számozást használ; itt az órai jegyzet számozása szerepel.",
+    "Megoldás 5. dián a 479 T-számlán „1/161. 1.500.000” áll, helyesen 2/161.",
+    "A feladat szerinti dec. 20-i aktiválás (T 1xx / K 161) nincs lekönyvelve a megoldásban.",
+    "A mintakulcs „32-33”-at ír; mivel a tulajdonosi viszony nincs megadva, ez elfogadott (magánszemély tulajdonosoknál pontosan 358)."
+   ]
+  },
+  {
+   "id": "FEL2",
+   "forras": "2_Cégalapítás feladatsor 2. feladat; megoldás 9-29. dia; órai jegyzet",
+   "cim": "Új Seprű Kft. alapítása (¾ Bt, ¼ Zrt) + előtársasági és év végi mérleg",
+   "szoveg": "Az új seprű Kft.-t 2026.12.02-án alapította 8 mFt jegyzett tőkével ¾ részben egy Bt és ¼ részben egy ZRt: 1) 12.03: A Zrt befizet a pénztárba 500 eFt-ot, és átadott 4 db számítógépet, melyek apportjegyzék szerinti összértéke 1.000 eFt. 2) 12.06: Megérkezett a jóváírási értesítés a bankszámlára az alapító Bt által átutalt 3.000 eFt. 3) 12.07: Benyújtották a cégbírósághoz az alapítás dokumentumait. 4) 12.10: Megérkezett az alapítással kapcsolatos számla az ügyvédi irodától: 300 eFt + 27% ÁFA. 5) 12.15: Megjött a cégbírósági értesítés a bejegyzésről. 6) 12.17: Megérkezett a terhelési értesítés az ügyvédi számla kiegyenlítéséről. 7) 12.20: Az apportba kapott számítógépeket üzembe helyezték. 8) 12.28: Az alapító Bt átutalta a fennmaradó jegyzett tőke tartozását. 9) 12.31: A számítógépek tárgyévre jutó terv szerinti értékcsökkenése: 5.000 Ft. Feladat: Könyvelje le a gazdasági eseményeket vegyes naplóban! Készítse el az előtársaság és a társaság mérlegét!",
+   "adatok": {
+    "alapitas_datuma": "2026.12.02.",
+    "jegyzett_toke": 8000000,
+    "Bt_arany": "3/4 → 6 000 000 (anyavállalat → 325)",
+    "Zrt_arany": "1/4 → 2 000 000 (egyéb részesedési viszony → 332)",
+    "Zrt_penztar_1203": 500000,
+    "Zrt_apport_szamitogepek_1203": 1000000,
+    "Bt_bank_1206": 3000000,
+    "ugyvedi_dij_netto": 300000,
+    "afa_kulcs": 0.27,
+    "bejegyzes": "12.15.",
+    "uzembe_helyezes": "12.20.",
+    "Bt_atutalas_1228": "fennmaradó tartozása",
+    "ecs_1231": 5000
+   },
+   "megoldas": {
+    "szamitasok": [
+     {"mit": "Bt vállalása", "keplet": "8 000 000 × 3/4", "eredmeny": 6000000},
+     {"mit": "Zrt vállalása", "keplet": "8 000 000 × 1/4", "eredmeny": 2000000},
+     {"mit": "Ügyvédi díj áfája", "keplet": "300 000 × 0,27", "eredmeny": 81000},
+     {"mit": "Ügyvédi számla bruttó", "keplet": "300 000 + 81 000", "eredmeny": 381000},
+     {"mit": "Bejegyzésig rendelkezésre bocsátott vagyon (átvezetés)", "keplet": "500 000 + 1 000 000 + 3 000 000", "eredmeny": 4500000},
+     {"mit": "Ebből Zrt", "keplet": "500 000 + 1 000 000", "eredmeny": 1500000},
+     {"mit": "Ebből Bt", "keplet": "3 000 000", "eredmeny": 3000000},
+     {"mit": "Bt fennmaradó tartozása (12.28. befizetés)", "keplet": "6 000 000 − 3 000 000", "eredmeny": 3000000},
+     {"mit": "Zrt fennmaradó tartozása 12.31-én", "keplet": "2 000 000 − 1 500 000", "eredmeny": 500000},
+     {"mit": "Jegyzett, de be nem fizetett tőke 12.15-én", "keplet": "8 000 000 − 4 500 000", "eredmeny": 3500000},
+     {"mit": "Jegyzett, de be nem fizetett tőke 12.31-én", "keplet": "3 500 000 − 3 000 000", "eredmeny": 500000},
+     {"mit": "Előtársasági adózott eredmény", "keplet": "−300 000 (ügyvédi díj költségként)", "eredmeny": -300000},
+     {"mit": "Számítógépek nettó értéke 12.31.", "keplet": "1 000 000 − 5 000", "eredmeny": 995000},
+     {"mit": "Pénzeszközök 12.15.", "keplet": "500 000 (pénztár) + 3 000 000 (bank)", "eredmeny": 3500000},
+     {"mit": "Pénzeszközök 12.31.", "keplet": "3 500 000 − 381 000 + 3 000 000", "eredmeny": 6119000}
+    ],
+    "tetelek": [
+     {"sorszam": "1a", "esemeny": "12.03. Zrt pénzbefizetése a pénztárba (bejegyzés előtt)", "T": "381", "K": "479", "osszeg": 500000, "szamitas": "adat"},
+     {"sorszam": "1b", "esemeny": "12.03. Zrt apportja: 4 db számítógép (még nincs üzembe helyezve)", "T": "161", "K": "479", "osszeg": 1000000, "szamitas": "apportjegyzék szerinti érték"},
+     {"sorszam": "2", "esemeny": "12.06. Bt átutalása bankszámlára (bejegyzés előtt)", "T": "384", "K": "479", "osszeg": 3000000, "szamitas": "adat"},
+     {"sorszam": "3", "esemeny": "12.07. Dokumentumok benyújtása a cégbírósághoz", "T": "–", "K": "–", "osszeg": 0, "szamitas": "Nem gazdasági esemény, nincs könyvelés."},
+     {"sorszam": "4a", "esemeny": "12.10. Ügyvédi iroda alapítással kapcsolatos számlája – nettó díj (költségként)", "T": "5299", "K": "4543", "osszeg": 300000, "szamitas": "adat; forrás: K 4541"},
+     {"sorszam": "4b", "esemeny": "12.10. Ügyvédi számla előzetesen felszámított áfája", "T": "4661", "K": "4543", "osszeg": 81000, "szamitas": "300 000 × 27%; forrás: T 466 / K 4541"},
+     {"sorszam": "5a/1", "esemeny": "12.15. Cégbírósági bejegyzés: jegyzett tőke – Bt (anyavállalat) vállalása", "T": "325", "K": "411", "osszeg": 6000000, "szamitas": "8 000 000 × 3/4; mintakulcs: T 32-33 / K 411 8 000 000 egy összegben"},
+     {"sorszam": "5a/2", "esemeny": "12.15. Cégbírósági bejegyzés: jegyzett tőke – Zrt (egyéb részesedési viszony) vállalása", "T": "332", "K": "411", "osszeg": 2000000, "szamitas": "8 000 000 × 1/4"},
+     {"sorszam": "5b/1", "esemeny": "12.15. Technikai átvezetés – Bt által rendelkezésre bocsátott vagyon", "T": "479", "K": "325", "osszeg": 3000000, "szamitas": "Bt 12.06-i átutalása; mintakulcs: T 479 / K 32-33 4 500 000 egy összegben"},
+     {"sorszam": "5b/2", "esemeny": "12.15. Technikai átvezetés – Zrt által rendelkezésre bocsátott vagyon", "T": "479", "K": "332", "osszeg": 1500000, "szamitas": "500 000 + 1 000 000"},
+     {"sorszam": "Z1", "esemeny": "12.15. Előtársasági zárás: költségnem zárása", "T": "59", "K": "5299", "osszeg": 300000, "szamitas": "5299 egyenlege"},
+     {"sorszam": "Z2", "esemeny": "12.15. Igénybe vett szolgáltatások értéke", "T": "812", "K": "59", "osszeg": 300000, "szamitas": ""},
+     {"sorszam": "Z3", "esemeny": "12.15. Ráfordítás zárása a tárgyévi adózott eredményre", "T": "493", "K": "812", "osszeg": 300000, "szamitas": ""},
+     {"sorszam": "Z4", "esemeny": "12.15. Adózott eredmény (veszteség) átvezetése", "T": "419", "K": "493", "osszeg": 300000, "szamitas": "veszteség 300 000"},
+     {"sorszam": "–", "esemeny": "12.15. Mérlegszámlák zárása, előtársasági beszámoló; utána nyitás (minden vagyonelem a 491-gyel szemben) – a feladatban NEM könyveljük (HF)", "T": "–", "K": "–", "osszeg": 0, "szamitas": ""},
+     {"sorszam": "O", "esemeny": "12.16. Nyitás utáni rendezőtétel: előtársasági veszteség átvezetése az eredménytartalékba", "T": "413", "K": "419", "osszeg": 300000, "szamitas": "órai jegyzet szerint; a megoldás-dia K 493-at ír"},
+     {"sorszam": "6", "esemeny": "12.17. Ügyvédi számla kiegyenlítése bankszámláról", "T": "4543", "K": "384", "osszeg": 381000, "szamitas": "300 000 + 81 000; forrás: T 4541, az órai jegyzetben elírva 381.0000"},
+     {"sorszam": "7", "esemeny": "12.20. Apportba kapott számítógépek üzembe helyezése", "T": "143", "K": "161", "osszeg": 1000000, "szamitas": "161 egyenlege"},
+     {"sorszam": "8", "esemeny": "12.28. Bt átutalja a fennmaradó jegyzett tőke tartozását (bejegyzés után)", "T": "384", "K": "325", "osszeg": 3000000, "szamitas": "6 000 000 − 3 000 000; mintakulcs: K 32-33"},
+     {"sorszam": "9", "esemeny": "12.31. Számítógépek terv szerinti ÉCS-e", "T": "5711", "K": "149", "osszeg": 5000, "szamitas": "adat; forrás: T 571"},
+     {"sorszam": "Z5", "esemeny": "12.31. Költségnem zárása", "T": "59", "K": "5711", "osszeg": 5000, "szamitas": ""},
+     {"sorszam": "Z6", "esemeny": "12.31. Értékcsökkenés (eredményszámla)", "T": "83", "K": "59", "osszeg": 5000, "szamitas": ""},
+     {"sorszam": "Z7", "esemeny": "12.31. Ráfordítás zárása", "T": "493", "K": "83", "osszeg": 5000, "szamitas": ""},
+     {"sorszam": "Z8", "esemeny": "12.31. Adózott eredmény (veszteség) átvezetése", "T": "419", "K": "493", "osszeg": 5000, "szamitas": "veszteség 5 000"}
+    ],
+    "egyeb": {
+     "elotarsasag_merlege_2026_12_15_eFt": {
+      "eszkozok": {"A Befektetett eszközök": 1000, "A.I Immateriális javak": 0, "A.II Tárgyi eszközök (161 beruházás)": 1000, "A.III Befektetett pénzügyi eszközök": 0, "B Forgóeszközök": 3581, "B.I Készletek": 0, "B.II Követelések (466 T egyenleg)": 81, "B.III Értékpapírok": 0, "B.IV Pénzeszközök (500 pénztár + 3 000 bank)": 3500, "C Aktív időbeli elhatárolások": 0, "ESZKÖZÖK ÖSSZESEN": 4581},
+      "forrasok": {"D Saját tőke": 4200, "D.I Jegyzett tőke": 8000, "D.II Jegyzett, de még be nem fizetett tőke (-)": -3500, "D.III Tőketartalék": 0, "D.IV Eredménytartalék": 0, "D.V Lekötött tartalék": 0, "D.VI Értékelési tartalék": 0, "D.VII Adózott eredmény": -300, "E Céltartalékok": 0, "F Kötelezettségek": 381, "F.III Rövid lejáratú kötelezettségek (szállító)": 381, "G Passzív időbeli elhatárolások": 0, "FORRÁSOK ÖSSZESEN": 4581}
+     },
+     "tarsasag_merlege_2026_12_31_eFt": {
+      "oszlopok": "Bázis (= előtársasági mérleg 12.15.) | Tárgy (12.31.)",
+      "eszkozok": {"A Befektetett eszközök": [1000, 995], "A.II Tárgyi eszközök": [1000, 995], "B Forgóeszközök": [3581, 6200], "B.II Követelések (466)": [81, 81], "B.IV Pénzeszközök": [3500, 6119], "ESZKÖZÖK ÖSSZESEN": [4581, 7195]},
+      "forrasok": {"D Saját tőke": [4200, 7195], "D.I Jegyzett tőke": [8000, 8000], "D.II Jegyzett, de még be nem fizetett tőke (-)": [-3500, -500], "D.IV Eredménytartalék": [0, -300], "D.VII Adózott eredmény": [-300, -5], "F.III Rövid lejáratú kötelezettségek": [381, 0], "FORRÁSOK ÖSSZESEN": [4581, 7195]}
+     },
+     "ellenorzes": "12.15.: 1 000 + 81 + 3 500 = 4 581 = 8 000 − 3 500 − 300 + 381. 12.31.: 995 + 81 + 6 119 = 7 195 = 8 000 − 500 − 300 − 5.",
+     "megjegyzes": "A Zrt 12.31-én még 500 000 Ft-tal tartozik (2 000 000 − 500 000 − 1 000 000); ez a −500 eFt D.II. sor. Az ügyvédi díj aktiválása esetén (alternatíva): T 111 / K 4543 300 000 + T 413 / K 4142 300 000, és nem lenne 300 eFt veszteség."
+    }
+   },
+   "tanulsagok": [
+    "A tulajdonosi arányból számold ki a vállalásokat (Bt 6 M, Zrt 2 M), és tulajdonosonként kövesd a hátralékot.",
+    "A cégbírósághoz benyújtás NEM gazdasági esemény.",
+    "Bejegyzés előtti tételek K 479, bejegyzés utániak K 32-33 (325 / 332).",
+    "Az átvezetés = bejegyzésig befizetett pénz + apport (4 500 000).",
+    "Apportként kapott, még nem üzembe helyezett eszköz: 161, üzembe helyezéskor T 143 / K 161.",
+    "Az előtársasági időszak külön beszámolási időszak (fordulónap = bejegyzés napja); a veszteség a nyitás után az eredménytartalékba kerül (T 413 / K 419).",
+    "A 466 T egyenlege a mérlegben követelés.",
+    "A ¾ részes Bt anyavállalat (325), a ¼ részes Zrt egyéb részesedési viszonyban van (332) – innen a mintakulcs „32-33” jelölése."
+   ],
+   "elteresek_a_forrasban": [
+    "Ügyvédi számla: a megoldás K 4541 (Belföldi anyag- és áruszállítók); a szamlaszamok.json szerint szolgáltatás szállító = 4543 (Belföldi szolgáltatások). Itt 4543 szerepel; a 6. tétel T oldala is 4543.",
+    "Áfa: a megoldás T 466-ot ír, a szamlaszamok.json szerint 4661.",
+    "Költség: a megoldás-dia „52(99)”, az órai jegyzet „5299” – ugyanaz (5299 Ki nem emelt egyéb igénybevett szolgáltatások).",
+    "ÉCS: a megoldás T 571, a szamlaszamok.json szerint 5711.",
+    "Jegyzett, de be nem fizetett tőke: a megoldás „32-33”-at ír egy összegben (5a: 8 000 000; 5b: 4 500 000; 8: K 32-33 3 000 000). Pontosan: Bt (75%, anyavállalat) 325, Zrt (25%, egyéb részesedési viszony) 332 – itt tulajdonosonként bontva.",
+    "Órai jegyzet 6. tétel: „381.0000” – elírás, helyesen 381.000 Ft.",
+    "Nyitás utáni rendezőtétel: a megoldás 22. diája T 413 / K 493-at ír, az órai jegyzet T 413 / K 419-et. Mivel a 493 a zárásnál már a 419-re lett vezetve (T 419 / K 493) és a nyitás a mérlegszámlákat (419) nyitja meg, a helyes tétel T 413 / K 419.",
+    "Év végi mérleg (28. dia): a Bázis oszlopban B Forgóeszközök 3.575 áll, de 81 + 3 500 = 3 581 (az előtársasági mérlegben is 3.581); a 4 581-es összesen is csak 3 581-gyel jön ki.",
+    "A megoldás 18. diáján az összeg „300.00018Ft” – a diaszám (18) tapadt hozzá, helyesen 300 000 Ft.",
+    "Az órai jegyzetben a 12.15-i költségzárás csak „Ráfordítás és költségszámlák zárása” címmel szerepel, a tételek (T 59 / K 5299; T 812 / K 59; T 493 / K 812) a megoldás-diákon vannak."
+   ]
+  },
+  {
+   "id": "FEL3",
+   "forras": "tesztkerdesek_moodle.json – „Leányvállalat alapítása (leány könyveiben)” (beadott megoldás 12/18 pont, javaslattal korrigálva)",
+   "cim": "Leányvállalat alapítása 10 M jegyzett tőkével (anyavállalat a tulajdonos)",
+   "szoveg": "A Moodle-feladat adatai a beadott tételek alapján: az anyavállalat 10 000 000 Ft jegyzett tőkével leányvállalatot alapít. Bejegyzés előtt 6 000 000 Ft-ot átutal a bankszámlára és 3 000 000 Ft értékű gépet apportál (még nincs üzembe helyezve). Bejegyzés után befizeti a fennmaradó 1 000 000 Ft-ot, a gépet üzembe helyezik. Könyvelje a leányvállalat könyveiben!",
+   "adatok": {"jegyzett_toke": 10000000, "bank_bejegyzes_elott": 6000000, "apport_gep": 3000000, "bejegyzes_utani_befizetes": 1000000, "tulajdonos": "anyavállalat → 325"},
+   "megoldas": {
+    "szamitasok": [
+     {"mit": "Átvezetés", "keplet": "6 000 000 + 3 000 000", "eredmeny": 9000000},
+     {"mit": "Hátralék", "keplet": "10 000 000 − 9 000 000", "eredmeny": 1000000}
+    ],
+    "tetelek": [
+     {"sorszam": "1", "esemeny": "Anyavállalat átutalása bejegyzés előtt", "T": "384", "K": "479", "osszeg": 6000000, "szamitas": "adat"},
+     {"sorszam": "2", "esemeny": "Gép apportja (még nincs üzembe helyezve)", "T": "161", "K": "479", "osszeg": 3000000, "szamitas": "létesítő okirat szerinti érték"},
+     {"sorszam": "3", "esemeny": "Cégbírósági bejegyzés", "T": "325", "K": "411", "osszeg": 10000000, "szamitas": "teljes jegyzett tőke"},
+     {"sorszam": "4", "esemeny": "Technikai átvezetés", "T": "479", "K": "325", "osszeg": 9000000, "szamitas": "6 000 000 + 3 000 000"},
+     {"sorszam": "5", "esemeny": "Hátralék befizetése bejegyzés után", "T": "384", "K": "325", "osszeg": 1000000, "szamitas": "10 000 000 − 9 000 000"},
+     {"sorszam": "6", "esemeny": "Gép üzembe helyezése", "T": "131", "K": "161", "osszeg": 3000000, "szamitas": "161 egyenlege"}
+    ],
+    "egyeb": {}
+   },
+   "tanulsagok": ["Anyavállalattól jegyzett, de be nem fizetett tőke = 325 (nem 332).", "Bejegyzés előtti ellenszámla 479 (nem 4795)."],
+   "elteresek_a_forrasban": ["A beadott Moodle-megoldás 4795-öt és 332-t használt (12/18 pont); a javaslat és a szamlaszamok.json szerint 479 és 325 a helyes. A feladat pontos szövege nem áll rendelkezésre, az adatok a beadott tételekből származnak."]
+  }
+ ],
+
+ "gyakorlo_kerdesek": [
+  {"id": "G01", "tipus": "szamitas", "kerdes": "A Kft. bejegyzése előtt az alapító 2 000 000 Ft-ot utal a bankszámlára. Könyvelje (T / K / összeg)!", "opciok": null, "helyes": "T 384 / K 479 2 000 000", "magyarazat": "Bejegyzés előtt még nincs jegyzett tőke, a befizetés kötelezettség a tulajdonossal szemben.", "forras": "feladat"},
+  {"id": "G02", "tipus": "szamitas", "kerdes": "Bejegyzés előtt a tulajdonos 1 500 000 Ft értékű, még üzembe nem helyezett gépet bocsát a társaság rendelkezésére. Könyvelje!", "opciok": null, "helyes": "T 161 / K 479 1 500 000", "magyarazat": "Üzembe nem helyezett tárgyi eszköz = befejezetlen beruházás; bejegyzés előtt K 479.", "forras": "feladat"},
+  {"id": "G03", "tipus": "szamitas", "kerdes": "4 000 000 Ft törzstőkéjű Kft. bejegyzése megtörtént (tulajdonosi viszony nincs megadva). Könyvelje a jegyzett tőkét!", "opciok": null, "helyes": "T 32-33 / K 411 4 000 000", "magyarazat": "A bejegyzéskor a teljes jegyzett tőkét kell felvenni.", "forras": "feladat"},
+  {"id": "G04", "tipus": "szamitas", "kerdes": "Bejegyzésig 2 000 000 Ft pénz és 1 500 000 Ft apport érkezett (jegyzett tőke 4 000 000). Mi a technikai átvezetés tétele?", "opciok": null, "helyes": "T 479 / K 32-33 3 500 000", "magyarazat": "Átvezetés = a 479 egyenlege = 2 000 000 + 1 500 000.", "forras": "feladat"},
+  {"id": "G05", "tipus": "szamitas", "kerdes": "Az előző adatok mellett a bejegyzés után a tulajdonos átutalja a hátralékot. Könyvelje!", "opciok": null, "helyes": "T 384 / K 32-33 500 000", "magyarazat": "4 000 000 − 3 500 000 = 500 000; bejegyzés után már a 32-33-at csökkenti.", "forras": "feladat"},
+  {"id": "G06", "tipus": "szamitas", "kerdes": "8 000 000 Ft jegyzett tőke, ¾ Bt, ¼ Zrt. Mennyi az egyes tulajdonosok vállalása, és melyik számlán vesszük fel a bejegyzéskor?", "opciok": null, "helyes": "Bt: T 325 / K 411 6 000 000; Zrt: T 332 / K 411 2 000 000 (mintakulcs: T 32-33 / K 411 8 000 000)", "magyarazat": "75% → anyavállalat (325); 25% → egyéb részesedési viszony (332).", "forras": "feladat"},
+  {"id": "G07", "tipus": "szamitas", "kerdes": "A Zrt az alapításkor (bejegyzés előtt) 500 000 Ft-ot befizet a pénztárba. Könyvelje!", "opciok": null, "helyes": "T 381 / K 479 500 000", "magyarazat": "Pénztár = 381.", "forras": "feladat"},
+  {"id": "G08", "tipus": "szamitas", "kerdes": "Ügyvédi iroda alapítással kapcsolatos számlája: 300 000 Ft + 27% áfa (költségként elszámolva). Könyvelje mindkét tételt!", "opciok": null, "helyes": "T 5299 / K 4543 300 000; T 4661 / K 4543 81 000", "magyarazat": "300 000 × 0,27 = 81 000. A tanári megoldás K 4541-et és T 466-ot ír – a ZH-n a 4543/4661 a pontosabb.", "forras": "feladat"},
+  {"id": "G09", "tipus": "szamitas", "kerdes": "Az ügyvédi számlát (300 000 + 27% áfa) átutalással kiegyenlítik. Könyvelje!", "opciok": null, "helyes": "T 4543 / K 384 381 000", "magyarazat": "Bruttó összeg: 300 000 + 81 000.", "forras": "feladat"},
+  {"id": "G10", "tipus": "szamitas", "kerdes": "Új Seprű Kft.: bejegyzésig a Zrt 500 eFt pénzt + 1 000 eFt apportot, a Bt 3 000 eFt-ot bocsátott rendelkezésre. Mennyi a 12.15-i technikai átvezetés (összesen és tulajdonosonként)?", "opciok": null, "helyes": "4 500 000 összesen: T 479 / K 325 3 000 000 (Bt) és T 479 / K 332 1 500 000 (Zrt)", "magyarazat": "500 000 + 1 000 000 + 3 000 000 = 4 500 000.", "forras": "feladat"},
+  {"id": "G11", "tipus": "szamitas", "kerdes": "Új Seprű Kft.: mennyi a jegyzett, de be nem fizetett tőke 12.15-én és 12.31-én (a Bt 12.28-án befizette a hátralékát)?", "opciok": null, "helyes": "12.15.: 3 500 000 Ft; 12.31.: 500 000 Ft (a Zrt hátraléka)", "magyarazat": "8 000 000 − 4 500 000 = 3 500 000; − 3 000 000 = 500 000. Zrt: 2 000 000 − 1 500 000 = 500 000.", "forras": "feladat"},
+  {"id": "G12", "tipus": "szamitas", "kerdes": "A Bt (anyavállalat) a bejegyzés után átutalja 3 000 000 Ft hátralékát. Könyvelje pontos számlaszámmal!", "opciok": null, "helyes": "T 384 / K 325 3 000 000", "magyarazat": "Bejegyzés után a tulajdonossal szembeni követelés csökken; anyavállalattól 325 (mintakulcs: 32-33).", "forras": "feladat"},
+  {"id": "G13", "tipus": "szamitas", "kerdes": "Az apportként kapott 1 000 000 Ft értékű számítógépeket üzembe helyezik. Könyvelje!", "opciok": null, "helyes": "T 143 / K 161 1 000 000", "magyarazat": "Számítógép = irodai, igazgatási berendezés (143).", "forras": "feladat"},
+  {"id": "G14", "tipus": "szamitas", "kerdes": "A számítógépek tárgyévi terv szerinti ÉCS-e 5 000 Ft. Könyvelje!", "opciok": null, "helyes": "T 5711 / K 149 5 000", "magyarazat": "143-hoz tartozó ÉCS számla a 149. Tanári megoldás: T 571.", "forras": "feladat"},
+  {"id": "G15", "tipus": "szamitas", "kerdes": "Az előtársasági időszakban egyetlen ráfordítás volt: 300 000 Ft ügyvédi díj. Mennyi az előtársaság adózott eredménye, és mi a 419-re vezetés tétele?", "opciok": null, "helyes": "−300 000 Ft; T 419 / K 493 300 000", "magyarazat": "Veszteségnél a 493 tartozik egyenlegét vezetjük át: T 419 / K 493.", "forras": "feladat"},
+  {"id": "G16", "tipus": "szamitas", "kerdes": "A társaság nyitása után az előtársasági 300 000 Ft veszteséget az eredménytartalékba vezetik. Könyvelje!", "opciok": null, "helyes": "T 413 / K 419 300 000", "magyarazat": "A negatív eredmény is eredmény, meg kell jelennie az eredménytartalékban.", "forras": "feladat"},
+  {"id": "G17", "tipus": "szamitas", "kerdes": "Számítsa ki az Új Seprű Kft. előtársasági mérlegfőösszegét (eFt)! Eszközök: 161: 1 000, 466: 81, pénztár 500, bank 3 000.", "opciok": null, "helyes": "4 581 eFt", "magyarazat": "Források: 8 000 − 3 500 − 300 + 381 = 4 581.", "forras": "feladat"},
+  {"id": "G18", "tipus": "szamitas", "kerdes": "Számítsa ki az Új Seprű Kft. 12.31-i saját tőkéjét (eFt)!", "opciok": null, "helyes": "7 195 eFt", "magyarazat": "Jegyzett tőke 8 000 − be nem fizetett 500 − eredménytartalék 300 − adózott eredmény 5 = 7 195.", "forras": "feladat"},
+  {"id": "G19", "tipus": "szamitas", "kerdes": "Leányvállalat alapítása: az anyavállalat bejegyzés előtt 6 M Ft-ot utal és 3 M Ft gépet apportál; jegyzett tőke 10 M. Könyvelje a bejegyzést és az átvezetést!", "opciok": null, "helyes": "T 325 / K 411 10 000 000; T 479 / K 325 9 000 000", "magyarazat": "Anyavállalattól 325 (nem 332); átvezetés 6 + 3 = 9 M.", "forras": "teszt"},
+  {"id": "G20", "tipus": "szamitas", "kerdes": "Magánszemély tag bejegyzés után 400 000 Ft-ot fizet be a pénztárba jegyzett tőke hátralékként. Könyvelje!", "opciok": null, "helyes": "T 381 / K 358 400 000", "magyarazat": "Részesedési viszonyban nem lévő vállalkozás / magánszemély: 358.", "forras": "generalt"},
+  {"id": "G21", "tipus": "szamitas", "kerdes": "A vállalkozó úgy dönt, hogy az alapítással kapcsolatos 300 000 Ft nettó ügyvédi díjat aktiválja. Könyvelje az aktiválást és a kapcsolódó tartalékképzést!", "opciok": null, "helyes": "T 111 / K 4543 300 000; T 413 / K 4142 300 000", "magyarazat": "Alapítás-átszervezés aktivált értéke mellé lekötött tartalék képzendő az eredménytartalékból.", "forras": "generalt"},
+  {"id": "G22", "tipus": "szamitas", "kerdes": "Bejegyzés előtt a tag 800 000 Ft értékű árukészletet apportál. Könyvelje!", "opciok": null, "helyes": "T 261 / K 479 800 000", "magyarazat": "Apportként átvett készlet a létesítő okirat szerinti értéken.", "forras": "generalt"},
+  {"id": "G23", "tipus": "szamitas", "kerdes": "10 M Ft jegyzett tőke, ebből 7 M Ft befizetve. Mennyi a jegyzett, de be nem fizetett tőke?", "opciok": null, "helyes": "3 000 000 Ft", "magyarazat": "10 M − 7 M.", "forras": "teszt"},
+  {"id": "G24", "tipus": "szamitas", "kerdes": "4 M Ft pénz + 6 M Ft gép vagyoni hozzájárulás. Mennyi a vagyoni hozzájárulás összesen?", "opciok": null, "helyes": "10 000 000 Ft", "magyarazat": "Pénzbeli + nem pénzbeli hozzájárulás.", "forras": "teszt"},
+  {"id": "G25", "tipus": "egyvalasztos", "kerdes": "Milyen értéken kell nyilvántartásba venni az apportot?", "opciok": ["Piaci érték", "Beszerzési érték", "Létesítő okirat szerinti érték", "Könyv szerinti érték az apportálónál"], "helyes": "Létesítő okirat szerinti érték", "magyarazat": "Az apport értéke a létesítő okiratban (apportjegyzékben) rögzített érték.", "forras": "teszt"},
+  {"id": "G26", "tipus": "egyvalasztos", "kerdes": "Hol szerepel a mérlegben a jegyzett, de még be nem fizetett tőke?", "opciok": ["Követelések között", "Saját tőkét csökkentő tételként (D.II., negatív előjellel)", "Rövid lejáratú kötelezettségek között", "Tőketartalékban"], "helyes": "Saját tőkét csökkentő tételként (D.II., negatív előjellel)", "magyarazat": "Moodle: saját tőkét csökkentő tétel.", "forras": "teszt"},
+  {"id": "G27", "tipus": "igaz_hamis", "kerdes": "Apport kizárólag tárgyi eszköz lehet.", "opciok": ["Igaz", "Hamis"], "helyes": "Hamis", "magyarazat": "Lehet vagyoni értékű jog, szellemi alkotás, követelés, készlet stb. is.", "forras": "teszt"},
+  {"id": "G28", "tipus": "igaz_hamis", "kerdes": "A bejegyzési dokumentumok cégbírósághoz való benyújtása gazdasági esemény, amelyet könyvelni kell.", "opciok": ["Igaz", "Hamis"], "helyes": "Hamis", "magyarazat": "Nem gazdasági esemény (Új Seprű Kft. 3. tétel).", "forras": "feladat"},
+  {"id": "G29", "tipus": "igaz_hamis", "kerdes": "A cégbejegyzés után befizetett jegyzett tőke hátralékot T 384 / K 479 tétellel könyveljük.", "opciok": ["Igaz", "Hamis"], "helyes": "Hamis", "magyarazat": "Bejegyzés után K 32-33 (325 / 332 / 358); a 479 csak a bejegyzés előtti befizetéshez tartozik.", "forras": "feladat"},
+  {"id": "G30", "tipus": "igaz_hamis", "kerdes": "A jegyzett, de be nem fizetett tőke után nem jár szavazati jog és osztalék.", "opciok": ["Igaz", "Hamis"], "helyes": "Igaz", "magyarazat": "Nem működő tőkeelem.", "forras": "tananyag"},
+  {"id": "G31", "tipus": "igaz_hamis", "kerdes": "Átalakulással létrejött társaságnál is van előtársasági időszak.", "opciok": ["Igaz", "Hamis"], "helyes": "Hamis", "magyarazat": "Átalakulással vagy cégforma-váltással létrejött társaságnál NINCS előtársasági időszak.", "forras": "tananyag"},
+  {"id": "G32", "tipus": "egyvalasztos", "kerdes": "Mi kerül az alapítás-átszervezés aktivált értéke mellé a forrásoldalon?", "opciok": ["Tőketartalék", "Lekötött tartalék", "Céltartalék", "Értékelési tartalék"], "helyes": "Lekötött tartalék", "magyarazat": "T 413 / K 4142 az aktivált értékkel.", "forras": "teszt"},
+  {"id": "G33", "tipus": "egyvalasztos", "kerdes": "Mitől függ az alapítás-átszervezés költségeinek aktiválása?", "opciok": ["Kötelező", "Tilos", "A vállalkozó döntésétől függ", "Csak Rt-nél lehetséges"], "helyes": "A vállalkozó döntésétől függ", "magyarazat": "Moodle immateriális teszt 17.", "forras": "teszt"},
+  {"id": "G34", "tipus": "tobbvalasztos", "kerdes": "Mi lehet apport tárgya?", "opciok": ["Vagyoni értékű jog", "Ingatlan", "Gép", "Munkavégzés (szolgáltatás) ígérete"], "helyes": ["Vagyoni értékű jog", "Ingatlan", "Gép"], "magyarazat": "Apport: értékkel rendelkező dolog, szellemi alkotáshoz fűződő vagy vagyoni értékű jog, követelés.", "forras": "teszt"},
+  {"id": "G35", "tipus": "parositas", "kerdes": "Párosítsa a tulajdonost a jegyzett, de be nem fizetett tőke számlájával!", "opciok": ["Anyavállalat", "Egyéb részesedési viszonyban lévő vállalkozás", "Magánszemély / részesedési viszonyban nem lévő", "Bejegyzés előtti befizetés"], "helyes": {"Anyavállalat": "325", "Egyéb részesedési viszonyban lévő vállalkozás": "332", "Magánszemély / részesedési viszonyban nem lévő": "358", "Bejegyzés előtti befizetés": "479 (nem jegyzett, de be nem fizetett tőke, hanem kötelezettség)"}, "magyarazat": "Számlatükör 32., 33., 35. csoport; szamlaszamok.json.", "forras": "tananyag"},
+  {"id": "G36", "tipus": "egyvalasztos", "kerdes": "Mi a Kft. minimális törzstőkéje?", "opciok": ["500 eFt", "3 mFt", "5 mFt", "20 mFt"], "helyes": "3 mFt", "magyarazat": "ZRt 5 mFt, NyRt 20 mFt.", "forras": "tananyag"}
+ ],
+
+ "csapdak": [
+  "Bejegyzés előtt a bejegyzés előtti befizetés K 479 – NEM K 411 és NEM K 32-33 (és a mintakulcs szerint nem 4795).",
+  "Bejegyzéskor a TELJES jegyzett tőkét kell T 32-33 / K 411-gyel felvenni, nem csak a befizetett részt.",
+  "A technikai átvezetés (T 479 / K 32-33) összege a bejegyzésig befizetett pénz + apport – ne felejtsd ki az apportot!",
+  "Bejegyzés UTÁNI befizetés K 32-33 (325 / 332 / 358), nem K 479.",
+  "Tulajdonosi viszony: többségi (pl. ¾-es) tulajdonos anyavállalat → 325; 20-50% körüli tulajdonos egyéb részesedési viszony → 332 (nem 331!); magánszemély → 358. A mintakulcs „32-33”-at ír.",
+  "Apportként kapott, még üzembe nem helyezett eszköz 161 Befejezetlen beruházás, nem rögtön 13x/14x; üzembe helyezéskor T 143 (számítógép) / K 161.",
+  "A cégbírósághoz benyújtás nem gazdasági esemény – nincs tétel.",
+  "Ügyvédi díj = szolgáltatás → 5299 költség, szállító 4543 (a tanári megoldás 4541-et ír), áfa 4661.",
+  "Áfa: 300 000 × 27% = 81 000, kiegyenlítés bruttó 381 000.",
+  "A 466 tartozik egyenlege a mérlegben KÖVETELÉS (B.II.).",
+  "Jegyzett, de be nem fizetett tőke a mérlegben forrásoldalon, D.II. sorban negatív előjellel – nem az eszközoldali követelések között.",
+  "Előtársasági veszteség rendezése a nyitás után T 413 / K 419 (a megoldás-dia K 493-at ír).",
+  "Alapítás-átszervezés aktiválása esetén lekötött tartalékot is kell képezni (T 413 / K 4142).",
+  "Apport értéke = létesítő okirat (apportjegyzék) szerinti érték, nem piaci és nem beszerzési érték.",
+  "Bejegyzés napja = előtársasági fordulónap; a végleges társaság a bejegyzést KÖVETŐ napon kezd.",
+  "Új Seprű Kft.-nél a Zrt év végén még 500 000 Ft-tal tartozik (500 pénz + 1 000 apport < 2 000 vállalás) – ezért D.II. = −500 eFt."
+ ]
+}

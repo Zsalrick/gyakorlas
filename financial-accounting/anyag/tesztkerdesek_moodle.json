@@ -1,0 +1,1349 @@
+{
+ "leiras": "A 6 Moodle-teszt kérdései a javítás szerinti helyes válaszokkal. 'sajat_hiba' = ahol pont veszett; 'javaslat' = ahol a rendszer nem mutatta a helyes választ.",
+ "tesztek": [
+  {
+   "cim": "Számviteli alapelvek, beszámoló",
+   "eredmeny": "21/21",
+   "kerdesek": [
+    {
+     "n": 1,
+     "kerdes": "Ki felel a számviteli politika elkészítéséért?",
+     "helyes": "A gazdálkodó képviseletére jogosult személy"
+    },
+    {
+     "n": 2,
+     "kerdes": "Decemberi teljesítés, februári fizetés – melyik év bevétele?",
+     "helyes": "A teljesítés évében"
+    },
+    {
+     "n": 3,
+     "kerdes": "Nyitóadatok = előző év záróadatai",
+     "helyes": "Folytonosság"
+    },
+    {
+     "n": 4,
+     "kerdes": "Könyvvizsgálat célja",
+     "helyes": "Megfelel-e az előírásoknak, megbízható és valós összképet mutat-e"
+    },
+    {
+     "n": 5,
+     "kerdes": "Költség-haszon összevetés elve",
+     "helyes": "Az információ haszna haladja meg előállítási költségét"
+    },
+    {
+     "n": 6,
+     "kerdes": "Egyszerűsített éves beszámoló 20X6 (2100/2050 M mérleg, 3900/3800 M árbevétel, 45/49 fő)",
+     "helyes": "Igaz",
+     "indoklas": "Határ: 2000 M / 4000 M / 50 fő; csak 1 mutató lépi túl"
+    },
+    {
+     "n": 7,
+     "kerdes": "Ugyanannak a partnernek 1 M értékesítés, 600 e szolgáltatás",
+     "helyes": "Külön kell kimutatni (bruttó elszámolás)"
+    },
+    {
+     "n": 8,
+     "kerdes": "Bizonylati fegyelem",
+     "helyes": [
+      "Készpénz: pénzmozgással egyidejűleg",
+      "Bank: értesítés megérkezésekor",
+      "Egyéb: legalább negyedévente"
+     ]
+    },
+    {
+     "n": 9,
+     "kerdes": "Ki NEM készíthet egyszerűsített éves beszámolót?",
+     "helyes": "NYRT"
+    },
+    {
+     "n": 10,
+     "kerdes": "Kft. 2100/2150 M, 3900/4200 M, 52/55 fő – mit készít 20X6-ban?",
+     "helyes": "Éves beszámolót"
+    },
+    {
+     "n": 11,
+     "kerdes": "Nincs hozzáférés, lényeges és átfogó hatás",
+     "helyes": "Véleménynyilvánítás visszautasítása"
+    },
+    {
+     "n": 12,
+     "kerdes": "Általános alapelv",
+     "helyes": "Vállalkozás folytatásának elve"
+    },
+    {
+     "n": 13,
+     "kerdes": "Szt. alapvető célja",
+     "helyes": "Beszámolási és könyvvezetési kötelezettség szabályozása"
+    },
+    {
+     "n": 14,
+     "kerdes": "Óvatosság elve",
+     "helyes": [
+      "Előre látható kockázatok figyelembevétele",
+      "Céltartalék az eredménytől függetlenül",
+      "Értékvesztés veszteséges évben is"
+     ]
+    },
+    {
+     "n": 15,
+     "kerdes": "Tételek a valóságban is megtalálhatók, bizonyíthatók",
+     "helyes": "Valódiság"
+    },
+    {
+     "n": 16,
+     "kerdes": "Számviteli politika elkészítési határideje",
+     "helyes": "90 nap"
+    },
+    {
+     "n": 17,
+     "kerdes": "Mikrogazdálkodói beszámoló 20X6 (170/175 M, 340/370 M, 12/9 fő)",
+     "helyes": "Igaz",
+     "indoklas": "2026-tól határ: 180 M / 360 M / 10 fő"
+    },
+    {
+     "n": 18,
+     "kerdes": "Lényegesség elve",
+     "helyes": "Elhagyása/téves bemutatása befolyásolhatja a felhasználók döntéseit"
+    },
+    {
+     "n": 19,
+     "kerdes": "Fordulónap és mérlegkészítés közötti események figyelembevétele",
+     "helyes": "Teljesség"
+    },
+    {
+     "n": 20,
+     "kerdes": "Kire NEM terjed ki az Szt.?",
+     "helyes": [
+      "Egyéni vállalkozó",
+      "Polgári jogi társaság"
+     ]
+    },
+    {
+     "n": 21,
+     "kerdes": "Beszámolókészítés sorrendje",
+     "helyes": [
+      "gazdasági esemény",
+      "bizonylat",
+      "könyvviteli rögzítés",
+      "év végi zárás",
+      "beszámoló",
+      "könyvvizsgálat, ha kötelező",
+      "letétbe helyezés/közzététel"
+     ]
+    }
+   ]
+  },
+  {
+   "cim": "Tárgyi eszközök – elmélet",
+   "eredmeny": "33 kérdés, 2 részben helyes",
+   "kerdesek": [
+    {
+     "n": 1,
+     "kerdes": "Teljesítőképességet jelentősen növelő átalakítás",
+     "helyes": "Értéknövelő beruházás lehet"
+    },
+    {
+     "n": 2,
+     "kerdes": "Karbantartási költség",
+     "helyes": "A felmerülés időszakának eredményét terheli"
+    },
+    {
+     "n": 3,
+     "kerdes": "Apport tárgyai",
+     "helyes": [
+      "Vagyoni értékű jog",
+      "Ingatlan",
+      "Gép"
+     ]
+    },
+    {
+     "n": 4,
+     "kerdes": "Terven felüli ÉCS visszaírása egyéb bevétel",
+     "helyes": "Igaz"
+    },
+    {
+     "n": 5,
+     "kerdes": "Üzembe helyezésig nincs terv szerinti ÉCS",
+     "helyes": "Igaz"
+    },
+    {
+     "n": 6,
+     "kerdes": "Bekerülési érték (12 M + 0,5 + 0,8 + 0,3; karbantartás nem)",
+     "helyes": "13 600 000 Ft"
+    },
+    {
+     "n": 7,
+     "kerdes": "Bekerülési értéket növelő tételek",
+     "helyes": [
+      "Vételár",
+      "Szállítás",
+      "Alapozás, szerelés",
+      "Üzembe helyezés"
+     ]
+    },
+    {
+     "n": 8,
+     "kerdes": "4 M pénz + 6 M gép vagyoni hozzájárulás",
+     "helyes": "10 M Ft"
+    },
+    {
+     "n": 9,
+     "kerdes": "5 M gép apportálása",
+     "helyes": [
+      "Vagyoni hozzájárulás teljesítése",
+      "Eszközállomány nő",
+      "Bekerülési érték 5 M"
+     ]
+    },
+    {
+     "n": 10,
+     "kerdes": "Apport értéke",
+     "helyes": "Létesítő okirat szerinti érték"
+    },
+    {
+     "n": 11,
+     "kerdes": "20 M gép, nincs üzembe helyezve",
+     "helyes": [
+      "Tárgyi eszköznek minősül",
+      "Beruházásként kell kimutatni",
+      "Nem számolható el terv szerinti ÉCS"
+     ],
+     "sajat_hiba": "Az 'a' (tárgyi eszköz) kimaradt – a beruházás is tárgyi eszköz mérlegcsoport"
+    },
+    {
+     "n": 12,
+     "kerdes": "Apport kizárólag tárgyi eszköz lehet",
+     "helyes": "Hamis"
+    },
+    {
+     "n": 13,
+     "kerdes": "10 M jegyzett tőke, 7 M befizetve",
+     "helyes": "3 M Ft"
+    },
+    {
+     "n": 14,
+     "kerdes": "Üzembe helyezés időpontját dokumentálni kell",
+     "helyes": "Igaz"
+    },
+    {
+     "n": 15,
+     "kerdes": "Lineáris ÉCS (10 M, 1 M maradvány, 5 év)",
+     "helyes": "1 800 000 Ft"
+    },
+    {
+     "n": 16,
+     "kerdes": "Karbantartás mindig növeli a bruttó értéket",
+     "helyes": "Hamis"
+    },
+    {
+     "n": 17,
+     "kerdes": "Nincs terv szerinti ÉCS",
+     "helyes": [
+      "Üzembe nem helyezett beruházás",
+      "Földterület"
+     ]
+    },
+    {
+     "n": 18,
+     "kerdes": "Terven felüli ÉCS egyéb ráfordítás",
+     "helyes": "Igaz"
+    },
+    {
+     "n": 19,
+     "kerdes": "Laptopok párosítása",
+     "helyes": {
+      "továbbértékesítésre": "Készlet / áru",
+      "ügyvezető használja": "Egyéb berendezések",
+      "nincs üzembe helyezve": "Beruházás"
+     }
+    },
+    {
+     "n": 20,
+     "kerdes": "Mikor beruházás a gép?",
+     "helyes": "Amíg nem helyezték rendeltetésszerűen használatba"
+    },
+    {
+     "n": 21,
+     "kerdes": "Eredménykimutatás párosítás",
+     "helyes": {
+      "Terven felüli ÉCS": "Egyéb ráfordítás",
+      "Visszaírása": "Egyéb bevétel",
+      "Kártérítés": "Egyéb bevétel",
+      "Térítés nélkül átadott TE": "Egyéb ráfordítás",
+      "Terv szerinti ÉCS": "Értékcsökkenési leírás"
+     }
+    },
+    {
+     "n": 22,
+     "kerdes": "Műszaki vs. egyéb berendezés",
+     "helyes": "Közvetlen vagy közvetett szolgálat"
+    },
+    {
+     "n": 23,
+     "kerdes": "Jegyzett, de be nem fizetett tőke a mérlegben",
+     "helyes": "Saját tőkét csökkentő tétel"
+    },
+    {
+     "n": 24,
+     "kerdes": "Nem része a saját előállítás bekerülési értékének",
+     "helyes": "Általános igazgatási költség"
+    },
+    {
+     "n": 25,
+     "kerdes": "Nem növeli a bekerülési értéket",
+     "helyes": "Üzembe helyezés utáni rendszeres karbantartás"
+    },
+    {
+     "n": 26,
+     "kerdes": "Terven felüli ÉCS esetei",
+     "helyes": [
+      "Megsemmisül",
+      "Hiányzik",
+      "Megrongálódik",
+      "Feleslegessé válik"
+     ]
+    },
+    {
+     "n": 27,
+     "kerdes": "Továbbértékesítésre vett gép mindig tárgyi eszköz",
+     "helyes": "Hamis"
+    },
+    {
+     "n": 28,
+     "kerdes": "Maradványérték",
+     "helyes": "Hasznos élettartam végén várhatóan realizálható becsült érték"
+    },
+    {
+     "n": 29,
+     "kerdes": "Terven felüli ÉCS oka megszűnt",
+     "helyes": "Vissza kell írni"
+    },
+    {
+     "n": 30,
+     "kerdes": "Beruházás / felújítás / karbantartás",
+     "helyes": {
+      "Kapacitásbővítés": "Beruházás",
+      "Új gép": "Beruházás",
+      "Korszerűsítés, teljesítőképesség nő": "Felújítás",
+      "Eredeti állag helyreállítása": "Felújítás",
+      "Kopott alkatrész cseréje": "Karbantartás",
+      "Éves szerviz": "Karbantartás"
+     },
+     "sajat_hiba": "Korszerűsítést beruházásnak jelöltem – a tanár szerint felújítás"
+    },
+    {
+     "n": 31,
+     "kerdes": "Maradványérték a hasznos élettartam végén várható érték",
+     "helyes": "Igaz"
+    },
+    {
+     "n": 32,
+     "kerdes": "Apport jelentése",
+     "helyes": "Tulajdonos által rendelkezésre bocsátott nem pénzbeli vagyoni hozzájárulás"
+    },
+    {
+     "n": 33,
+     "kerdes": "Hasznos élettartam",
+     "helyes": "Az időszak, amely alatt a gazdálkodó várhatóan használja az eszközt"
+    }
+   ]
+  },
+  {
+   "cim": "Tárgyi eszközök – könyvelés",
+   "kerdesek": [
+    {
+     "n": 1,
+     "cim": "Importos termelőgép",
+     "pont": "19/21",
+     "tetelek": [
+      {
+       "T": "161",
+       "K": "4552",
+       "osszeg": 3000000
+      },
+      {
+       "T": "161",
+       "K": "4651",
+       "osszeg": 500000
+      },
+      {
+       "T": "3683",
+       "K": "4652",
+       "osszeg": 800000
+      },
+      {
+       "T": "131",
+       "K": "161",
+       "osszeg": 3500000
+      },
+      {
+       "T": "4651",
+       "K": "384",
+       "osszeg": 500000
+      },
+      {
+       "T": "4652",
+       "K": "384",
+       "osszeg": 800000
+      },
+      {
+       "T": "4661",
+       "K": "3683",
+       "osszeg": 800000
+      }
+     ],
+     "megjegyzes": "2 mező hibás volt, a rendszer nem jelölte, melyik"
+    },
+    {
+     "n": 2,
+     "cim": "Értékhelyesbítés",
+     "pont": "3/3",
+     "tetelek": [
+      {
+       "T": "137",
+       "K": "4171",
+       "osszeg": 1500000
+      }
+     ]
+    },
+    {
+     "n": 3,
+     "cim": "Kisértékű irodai eszköz",
+     "pont": "12/12",
+     "tetelek": [
+      {
+       "T": "161",
+       "K": "3811",
+       "osszeg": 80000
+      },
+      {
+       "T": "4661",
+       "K": "3811",
+       "osszeg": 21600
+      },
+      {
+       "T": "143",
+       "K": "161",
+       "osszeg": 80000
+      },
+      {
+       "T": "5712",
+       "K": "149",
+       "osszeg": 80000
+      }
+     ]
+    },
+    {
+     "n": 4,
+     "cim": "Leányvállalat alapítása (leány könyveiben)",
+     "pont": "12/18",
+     "beadott": [
+      {
+       "T": "384",
+       "K": "4795",
+       "osszeg": 6000000
+      },
+      {
+       "T": "161",
+       "K": "4795",
+       "osszeg": 3000000
+      },
+      {
+       "T": "332",
+       "K": "411",
+       "osszeg": 10000000
+      },
+      {
+       "T": "4795",
+       "K": "332",
+       "osszeg": 9000000
+      },
+      {
+       "T": "384",
+       "K": "332",
+       "osszeg": 1000000
+      },
+      {
+       "T": "131",
+       "K": "161",
+       "osszeg": 3000000
+      }
+     ],
+     "javaslat": "A mintakulcs alapján: alapítói befizetés és apport K 479 (nem 4795), átvezetés T 479; a jegyzett tőke anyavállalattól T 325 (nem 332)."
+    },
+    {
+     "n": 5,
+     "cim": "Felújítás aktiválása",
+     "pont": "3/3",
+     "tetelek": [
+      {
+       "T": "131",
+       "K": "162",
+       "osszeg": 2000000
+      }
+     ]
+    },
+    {
+     "n": 6,
+     "cim": "Karbantartás",
+     "pont": "6/6",
+     "tetelek": [
+      {
+       "T": "524",
+       "K": "4543",
+       "osszeg": 200000
+      },
+      {
+       "T": "4661",
+       "K": "4543",
+       "osszeg": 54000
+      }
+     ]
+    },
+    {
+     "n": 7,
+     "cim": "Terven felüli ÉCS",
+     "pont": "3/3",
+     "tetelek": [
+      {
+       "T": "8664",
+       "K": "138",
+       "osszeg": 300000
+      }
+     ]
+    },
+    {
+     "n": 8,
+     "cim": "Beruházási előleg",
+     "pont": "19/19",
+     "tetelek": [
+      {
+       "T": "352",
+       "K": "384",
+       "osszeg": 4000000
+      },
+      {
+       "T": "4661",
+       "K": "384",
+       "osszeg": 1080000
+      },
+      {
+       "T": "161",
+       "K": "4551",
+       "osszeg": 10000000
+      },
+      {
+       "T": "4661",
+       "K": "4551",
+       "osszeg": 2700000
+      },
+      {
+       "T": "4551",
+       "K": "352",
+       "osszeg": 4000000
+      },
+      {
+       "T": "4551",
+       "K": "4661",
+       "osszeg": 1080000
+      }
+     ],
+     "fennmarado_tartozas": 7620000
+    },
+    {
+     "n": 9,
+     "cim": "Termelőgép értékesítése technikai számlával",
+     "pont": "13/15",
+     "beadott": [
+      {
+       "T": "311",
+       "K": "368",
+       "osszeg": 1100000
+      },
+      {
+       "T": "311",
+       "K": "467",
+       "osszeg": 297000
+      },
+      {
+       "T": "368",
+       "K": "131",
+       "osszeg": 1000000
+      },
+      {
+       "T": "139",
+       "K": "368",
+       "osszeg": 200000
+      },
+      {
+       "T": "368",
+       "K": "961",
+       "osszeg": 300000
+      }
+     ],
+     "megjegyzes": "2 mező hibás, a rendszer nem jelölte, melyik"
+    },
+    {
+     "n": 10,
+     "cim": "Terven felüli ÉCS visszaírása",
+     "pont": "3/3",
+     "tetelek": [
+      {
+       "T": "138",
+       "K": "9664",
+       "osszeg": 400000
+      }
+     ]
+    },
+    {
+     "n": 11,
+     "cim": "Terv szerinti ÉCS",
+     "pont": "3/3",
+     "tetelek": [
+      {
+       "T": "5711",
+       "K": "139",
+       "osszeg": 1200000
+      }
+     ]
+    },
+    {
+     "n": 12,
+     "cim": "Üzembe helyezés előtti szerelés",
+     "pont": "6/6",
+     "tetelek": [
+      {
+       "T": "161",
+       "K": "4551",
+       "osszeg": 300000
+      },
+      {
+       "T": "4661",
+       "K": "4551",
+       "osszeg": 81000
+      }
+     ]
+    },
+    {
+     "n": 13,
+     "cim": "Irodai berendezés üzembe helyezése",
+     "pont": "3/3",
+     "tetelek": [
+      {
+       "T": "143",
+       "K": "161",
+       "osszeg": 6000000
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "cim": "Immateriális javak – elmélet",
+   "eredmeny": "21 kérdés, 1 részben helyes",
+   "kerdesek": [
+    {
+     "n": 1,
+     "kerdes": "Nincs terv szerinti ÉCS",
+     "helyes": "Immateriális javakra adott előleg"
+    },
+    {
+     "n": 2,
+     "kerdes": "Vagyoni értékű jogok",
+     "helyes": "Saját előállítással nem aktiválhatók"
+    },
+    {
+     "n": 3,
+     "kerdes": "Immateriális mérlegsorok",
+     "helyes": [
+      "Alapítás-átszervezés aktivált értéke",
+      "Kísérleti fejlesztés aktivált értéke",
+      "Szellemi termékek"
+     ]
+    },
+    {
+     "n": 4,
+     "kerdes": "Nem hasznosítható kísérleti fejlesztés",
+     "helyes": "Terven felüli ÉCS-t kell elszámolni"
+    },
+    {
+     "n": 5,
+     "kerdes": "Pozitív üzleti vagy cégérték",
+     "helyes": "Fizetett ellenérték > számított piaci érték"
+    },
+    {
+     "n": 6,
+     "kerdes": "Immateriális javak jellemzői",
+     "helyes": [
+      "Nem tárgyiasultak",
+      "Közvetlenül és tartósan szolgálják a tevékenységet"
+     ]
+    },
+    {
+     "n": 7,
+     "kerdes": "Fejlesztésből saját gyártógép",
+     "helyes": "Tárgyi eszköz – műszaki berendezés, gép"
+    },
+    {
+     "n": 8,
+     "kerdes": "Nem aktiválható",
+     "helyes": [
+      "Alapkutatás",
+      "Alkalmazott kutatás"
+     ]
+    },
+    {
+     "n": 9,
+     "kerdes": "Nem írható vissza terven felüli ÉCS",
+     "helyes": "Csak üzleti vagy cégérték",
+     "sajat_hiba": "Az alapítás-átszervezést is bejelöltem"
+    },
+    {
+     "n": 10,
+     "kerdes": "Alapítás-átszervezés tételei",
+     "helyes": [
+      "Társasági szerződés ügyvédi díja",
+      "Számviteli rendszer kialakításának szakértői díja",
+      "Folyamat-újratervezés szakértői díja"
+     ]
+    },
+    {
+     "n": 11,
+     "kerdes": "Kísérleti fejlesztés jellemzői",
+     "helyes": [
+      "Új/javított termék",
+      "Korábbi kutatásokra támaszkodik",
+      "Rendszeres munka"
+     ]
+    },
+    {
+     "n": 12,
+     "kerdes": "Nem vagyoni értékű jog",
+     "helyes": "Szabadalom (szellemi termék)"
+    },
+    {
+     "n": 13,
+     "kerdes": "Immateriális előlegnél elszámolható",
+     "helyes": "Értékvesztés"
+    },
+    {
+     "n": 14,
+     "kerdes": "Terven felüli ÉCS indokolt",
+     "helyes": [
+      "Könyv szerinti érték tartósan, jelentősen > piaci érték",
+      "Feleslegessé vált",
+      "Megrongálódás miatt nem használható"
+     ]
+    },
+    {
+     "n": 15,
+     "kerdes": "200 eFt alatti egyösszegű leírás",
+     "helyes": [
+      "Vagyoni értékű jogok",
+      "Szellemi termékek"
+     ]
+    },
+    {
+     "n": 16,
+     "kerdes": "Terven felüli ÉCS visszaírása",
+     "helyes": "Ha az okok már nem vagy csak részben állnak fenn"
+    },
+    {
+     "n": 17,
+     "kerdes": "Alapítás-átszervezés aktiválása",
+     "helyes": "A vállalkozó döntésétől függ"
+    },
+    {
+     "n": 18,
+     "kerdes": "Saját fejlesztésű gyártószoftver",
+     "helyes": "Szellemi termék"
+    },
+    {
+     "n": 19,
+     "kerdes": "Beszerzett immateriális jószág értéke",
+     "helyes": "Tényleges beszerzési ár + járulékos tételek"
+    },
+    {
+     "n": 20,
+     "kerdes": "Alapítás-átszervezés aktivált értéke mellé",
+     "helyes": "Lekötött tartalék"
+    },
+    {
+     "n": 21,
+     "kerdes": "Értékhelyesbítés alkalmazható",
+     "helyes": [
+      "Vagyoni értékű jogok",
+      "Szellemi termékek"
+     ]
+    }
+   ]
+  },
+  {
+   "cim": "Immateriális javak – könyvelés",
+   "megjegyzes": "A helyes válaszokat a pontszámokból és a feladatsor-megoldásokból fejtettük vissza – a részletes javítás: immaterialis_javak.json → moodle_konyvelesi_teszt_javitas (ez felülírja a régi 'javaslat' mezőket).",
+   "kerdesek": [
+    {
+     "n": 1,
+     "cim": "Szabadalom apportként alapításkor",
+     "pont": "8/9",
+     "beadott": [
+      {
+       "T": "112",
+       "K": "479",
+       "osszeg": 3000000
+      },
+      {
+       "T": "33",
+       "K": "411",
+       "osszeg": 3000000
+      },
+      {
+       "T": "479",
+       "K": "33",
+       "osszeg": 3000000
+      }
+     ],
+     "javaslat": "A szabadalom szellemi termék: T 114 (nem 112)"
+    },
+    {
+     "n": 2,
+     "cim": "Mobilalkalmazás terven felüli ÉCS",
+     "pont": "1/3",
+     "beadott": [
+      {
+       "T": "572",
+       "K": "119",
+       "osszeg": 1200000
+      }
+     ],
+     "javaslat": "T 8663 / K 118, 1 200 000"
+    },
+    {
+     "n": 3,
+     "cim": "Bérleti jog térítés nélküli átadása",
+     "pont": "4/9",
+     "beadott": [
+      {
+       "T": "869",
+       "K": "112",
+       "osszeg": 180000
+      },
+      {
+       "T": "118",
+       "K": "112",
+       "osszeg": 120000
+      },
+      {
+       "T": "36",
+       "K": "467",
+       "osszeg": 54000
+      }
+     ],
+     "javaslat": "Bérleti jog = 113. Nettó érték: T 8647 / K 113; ÉCS: T 119 / K 113; áfa: T 36 / K 467"
+    },
+    {
+     "n": 4,
+     "cim": "Szellemi termék értékhelyesbítése",
+     "pont": "3/3",
+     "tetelek": [
+      {
+       "T": "117",
+       "K": "417",
+       "osszeg": 1200000
+      }
+     ]
+    },
+    {
+     "n": 5,
+     "cim": "ERP használati jog vásárlása",
+     "pont": "5/6",
+     "beadott": [
+      {
+       "T": "112",
+       "K": "454",
+       "osszeg": 3000000
+      },
+      {
+       "T": "466",
+       "K": "454",
+       "osszeg": 810000
+      }
+     ],
+     "javaslat": "A használati jog vagyoni értékű jog: T 113"
+    },
+    {
+     "n": 6,
+     "cim": "Gyártási eljárás térítés nélküli átvétele",
+     "pont": "9/15",
+     "beadott": [
+      {
+       "T": "114",
+       "K": "96",
+       "osszeg": 1200000
+      },
+      {
+       "T": "96",
+       "K": "482",
+       "osszeg": 1200000
+      },
+      {
+       "T": "466",
+       "K": "479",
+       "osszeg": 324000
+      },
+      {
+       "T": "571",
+       "K": "118",
+       "osszeg": 200000
+      },
+      {
+       "T": "482",
+       "K": "96",
+       "osszeg": 200000
+      }
+     ],
+     "javaslat": "Elhatárolás: 48331 (nem 482); bevétel: 9647; ÉCS: K 119 (nem 118)"
+    },
+    {
+     "n": 7,
+     "cim": "Szoftver éves ÉCS",
+     "pont": "2/3",
+     "beadott": [
+      {
+       "T": "571",
+       "K": "118",
+       "osszeg": 1200000
+      }
+     ],
+     "javaslat": "K 119 (a terv szerinti ÉCS 119, a 118 terven felüli)"
+    },
+    {
+     "n": 8,
+     "cim": "Szellemi termék terven felüli ÉCS visszaírása",
+     "pont": "1/3",
+     "beadott": [
+      {
+       "T": "119",
+       "K": "96",
+       "osszeg": 300000
+      }
+     ],
+     "javaslat": "T 118 / K 9663, 300 000"
+    },
+    {
+     "n": 9,
+     "cim": "Szabadalom vásárlása",
+     "pont": "6/6",
+     "tetelek": [
+      {
+       "T": "114",
+       "K": "454",
+       "osszeg": 2000000
+      },
+      {
+       "T": "466",
+       "K": "454",
+       "osszeg": 540000
+      }
+     ]
+    },
+    {
+     "n": 10,
+     "cim": "Használhatatlan szoftver kivezetése",
+     "pont": "4/6",
+     "beadott": [
+      {
+       "T": "572",
+       "K": "114",
+       "osszeg": 150000
+      },
+      {
+       "T": "118",
+       "K": "114",
+       "osszeg": 750000
+      }
+     ],
+     "javaslat": "Nettó érték: T 8692 (vagy 8663); ÉCS: T 119"
+    },
+    {
+     "n": 11,
+     "cim": "Szoftverre adott előleg",
+     "pont": "5/6",
+     "beadott": [
+      {
+       "T": "116",
+       "K": "384",
+       "osszeg": 500000
+      },
+      {
+       "T": "466",
+       "K": "384",
+       "osszeg": 135000
+      }
+     ],
+     "javaslat": "Immateriális javakra adott előleg: T 351"
+    },
+    {
+     "n": 12,
+     "cim": "Szoftver végszámla előleg-beszámítással",
+     "pont": "11/12",
+     "beadott": [
+      {
+       "T": "114",
+       "K": "454",
+       "osszeg": 1500000
+      },
+      {
+       "T": "466",
+       "K": "454",
+       "osszeg": 405000
+      },
+      {
+       "T": "454",
+       "K": "116",
+       "osszeg": 500000
+      },
+      {
+       "T": "454",
+       "K": "466",
+       "osszeg": 135000
+      }
+     ],
+     "javaslat": "Előleg-beszámítás: K 351 (nem 116)"
+    },
+    {
+     "n": 13,
+     "cim": "Gyártási eljárás értékesítése (technikai számla 368)",
+     "pont": "13/15",
+     "beadott": [
+      {
+       "T": "311",
+       "K": "368",
+       "osszeg": 800000
+      },
+      {
+       "T": "311",
+       "K": "467",
+       "osszeg": 216000
+      },
+      {
+       "T": "368",
+       "K": "114",
+       "osszeg": 600000
+      },
+      {
+       "T": "118",
+       "K": "114",
+       "osszeg": 900000
+      },
+      {
+       "T": "368",
+       "K": "96",
+       "osszeg": 200000
+      }
+     ],
+     "javaslat": "ÉCS kivezetése: T 119; eredmény: K 961"
+    },
+    {
+     "n": 14,
+     "cim": "Szellemi termék apportba adása (technikai számla 368)",
+     "pont": "10/15",
+     "beadott": [
+      {
+       "T": "36",
+       "K": "368",
+       "osszeg": 200000
+      },
+      {
+       "T": "368",
+       "K": "114",
+       "osszeg": 150000
+      },
+      {
+       "T": "118",
+       "K": "114",
+       "osszeg": 150000
+      },
+      {
+       "T": "368",
+       "K": "96",
+       "osszeg": 50000
+      },
+      {
+       "T": "17",
+       "K": "36",
+       "osszeg": 200000
+      }
+     ],
+     "javaslat": "ÉCS kivezetése: T 119; eredmény: K 9642; részesedés: T 171 vagy 172 a kapcsolattól függően"
+    },
+    {
+     "n": 15,
+     "cim": "Szoftver szállítói tartozás kiegyenlítése",
+     "pont": "3/3",
+     "tetelek": [
+      {
+       "T": "454",
+       "K": "384",
+       "osszeg": 1270000
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "cim": "Készletek",
+   "eredmeny": "39 kérdés, 1 hibás",
+   "kerdesek": [
+    {
+     "n": 1,
+     "kerdes": "Súlyozott átlagár (10×1000 + 10×1400)",
+     "helyes": "1200 Ft/db",
+     "sajat_hiba": "9600-at írtam (8 db értéke) – a mezőbe az egységár kellett"
+    },
+    {
+     "n": 2,
+     "kerdes": "Készletek mérlegcsoportja",
+     "helyes": "Forgóeszközök"
+    },
+    {
+     "n": 3,
+     "kerdes": "Anyag állományba vételének alapja",
+     "helyes": "Beszerzési érték"
+    },
+    {
+     "n": 4,
+     "kerdes": "Bekerülési érték része",
+     "helyes": [
+      "Vám",
+      "Nettó vételár",
+      "Fuvarozás"
+     ]
+    },
+    {
+     "n": 5,
+     "kerdes": "Eredménykimutatás párosítás",
+     "helyes": {
+      "Készlet értékvesztése": "Egyéb ráfordítás",
+      "Áru könyv szerinti értéke": "ELÁBÉ",
+      "Anyagfelhasználás": "Anyagköltség",
+      "Értékvesztés visszaírása": "Egyéb bevétel"
+     }
+    },
+    {
+     "n": 6,
+     "kerdes": "Elfogadott készletértékelés",
+     "helyes": [
+      "FIFO",
+      "Gördülő súlyozott átlagár",
+      "Egyedi azonosítás"
+     ]
+    },
+    {
+     "n": 7,
+     "kerdes": "Felhasznált anyag",
+     "helyes": "Anyagköltség"
+    },
+    {
+     "n": 8,
+     "kerdes": "Készletekre adott előleg helye",
+     "helyes": "Készletek között"
+    },
+    {
+     "n": 9,
+     "kerdes": "FIFO nem feltétlenül fizikai sorrend",
+     "helyes": "Igaz"
+    },
+    {
+     "n": 10,
+     "kerdes": "Értékvesztés visszaírásának felső határa",
+     "helyes": "Eredeti bekerülési érték"
+    },
+    {
+     "n": 11,
+     "kerdes": "Beszerzési engedmény",
+     "helyes": "Csökkenti a bekerülési értéket"
+    },
+    {
+     "n": 12,
+     "kerdes": "Közvetített szolgáltatás",
+     "helyes": [
+      "Saját nevében vásárolja",
+      "Szerződéses feltételek fontosak",
+      "Változatlan formában továbbértékesíti"
+     ]
+    },
+    {
+     "n": 13,
+     "kerdes": "Továbbértékesített áru",
+     "helyes": "ELÁBÉ"
+    },
+    {
+     "n": 14,
+     "kerdes": "Nincs folyamatos nyilvántartás",
+     "helyes": "Mennyiségi felvétellel végzett leltározás"
+    },
+    {
+     "n": 15,
+     "kerdes": "Kereskedő eladásra vett laptopjai",
+     "helyes": "Áruk"
+    },
+    {
+     "n": 16,
+     "kerdes": "Továbbszámlázott közvetített szolgáltatás",
+     "helyes": "Eladott (közvetített) szolgáltatások értéke"
+    },
+    {
+     "n": 17,
+     "kerdes": "Apportként átvett készlet",
+     "helyes": "Létesítő okirat szerinti érték"
+    },
+    {
+     "n": 18,
+     "kerdes": "Készletanalitika",
+     "helyes": "Készletféleségek állománya és mozgása"
+    },
+    {
+     "n": 19,
+     "kerdes": "400 000 + 30 000 − 10 000",
+     "helyes": "420 000 Ft"
+    },
+    {
+     "n": 20,
+     "kerdes": "FIFO",
+     "helyes": "First In, First Out"
+    },
+    {
+     "n": 21,
+     "kerdes": "Értékvesztés vizsgálatának okai",
+     "helyes": [
+      "Megrongálódás",
+      "Feleslegessé válás",
+      "Értékesíthetőség kétségessé válása"
+     ]
+    },
+    {
+     "n": 22,
+     "kerdes": "Saját előállítású betétdíjas göngyöleg vásárolt készletként kezelendő",
+     "helyes": "Igaz"
+    },
+    {
+     "n": 23,
+     "kerdes": "Eszközcsoport párosítás",
+     "helyes": {
+      "Alapanyag-előleg": "Készletekre adott előlegek",
+      "Boltban eladott kávé": "Áruk",
+      "Saját bútor": "Késztermékek",
+      "Gyártáshoz liszt": "Anyagok"
+     }
+    },
+    {
+     "n": 24,
+     "kerdes": "Nem tartozik az áruk közé",
+     "helyes": "Befejezetlen termelés"
+    },
+    {
+     "n": 25,
+     "kerdes": "Betétdíjas göngyöleg",
+     "helyes": [
+      "Raklap",
+      "Rekesz",
+      "Hordó"
+     ]
+    },
+    {
+     "n": 26,
+     "kerdes": "FIFO 12 db felhasználás",
+     "helyes": "12 400 Ft"
+    },
+    {
+     "n": 27,
+     "kerdes": "700 000 + 50 000 + 20 000",
+     "helyes": "770 000 Ft"
+    },
+    {
+     "n": 28,
+     "kerdes": "Önálló készletmérlegsorok",
+     "helyes": [
+      "Anyagok",
+      "Áruk",
+      "Készletekre adott előlegek"
+     ]
+    },
+    {
+     "n": 29,
+     "kerdes": "Folyamatos mennyiségi és értékbeni nyilvántartás",
+     "helyes": [
+      "Mennyiség",
+      "Érték",
+      "Bevételezések és kiadások"
+     ]
+    },
+    {
+     "n": 30,
+     "kerdes": "Gördülő átlagár újraszámítása",
+     "helyes": "Beszerzés után, a következő kiadás előtt"
+    },
+    {
+     "n": 31,
+     "kerdes": "Áruk",
+     "helyes": "Továbbértékesítésre beszerzett, rendszerint változatlan formában eladott termékek"
+    },
+    {
+     "n": 32,
+     "kerdes": "Kereskedő saját irodai laptopja",
+     "helyes": "Tárgyi eszköz"
+    },
+    {
+     "n": 33,
+     "kerdes": "Nyilvántartási módok",
+     "helyes": {
+      "Nincs folyamatos": "Egyik adat sem követhető",
+      "Mennyiségi és értékbeni": "Mindkettő ismert",
+      "Csak értékbeni": "Érték ismert",
+      "Csak mennyiségi": "Mennyiség ismert"
+     }
+    },
+    {
+     "n": 34,
+     "kerdes": "900 000 − 20 000 hiány − 80 000 értékvesztés",
+     "helyes": "800 000 Ft"
+    },
+    {
+     "n": 35,
+     "kerdes": "Bekerülés módja",
+     "helyes": {
+      "Térítés nélküli": "Piaci érték",
+      "Apport": "Létesítő okirat",
+      "Saját előállítás": "Előállítási költség",
+      "Vásárlás": "Beszerzési érték"
+     }
+    },
+    {
+     "n": 36,
+     "kerdes": "Csökkenti a mérlegértéket",
+     "helyes": "Értékvesztés elszámolása"
+    },
+    {
+     "n": 37,
+     "kerdes": "Közvetített szolgáltatás példa",
+     "helyes": "Saját nevében vett fuvarozás változatlan továbbszámlázása"
+    },
+    {
+     "n": 38,
+     "kerdes": "Anyagok termelővállalatnál",
+     "helyes": [
+      "Acéllemez",
+      "Kenőanyag",
+      "Munkaruha"
+     ]
+    },
+    {
+     "n": 39,
+     "kerdes": "FIFO zárókészlet 12 db felhasználás után",
+     "helyes": "9 600 Ft"
+    }
+   ]
+  }
+ ]
+}

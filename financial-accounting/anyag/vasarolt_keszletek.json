@@ -1,0 +1,720 @@
+{
+ "tema": "Vásárolt készletek",
+ "forrasok": [
+  "src/elmelet/vasarolt.pdf (Vásárolt készletek elmélet, 2026.10.02.)",
+  "src/feladat_vasarolt/Vásárolt készletek feladatsor.pdf",
+  "src/feladat_vasarolt/Vásárolt készletek feladatsor megoldása.pdf (2026.10.13.)",
+  "src/feladat_vasarolt/órai jegyzet 2.pdf (4. feladat naplója)",
+  "src/feladat_vasarolt/órai jegyzet-1.png (3. és 5. feladat kézírásos naplója)",
+  "zh/I_elméleti_Minta megoldás_javított.pdf (teszt: A vásárolt készletekre igaz...)",
+  "zh/I_Gyakorlat_MINTAZH_megoldott_javított.pdf (2. feladat 6.a, 6.b, 10., 15.a tétel)",
+  "zh-anyag/tesztkerdesek_moodle.json (Készletek teszt, 39 kérdés)",
+  "zh/tukor.txt (számlatükör)"
+ ],
+ "zh_relevancia": "Gyakorlati feladatban a tanár szerint vásárolt készletekből legfeljebb 1–2 könyvelési sor várható, a minta-ZH 2. feladatához hasonlóan: nagykereskedelmi áru beszerzése költségként csak mennyiségi nyilvántartásnál (T 814 / K 4541 + áfa T 466 / K 4541), áru értékesítése (T 311 / K 91-92, áfa T 311 / K 467, ELÁBÉ-tétel NINCS), év végén a záró árukészlet állományba vétele (T 261 / K 814). Elméletben viszont teljesen benne van: a minta-ZH tesztjében 'A vásárolt készletekre igaz, hogy...' kérdés volt (helyes: a, c, e), a mérlegséma B.I. Készletek sorait (1–6) tudni kell, és a fogalom-kérdés is jöhet ebből a témából (anyag, áru, közvetített szolgáltatás, betétdíjas göngyöleg, bekerülési érték, FIFO, gördülő átlagár, értékvesztés stb.), mert cégalapításból nem lesz fogalom.",
+ "fogalmak": [
+  {
+   "id": "VK-FOG-01",
+   "nev": "Készletek (általános fogalom)",
+   "definicio": "A készletek a forgóeszközök közé tartozó eszközök, amelyek egy éven belül, közvetlenül vagy közvetve szolgálják a vállalkozás tevékenységét. Ide tartoznak: (1) a rendszeres üzleti tevékenység keretében beszerzett, a beszerzés és értékesítés között változatlan állapotban maradó, de értékükben változó eszközök (áru, göngyöleg, közvetített szolgáltatás); (2) az értékesítést megelőzően a termelés valamely fázisában lévők (befejezetlen termelés, félkész és késztermék); (3) a termékek előállítása vagy szolgáltatásnyújtás során felhasználandó anyagok. Itt kell kimutatni a készletekre adott előlegeket, a növendék-, hízó- és egyéb állatokat, a használatba vételükig a legfeljebb 1 évig szolgáló anyagi eszközöket (szerszám, műszer, munkaruha) és a tárgyi eszközök közül átsorolt eszközöket. A mérlegben csak a vállalkozás tulajdonában lévő készlet szerepelhet, a bizományba vagy tárolásra átvett készlet nem.",
+   "kulcselemek": ["forgóeszköz (B.I.)", "egy éven belül szolgálja a tevékenységet", "felhasználásra, értékesítésre vagy továbbfeldolgozásra vár", "csak saját tulajdonú készlet a mérlegben", "bizományba átvett készlet: 0. számlaosztály"],
+   "pelda": "Bolt árukészlete, gyár alapanyaga, raktáron lévő késztermék.",
+   "zh_valoszinuseg": "kozepes",
+   "forras": "vasarolt.pdf 3–4. dia"
+  },
+  {
+   "id": "VK-FOG-02",
+   "nev": "Anyagok",
+   "definicio": "Az anyagok olyan nem tartós eszközök, amelyeket termék-előállításhoz vagy szolgáltatásnyújtáshoz szereztek be, és (1) az újratermelési folyamatban egyszer vesznek részt, és eredeti formájukat elveszítik (pl. nyers- és alapanyag), vagy (2) egyszer vagy többször vesznek részt, és a használat során értéküket elveszítik (pl. szerszám, munkaruha). Ide tartoznak azok a berendezési és felszerelési tárgyak is, amelyek nem tartósan szolgálják a tevékenységet. Csoportjai: nyers- és alapanyagok; segéd-, üzem- és fűtőanyagok; építési és fenntartási anyagok; egyéb anyagok és hulladékok; valamint az anyagi eszközök (szerszám, munkaruha, egyenruha, védőruha, védőfelszerelés, gyártóeszköz, berendezési és felszerelési tárgy). Az anyagok között kell kimutatni a befektetett eszközök közül funkciójuk megváltozása miatt átsorolt anyagokat is, átsoroláskori nettó értéken. Főkönyvi helye: 21–22. számlacsoport, mérlegsor: B.I.1. Anyagok.",
+   "kulcselemek": ["nem tartós eszköz", "termelésre/szolgáltatásra szerezték be", "egyszer vesz részt, formáját elveszti", "vagy értékét elveszti a használat során", "átsorolt anyag: átsoroláskori nettó érték", "211–229 számlák", "felhasználás: anyagköltség"],
+   "pelda": "Asztalosüzem faanyaga, gyár acéllemeze, kenőanyag, munkaruha; pékségnél a liszt.",
+   "zh_valoszinuseg": "magas",
+   "forras": "vasarolt.pdf 6–8. dia"
+  },
+  {
+   "id": "VK-FOG-03",
+   "nev": "Áruk",
+   "definicio": "Az áruk a rendszeres, szokásos üzleti tevékenység keretében továbbértékesítési céllal beszerzett eszközök, amelyek a beszerzés és az értékesítés között változatlan állapotban maradnak, de értékük változhat; általában magasabb áron adják el őket. Változatlan formának számít az értékesítéshez való előkészítés (pl. kávé darálása, csomagolás, szortírozás). Az áruk csoportjai: kereskedelmi áruk, betétdíjas göngyölegek és közvetített szolgáltatások. Nem áru a vállalkozás birtokában lévő, de tulajdonát nem képező (bizományba, tárolásra átvett) készlet, és nem áru a saját boltban árult saját előállítású termék (az saját termelésű készlet). Nyilvántartási ára lehet beszerzési ár, elszámoló ár vagy eladási ár. Főkönyvi helye: 26–28. számlacsoport, mérlegsor: B.I.5. Áruk; eladáskor a könyv szerinti érték az ELÁBÉ (814).",
+   "kulcselemek": ["rendszeres kereskedelmi forgalmazás", "továbbértékesítési cél", "változatlan állapot (előkészítés megengedett)", "általában magasabb eladási ár", "csoportjai: kereskedelmi áru, betétdíjas göngyöleg, közvetített szolgáltatás", "saját termék nem áru", "eladott áru: ELÁBÉ (814)"],
+   "pelda": "Műszaki kereskedő eladásra vett laptopjai; bolt kávékészlete; vendéglátóhely italkészlete.",
+   "zh_valoszinuseg": "magas",
+   "forras": "vasarolt.pdf 9–12. dia"
+  },
+  {
+   "id": "VK-FOG-04",
+   "nev": "Kereskedelmi áruk",
+   "definicio": "A vállalkozás tulajdonában lévő, értékesítés céljából vásárolt termékek, amelyeket a vállalkozás változatlan formában értékesít tovább (az értékesítéshez való előkészítés, pl. darálás, csomagolás, szortírozás változatlan formának számít). Ide tartoznak a nagykereskedelmi árukészletek, a kiskereskedelmi egységek (boltok) árukészletei és a vendéglátás árukészletei (ételek, italok). Nem sorolhatók ide a birtokban lévő, de nem saját tulajdonú készletek (bizományba, tárolásra átvett) – ezeket a 0. nyilvántartási számlákon célszerű kimutatni –, és a saját boltban értékesített saját előállítású termék sem. Nyilvántartási áruk beszerzési ár (261), elszámoló ár (262 + 263 árkülönbözet) vagy eladási ár (264 + 265 árrés) lehet.",
+   "kulcselemek": ["saját tulajdon", "értékesítési cél", "változatlan forma", "nagy-, kiskereskedelmi, vendéglátóipari készlet", "261 beszerzési áron, 264 eladási áron"],
+   "pelda": "Nagykereskedő 200 db árut vásárol 2 200 Ft/db áron (minta-ZH 6. tétel).",
+   "zh_valoszinuseg": "kozepes",
+   "forras": "vasarolt.pdf 11–12. dia"
+  },
+  {
+   "id": "VK-FOG-05",
+   "nev": "Betétdíjas göngyöleg",
+   "definicio": "A betétdíjas göngyöleg többször felhasználható, elsősorban csomagolási eszköz és edényzet, amely a forgalmazott árukat megvédi a szállítás közbeni rongálódástól, és amelyre a kibocsátónak visszaváltási kötelezettsége van (pl. zsák, raklap, rekesz, hordó). Nem göngyöleg az, ami az áru közvetlen tartozéka és többszöri felhasználásra nem alkalmas (konzervdoboz, ampulla, tubus, papírtasak). A göngyöleget betétdíjas áron kiszámlázzák a vevőnek, majd visszaküldéskor visszaszámlázzák. Lehet saját göngyöleg (a vállalkozás saját tulajdona, ezzel forgalmazza áruit visszaváltási kötelezettség mellett; ha saját előállítású, akkor is vásárolt készletként értékeljük) vagy idegen göngyöleg (a beszerzett készlettel együtt érkezik, ideiglenesen van a vállalkozásnál, vissza kell adni). Az áruk sajátos csoportja; főkönyvi helye a 28. számlacsoport (281 saját, 282 idegen).",
+   "kulcselemek": ["többször felhasználható csomagolóeszköz", "visszaváltási kötelezettség", "betétdíjas kiszámlázás és visszaszámlázás", "saját vagy idegen", "saját előállítású is vásárolt készlet", "nem göngyöleg: konzervdoboz, tubus", "áruk része, 28. számlacsoport"],
+   "pelda": "Raklap, rekesz, sörös hordó, zsák.",
+   "zh_valoszinuseg": "kozepes",
+   "forras": "vasarolt.pdf 5., 13–14. dia"
+  },
+  {
+   "id": "VK-FOG-06",
+   "nev": "Közvetített szolgáltatás",
+   "definicio": "A közvetített szolgáltatás speciális készletféleség: a gazdálkodó által saját nevében vásárolt és a harmadik személlyel (megrendelővel) kötött szerződés alapján, a szerződésben rögzített módon, részben vagy egészben változatlan formában, általában magasabb áron továbbszámlázásra (továbbértékesítésre) váró szolgáltatás – úgy kezeljük, mintha bolti árukészlet lenne. Az áruk egyik sajátos csoportja (271. Közvetített szolgáltatások). Továbbszámlázáskor a bekerülési értéke mint eladott (közvetített) szolgáltatások értéke (815) a ráfordításokat növeli, az eladási ár árbevétel. A számviteli törvény az alvállalkozói tevékenység fogalmát nem ismeri: számvitelileg ez a közvetített vagy az igénybe vett szolgáltatások körébe tartozik.",
+   "kulcselemek": ["saját nevében vásárolja", "harmadik személlyel kötött szerződés alapján", "változatlan formában továbbszámlázza", "általában magasabb áron", "az áruk sajátos csoportja", "271 → 815 Eladott (közvetített) szolgáltatások értéke", "alvállalkozó fogalmát az Szt. nem ismeri"],
+   "pelda": "Saját nevében megrendelt fuvarozás változatlan továbbszámlázása a vevőnek; alvállalkozói munka továbbszámlázása.",
+   "zh_valoszinuseg": "magas",
+   "forras": "vasarolt.pdf 15–16. dia; feladatsor 5. feladat"
+  },
+  {
+   "id": "VK-FOG-07",
+   "nev": "Készletekre adott előleg",
+   "definicio": "A készletek beszerzésére a szállítónak (szerződés alapján) előre megfizetett összeg, amelyet a mérlegben a készletek között, önálló mérlegsoron (B.I.6. Készletekre adott előlegek) kell kimutatni, bár nem valódi készlet: tartalmát tekintve követelés, ezért követelésként (a megfizetett összegen, áfa nélkül) értékeljük. Főkönyvi számlája: 353. Készletekre adott előlegek (értékvesztése: 359). A készlet beérkezésekor az előleget a szállítói tartozással szemben elszámolják. A kiegészítő mellékletben be kell mutatni, ha jelentős összegű.",
+   "kulcselemek": ["készletek között, B.I.6. sor", "nem valódi készlet", "követelésként értékeljük", "353 számla", "beszámítás a szállítói számlával", "jelentős összegnél kiegészítő melléklet"],
+   "pelda": "Alapanyag megrendelésekor átutalt 500 000 Ft + áfa előleg.",
+   "zh_valoszinuseg": "kozepes",
+   "forras": "vasarolt.pdf 4–5., 62. dia; Moodle Készletek 8., 23. kérdés"
+  },
+  {
+   "id": "VK-FOG-08",
+   "nev": "Vásárolt készletek bekerülési (beszerzési) értéke",
+   "definicio": "Vásárolt készlet bekerülési értéke a beszerzési érték: minden olyan tétel, amely a raktárba történő beszállításig felmerül és az adott készlethez egyedileg hozzákapcsolható. Elemei: számlázott vételár; csökkentve a kapcsolódó engedménnyel, növelve a felárral; szállítási, rakodási költségek; közvetítői, bizományosi díjak; illetékek, adók, vámterhek; a le nem vonható áfa. A beszerzés finanszírozására felvett hitel bankgarancia-díja, rendelkezésre tartási és folyósítási jutaléka, közjegyzői díja, kezelési költsége és a raktárba beszállításig felmerült időarányos kamata is része. NEM része: a levonható (előzetesen felszámított) áfa és – a tárgyi eszközökkel ellentétben – a biztosítási díj. Más bekerülési módoknál: saját előállítás – előállítási költség; apport – létesítő okirat szerinti érték; térítés nélküli átvétel, ajándék és leltári többlet – piaci érték; követelés fejében – szerződés szerinti érték; csere – csere szerinti érték.",
+   "kulcselemek": ["raktárba beszállításig felmerült, egyedileg hozzákapcsolható tételek", "vételár − engedmény + felár", "szállítás, rakodás, vám, illeték, közvetítői díj", "le nem vonható áfa igen, levonható áfa nem", "hitel díjai és beszállításig felmerült kamata", "biztosítási díj nem", "apport: létesítő okirat; térítés nélkül/többlet: piaci érték"],
+   "pelda": "400 000 Ft vételár + 30 000 Ft fuvar − 10 000 Ft engedmény = 420 000 Ft bekerülési érték (az áfa nem része).",
+   "zh_valoszinuseg": "magas",
+   "forras": "vasarolt.pdf 2. rész 2–3. dia; Moodle 3., 4., 11., 17., 19., 27., 35. kérdés"
+  },
+  {
+   "id": "VK-FOG-09",
+   "nev": "Készletértékelési eljárások (kivezetés értékelése)",
+   "definicio": "A készlet kikerülésekor (anyagnál felhasználáskor, árunál értékesítéskor) a könyv szerinti érték legtöbbször nem állapítható meg egyértelműen, vagy a konkrét árvisszakeresés olyan többletmunkával járna, hogy a költség-haszon elve nem érvényesülne (ugyanazt az anyagot egy évben többször, eltérő áron szerzik be). Ezért egyszerűsítő eljárás kell. A számviteli törvény a FIFO és a gördülő (súlyozott) átlagáras eljárást engedi; egyedi termékeknél egyedi azonosítás is lehetséges (pl. képzőművészeti alkotás). Léteznek, de nem megengedettek: LIFO (last in – first out), HIFO (highest in – first out), LOFO (lowest in – first out). A választott eljárást a számviteli politikában rögzíteni kell, és megváltoztatását a kiegészítő mellékletben be kell mutatni.",
+   "kulcselemek": ["kikerüléskor a könyv szerinti érték meghatározása", "költség-haszon elve miatt egyszerűsítés", "Szt.: FIFO és gördülő átlagár", "egyedi azonosítás egyedi termékeknél", "LIFO, HIFO, LOFO nem megengedett", "számviteli politikában rögzítendő"],
+   "pelda": null,
+   "zh_valoszinuseg": "magas",
+   "forras": "vasarolt.pdf 2. rész 4–5. dia; Moodle 6. kérdés"
+  },
+  {
+   "id": "VK-FOG-10",
+   "nev": "FIFO módszer",
+   "definicio": "A FIFO (First In – First Out, 'első be – első ki') készletértékelési eljárás azt feltételezi, hogy a készletet a beszerzések sorrendjében használják fel (értékesítik): először a nyitókészletet, majd ha a felhasználás meghaladja azt, az első beszerzésből származó készletet, utána a második beszerzésből származót stb. Nem szükséges, hogy fizikailag valóban a legelsőként beszerzett tétel kerüljön ki a raktárból; a feltételezés a költség-haszon elv miatt kell. Következménye: a zárókészlet a legutolsó (legaktuálisabb) beszerzési árakon szerepel, ezért folyamatos drágulásnál a zárókészlet értéke magasabb, a felhasználás értéke alacsonyabb. A számviteli törvény által megengedett eljárás.",
+   "kulcselemek": ["First In – First Out", "a beszerzések sorrendjében fogy", "nyitókészlet fogy el először", "nem fizikai sorrend, hanem feltételezés", "zárókészlet a legutolsó árakon", "drágulásnál magasabb zárókészlet"],
+   "pelda": "Nyitó 10 db × 100 Ft, beszerzés 20 db × 120 Ft, felhasználás 24 db = 10 × 100 + 14 × 120 = 2 680 Ft; marad 6 db × 120 Ft.",
+   "zh_valoszinuseg": "magas",
+   "forras": "vasarolt.pdf 2. rész 5.1. dia; Moodle 9., 20. kérdés"
+  },
+  {
+   "id": "VK-FOG-11",
+   "nev": "Gördülő (csúsztatott) súlyozott átlagáras módszer",
+   "definicio": "A gördülő átlagáras eljárásnál a felhasználásokat mindig a felhasználás időpontjában meglévő (aktuális) készlet súlyozott átlagárán számoljuk el. Az átlagárat mindig a készletcsökkenés előtt kell meghatározni (beszerzés után, a következő kiadás előtt): átlagár = (előző készletcsökkenés után megmaradt készlet értéke az előző átlagáron + azóta beszerzett mennyiségek értéke) / (megmaradt + beszerzett mennyiség). Súlyozott átlagot kell alkalmazni, nem egyszerű számtani átlagot. A zárókészlet = megmaradt mennyiség × utolsó időszaki átlagár. A számviteli törvény által megengedett eljárás; alkalmazását a számviteli politikában rögzíteni kell.",
+   "kulcselemek": ["aktuális készlet súlyozott átlagára", "átlagár a készletcsökkenés előtt", "maradék készlet az előző átlagáron", "mennyiséggel súlyozott", "zárókészlet = maradék mennyiség × utolsó átlagár", "Szt. megengedi"],
+   "pelda": "10 db × 1 000 Ft + 10 db × 1 400 Ft → átlagár 24 000 / 20 = 1 200 Ft/db.",
+   "zh_valoszinuseg": "magas",
+   "forras": "vasarolt.pdf 2. rész 5.2. dia; Moodle 1., 30. kérdés"
+  },
+  {
+   "id": "VK-FOG-12",
+   "nev": "Készletnyilvántartási módok",
+   "definicio": "A vásárolt készletek analitikus nyilvántartása négyféle lehet. (1) Folyamatos mennyiségi és értékbeni nyilvántartás: a 2. számlaosztály készletszámláján év közben minden növekedés és csökkenés könyvelésre kerül, a felhasználást FIFO-val, átlagárral vagy elszámolóáron értékelik; a leltáreltérés értelmezhető, tényleges leltározás legalább 3 évente kötelező. (2) Csak mennyiségi nyilvántartás: év közben a készletszámlán nincs könyvelés, a beszerzés azonnal költség/ráfordítás (anyagnál 511/811, árunál 814), felhasználást, kivezetést nem könyvelnek; a zárókészletet a mennyiségi nyilvántartás mutatja, értékét árvisszakereséssel (utolsó beszerzési ár, FIFO) adják; a leltáreltérés értelmezhető és kötelező elszámolni. (3) Csak értékbeni nyilvántartás (pl. eladási áron, bolti áru): a készlet értéke ismert, a mennyiség nem; leltáreltérés értelmezhető. (4) Nincs folyamatos nyilvántartás: a beszerzés azonnal költség, a zárókészletet kötelező tényleges mennyiségi felvétellel (leltárral) megállapítani és utolsó beszerzési áron értékelni; leltáreltérés nem értelmezhető. A választás függ a vállalkozás profiljától, az anyagigényességtől, a költségelszámolási technikától, az eredménykimutatás típusától és a készlet szerepétől, értékétől.",
+   "kulcselemek": ["folyamatos mennyiségi + értékbeni: készletszámlán minden mozgás", "csak mennyiségi: beszerzés azonnal költség, zárókészlet nyilvántartásból", "csak értékbeni: érték ismert, mennyiség nem", "nincs nyilvántartás: zárókészlet leltárból", "leltáreltérés csak nyilvántartás mellett értelmezhető", "év végén zárókészlet állományba vétele, év elején visszavezetése"],
+   "pelda": "Csak mennyiségi nyilvántartású áru: beszerzés T 814 / K 4541, év végén T 261 / K 814.",
+   "zh_valoszinuseg": "magas",
+   "forras": "vasarolt.pdf 3. rész 47–57. dia; Moodle 14., 29., 33. kérdés"
+  },
+  {
+   "id": "VK-FOG-13",
+   "nev": "Analitikus (részletező) készletnyilvántartás",
+   "definicio": "A részletező nyilvántartás készletfajtánként (cikkszám, méret, minőség szerint) kimutatja, hogy mennyi nyitókészlettel indult a vállalkozás, milyen készletnövekedések és -csökkenések voltak az időszakban, és mennyi a készlet mennyisége és értéke. Mindig egyetlen főkönyvi számlához kapcsolódik, annak egyenlegének összetételét és a mérlegsorok adatait részletezi. Alapja a bizonylat (anyagbevételezési, -kivételezési, visszavételezési jegy): a raktár mennyiségben nyilvántart, az anyagkönyvelés mennyiségben és értékben könyvel az analitikus számlákra, majd feladás alapján értékben a főkönyvi számlákra. A leltározás és az egyeztetés dokumentálását is tartalmazza.",
+   "kulcselemek": ["készletféleségek állománya és mozgása", "egy főkönyvi számlához kapcsolódik", "főkönyvi egyenleg részletezése", "bizonylat → raktár → analitika → főkönyv → beszámoló", "mennyiség és érték"],
+   "pelda": null,
+   "zh_valoszinuseg": "alacsony",
+   "forras": "vasarolt.pdf 3. rész 39–43. dia; Moodle 18. kérdés"
+  },
+  {
+   "id": "VK-FOG-14",
+   "nev": "Leltár, leltározás (tényleges mennyiségi felvétel)",
+   "definicio": "A leltározás a készletek fordulónapi tényleges mennyiségének felvétele (számlálás, mérés), amellyel a nyilvántartás helyessége ellenőrizhető, illetve nyilvántartás hiányában a zárókészlet megállapítható. Folyamatos mennyiségi nyilvántartás esetén a törvény szerint tényleges mennyiségi felvételt elég 3 évente végezni, mert a leltár a nyilvántartás szerinti zárókészlet alapján elkészíthető. Ha nincs mennyiségi nyilvántartás, a zárókészletet a fordulónapra vonatkozó tényleges mennyiségi felvétellel kell meghatározni (évente kötelező). A csak értékben nyilvántartott árukészlet helyessége tételes leltározással a mérlegfordulónapot megelőző vagy követő negyedévben is ellenőrizhető. A nyilvántartás szerinti és a tényleges készlet különbsége a leltáreltérés (hiány vagy többlet).",
+   "kulcselemek": ["tényleges mennyiségi felvétel", "nyilvántartás ellenőrzése", "folyamatos nyilvántartásnál legalább 3 évente", "nyilvántartás nélkül minden fordulónapon kötelező", "csak értékbeni áru: fordulónap előtti/utáni negyedévben is", "eltérés: hiány vagy többlet"],
+   "pelda": "Nyilvántartás szerint 8 db, leltár szerint 6 db → 2 db hiány.",
+   "zh_valoszinuseg": "kozepes",
+   "forras": "vasarolt.pdf 3. rész 51., 57. dia"
+  },
+  {
+   "id": "VK-FOG-15",
+   "nev": "Leltárhiány és leltártöbblet (leltáreltérés)",
+   "definicio": "A leltáreltérés a nyilvántartás szerinti (könyv szerinti) és a leltározással megállapított tényleges készlet különbsége; csak akkor értelmezhető, ha van nyilvántartás (folyamatos mennyiségi és értékbeni, csak mennyiségi vagy csak értékbeni), és ilyenkor kötelező elszámolni. Hiány: a hiányzó készlet könyv szerinti értékét (FIFO vagy átlagár szerint, árvisszakereséssel) egyéb ráfordításként kell elszámolni (T 8693 / K 21x, 261). Többlet: a fellelt leltári többletet piaci értéken kell állományba venni egyéb bevételként (T 21x, 261 / K 969). A csak értékben nyilvántartott (bolti) árukészlet veszteségjellegű leltárértékelési különbözete egyéb ráfordítás (8694), nyereségjellegű különbözete egyéb bevétel (9694). Nyilvántartás hiányában a leltáreltérés nem értelmezhető, a hiány a költségben (ELÁBÉ, anyagköltség) rejtve marad.",
+   "kulcselemek": ["könyv szerinti − tényleges készlet", "csak nyilvántartás mellett értelmezhető, akkor kötelező", "hiány: egyéb ráfordítás, 8693", "többlet: piaci érték, egyéb bevétel, 969", "bolti áru leltárértékelési különbözete: 8694 / 9694", "nyilvántartás nélkül nincs leltáreltérés"],
+   "pelda": "2 db hiány × 110 Ft = 220 Ft: T 8693 / K 261.",
+   "zh_valoszinuseg": "kozepes",
+   "forras": "vasarolt.pdf 2. rész 6. dia, 4. rész 59–60. dia; feladatsor 3–4. feladat"
+  },
+  {
+   "id": "VK-FOG-16",
+   "nev": "Készletek értékvesztése",
+   "definicio": "A fordulónapon meg kell vizsgálni, hogy a raktáron maradt készlet megfelel-e a minőségi követelményeknek. Ha nem felel meg, mert az előírásoknak (szabvány, szakmai előírás, szállítási feltétel) nem felel meg, megrongálódott, feleslegessé vált, vagy felhasználása, értékesítése kétségessé vált, akkor meg kell határozni a készlet hasznosíthatóságát tükröző piaci értéket. Ha a könyv szerinti érték magasabb a piaci értéknél, a különbözetet értékvesztésként egyéb ráfordításként kell elszámolni (T 8661 / K 229, 269, 279, 289). Ehhez a készleteken belül el kell különíteni az immobil (minőségileg megfelelő, de régóta fel nem használt, elfekvő) és az inkurrens (nem szabványos) készleteket. Az értékelést általában egyedileg kell elvégezni, fajlagosan kis értékű készleteknél a készletcsoportok könyv szerinti értékének százalékában is meghatározható. Az értékvesztés csökkenti a mérlegértéket, és a kiegészítő mellékletben részletezni kell.",
+   "kulcselemek": ["fordulónapi értékelés", "okok: előírásnak nem felel meg, megrongálódott, felesleges, hasznosítása kétséges", "könyv szerinti érték > piaci érték", "egyéb ráfordítás, T 8661", "immobil és inkurrens készletek", "általában egyedileg, kis értéknél %-osan", "kiegészítő mellékletben részletezni"],
+   "pelda": "900 000 Ft könyv szerinti értékű készlet piaci értéke 820 000 Ft → 80 000 Ft értékvesztés.",
+   "zh_valoszinuseg": "magas",
+   "forras": "vasarolt.pdf 2. rész 8. dia (36–38.); Moodle 5., 21., 36. kérdés"
+  },
+  {
+   "id": "VK-FOG-17",
+   "nev": "Értékvesztés visszaírása",
+   "definicio": "Ha a korábban értékvesztéssel csökkentett készlet piaci értéke tartósan és jelentősen meghaladja a könyv szerinti értékét (pl. drágábban el lehet adni, mint az értékvesztéssel csökkentett bekerülési érték), akkor a pozitív különbözettel az értékvesztést vissza kell írni. A visszaírás egyéb bevétel (T 229, 269 / K 9661). A visszaírással a készlet könyv szerinti értéke nem haladhatja meg az eredeti bekerülési értéket, tehát legfeljebb a korábban elszámolt értékvesztés írható vissza. Az értékvesztés visszaírása csak a fordulónapi értékeléssel kapcsolatos tétel lehet, és a kiegészítő mellékletben részletezni kell.",
+   "kulcselemek": ["piaci érték tartósan és jelentősen magasabb", "egyéb bevétel, K 9661", "felső határ: eredeti bekerülési érték", "csak fordulónapi értékeléskor", "kiegészítő mellékletben részletezni"],
+   "pelda": "Korábban 80 000 Ft értékvesztés; a piaci érték 120 000 Ft-tal nő → csak 80 000 Ft írható vissza.",
+   "zh_valoszinuseg": "magas",
+   "forras": "vasarolt.pdf 2. rész 8. dia; Moodle 5., 10. kérdés"
+  },
+  {
+   "id": "VK-FOG-18",
+   "nev": "Vásárolt készletek mérlegértéke",
+   "definicio": "A vásárolt készletek mérlegértéke = zárókészlet könyv szerinti értéke ± leltáreltérések (hiány csökkenti, többlet növeli) − értékvesztések + értékvesztés visszaírása. A mérleg a főkönyvi kivonat alapján készül, így a mérlegérték az adott mérlegtételhez tartozó főkönyvi számlák egyenlegéből határozható meg: Anyagok – 21–22. számlacsoport; Áruk – 26–28. számlacsoport (kereskedelmi áru, közvetített szolgáltatás, betétdíjas göngyöleg); Készletekre adott előlegek – 353. A mérlegben a B.I. Készletek csoport 1. Anyagok, 5. Áruk és 6. Készletekre adott előlegek sorában jelenik meg.",
+   "kulcselemek": ["könyv szerinti érték ± leltáreltérés − értékvesztés + visszaírás", "főkönyvi kivonat alapján", "anyag 21–22, áru 26–28", "B.I.1., B.I.5., B.I.6. sor"],
+   "pelda": "900 000 − 20 000 hiány − 80 000 értékvesztés = 800 000 Ft.",
+   "zh_valoszinuseg": "kozepes",
+   "forras": "vasarolt.pdf 2. rész 7. dia; Moodle 34. kérdés"
+  },
+  {
+   "id": "VK-FOG-19",
+   "nev": "ELÁBÉ (eladott áruk beszerzési értéke)",
+   "definicio": "Az ELÁBÉ (814. Eladott áruk beszerzési értéke) az értékesített áruk könyv szerinti (beszerzési) értéke, amely az összköltség eljárású eredménykimutatásban az anyagjellegű ráfordítások között szerepel. Folyamatos mennyiségi és értékbeni nyilvántartásnál az értékesítéskor a kivezetett árukészlet FIFO vagy átlagár szerinti értéke kerül rá (T 814 / K 261). Csak mennyiségi vagy nyilvántartás nélküli esetben a beszerzéskor azonnal ide könyvelik az árut, év elején ide vezetik vissza a nyitókészletet (T 814 / K 261), év végén a zárókészletet innen veszik állományba (T 261 / K 814), így egyenlege a tényleges ELÁBÉ (nyilvántartás nélkül a hiánnyal együtt). Közvetített szolgáltatásnál az eladott szolgáltatás bekerülési értéke a 815. Eladott (közvetített) szolgáltatások értéke számlára kerül.",
+   "kulcselemek": ["814 számla", "anyagjellegű ráfordítás", "eladott áru könyv szerinti értéke", "folyamatos nyilvántartásnál eladáskor T 814 / K 261", "mennyiségi/nincs nyilvántartásnál beszerzéskor T 814", "közvetített szolgáltatás: 815"],
+   "pelda": "24 db eladott áru FIFO szerint 2 680 Ft → T 814 / K 261 2 680.",
+   "zh_valoszinuseg": "kozepes",
+   "forras": "vasarolt.pdf 4. rész 59. dia; feladatsor 4. feladat; Moodle 13. kérdés"
+  },
+  {
+   "id": "VK-FOG-20",
+   "nev": "Immobil és inkurrens készlet",
+   "definicio": "A fordulónapi értékeléshez a készleteken belül el kell különíteni az immobil és az inkurrens készleteket. Immobil készlet: minden minőségi követelménynek megfelelő, de régóta fel nem használt, elfekvő készlet. Inkurrens készlet: nem szabványos, minőségi követelményeknek nem megfelelő (pl. megrongálódott, divatjamúlt) készlet. Mindkettőnél vizsgálni kell, hogy a piaci érték a könyv szerinti érték alatt van-e, és a különbözetet értékvesztésként (egyéb ráfordítás, 8661) kell elszámolni.",
+   "kulcselemek": ["immobil: megfelelő minőség, de elfekvő", "inkurrens: nem szabványos", "fordulónapi értékelés", "értékvesztés: egyéb ráfordítás"],
+   "pelda": "Évek óta raktáron álló, de hibátlan alkatrész (immobil); megázott, szabványnak nem megfelelő anyag (inkurrens).",
+   "zh_valoszinuseg": "alacsony",
+   "forras": "vasarolt.pdf 2. rész 8. dia (37.)"
+  }
+ ],
+ "szabalyok": [
+  {
+   "id": "VK-SZ-01",
+   "cim": "Készletek mérlegsorai (B. Forgóeszközök / I. Készletek)",
+   "tartalom": "1. Anyagok; 2. Befejezetlen termelés és félkész termékek; 3. Növendék-, hízó- és egyéb állatok; 4. Késztermékek; 5. Áruk; 6. Készletekre adott előlegek. Oszlopok: Előző év | Előző év(ek) módosításai | Tárgyév. Vásárolt készlet: 1. Anyagok, 5. Áruk (kereskedelmi áru, betétdíjas göngyöleg, közvetített szolgáltatás), 6. Készletekre adott előlegek.",
+   "forras": "vasarolt.pdf 1–2. dia; minta-ZH elmélet 2. feladat"
+  },
+  {
+   "id": "VK-SZ-02",
+   "cim": "Vásárolt és saját termelésű készletek csoportosítása, kivételek",
+   "tartalom": "A csoportosítás alapja a készlet forrása (eredete), mert a két csoport értékelési szabályai eltérnek. Vásárolt: anyagok, áruk (kereskedelmi áru, betétdíjas göngyöleg, közvetített szolgáltatás). Saját termelésű: befejezetlen termelés, félkész termékek, befejezetlen ki nem számlázott szolgáltatások, növendék-, hízó- és egyéb állatok, késztermékek. Kivételek: a saját betétdíjas göngyöleget mindig vásárolt készletként értékeljük (akkor is, ha saját előállítású); a növendék-, hízó- és egyéb állatokat mindig saját termelésű készletként (akkor is, ha vásárolták); a készletekre adott előleg a készletek között jelenik meg, de követelésként értékeljük (nem valódi készlet).",
+   "forras": "vasarolt.pdf 5. dia"
+  },
+  {
+   "id": "VK-SZ-03",
+   "cim": "Bekerülési érték bekerülési módonként",
+   "tartalom": "Beszerzés: beszerzési érték. Saját előállítás (anyagi eszközök, saját göngyöleg): előállítási költség. Apport: létesítő okirat szerinti érték. Térítés nélküli átvétel: piaci érték. Ajándék: piaci érték. Átvétel követelés fejében: szerződés szerinti érték. Csereszerződés: csere szerinti érték. Fellelt leltári többlet: piaci érték. Befektetett eszközből átsorolt anyag: átsoroláskori nettó érték.",
+   "forras": "vasarolt.pdf 2. rész 2. dia, 1. rész 8. dia"
+  },
+  {
+   "id": "VK-SZ-04",
+   "cim": "Beszerzési érték elemei",
+   "tartalom": "Része: számlázott vételár; − kapcsolódó engedmény; + felár; szállítási, rakodási költség; közvetítői, bizományosi díj; illetékek, adók, vámterhek; le nem vonható áfa; a beszerzés finanszírozására felvett hitel felvétele előtt megfizetett bankgarancia-díj, rendelkezésre tartási jutalék, folyósítási jutalék, közjegyzői hitelesítés díja, kezelési költség, raktárba beszállításig felmerült időarányos kamat. NEM része: levonható áfa (466), biztosítási díj (a tárgyi eszközökkel ellentétben), a raktárba beszállítás utáni költségek (pl. raktározás, beszállítás utáni kamat).",
+   "forras": "vasarolt.pdf 2. rész 3. dia"
+  },
+  {
+   "id": "VK-SZ-05",
+   "cim": "Értékelési feladatok három időpontban",
+   "tartalom": "Bekerüléskor: a bekerülési értéket közvetlenül befolyásoló tételek figyelembevétele, a bekerülési érték megállapítása. Kikerüléskor: anyagnál felhasználáskor, árunál értékesítéskor a könyv szerinti érték megállapítása (FIFO / gördülő átlagár). Fordulónapon: a még meglévő készlet mérlegértékének meghatározása (leltáreltérés, értékvesztés, visszaírás).",
+   "forras": "vasarolt.pdf 2. rész 1. dia"
+  },
+  {
+   "id": "VK-SZ-06",
+   "cim": "Megengedett és nem megengedett készletértékelési eljárások",
+   "tartalom": "Szt. szerint megengedett: FIFO, gördülő (súlyozott) átlagár; egyedi termékeknél egyedi azonosítás lehetséges (a Moodle-teszt az egyedi azonosítást is elfogadott módszerként jelölte). Nem megengedett: LIFO, HIFO, LOFO. A választott eljárást a számviteli politikában rögzíteni kell; megváltoztatását, annak hatását és indoklását a kiegészítő mellékletben be kell mutatni.",
+   "forras": "vasarolt.pdf 2. rész 5. dia, 5. rész 62. dia; Moodle 6. kérdés"
+  },
+  {
+   "id": "VK-SZ-07",
+   "cim": "Gördülő átlagár számítási szabályai",
+   "tartalom": "Súlyozott átlagárat kell alkalmazni. Az átlagárat mindig a készletcsökkenés előtt kell meghatározni. Az előző készletcsökkenés után megmaradt készletet az előző átlagáron kell figyelembe venni. Zárókészlet = megmaradt mennyiség × utolsó időszaki átlagár. A tanári megoldás az átlagárat 2 tizedesre kerekíti, és a maradékot is a kerekített átlagáron viszi tovább (emiatt néhány forint kerekítési eltérés lehet).",
+   "forras": "vasarolt.pdf 2. rész 5.2. dia; feladatsor megoldása 2. feladat"
+  },
+  {
+   "id": "VK-SZ-08",
+   "cim": "Nyilvántartási módok összehasonlítása (tanári táblázat)",
+   "tartalom": "Folyamatos mennyiségi és értékbeni: nyilvántartás mennyiségben és értékben; felhasználás értékelése tényleges beszerzési áron (súlyozott átlagár, FIFO) vagy elszámolóáron; készletnövekedés a készletszámlán; tényleges leltározás nem kötelező minden évben (legalább 3 évente); leltáreltérés értelmezhető. Csak mennyiségi: csak mennyiségben; felhasználás értékelése utolsó beszerzési áron; készletnövekedés azonnal költségként/ráfordításként; leltáreltérés értelmezhető. Nincs folyamatos nyilvántartás: év közben nincs nyilvántartás; utolsó beszerzési áron; azonnal költségként/ráfordításként; tényleges leltározás kötelező; leltáreltérés nem értelmezhető. Csak értékbeni: csak értékben, mennyiség nélkül (pl. eladási áron); a választott értékbeni nyilvántartási ár szerint; készletszámlán értékben; leltáreltérés értelmezhető.",
+   "forras": "vasarolt.pdf 3. rész 51. dia"
+  },
+  {
+   "id": "VK-SZ-09",
+   "cim": "Főkönyvi elszámolás csak mennyiségi és nyilvántartás nélküli esetben",
+   "tartalom": "A 2. számlaosztály készletszámláját csak év elején (nyitás, majd a nyitókészlet visszavezetése költségként: anyag T 511 / K 211, áru T 814 / K 261) és év végén (zárókészlet állományba vétele: T 211 / K 511, T 261 / K 814) használjuk. Év közben a beszerzés azonnal költség (anyag: 511, áru: 814), felhasználást, áru kivezetését (ELÁBÉ-tételt) nem könyvelünk. Csak mennyiségi nyilvántartásnál a zárókészletet a nyilvántartás szerinti mennyiségben, árvisszakereséssel (utolsó ár / FIFO) vesszük állományba, és a leltárhiányt külön elszámoljuk (T 8693). Nyilvántartás nélkül a leltár szerinti mennyiséget vesszük állományba, leltáreltérés nincs.",
+   "forras": "feladatsor megoldása 3B, 3C, 4B, 4C; órai jegyzet; szamlaszamok.json"
+  },
+  {
+   "id": "VK-SZ-10",
+   "cim": "Eredménykimutatás-kapcsolatok (összköltség eljárás)",
+   "tartalom": "Anyagfelhasználás → anyagköltség. Értékesítés: eladási ár áfa nélkül → árbevétel; könyv szerinti érték → ELÁBÉ (közvetített szolgáltatásnál: eladott közvetített szolgáltatások értéke). Évközi értékvesztés → egyéb ráfordítás. Káreseménnyel kapcsolatos kapott kártérítés → egyéb bevétel. Térítés nélkül átadott és ajándékba adott készlet könyv szerinti értéke → egyéb ráfordítás. Apportba adott készlet: létesítő okirat szerinti érték → egyéb bevétel, könyv szerinti érték → egyéb ráfordítás. Hiány → egyéb ráfordítás. Bolti áru veszteségjellegű leltárértékelési különbözete → egyéb ráfordítás. Többlet → egyéb bevétel. Nyereségjellegű leltárértékelési különbözet → egyéb bevétel. Fordulónapi értékvesztés → egyéb ráfordítás. Értékvesztés visszaírása → egyéb bevétel.",
+   "forras": "vasarolt.pdf 4. rész 59–60. dia"
+  },
+  {
+   "id": "VK-SZ-11",
+   "cim": "Kiegészítő mellékletben bemutatandó",
+   "tartalom": "Az értékelési eljárások; a megváltoztatott értékelési eljárások hatása az eredményre, vagyonra, pénzügyi helyzetre és indoklása; az átsorolások, hatásuk és indoklásuk (saját termelésű készletből nem lehet áru!); rendkívüli események és hatásuk; a készletekre adott előlegek, ha jelentős összegűek; a veszélyes hulladékok nyitó és záró készletének mennyiségi és értékadatai, tárgyévi növekedése és csökkenése; a készletek értékvesztése és visszaírása részletezve.",
+   "forras": "vasarolt.pdf 5. rész 62. dia"
+  },
+  {
+   "id": "VK-SZ-12",
+   "cim": "Csak tulajdonban lévő készlet a mérlegben",
+   "tartalom": "A mérlegben csak a vállalkozás tulajdonában lévő készlet szerepelhet. A bizományba átvett vagy tárolásra átvett készletet nem szabad értékkel a mérlegben szerepeltetni; ezeket a 0. nyilvántartási számlákon célszerű kimutatni. A bizományba átadott saját áru viszont a sajátunk marad (266. Idegen helyen tárolt, bizományba átadott áruk).",
+   "forras": "vasarolt.pdf 4., 11. dia; tukor.txt 266"
+  }
+ ],
+ "osszefuggesek": [
+  {
+   "id": "VK-OSZ-01",
+   "cim": "Beszerzési érték",
+   "leiras": "A vásárolt készlet bekerülési értéke a raktárba beszállításig felmerült, egyedileg hozzákapcsolható tételek összege; a levonható áfa nem része.",
+   "keplet": "Beszerzési érték = számlázott vételár − engedmény + felár + szállítás, rakodás + közvetítői/bizományosi díj + vám, illeték, adó + le nem vonható áfa + hitel beszállításig felmerült díjai és kamata",
+   "kapcsolodo": ["VK-FOG-08", "VK-SZ-04"]
+  },
+  {
+   "id": "VK-OSZ-02",
+   "cim": "Készletmérleg (mennyiségi egyenlet)",
+   "leiras": "A nyilvántartás szerinti zárókészlet mennyisége; a leltáreltérés ennek és a tényleges készletnek a különbsége.",
+   "keplet": "Nyilvántartás szerinti ZK = NYK + beszerzések − felhasználások (értékesítések); Hiány = nyilvántartás szerinti ZK − tényleges ZK (ha negatív: többlet)",
+   "kapcsolodo": ["VK-FOG-14", "VK-FOG-15"]
+  },
+  {
+   "id": "VK-OSZ-03",
+   "cim": "FIFO felhasználás és zárókészlet",
+   "leiras": "A felhasználást a legrégebbi rétegekből (nyitókészlet, majd beszerzések sorrendjében) kell fedezni; a zárókészlet a legutolsó beszerzésekből maradt rétegek értéke.",
+   "keplet": "Felhasználás értéke = Σ (felhasznált mennyiség rétegenként × az adott réteg egységára, a legrégebbitől); ZK = Σ (maradék rétegek mennyisége × egységára, a legújabbaktól visszafelé)",
+   "kapcsolodo": ["VK-FOG-10"]
+  },
+  {
+   "id": "VK-OSZ-04",
+   "cim": "Gördülő súlyozott átlagár",
+   "leiras": "Minden készletcsökkenés előtt újraszámolt, mennyiséggel súlyozott átlagár.",
+   "keplet": "Átlagár = (maradék mennyiség × előző átlagár + Σ beszerzett mennyiség × beszerzési ár) / (maradék mennyiség + Σ beszerzett mennyiség); Felhasználás = felhasznált mennyiség × átlagár; ZK = maradék mennyiség × utolsó átlagár",
+   "kapcsolodo": ["VK-FOG-11", "VK-SZ-07"]
+  },
+  {
+   "id": "VK-OSZ-05",
+   "cim": "Súlyozott (időszaki) átlagár",
+   "leiras": "Egy időszak egészére számolt súlyozott átlag (Moodle-teszt 1. kérdés típusa). A mezőbe az egységár kell, nem a készlet értéke.",
+   "keplet": "Súlyozott átlagár = (NYK értéke + Σ beszerzések értéke) / (NYK mennyisége + Σ beszerzett mennyiség)",
+   "kapcsolodo": ["VK-FOG-11"]
+  },
+  {
+   "id": "VK-OSZ-06",
+   "cim": "Vásárolt készletek mérlegértéke",
+   "leiras": "A fordulónapi értékelés után a mérlegben szereplő érték.",
+   "keplet": "Mérlegérték = ZK könyv szerinti értéke − hiány + többlet − értékvesztés + értékvesztés visszaírása",
+   "kapcsolodo": ["VK-FOG-18", "VK-FOG-16", "VK-FOG-17"]
+  },
+  {
+   "id": "VK-OSZ-07",
+   "cim": "Értékvesztés és visszaírás felső határa",
+   "leiras": "Értékvesztés akkor kell, ha a piaci érték a könyv szerinti alá csökken; visszaírás legfeljebb a korábban elszámolt értékvesztés erejéig, a könyv szerinti érték nem lépheti túl az eredeti bekerülési értéket.",
+   "keplet": "Értékvesztés = könyv szerinti érték − piaci érték (ha > 0); Visszaírás = min(piaci érték − könyv szerinti érték; eddigi értékvesztés)",
+   "kapcsolodo": ["VK-FOG-16", "VK-FOG-17"]
+  },
+  {
+   "id": "VK-OSZ-08",
+   "cim": "ELÁBÉ csak mennyiségi / nyilvántartás nélküli esetben",
+   "leiras": "Év végére a 814 egyenlege ugyanaz, mint folyamatos nyilvántartásnál; nyilvántartás nélkül a hiány is benne van (nem válik ki egyéb ráfordításként).",
+   "keplet": "814 egyenlege = NYK + beszerzések − ZK; csak mennyiségi nyilvántartásnál ZK = nyilvántartás szerinti ZK, a hiány külön 8693; nyilvántartás nélkül ZK = leltár szerinti ZK (ELÁBÉ = tényleges ELÁBÉ + hiány)",
+   "kapcsolodo": ["VK-FOG-19", "VK-SZ-09"]
+  },
+  {
+   "id": "VK-OSZ-09",
+   "cim": "Árrés és eladási ár (5. feladat logikája)",
+   "leiras": "Az árrés az eladási ár százalékában értendő: ha az árrés 20%, a beszerzési ár az eladási ár 80%-a. (Ha a felárat a beszerzési árra számolnánk, az haszonkulcs lenne.)",
+   "keplet": "Eladási ár = beszerzési ár / (1 − árrés%); pl. 800 000 / 0,8 = 1 000 000",
+   "kapcsolodo": ["VK-FOG-06"]
+  }
+ ],
+ "konyvelesi_minta": [
+  {"id": "VK-K-01", "esemeny": "Anyagkészlet nyitása", "T": "211", "K": "491", "osszeg": "nyitókészlet mennyisége × egységára", "megjegyzes": "Minden nyilvántartási módnál. Más anyagnál 221–227."},
+  {"id": "VK-K-02", "esemeny": "Anyag beszerzése – folyamatos mennyiségi és értékbeni nyilvántartás", "T": "211", "K": "4541", "osszeg": "nettó beszerzési érték (mennyiség × nettó egységár + bekerülési értéket növelő tételek)", "megjegyzes": "Áfa külön: T 466 (szamlaszamok.json szerint 4661) / K 4541."},
+  {"id": "VK-K-03", "esemeny": "Beszerzés előzetesen felszámított (levonható) áfája", "T": "466", "K": "4541", "osszeg": "nettó × 27% (vagy megadott áfa/egység × mennyiség)", "megjegyzes": "A levonható áfa NEM része a bekerülési értéknek. A tanári megoldások 466-ot írnak, a szamlaszamok.json 4661-et; mindkettő elfogadható."},
+  {"id": "VK-K-04", "esemeny": "Anyagfelhasználás – folyamatos nyilvántartás", "T": "511", "K": "211", "osszeg": "felhasznált mennyiség FIFO vagy gördülő átlagár szerinti értéke", "megjegyzes": "Összköltség eljárás, költségnem-elszámolás (5-ös osztály). A 81-es változatban T 811 is lehet, a tanári megoldás 511-et használ."},
+  {"id": "VK-K-05", "esemeny": "Anyag beszerzése – csak mennyiségi vagy nincs nyilvántartás", "T": "511", "K": "4541", "osszeg": "nettó beszerzési érték", "megjegyzes": "Év közben nem könyvelünk a 211-re; a beszerzés azonnal anyagköltség, felhasználást nem könyvelünk."},
+  {"id": "VK-K-06", "esemeny": "Anyag nyitókészletének visszavezetése költségként (csak mennyiségi / nincs nyilvántartás)", "T": "511", "K": "211", "osszeg": "nyitókészlet értéke", "megjegyzes": "Év elején, a nyitás után."},
+  {"id": "VK-K-07", "esemeny": "Anyag zárókészletének állományba vétele év végén (csak mennyiségi / nincs nyilvántartás)", "T": "211", "K": "511", "osszeg": "csak mennyiségi: nyilvántartás szerinti mennyiség × utolsó ár (FIFO árvisszakeresés); nincs nyilvántartás: leltár szerinti mennyiség × utolsó ár", "megjegyzes": "A mérlegben ki kell mutatni a készletet."},
+  {"id": "VK-K-08", "esemeny": "Árukészlet nyitása", "T": "261", "K": "491", "osszeg": "nyitókészlet értéke", "megjegyzes": "Eladási áras (bolti) nyilvántartásnál 264 + 265 árrés."},
+  {"id": "VK-K-09", "esemeny": "Áru beszerzése – folyamatos mennyiségi és értékbeni nyilvántartás", "T": "261", "K": "4541", "osszeg": "nettó beszerzési érték", "megjegyzes": "Áfa: T 466 / K 4541. Külföldi szállító: 4542."},
+  {"id": "VK-K-10", "esemeny": "Áru értékesítése – árbevétel", "T": "311", "K": "91-92", "osszeg": "eladott mennyiség × nettó eladási ár", "megjegyzes": "Minden nyilvántartási módnál. Export: 93-94."},
+  {"id": "VK-K-11", "esemeny": "Áru értékesítése – fizetendő áfa", "T": "311", "K": "467", "osszeg": "nettó árbevétel × 27%", "megjegyzes": "Minden nyilvántartási módnál."},
+  {"id": "VK-K-12", "esemeny": "Eladott áru könyv szerinti értékének kivezetése (ELÁBÉ) – folyamatos nyilvántartás", "T": "814", "K": "261", "osszeg": "eladott mennyiség FIFO / átlagár szerinti beszerzési értéke", "megjegyzes": "Csak mennyiségi vagy nyilvántartás nélküli esetben NINCS ilyen tétel."},
+  {"id": "VK-K-13", "esemeny": "Áru beszerzése költségként – csak mennyiségi / nincs nyilvántartás", "T": "814", "K": "4541", "osszeg": "nettó beszerzési érték", "megjegyzes": "A minta-ZH 6.a tétele: 200 db × 2 200 = 440 000 (áfa T 466 / K 4541 118 800). A ZH-n ez a legvalószínűbb vásárolt készletes sor."},
+  {"id": "VK-K-14", "esemeny": "Áru nyitókészletének visszavezetése ráfordításként – csak mennyiségi / nincs nyilvántartás", "T": "814", "K": "261", "osszeg": "nyitókészlet értéke", "megjegyzes": "Év elején."},
+  {"id": "VK-K-15", "esemeny": "Záró árukészlet állományba vétele év végén – csak mennyiségi / nincs nyilvántartás", "T": "261", "K": "814", "osszeg": "csak mennyiségi: nyilvántartás szerinti mennyiség × utolsó ár; nincs nyilvántartás: leltár szerinti mennyiség × utolsó ár", "megjegyzes": "Minta-ZH 15.a: záró árukészlet leltár alapján 220 000 (100 db × 2 200)."},
+  {"id": "VK-K-16", "esemeny": "Leltárhiány elszámolása (anyag / áru)", "T": "8693", "K": "211 / 261", "osszeg": "hiányzó mennyiség × FIFO szerinti (árvisszakeresett) ár", "megjegyzes": "Csak nyilvántartás mellett (folyamatos vagy csak mennyiségi); nyilvántartás nélkül nem értelmezhető. Egyéb ráfordítás."},
+  {"id": "VK-K-17", "esemeny": "Leltártöbblet állományba vétele", "T": "211 / 261", "K": "969", "osszeg": "többlet mennyisége × piaci érték", "megjegyzes": "Egyéb bevétel (a tükörben 969. Különféle egyéb bevételek; külön alszámla nincs). Generált minta, a feladatsorban nem szerepel."},
+  {"id": "VK-K-18", "esemeny": "Bolti (csak értékben nyilvántartott) áru leltárértékelési különbözete", "T": "8694 (veszteség) / 264 (nyereség)", "K": "264 (veszteség) / 9694 (nyereség)", "osszeg": "leltár szerinti és könyv szerinti érték különbsége", "megjegyzes": "Generált a tükör alapján; a tananyag csak az eredményhatást (egyéb ráfordítás/bevétel) mondja ki."},
+  {"id": "VK-K-19", "esemeny": "Készletek értékvesztésének elszámolása", "T": "8661", "K": "229 (anyag) / 269 (áru) / 279 / 289", "osszeg": "könyv szerinti érték − piaci érték", "megjegyzes": "Egyéb ráfordítás, csökkenti a mérlegértéket."},
+  {"id": "VK-K-20", "esemeny": "Készletek értékvesztésének visszaírása", "T": "229 / 269", "K": "9661", "osszeg": "piaci érték − könyv szerinti érték, legfeljebb a korábbi értékvesztés", "megjegyzes": "Egyéb bevétel; a könyv szerinti érték nem haladhatja meg az eredeti bekerülési értéket."},
+  {"id": "VK-K-21", "esemeny": "Közvetített szolgáltatás beszerzése", "T": "271", "K": "4543", "osszeg": "a szolgáltatás nettó bekerülési értéke", "megjegyzes": "Áfa T 466 / K 4543. Generált: az 5. feladat már a 271-en nyilvántartott szolgáltatásból indul."},
+  {"id": "VK-K-22", "esemeny": "Közvetített szolgáltatás továbbszámlázása – könyv szerinti érték kivezetése", "T": "815", "K": "271", "osszeg": "bekerülési érték", "megjegyzes": "815. Eladott (közvetített) szolgáltatások értéke – ráfordítás. Árbevétel: T 311 / K 91-92, áfa T 311 / K 467."},
+  {"id": "VK-K-23", "esemeny": "Készletekre adott előleg átutalása", "T": "353", "K": "384", "osszeg": "előleg nettó összege", "megjegyzes": "Előleg áfája T 466 / K 384. Generált minta (a tananyag csak a mérlegbeli helyet tárgyalja)."},
+  {"id": "VK-K-24", "esemeny": "Készletekre adott előleg beszámítása a szállítói számlába", "T": "4541", "K": "353", "osszeg": "előleg nettó összege", "megjegyzes": "Áfa rendezése: T 4541 / K 466. Generált minta (a beruházási előleg 352-es mintájára, minta-ZH 9.c–9.d)."},
+  {"id": "VK-K-25", "esemeny": "Saját betétdíjas göngyöleg beszerzése", "T": "281", "K": "4541", "osszeg": "beszerzési érték", "megjegyzes": "Generált minta a tükör alapján (28. Betétdíjas göngyölegek; idegen göngyöleg: 282); a tananyagban göngyöleg-könyvelés nincs."},
+  {"id": "VK-K-26", "esemeny": "Átsorolás befektetett eszközből anyaggá", "T": "226", "K": "13x (nettó érték), és a halmozott ÉCS: T 139 / K 13x", "osszeg": "átsoroláskori nettó érték", "megjegyzes": "Generált minta a tükör alapján (226. Tárgyi eszközök közül átsorolt anyagok); a tananyag csak az értékelést mondja ki."}
+ ],
+ "feladatok": [
+  {
+   "id": "VK-FEL-01",
+   "forras": "Vásárolt készletek feladatsor 1. feladat + megoldás",
+   "cim": "FIFO negyedéves felhasználás és zárókészlet",
+   "szoveg": "Egy vállalkozás egyik anyagféleségének beszerzési és felhasználási adatai: Nyitókészlet 165 000 Ft (1 500 kg × 110 Ft/kg). FIFO módszer segítségével számolja ki a negyedéves felhasználások értékét! Határozza meg a zárókészlet értékét is! Könyvelje le a gazdasági eseményeket vegyes naplóban!",
+   "adatok": {
+    "nyitokeszlet": {"mennyiseg_kg": 1500, "egysegar": 110, "ertek": 165000},
+    "mozgasok": [
+     {"esemeny": "1. beszerzés", "kg": 200, "egysegar": 110},
+     {"esemeny": "2. beszerzés", "kg": 400, "egysegar": 112},
+     {"esemeny": "3. beszerzés", "kg": 300, "egysegar": 115},
+     {"esemeny": "I. negyedévi felhasználás", "kg": 1800},
+     {"esemeny": "4. beszerzés", "kg": 900, "egysegar": 117},
+     {"esemeny": "5. beszerzés", "kg": 1100, "egysegar": 118},
+     {"esemeny": "II. negyedévi felhasználás", "kg": 2000},
+     {"esemeny": "6. beszerzés", "kg": 1400, "egysegar": 119},
+     {"esemeny": "7. beszerzés", "kg": 200, "egysegar": 121},
+     {"esemeny": "8. beszerzés", "kg": 800, "egysegar": 118},
+     {"esemeny": "III. negyedévi felhasználás", "kg": 2100},
+     {"esemeny": "9. beszerzés", "kg": 900, "egysegar": 122},
+     {"esemeny": "10. beszerzés", "kg": 700, "egysegar": 124},
+     {"esemeny": "IV. negyedévi felhasználás", "kg": 1700}
+    ]
+   },
+   "megoldas": {
+    "szamitasok": [
+     {"mit": "I. negyedévi felhasználás (1 800 kg)", "keplet": "1 500 × 110 + 200 × 110 + 100 × 112 = 165 000 + 22 000 + 11 200", "eredmeny": "198 200 Ft (a 2. beszerzésből marad 300 kg)"},
+     {"mit": "II. negyedévi felhasználás (2 000 kg)", "keplet": "300 × 112 + 300 × 115 + 900 × 117 + 500 × 118 = 33 600 + 34 500 + 105 300 + 59 000", "eredmeny": "232 400 Ft (az 5. beszerzésből marad 600 kg)"},
+     {"mit": "III. negyedévi felhasználás (2 100 kg)", "keplet": "600 × 118 + 1 400 × 119 + 100 × 121 = 70 800 + 166 600 + 12 100", "eredmeny": "249 500 Ft (a 7. beszerzésből marad 100 kg)"},
+     {"mit": "IV. negyedévi felhasználás (1 700 kg)", "keplet": "100 × 121 + 800 × 118 + 800 × 122 = 12 100 + 94 400 + 97 600", "eredmeny": "204 100 Ft"},
+     {"mit": "Zárókészlet (800 kg)", "keplet": "100 × 122 + 700 × 124 = 12 200 + 86 800", "eredmeny": "99 000 Ft"},
+     {"mit": "Ellenőrzés", "keplet": "NYK 165 000 + beszerzések 818 200 = 983 200; felhasználások 884 200 + ZK 99 000 = 983 200; mennyiség: 1 500 + 6 900 − 7 600 = 800 kg", "eredmeny": "egyezik"}
+    ],
+    "tetelek": [
+     {"sorszam": "1", "esemeny": "Nyitás", "T": "211", "K": "491", "osszeg": 165000, "szamitas": "1 500 × 110"},
+     {"sorszam": "2", "esemeny": "1–3. beszerzés (beszerzésenként külön tétel)", "T": "211", "K": "4541", "osszeg": 101300, "szamitas": "22 000 + 44 800 + 34 500"},
+     {"sorszam": "3", "esemeny": "I. negyedévi felhasználás", "T": "511", "K": "211", "osszeg": 198200, "szamitas": "FIFO"},
+     {"sorszam": "4", "esemeny": "4–5. beszerzés", "T": "211", "K": "4541", "osszeg": 235100, "szamitas": "105 300 + 129 800"},
+     {"sorszam": "5", "esemeny": "II. negyedévi felhasználás", "T": "511", "K": "211", "osszeg": 232400, "szamitas": "FIFO"},
+     {"sorszam": "6", "esemeny": "6–8. beszerzés", "T": "211", "K": "4541", "osszeg": 285200, "szamitas": "166 600 + 24 200 + 94 400"},
+     {"sorszam": "7", "esemeny": "III. negyedévi felhasználás", "T": "511", "K": "211", "osszeg": 249500, "szamitas": "FIFO"},
+     {"sorszam": "8", "esemeny": "9–10. beszerzés", "T": "211", "K": "4541", "osszeg": 196600, "szamitas": "109 800 + 86 800"},
+     {"sorszam": "9", "esemeny": "IV. negyedévi felhasználás", "T": "511", "K": "211", "osszeg": 204100, "szamitas": "FIFO"}
+    ],
+    "egyeb": {
+     "megjegyzes": "A tanári megoldás csak a számításokat tartalmazza; a naplótételek a 3.a feladat tanári mintája szerint generáltak (folyamatos mennyiségi és értékbeni nyilvántartás, áfa-adat nincs megadva, ezért áfát nem könyvelünk).",
+     "211_zaro_egyenleg": 99000
+    }
+   },
+   "tanulsagok": [
+    "FIFO-nál rétegenként haladunk, és minden negyedév után fel kell írni, melyik beszerzésből mennyi maradt.",
+    "A zárókészlet a legutolsó beszerzések árain áll (itt 122 és 124 Ft/kg).",
+    "Ellenőrzés: NYK + beszerzések = felhasználások + ZK (értékben és mennyiségben is)."
+   ],
+   "elteresek_a_forrasban": [
+    "A feladat naplózást is kér, a megoldókulcs viszont csak a számításokat adja; a tételek generáltak."
+   ]
+  },
+  {
+   "id": "VK-FEL-02",
+   "forras": "Vásárolt készletek feladatsor 2. feladat + megoldás (I–II. negyedév), III–IV. negyedév: házi feladat, újraszámolva",
+   "cim": "Gördülő átlagáras felhasználás és zárókészlet",
+   "szoveg": "Az 1. feladat adatai alapján, gördülő átlagáras módszer segítségével számolja ki a negyedéves felhasználások értékét! Határozza meg a zárókészlet értékét is!",
+   "adatok": {"lasd": "VK-FEL-01 adatai", "kerekites": "átlagár 2 tizedesre (tanári megoldás szerint)"},
+   "megoldas": {
+    "szamitasok": [
+     {"mit": "I. negyedév átlagára", "keplet": "(165 000 + 22 000 + 44 800 + 34 500) / (1 500 + 200 + 400 + 300) = 266 300 / 2 400", "eredmeny": "110,96 Ft/kg"},
+     {"mit": "I. negyedévi felhasználás", "keplet": "1 800 × 110,96", "eredmeny": "199 728 Ft; marad 600 kg (600 × 110,96 = 66 576)"},
+     {"mit": "II. negyedév átlagára", "keplet": "(66 576 + 105 300 + 129 800) / (600 + 900 + 1 100) = 301 676 / 2 600", "eredmeny": "116,03 Ft/kg"},
+     {"mit": "II. negyedévi felhasználás", "keplet": "2 000 × 116,03", "eredmeny": "232 060 Ft; marad 600 kg (600 × 116,03 = 69 618)"},
+     {"mit": "III. negyedév átlagára (házi feladat)", "keplet": "(69 618 + 166 600 + 24 200 + 94 400) / (600 + 1 400 + 200 + 800) = 354 818 / 3 000", "eredmeny": "118,27 Ft/kg"},
+     {"mit": "III. negyedévi felhasználás", "keplet": "2 100 × 118,27", "eredmeny": "248 367 Ft; marad 900 kg (900 × 118,27 = 106 443)"},
+     {"mit": "IV. negyedév átlagára (házi feladat)", "keplet": "(106 443 + 109 800 + 86 800) / (900 + 900 + 700) = 303 043 / 2 500", "eredmeny": "121,22 Ft/kg"},
+     {"mit": "IV. negyedévi felhasználás", "keplet": "1 700 × 121,22", "eredmeny": "206 074 Ft"},
+     {"mit": "Zárókészlet", "keplet": "800 kg × 121,22", "eredmeny": "96 976 Ft"},
+     {"mit": "Ellenőrzés", "keplet": "199 728 + 232 060 + 248 367 + 206 074 + 96 976 = 983 205 vs. 983 200", "eredmeny": "5 Ft kerekítési eltérés (kerekítés nélkül: 199 725; 232 058; 248 372; 206 071; ZK 96 974 – összesen 983 200)"}
+    ],
+    "tetelek": [
+     {"sorszam": "1", "esemeny": "I. negyedévi felhasználás", "T": "511", "K": "211", "osszeg": 199728, "szamitas": "1 800 × 110,96"},
+     {"sorszam": "2", "esemeny": "II. negyedévi felhasználás", "T": "511", "K": "211", "osszeg": 232060, "szamitas": "2 000 × 116,03"},
+     {"sorszam": "3", "esemeny": "III. negyedévi felhasználás", "T": "511", "K": "211", "osszeg": 248367, "szamitas": "2 100 × 118,27"},
+     {"sorszam": "4", "esemeny": "IV. negyedévi felhasználás", "T": "511", "K": "211", "osszeg": 206074, "szamitas": "1 700 × 121,22"}
+    ],
+    "egyeb": {
+     "osszehasonlitas_FIFO_vs_atlagar": {"FIFO_felhasznalas": 884200, "FIFO_ZK": 99000, "atlagar_felhasznalas": 886229, "atlagar_ZK": 96976, "kovetkeztetes": "Drágulásnál FIFO-val magasabb a zárókészlet és alacsonyabb a felhasználás."},
+     "megjegyzes": "A feladat könyvelést nem kér; a tételek tájékoztató jellegűek (beszerzések, nyitás mint az 1. feladatban)."
+    }
+   },
+   "tanulsagok": [
+    "Az átlagárat mindig a felhasználás előtt számoljuk, a maradékot az előző átlagáron visszük tovább.",
+    "Súlyozott átlag kell (értékösszeg / mennyiségösszeg), nem az egységárak számtani átlaga.",
+    "Zárókészlet = maradék mennyiség × utolsó átlagár."
+   ],
+   "elteresek_a_forrasban": [
+    "A megoldókulcs csak az I–II. negyedévet számolja ki, a III–IV. negyedév és a zárókészlet házi feladat; ezeket újraszámoltam a tanári kerekítési módszerrel (2 tizedes).",
+    "A kerekített átlagár miatt az I. negyedév 199 728 Ft (pontosan 199 725 Ft), és a maradékot a kulcs 66 576 Ft-tal viszi tovább (pontosan 266 300 − 199 728 = 66 572 Ft); emiatt az összesítés 5 Ft-tal eltér a 983 200 Ft-os teljes értéktől."
+   ]
+  },
+  {
+   "id": "VK-FEL-03",
+   "forras": "Vásárolt készletek feladatsor 3. feladat + megoldás + órai jegyzet-1.png",
+   "cim": "Anyag könyvelése háromféle nyilvántartás mellett (FIFO)",
+   "szoveg": "Egy vállalkozás egyik anyagféleségével kapcsolatosan: nyitókészlet 10 000 kg × 100 Ft/kg; 1. beszerzés 20 000 kg × (120 + 30 áfa) Ft/kg; 1. felhasználás 24 000 kg; 2. beszerzés 30 000 kg × (110 + 27,5 áfa) Ft/kg; 2. felhasználás 28 000 kg; ZK mennyiségi nyilvántartás alapján ?; ZK tényleges mennyiségi felvétel alapján 6 000 kg. FIFO értékelés. Könyvelje le vegyes naplóban, ha a vállalkozás a) folyamatos mennyiségi és értékbeni nyilvántartást vezet, b) csak mennyiségi nyilvántartást vezet, c) nem vezet nyilvántartást sem mennyiségben, sem értékben!",
+   "adatok": {
+    "nyitokeszlet": {"kg": 10000, "egysegar": 100},
+    "beszerzes_1": {"kg": 20000, "netto_egysegar": 120, "afa_egysegenkent": 30},
+    "felhasznalas_1": {"kg": 24000},
+    "beszerzes_2": {"kg": 30000, "netto_egysegar": 110, "afa_egysegenkent": 27.5},
+    "felhasznalas_2": {"kg": 28000},
+    "ZK_leltar_kg": 6000,
+    "ertekeles": "FIFO"
+   },
+   "megoldas": {
+    "szamitasok": [
+     {"mit": "1. felhasználás (FIFO)", "keplet": "10 000 × 100 + 14 000 × 120", "eredmeny": "2 680 000 Ft (az 1. beszerzésből marad 6 000 kg)"},
+     {"mit": "2. felhasználás (FIFO)", "keplet": "6 000 × 120 + 22 000 × 110", "eredmeny": "3 140 000 Ft (a 2. beszerzésből marad 8 000 kg)"},
+     {"mit": "ZK mennyiségi nyilvántartás szerint", "keplet": "10 000 + 20 000 − 24 000 + 30 000 − 28 000", "eredmeny": "8 000 kg × 110 = 880 000 Ft"},
+     {"mit": "Hiány", "keplet": "8 000 − 6 000 = 2 000 kg × 110", "eredmeny": "220 000 Ft"},
+     {"mit": "Leltár szerinti ZK", "keplet": "6 000 × 110", "eredmeny": "660 000 Ft"}
+    ],
+    "tetelek": [
+     {"sorszam": "a1", "esemeny": "a) Nyitás", "T": "211", "K": "491", "osszeg": 1000000, "szamitas": "10 000 × 100"},
+     {"sorszam": "a2a", "esemeny": "a) 1. beszerzés", "T": "211", "K": "4541", "osszeg": 2400000, "szamitas": "20 000 × 120"},
+     {"sorszam": "a2b", "esemeny": "a) 1. beszerzés áfája", "T": "466", "K": "4541", "osszeg": 600000, "szamitas": "20 000 × 30"},
+     {"sorszam": "a3", "esemeny": "a) 1. felhasználás", "T": "511", "K": "211", "osszeg": 2680000, "szamitas": "10 000 × 100 + 14 000 × 120"},
+     {"sorszam": "a4a", "esemeny": "a) 2. beszerzés", "T": "211", "K": "4541", "osszeg": 3300000, "szamitas": "30 000 × 110"},
+     {"sorszam": "a4b", "esemeny": "a) 2. beszerzés áfája", "T": "466", "K": "4541", "osszeg": 825000, "szamitas": "30 000 × 27,5"},
+     {"sorszam": "a5", "esemeny": "a) 2. felhasználás", "T": "511", "K": "211", "osszeg": 3140000, "szamitas": "6 000 × 120 + 22 000 × 110"},
+     {"sorszam": "a6", "esemeny": "a) Hiány elszámolása", "T": "8693", "K": "211", "osszeg": 220000, "szamitas": "2 000 × 110"},
+     {"sorszam": "b1a", "esemeny": "b) Nyitás", "T": "211", "K": "491", "osszeg": 1000000, "szamitas": "10 000 × 100"},
+     {"sorszam": "b1b", "esemeny": "b) Nyitókészlet elszámolása költségként", "T": "511", "K": "211", "osszeg": 1000000, "szamitas": "nyitókészlet értéke"},
+     {"sorszam": "b2a", "esemeny": "b) 1. beszerzés ellenértéke", "T": "511", "K": "4541", "osszeg": 2400000, "szamitas": "20 000 × 120"},
+     {"sorszam": "b2b", "esemeny": "b) 1. beszerzés áfája", "T": "466", "K": "4541", "osszeg": 600000, "szamitas": "20 000 × 30"},
+     {"sorszam": "b-", "esemeny": "b) 1. felhasználás: nem könyveljük", "T": "-", "K": "-", "osszeg": 0, "szamitas": "-"},
+     {"sorszam": "b3a", "esemeny": "b) 2. beszerzés ellenértéke", "T": "511", "K": "4541", "osszeg": 3300000, "szamitas": "30 000 × 110"},
+     {"sorszam": "b3b", "esemeny": "b) 2. beszerzés áfája", "T": "466", "K": "4541", "osszeg": 825000, "szamitas": "30 000 × 27,5"},
+     {"sorszam": "b-", "esemeny": "b) 2. felhasználás: nem könyveljük", "T": "-", "K": "-", "osszeg": 0, "szamitas": "-"},
+     {"sorszam": "b4", "esemeny": "b) Mennyiségi nyilvántartás szerinti ZK állományba vétele", "T": "211", "K": "511", "osszeg": 880000, "szamitas": "8 000 × 110 (árvisszakeresés, utolsó ár)"},
+     {"sorszam": "b5", "esemeny": "b) Hiány elszámolása", "T": "8693", "K": "211", "osszeg": 220000, "szamitas": "2 000 × 110 (FIFO)"},
+     {"sorszam": "c1a", "esemeny": "c) Nyitás", "T": "211", "K": "491", "osszeg": 1000000, "szamitas": "10 000 × 100"},
+     {"sorszam": "c1b", "esemeny": "c) Nyitókészlet elszámolása költségként", "T": "511", "K": "211", "osszeg": 1000000, "szamitas": "nyitókészlet értéke"},
+     {"sorszam": "c2a", "esemeny": "c) 1. beszerzés ellenértéke", "T": "511", "K": "4541", "osszeg": 2400000, "szamitas": "20 000 × 120"},
+     {"sorszam": "c2b", "esemeny": "c) 1. beszerzés áfája", "T": "466", "K": "4541", "osszeg": 600000, "szamitas": "20 000 × 30"},
+     {"sorszam": "c3a", "esemeny": "c) 2. beszerzés ellenértéke", "T": "511", "K": "4541", "osszeg": 3300000, "szamitas": "30 000 × 110"},
+     {"sorszam": "c3b", "esemeny": "c) 2. beszerzés áfája", "T": "466", "K": "4541", "osszeg": 825000, "szamitas": "30 000 × 27,5"},
+     {"sorszam": "c4", "esemeny": "c) Leltár szerinti ZK állományba vétele", "T": "211", "K": "511", "osszeg": 660000, "szamitas": "6 000 × 110 (utolsó ár); leltáreltérés nem könyvelhető"}
+    ],
+    "egyeb": {
+     "211_zaro_egyenleg": {"a": 660000, "b": 660000, "c": 660000},
+     "anyagkoltseg_511": {"a": 5820000, "b": "1 000 000 + 2 400 000 + 3 300 000 − 880 000 = 5 820 000", "c": "1 000 000 + 2 400 000 + 3 300 000 − 660 000 = 6 040 000 (benne a 220 000 hiány)"},
+     "egyeb_raforditas_8693": {"a": 220000, "b": 220000, "c": 0}
+    }
+   },
+   "tanulsagok": [
+    "Folyamatos nyilvántartásnál év közben a 211-en minden mozgás megjelenik (beszerzés T 211, felhasználás K 211).",
+    "Csak mennyiségi és nyilvántartás nélküli esetben a beszerzés azonnal anyagköltség (511), felhasználást nem könyvelünk, a 211-et csak év elején és végén használjuk.",
+    "Csak mennyiségi nyilvántartásnál a nyilvántartás szerinti ZK-t vesszük állományba, és a hiányt külön elszámoljuk; nyilvántartás nélkül a leltár szerinti ZK-t vesszük fel, hiány nem értelmezhető (benne marad az anyagköltségben).",
+    "A záró mérlegérték mindhárom esetben 660 000 Ft, az eredmény is azonos, csak a ráfordítás-szerkezet más."
+   ],
+   "elteresek_a_forrasban": [
+    "A diák szövege a hiány elszámolásánál (a rész) azt írja: 'Leltár szerint 6.000 kg a meglévő anyagkészlet értéke' – a 6 000 kg mennyiség, nem érték. Számszaki eltérés nincs, a diák és a kézírásos jegyzet egyezik."
+   ]
+  },
+  {
+   "id": "VK-FEL-04",
+   "forras": "Vásárolt készletek feladatsor 4. feladat + megoldás + órai jegyzet 2.pdf",
+   "cim": "Áru könyvelése háromféle nyilvántartás mellett (FIFO)",
+   "szoveg": "Egy vállalkozás egyik áruféleségével kapcsolatosan: nyitókészlet 10 db × 100 Ft/db; 1. beszerzés 20 db × (120 + 30 áfa) Ft/db; 1. időszaki értékesítés 24 db, eladási ár 160 + 40 áfa Ft/db; 2. beszerzés 30 db × (110 + 27,5 áfa) Ft/db; 2. időszaki értékesítés 28 db, eladási ár 150 + 37,5 áfa Ft/db; ZK mennyiségi nyilvántartás alapján ?; ZK tényleges mennyiségi felvétel alapján 6 db. Könyvelje le vegyes naplóban, ha a vállalkozás a) folyamatos mennyiségi és értékbeni nyilvántartást vezet, b) csak mennyiségi nyilvántartást vezet, c) analitikus nyilvántartást nem vezet, és az árukat FIFO módszer alapján értékeli!",
+   "adatok": {
+    "nyitokeszlet": {"db": 10, "egysegar": 100},
+    "beszerzes_1": {"db": 20, "netto_egysegar": 120, "afa_egysegenkent": 30},
+    "ertekesites_1": {"db": 24, "netto_eladasi_ar": 160, "afa_egysegenkent": 40},
+    "beszerzes_2": {"db": 30, "netto_egysegar": 110, "afa_egysegenkent": 27.5},
+    "ertekesites_2": {"db": 28, "netto_eladasi_ar": 150, "afa_egysegenkent": 37.5},
+    "ZK_leltar_db": 6,
+    "ertekeles": "FIFO"
+   },
+   "megoldas": {
+    "szamitasok": [
+     {"mit": "1. értékesítés árbevétele / áfája", "keplet": "24 × 160; 24 × 40", "eredmeny": "3 840 Ft; 960 Ft"},
+     {"mit": "1. értékesítés ELÁBÉ (FIFO)", "keplet": "10 × 100 + 14 × 120", "eredmeny": "2 680 Ft (az 1. beszerzésből marad 6 db)"},
+     {"mit": "2. értékesítés árbevétele / áfája", "keplet": "28 × 150; 28 × 37,5", "eredmeny": "4 200 Ft; 1 050 Ft"},
+     {"mit": "2. értékesítés ELÁBÉ (FIFO)", "keplet": "6 × 120 + 22 × 110", "eredmeny": "3 140 Ft (a 2. beszerzésből marad 8 db)"},
+     {"mit": "ZK nyilvántartás szerint", "keplet": "10 + 20 − 24 + 30 − 28 = 8 db × 110", "eredmeny": "880 Ft"},
+     {"mit": "Hiány", "keplet": "(8 − 6) × 110", "eredmeny": "220 Ft"},
+     {"mit": "Leltár szerinti ZK", "keplet": "6 × 110", "eredmeny": "660 Ft"}
+    ],
+    "tetelek": [
+     {"sorszam": "a1", "esemeny": "a) Kereskedelmi áruk nyitása", "T": "261", "K": "491", "osszeg": 1000, "szamitas": "10 × 100"},
+     {"sorszam": "a2a", "esemeny": "a) 1. beszerzés", "T": "261", "K": "4541", "osszeg": 2400, "szamitas": "20 × 120"},
+     {"sorszam": "a2b", "esemeny": "a) 1. beszerzés áfája", "T": "466", "K": "4541", "osszeg": 600, "szamitas": "20 × 30"},
+     {"sorszam": "a3a", "esemeny": "a) 1. értékesítés árbevétele", "T": "311", "K": "91-92", "osszeg": 3840, "szamitas": "24 × 160"},
+     {"sorszam": "a3b", "esemeny": "a) 1. értékesítés fizetendő áfája", "T": "311", "K": "467", "osszeg": 960, "szamitas": "24 × 40"},
+     {"sorszam": "a3c", "esemeny": "a) Árukészlet kivezetése (ELÁBÉ)", "T": "814", "K": "261", "osszeg": 2680, "szamitas": "10 × 100 + 14 × 120"},
+     {"sorszam": "a4a", "esemeny": "a) 2. beszerzés", "T": "261", "K": "4541", "osszeg": 3300, "szamitas": "30 × 110"},
+     {"sorszam": "a4b", "esemeny": "a) 2. beszerzés áfája", "T": "466", "K": "4541", "osszeg": 825, "szamitas": "30 × 27,5"},
+     {"sorszam": "a5a", "esemeny": "a) 2. értékesítés árbevétele", "T": "311", "K": "91-92", "osszeg": 4200, "szamitas": "28 × 150"},
+     {"sorszam": "a5b", "esemeny": "a) 2. értékesítés fizetendő áfája", "T": "311", "K": "467", "osszeg": 1050, "szamitas": "28 × 37,5"},
+     {"sorszam": "a5c", "esemeny": "a) Árukészlet kivezetése (ELÁBÉ)", "T": "814", "K": "261", "osszeg": 3140, "szamitas": "6 × 120 + 22 × 110"},
+     {"sorszam": "a6", "esemeny": "a) Hiány elszámolása", "T": "8693", "K": "261", "osszeg": 220, "szamitas": "2 × 110"},
+     {"sorszam": "b1a", "esemeny": "b) Nyitás", "T": "261", "K": "491", "osszeg": 1000, "szamitas": "10 × 100"},
+     {"sorszam": "b1b", "esemeny": "b) Nyitókészlet elszámolása ráfordításként", "T": "814", "K": "261", "osszeg": 1000, "szamitas": "nyitókészlet értéke"},
+     {"sorszam": "b2a", "esemeny": "b) 1. beszerzés", "T": "814", "K": "4541", "osszeg": 2400, "szamitas": "20 × 120"},
+     {"sorszam": "b2b", "esemeny": "b) 1. beszerzés áfája", "T": "466", "K": "4541", "osszeg": 600, "szamitas": "20 × 30"},
+     {"sorszam": "b3a", "esemeny": "b) 1. értékesítés árbevétele", "T": "311", "K": "91-92", "osszeg": 3840, "szamitas": "24 × 160"},
+     {"sorszam": "b3b", "esemeny": "b) 1. értékesítés áfája", "T": "311", "K": "467", "osszeg": 960, "szamitas": "24 × 40"},
+     {"sorszam": "b3c", "esemeny": "b) Készlet kivezetése: nem könyveljük", "T": "-", "K": "-", "osszeg": 0, "szamitas": "-"},
+     {"sorszam": "b4a", "esemeny": "b) 2. beszerzés", "T": "814", "K": "4541", "osszeg": 3300, "szamitas": "30 × 110"},
+     {"sorszam": "b4b", "esemeny": "b) 2. beszerzés áfája", "T": "466", "K": "4541", "osszeg": 825, "szamitas": "30 × 27,5"},
+     {"sorszam": "b5a", "esemeny": "b) 2. értékesítés árbevétele", "T": "311", "K": "91-92", "osszeg": 4200, "szamitas": "28 × 150"},
+     {"sorszam": "b5b", "esemeny": "b) 2. értékesítés áfája", "T": "311", "K": "467", "osszeg": 1050, "szamitas": "28 × 37,5"},
+     {"sorszam": "b5c", "esemeny": "b) Készlet kivezetése: nem könyveljük", "T": "-", "K": "-", "osszeg": 0, "szamitas": "-"},
+     {"sorszam": "b6", "esemeny": "b) Nyilvántartás szerinti ZK állományba vétele", "T": "261", "K": "814", "osszeg": 880, "szamitas": "8 × 110"},
+     {"sorszam": "b7", "esemeny": "b) Hiány elszámolása", "T": "8693", "K": "261", "osszeg": 220, "szamitas": "2 × 110 (utolsó ár)"},
+     {"sorszam": "c1a", "esemeny": "c) Nyitás", "T": "261", "K": "491", "osszeg": 1000, "szamitas": "10 × 100"},
+     {"sorszam": "c1b", "esemeny": "c) Nyitókészlet elszámolása ráfordításként", "T": "814", "K": "261", "osszeg": 1000, "szamitas": "nyitókészlet értéke"},
+     {"sorszam": "c2a", "esemeny": "c) 1. beszerzés", "T": "814", "K": "4541", "osszeg": 2400, "szamitas": "20 × 120"},
+     {"sorszam": "c2b", "esemeny": "c) 1. beszerzés áfája", "T": "466", "K": "4541", "osszeg": 600, "szamitas": "20 × 30"},
+     {"sorszam": "c3a", "esemeny": "c) 1. értékesítés árbevétele", "T": "311", "K": "91-92", "osszeg": 3840, "szamitas": "24 × 160"},
+     {"sorszam": "c3b", "esemeny": "c) 1. értékesítés áfája", "T": "311", "K": "467", "osszeg": 960, "szamitas": "24 × 40"},
+     {"sorszam": "c4a", "esemeny": "c) 2. beszerzés", "T": "814", "K": "4541", "osszeg": 3300, "szamitas": "30 × 110"},
+     {"sorszam": "c4b", "esemeny": "c) 2. beszerzés áfája", "T": "466", "K": "4541", "osszeg": 825, "szamitas": "30 × 27,5"},
+     {"sorszam": "c5a", "esemeny": "c) 2. értékesítés árbevétele", "T": "311", "K": "91-92", "osszeg": 4200, "szamitas": "28 × 150"},
+     {"sorszam": "c5b", "esemeny": "c) 2. értékesítés áfája", "T": "311", "K": "467", "osszeg": 1050, "szamitas": "28 × 37,5"},
+     {"sorszam": "c6", "esemeny": "c) Leltár szerinti ZK állományba vétele", "T": "261", "K": "814", "osszeg": 660, "szamitas": "6 × 110; hiány nem értelmezhető"}
+    ],
+    "egyeb": {
+     "arbevetel_osszesen": 8040,
+     "ELABE_814": {"a": 5820, "b": "1 000 + 2 400 + 3 300 − 880 = 5 820", "c": "1 000 + 2 400 + 3 300 − 660 = 6 040 (a 220 Ft hiánnyal együtt)"},
+     "egyeb_raforditas_8693": {"a": 220, "b": 220, "c": 0},
+     "eredmeny_minden_esetben": "8 040 − 6 040 = 2 000 Ft",
+     "261_zaro_egyenleg": 660
+    }
+   },
+   "tanulsagok": [
+    "Folyamatos nyilvántartásnál az eladáskor két külön lépés van: árbevétel (T 311 / K 91-92 + áfa) és ELÁBÉ (T 814 / K 261).",
+    "Csak mennyiségi vagy nyilvántartás nélküli esetben a beszerzés azonnal ELÁBÉ (814), eladáskor ELÁBÉ-tétel nincs, év végén T 261 / K 814 a zárókészlet.",
+    "A ZH-n (minta-ZH 6. és 15.a) pont ez a b)/c) változat jön: beszerzés T 814 / K 4541, záró árukészlet T 261 / K 814."
+   ],
+   "elteresek_a_forrasban": [
+    "A 4.a hiány-diája szerint 'a beszerzés 2-ből maradt még 22 db' – helyesen 8 db maradt (22 db-ot adtak el belőle); az összeg (2 × 110 = 220) helyes.",
+    "A 4.b zárókészlet-diája szerint 'a beszerzés 2-ből maradt még 30 db' – helyesen 8 db; az összeg (8 × 110 = 880) helyes. Ugyanitt 'a nyitókészlet 10 db volt, így 2 db-bal csökkent' megjegyzés felesleges.",
+    "A 4.a 4B diájának címe 'Beszerzés 2-re jutó FIZETENDŐ áfa', de a tétel helyesen előzetesen felszámított áfa (T 466 / K 4541).",
+    "A 'B rész' fedlapja 'Folyamatos mennyiségi nyilvántartás' feliratú, a feladat szerint ez a 'csak mennyiségi nyilvántartás' esete.",
+    "Az órai jegyzet 2 a 4.b-ben a ZK-t 880-ra, a hiányt 220-ra könyveli – egyezik a diákkal; a 4.c-ben 660, hiány nélkül – egyezik."
+   ]
+  },
+  {
+   "id": "VK-FEL-05",
+   "forras": "Vásárolt készletek feladatsor 5. feladat + megoldás + órai jegyzet-1.png",
+   "cim": "Közvetített szolgáltatás továbbszámlázása",
+   "szoveg": "A vállalkozó egy 800 eFt bekerülési értéken nyilvántartott szolgáltatást 20%-os árréssel számlázott tovább belföldi igénybevevő részére (+ÁFA 270 000 Ft). Kontírozza a gazdasági eseményt vegyes naplóban!",
+   "adatok": {"bekerulesi_ertek": 800000, "arres_szazalek": 20, "afa": 270000},
+   "megoldas": {
+    "szamitasok": [
+     {"mit": "Eladási ár (árrés az eladási ár %-a)", "keplet": "800 000 = 80% → 100% = 800 000 / 0,8", "eredmeny": "1 000 000 Ft"},
+     {"mit": "Áfa ellenőrzése", "keplet": "1 000 000 × 27%", "eredmeny": "270 000 Ft – egyezik a megadottal"}
+    ],
+    "tetelek": [
+     {"sorszam": "1", "esemeny": "Készletcsökkenés elszámolása beszerzési áron", "T": "815", "K": "271", "osszeg": 800000, "szamitas": "bekerülési érték"},
+     {"sorszam": "2a", "esemeny": "Értékesítés árbevétele", "T": "311", "K": "91-92", "osszeg": 1000000, "szamitas": "800 000 / 0,8"},
+     {"sorszam": "2b", "esemeny": "Fizetendő áfa", "T": "311", "K": "467", "osszeg": 270000, "szamitas": "1 000 000 × 27%"}
+    ],
+    "egyeb": {"eredmenyhatas": "1 000 000 − 800 000 = 200 000 Ft árrés"}
+   },
+   "tanulsagok": [
+    "A közvetített szolgáltatás az áruk része: 271-en tartjuk nyilván, továbbszámlázáskor 815-re vezetjük ki (mint az árut 814-re).",
+    "Árrés = az eladási ár %-a: 800 000 / (1 − 0,2) = 1 000 000. Ha 800 000 × 1,2 = 960 000-rel számolnánk, az áfa nem jönne ki 270 000-re."
+   ],
+   "elteresek_a_forrasban": []
+  }
+ ],
+ "gyakorlo_kerdesek": [
+  {"id": "VK-Q01", "tipus": "tobbvalasztos", "kerdes": "A vásárolt készletekre igaz, hogy...", "opciok": ["a) A továbbértékesítési céllal vásárolt, változatlan állapotban eladott termék áru.", "b) A gyártáshoz beszerzett alapanyag a késztermékek közé tartozik.", "c) A FIFO értékelési módszer az elsőként beszerzett tételek árát rendeli először a készletcsökkenéshez.", "d) A levonható előzetesen felszámított áfa általában a készlet bekerülési értékének része.", "e) A közvetített szolgáltatás az áruk egyik sajátos csoportja."], "helyes": ["a", "c", "e"], "magyarazat": "Az alapanyag anyag, nem késztermék; a levonható áfa nem része a bekerülési értéknek (csak a le nem vonható).", "forras": "teszt"},
+  {"id": "VK-Q02", "tipus": "szamitas", "kerdes": "Súlyozott átlagár: 10 db × 1 000 Ft + 10 db × 1 400 Ft. Mennyi az átlagár (Ft/db)?", "opciok": null, "helyes": 1200, "magyarazat": "24 000 / 20 = 1 200 Ft/db. A mezőbe az egységár kell, nem a maradék készlet értéke (8 db × 1 200 = 9 600 hibás válasz volt).", "forras": "teszt"},
+  {"id": "VK-Q03", "tipus": "egyvalasztos", "kerdes": "Melyik mérlegcsoportba tartoznak a készletek?", "opciok": ["Befektetett eszközök", "Forgóeszközök", "Aktív időbeli elhatárolások", "Saját tőke"], "helyes": "Forgóeszközök", "magyarazat": "B. Forgóeszközök / I. Készletek.", "forras": "teszt"},
+  {"id": "VK-Q04", "tipus": "egyvalasztos", "kerdes": "Mi a vásárolt anyag állományba vételének alapja?", "opciok": ["Piaci érték", "Beszerzési érték", "Előállítási költség", "Eladási ár"], "helyes": "Beszerzési érték", "magyarazat": "Vásárolt készlet bekerülési értéke a beszerzési érték.", "forras": "teszt"},
+  {"id": "VK-Q05", "tipus": "tobbvalasztos", "kerdes": "Melyek részei a vásárolt készlet bekerülési értékének?", "opciok": ["Vám", "Nettó vételár", "Fuvarozás", "Levonható áfa", "Biztosítási díj"], "helyes": ["Vám", "Nettó vételár", "Fuvarozás"], "magyarazat": "A levonható áfa és a biztosítási díj nem része.", "forras": "teszt"},
+  {"id": "VK-Q06", "tipus": "parositas", "kerdes": "Párosítsa az eseményt az eredménykimutatás sorával!", "opciok": ["Készlet értékvesztése", "Áru könyv szerinti értéke eladáskor", "Anyagfelhasználás", "Értékvesztés visszaírása"], "helyes": {"Készlet értékvesztése": "Egyéb ráfordítás", "Áru könyv szerinti értéke eladáskor": "ELÁBÉ", "Anyagfelhasználás": "Anyagköltség", "Értékvesztés visszaírása": "Egyéb bevétel"}, "magyarazat": "Lásd a tanári eredménykimutatás-kapcsolati táblázatot.", "forras": "teszt"},
+  {"id": "VK-Q07", "tipus": "tobbvalasztos", "kerdes": "Mely készletértékelési módszerek elfogadottak (a Moodle-teszt szerint)?", "opciok": ["FIFO", "LIFO", "Gördülő súlyozott átlagár", "Egyedi azonosítás", "HIFO"], "helyes": ["FIFO", "Gördülő súlyozott átlagár", "Egyedi azonosítás"], "magyarazat": "Szt.: FIFO és gördülő átlagár; egyedi termékeknél egyedi azonosítás. LIFO, HIFO, LOFO nem.", "forras": "teszt"},
+  {"id": "VK-Q08", "tipus": "egyvalasztos", "kerdes": "Hova kerül a felhasznált anyag értéke?", "opciok": ["Anyagköltség", "ELÁBÉ", "Egyéb ráfordítás", "Igénybe vett szolgáltatás"], "helyes": "Anyagköltség", "magyarazat": "Anyagfelhasználás → anyagköltség (511 / 811).", "forras": "teszt"},
+  {"id": "VK-Q09", "tipus": "egyvalasztos", "kerdes": "Hol szerepel a mérlegben a készletekre adott előleg?", "opciok": ["Követelések között", "Készletek között", "Aktív időbeli elhatárolások között", "Befektetett pénzügyi eszközök között"], "helyes": "Készletek között", "magyarazat": "B.I.6. Készletekre adott előlegek – bár követelésként értékeljük.", "forras": "teszt"},
+  {"id": "VK-Q10", "tipus": "igaz_hamis", "kerdes": "A FIFO-módszer nem jelenti azt, hogy fizikailag is a legelőször beszerzett készlet kerül ki a raktárból.", "opciok": ["Igaz", "Hamis"], "helyes": "Igaz", "magyarazat": "Csak feltételezés, a költség-haszon elv miatt.", "forras": "teszt"},
+  {"id": "VK-Q11", "tipus": "egyvalasztos", "kerdes": "Mi az értékvesztés visszaírásának felső határa?", "opciok": ["A piaci érték", "Az eredeti bekerülési érték", "A könyv szerinti érték kétszerese", "Nincs felső határ"], "helyes": "Az eredeti bekerülési érték", "magyarazat": "A visszaírással a könyv szerinti érték nem haladhatja meg az eredeti bekerülési értéket.", "forras": "teszt"},
+  {"id": "VK-Q12", "tipus": "egyvalasztos", "kerdes": "Hogyan hat a beszerzéskor kapott engedmény a bekerülési értékre?", "opciok": ["Növeli", "Csökkenti", "Nem befolyásolja", "Egyéb bevétel"], "helyes": "Csökkenti", "magyarazat": "Vételár − kapcsolódó engedmény + felár.", "forras": "teszt"},
+  {"id": "VK-Q13", "tipus": "tobbvalasztos", "kerdes": "Mi jellemző a közvetített szolgáltatásra?", "opciok": ["Saját nevében vásárolja", "Szerződéses feltételek fontosak", "Változatlan formában továbbértékesíti", "Saját maga állítja elő", "Az igénybe vett szolgáltatások része"], "helyes": ["Saját nevében vásárolja", "Szerződéses feltételek fontosak", "Változatlan formában továbbértékesíti"], "magyarazat": "Saját nevében vett, harmadik személlyel kötött szerződés alapján változatlanul továbbszámlázott szolgáltatás; az áruk része.", "forras": "teszt"},
+  {"id": "VK-Q14", "tipus": "egyvalasztos", "kerdes": "Hol jelenik meg a továbbértékesített áru könyv szerinti értéke?", "opciok": ["Anyagköltség", "ELÁBÉ", "Egyéb ráfordítás", "Árbevétel"], "helyes": "ELÁBÉ", "magyarazat": "814. Eladott áruk beszerzési értéke.", "forras": "teszt"},
+  {"id": "VK-Q15", "tipus": "egyvalasztos", "kerdes": "Ha nincs folyamatos készletnyilvántartás, hogyan állapítják meg a zárókészletet?", "opciok": ["Becsléssel", "Mennyiségi felvétellel végzett leltározással", "Az előző évi zárókészlet alapján", "A beszerzések átlagából"], "helyes": "Mennyiségi felvétellel végzett leltározással", "magyarazat": "A fordulónapi készletet tényleges mennyiségi felvétellel kell megállapítani.", "forras": "teszt"},
+  {"id": "VK-Q16", "tipus": "parositas", "kerdes": "Melyik eszközcsoportba tartozik?", "opciok": ["Kereskedő eladásra vett laptopjai", "Kereskedő saját irodai laptopja", "Alapanyagra adott előleg", "Boltban eladott (vásárolt) kávé", "Saját gyártású bútor", "Gyártáshoz vett liszt"], "helyes": {"Kereskedő eladásra vett laptopjai": "Áruk", "Kereskedő saját irodai laptopja": "Tárgyi eszköz", "Alapanyagra adott előleg": "Készletekre adott előlegek", "Boltban eladott (vásárolt) kávé": "Áruk", "Saját gyártású bútor": "Késztermékek", "Gyártáshoz vett liszt": "Anyagok"}, "magyarazat": "A rendeltetés dönt: továbbértékesítés → áru; tartós saját használat → tárgyi eszköz; saját előállítás → késztermék; termeléshez → anyag.", "forras": "teszt"},
+  {"id": "VK-Q17", "tipus": "egyvalasztos", "kerdes": "Hova kerül a továbbszámlázott közvetített szolgáltatás bekerülési értéke?", "opciok": ["Igénybe vett szolgáltatások értéke", "Eladott (közvetített) szolgáltatások értéke", "ELÁBÉ", "Egyéb szolgáltatások értéke"], "helyes": "Eladott (közvetített) szolgáltatások értéke", "magyarazat": "T 815 / K 271.", "forras": "teszt"},
+  {"id": "VK-Q18", "tipus": "egyvalasztos", "kerdes": "Milyen értéken kell nyilvántartásba venni az apportként átvett készletet?", "opciok": ["Piaci érték", "Létesítő okirat szerinti érték", "Beszerzési érték", "Könyv szerinti érték az apportálónál"], "helyes": "Létesítő okirat szerinti érték", "magyarazat": "Apport: létesítő okiratban meghatározott érték.", "forras": "teszt"},
+  {"id": "VK-Q19", "tipus": "egyvalasztos", "kerdes": "Mit mutat a készletanalitika?", "opciok": ["Csak a főkönyvi egyenleget", "A készletféleségek állományát és mozgását", "Csak a leltárhiányt", "A vevők tartozását"], "helyes": "A készletféleségek állományát és mozgását", "magyarazat": "Részletező nyilvántartás: nyitó, növekedés, csökkenés, záró készletfajtánként.", "forras": "teszt"},
+  {"id": "VK-Q20", "tipus": "szamitas", "kerdes": "Vételár 400 000 Ft, fuvarköltség 30 000 Ft, kapott engedmény 10 000 Ft, levonható áfa 108 000 Ft. Mennyi a bekerülési érték?", "opciok": null, "helyes": 420000, "magyarazat": "400 000 + 30 000 − 10 000 = 420 000; a levonható áfa nem része.", "forras": "teszt"},
+  {"id": "VK-Q21", "tipus": "tobbvalasztos", "kerdes": "Mely okok miatt kell értékvesztést vizsgálni a fordulónapon?", "opciok": ["Megrongálódás", "Feleslegessé válás", "Értékesíthetőség kétségessé válása", "Árfolyam-emelkedés", "Beszerzési ár csökkenése a beszerzést követő napon"], "helyes": ["Megrongálódás", "Feleslegessé válás", "Értékesíthetőség kétségessé válása"], "magyarazat": "Plusz: az előírásoknak (szabvány) nem felel meg.", "forras": "teszt"},
+  {"id": "VK-Q22", "tipus": "igaz_hamis", "kerdes": "A saját előállítású betétdíjas göngyöleget vásárolt készletként kell kezelni.", "opciok": ["Igaz", "Hamis"], "helyes": "Igaz", "magyarazat": "Kivétel a csoportosítás alól: saját betétdíjas göngyöleg mindig vásárolt készlet.", "forras": "teszt"},
+  {"id": "VK-Q23", "tipus": "egyvalasztos", "kerdes": "Melyik NEM tartozik az áruk közé?", "opciok": ["Kereskedelmi áru", "Betétdíjas göngyöleg", "Közvetített szolgáltatás", "Befejezetlen termelés"], "helyes": "Befejezetlen termelés", "magyarazat": "A befejezetlen termelés saját termelésű készlet.", "forras": "teszt"},
+  {"id": "VK-Q24", "tipus": "tobbvalasztos", "kerdes": "Melyek betétdíjas göngyölegek?", "opciok": ["Raklap", "Rekesz", "Hordó", "Konzervdoboz", "Tubus"], "helyes": ["Raklap", "Rekesz", "Hordó"], "magyarazat": "A konzervdoboz, tubus az áru tartozéka, többszöri felhasználásra nem alkalmas.", "forras": "teszt"},
+  {"id": "VK-Q25", "tipus": "szamitas", "kerdes": "Nyitókészlet 10 db × 1 000 Ft, beszerzés 10 db × 1 200 Ft. FIFO szerint mennyi 12 db felhasználás értéke, és mennyi a zárókészlet?", "opciok": null, "helyes": {"felhasznalas": 12400, "zarokeszlet": 9600}, "magyarazat": "10 × 1 000 + 2 × 1 200 = 12 400; ZK 8 × 1 200 = 9 600. (A Moodle-ben két kérdés volt; az adatok a helyes válaszokból visszafejtve.)", "forras": "teszt"},
+  {"id": "VK-Q26", "tipus": "szamitas", "kerdes": "Vételár 700 000 Ft, szállítási költség 50 000 Ft, vám 20 000 Ft. Mennyi a bekerülési érték?", "opciok": null, "helyes": 770000, "magyarazat": "700 000 + 50 000 + 20 000 = 770 000 Ft. (A tételek jellege a Moodle-javításból nem látszik; a tételek a helyes összeg alapján rekonstruáltak.)", "forras": "teszt"},
+  {"id": "VK-Q27", "tipus": "tobbvalasztos", "kerdes": "Mely vásárolt készletek jelennek meg önálló készlet-mérlegsoron?", "opciok": ["Anyagok", "Áruk", "Készletekre adott előlegek", "Közvetített szolgáltatások", "Betétdíjas göngyölegek"], "helyes": ["Anyagok", "Áruk", "Készletekre adott előlegek"], "magyarazat": "A közvetített szolgáltatás és a göngyöleg az Áruk soron belül van.", "forras": "teszt"},
+  {"id": "VK-Q28", "tipus": "tobbvalasztos", "kerdes": "Mit tartalmaz a folyamatos mennyiségi és értékbeni nyilvántartás?", "opciok": ["Mennyiség", "Érték", "Bevételezések és kiadások", "Csak a leltár eredménye"], "helyes": ["Mennyiség", "Érték", "Bevételezések és kiadások"], "magyarazat": "Minden mozgás mennyiségben és értékben.", "forras": "teszt"},
+  {"id": "VK-Q29", "tipus": "egyvalasztos", "kerdes": "Gördülő átlagárnál mikor kell az átlagárat újraszámolni?", "opciok": ["Év végén", "Beszerzés után, a következő kiadás előtt", "Csak a nyitókészletnél", "Minden kiadás után"], "helyes": "Beszerzés után, a következő kiadás előtt", "magyarazat": "Az átlagár mindig a készletcsökkenés előtt határozandó meg.", "forras": "teszt"},
+  {"id": "VK-Q30", "tipus": "parositas", "kerdes": "Párosítsa a nyilvántartási módot az ismert adattal!", "opciok": ["Nincs folyamatos", "Mennyiségi és értékbeni", "Csak értékbeni", "Csak mennyiségi"], "helyes": {"Nincs folyamatos": "Egyik adat sem követhető", "Mennyiségi és értékbeni": "Mindkettő ismert", "Csak értékbeni": "Érték ismert", "Csak mennyiségi": "Mennyiség ismert"}, "magyarazat": "Tanári összefoglaló táblázat.", "forras": "teszt"},
+  {"id": "VK-Q31", "tipus": "szamitas", "kerdes": "Készletek könyv szerinti értéke 900 000 Ft, leltárhiány 20 000 Ft, értékvesztés 80 000 Ft. Mennyi a mérlegérték?", "opciok": null, "helyes": 800000, "magyarazat": "900 000 − 20 000 − 80 000 = 800 000 Ft.", "forras": "teszt"},
+  {"id": "VK-Q32", "tipus": "parositas", "kerdes": "Párosítsa a bekerülés módját a bekerülési értékkel!", "opciok": ["Térítés nélküli átvétel", "Apport", "Saját előállítás", "Vásárlás"], "helyes": {"Térítés nélküli átvétel": "Piaci érték", "Apport": "Létesítő okirat szerinti érték", "Saját előállítás": "Előállítási költség", "Vásárlás": "Beszerzési érték"}, "magyarazat": "Plusz: ajándék és leltári többlet – piaci érték; követelés fejében – szerződés szerinti; csere – csere szerinti érték.", "forras": "teszt"},
+  {"id": "VK-Q33", "tipus": "egyvalasztos", "kerdes": "Melyik csökkenti a készletek mérlegértékét?", "opciok": ["Értékvesztés visszaírása", "Értékvesztés elszámolása", "Leltártöbblet", "Beszerzés"], "helyes": "Értékvesztés elszámolása", "magyarazat": "A hiány is csökkenti; a visszaírás és a többlet növeli.", "forras": "teszt"},
+  {"id": "VK-Q34", "tipus": "egyvalasztos", "kerdes": "Melyik példa közvetített szolgáltatás?", "opciok": ["Saját nevében vett fuvarozás változatlan továbbszámlázása", "Saját teherautóval végzett fuvarozás", "Az irodai takarítás költsége", "A raktár bérleti díja"], "helyes": "Saját nevében vett fuvarozás változatlan továbbszámlázása", "magyarazat": "Saját nevében vásárolja és változatlanul továbbszámlázza.", "forras": "teszt"},
+  {"id": "VK-Q35", "tipus": "tobbvalasztos", "kerdes": "Melyek anyagok egy termelővállalatnál?", "opciok": ["Acéllemez", "Kenőanyag", "Munkaruha", "Eladásra vett kereskedelmi termék", "Gyártósor"], "helyes": ["Acéllemez", "Kenőanyag", "Munkaruha"], "magyarazat": "A munkaruha az anyagi eszközök között anyag; a gyártósor tárgyi eszköz.", "forras": "teszt"},
+  {"id": "VK-Q36", "tipus": "egyvalasztos", "kerdes": "Mit jelent a FIFO?", "opciok": ["First In, First Out", "Last In, First Out", "Highest In, First Out", "First In, Final Out"], "helyes": "First In, First Out", "magyarazat": "Első be – első ki.", "forras": "teszt"},
+  {"id": "VK-Q37", "tipus": "igaz_hamis", "kerdes": "A vásárolt készletek beszerzési értékének része a biztosítási díj, ugyanúgy, mint a tárgyi eszközöknél.", "opciok": ["Igaz", "Hamis"], "helyes": "Hamis", "magyarazat": "A tananyag kiemeli: készleteknél a biztosítási díj NEM része a beszerzési értéknek.", "forras": "tananyag"},
+  {"id": "VK-Q38", "tipus": "igaz_hamis", "kerdes": "A bizományba átvett készletet a mérlegben a készletek között kell kimutatni.", "opciok": ["Igaz", "Hamis"], "helyes": "Hamis", "magyarazat": "Nem a vállalkozás tulajdona; 0. nyilvántartási számlákon célszerű kimutatni.", "forras": "tananyag"},
+  {"id": "VK-Q39", "tipus": "igaz_hamis", "kerdes": "A számviteli törvény a LIFO módszert is megengedi.", "opciok": ["Igaz", "Hamis"], "helyes": "Hamis", "magyarazat": "Csak FIFO és gördülő (súlyozott) átlagár (egyedi termékeknél egyedi azonosítás).", "forras": "tananyag"},
+  {"id": "VK-Q40", "tipus": "igaz_hamis", "kerdes": "Folyamatos drágulás mellett FIFO-val magasabb a zárókészlet értéke, mint átlagárral.", "opciok": ["Igaz", "Hamis"], "helyes": "Igaz", "magyarazat": "FIFO-nál a zárókészlet a legutolsó (legmagasabb) árakon szerepel; 1–2. feladat: 99 000 vs. 96 976 Ft.", "forras": "feladat"},
+  {"id": "VK-Q41", "tipus": "igaz_hamis", "kerdes": "Ha a vállalkozás nem vezet készletnyilvántartást, a leltárhiányt T 8693 / K 261 tétellel kell elszámolni.", "opciok": ["Igaz", "Hamis"], "helyes": "Hamis", "magyarazat": "Nyilvántartás nélkül a leltáreltérés nem értelmezhető; a hiány az ELÁBÉ-ban (anyagköltségben) marad.", "forras": "tananyag"},
+  {"id": "VK-Q42", "tipus": "igaz_hamis", "kerdes": "A növendék-, hízó- és egyéb állatokat akkor is saját termelésű készletként kell nyilvántartani, ha vásárolták őket.", "opciok": ["Igaz", "Hamis"], "helyes": "Igaz", "magyarazat": "Csoportosítási kivétel.", "forras": "tananyag"},
+  {"id": "VK-Q43", "tipus": "igaz_hamis", "kerdes": "Ha egy bolt saját előállítású süteményt is árul, azt áruként kell nyilvántartani.", "opciok": ["Igaz", "Hamis"], "helyes": "Hamis", "magyarazat": "Saját előállítású készlet saját boltban is saját termelésű készlet (késztermék).", "forras": "tananyag"},
+  {"id": "VK-Q44", "tipus": "igaz_hamis", "kerdes": "Az értékvesztés visszaírása egyéb bevétel, és csak a fordulónapi értékeléssel kapcsolatos tétel lehet.", "opciok": ["Igaz", "Hamis"], "helyes": "Igaz", "magyarazat": "T 229/269 / K 9661.", "forras": "tananyag"},
+  {"id": "VK-Q45", "tipus": "igaz_hamis", "kerdes": "Folyamatos mennyiségi nyilvántartás esetén tényleges mennyiségi felvételt (leltározást) legalább 3 évente kell végezni.", "opciok": ["Igaz", "Hamis"], "helyes": "Igaz", "magyarazat": "A leltár a nyilvántartás szerinti zárókészletből elkészíthető.", "forras": "tananyag"},
+  {"id": "VK-Q46", "tipus": "igaz_hamis", "kerdes": "A kávé ledarálása és becsomagolása után a kávé már nem áru, mert nem változatlan formában értékesítik.", "opciok": ["Igaz", "Hamis"], "helyes": "Hamis", "magyarazat": "Az értékesítéshez való előkészítés (darálás, csomagolás, szortírozás) változatlan formának számít.", "forras": "tananyag"},
+  {"id": "VK-Q47", "tipus": "egyvalasztos", "kerdes": "A Kft. az árukról csak mennyiségi nyilvántartást vezet. 200 db árut vásárol 2 200 Ft/db + áfa áron. Melyik a helyes könyvelés (nettó érték)?", "opciok": ["T 261 / K 4541 440 000", "T 814 / K 4541 440 000", "T 511 / K 4541 440 000", "T 814 / K 4541 558 800"], "helyes": "T 814 / K 4541 440 000", "magyarazat": "Csak mennyiségi nyilvántartásnál a beszerzés azonnal ELÁBÉ; áfa külön: T 466 / K 4541 118 800 (minta-ZH 6.a–b).", "forras": "feladat"},
+  {"id": "VK-Q48", "tipus": "egyvalasztos", "kerdes": "Az előző feladatban az áruk felét eladták, év végén leltárkülönbözet nincs. Melyik a záró árukészlet könyvelése?", "opciok": ["T 814 / K 261 220 000", "T 261 / K 814 220 000", "T 261 / K 491 220 000", "Nem kell könyvelni"], "helyes": "T 261 / K 814 220 000", "magyarazat": "100 db × 2 200 = 220 000 állományba vétele (minta-ZH 15.a). Eladáskor ELÁBÉ-tétel nem volt.", "forras": "feladat"},
+  {"id": "VK-Q49", "tipus": "szamitas", "kerdes": "Nyitókészlet 1 500 kg × 110 Ft; beszerzések: 200 kg × 110, 400 kg × 112, 300 kg × 115. FIFO szerint mennyi 1 800 kg felhasználás értéke?", "opciok": null, "helyes": 198200, "magyarazat": "1 500 × 110 + 200 × 110 + 100 × 112 = 198 200 Ft.", "forras": "feladat"},
+  {"id": "VK-Q50", "tipus": "szamitas", "kerdes": "Ugyanezen adatokkal gördülő átlagárral mennyi az átlagár (2 tizedesre) és az 1 800 kg felhasználás értéke?", "opciok": null, "helyes": {"atlagar": 110.96, "felhasznalas": 199728}, "magyarazat": "266 300 / 2 400 = 110,96; 1 800 × 110,96 = 199 728 Ft (tanári kerekítéssel).", "forras": "feladat"},
+  {"id": "VK-Q51", "tipus": "szamitas", "kerdes": "Nyilvántartás szerint 8 db áru van, leltár szerint 6 db. Az utolsó beszerzési ár 110 Ft/db (abból 8 db maradt). Mennyi a hiány értéke, és mi a tétele (folyamatos nyilvántartás)?", "opciok": null, "helyes": {"osszeg": 220, "T": "8693", "K": "261"}, "magyarazat": "2 db × 110 = 220 Ft, egyéb ráfordítás.", "forras": "feladat"},
+  {"id": "VK-Q52", "tipus": "szamitas", "kerdes": "Egy 800 000 Ft bekerülési értékű közvetített szolgáltatást 20%-os árréssel számláznak tovább. Mennyi a nettó árbevétel és az áfa?", "opciok": null, "helyes": {"arbevetel": 1000000, "afa": 270000}, "magyarazat": "Árrés az eladási ár %-a: 800 000 / 0,8 = 1 000 000; áfa 27% = 270 000. Tételek: T 815 / K 271 800 000; T 311 / K 91-92 1 000 000; T 311 / K 467 270 000.", "forras": "feladat"},
+  {"id": "VK-Q53", "tipus": "egyvalasztos", "kerdes": "Melyik számlára könyveljük a készletek értékvesztését?", "opciok": ["T 8661 / K 229 vagy 269", "T 8693 / K 211", "T 8664 / K 138", "T 229 / K 9661"], "helyes": "T 8661 / K 229 vagy 269", "magyarazat": "8661 Készletek elszámolt értékvesztése; a 8693 a hiány, a 8664/138 tárgyi eszköz, a T 229 / K 9661 a visszaírás.", "forras": "generalt"},
+  {"id": "VK-Q54", "tipus": "merlegsor", "kerdes": "Sorolja fel a mérleg B.I. Készletek sorait és a mérleg oszlopait!", "opciok": null, "helyes": {"sorok": ["1. Anyagok", "2. Befejezetlen termelés és félkész termékek", "3. Növendék-, hízó- és egyéb állatok", "4. Késztermékek", "5. Áruk", "6. Készletekre adott előlegek"], "oszlopok": ["Előző év", "Előző év(ek) módosításai", "Tárgyév"]}, "magyarazat": "Minta-ZH elmélet 2. feladat (9 pont).", "forras": "tananyag"},
+  {"id": "VK-Q55", "tipus": "merlegsor", "kerdes": "Melyik mérlegsoron jelenik meg a 271. Közvetített szolgáltatások és a 281. Saját göngyölegek egyenlege?", "opciok": ["B.I.1. Anyagok", "B.I.5. Áruk", "B.I.6. Készletekre adott előlegek", "B.II. Követelések"], "helyes": "B.I.5. Áruk", "magyarazat": "Áruk: 26–28. számlacsoport (kereskedelmi áru, közvetített szolgáltatás, betétdíjas göngyöleg).", "forras": "tananyag"},
+  {"id": "VK-Q56", "tipus": "egyvalasztos", "kerdes": "Csak mennyiségi nyilvántartásnál mi a tétele az áru értékesítésekor a könyv szerinti értéknek?", "opciok": ["T 814 / K 261", "T 261 / K 814", "Nincs ilyen tétel", "T 8693 / K 261"], "helyes": "Nincs ilyen tétel", "magyarazat": "A beszerzés már ELÁBÉ-ként lett elszámolva; csak az árbevételt és az áfát könyveljük.", "forras": "feladat"},
+  {"id": "VK-Q57", "tipus": "kifejtes", "kerdes": "Mutassa be a közvetített szolgáltatás fogalmát! (7 pont)", "opciok": null, "helyes": "Speciális készletféleség, az áruk sajátos csoportja; a gazdálkodó saját nevében vásárolja; harmadik személlyel (megrendelővel) kötött szerződés alapján; a szerződésben rögzített módon részben vagy egészben változatlan formában; általában magasabb áron továbbszámlázza; mintha bolti árukészlet lenne; továbbszámlázáskor az eladott (közvetített) szolgáltatások értéke (815) ráfordítás; példa: továbbszámlázott fuvarozás, alvállalkozó; az Szt. az alvállalkozó fogalmát nem ismeri.", "magyarazat": "Lásd VK-FOG-06.", "forras": "tananyag"},
+  {"id": "VK-Q58", "tipus": "kifejtes", "kerdes": "Mutassa be a vásárolt készletek bekerülési (beszerzési) értékét! (7 pont)", "opciok": null, "helyes": "Raktárba beszállításig felmerülő, egyedileg hozzákapcsolható tételek: vételár − engedmény + felár; szállítás, rakodás; közvetítői, bizományosi díj; illeték, adó, vám; le nem vonható áfa; hitel díjai és beszállításig felmerült kamata. Nem része: levonható áfa, biztosítási díj. Más bekerülési módok: apport – létesítő okirat; térítés nélkül, ajándék, többlet – piaci érték; saját előállítás – előállítási költség.", "magyarazat": "Lásd VK-FOG-08.", "forras": "tananyag"},
+  {"id": "VK-Q59", "tipus": "kifejtes", "kerdes": "Mutassa be a FIFO és a gördülő átlagáras készletértékelési eljárást! (7 pont)", "opciok": null, "helyes": "Kikerüléskor egyszerűsítés kell (költség-haszon elv); Szt. csak FIFO és gördülő átlagár; FIFO: beszerzések sorrendjében fogy, nem fizikai sorrend, ZK a legutolsó árakon, drágulásnál magasabb ZK; gördülő átlagár: aktuális készlet súlyozott átlagára, átlagár a készletcsökkenés előtt, maradék az előző átlagáron, ZK = maradék × utolsó átlagár; számviteli politikában rögzíteni.", "magyarazat": "Lásd VK-FOG-09–11.", "forras": "tananyag"},
+  {"id": "VK-Q60", "tipus": "kifejtes", "kerdes": "Mutassa be a készletek értékvesztését és annak visszaírását! (7 pont)", "opciok": null, "helyes": "Fordulónapi értékelés; okok: előírásnak nem felel meg, megrongálódott, felesleges, hasznosítása kétséges; piaci érték < könyv szerinti érték → különbözet értékvesztés, egyéb ráfordítás (8661); immobil és inkurrens készletek elkülönítése; egyedileg vagy kis értéknél %-osan; visszaírás: piaci érték tartósan és jelentősen magasabb → egyéb bevétel (9661); felső határ az eredeti bekerülési érték; csak fordulónapon; kiegészítő mellékletben részletezni.", "magyarazat": "Lásd VK-FOG-16–17.", "forras": "tananyag"}
+ ],
+ "csapdak": [
+  "A levonható (előzetesen felszámított) áfa NEM része a bekerülési értéknek – a minta-ZH tesztjében ez volt a rossz d) válasz; csak a le nem vonható áfa része.",
+  "A biztosítási díj a vásárolt készletek beszerzési értékének NEM része (a tárgyi eszközöknél igen).",
+  "Moodle átlagár-kérdés: a számmezőbe az egységár (Ft/db) kell, nem a maradék készlet értéke (1 200, nem 9 600).",
+  "A közvetített szolgáltatás az áruk sajátos csoportja (271 → 815), nem igénybe vett szolgáltatás (512/812).",
+  "A gyártáshoz vett alapanyag anyag, nem késztermék (minta-ZH b) rossz válasz).",
+  "Csak mennyiségi nyilvántartásnál az áru beszerzése T 814 (nem 261!), eladáskor nincs ELÁBÉ-tétel, év végén T 261 / K 814 a zárókészlet.",
+  "Anyagnál ugyanez 511-gyel (T 511 / K 4541, év végén T 211 / K 511) – a tanári megoldás 511-et használ, nem 811-et.",
+  "Év elején a nyitókészletet vissza kell vezetni költségként (T 814 / K 261, ill. T 511 / K 211), ha a vállalkozás nem vezet folyamatos értékbeni nyilvántartást.",
+  "Nyilvántartás nélkül leltárhiány NEM könyvelhető (nincs mivel összevetni) – a hiány az ELÁBÉ-ban/anyagköltségben marad.",
+  "Hiány: T 8693 (egyéb ráfordítás), nem 8661; értékvesztés: T 8661, visszaírás K 9661 – ne keverd a tárgyi eszköz 8664/138 tételével.",
+  "Az értékvesztés visszaírása legfeljebb az eredeti bekerülési értékig mehet.",
+  "Az árrés az eladási ár százaléka: 20% árrés → 800 000 / 0,8 = 1 000 000 (nem 960 000). Ellenőrzés: az áfa 270 000 = 27% × 1 000 000.",
+  "Gördülő átlagárnál súlyozott átlagot kell számolni (értékösszeg / mennyiségösszeg), és mindig a felhasználás ELŐTT; a maradékot az előző átlagáron visszük tovább.",
+  "Csak FIFO és gördülő átlagár megengedett (egyedi termékeknél egyedi azonosítás); LIFO, HIFO, LOFO nem.",
+  "A készletekre adott előleg a készletek között (B.I.6.) jelenik meg, de követelésként értékeljük; nem valódi készlet.",
+  "Saját betétdíjas göngyöleg mindig vásárolt készlet (még ha saját előállítású is); növendék-, hízóállat mindig saját termelésű (még ha vásárolt is).",
+  "Bizományba átvett készlet nem kerül a mérlegbe (nem saját tulajdon).",
+  "A kereskedő saját használatú laptopja tárgyi eszköz, az eladásra vett laptop áru – a rendeltetés dönt.",
+  "A betétdíjas göngyöleg és a közvetített szolgáltatás nem önálló mérlegsor, hanem az Áruk sor része; önálló vásárolt készlet-sor: Anyagok, Áruk, Készletekre adott előlegek."
+ ]
+}

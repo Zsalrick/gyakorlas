@@ -1,0 +1,3278 @@
+{
+ "tema": "Saját termelésű készletek (késztermék kalkuláció, könyvelés 5-ös számlaosztállyal, összköltséges eredménykimutatás)",
+ "forrasok": [
+  "src/elmelet/sajat.txt (Saját termelésű készletek elmélet, tanári diák)",
+  "src/feladat_sajat/Saját termelésű készletek feladatsor.txt",
+  "src/feladat_sajat/Saját termelésű készletek feladatsor1_szétszedés és moodle (megoldás)",
+  "src/feladat_sajat/órai jegyzet / órai példa (+ órai példa megoldása-1.png)",
+  "zh/I_Gyakorlat_MINTAZH_megoldott_javított.pdf (1. feladat)",
+  "zh/I_elméleti_Minta megoldás_javított.pdf (teszt)",
+  "zh/tukor.txt",
+  "zh-anyag/szamlaszamok.json",
+  "zh-anyag/00_zh_info.json"
+ ],
+ "zh_relevancia": "LEGFONTOSABB gyakorlati téma: a gyakorlati rész 1. feladata (31 pont) – kalkuláció (5 p), könyvelés (16 p + áfa 2,5 p), összköltséges EK az üzemi eredményig (7,5 p). Tanári tipp: csak 5-ös számlaosztály (kizárólag költségnem-elszámolás, összköltség eljárás), 6-os és 7-es osztály nem lesz. Elméletben teszt ('A saját termelésű készletekre igaz…') és fogalom-kérdés is jöhet.",
+ "fogalmak": [
+  {
+   "id": "saj_term_keszlet",
+   "nev": "Saját termelésű készletek",
+   "definicio": "A vállalkozás saját termelő (szolgáltató) tevékenysége során előállított, a tevékenységet egy évnél rövidebb ideig szolgáló, értékesítésre vagy továbbfelhasználásra szánt készletek. A mérlegben a B.I. Készletek csoportban három sor: 2. Befejezetlen termelés és félkész termékek, 3. Növendék-, hízó- és egyéb állatok, 4. Késztermékek. Bekerülési értékük a közvetlen önköltség (előállítási költség), amelyet kalkulációval (előzetes, közbenső, utólagos) határoznak meg. Az év közbeni nyilvántartás lehet mennyiségi és értékbeni (tényleges előállítási költségen vagy elszámolóáron + KÉK). Állományuk változását összköltség eljárásnál az 581. STKÁV számla mutatja, a mérlegben a beszámoló készítés előtt piaci értékre vizsgálni kell (értékvesztés).",
+   "kulcselemek": [
+    "mérleg B.I.2–4 sor",
+    "közvetlen önköltség",
+    "kalkuláció",
+    "581 STKÁV",
+    "értékvesztés"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "magas",
+   "forras": "elmelet/sajat (tanári diák)"
+  },
+  {
+   "id": "befejezetlen",
+   "nev": "Befejezetlen termelés",
+   "definicio": "Megmunkálás alatt lévő termékek, teljesítmények, amelyeken legalább egy lényeges (számottevő) munkaműveletet már elvégeztek, de a teljes megmunkálási folyamaton még nem mentek keresztül, ezért saját termelésű készletként raktárra nem vehetők. Ide tartoznak a fordulónapig ki nem számlázott szolgáltatások is (pl. építőipari tevékenység el nem ismert szerelési költségei); szolgáltatásnál a felmerült költségeknek az a része, amellyel kapcsolatban árbevételt még nem mutattak ki. Hogy mi minősül számottevő műveletnek, azt a számviteli politikában kell meghatározni (pl. a raktárban végzett darabolás nem az). Folyamatos nyilvántartás róla nincs, értékét a kalkulációs időszak végén kalkulációval állapítják meg. Számlája a 231–234, mérlegsora B.I.2.",
+   "kulcselemek": [
+    "legalább 1 lényeges művelet",
+    "nem teljes megmunkálás",
+    "raktárra nem vehető",
+    "ki nem számlázott szolgáltatás",
+    "kalkulációval értékelik",
+    "231"
+   ],
+   "pelda": "Félig összeszerelt gép a gyártósoron; elvégzett, de még nem számlázott építőipari munka.",
+   "zh_valoszinuseg": "magas",
+   "forras": "elmelet/sajat (tanári diák)"
+  },
+  {
+   "id": "felkesz",
+   "nev": "Félkész termék",
+   "definicio": "Olyan termék, amely a vállalkozásnál legalább egy teljes megmunkálási folyamaton végigment, raktárra vehető, vagy ilyen címen raktárra vették, de még nem késztermék, mert a vállalkozáson belül további megmunkálásra kerülhet – ugyanakkor el is adható. Elhatárolás: ha a köztes állapotú termék már raktárra vehető és további megmunkálása később történik = félkész termék; ha még nem vehető raktárra, mert a megmunkálás folytatódik = befejezetlen termelés. Számlája a 235–237, mérlegsora a befejezetlen termeléssel közös (B.I.2).",
+   "kulcselemek": [
+    "legalább 1 teljes megmunkálási folyamat",
+    "raktárra vehető",
+    "további megmunkálás vagy eladás",
+    "235–237"
+   ],
+   "pelda": "Hajtómotorral még fel nem szerelt fúrógép; festetlen bútor.",
+   "zh_valoszinuseg": "magas",
+   "forras": "elmelet/sajat (tanári diák)"
+  },
+  {
+   "id": "kesztermek",
+   "nev": "Késztermék",
+   "definicio": "Olyan saját termelésű termék, amely valamennyi megmunkálási folyamaton végigment, megfelel a vele szemben támasztott (minőségi, szabvány) előírásoknak, és késztermékként raktárra vehető és értékesíthető. Bekerülési értéke a tényleges közvetlen önköltség (vagy elszámolóár + KÉK), amelyet utókalkulációval határoznak meg. Értékesítéskor a könyv szerinti értéket FIFO vagy átlagár szerint vezetik ki (T 581 / K 251). Számlája 251–257, mérlegsora B.I.4.",
+   "kulcselemek": [
+    "minden megmunkálás kész",
+    "megfelel az előírásoknak",
+    "raktárra vehető, értékesíthető",
+    "251"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "magas",
+   "forras": "elmelet/sajat (tanári diák)"
+  },
+  {
+   "id": "novendek",
+   "nev": "Növendékállat",
+   "definicio": "Fiatal, kifejletlen állategyed, amely a tartása során önmaga növekszik (pl. borjú, malac, gida, csirke, bárány); később tenyészállat vagy hízóállat lesz. Akár vásárolt, akár saját nevelésű, saját termelésű készletként kell kimutatni és értékelni, mert év végén nem állapítható meg, hogy az állat melyik része vásárolt és melyik saját termelés. Mérlegsor: B.I.3 Növendék-, hízó- és egyéb állatok, számla 241.",
+   "kulcselemek": [
+    "fiatal, kifejletlen",
+    "önmaga növekszik",
+    "vásárolt is STK",
+    "241",
+    "B.I.3"
+   ],
+   "pelda": "borjú, malac, bárány",
+   "zh_valoszinuseg": "kozepes",
+   "forras": "elmelet/sajat (tanári diák)"
+  },
+  {
+   "id": "hizo",
+   "nev": "Hízóállat",
+   "definicio": "Olyan állat, amelynek tartása során a testsúlya növekszik, és közvetlen élelmezési célra (vágóhídi felhasználás, saját bolti értékesítés) tartják. Vásárolt és saját nevelésű egyaránt saját termelésű készlet (a tenyészállat viszont tárgyi eszköz). Tartási költségei a tartás bizonyos szakaszától csökkennek. Számla 242, mérlegsor B.I.3.",
+   "kulcselemek": [
+    "testsúly nő",
+    "élelmezési cél",
+    "STK, nem tárgyi eszköz",
+    "242"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "kozepes",
+   "forras": "elmelet/sajat (tanári diák)"
+  },
+  {
+   "id": "egyeb_allat",
+   "nev": "Egyéb állatok (és bérbe vett állatok)",
+   "definicio": "Az emlősökön és madarakon kívüli egyéb állatcsoportok (pl. halak, méhek), saját termelésű készletként mutatandók ki (243). A bérbe vett állatokat is a saját termelésű készletek között kell kimutatni (246). Az állatok értékét csökkenteni kell (értékvesztés), ha az előírásoknak nem felelnek meg, megbetegedtek, elhullottak, felhasználásuk/értékesítésük kétségessé vált vagy feleslegessé váltak.",
+   "kulcselemek": [
+    "halak, méhek",
+    "bérbe vett állatok is",
+    "243/246",
+    "értékvesztés okai"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "alacsony",
+   "forras": "elmelet/sajat (tanári diák)"
+  },
+  {
+   "id": "mellektermek",
+   "nev": "Melléktermék",
+   "definicio": "A főtermék gyártásával együtt, ugyanabban a technológiai folyamatban elkerülhetetlenül keletkező, önállóan értékesíthető vagy felhasználható termék, amelynek előállítása nem a termelés fő célja. Saját termelésű készletként (késztermékként) kerül nyilvántartásba; a közös költségekből a kalkuláció során a főterméktől elkülönítik (értéke csökkenti a főtermék önköltségét). Különbözik a hulladéktól, amely eredeti rendeltetésre alkalmatlan maradvány. (A tanári diák külön nem definiálja – általános szakmai definíció.)",
+   "kulcselemek": [
+    "főtermékkel együtt keletkezik",
+    "önállóan értékesíthető",
+    "nem fő cél",
+    "késztermékként kezelik"
+   ],
+   "pelda": "Fűrészüzemben a fűrészpor-brikett; tejüzemben a savó.",
+   "zh_valoszinuseg": "alacsony",
+   "forras": "általános szakmai definíció (a diák nem tartalmazza)"
+  },
+  {
+   "id": "hulladek",
+   "nev": "Hulladék (hulladékmegtérülés)",
+   "definicio": "A termelés során keletkező, az eredeti rendeltetésre már nem alkalmas, de még hasznosítható (értékesíthető, felhasználható) anyagmaradvány. Készletre vétele az anyagok között történik (T 227 Egyéb anyagok / K 511 Anyagköltség), így csökkenti az anyagköltséget. A kalkulációban költségkorrekcióként levonandó (hulladékmegtérülés), tehát csökkenti a befejezett termelés előállítási költségét és az önköltséget; az összköltséges eredménykimutatásban az anyagjellegű ráfordítások is a hulladékkal csökkentve jelennek meg.",
+   "kulcselemek": [
+    "eredeti rendeltetésre alkalmatlan",
+    "hasznosítható",
+    "T 227 / K 511",
+    "kalkulációban −",
+    "csökkenti az önköltséget"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "magas",
+   "forras": "elmelet/sajat (tanári diák)"
+  },
+  {
+   "id": "kozvetlen",
+   "nev": "Közvetlen költség",
+   "definicio": "Olyan költség, amelyről előre vagy utólag meg lehet határozni, hogy melyik terméket (költségviselőt) és milyen mértékben terheli; az előállított termékkel számszerűen lemérhető okozati összefüggésben van. Ilyen pl. a gyártásban felhasznált alapanyag, a fizikai dolgozó bére és járuléka, a termelő gép közvetlenül hozzárendelhető értékcsökkenése. A közvetlen költségek képezik a saját termelésű készlet bekerülési értékét (közvetlen önköltség); a közvetett költségek közül csak az utólag felosztható (üzemi általános) rész kerülhet még be.",
+   "kulcselemek": [
+    "termékhez rendelhető",
+    "számszerűen lemérhető ok-okozat",
+    "bekerülési érték része"
+   ],
+   "pelda": "alapanyag, fizikai dolgozó bére",
+   "zh_valoszinuseg": "magas",
+   "forras": "elmelet/sajat (tanári diák)"
+  },
+  {
+   "id": "kozvetett",
+   "nev": "Közvetett (általános) költség",
+   "definicio": "Olyan költség, amelyről felmerülésekor csak az tudható, hol (melyik üzemben, gépsoron) merült fel, de nem állapítható meg közvetlenül, hogy melyik terméket milyen arányban terheli (pl. villany), vagy olyan távol áll a termeléstől, hogy a termék önköltségében egyáltalán nem vehető figyelembe. Két része: a) utólag a termékekre felosztható üzemi általános költség (pl. gépköltség gépóra-arányosan) – ez a kalkulációban a bekerülési érték része; b) fel nem osztható általános költség (igazgatás, értékesítés, kutatás-fejlesztés, alapítás-átszervezés, garanciális javítás) – ez az időszak költsége marad. Összköltség eljárásnál költségnemenként a teljes összeg megjelenik az eredménykimutatásban.",
+   "kulcselemek": [
+    "felmerülés helye ismert",
+    "nincs lemérhető ok-okozat a termékkel",
+    "felosztható rész → kalkuláció",
+    "fel nem osztható rész → időszak költsége"
+   ],
+   "pelda": "üzemi villany, ügyvezetés költsége",
+   "zh_valoszinuseg": "magas",
+   "forras": "elmelet/sajat (tanári diák)"
+  },
+  {
+   "id": "eloallitasi",
+   "nev": "Előállítási költség (közvetlen önköltség, bekerülési érték)",
+   "definicio": "A saját termelésű készlet bekerülési értéke: azok a költségek, amelyek a termék előállítása (üzembe helyezése, bővítése, rendeltetés-megváltoztatása, átalakítása, eredeti állagának helyreállítása) során közvetlenül merültek fel, az előállítással bizonyíthatóan szoros kapcsolatban vannak, és a termékre megfelelő mutatók, jellemzők segítségével elszámolhatók. Nem vehető figyelembe: az értékesítési költség (raktározás, piackutatás), valamint az előállítással közvetlen kapcsolatba nem hozható igazgatási (ügyvezetés, gazdasági irányítás) és egyéb általános költség (alapítás-átszervezés, K+F, garanciális javítás). Összegét kalkulációval határozzák meg.",
+   "kulcselemek": [
+    "közvetlenül felmerült",
+    "szoros kapcsolat",
+    "mutatókkal elszámolható",
+    "értékesítési és igazgatási ktg nem része",
+    "kalkulációval"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "magas",
+   "forras": "elmelet/sajat (tanári diák)"
+  },
+  {
+   "id": "onkoltseg",
+   "nev": "Önköltség (gyártási önköltség)",
+   "definicio": "Az egységnyi termékre jutó előállítási költség: a befejezett termelés költsége (előállítási költsége) osztva a megtermelt (raktárra vett) mennyiséggel. A befejezett termelés költsége = nyitó befejezetlen termelés + közvetlen költségek + felosztott közvetett költségek ± költségkorrekciók (− hulladékmegtérülés) − záró befejezetlen termelés. Ez az érték lesz a késztermék készletre vételi egységára (T 251 / K 581), és FIFO szerint ezen az áron vezetik ki az értékesített és hiányzó mennyiséget. Fontos az eladási árak kialakításához és a vezetői döntésekhez is.",
+   "kulcselemek": [
+    "befejezett termelés / megtermelt db",
+    "készletre vételi egységár",
+    "FIFO kivezetés alapja"
+   ],
+   "pelda": "16 600 000 / 5 000 db = 3 320 Ft/db (minta-ZH)",
+   "zh_valoszinuseg": "magas",
+   "forras": "elmelet/sajat (tanári diák)"
+  },
+  {
+   "id": "kalkulacio",
+   "nev": "Kalkuláció",
+   "definicio": "Az előállított termék (szolgáltatás) egységére jutó költség (önköltség) számszerű meghatározása. Időpont szerint lehet előzetes (terv, a termelés előtt), közbenső (a termelés közben) és utólagos (utókalkuláció, a tényleges költségek alapján). A kalkulációs séma vállalkozásonként és ágazatonként eltér (termék jellegétől függő költségek). Jelentősége: a készlet könyv szerinti értékének és mérlegértékének meghatározása, az eladási árak kialakítása, a vezetői döntések egyik fontos eszköze. A kalkuláció nem könyvelési tétel: a felosztott általános költség csak kalkulációs tétel.",
+   "kulcselemek": [
+    "egységre jutó költség",
+    "előzetes / közbenső / utólagos",
+    "séma vállalkozásonként eltér",
+    "készletérték, árképzés, döntés"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "magas",
+   "forras": "elmelet/sajat (tanári diák)"
+  },
+  {
+   "id": "utokalkulacio",
+   "nev": "Utókalkuláció",
+   "definicio": "A ténylegesen felmerült költségek alapján, a kalkulációs időszak (hónap, negyedév) végén készülő kalkuláció, amely meghatározza a befejezett termelés tényleges előállítási költségét és az egységnyi önköltséget, valamint a záró befejezetlen termelés értékét. Az utókalkuláció során kerül a felosztható általános (közvetett) költség a termékekre. Tényleges előállítási költségen vezetett mennyiségi-értékbeni nyilvántartásnál a készletre vétel és a FIFO/átlagáras kivezetés is az utókalkuláció adataira épül.",
+   "kulcselemek": [
+    "tényleges költségek",
+    "időszak végén",
+    "felosztott közvetett itt kerül be",
+    "készletre vétel alapja"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "kozepes",
+   "forras": "elmelet/sajat (tanári diák)"
+  },
+  {
+   "id": "stkav",
+   "nev": "Saját termelésű készletek állományváltozása (STKÁV)",
+   "definicio": "Az 581. számla; összköltség eljárásnál az eredménykimutatás II. Aktivált saját teljesítmények értéke sorának része. Értéke = saját termelésű készletek (befejezetlen, félkész, késztermék, növendék-hízó állat) záró állománya − nyitó állománya. Pozitív, ha a készlet nőtt (a költségnemekben elszámolt, de nem értékesített teljesítmény ellentételezése), negatív, ha csökkent. Szerepe: az összköltség eljárásnál a költségnemek az összes (értékesített és nem értékesített) termék költségét tartalmazzák; az STKÁV korrigálja ezt az értékesítés költségére. Nem azonos az árbevétellel. Könyvelése: K 581 a készletre vétel és záró befejezetlen; T 581 a nyitó befejezetlen visszavezetése, az eladott és a hiányzó készlet kivezetése.",
+   "kulcselemek": [
+    "581",
+    "záró − nyitó STK",
+    "II. sor része",
+    "költségnemek korrekciója",
+    "nem azonos az árbevétellel"
+   ],
+   "pelda": "Minta-ZH: 11 388 000 − 3 100 000 = 8 288 000",
+   "zh_valoszinuseg": "magas",
+   "forras": "elmelet/sajat (tanári diák)"
+  },
+  {
+   "id": "seeae",
+   "nev": "Saját előállítású eszközök aktivált értéke (SEEAÉ)",
+   "definicio": "Az 582. számla; a saját előállítású tárgyi eszközök, immateriális javak (saját rezsis beruházás) aktivált értéke, amely az összköltséges eredménykimutatás II. sorában az STKÁV-val együtt jelenik meg. Saját termelésű készleteknél korrekciós számlaként is használjuk: ráfordítás jellegű készletcsökkenésnél (hiány, értékvesztés, térítés nélküli átadás) a készlet T 581 / K 25x állományváltozásként, és T 86x / K 582 ráfordításként is lekönyvelődik; a K 582 semlegesíti a kétszeres eredményrontó hatást. Bevétel jellegű készletnövekedésnél (többlet) fordítva: T 25x / K 581 és T 582 / K 96x.",
+   "kulcselemek": [
+    "582",
+    "II. sor része",
+    "saját rezsis beruházás",
+    "korrekció hiánynál/többletnél"
+   ],
+   "pelda": "Minta-ZH: hiány 332 000 → T 8693 / K 582",
+   "zh_valoszinuseg": "magas",
+   "forras": "elmelet/sajat (tanári diák)"
+  },
+  {
+   "id": "ast",
+   "nev": "Aktivált saját teljesítmények értéke",
+   "definicio": "Az összköltség eljárással készülő eredménykimutatás II. sora, a költségnemek sajátos korrekciója: STKÁV (581) + saját előállítású eszközök aktivált értéke (582). Az időszak összes költségéből (IV–VI. sor) levonva az értékesítés (közvetlen és közvetett) költségét kapjuk: Időszak összes költsége − aktivált saját teljesítmények értéke = értékesítés közvetlen és közvetett költségei. Csak a nem értékesített termékek és szolgáltatások költségeit tartalmazza.",
+   "kulcselemek": [
+    "II. sor",
+    "581 + 582",
+    "költségnemek korrekciója"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "magas",
+   "forras": "elmelet/sajat (tanári diák)"
+  },
+  {
+   "id": "osszkoltseg",
+   "nev": "Összköltség eljárás",
+   "definicio": "Az eredménykimutatás egyik formája, amelyben a költségek költségnemenként (közgazdasági tartalom szerint: anyagjellegű, személyi jellegű ráfordítások, értékcsökkenés), bruttó módon, a közvetlen és közvetett költségek együtt, a megtérüléstől függetlenül (volt-e értékesítés vagy sem) szerepelnek. A realizált árbevétellel szemben így az időszak összes költsége áll, amit az aktivált saját teljesítmények értékével (STKÁV, SEEAÉ) korrigálnak. Sorai: I. Értékesítés nettó árbevétele, II. Aktivált saját teljesítmények értéke, III. Egyéb bevételek, IV. Anyagjellegű ráfordítások, V. Személyi jellegű ráfordítások, VI. Értékcsökkenési leírás, VII. Egyéb ráfordítások, A. Üzemi (üzleti) tevékenység eredménye. Az 5-ös számlaosztály költségnemenkénti vezetésére épül (a ZH-n kizárólag költségnem-elszámolással).",
+   "kulcselemek": [
+    "költségnemenként",
+    "bruttó",
+    "megtérüléstől független",
+    "I–VII + A",
+    "5-ös osztály"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "magas",
+   "forras": "elmelet/sajat (tanári diák)"
+  },
+  {
+   "id": "forgalmi",
+   "nev": "Forgalmi költség eljárás",
+   "definicio": "Az eredménykimutatás másik formája, amelyben csak az értékesített termékek, szolgáltatások költségei jelennek meg, funkciók szerint: értékesítés elszámolt közvetlen költségei (811), értékesítés közvetett költségei (85: értékesítési, igazgatási, egyéb általános). Sorai: I. árbevétel, II. értékesítés elszámolt közvetlen költségei, III. bruttó eredmény, IV. értékesítés közvetett költségei, V. egyéb bevételek, VI. egyéb ráfordítások, A. üzemi eredmény. Az üzemi eredmény mindkét eljárásnál azonos. Mellette is kötelező az 5-ös osztály vezetése. (ZH-n nem lesz – a 6/7-es osztály és forgalmi változat csak háttér.)",
+   "kulcselemek": [
+    "csak értékesített termékek költsége",
+    "811, 85",
+    "bruttó eredmény",
+    "üzemi eredmény azonos"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "alacsony",
+   "forras": "elmelet/sajat (tanári diák)"
+  },
+  {
+   "id": "koltsegnem",
+   "nev": "Költségnem-elszámolás (5-ös számlaosztály)",
+   "definicio": "A költségek közgazdasági tartalmuk szerinti (anyagköltség 51, igénybe vett szolgáltatások 52, egyéb szolgáltatások 53, bérköltség 54, személyi jellegű egyéb kifizetések 55, bérjárulékok 56, értékcsökkenés 57) gyűjtése az 5-ös számlaosztályban. Törvényi előírás, hogy az 5-ös számlaosztály a költségeket költségnemek szerint csoportosítva tartalmazza – forgalmi költség eljárás és 6–7-es osztály vezetése mellett is. Ide tartozik az 58 aktivált saját teljesítmények értéke (581, 582) és az 59 költségnem átvezetési/ellenszámla. Kizárólag költségnem-elszámolásnál a 6-os és 7-es osztályt nem vezetik.",
+   "kulcselemek": [
+    "51–57 költségnemek",
+    "kötelező",
+    "58: 581/582",
+    "6–7 nem kötelező"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "magas",
+   "forras": "elmelet/sajat (tanári diák)"
+  },
+  {
+   "id": "kolts_hely_viselo",
+   "nev": "Költséghely, költségviselő (6-os és 7-es osztály)",
+   "definicio": "A 6-os számlaosztály (költséghelyek, általános költségek) a felmerülés helye szerint gyűjti azokat a költségeket, amelyek nem rendelhetők közvetlenül a termékhez (pl. üzemi általános, igazgatási); a 7-es (tevékenységek költségei, költségviselők) termékenként gyűjti a közvetlen költségeket, egy-egy 7-es számla egy terméket jelöl. Vezetésük nem kötelező, vezetői információt szolgáltatnak (költséggazdálkodás, önköltségszámítás, önelszámoló egységek). ZH-n nem lesz.",
+   "kulcselemek": [
+    "6: hely, általános",
+    "7: termék, közvetlen",
+    "nem kötelező",
+    "vezetői információ"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "alacsony",
+   "forras": "elmelet/sajat (tanári diák)"
+  },
+  {
+   "id": "fifo_atlag",
+   "nev": "FIFO és átlagáras készletérték-kivezetés",
+   "definicio": "Mennyiségi és értékbeni analitika esetén az értékesítések és egyéb készletcsökkenések tényleges előállítási költségen történő értékelési módjai. FIFO (first in, first out): az elsőként betárolt (legrégebbi) készletréteg egységárán vezetik ki először a csökkenést – először a nyitó készlet, majd a tárgyidőszaki termelés önköltségén; így a zárókészlet a legutóbbi rétegek áron marad. Átlagár: a nyitó és tárgyidőszaki rétegek súlyozott átlagárán. A hiányzó készlet értékét is FIFO vagy átlagáras módszerrel kell kiszámítani.",
+   "kulcselemek": [
+    "legrégebbi réteg megy ki először",
+    "zárókészlet a legújabb áron",
+    "hiány is FIFO-val"
+   ],
+   "pelda": "2 000 db = 500 db × 4 200 + 1 500 db × 3 320 = 7 080 000",
+   "zh_valoszinuseg": "magas",
+   "forras": "elmelet/sajat (tanári diák)"
+  },
+  {
+   "id": "ertekvesztes",
+   "nev": "Saját termelésű készlet értékvesztése és visszaírása",
+   "definicio": "Ha a saját termelésű készlet bekerülési (előállítási), illetve könyv szerinti értéke jelentősen és tartósan magasabb a mérlegkészítéskor ismert piaci értékénél, a különbözettel értékvesztést kell elszámolni (egyéb ráfordítás, 8661); akkor is, ha a készlet megrongálódott, feleslegessé vált, értékesítése kétségessé vált, nem felel meg a szabványnak vagy szállítási feltételeknek. Piaci érték = várható eladási ár − még várhatóan felmerülő költségek + várható támogatások (félkésznél, befejezetlennél gyakran nem rendelhető piaci érték). Fajlagosan kis értékű készletnél csoportosan, a könyv szerinti érték %-ában is lehet. Ha később a piaci érték jelentősen és tartósan meghaladja a könyv szerinti értéket, az értékvesztést vissza kell írni (egyéb bevétel, 9661), de legfeljebb az eredeti bekerülési értékig. Mérlegérték = előállítási költség − értékvesztés + visszaírás.",
+   "kulcselemek": [
+    "jelentősen és tartósan",
+    "piaci érték < könyv szerinti",
+    "egyéb ráfordítás 8661",
+    "visszaírás 9661 max. bekerülési értékig",
+    "259/239/249"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "magas",
+   "forras": "elmelet/sajat (tanári diák)"
+  },
+  {
+   "id": "piaci_ertek",
+   "nev": "Piaci érték (saját termelésű készletnél)",
+   "definicio": "A beszámoló készítés előtti értékeléskor a készlet hasznosíthatósága alapján meghatározott érték: várható eladási ár − még várhatóan felmerülő költségek + várható támogatások. Ha a készlet nem felel meg a minőségi követelményeknek, a minősítéskori piaci érték az irányadó. A félkész termékhez és a befejezetlen termeléshez legtöbbször nem rendelhető piaci érték. A leltártöbbletként fellelt készlet az aktuális piaci értéken kerül nyilvántartásba.",
+   "kulcselemek": [
+    "eladási ár − várható költség + támogatás",
+    "befejezetlennél gyakran nincs",
+    "többlet piaci értéken"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "kozepes",
+   "forras": "elmelet/sajat (tanári diák)"
+  },
+  {
+   "id": "leltarhiany",
+   "nev": "Leltárhiány (valódi hiány)",
+   "definicio": "Akkor állapítható meg, ha a készlet növekedései és csökkenései mennyiségben folyamatosan elszámolásra kerülnek az analitikában, és azt tényleges mennyiségi felvétellel ellenőrzik: hiány = könyv szerinti (nyitó + raktárra vett − értékesített) mennyiség − leltár szerinti mennyiség. Értékét FIFO vagy átlagáras módszerrel kell számítani. Egyéb ráfordítás; összköltség eljárás és kizárólag költségnem-elszámolás esetén két tétel: állományváltozásként T 581 / K 251 és ráfordításként T 8693 / K 582 – a 582 korrekció azért kell, mert különben az eredményrontó hatás halmozódna (az 581 is csökkenést mutat és a ráfordítás is).",
+   "kulcselemek": [
+    "könyv − leltár mennyiség",
+    "FIFO/átlagár",
+    "egyéb ráfordítás",
+    "T 581 / K 251",
+    "T 8693 / K 582"
+   ],
+   "pelda": "Minta-ZH: 3 500 − 3 400 = 100 db × 3 320 = 332 000",
+   "zh_valoszinuseg": "magas",
+   "forras": "elmelet/sajat (tanári diák)"
+  },
+  {
+   "id": "leltartobblet",
+   "nev": "Leltártöbblet (valódi többlet)",
+   "definicio": "A leltár szerinti mennyiség meghaladja a könyv szerinti mennyiséget. A többletként fellelt készlet értéke az aktuális piaci érték; egyéb bevétel. Összköltség eljárás és kizárólag költségnem-elszámolás esetén: állományváltozásként T 251 / K 581, bevételként T 582 / K 96 (969 Különféle egyéb bevételek) – a 582-n keresztüli korrekció akadályozza meg az eredményjavító hatás halmozódását. Az elméleti diák szerint (forgalmi/költséghelyes változatnál) a többletként fellelt eszköz piaci értékét halasztott bevételként el kell határolni.",
+   "kulcselemek": [
+    "leltár > könyv",
+    "piaci értéken",
+    "egyéb bevétel",
+    "T 251 / K 581",
+    "T 582 / K 969"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "kozepes",
+   "forras": "elmelet/sajat (tanári diák)"
+  },
+  {
+   "id": "tenyleges_elszamoloar",
+   "nev": "Tényleges előállítási költség vs. elszámolóár (KÉK)",
+   "definicio": "A mennyiségi és értékbeni folyamatos nyilvántartás két változata: 1) tényleges előállítási költségen, utókalkuláció alapján (a ZH ezt kéri: 'elszámolóárat NEM alkalmaz'); 2) tervezett előállítási költségen (elszámolóáron), a tényleges és az elszámolóár különbségét készletérték-különbözetként (KÉK, 258/238/248) kimutatva. Összköltség eljárásnál létezik még a csak mennyiségi, illetve a sem mennyiségi, sem értékbeni nyilvántartás is; a kurzus csak a mennyiségi és értékbeni nyilvántartást tanítja.",
+   "kulcselemek": [
+    "tényleges: utókalkuláció",
+    "elszámolóár + KÉK",
+    "ZH: tényleges, FIFO"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "kozepes",
+   "forras": "elmelet/sajat (tanári diák)"
+  },
+  {
+   "id": "rafordítas_jellegu",
+   "nev": "Ráfordítás jellegű készletcsökkenés / bevétel jellegű készletnövekedés",
+   "definicio": "Ráfordítás jellegű készletcsökkenés: a saját termelésű készlet nem eladás útján kerül ki a vállalkozásból – értékvesztés, hiány, térítés nélküli átadás, apportálás, béren felüli juttatásként adott saját termék. Bevétel jellegű készletnövekedés: a készlet nem termelésből származik – értékvesztés visszaírása, többlet. Mindkettőt állományváltozásként (581) és ráfordításként/bevételként (86x/96x) is el kell számolni, a halmozódó eredményhatást az 582 számlán keresztül korrigáljuk.",
+   "kulcselemek": [
+    "nem eladás útján csökken",
+    "nem termelésből nő",
+    "581 + 86x/96x + 582 korrekció"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "kozepes",
+   "forras": "elmelet/sajat (tanári diák)"
+  }
+ ],
+ "szabalyok": [
+  {
+   "id": "besorolas",
+   "cim": "Besorolás a termelés előrehaladása szerint",
+   "tartalom": "Raktárra még nem vehető, a megmunkálás folytatódik → befejezetlen termelés (231). Már raktárra vehető, de továbbfelhasználása később történik → félkész termék (235). Minden megmunkálás kész, raktárra vehető, értékesíthető → késztermék (251). Növendék-, hízó- és egyéb állat vásárolt és saját is STK (a tenyészállat nem!), bérbe vett állat is.",
+   "forras": "elmelet/sajat"
+  },
+  {
+   "id": "bekerules_nem",
+   "cim": "Mi nem lehet a közvetlen önköltség része",
+   "tartalom": "Értékesítési költség (raktározás, piackutatás); előállítással közvetlen kapcsolatba nem hozható igazgatási költség (ügyvezetés, gazdasági irányítás); egyéb általános költség (alapítás-átszervezés, K+F, garanciális javítás). Fel nem osztott közvetett költség nem kerül a kalkulációba.",
+   "forras": "elmelet/sajat"
+  },
+  {
+   "id": "kotelezo5",
+   "cim": "Számlaosztályok",
+   "tartalom": "Az 5-ös számlaosztálynak a költségeket költségnemek szerint kell tartalmaznia (kötelező, forgalmi eljárásnál és 6–7 mellett is). A 6–7-es osztály vezetése nem kötelező, vezetői információt ad. Nem kötelező 6–7-ben könyvelni: a költségek elkülönítése az 5-ön belül is megoldható (munkaszám, projektkód).",
+   "forras": "elmelet/sajat"
+  },
+  {
+   "id": "zh_5osztaly",
+   "cim": "ZH-szabály (tanári tipp)",
+   "tartalom": "A ZH-n saját termelésű készletnél csak az 5-ös számlaosztályos elszámolás lesz (kizárólag költségnem-elszámolás, összköltség eljárás, mennyiségi és értékbeni analitika tényleges előállítási költségen, FIFO). 6-os és 7-es számlaosztály, 59-es ellenszámla, 811/85 nem lesz.",
+   "forras": "00_zh_info (tanári tipp)"
+  },
+  {
+   "id": "nyilvantartas",
+   "cim": "Nyilvántartási módszerek",
+   "tartalom": "Összköltség eljárásnál: I. folyamatos mennyiségi és értékbeni (1. tényleges előállítási költségen utókalkuláció alapján; 2. elszámolóáron + KÉK), II. csak mennyiségi, III. sem mennyiségi, sem értékbeni. Forgalmi eljárásnál csak a folyamatos mennyiségi és értékbeni. Mennyiségi-értékbeni nyilvántartásnál a 2. osztály készletszámláján minden növekedés és csökkenés folyamatosan könyvelésre kerül: készletre vétel havonta/negyedévente, csökkenés FIFO vagy átlagár szerint; zárókészlet mennyiségét a mennyiségi nyilvántartás, értékét a készletszámla mutatja.",
+   "forras": "elmelet/sajat"
+  },
+  {
+   "id": "ertekeles_merleg",
+   "cim": "Értékelés a mérlegben",
+   "tartalom": "Mérlegérték = előállítási (vagy norma szerinti) költség − értékvesztés (egyéb ráfordítás) + értékvesztés visszaírása (egyéb bevétel). Értékvesztés: ha a könyv szerinti érték jelentősen és tartósan magasabb a piaci értéknél, vagy a készlet megrongálódott, feleslegessé vált stb. Visszaírás csak az eredeti bekerülési értékig.",
+   "forras": "elmelet/sajat"
+  },
+  {
+   "id": "allat_ertekvesztes",
+   "cim": "Állatok értékvesztése",
+   "tartalom": "Növendék-, hízó- és egyéb állat bekerülési értékét akkor is csökkenteni kell, ha nem felel meg az előírásoknak (szabvány, szakmai előírás, szállítási feltétel), megbetegedett, elhullott, felhasználása/értékesítése kétségessé vált, vagy feleslegessé vált. Visszaírás mint a többi STK-nél.",
+   "forras": "elmelet/sajat"
+  },
+  {
+   "id": "leltar",
+   "cim": "Leltáreltérések",
+   "tartalom": "Mennyiségi nyilvántartásnál a leltár a záró (fordulónapi) mennyiség alapján is elkészíthető; nincs mennyiségi nyilvántartás → tényleges mennyiségi felvétel. Leltáreltérés csak akkor állapítható meg, ha a mozgások mennyiségben folyamatosan elszámolásra kerülnek és azt tényleges felvétellel ellenőrzik. Hiány = egyéb ráfordítás (FIFO/átlagár), többlet = egyéb bevétel (piaci érték).",
+   "forras": "elmelet/sajat"
+  },
+  {
+   "id": "ek_kapcsolat",
+   "cim": "Kapcsolat az eredménykimutatással",
+   "tartalom": "Értékesítés ellenértéke → értékesítés nettó árbevétele; értékesített készlet könyv szerinti értéke → STKÁV; apportba adott készlet létesítő okirat szerinti értéke → egyéb bevétel, könyv szerinti értéke → egyéb ráfordítás; térítés nélkül átadott készlet könyv szerinti értéke → egyéb ráfordítás; selejtezés, káresemény, értékvesztés → egyéb ráfordítás; értékvesztés visszaírása → egyéb bevétel; leltárhiány → egyéb ráfordítás; leltártöbblet → egyéb bevétel (halasztott bevétel).",
+   "forras": "elmelet/sajat"
+  },
+  {
+   "id": "szolg_befejezetlen",
+   "cim": "Szolgáltatás befejezetlen termelése",
+   "tartalom": "Szolgáltatásnál a felmerült költségeknek az a része, amellyel kapcsolatban árbevétel még nem került kimutatásra, befejezetlen termelés (pl. fordulónapig ki nem számlázott szolgáltatás).",
+   "forras": "elmelet/sajat"
+  }
+ ],
+ "osszefuggesek": [
+  {
+   "id": "kalk_sema",
+   "cim": "Kalkulációs séma (befejezett termelés, önköltség)",
+   "leiras": "Nyitó befejezetlen + közvetlen költségek költségnemenként (anyag, igénybe vett szolg., egyéb szolg., bér, járulék, ÉCS) + felosztott közvetett (üzemi általános) költség − hulladékmegtérülés = összes közvetlen költség; − záró befejezetlen = befejezett termelés költsége; ÷ megtermelt db = önköltség.",
+   "keplet": "Befejezett termelés = NyBT + Σ közvetlen + felosztott közvetett − hulladék − ZBT; Önköltség = Befejezett termelés / raktárra vett db",
+   "kapcsolodo": [
+    "onkoltseg",
+    "kalkulacio"
+   ]
+  },
+  {
+   "id": "stkav_keplet",
+   "cim": "STKÁV",
+   "leiras": "A saját termelésű készletek (befejezetlen + félkész + késztermék + állatok) záró és nyitó állományának különbsége; egyenlő az 581 számla egyenlegével. Tételenként: −NyBT + raktárra vett + ZBT − eladott − hiány (+ többlet).",
+   "keplet": "STKÁV = (ZBT + záró késztermék) − (NyBT + nyitó késztermék) = −NyBT + befejezett termelés − eladott (FIFO) + ZBT − hiány + többlet",
+   "kapcsolodo": [
+    "stkav"
+   ]
+  },
+  {
+   "id": "ast_keplet",
+   "cim": "Aktivált saját teljesítmények értéke (II. sor)",
+   "leiras": "Az STKÁV-hoz hozzáadódik az 582 egyenlege: hiánynál/értékvesztésnél +(a ráfordításként is elszámolt összeg), többletnél −.",
+   "keplet": "II. = STKÁV ± SEEAÉ; minta-ZH: 8 288 000 + 332 000 = 8 620 000",
+   "kapcsolodo": [
+    "seeae",
+    "ast"
+   ]
+  },
+  {
+   "id": "ek_osszk",
+   "cim": "Összköltséges eredménykimutatás az üzemi eredményig",
+   "leiras": "I. Értékesítés nettó árbevétele (91–92 = eladott db × nettó ár); II. Aktivált saját teljesítmények értéke (581 + 582); III. Egyéb bevételek (96: többlet, ÉV-visszaírás); IV. Anyagjellegű ráfordítások (51 − hulladék + 52 + 53 + 81); V. Személyi jellegű ráfordítások (54 + 55 + 56); VI. Értékcsökkenési leírás (57); VII. Egyéb ráfordítások (86: hiány 8693, értékvesztés 8661).",
+   "keplet": "A. = I. ± II. + III. − IV. − V. − VI. − VII.",
+   "kapcsolodo": [
+    "osszkoltseg"
+   ]
+  },
+  {
+   "id": "fifo_kivezetes",
+   "cim": "FIFO késztermék-kivezetés",
+   "leiras": "Előbb a nyitó készlet rétege (nyitó érték/nyitó db egységáron), majd a tárgyidőszaki termelés az önköltségen. A hiányt is a FIFO szerint soron következő rétegből kell értékelni (ha a nyitó réteg még nem fogyott el, a hiány a nyitó egységáron megy!).",
+   "keplet": "Eladott érték = min(S, q0) × p0 + max(S − q0, 0) × önköltség",
+   "kapcsolodo": [
+    "fifo_atlag"
+   ]
+  },
+  {
+   "id": "hiany",
+   "cim": "Leltárhiány kezelése",
+   "leiras": "Hiány mennyiség = nyitó db + raktárra vett db − eladott db − leltár szerinti db. Értéke FIFO-val. Két tétel: T 581 / K 251 (állományváltozás) és T 8693 / K 582 (ráfordítás + korrekció). Eredményhatás: csak egyszer csökkenti az eredményt (VII. sorban), a II. sorban a 581 csökkenését az 582 ellensúlyozza.",
+   "keplet": "Hiány Ft = (q0 + Q − S − L) × FIFO egységár",
+   "kapcsolodo": [
+    "leltarhiany"
+   ]
+  },
+  {
+   "id": "tobblet",
+   "cim": "Leltártöbblet kezelése",
+   "leiras": "Többlet = leltár − könyv szerinti mennyiség, piaci értéken: T 251 / K 581 és T 582 / K 969. Csak egyszer javítja az eredményt (III. sor).",
+   "keplet": "Többlet Ft = (L − (q0 + Q − S)) × piaci ár",
+   "kapcsolodo": [
+    "leltartobblet"
+   ]
+  },
+  {
+   "id": "ket_ek",
+   "cim": "Összköltség és forgalmi eljárás összefüggése",
+   "leiras": "Anyagjellegű + személyi jellegű ráfordítások + ÉCS = időszak összes költsége (összköltségben ez szerepel, az értékesített és nem értékesített termékek költsége); − aktivált saját teljesítmények értéke (csak a nem értékesített termékek költsége) = értékesítés közvetlen és közvetett költségei (forgalmi eljárásban ez szerepel). Az üzemi eredmény a két eljárásnál azonos.",
+   "keplet": "Költségnemek − ASTÉ = értékesítés közvetlen + közvetett költségei; A(összk.) = A(forg.)",
+   "kapcsolodo": [
+    "osszkoltseg",
+    "forgalmi"
+   ]
+  },
+  {
+   "id": "ellenorzes",
+   "cim": "Gyors ellenőrzés az üzemi eredményre",
+   "leiras": "Kizárólag költségnem-elszámolásnál az üzemi eredmény = árbevétel − eladott késztermék FIFO értéke − fel nem osztott közvetett költség − hiány + többlet (ha nincs más esemény). Ezzel a ZH-ban ellenőrizhető az összköltséges A sor.",
+   "keplet": "A = I − eladott önköltség − (Σ közvetett − felosztott) − hiány + többlet",
+   "kapcsolodo": [
+    "ek_osszk"
+   ]
+  },
+  {
+   "id": "zaro_keszlet",
+   "cim": "Záró késztermék mennyisége és értéke",
+   "leiras": "Záró db = nyitó db + raktárra vett − eladott − hiány (+ többlet) = leltár szerinti db; értéke a megmaradt FIFO-rétegek értéke.",
+   "keplet": "Záró érték = Σ maradék réteg db × réteg egységár",
+   "kapcsolodo": [
+    "fifo_atlag"
+   ]
+  }
+ ],
+ "konyvelesi_minta": [
+  {
+   "id": "nyit231",
+   "esemeny": "Befejezetlen termelés nyitása",
+   "T": "231",
+   "K": "491",
+   "osszeg": "nyitó befejezetlen termelés értéke",
+   "megjegyzes": "kiemelt számlák nyitása (0,5 pont)"
+  },
+  {
+   "id": "nyit251",
+   "esemeny": "Késztermékek nyitása",
+   "T": "251",
+   "K": "491",
+   "osszeg": "nyitó késztermék érték (db-szám az FIFO-hoz kell!)",
+   "megjegyzes": "0,5 pont"
+  },
+  {
+   "id": "vissza231",
+   "esemeny": "Nyitó befejezetlen termelés visszavezetése",
+   "T": "581",
+   "K": "231",
+   "osszeg": "nyitó befejezetlen teljes értéke",
+   "megjegyzes": "a nyitó befejezetlen 'beolvad' a termelésbe; a kalkulációban + tétel"
+  },
+  {
+   "id": "anyag",
+   "esemeny": "Anyagköltség elszámolása (közvetlen + közvetett)",
+   "T": "511",
+   "K": "211 (21–22)",
+   "osszeg": "közvetlen + közvetett anyagköltség együtt",
+   "megjegyzes": "összköltség eljárásnál a közvetett is az 5-ösbe megy"
+  },
+  {
+   "id": "szolg",
+   "esemeny": "Igénybe vett szolgáltatás számlája",
+   "T": "52",
+   "K": "4543",
+   "osszeg": "nettó (közvetlen + közvetett)",
+   "megjegyzes": "minta-kulcs: K 4541; szamlaszamok.json: szolgáltatás szállító 4543"
+  },
+  {
+   "id": "szolg_afa",
+   "esemeny": "Szolgáltatás előzetesen felszámított áfája",
+   "T": "4661",
+   "K": "4543",
+   "osszeg": "nettó × 27%",
+   "megjegyzes": "minta-kulcs: T 466"
+  },
+  {
+   "id": "ber",
+   "esemeny": "Bérköltség elszámolása",
+   "T": "541",
+   "K": "471",
+   "osszeg": "teljes bérköltség",
+   "megjegyzes": ""
+  },
+  {
+   "id": "jarulek",
+   "esemeny": "Bérjárulékok elszámolása",
+   "T": "56",
+   "K": "463",
+   "osszeg": "teljes járulék",
+   "megjegyzes": ""
+  },
+  {
+   "id": "ecs",
+   "esemeny": "Termelő gép terv szerinti ÉCS-e",
+   "T": "5711",
+   "K": "139",
+   "osszeg": "ÉCS összeg",
+   "megjegyzes": "minta-kulcs: 571; szamlaszamok: 5711"
+  },
+  {
+   "id": "hulladek",
+   "esemeny": "Gyártási hulladék készletre vétele",
+   "T": "227",
+   "K": "511",
+   "osszeg": "hulladék értéke",
+   "megjegyzes": "csökkenti az 511-et (és ezzel a IV. sort) és az önköltséget; NEM 226"
+  },
+  {
+   "id": "raktarra",
+   "esemeny": "Késztermék raktárra vétele tényleges előállítási költségen",
+   "T": "251",
+   "K": "581",
+   "osszeg": "befejezett termelés költsége (db × önköltség)",
+   "megjegyzes": ""
+  },
+  {
+   "id": "felosztott",
+   "esemeny": "Felosztott általános költség",
+   "T": "—",
+   "K": "—",
+   "osszeg": "nincs könyvelés",
+   "megjegyzes": "csak kalkulációs tétel (5-ös osztályban már szerepel)"
+  },
+  {
+   "id": "arbev",
+   "esemeny": "Késztermék értékesítés nettó árbevétele",
+   "T": "311",
+   "K": "91–92",
+   "osszeg": "eladott db × nettó eladási ár",
+   "megjegyzes": ""
+  },
+  {
+   "id": "afa",
+   "esemeny": "Értékesítés fizetendő áfája",
+   "T": "311",
+   "K": "467",
+   "osszeg": "árbevétel × 27%",
+   "megjegyzes": ""
+  },
+  {
+   "id": "kivezet",
+   "esemeny": "Értékesített késztermék kivezetése (FIFO)",
+   "T": "581",
+   "K": "251",
+   "osszeg": "nyitó réteg + új réteg × önköltség",
+   "megjegyzes": ""
+  },
+  {
+   "id": "zaro231",
+   "esemeny": "Záró befejezetlen termelés állományba vétele",
+   "T": "231",
+   "K": "581",
+   "osszeg": "záró befejezetlen értéke",
+   "megjegyzes": ""
+  },
+  {
+   "id": "hiany1",
+   "esemeny": "Leltárhiány állományváltozásként",
+   "T": "581",
+   "K": "251",
+   "osszeg": "hiány db × FIFO egységár",
+   "megjegyzes": ""
+  },
+  {
+   "id": "hiany2",
+   "esemeny": "Leltárhiány ráfordításként",
+   "T": "8693",
+   "K": "582",
+   "osszeg": "ugyanaz az összeg",
+   "megjegyzes": "582 korrekció a halmozódás ellen"
+  },
+  {
+   "id": "tobblet1",
+   "esemeny": "Leltártöbblet állományváltozásként",
+   "T": "251",
+   "K": "581",
+   "osszeg": "többlet db × piaci ár",
+   "megjegyzes": "elmelet/sajat 66. dia"
+  },
+  {
+   "id": "tobblet2",
+   "esemeny": "Leltártöbblet egyéb bevételként",
+   "T": "582",
+   "K": "969",
+   "osszeg": "ugyanaz",
+   "megjegyzes": "dia: 'K 96.'"
+  },
+  {
+   "id": "ev",
+   "esemeny": "Késztermék értékvesztése",
+   "T": "8661",
+   "K": "259",
+   "osszeg": "könyv szerinti − piaci érték",
+   "megjegyzes": "befejezetlen/félkésznél K 239, állatnál K 249"
+  },
+  {
+   "id": "ev_korr",
+   "esemeny": "Értékvesztés korrekciója (állományváltozás)",
+   "T": "581",
+   "K": "582",
+   "osszeg": "értékvesztés összege",
+   "megjegyzes": "a diák szerint ráfordítás jellegű készletcsökkenés; a hiány 581/582 logikájának analógiája – a mintakulcsban nem szerepel"
+  },
+  {
+   "id": "ev_vissza",
+   "esemeny": "Értékvesztés visszaírása",
+   "T": "259",
+   "K": "9661",
+   "osszeg": "max. az eredeti bekerülési értékig",
+   "megjegyzes": "korrekció: T 582 / K 581"
+  },
+  {
+   "id": "ev_vissza_korr",
+   "esemeny": "Visszaírás korrekciója",
+   "T": "582",
+   "K": "581",
+   "osszeg": "visszaírt összeg",
+   "megjegyzes": "analógia, mintakulcsban nincs"
+  },
+  {
+   "id": "terites_nelkul",
+   "esemeny": "Térítés nélkül átadott késztermék",
+   "T": "581 majd 8647",
+   "K": "251 majd 582",
+   "osszeg": "könyv szerinti érték",
+   "megjegyzes": "ráfordítás jellegű készletcsökkenés; analógia a hiánnyal"
+  }
+ ],
+ "feladatok": [
+  {
+   "id": "minta_zh_1",
+   "forras": "zh/I_Gyakorlat_MINTAZH_megoldott_javított.pdf (1. feladat, 31 pont)",
+   "cim": "Minta-ZH 1. feladat – késztermék kalkuláció, könyvelés, összköltséges EK",
+   "szoveg": "1. Kiemelt számlák nyitása: 231 Befejezetlen termelés 1 000 000 Ft; 251 Késztermékek 2 100 000 Ft (500 db). 2. Befejezetlen termelés visszavezetése. 3. Költségek (Ft): Anyagköltség: közvetlen 8 000 000, közvetett 2 000 000; Igénybe vett szolgáltatások (+27% áfa): közvetlen 500 000, közvetett 500 000; Bérköltség: közvetlen 3 000 000, közvetett 2 000 000; Bérjárulékok: közvetlen 1 300 000, közvetett 700 000; Értékcsökkenési leírás (termelő gép): közvetlen 0, közvetett 1 000 000. Utókalkuláció során az általános költségekből felosztásra kerül: 3 000 000 Ft. 4. Gyártási hulladék értéke 100 000 Ft. 5. Raktárra vesz 5 000 db készterméket. 6. Értékesít 2 000 db készterméket, eladási ár 5 000 Ft/db + 27% áfa. 7. Záró befejezetlen termelés 100 000 Ft. 8. Leltár szerint fellelt késztermék: 3 400 db. Feladat: a) kalkuláció; b) könyvelés; c) összköltséges eredménykimutatás az üzemi eredményig. Kiegészítés: összköltség eljárás, kizárólag költségnem-elszámolás, folyamatos mennyiségi és értékbeni analitika, FIFO.",
+   "adatok": {
+    "nyito_231": 1000000,
+    "nyito_251": 2100000,
+    "nyito_251_db": 500,
+    "koltsegek": {
+     "Anyagköltség": {
+      "kozvetlen": 8000000,
+      "kozvetett": 2000000
+     },
+     "Igénybe vett szolgáltatások (+27% áfa)": {
+      "kozvetlen": 500000,
+      "kozvetett": 500000
+     },
+     "Bérköltség": {
+      "kozvetlen": 3000000,
+      "kozvetett": 2000000
+     },
+     "Bérjárulékok": {
+      "kozvetlen": 1300000,
+      "kozvetett": 700000
+     },
+     "Értékcsökkenési leírás (termelő gép)": {
+      "kozvetlen": 0,
+      "kozvetett": 1000000
+     }
+    },
+    "felosztott_altalanos": 3000000,
+    "hulladek": 100000,
+    "raktarra_db": 5000,
+    "ertekesitett_db": 2000,
+    "eladasi_ar": 5000,
+    "zaro_231": 100000,
+    "leltar_db": 3400
+   },
+   "megoldas": {
+    "szamitasok": [
+     {
+      "mit": "Összes közvetlen költség",
+      "keplet": "nyitó befejezetlen + közvetlen költségek + felosztott közvetett − hulladék",
+      "eredmeny": 16700000
+     },
+     {
+      "mit": "Befejezett termelés",
+      "keplet": "16 700 000 − 100 000",
+      "eredmeny": 16600000
+     },
+     {
+      "mit": "Önköltség",
+      "keplet": "16 600 000 / 5 000 db",
+      "eredmeny": 3320
+     },
+     {
+      "mit": "Eladott késztermék (FIFO)",
+      "keplet": "500 db × 4 200 Ft/db + 1 500 db × 3 320 Ft/db",
+      "eredmeny": 7080000
+     },
+     {
+      "mit": "Várt (könyv szerinti) készlet",
+      "keplet": "500 + 5 000 − 2 000",
+      "eredmeny": 3500
+     },
+     {
+      "mit": "Leltáreltérés",
+      "keplet": "leltár 3 400 db vs könyv 3 500 db",
+      "eredmeny": "hiány 100 db = 332 000 Ft"
+     },
+     {
+      "mit": "Záró késztermék",
+      "keplet": "maradék FIFO-rétegek",
+      "eredmeny": 11288000
+     },
+     {
+      "mit": "STKÁV (záró STK − nyitó STK)",
+      "keplet": "(100 000 + 11 288 000) − (1 000 000 + 2 100 000)",
+      "eredmeny": 8288000
+     }
+    ],
+    "tetelek": [
+     {
+      "sorszam": "1.a",
+      "esemeny": "Befejezetlen termelés nyitása",
+      "T": "231",
+      "K": "491",
+      "osszeg": 1000000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "1.b",
+      "esemeny": "Késztermékek nyitása",
+      "T": "251",
+      "K": "491",
+      "osszeg": 2100000,
+      "szamitas": "500 db"
+     },
+     {
+      "sorszam": "2.",
+      "esemeny": "Nyitó befejezetlen termelés visszavezetése",
+      "T": "581",
+      "K": "231",
+      "osszeg": 1000000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "3.a",
+      "esemeny": "Anyagköltség elszámolása (közvetlen + közvetett)",
+      "T": "511",
+      "K": "211",
+      "osszeg": 10000000,
+      "szamitas": "8 000 000 + 2 000 000"
+     },
+     {
+      "sorszam": "3.b",
+      "esemeny": "Igénybe vett szolgáltatások (+27% áfa) elszámolása (közvetlen + közvetett)",
+      "T": "52",
+      "K": "4543",
+      "osszeg": 1000000,
+      "szamitas": "500 000 + 500 000"
+     },
+     {
+      "sorszam": "3.c",
+      "esemeny": "Bérköltség elszámolása (közvetlen + közvetett)",
+      "T": "541",
+      "K": "471",
+      "osszeg": 5000000,
+      "szamitas": "3 000 000 + 2 000 000"
+     },
+     {
+      "sorszam": "3.d",
+      "esemeny": "Bérjárulékok elszámolása (közvetlen + közvetett)",
+      "T": "56",
+      "K": "463",
+      "osszeg": 2000000,
+      "szamitas": "1 300 000 + 700 000"
+     },
+     {
+      "sorszam": "3.e",
+      "esemeny": "Értékcsökkenési leírás (termelő gép) elszámolása (közvetlen + közvetett)",
+      "T": "5711",
+      "K": "139",
+      "osszeg": 1000000,
+      "szamitas": "0 + 1 000 000"
+     },
+     {
+      "sorszam": "3.f",
+      "esemeny": "Szolgáltatás előzetesen felszámított áfája",
+      "T": "4661",
+      "K": "4543",
+      "osszeg": 270000,
+      "szamitas": "1 000 000 × 27%"
+     },
+     {
+      "sorszam": "4.",
+      "esemeny": "Gyártási hulladék készletre vétele (hulladékmegtérülés)",
+      "T": "227",
+      "K": "511",
+      "osszeg": 100000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "5.",
+      "esemeny": "Késztermékek raktárra vétele tényleges előállítási költségen",
+      "T": "251",
+      "K": "581",
+      "osszeg": 16600000,
+      "szamitas": "5 000 db × 3 320 Ft/db"
+     },
+     {
+      "sorszam": "6.a",
+      "esemeny": "Késztermék értékesítés nettó árbevétele",
+      "T": "311",
+      "K": "91–92",
+      "osszeg": 10000000,
+      "szamitas": "2 000 db × 5 000 Ft/db"
+     },
+     {
+      "sorszam": "6.b",
+      "esemeny": "Késztermék értékesítés fizetendő áfája",
+      "T": "311",
+      "K": "467",
+      "osszeg": 2700000,
+      "szamitas": "10 000 000 × 27%"
+     },
+     {
+      "sorszam": "6.c",
+      "esemeny": "Értékesített késztermékek kivezetése (FIFO)",
+      "T": "581",
+      "K": "251",
+      "osszeg": 7080000,
+      "szamitas": "500 db × 4 200 Ft/db + 1 500 db × 3 320 Ft/db"
+     },
+     {
+      "sorszam": "7.",
+      "esemeny": "Felosztott általános költség: csak kalkulációs tétel, nincs könyvelés",
+      "T": "—",
+      "K": "—",
+      "osszeg": 0,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "8.",
+      "esemeny": "Záró befejezetlen termelés állományba vétele",
+      "T": "231",
+      "K": "581",
+      "osszeg": 100000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "9.a",
+      "esemeny": "Leltárhiány állományváltozásként",
+      "T": "581",
+      "K": "251",
+      "osszeg": 332000,
+      "szamitas": "(3 500 − 3 400) = 100 db; 100 db × 3 320 Ft/db"
+     },
+     {
+      "sorszam": "9.b",
+      "esemeny": "Leltárhiány ráfordításként (korrekció 582-n keresztül)",
+      "T": "8693",
+      "K": "582",
+      "osszeg": 332000,
+      "szamitas": ""
+     }
+    ],
+    "egyeb": {
+     "kalkulacio": [
+      [
+       "Befejezetlen termelés (nyitó)",
+       1000000
+      ],
+      [
+       "Anyagköltség",
+       8000000
+      ],
+      [
+       "Igénybe vett szolgáltatások (+27% áfa)",
+       500000
+      ],
+      [
+       "Bérköltség",
+       3000000
+      ],
+      [
+       "Bérjárulékok",
+       1300000
+      ],
+      [
+       "Értékcsökkenési leírás (termelő gép)",
+       0
+      ],
+      [
+       "Felosztott közvetett (általános) költség",
+       3000000
+      ],
+      [
+       "Hulladékmegtérülés",
+       -100000
+      ],
+      [
+       "Összes közvetlen költség (nyitó befejezetlennel)",
+       16700000
+      ],
+      [
+       "Záró befejezetlen termelés",
+       -100000
+      ],
+      [
+       "Késztermék előállítási költsége (befejezett termelés)",
+       16600000
+      ],
+      [
+       "Késztermék önköltsége (5 000 db)",
+       "3 320 Ft/db"
+      ]
+     ],
+     "eredmenykimutatas_osszkoltseg": [
+      {
+       "sor": "I.",
+       "nev": "Értékesítés nettó árbevétele",
+       "mellekszamitas": "2 000 db × 5 000 Ft/db",
+       "osszeg": 10000000
+      },
+      {
+       "sor": "II.",
+       "nev": "Aktivált saját teljesítmények értéke",
+       "mellekszamitas": "STKÁV = −1 000 000 + 16 600 000 − 7 080 000 + 100 000 − 332 000 (hiány) = 8 288 000; SEEAÉ (582) = +332 000",
+       "osszeg": 8620000
+      },
+      {
+       "sor": "III.",
+       "nev": "Egyéb bevételek",
+       "mellekszamitas": "",
+       "osszeg": 0
+      },
+      {
+       "sor": "IV.",
+       "nev": "Anyagjellegű ráfordítások",
+       "mellekszamitas": "51 (hulladékkal csökkentve) + 52",
+       "osszeg": 10900000
+      },
+      {
+       "sor": "V.",
+       "nev": "Személyi jellegű ráfordítások",
+       "mellekszamitas": "54 + 56",
+       "osszeg": 7000000
+      },
+      {
+       "sor": "VI.",
+       "nev": "Értékcsökkenési leírás",
+       "mellekszamitas": "57",
+       "osszeg": 1000000
+      },
+      {
+       "sor": "VII.",
+       "nev": "Egyéb ráfordítások",
+       "mellekszamitas": "leltárhiány (8693)",
+       "osszeg": 332000
+      },
+      {
+       "sor": "A.",
+       "nev": "Üzemi (üzleti) tevékenység eredménye",
+       "mellekszamitas": "I + II + III − IV − V − VI − VII",
+       "osszeg": -612000
+      }
+     ],
+     "ellenorzes": "581 egyenlege (K) = 8 288 000 = STKÁV; A = árbevétel − eladott közvetlen önköltség − fel nem osztott közvetett − hiány + többlet = -612 000",
+     "mintakulcs_szerinti_A": -712000
+    }
+   },
+   "pontozas": "kalkuláció 5 pont; tételek 16 pont (minden tétel 1, nyitás 0,5); áfa-mellékszámítás 5 × 0,5 = 2,5 pont; EK séma 8 × 0,5 = 4 pont, összegek 7 × 0,5 = 3,5 pont",
+   "tanulsagok": [
+    "A nyitó befejezetlen visszavezetése (T 581 / K 231) és a záró állományba vétele (T 231 / K 581) mindig külön tétel.",
+    "A felosztott általános költség csak kalkulációs tétel – nincs könyvelés, de a kalkulációban +.",
+    "Összköltségnél a költségnemeket közvetlen + közvetett együtt könyveljük.",
+    "FIFO: a nyitó 500 db (4 200 Ft/db) megy ki először, a hiány már az új rétegből (3 320 Ft/db).",
+    "Hiány: két tétel (581/251 és 8693/582); a II. sorban az STKÁV-hoz hozzáadjuk a 582-t.",
+    "Leltárhiány mennyisége: 500 + 5 000 − 2 000 − 3 400 = 100 db."
+   ],
+   "elteresek_a_forrasban": [
+    "Mintakulcs eredménykimutatás IV. Anyagjellegű ráfordítások = 10 000 000 + 1 000 000 = 11 000 000, így A = −712 000. De a 4. tétel (T 227 / K 511 100 000) miatt az 511 egyenlege 9 900 000, tehát IV. = 10 900 000 és A = −612 000. A forrás feladatsor (Kis Kft) is a hulladékkal csökkentett költségnemekkel számol (19 200 000 − 200 000 = 19 000 000). Ellenőrzés: 10 000 000 − 7 080 000 − (6 200 000 − 3 000 000) − 332 000 = −612 000. A ZH-n érdemes a hulladékkal csökkentett IV. sort írni, és mellékszámításban jelezni.",
+    "3.b/3.c: a kulcs szállítóként K 4541-et (anyag- és áruszállító), előzetes áfára T 466-ot használ; a szamlaszamok.json szerint 4543 (belföldi szolgáltatás) és 4661 az elfogadott – ezeket használjuk.",
+    "3.f: a kulcs 571-et ír, a szamlaszamok.json 5711-et (terv szerinti ÉCS) – 5711 szerepel itt.",
+    "Árbevétel: a kulcs 91–92-t ír (számlatükör szerint 91–92 Belföldi értékesítés árbevétele; a feladatsor 91-et)."
+   ]
+  },
+  {
+   "id": "kis_kft",
+   "forras": "src/feladat_sajat/Saját termelésű készletek feladatsor (2. feladat) + feladatsor1_szétszedés és moodle megoldás",
+   "cim": "Kis Kft – kalkuláció, összköltséges és forgalmi EK, könyvelés",
+   "szoveg": "Nyitó: befejezetlen termelés 700 000 Ft; késztermékek tényleges előállítási költségen 200 000 Ft (200 db). Tárgyidőszaki költségek: egyből közvetlen költségek 8 200 000 Ft; költséghelyi, általános költségek 11 000 000 Ft; gyártás során keletkezett hulladék 200 000 Ft; utólag felosztásra kerülő általános költségek 3 000 000 Ft. Raktárra vett késztermék 9 000 db; értékesített 9 100 db; eladási ár áfa nélkül 2 000 Ft/db; záró befejezetlen 1 800 000 Ft; hiány 20 db. FIFO. a) EK az üzemi eredményig összköltség és forgalmi eljárással; b) könyvelés kizárólag költségnem-elszámolás, összköltség eljárás; c) kizárólag költségnem, forgalmi eljárás; d) elsődleges költséghely-költségviselő, másodlagos költségnem, forgalmi eljárás; e) elsődleges költségnem, másodlagos költséghely-költségviselő, összköltség eljárás.",
+   "adatok": {
+    "nyito_231": 700000,
+    "nyito_251": 200000,
+    "nyito_251_db": 200,
+    "egybol_kozvetlen": 8200000,
+    "koltseghelyi_altalanos": 11000000,
+    "hulladek": 200000,
+    "utolag_felosztott_altalanos": 3000000,
+    "raktarra_db": 9000,
+    "ertekesitett_db": 9100,
+    "eladasi_ar": 2000,
+    "zaro_231": 1800000,
+    "hiany_db": 20
+   },
+   "megoldas": {
+    "szamitasok": [
+     {
+      "mit": "Kalkuláció",
+      "keplet": "700 000 + 8 200 000 − 200 000 + 3 000 000 − 1 800 000",
+      "eredmeny": 9900000
+     },
+     {
+      "mit": "Önköltség",
+      "keplet": "9 900 000 / 9 000 db",
+      "eredmeny": 1100
+     },
+     {
+      "mit": "Eladott (FIFO)",
+      "keplet": "200 × 1 000 + 8 900 × 1 100",
+      "eredmeny": 9990000
+     },
+     {
+      "mit": "Fel nem osztott közvetett",
+      "keplet": "11 000 000 − 3 000 000",
+      "eredmeny": 8000000
+     },
+     {
+      "mit": "Hiány",
+      "keplet": "20 × 1 100",
+      "eredmeny": 22000
+     },
+     {
+      "mit": "Záró késztermék",
+      "keplet": "(200 + 9 000 − 9 100 − 20) = 80 db × 1 100",
+      "eredmeny": 88000
+     },
+     {
+      "mit": "STKÁV",
+      "keplet": "(1 800 000 + 88 000) − (700 000 + 200 000)",
+      "eredmeny": 988000
+     },
+     {
+      "mit": "Költségnemek",
+      "keplet": "8 200 000 + 11 000 000 − 200 000",
+      "eredmeny": 19000000
+     }
+    ],
+    "tetelek": [
+     {
+      "sorszam": "1",
+      "esemeny": "Nyitó befejezetlen termelés visszavezetése",
+      "T": "581",
+      "K": "231",
+      "osszeg": 700000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "2",
+      "esemeny": "Tárgyidőszaki költségek elszámolása (költségnemek)",
+      "T": "51–57",
+      "K": "1–4 (eszköz/forrás)",
+      "osszeg": 19200000,
+      "szamitas": "8 200 000 + 11 000 000"
+     },
+     {
+      "sorszam": "3",
+      "esemeny": "Hulladékmegtérülés",
+      "T": "227",
+      "K": "511",
+      "osszeg": 200000,
+      "szamitas": "a dia egyik helyen 226-ot ír"
+     },
+     {
+      "sorszam": "4a",
+      "esemeny": "Késztermék készletre vétele tényleges előállítási költségen",
+      "T": "251",
+      "K": "581",
+      "osszeg": 9900000,
+      "szamitas": "9 000 db × 1 100"
+     },
+     {
+      "sorszam": "4b",
+      "esemeny": "Záró befejezetlen termelés átvezetése",
+      "T": "231",
+      "K": "581",
+      "osszeg": 1800000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "5a",
+      "esemeny": "Értékesítés nettó árbevétele",
+      "T": "311",
+      "K": "91",
+      "osszeg": 18200000,
+      "szamitas": "9 100 db × 2 000"
+     },
+     {
+      "sorszam": "5b",
+      "esemeny": "Fizetendő áfa",
+      "T": "311",
+      "K": "467",
+      "osszeg": 4914000,
+      "szamitas": "18 200 000 × 27%"
+     },
+     {
+      "sorszam": "5c",
+      "esemeny": "Értékesített késztermék kivezetése (FIFO)",
+      "T": "581",
+      "K": "251",
+      "osszeg": 9990000,
+      "szamitas": "200 db × 1 000 + 8 900 db × 1 100"
+     },
+     {
+      "sorszam": "6a",
+      "esemeny": "Hiány állományváltozásként",
+      "T": "581",
+      "K": "251",
+      "osszeg": 22000,
+      "szamitas": "20 db × 1 100"
+     },
+     {
+      "sorszam": "6b",
+      "esemeny": "Hiány ráfordításként",
+      "T": "8693",
+      "K": "582",
+      "osszeg": 22000,
+      "szamitas": ""
+     }
+    ],
+    "egyeb": {
+     "eredmenykimutatas_osszkoltseg_eFt": [
+      [
+       "I. Árbevétel",
+       18200
+      ],
+      [
+       "II. Aktivált saját teljesítmények: STKÁV +988, SEEAÉ +22",
+       1010
+      ],
+      [
+       "III. Egyéb bevételek",
+       0
+      ],
+      [
+       "IV–VI. Költségnemek",
+       -19000
+      ],
+      [
+       "VII. Egyéb ráfordítások",
+       -22
+      ],
+      [
+       "A. Üzemi eredmény",
+       188
+      ]
+     ],
+     "eredmenykimutatas_forgalmi_eFt": [
+      [
+       "I. Árbevétel",
+       18200
+      ],
+      [
+       "II. Értékesítés elszámolt közvetlen költségei",
+       9990
+      ],
+      [
+       "III. Bruttó eredmény",
+       8210
+      ],
+      [
+       "IV. Értékesítés közvetett költségei",
+       8000
+      ],
+      [
+       "V. Egyéb bevételek",
+       0
+      ],
+      [
+       "VI. Egyéb ráfordítások",
+       22
+      ],
+      [
+       "A. Üzemi eredmény",
+       188
+      ]
+     ],
+     "c_forgalmi_kizarolag_koltsegnem_zh_relevancia": "alacsony – 6/7 osztály, forgalmi nem lesz",
+     "c_tetelek": "Mint b), plusz: T 811 / K 59 9 990 000 (értékesítés közvetlen költsége), T 85 / K 59 8 000 000 (közvetett költségek).",
+     "d_koltseghely_viselo_forgalmi": "alacsony – 6/7 osztály nem lesz. T 7 / K 231 700 000 (másodlagosan T 581 / K 59); T 7 / K 1–4 8 200 000; T 6 / K 1–4 11 000 000; másodlagosan T 51–57 / K 59 19 200 000; hulladék T 227 / K 7 és T 59 / K 511 200 000; T 7 / K 6 3 000 000 (felosztott); T 251 / K 7 9 900 000 (T 59 / K 581); T 231 / K 7 1 800 000 (T 59 / K 581); T 311 / K 91 18 200 000; T 311 / K 467 4 914 000; T 811 / K 251 9 990 000 (T 581 / K 59); hiány T 7 / K 251 22 000 (T 581 / K 59), T 8693 / K 7 22 000 (másodlagosan T 89 / K 582 a dia szerint); T 85 / K 6 8 000 000.",
+     "e_koltsegnem_elsodleges_osszkoltseg": "alacsony – 6/7 osztály nem lesz. T 581 / K 231 700 000 (másodl. T 7 / K 59); T 51–57 / K 1–4 19 200 000; másodl. T 7 / K 59 8 200 000, T 6 / K 59 11 000 000; T 227 / K 511 200 000 (másodl. T 59 / K 7); T 7 / K 6 3 000 000; T 251 / K 581 9 900 000 (T 59 / K 7); T 231 / K 581 1 800 000 (T 59 / K 7); T 311 / K 91, T 311 / K 467; T 581 / K 251 9 990 000 (T 7 / K 59); hiány T 581 / K 251 22 000 (T 7 / K 59), T 8693 / K 582 22 000."
+    }
+   },
+   "zh_relevancia": "a) összköltséges rész és b) könyvelés: MAGAS (pontosan a ZH-típus); c), d), e) és a forgalmi EK: alacsony – 6/7 osztály nem lesz",
+   "tanulsagok": [
+    "A 'költséghelyi, általános költségek' (11 M) már tartalmazza az utólag felosztott 3 M-t – a költségnemekben csak egyszer szerepel.",
+    "A II. sorban STKÁV és SEEAÉ (a hiány miatt) együtt: 988 + 22.",
+    "Üzemi eredmény mindkét eljárással 188 eFt."
+   ],
+   "elteresek_a_forrasban": [
+    "1. feladat dia (4.): '3.650.000 Ft / 500 gépóra = 7.120' – helyesen 3 560 000.",
+    "b) rész 3) hulladékmegtérülés: T 226 (Tárgyi eszközök közül átsorolt anyagok) – helyesen T 227 Egyéb anyagok (c–e részben és a mintakulcsban 227).",
+    "A 2. tétel 19 200 000-et könyvel (T 51–57), az EK-ban a költségnemek 19 000 000 (hulladékkal csökkentve) – ez konzisztens, nem hiba.",
+    "d) rész sorszámozása 8C után 10)-re ugrik (9) hiányzik); a 8C hiány ráfordításként K '7. SEEAÉ' megnevezéssel – a diák jelölése."
+   ]
+  },
+  {
+   "id": "gepkoltseg_felosztas",
+   "forras": "src/feladat_sajat/Saját termelésű készletek feladatsor (1. feladat) + megoldás",
+   "cim": "Gépköltség felosztása gépóra arányában",
+   "zh_relevancia": "alacsony – 6/7 osztály nem lesz (a felosztási számítás logikája a kalkulációhoz hasznos)",
+   "szoveg": "Egy gyártógépsoron 3 terméket gyártanak. A tárgynegyedévi gépköltség (közvetett) 3 560 eFt. Gépóra igény: A 240, B 160, C 100. a) A gépköltség felosztása a gépóra igény arányában (közvetlen költséggé). b) A költségfelosztás könyvelése.",
+   "adatok": {
+    "gepkoltseg": 3560000,
+    "gepora": {
+     "A": 240,
+     "B": 160,
+     "C": 100
+    }
+   },
+   "megoldas": {
+    "szamitasok": [
+     {
+      "mit": "1 gépórára jutó gépköltség",
+      "keplet": "3 560 000 / 500",
+      "eredmeny": 7120
+     },
+     {
+      "mit": "A termék",
+      "keplet": "240 × 7 120",
+      "eredmeny": 1708800
+     },
+     {
+      "mit": "B termék",
+      "keplet": "160 × 7 120",
+      "eredmeny": 1139200
+     },
+     {
+      "mit": "C termék",
+      "keplet": "100 × 7 120",
+      "eredmeny": 712000
+     }
+    ],
+    "tetelek": [
+     {
+      "sorszam": "1/a–c",
+      "esemeny": "Termékre jutó gépköltség átvezetése a 69-es számlára",
+      "T": "69 (felosztott közvetett költségek átvezetése)",
+      "K": "63 (gépköltségek)",
+      "osszeg": 3560000,
+      "szamitas": "1 708 800 + 1 139 200 + 712 000"
+     },
+     {
+      "sorszam": "2/a",
+      "esemeny": "A termék",
+      "T": "71",
+      "K": "69",
+      "osszeg": 1708800,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "2/b",
+      "esemeny": "B termék",
+      "T": "72",
+      "K": "69",
+      "osszeg": 1139200,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "2/c",
+      "esemeny": "C termék",
+      "T": "73",
+      "K": "69",
+      "osszeg": 712000,
+      "szamitas": ""
+     }
+    ],
+    "egyeb": {
+     "megjegyzes": "A 69-es átvezetési számla használata azért ajánlott, mert az időszak végén a teljes gépköltséget mutatja a felosztás után is (nincs információvesztés). Közvetlen változat: T 71/72/73 / K 63. Kizárólag 5-ös osztálynál nincs könyvelés: a felosztott összeg csak a kalkulációban jelenik meg."
+    }
+   },
+   "tanulsagok": [
+    "Felosztási kulcs = közvetett költség / összes vetítési alap; termékre jutó = vetítési alap × kulcs.",
+    "ZH-n (5-ös osztály) a felosztott közvetett költség csak kalkulációs tétel."
+   ],
+   "elteresek_a_forrasban": [
+    "4. dia: 3 650 000 Ft / 500 gépóra – elírás, helyesen 3 560 000.",
+    "8. dia, 1/c tétel összege 712 200 – helyesen 712 000.",
+    "5–7. dián a termék termelési számla '7 (1)', '7 (2)', '7 (3)', a 9. dián 71/72/73."
+   ]
+  },
+  {
+   "id": "orai_pelda",
+   "forras": "src/feladat_sajat/órai jegyzet / órai példa (PDF) + órai példa megoldása-1.png (kézírás)",
+   "cim": "Órai példa – gyártó vállalkozás, csak 5-ös osztály",
+   "szoveg": "Költségnemek (közvetlen / közvetett): anyagköltség 500 000 / 50 000; bérköltség 300 000 / 30 000; értékcsökkenés 100 000 / 20 000. Nyitó késztermék 100 db, önköltség 1 000 Ft/db. A közvetett költségek 50%-a felosztható. Nyitó befejezetlen 50 000, záró befejezetlen 70 000. Raktárra vétel 1 000 db. Értékesítés 900 db, eladási ár 1 200 Ft/db, FIFO.",
+   "adatok": {
+    "koltsegek": {
+     "anyag": [
+      500000,
+      50000
+     ],
+     "ber": [
+      300000,
+      30000
+     ],
+     "ecs": [
+      100000,
+      20000
+     ]
+    },
+    "felosztható_kozvetett_arany": 0.5,
+    "nyito_251": 100000,
+    "nyito_251_db": 100,
+    "nyito_231": 50000,
+    "zaro_231": 70000,
+    "raktarra_db": 1000,
+    "ertekesitett_db": 900,
+    "eladasi_ar": 1200
+   },
+   "megoldas": {
+    "szamitasok": [
+     {
+      "mit": "Felosztott közvetett",
+      "keplet": "(50 000 + 30 000 + 20 000) × 50%",
+      "eredmeny": 50000
+     },
+     {
+      "mit": "Kalkuláció",
+      "keplet": "50 000 + 500 000 + 300 000 + 100 000 + 50 000 − 70 000",
+      "eredmeny": 930000
+     },
+     {
+      "mit": "Önköltség",
+      "keplet": "930 000 / 1 000 db",
+      "eredmeny": 930
+     },
+     {
+      "mit": "Eladott (FIFO)",
+      "keplet": "100 db × 1 000 + 800 db × 930",
+      "eredmeny": 844000
+     },
+     {
+      "mit": "STKÁV",
+      "keplet": "(70 000 + 200 db × 930) − (50 000 + 100 000)",
+      "eredmeny": 106000
+     }
+    ],
+    "tetelek": [
+     {
+      "sorszam": "1",
+      "esemeny": "Késztermék nyitás",
+      "T": "251",
+      "K": "491",
+      "osszeg": 100000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "2",
+      "esemeny": "Befejezetlen nyitás",
+      "T": "231",
+      "K": "491",
+      "osszeg": 50000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "3",
+      "esemeny": "Nyitó befejezetlen visszavezetése",
+      "T": "581",
+      "K": "231",
+      "osszeg": 50000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "4",
+      "esemeny": "Anyagköltség",
+      "T": "511",
+      "K": "21–22",
+      "osszeg": 550000,
+      "szamitas": "500 000 + 50 000"
+     },
+     {
+      "sorszam": "5",
+      "esemeny": "Bérköltség",
+      "T": "541",
+      "K": "471",
+      "osszeg": 330000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "6",
+      "esemeny": "Értékcsökkenés",
+      "T": "571",
+      "K": "139 (149)",
+      "osszeg": 120000,
+      "szamitas": "a kézírásban '1¾9'"
+     },
+     {
+      "sorszam": "7",
+      "esemeny": "Késztermék raktárra vétele",
+      "T": "251",
+      "K": "581",
+      "osszeg": 930000,
+      "szamitas": "1 000 × 930"
+     },
+     {
+      "sorszam": "8",
+      "esemeny": "Árbevétel",
+      "T": "311",
+      "K": "91–92",
+      "osszeg": 1080000,
+      "szamitas": "900 × 1 200"
+     },
+     {
+      "sorszam": "9",
+      "esemeny": "Fizetendő áfa",
+      "T": "311",
+      "K": "467",
+      "osszeg": 291600,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "10",
+      "esemeny": "Eladott késztermék kivezetése",
+      "T": "581",
+      "K": "251",
+      "osszeg": 844000,
+      "szamitas": "100 × 1 000 + 800 × 930"
+     },
+     {
+      "sorszam": "11",
+      "esemeny": "Záró befejezetlen",
+      "T": "231",
+      "K": "581",
+      "osszeg": 70000,
+      "szamitas": ""
+     }
+    ],
+    "egyeb": {
+     "eredmenykimutatas_osszkoltseg_szamolt": [
+      [
+       "I. Árbevétel",
+       1080000
+      ],
+      [
+       "II. STKÁV",
+       106000
+      ],
+      [
+       "IV. Anyagjellegű",
+       550000
+      ],
+      [
+       "V. Személyi jellegű",
+       330000
+      ],
+      [
+       "VI. ÉCS",
+       120000
+      ],
+      [
+       "A. Üzemi eredmény",
+       186000
+      ]
+     ],
+     "megjegyzes": "Az EK-t a kézírásos megoldás nem tartalmazza – itt számolt, ellenőrzés: 1 080 000 − 844 000 − 50 000 (fel nem osztott közvetett) = 186 000.",
+     "6_7_valtozatok": "alacsony – 6/7 osztály nem lesz. A kézírás 'E5, M6-7' (elsődleges költségnem, másodlagos 71/6 – 59 ellenszámla, 791 STK elszámolás) és 'E6-7, M5' (71 és 6 terhelése, 511/541/571 – 59 másodlagosan, 811 – 251 kivezetés, 85 – 6 50 000 fel nem osztott) változatokat is mutat; 71 – 6 50 000 a felosztott általános."
+    }
+   },
+   "tanulsagok": [
+    "Ha a feladat csak a felosztható arányt adja meg, először a felosztott közvetett költséget kell kiszámolni.",
+    "Nincs hulladék és hiány – a legegyszerűbb 5-ös váz."
+   ],
+   "elteresek_a_forrasban": [
+    "A feladatleírásban 'előállatási' elírás.",
+    "A kézírásos megoldásban az EK nincs levezetve; az A = 186 000 itt számolt érték."
+   ]
+  },
+  {
+   "id": "esettanulmany_2db",
+   "forras": "src/elmelet/sajat (20–28. dia)",
+   "cim": "Esettanulmány – 2 db termék, mindkét eredménykimutatás",
+   "szoveg": "Tárgyidőszaki költségek (eFt): alapanyag 500; fizikai dolgozó bruttó bére 560; portás bruttó bére és járulékai 280; kisüzem ÉCS-e 70. Nyitó készlet 0, gyártott 2 db. a) nem adott el egyet sem; b) eladott 1 db-ot 1 000 000 Ft-ért. Készítse el mindkét eredménykimutatást az üzemi eredményig.",
+   "adatok": {
+    "alapanyag": 500000,
+    "fizikai_ber": 560000,
+    "portas": 280000,
+    "ecs": 70000,
+    "gyartott_db": 2
+   },
+   "megoldas": {
+    "szamitasok": [
+     {
+      "mit": "Önköltség",
+      "keplet": "(500 000 + 560 000) / 2",
+      "eredmeny": 530000
+     },
+     {
+      "mit": "Közvetett",
+      "keplet": "280 000 + 70 000",
+      "eredmeny": 350000
+     },
+     {
+      "mit": "Költségnemek összesen",
+      "keplet": "500 + 560 + 280 + 70",
+      "eredmeny": 1410000
+     },
+     {
+      "mit": "a) STKÁV",
+      "keplet": "2 × 530 000 − 0",
+      "eredmeny": 1060000
+     },
+     {
+      "mit": "b) STKÁV",
+      "keplet": "1 × 530 000 − 0",
+      "eredmeny": 530000
+     }
+    ],
+    "tetelek": [],
+    "egyeb": {
+     "a_osszkoltseg_eFt": [
+      [
+       "Árbevétel",
+       0
+      ],
+      [
+       "STKÁV",
+       1060
+      ],
+      [
+       "Költségnemek",
+       -1410
+      ],
+      [
+       "A",
+       -350
+      ]
+     ],
+     "a_forgalmi_eFt": [
+      [
+       "Árbevétel",
+       0
+      ],
+      [
+       "Közvetlen",
+       0
+      ],
+      [
+       "Közvetett",
+       350
+      ],
+      [
+       "A",
+       -350
+      ]
+     ],
+     "b_osszkoltseg_eFt": [
+      [
+       "Árbevétel",
+       1000
+      ],
+      [
+       "STKÁV",
+       530
+      ],
+      [
+       "Költségnemek",
+       -1410
+      ],
+      [
+       "A",
+       120
+      ]
+     ],
+     "b_forgalmi_eFt": [
+      [
+       "Árbevétel",
+       1000
+      ],
+      [
+       "Közvetlen",
+       530
+      ],
+      [
+       "Bruttó eredmény",
+       470
+      ],
+      [
+       "Közvetett",
+       350
+      ],
+      [
+       "A",
+       120
+      ]
+     ]
+    }
+   },
+   "tanulsagok": [
+    "Csak a termékkel közvetlen kapcsolatban lévő költség része az önköltségnek (portás, kisüzem ÉCS nem).",
+    "Ha nincs értékesítés, a közvetett költség = veszteség; az STKÁV pont a közvetlen költséget semlegesíti.",
+    "Az üzemi eredmény a két eljárásnál azonos."
+   ],
+   "elteresek_a_forrasban": []
+  },
+  {
+   "id": "generalt_1",
+   "forras": "generalt",
+   "cim": "Saját gyakorló feladat 1 (minta-ZH 1. feladat mintájára)",
+   "szoveg": "1. Kiemelt számlák nyitása: 231 Befejezetlen termelés 800 000 Ft; 251 Késztermékek 1 500 000 Ft (400 db). 2. Befejezetlen termelés visszavezetése. 3. Költségek (Ft): Anyagköltség: közvetlen 6 000 000, közvetett 1 500 000; Igénybe vett szolgáltatások (+27% áfa): közvetlen 400 000, közvetett 600 000; Bérköltség: közvetlen 2 500 000, közvetett 1 500 000; Bérjárulékok: közvetlen 1 000 000, közvetett 500 000; Értékcsökkenési leírás (termelő gép): közvetlen 0, közvetett 800 000. Utókalkuláció során az általános költségekből felosztásra kerül: 2 000 000 Ft. 4. Gyártási hulladék értéke 150 000 Ft. 5. Raktárra vesz 3 000 db készterméket. 6. Értékesít 1 800 db készterméket, eladási ár 6 000 Ft/db + 27% áfa. 7. Záró befejezetlen termelés 250 000 Ft. 8. Leltár szerint fellelt késztermék: 1 550 db. Feladat: a) kalkuláció; b) könyvelés; c) összköltséges eredménykimutatás az üzemi eredményig. Kiegészítés: összköltség eljárás, kizárólag költségnem-elszámolás, folyamatos mennyiségi és értékbeni analitika, FIFO.",
+   "adatok": {
+    "nyito_231": 800000,
+    "nyito_251": 1500000,
+    "nyito_251_db": 400,
+    "koltsegek": {
+     "Anyagköltség": {
+      "kozvetlen": 6000000,
+      "kozvetett": 1500000
+     },
+     "Igénybe vett szolgáltatások (+27% áfa)": {
+      "kozvetlen": 400000,
+      "kozvetett": 600000
+     },
+     "Bérköltség": {
+      "kozvetlen": 2500000,
+      "kozvetett": 1500000
+     },
+     "Bérjárulékok": {
+      "kozvetlen": 1000000,
+      "kozvetett": 500000
+     },
+     "Értékcsökkenési leírás (termelő gép)": {
+      "kozvetlen": 0,
+      "kozvetett": 800000
+     }
+    },
+    "felosztott_altalanos": 2000000,
+    "hulladek": 150000,
+    "raktarra_db": 3000,
+    "ertekesitett_db": 1800,
+    "eladasi_ar": 6000,
+    "zaro_231": 250000,
+    "leltar_db": 1550
+   },
+   "megoldas": {
+    "szamitasok": [
+     {
+      "mit": "Összes közvetlen költség",
+      "keplet": "nyitó befejezetlen + közvetlen költségek + felosztott közvetett − hulladék",
+      "eredmeny": 12550000
+     },
+     {
+      "mit": "Befejezett termelés",
+      "keplet": "12 550 000 − 250 000",
+      "eredmeny": 12300000
+     },
+     {
+      "mit": "Önköltség",
+      "keplet": "12 300 000 / 3 000 db",
+      "eredmeny": 4100
+     },
+     {
+      "mit": "Eladott késztermék (FIFO)",
+      "keplet": "400 db × 3 750 Ft/db + 1 400 db × 4 100 Ft/db",
+      "eredmeny": 7240000
+     },
+     {
+      "mit": "Várt (könyv szerinti) készlet",
+      "keplet": "400 + 3 000 − 1 800",
+      "eredmeny": 1600
+     },
+     {
+      "mit": "Leltáreltérés",
+      "keplet": "leltár 1 550 db vs könyv 1 600 db",
+      "eredmeny": "hiány 50 db = 205 000 Ft"
+     },
+     {
+      "mit": "Záró késztermék",
+      "keplet": "maradék FIFO-rétegek",
+      "eredmeny": 6355000
+     },
+     {
+      "mit": "STKÁV (záró STK − nyitó STK)",
+      "keplet": "(250 000 + 6 355 000) − (800 000 + 1 500 000)",
+      "eredmeny": 4305000
+     }
+    ],
+    "tetelek": [
+     {
+      "sorszam": "1.a",
+      "esemeny": "Befejezetlen termelés nyitása",
+      "T": "231",
+      "K": "491",
+      "osszeg": 800000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "1.b",
+      "esemeny": "Késztermékek nyitása",
+      "T": "251",
+      "K": "491",
+      "osszeg": 1500000,
+      "szamitas": "400 db"
+     },
+     {
+      "sorszam": "2.",
+      "esemeny": "Nyitó befejezetlen termelés visszavezetése",
+      "T": "581",
+      "K": "231",
+      "osszeg": 800000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "3.a",
+      "esemeny": "Anyagköltség elszámolása (közvetlen + közvetett)",
+      "T": "511",
+      "K": "211",
+      "osszeg": 7500000,
+      "szamitas": "6 000 000 + 1 500 000"
+     },
+     {
+      "sorszam": "3.b",
+      "esemeny": "Igénybe vett szolgáltatások (+27% áfa) elszámolása (közvetlen + közvetett)",
+      "T": "52",
+      "K": "4543",
+      "osszeg": 1000000,
+      "szamitas": "400 000 + 600 000"
+     },
+     {
+      "sorszam": "3.c",
+      "esemeny": "Bérköltség elszámolása (közvetlen + közvetett)",
+      "T": "541",
+      "K": "471",
+      "osszeg": 4000000,
+      "szamitas": "2 500 000 + 1 500 000"
+     },
+     {
+      "sorszam": "3.d",
+      "esemeny": "Bérjárulékok elszámolása (közvetlen + közvetett)",
+      "T": "56",
+      "K": "463",
+      "osszeg": 1500000,
+      "szamitas": "1 000 000 + 500 000"
+     },
+     {
+      "sorszam": "3.e",
+      "esemeny": "Értékcsökkenési leírás (termelő gép) elszámolása (közvetlen + közvetett)",
+      "T": "5711",
+      "K": "139",
+      "osszeg": 800000,
+      "szamitas": "0 + 800 000"
+     },
+     {
+      "sorszam": "3.f",
+      "esemeny": "Szolgáltatás előzetesen felszámított áfája",
+      "T": "4661",
+      "K": "4543",
+      "osszeg": 270000,
+      "szamitas": "1 000 000 × 27%"
+     },
+     {
+      "sorszam": "4.",
+      "esemeny": "Gyártási hulladék készletre vétele (hulladékmegtérülés)",
+      "T": "227",
+      "K": "511",
+      "osszeg": 150000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "5.",
+      "esemeny": "Késztermékek raktárra vétele tényleges előállítási költségen",
+      "T": "251",
+      "K": "581",
+      "osszeg": 12300000,
+      "szamitas": "3 000 db × 4 100 Ft/db"
+     },
+     {
+      "sorszam": "6.a",
+      "esemeny": "Késztermék értékesítés nettó árbevétele",
+      "T": "311",
+      "K": "91–92",
+      "osszeg": 10800000,
+      "szamitas": "1 800 db × 6 000 Ft/db"
+     },
+     {
+      "sorszam": "6.b",
+      "esemeny": "Késztermék értékesítés fizetendő áfája",
+      "T": "311",
+      "K": "467",
+      "osszeg": 2916000,
+      "szamitas": "10 800 000 × 27%"
+     },
+     {
+      "sorszam": "6.c",
+      "esemeny": "Értékesített késztermékek kivezetése (FIFO)",
+      "T": "581",
+      "K": "251",
+      "osszeg": 7240000,
+      "szamitas": "400 db × 3 750 Ft/db + 1 400 db × 4 100 Ft/db"
+     },
+     {
+      "sorszam": "7.",
+      "esemeny": "Felosztott általános költség: csak kalkulációs tétel, nincs könyvelés",
+      "T": "—",
+      "K": "—",
+      "osszeg": 0,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "8.",
+      "esemeny": "Záró befejezetlen termelés állományba vétele",
+      "T": "231",
+      "K": "581",
+      "osszeg": 250000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "9.a",
+      "esemeny": "Leltárhiány állományváltozásként",
+      "T": "581",
+      "K": "251",
+      "osszeg": 205000,
+      "szamitas": "(1 600 − 1 550) = 50 db; 50 db × 4 100 Ft/db"
+     },
+     {
+      "sorszam": "9.b",
+      "esemeny": "Leltárhiány ráfordításként (korrekció 582-n keresztül)",
+      "T": "8693",
+      "K": "582",
+      "osszeg": 205000,
+      "szamitas": ""
+     }
+    ],
+    "egyeb": {
+     "kalkulacio": [
+      [
+       "Befejezetlen termelés (nyitó)",
+       800000
+      ],
+      [
+       "Anyagköltség",
+       6000000
+      ],
+      [
+       "Igénybe vett szolgáltatások (+27% áfa)",
+       400000
+      ],
+      [
+       "Bérköltség",
+       2500000
+      ],
+      [
+       "Bérjárulékok",
+       1000000
+      ],
+      [
+       "Értékcsökkenési leírás (termelő gép)",
+       0
+      ],
+      [
+       "Felosztott közvetett (általános) költség",
+       2000000
+      ],
+      [
+       "Hulladékmegtérülés",
+       -150000
+      ],
+      [
+       "Összes közvetlen költség (nyitó befejezetlennel)",
+       12550000
+      ],
+      [
+       "Záró befejezetlen termelés",
+       -250000
+      ],
+      [
+       "Késztermék előállítási költsége (befejezett termelés)",
+       12300000
+      ],
+      [
+       "Késztermék önköltsége (3 000 db)",
+       "4 100 Ft/db"
+      ]
+     ],
+     "eredmenykimutatas_osszkoltseg": [
+      {
+       "sor": "I.",
+       "nev": "Értékesítés nettó árbevétele",
+       "mellekszamitas": "1 800 db × 6 000 Ft/db",
+       "osszeg": 10800000
+      },
+      {
+       "sor": "II.",
+       "nev": "Aktivált saját teljesítmények értéke",
+       "mellekszamitas": "STKÁV = −800 000 + 12 300 000 − 7 240 000 + 250 000 − 205 000 (hiány) = 4 305 000; SEEAÉ (582) = +205 000",
+       "osszeg": 4510000
+      },
+      {
+       "sor": "III.",
+       "nev": "Egyéb bevételek",
+       "mellekszamitas": "",
+       "osszeg": 0
+      },
+      {
+       "sor": "IV.",
+       "nev": "Anyagjellegű ráfordítások",
+       "mellekszamitas": "51 (hulladékkal csökkentve) + 52",
+       "osszeg": 8350000
+      },
+      {
+       "sor": "V.",
+       "nev": "Személyi jellegű ráfordítások",
+       "mellekszamitas": "54 + 56",
+       "osszeg": 5500000
+      },
+      {
+       "sor": "VI.",
+       "nev": "Értékcsökkenési leírás",
+       "mellekszamitas": "57",
+       "osszeg": 800000
+      },
+      {
+       "sor": "VII.",
+       "nev": "Egyéb ráfordítások",
+       "mellekszamitas": "leltárhiány (8693)",
+       "osszeg": 205000
+      },
+      {
+       "sor": "A.",
+       "nev": "Üzemi (üzleti) tevékenység eredménye",
+       "mellekszamitas": "I + II + III − IV − V − VI − VII",
+       "osszeg": 455000
+      }
+     ],
+     "ellenorzes": "581 egyenlege (K) = 4 305 000 = STKÁV; A = árbevétel − eladott közvetlen önköltség − fel nem osztott közvetett − hiány + többlet = 455 000"
+    }
+   },
+   "tanulsagok": [
+    "Eladott 1 800 db: 400 db nyitó (3 750 Ft/db) + 1 400 db új (4 100 Ft/db).",
+    "Hiány 50 db az új rétegből: 205 000; II. sor = STKÁV + 205 000."
+   ],
+   "elteresek_a_forrasban": [],
+   "ellenorzes": "python számolással ellenőrizve (581 egyenleg = záró − nyitó STK; A = forgalmi logika)"
+  },
+  {
+   "id": "generalt_2",
+   "forras": "generalt",
+   "cim": "Saját gyakorló feladat 2 (minta-ZH 1. feladat mintájára)",
+   "szoveg": "1. Kiemelt számlák nyitása: 231 Befejezetlen termelés 500 000 Ft; 251 Késztermékek 2 400 000 Ft (800 db). 2. Befejezetlen termelés visszavezetése. 3. Költségek (Ft): Anyagköltség: közvetlen 4 500 000, közvetett 1 000 000; Igénybe vett szolgáltatások (+27% áfa): közvetlen 300 000, közvetett 200 000; Bérköltség: közvetlen 2 000 000, közvetett 1 200 000; Bérjárulékok: közvetlen 800 000, közvetett 400 000; Értékcsökkenési leírás (termelő gép): közvetlen 200 000, közvetett 600 000. Utókalkuláció során az általános költségekből felosztásra kerül: 1 500 000 Ft. 4. Gyártási hulladék értéke 80 000 Ft. 5. Raktárra vesz 2 500 db készterméket. 6. Értékesít 600 db készterméket, eladási ár 5 500 Ft/db + 27% áfa. 7. Záró befejezetlen termelés 420 000 Ft. 8. Leltár szerint fellelt késztermék: 2 660 db. (Figyelem: az értékesített mennyiség kisebb a nyitó készletnél!) Feladat: a) kalkuláció; b) könyvelés; c) összköltséges eredménykimutatás az üzemi eredményig. Kiegészítés: összköltség eljárás, kizárólag költségnem-elszámolás, folyamatos mennyiségi és értékbeni analitika, FIFO.",
+   "adatok": {
+    "nyito_231": 500000,
+    "nyito_251": 2400000,
+    "nyito_251_db": 800,
+    "koltsegek": {
+     "Anyagköltség": {
+      "kozvetlen": 4500000,
+      "kozvetett": 1000000
+     },
+     "Igénybe vett szolgáltatások (+27% áfa)": {
+      "kozvetlen": 300000,
+      "kozvetett": 200000
+     },
+     "Bérköltség": {
+      "kozvetlen": 2000000,
+      "kozvetett": 1200000
+     },
+     "Bérjárulékok": {
+      "kozvetlen": 800000,
+      "kozvetett": 400000
+     },
+     "Értékcsökkenési leírás (termelő gép)": {
+      "kozvetlen": 200000,
+      "kozvetett": 600000
+     }
+    },
+    "felosztott_altalanos": 1500000,
+    "hulladek": 80000,
+    "raktarra_db": 2500,
+    "ertekesitett_db": 600,
+    "eladasi_ar": 5500,
+    "zaro_231": 420000,
+    "leltar_db": 2660
+   },
+   "megoldas": {
+    "szamitasok": [
+     {
+      "mit": "Összes közvetlen költség",
+      "keplet": "nyitó befejezetlen + közvetlen költségek + felosztott közvetett − hulladék",
+      "eredmeny": 9720000
+     },
+     {
+      "mit": "Befejezett termelés",
+      "keplet": "9 720 000 − 420 000",
+      "eredmeny": 9300000
+     },
+     {
+      "mit": "Önköltség",
+      "keplet": "9 300 000 / 2 500 db",
+      "eredmeny": 3720
+     },
+     {
+      "mit": "Eladott késztermék (FIFO)",
+      "keplet": "600 db × 3 000 Ft/db",
+      "eredmeny": 1800000
+     },
+     {
+      "mit": "Várt (könyv szerinti) készlet",
+      "keplet": "800 + 2 500 − 600",
+      "eredmeny": 2700
+     },
+     {
+      "mit": "Leltáreltérés",
+      "keplet": "leltár 2 660 db vs könyv 2 700 db",
+      "eredmeny": "hiány 40 db = 120 000 Ft"
+     },
+     {
+      "mit": "Záró késztermék",
+      "keplet": "maradék FIFO-rétegek",
+      "eredmeny": 9780000
+     },
+     {
+      "mit": "STKÁV (záró STK − nyitó STK)",
+      "keplet": "(420 000 + 9 780 000) − (500 000 + 2 400 000)",
+      "eredmeny": 7300000
+     }
+    ],
+    "tetelek": [
+     {
+      "sorszam": "1.a",
+      "esemeny": "Befejezetlen termelés nyitása",
+      "T": "231",
+      "K": "491",
+      "osszeg": 500000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "1.b",
+      "esemeny": "Késztermékek nyitása",
+      "T": "251",
+      "K": "491",
+      "osszeg": 2400000,
+      "szamitas": "800 db"
+     },
+     {
+      "sorszam": "2.",
+      "esemeny": "Nyitó befejezetlen termelés visszavezetése",
+      "T": "581",
+      "K": "231",
+      "osszeg": 500000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "3.a",
+      "esemeny": "Anyagköltség elszámolása (közvetlen + közvetett)",
+      "T": "511",
+      "K": "211",
+      "osszeg": 5500000,
+      "szamitas": "4 500 000 + 1 000 000"
+     },
+     {
+      "sorszam": "3.b",
+      "esemeny": "Igénybe vett szolgáltatások (+27% áfa) elszámolása (közvetlen + közvetett)",
+      "T": "52",
+      "K": "4543",
+      "osszeg": 500000,
+      "szamitas": "300 000 + 200 000"
+     },
+     {
+      "sorszam": "3.c",
+      "esemeny": "Bérköltség elszámolása (közvetlen + közvetett)",
+      "T": "541",
+      "K": "471",
+      "osszeg": 3200000,
+      "szamitas": "2 000 000 + 1 200 000"
+     },
+     {
+      "sorszam": "3.d",
+      "esemeny": "Bérjárulékok elszámolása (közvetlen + közvetett)",
+      "T": "56",
+      "K": "463",
+      "osszeg": 1200000,
+      "szamitas": "800 000 + 400 000"
+     },
+     {
+      "sorszam": "3.e",
+      "esemeny": "Értékcsökkenési leírás (termelő gép) elszámolása (közvetlen + közvetett)",
+      "T": "5711",
+      "K": "139",
+      "osszeg": 800000,
+      "szamitas": "200 000 + 600 000"
+     },
+     {
+      "sorszam": "3.f",
+      "esemeny": "Szolgáltatás előzetesen felszámított áfája",
+      "T": "4661",
+      "K": "4543",
+      "osszeg": 135000,
+      "szamitas": "500 000 × 27%"
+     },
+     {
+      "sorszam": "4.",
+      "esemeny": "Gyártási hulladék készletre vétele (hulladékmegtérülés)",
+      "T": "227",
+      "K": "511",
+      "osszeg": 80000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "5.",
+      "esemeny": "Késztermékek raktárra vétele tényleges előállítási költségen",
+      "T": "251",
+      "K": "581",
+      "osszeg": 9300000,
+      "szamitas": "2 500 db × 3 720 Ft/db"
+     },
+     {
+      "sorszam": "6.a",
+      "esemeny": "Késztermék értékesítés nettó árbevétele",
+      "T": "311",
+      "K": "91–92",
+      "osszeg": 3300000,
+      "szamitas": "600 db × 5 500 Ft/db"
+     },
+     {
+      "sorszam": "6.b",
+      "esemeny": "Késztermék értékesítés fizetendő áfája",
+      "T": "311",
+      "K": "467",
+      "osszeg": 891000,
+      "szamitas": "3 300 000 × 27%"
+     },
+     {
+      "sorszam": "6.c",
+      "esemeny": "Értékesített késztermékek kivezetése (FIFO)",
+      "T": "581",
+      "K": "251",
+      "osszeg": 1800000,
+      "szamitas": "600 db × 3 000 Ft/db"
+     },
+     {
+      "sorszam": "7.",
+      "esemeny": "Felosztott általános költség: csak kalkulációs tétel, nincs könyvelés",
+      "T": "—",
+      "K": "—",
+      "osszeg": 0,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "8.",
+      "esemeny": "Záró befejezetlen termelés állományba vétele",
+      "T": "231",
+      "K": "581",
+      "osszeg": 420000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "9.a",
+      "esemeny": "Leltárhiány állományváltozásként",
+      "T": "581",
+      "K": "251",
+      "osszeg": 120000,
+      "szamitas": "(2 700 − 2 660) = 40 db; 40 db × 3 000 Ft/db"
+     },
+     {
+      "sorszam": "9.b",
+      "esemeny": "Leltárhiány ráfordításként (korrekció 582-n keresztül)",
+      "T": "8693",
+      "K": "582",
+      "osszeg": 120000,
+      "szamitas": ""
+     }
+    ],
+    "egyeb": {
+     "kalkulacio": [
+      [
+       "Befejezetlen termelés (nyitó)",
+       500000
+      ],
+      [
+       "Anyagköltség",
+       4500000
+      ],
+      [
+       "Igénybe vett szolgáltatások (+27% áfa)",
+       300000
+      ],
+      [
+       "Bérköltség",
+       2000000
+      ],
+      [
+       "Bérjárulékok",
+       800000
+      ],
+      [
+       "Értékcsökkenési leírás (termelő gép)",
+       200000
+      ],
+      [
+       "Felosztott közvetett (általános) költség",
+       1500000
+      ],
+      [
+       "Hulladékmegtérülés",
+       -80000
+      ],
+      [
+       "Összes közvetlen költség (nyitó befejezetlennel)",
+       9720000
+      ],
+      [
+       "Záró befejezetlen termelés",
+       -420000
+      ],
+      [
+       "Késztermék előállítási költsége (befejezett termelés)",
+       9300000
+      ],
+      [
+       "Késztermék önköltsége (2 500 db)",
+       "3 720 Ft/db"
+      ]
+     ],
+     "eredmenykimutatas_osszkoltseg": [
+      {
+       "sor": "I.",
+       "nev": "Értékesítés nettó árbevétele",
+       "mellekszamitas": "600 db × 5 500 Ft/db",
+       "osszeg": 3300000
+      },
+      {
+       "sor": "II.",
+       "nev": "Aktivált saját teljesítmények értéke",
+       "mellekszamitas": "STKÁV = −500 000 + 9 300 000 − 1 800 000 + 420 000 − 120 000 (hiány) = 7 300 000; SEEAÉ (582) = +120 000",
+       "osszeg": 7420000
+      },
+      {
+       "sor": "III.",
+       "nev": "Egyéb bevételek",
+       "mellekszamitas": "",
+       "osszeg": 0
+      },
+      {
+       "sor": "IV.",
+       "nev": "Anyagjellegű ráfordítások",
+       "mellekszamitas": "51 (hulladékkal csökkentve) + 52",
+       "osszeg": 5920000
+      },
+      {
+       "sor": "V.",
+       "nev": "Személyi jellegű ráfordítások",
+       "mellekszamitas": "54 + 56",
+       "osszeg": 4400000
+      },
+      {
+       "sor": "VI.",
+       "nev": "Értékcsökkenési leírás",
+       "mellekszamitas": "57",
+       "osszeg": 800000
+      },
+      {
+       "sor": "VII.",
+       "nev": "Egyéb ráfordítások",
+       "mellekszamitas": "leltárhiány (8693)",
+       "osszeg": 120000
+      },
+      {
+       "sor": "A.",
+       "nev": "Üzemi (üzleti) tevékenység eredménye",
+       "mellekszamitas": "I + II + III − IV − V − VI − VII",
+       "osszeg": -520000
+      }
+     ],
+     "ellenorzes": "581 egyenlege (K) = 7 300 000 = STKÁV; A = árbevétel − eladott közvetlen önköltség − fel nem osztott közvetett − hiány + többlet = -520 000"
+    }
+   },
+   "tanulsagok": [
+    "FIFO csapda: az eladott 600 db mind a nyitó rétegből megy (3 000 Ft/db), és a 40 db hiány is a nyitó rétegből (maradt 200 db régi), nem az új 3 720-as önköltségen!",
+    "Közvetlen ÉCS is van – a kalkulációban szerepel, az EK-ban teljes 57-es összeg."
+   ],
+   "elteresek_a_forrasban": [],
+   "ellenorzes": "python számolással ellenőrizve (581 egyenleg = záró − nyitó STK; A = forgalmi logika)"
+  },
+  {
+   "id": "generalt_3",
+   "forras": "generalt",
+   "cim": "Saját gyakorló feladat 3 (minta-ZH 1. feladat mintájára)",
+   "szoveg": "1. Kiemelt számlák nyitása: 231 Befejezetlen termelés 1 200 000 Ft; 251 Késztermékek 900 000 Ft (300 db). 2. Befejezetlen termelés visszavezetése. 3. Költségek (Ft): Anyagköltség: közvetlen 7 000 000, közvetett 2 500 000; Igénybe vett szolgáltatások (+27% áfa): közvetlen 600 000, közvetett 400 000; Bérköltség: közvetlen 3 500 000, közvetett 2 500 000; Bérjárulékok: közvetlen 1 400 000, közvetett 600 000; Értékcsökkenési leírás (termelő gép): közvetlen 0, közvetett 1 200 000. Utókalkuláció során az általános költségekből felosztásra kerül: 2 500 000 Ft. 4. Gyártási hulladék értéke 200 000 Ft. 5. Raktárra vesz 4 000 db készterméket. 6. Értékesít 2 500 db készterméket, eladási ár 6 500 Ft/db + 27% áfa. 7. Záró befejezetlen termelés 600 000 Ft. 8. Leltár szerint fellelt késztermék: 1 830 db. A többletként fellelt késztermék piaci értéke 4 000 Ft/db. Feladat: a) kalkuláció; b) könyvelés; c) összköltséges eredménykimutatás az üzemi eredményig. Kiegészítés: összköltség eljárás, kizárólag költségnem-elszámolás, folyamatos mennyiségi és értékbeni analitika, FIFO.",
+   "adatok": {
+    "nyito_231": 1200000,
+    "nyito_251": 900000,
+    "nyito_251_db": 300,
+    "koltsegek": {
+     "Anyagköltség": {
+      "kozvetlen": 7000000,
+      "kozvetett": 2500000
+     },
+     "Igénybe vett szolgáltatások (+27% áfa)": {
+      "kozvetlen": 600000,
+      "kozvetett": 400000
+     },
+     "Bérköltség": {
+      "kozvetlen": 3500000,
+      "kozvetett": 2500000
+     },
+     "Bérjárulékok": {
+      "kozvetlen": 1400000,
+      "kozvetett": 600000
+     },
+     "Értékcsökkenési leírás (termelő gép)": {
+      "kozvetlen": 0,
+      "kozvetett": 1200000
+     }
+    },
+    "felosztott_altalanos": 2500000,
+    "hulladek": 200000,
+    "raktarra_db": 4000,
+    "ertekesitett_db": 2500,
+    "eladasi_ar": 6500,
+    "zaro_231": 600000,
+    "leltar_db": 1830,
+    "tobblet_piaci_ar": 4000
+   },
+   "megoldas": {
+    "szamitasok": [
+     {
+      "mit": "Összes közvetlen költség",
+      "keplet": "nyitó befejezetlen + közvetlen költségek + felosztott közvetett − hulladék",
+      "eredmeny": 16000000
+     },
+     {
+      "mit": "Befejezett termelés",
+      "keplet": "16 000 000 − 600 000",
+      "eredmeny": 15400000
+     },
+     {
+      "mit": "Önköltség",
+      "keplet": "15 400 000 / 4 000 db",
+      "eredmeny": 3850
+     },
+     {
+      "mit": "Eladott késztermék (FIFO)",
+      "keplet": "300 db × 3 000 Ft/db + 2 200 db × 3 850 Ft/db",
+      "eredmeny": 9370000
+     },
+     {
+      "mit": "Várt (könyv szerinti) készlet",
+      "keplet": "300 + 4 000 − 2 500",
+      "eredmeny": 1800
+     },
+     {
+      "mit": "Leltáreltérés",
+      "keplet": "leltár 1 830 db vs könyv 1 800 db",
+      "eredmeny": "többlet 30 db = 120 000 Ft"
+     },
+     {
+      "mit": "Záró késztermék",
+      "keplet": "maradék FIFO-rétegek + többlet piaci értéke",
+      "eredmeny": 7050000
+     },
+     {
+      "mit": "STKÁV (záró STK − nyitó STK)",
+      "keplet": "(600 000 + 7 050 000) − (1 200 000 + 900 000)",
+      "eredmeny": 5550000
+     }
+    ],
+    "tetelek": [
+     {
+      "sorszam": "1.a",
+      "esemeny": "Befejezetlen termelés nyitása",
+      "T": "231",
+      "K": "491",
+      "osszeg": 1200000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "1.b",
+      "esemeny": "Késztermékek nyitása",
+      "T": "251",
+      "K": "491",
+      "osszeg": 900000,
+      "szamitas": "300 db"
+     },
+     {
+      "sorszam": "2.",
+      "esemeny": "Nyitó befejezetlen termelés visszavezetése",
+      "T": "581",
+      "K": "231",
+      "osszeg": 1200000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "3.a",
+      "esemeny": "Anyagköltség elszámolása (közvetlen + közvetett)",
+      "T": "511",
+      "K": "211",
+      "osszeg": 9500000,
+      "szamitas": "7 000 000 + 2 500 000"
+     },
+     {
+      "sorszam": "3.b",
+      "esemeny": "Igénybe vett szolgáltatások (+27% áfa) elszámolása (közvetlen + közvetett)",
+      "T": "52",
+      "K": "4543",
+      "osszeg": 1000000,
+      "szamitas": "600 000 + 400 000"
+     },
+     {
+      "sorszam": "3.c",
+      "esemeny": "Bérköltség elszámolása (közvetlen + közvetett)",
+      "T": "541",
+      "K": "471",
+      "osszeg": 6000000,
+      "szamitas": "3 500 000 + 2 500 000"
+     },
+     {
+      "sorszam": "3.d",
+      "esemeny": "Bérjárulékok elszámolása (közvetlen + közvetett)",
+      "T": "56",
+      "K": "463",
+      "osszeg": 2000000,
+      "szamitas": "1 400 000 + 600 000"
+     },
+     {
+      "sorszam": "3.e",
+      "esemeny": "Értékcsökkenési leírás (termelő gép) elszámolása (közvetlen + közvetett)",
+      "T": "5711",
+      "K": "139",
+      "osszeg": 1200000,
+      "szamitas": "0 + 1 200 000"
+     },
+     {
+      "sorszam": "3.f",
+      "esemeny": "Szolgáltatás előzetesen felszámított áfája",
+      "T": "4661",
+      "K": "4543",
+      "osszeg": 270000,
+      "szamitas": "1 000 000 × 27%"
+     },
+     {
+      "sorszam": "4.",
+      "esemeny": "Gyártási hulladék készletre vétele (hulladékmegtérülés)",
+      "T": "227",
+      "K": "511",
+      "osszeg": 200000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "5.",
+      "esemeny": "Késztermékek raktárra vétele tényleges előállítási költségen",
+      "T": "251",
+      "K": "581",
+      "osszeg": 15400000,
+      "szamitas": "4 000 db × 3 850 Ft/db"
+     },
+     {
+      "sorszam": "6.a",
+      "esemeny": "Késztermék értékesítés nettó árbevétele",
+      "T": "311",
+      "K": "91–92",
+      "osszeg": 16250000,
+      "szamitas": "2 500 db × 6 500 Ft/db"
+     },
+     {
+      "sorszam": "6.b",
+      "esemeny": "Késztermék értékesítés fizetendő áfája",
+      "T": "311",
+      "K": "467",
+      "osszeg": 4387500,
+      "szamitas": "16 250 000 × 27%"
+     },
+     {
+      "sorszam": "6.c",
+      "esemeny": "Értékesített késztermékek kivezetése (FIFO)",
+      "T": "581",
+      "K": "251",
+      "osszeg": 9370000,
+      "szamitas": "300 db × 3 000 Ft/db + 2 200 db × 3 850 Ft/db"
+     },
+     {
+      "sorszam": "7.",
+      "esemeny": "Felosztott általános költség: csak kalkulációs tétel, nincs könyvelés",
+      "T": "—",
+      "K": "—",
+      "osszeg": 0,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "8.",
+      "esemeny": "Záró befejezetlen termelés állományba vétele",
+      "T": "231",
+      "K": "581",
+      "osszeg": 600000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "9.a",
+      "esemeny": "Leltártöbblet állományváltozásként (piaci értéken)",
+      "T": "251",
+      "K": "581",
+      "osszeg": 120000,
+      "szamitas": "(1 830 − 1 800) = 30 db × 4 000 Ft/db"
+     },
+     {
+      "sorszam": "9.b",
+      "esemeny": "Leltártöbblet egyéb bevételként (korrekció 582-n keresztül)",
+      "T": "582",
+      "K": "969",
+      "osszeg": 120000,
+      "szamitas": ""
+     }
+    ],
+    "egyeb": {
+     "kalkulacio": [
+      [
+       "Befejezetlen termelés (nyitó)",
+       1200000
+      ],
+      [
+       "Anyagköltség",
+       7000000
+      ],
+      [
+       "Igénybe vett szolgáltatások (+27% áfa)",
+       600000
+      ],
+      [
+       "Bérköltség",
+       3500000
+      ],
+      [
+       "Bérjárulékok",
+       1400000
+      ],
+      [
+       "Értékcsökkenési leírás (termelő gép)",
+       0
+      ],
+      [
+       "Felosztott közvetett (általános) költség",
+       2500000
+      ],
+      [
+       "Hulladékmegtérülés",
+       -200000
+      ],
+      [
+       "Összes közvetlen költség (nyitó befejezetlennel)",
+       16000000
+      ],
+      [
+       "Záró befejezetlen termelés",
+       -600000
+      ],
+      [
+       "Késztermék előállítási költsége (befejezett termelés)",
+       15400000
+      ],
+      [
+       "Késztermék önköltsége (4 000 db)",
+       "3 850 Ft/db"
+      ]
+     ],
+     "eredmenykimutatas_osszkoltseg": [
+      {
+       "sor": "I.",
+       "nev": "Értékesítés nettó árbevétele",
+       "mellekszamitas": "2 500 db × 6 500 Ft/db",
+       "osszeg": 16250000
+      },
+      {
+       "sor": "II.",
+       "nev": "Aktivált saját teljesítmények értéke",
+       "mellekszamitas": "STKÁV = −1 200 000 + 15 400 000 − 9 370 000 + 600 000 + 120 000 (többlet) = 5 550 000; SEEAÉ (582) = −120 000",
+       "osszeg": 5430000
+      },
+      {
+       "sor": "III.",
+       "nev": "Egyéb bevételek",
+       "mellekszamitas": "leltártöbblet",
+       "osszeg": 120000
+      },
+      {
+       "sor": "IV.",
+       "nev": "Anyagjellegű ráfordítások",
+       "mellekszamitas": "51 (hulladékkal csökkentve) + 52",
+       "osszeg": 10300000
+      },
+      {
+       "sor": "V.",
+       "nev": "Személyi jellegű ráfordítások",
+       "mellekszamitas": "54 + 56",
+       "osszeg": 8000000
+      },
+      {
+       "sor": "VI.",
+       "nev": "Értékcsökkenési leírás",
+       "mellekszamitas": "57",
+       "osszeg": 1200000
+      },
+      {
+       "sor": "VII.",
+       "nev": "Egyéb ráfordítások",
+       "mellekszamitas": "",
+       "osszeg": 0
+      },
+      {
+       "sor": "A.",
+       "nev": "Üzemi (üzleti) tevékenység eredménye",
+       "mellekszamitas": "I + II + III − IV − V − VI − VII",
+       "osszeg": 2300000
+      }
+     ],
+     "ellenorzes": "581 egyenlege (K) = 5 550 000 = STKÁV; A = árbevétel − eladott közvetlen önköltség − fel nem osztott közvetett − hiány + többlet = 2 300 000"
+    }
+   },
+   "tanulsagok": [
+    "Leltártöbblet: T 251 / K 581 és T 582 / K 969 piaci értéken (nem önköltségen!).",
+    "II. sor = STKÁV − 120 000 (582 terhelés); III. Egyéb bevétel 120 000 – a többlet csak egyszer javítja az eredményt."
+   ],
+   "elteresek_a_forrasban": [],
+   "ellenorzes": "python számolással ellenőrizve (581 egyenleg = záró − nyitó STK; A = forgalmi logika)"
+  }
+ ],
+ "gyakorlo_kerdesek": [
+  {
+   "id": "q1",
+   "tipus": "tobbvalasztos",
+   "kerdes": "A saját termelésű készletekre igaz, hogy",
+   "opciok": [
+    "a) A késztermék a vállalkozásnál minden szükséges megmunkáláson átesett.",
+    "b) A félkész termék már nem igényelhet további megmunkálást.",
+    "c) A befejezetlen termelés a termelési folyamat köztes állapotát fejezi ki.",
+    "d) A növendék- és hízóállatokat a saját termelésű készletek közé soroljuk.",
+    "e) A saját termelésű készletek állományváltozása mindig azonos az értékesítés nettó árbevételével."
+   ],
+   "helyes": [
+    "a",
+    "c",
+    "d"
+   ],
+   "magyarazat": "b) hamis: a félkész termék a vállalkozáson belül további megmunkálásra kerülhet. e) hamis: az STKÁV a záró és nyitó készlet különbsége, nem az árbevétel.",
+   "forras": "teszt"
+  },
+  {
+   "id": "q2",
+   "tipus": "tobbvalasztos",
+   "kerdes": "A saját termelésű készletekre igaz, hogy",
+   "opciok": [
+    "a) A félkész termék legalább egy teljes megmunkálási folyamaton végigment.",
+    "b) A befejezetlen termelés raktárra vehető.",
+    "c) A bérbe vett állatokat is a saját termelésű készletek között kell kimutatni.",
+    "d) A tenyészállat saját termelésű készlet.",
+    "e) A hulladék értéke csökkenti a késztermék önköltségét."
+   ],
+   "helyes": [
+    "a",
+    "c",
+    "e"
+   ],
+   "magyarazat": "b) a befejezetlen termelés nem vehető raktárra; d) a tenyészállat tárgyi eszköz.",
+   "forras": "generalt"
+  },
+  {
+   "id": "q3",
+   "tipus": "tobbvalasztos",
+   "kerdes": "A saját termelésű készletekre igaz, hogy",
+   "opciok": [
+    "a) A közvetlen önköltség része a raktározási költség.",
+    "b) Az értékvesztés egyéb ráfordítás.",
+    "c) Az értékvesztés visszaírása az eredeti bekerülési értéket is meghaladhatja.",
+    "d) A leltártöbblet piaci értéken kerül nyilvántartásba.",
+    "e) A hiányzó készlet értékét FIFO vagy átlagáras módszerrel kell számítani."
+   ],
+   "helyes": [
+    "b",
+    "d",
+    "e"
+   ],
+   "magyarazat": "a) az értékesítési költség nem része; c) visszaírás csak az eredeti bekerülési értékig.",
+   "forras": "generalt"
+  },
+  {
+   "id": "q4",
+   "tipus": "tobbvalasztos",
+   "kerdes": "Összköltség eljárásnál, kizárólag költségnem-elszámolásnál igaz, hogy",
+   "opciok": [
+    "a) A felosztott általános költséget külön könyveljük T 581 / K 5x.",
+    "b) A nyitó befejezetlen termelést T 581 / K 231 tétellel vezetjük vissza.",
+    "c) A késztermék raktárra vétele T 251 / K 581.",
+    "d) Az eladott késztermék kivezetése T 811 / K 251.",
+    "e) A leltárhiányt T 581 / K 251 és T 8693 / K 582 tétellel könyveljük."
+   ],
+   "helyes": [
+    "b",
+    "c",
+    "e"
+   ],
+   "magyarazat": "a) a felosztott általános költség csak kalkulációs tétel; d) a 811 a forgalmi eljárásé, itt T 581 / K 251.",
+   "forras": "generalt"
+  },
+  {
+   "id": "q5",
+   "tipus": "igaz_hamis",
+   "kerdes": "A befejezetlen termelésen legalább egy lényeges munkaműveletet már elvégeztek.",
+   "opciok": null,
+   "helyes": true,
+   "magyarazat": "Definíció szerint (elmélet 5. dia).",
+   "forras": "tananyag"
+  },
+  {
+   "id": "q6",
+   "tipus": "igaz_hamis",
+   "kerdes": "A félkész termék nem adható el, csak továbbfelhasználható.",
+   "opciok": null,
+   "helyes": false,
+   "magyarazat": "Továbbfeldolgozható, de el is adható.",
+   "forras": "tananyag"
+  },
+  {
+   "id": "q7",
+   "tipus": "igaz_hamis",
+   "kerdes": "A hízóállat, ha vásárolták, áruként kell kimutatni.",
+   "opciok": null,
+   "helyes": false,
+   "magyarazat": "Vásárolt és saját is saját termelésű készlet, mert év végén nem különíthető el a vásárolt és a saját rész.",
+   "forras": "tananyag"
+  },
+  {
+   "id": "q8",
+   "tipus": "igaz_hamis",
+   "kerdes": "A 6-os és 7-es számlaosztály vezetése kötelező.",
+   "opciok": null,
+   "helyes": false,
+   "magyarazat": "Nem kötelező, vezetői információt ad; az 5-ös osztály kötelező.",
+   "forras": "tananyag"
+  },
+  {
+   "id": "q9",
+   "tipus": "igaz_hamis",
+   "kerdes": "A forgalmi költség eljárás mellett is kötelező az 5-ös számlaosztály vezetése.",
+   "opciok": null,
+   "helyes": true,
+   "magyarazat": "Törvényi előírás (elmélet 31. dia).",
+   "forras": "tananyag"
+  },
+  {
+   "id": "q10",
+   "tipus": "igaz_hamis",
+   "kerdes": "Az ügyvezetés költsége a késztermék közvetlen önköltségének része.",
+   "opciok": null,
+   "helyes": false,
+   "magyarazat": "Igazgatási költség, nem vehető figyelembe.",
+   "forras": "tananyag"
+  },
+  {
+   "id": "q11",
+   "tipus": "igaz_hamis",
+   "kerdes": "A fordulónapig ki nem számlázott szolgáltatás befejezetlen termelés.",
+   "opciok": null,
+   "helyes": true,
+   "magyarazat": "Elmélet 5. és 10. dia.",
+   "forras": "tananyag"
+  },
+  {
+   "id": "q12",
+   "tipus": "igaz_hamis",
+   "kerdes": "A leltárhiányt összköltség eljárásnál csak T 8693 / K 251 tétellel könyveljük.",
+   "opciok": null,
+   "helyes": false,
+   "magyarazat": "Két tétel: T 581 / K 251 és T 8693 / K 582.",
+   "forras": "tananyag"
+  },
+  {
+   "id": "q13",
+   "tipus": "igaz_hamis",
+   "kerdes": "A felosztott általános költség a kalkulációban növeli a befejezett termelés költségét, de nem könyveljük külön.",
+   "opciok": null,
+   "helyes": true,
+   "magyarazat": "Minta-ZH 7. tétel: 'kalkulációs tétel'.",
+   "forras": "tananyag"
+  },
+  {
+   "id": "q14",
+   "tipus": "igaz_hamis",
+   "kerdes": "Az üzemi eredmény összköltség és forgalmi költség eljárásnál azonos.",
+   "opciok": null,
+   "helyes": true,
+   "magyarazat": "Kis Kft: mindkettőnél 188 eFt.",
+   "forras": "feladat"
+  },
+  {
+   "id": "q15",
+   "tipus": "egyvalasztos",
+   "kerdes": "Melyik tétel a gyártási hulladék készletre vétele?",
+   "opciok": [
+    "T 227 / K 511",
+    "T 226 / K 511",
+    "T 511 / K 227",
+    "T 227 / K 581"
+   ],
+   "helyes": "T 227 / K 511",
+   "magyarazat": "227 Egyéb anyagok; a 226 'tárgyi eszközök közül átsorolt anyagok'.",
+   "forras": "tananyag"
+  },
+  {
+   "id": "q16",
+   "tipus": "egyvalasztos",
+   "kerdes": "Melyik tétel a záró befejezetlen termelés állományba vétele?",
+   "opciok": [
+    "T 231 / K 581",
+    "T 581 / K 231",
+    "T 231 / K 491",
+    "T 251 / K 231"
+   ],
+   "helyes": "T 231 / K 581",
+   "magyarazat": "A T 581 / K 231 a nyitó visszavezetése.",
+   "forras": "tananyag"
+  },
+  {
+   "id": "q17",
+   "tipus": "egyvalasztos",
+   "kerdes": "Melyik tétel az értékesített késztermék kivezetése összköltség eljárásnál?",
+   "opciok": [
+    "T 581 / K 251",
+    "T 811 / K 251",
+    "T 251 / K 581",
+    "T 8693 / K 251"
+   ],
+   "helyes": "T 581 / K 251",
+   "magyarazat": "811 csak forgalmi eljárásnál.",
+   "forras": "tananyag"
+  },
+  {
+   "id": "q18",
+   "tipus": "egyvalasztos",
+   "kerdes": "Melyik az STKÁV számlája?",
+   "opciok": [
+    "581",
+    "582",
+    "591",
+    "251"
+   ],
+   "helyes": "581",
+   "magyarazat": "582 = saját előállítású eszközök aktivált értéke.",
+   "forras": "tananyag"
+  },
+  {
+   "id": "q19",
+   "tipus": "egyvalasztos",
+   "kerdes": "Az összköltséges eredménykimutatás melyik sorában jelenik meg az STKÁV?",
+   "opciok": [
+    "I.",
+    "II.",
+    "III.",
+    "VII."
+   ],
+   "helyes": "II.",
+   "magyarazat": "II. Aktivált saját teljesítmények értéke.",
+   "forras": "tananyag"
+  },
+  {
+   "id": "q20",
+   "tipus": "egyvalasztos",
+   "kerdes": "Hol jelenik meg az összköltséges EK-ban a leltárhiány?",
+   "opciok": [
+    "VII. Egyéb ráfordítások (és +SEEAÉ a II. sorban)",
+    "IV. Anyagjellegű ráfordítások",
+    "Csak a II. sorban",
+    "Nem jelenik meg"
+   ],
+   "helyes": "VII. Egyéb ráfordítások (és +SEEAÉ a II. sorban)",
+   "magyarazat": "8693 egyéb ráfordítás; az 582 korrekció a II. sorban.",
+   "forras": "tananyag"
+  },
+  {
+   "id": "q21",
+   "tipus": "egyvalasztos",
+   "kerdes": "Mi a leltártöbblet ráfordítás/bevétel oldali tétele?",
+   "opciok": [
+    "T 582 / K 969",
+    "T 8693 / K 582",
+    "T 251 / K 969",
+    "T 969 / K 582"
+   ],
+   "helyes": "T 582 / K 969",
+   "magyarazat": "Elmélet 66. dia: T 582 – K 96.",
+   "forras": "tananyag"
+  },
+  {
+   "id": "q22",
+   "tipus": "egyvalasztos",
+   "kerdes": "Késztermék értékvesztése:",
+   "opciok": [
+    "T 8661 / K 259",
+    "T 8693 / K 251",
+    "T 259 / K 9661",
+    "T 581 / K 259 egyedül"
+   ],
+   "helyes": "T 8661 / K 259",
+   "magyarazat": "T 259 / K 9661 a visszaírás.",
+   "forras": "tananyag"
+  },
+  {
+   "id": "q23",
+   "tipus": "szamitas",
+   "kerdes": "Nyitó befejezetlen 1 000 000; közvetlen költségek 12 800 000; felosztott általános 3 000 000; hulladék 100 000; záró befejezetlen 100 000; raktárra vett 5 000 db. Mennyi az önköltség?",
+   "opciok": null,
+   "helyes": 3320,
+   "magyarazat": "(1 000 000 + 12 800 000 + 3 000 000 − 100 000 − 100 000) / 5 000 = 3 320 Ft/db.",
+   "forras": "feladat"
+  },
+  {
+   "id": "q24",
+   "tipus": "szamitas",
+   "kerdes": "Nyitó késztermék 500 db, 2 100 000 Ft; új réteg önköltsége 3 320 Ft/db. Eladnak 2 000 db-ot (FIFO). Mennyi a kivezetendő érték?",
+   "opciok": null,
+   "helyes": 7080000,
+   "magyarazat": "2 100 000 + 1 500 × 3 320 = 7 080 000.",
+   "forras": "feladat"
+  },
+  {
+   "id": "q25",
+   "tipus": "szamitas",
+   "kerdes": "Nyitó 500 db, raktárra 5 000 db, eladott 2 000 db, leltár 3 400 db, önköltség 3 320 Ft/db. Mennyi a hiány értéke?",
+   "opciok": null,
+   "helyes": 332000,
+   "magyarazat": "3 500 − 3 400 = 100 db × 3 320.",
+   "forras": "feladat"
+  },
+  {
+   "id": "q26",
+   "tipus": "szamitas",
+   "kerdes": "Nyitó STK 900 000 (befejezetlen 700 000 + késztermék 200 000), záró STK 1 888 000. Mennyi az STKÁV?",
+   "opciok": null,
+   "helyes": 988000,
+   "magyarazat": "1 888 000 − 900 000.",
+   "forras": "feladat"
+  },
+  {
+   "id": "q27",
+   "tipus": "szamitas",
+   "kerdes": "Nyitó késztermék 800 db × 3 000 Ft; új önköltség 3 720 Ft/db, raktárra 2 500 db; eladott 600 db; leltár 2 660 db. Mennyi a hiány értéke FIFO szerint?",
+   "opciok": null,
+   "helyes": 120000,
+   "magyarazat": "Várt 2 700 db, hiány 40 db; a nyitó rétegből még 200 db maradt, így 40 × 3 000 = 120 000.",
+   "forras": "generalt"
+  },
+  {
+   "id": "q28",
+   "tipus": "szamitas",
+   "kerdes": "Gépköltség 3 560 000 Ft, gépóra: A 240, B 160, C 100. Mennyi jut az A termékre?",
+   "opciok": null,
+   "helyes": 1708800,
+   "magyarazat": "3 560 000 / 500 = 7 120 Ft/gépóra × 240.",
+   "forras": "feladat"
+  },
+  {
+   "id": "q29",
+   "tipus": "szamitas",
+   "kerdes": "Árbevétel 18 200 000; eladott késztermék FIFO értéke 9 990 000; összes közvetett 11 000 000, ebből felosztott 3 000 000; hiány 22 000. Mennyi az üzemi eredmény?",
+   "opciok": null,
+   "helyes": 188000,
+   "magyarazat": "18 200 000 − 9 990 000 − 8 000 000 − 22 000.",
+   "forras": "feladat"
+  },
+  {
+   "id": "q30",
+   "tipus": "szamitas",
+   "kerdes": "Minta-ZH: mennyi az összköltséges EK II. sora (STKÁV 8 288 000, hiány 332 000)?",
+   "opciok": null,
+   "helyes": 8620000,
+   "magyarazat": "STKÁV + SEEAÉ 332 000.",
+   "forras": "feladat"
+  },
+  {
+   "id": "q31",
+   "tipus": "parositas",
+   "kerdes": "Párosítsa a mérlegsorhoz!",
+   "opciok": [
+    "Félig összeszerelt gép a gyártósoron",
+    "Festetlen bútor raktáron",
+    "Hízósertés",
+    "Raktárra vett, eladható kész termék"
+   ],
+   "helyes": {
+    "Félig összeszerelt gép a gyártósoron": "B.I.2 Befejezetlen termelés",
+    "Festetlen bútor raktáron": "B.I.2 Félkész termék",
+    "Hízósertés": "B.I.3 Növendék-, hízó- és egyéb állatok",
+    "Raktárra vett, eladható kész termék": "B.I.4 Késztermékek"
+   },
+   "magyarazat": "A befejezetlen és a félkész közös sor (B.I.2).",
+   "forras": "tananyag"
+  },
+  {
+   "id": "q32",
+   "tipus": "parositas",
+   "kerdes": "Párosítsa az eseményt az eredménykimutatás-tétellel!",
+   "opciok": [
+    "Értékesített készlet könyv szerinti értéke",
+    "Leltárhiány",
+    "Leltártöbblet",
+    "Értékvesztés visszaírása",
+    "Térítés nélkül átadott készlet könyv szerinti értéke"
+   ],
+   "helyes": {
+    "Értékesített készlet könyv szerinti értéke": "STKÁV",
+    "Leltárhiány": "Egyéb ráfordítás",
+    "Leltártöbblet": "Egyéb bevétel",
+    "Értékvesztés visszaírása": "Egyéb bevétel",
+    "Térítés nélkül átadott készlet könyv szerinti értéke": "Egyéb ráfordítás"
+   },
+   "magyarazat": "Elmélet 69. dia.",
+   "forras": "tananyag"
+  },
+  {
+   "id": "q33",
+   "tipus": "merlegsor",
+   "kerdes": "Melyik mérlegsoron jelenik meg a záró befejezetlen termelés?",
+   "opciok": null,
+   "helyes": "B.I.2 Befejezetlen termelés és félkész termékek",
+   "magyarazat": "Mérlegséma 32. sor.",
+   "forras": "tananyag"
+  },
+  {
+   "id": "q34",
+   "tipus": "merlegsor",
+   "kerdes": "Melyik mérlegsoron jelenik meg a bérbe vett állat?",
+   "opciok": null,
+   "helyes": "B.I.3 Növendék-, hízó- és egyéb állatok",
+   "magyarazat": "A bérbe vett állat is STK.",
+   "forras": "tananyag"
+  },
+  {
+   "id": "q35",
+   "tipus": "kifejtes",
+   "kerdes": "Mutassa be a befejezetlen termelés fogalmát! (7 pont)",
+   "opciok": null,
+   "helyes": "Lásd fogalmak/befejezetlen: megmunkálás alatt; ≥1 lényeges művelet; nem teljes folyamat; raktárra nem vehető; ki nem számlázott szolgáltatás; számottevő művelet a számviteli politikában; kalkulációval értékelik (231, B.I.2).",
+   "magyarazat": "Fogalom-kérdés lehet a ZH-n.",
+   "forras": "tananyag"
+  },
+  {
+   "id": "q36",
+   "tipus": "kifejtes",
+   "kerdes": "Mutassa be a saját termelésű készletek állományváltozásának (STKÁV) fogalmát és szerepét! (7 pont)",
+   "opciok": null,
+   "helyes": "Lásd fogalmak/stkav.",
+   "magyarazat": "Teszt e) válaszhoz is kapcsolódik.",
+   "forras": "tananyag"
+  },
+  {
+   "id": "q37",
+   "tipus": "kifejtes",
+   "kerdes": "Miért kell a leltárhiányt a 582 számlán keresztül is könyvelni?",
+   "opciok": null,
+   "helyes": "Mert a hiány T 581 / K 251 állományváltozásként már csökkenti az eredményt, a T 8693 ráfordítás pedig még egyszer; a K 582 semlegesíti a halmozódást, így a hiány egyszer, egyéb ráfordításként hat.",
+   "magyarazat": "Elmélet 64. dia.",
+   "forras": "tananyag"
+  },
+  {
+   "id": "q38",
+   "tipus": "kifejtes",
+   "kerdes": "Írja fel a kalkulációs sémát!",
+   "opciok": null,
+   "helyes": "Nyitó befejezetlen + anyag + igénybe vett szolg. + egyéb szolg. + bér + járulék + ÉCS + felosztott közvetett − hulladékmegtérülés = összes közvetlen költség − záró befejezetlen = befejezett termelés költsége; ÷ megtermelt db = önköltség.",
+   "magyarazat": "Elmélet 44. dia, minta-ZH 5 pont.",
+   "forras": "tananyag"
+  },
+  {
+   "id": "q39",
+   "tipus": "kifejtes",
+   "kerdes": "Sorolja fel az összköltséges eredménykimutatás sorait az üzemi eredményig!",
+   "opciok": null,
+   "helyes": "I. Értékesítés nettó árbevétele; II. Aktivált saját teljesítmények értéke; III. Egyéb bevételek; IV. Anyagjellegű ráfordítások; V. Személyi jellegű ráfordítások; VI. Értékcsökkenési leírás; VII. Egyéb ráfordítások; A. Üzemi (üzleti) tevékenység eredménye.",
+   "magyarazat": "Minta-ZH: séma 8 × 0,5 pont.",
+   "forras": "tananyag"
+  },
+  {
+   "id": "q40",
+   "tipus": "egyvalasztos",
+   "kerdes": "Mit nem lehet a közvetlen önköltségben figyelembe venni?",
+   "opciok": [
+    "Piackutatás költsége",
+    "Gyártásban felhasznált alapanyag",
+    "Fizikai dolgozó bére",
+    "Felosztott üzemi általános költség"
+   ],
+   "helyes": "Piackutatás költsége",
+   "magyarazat": "Értékesítési költség.",
+   "forras": "tananyag"
+  },
+  {
+   "id": "q41",
+   "tipus": "egyvalasztos",
+   "kerdes": "Mi a piaci érték saját termelésű készletnél?",
+   "opciok": [
+    "Várható eladási ár − még várhatóan felmerülő költségek + várható támogatások",
+    "Előállítási költség + haszonkulcs",
+    "Utolsó beszerzési ár",
+    "Könyv szerinti érték − ÉCS"
+   ],
+   "helyes": "Várható eladási ár − még várhatóan felmerülő költségek + várható támogatások",
+   "magyarazat": "Elmélet 46. dia.",
+   "forras": "tananyag"
+  }
+ ],
+ "csapdak": [
+  "ZH-n csak 5-ös számlaosztály: ne írj 6/7-es, 59-es, 811-es vagy 85-ös tételt.",
+  "A felosztott általános költség a kalkulációban +, de NINCS könyvelése (minta-ZH 7. tétel: '—').",
+  "A költségnemeket közvetlen + közvetett együtt könyveld (pl. 511: 8 M + 2 M = 10 M), a kalkulációba viszont csak a közvetlen + felosztott megy.",
+  "A nyitó befejezetlen kétszer szerepel: nyitás (231/491) és visszavezetés (581/231); a kalkulációban +.",
+  "Hulladék: T 227 / K 511 (nem 226!); a kalkulációban −, és az EK IV. sorát is csökkenti (a minta-kulcs ezt kihagyta: −712 000 helyett −612 000 a konzisztens).",
+  "FIFO: először a nyitó készletréteg megy ki a saját (nyitó érték / nyitó db) egységárán – ne a tárgyidőszaki önköltséggel számold az egészet.",
+  "Ha az eladott db kevesebb a nyitó készletnél, a hiány is a nyitó rétegből (régi áron) megy.",
+  "Hiány mennyisége = nyitó db + raktárra vett − eladott − leltár szerinti db (a nyitó db-t ne felejtsd!).",
+  "Hiánynál két tétel kell: T 581 / K 251 és T 8693 / K 582; a II. sorban STKÁV + SEEAÉ (a 582 K egyenlege hozzáadódik).",
+  "Többlet piaci értéken, nem önköltségen: T 251 / K 581 és T 582 / K 969; a II. sorban az 582 levonandó.",
+  "Az STKÁV nem azonos az árbevétellel, és lehet negatív is (készletcsökkenés).",
+  "Áfa: az értékesítés áfája (T 311 / K 467) és a szolgáltatás előzetes áfája (T 4661 / K 4543) külön tétel, mellékszámítással (minta-ZH 5 × 0,5 pont).",
+  "A szolgáltatás bruttó összege nem költség: az 52-re csak a nettó megy.",
+  "A teszt b) állítása: 'A félkész termék MÁR NEM igényelhet további megmunkálást' – hamis, mert további megmunkálásra kerülhet.",
+  "Befejezetlen vs. félkész: a döntő, hogy raktárra vehető-e (félkész igen, befejezetlen nem).",
+  "A tenyészállat tárgyi eszköz, a növendék/hízó/egyéb állat (vásárolt is!) saját termelésű készlet.",
+  "A záró befejezetlen termelés a kalkulációban −, a könyvelésben T 231 / K 581.",
+  "Az EK-ban az összegek Ft-ban (vagy eFt-ban, ha a feladat úgy kéri); az előjelek: II. lehet negatív, A lehet veszteség.",
+  "A 'költséghelyi, általános költségek' sor már tartalmazhatja a felosztott részt – ne add hozzá még egyszer a költségnemekhez (Kis Kft)."
+ ]
+}

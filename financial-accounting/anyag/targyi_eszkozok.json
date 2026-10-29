@@ -1,0 +1,3528 @@
+{
+ "tema": "Tárgyi eszközök",
+ "forrasok": [
+  "src/elmelet/targyi.pdf / targyi.txt",
+  "I_Tárgyi eszközök feladatsor.pdf",
+  "I_Tárgyi eszközök elszámolása feladatsor megoldása_kész.pptx",
+  "II_Tárgyi eszközök feladatsor.pdf",
+  "II_Tárgyi eszközök elszámolása feladatsor megoldása.pdf",
+  "órai jegyzet 1.docx",
+  "órai jegyzet2.pdf / órai jegyzet2-1.png",
+  "zh/tukor.txt (számlatükör)",
+  "zh-anyag/szamlaszamok.json",
+  "zh-anyag/tesztkerdesek_moodle.json",
+  "zh/I_elméleti_Minta megoldás_javított.pdf"
+ ],
+ "zh_relevancia": "Magas. A minta-ZH elméleti tesztjének első blokkja tárgyi eszközös (helyes: b, e). A fogalom-kérdés (7 pont) a tanári tipp szerint tárgyi eszköz, immateriális javak vagy készletek témából jön – cégalapításból nem –, így a tárgyi eszköz fogalmai (tárgyi eszköz, beruházás, felújítás, terven felüli ÉCS, értékhelyesbítés, maradványérték, hasznos élettartam, bekerülési érték) magas valószínűségűek. Mérlegsorok bármelyik csoportból jöhetnek (II. Tárgyi eszközök 1–7.). A gyakorlati részben apport (T 161 / K 479), beruházás, aktiválás, ÉCS, terven felüli ÉCS tételek a vegyes alapítási naplófeladatban szerepelhetnek.",
+ "fogalmak": [
+  {
+   "id": "te_f01",
+   "nev": "Tárgyi eszköz",
+   "definicio": "Tárgyi eszköznek minősülnek azok az anyagi eszközök és tenyészállatok, amelyek közvetlenül vagy közvetett módon tartósan, egy évnél tovább szolgálják a vállalkozó tevékenységét, továbbá az ezen eszközök beszerzésére (a beruházásokra) adott előlegek, a beruházások és felújítások, valamint a tárgyi eszközök értékhelyesbítése (Szt. 26. § (1)). Ismérvei: anyagi javak (tárgyiasult eszközök, illetve ingatlanokhoz kapcsolódó vagyoni értékű jogok) vagy tenyészállatok; értékkel bírnak (eladhatók, átruházhatók); tartósak – előreláthatólag egy évnél hosszabb ideig vesznek részt az újratermelési folyamatban (tenyészállatnál a tartósságot nem kell vizsgálni); közvetlenül vagy közvetve szolgálják a tevékenységet. A legfeljebb egy évig szolgáló anyagi eszközöket a használatba vételig a készletek között kell kimutatni, nem a tárgyi eszközök között.",
+   "kulcselemek": [
+    "anyagi eszköz vagy tenyészállat",
+    "tartósan, 1 évnél tovább",
+    "közvetlenül vagy közvetve szolgálja a tevékenységet",
+    "értékkel bír (eladható, átruházható)",
+    "ide tartozik: beruházás, felújítás, beruházásra adott előleg, értékhelyesbítés",
+    "tenyészállatnál a tartósság nem vizsgálandó",
+    "≤1 év → készlet",
+    "Szt. 26. § (1)",
+    "mérleg A/II., 12-16. számlacsoport"
+   ],
+   "pelda": "Termelőgép, épület, irodai bútor, üzembe nem helyezett gép (beruházásként).",
+   "zh_valoszinuseg": "magas",
+   "forras": "src/elmelet/targyi.txt (Tárgyi eszközök elmélet, diák)"
+  },
+  {
+   "id": "te_f02",
+   "nev": "Tárgyi eszközök mérlegsorai (A/II. 1–7.)",
+   "definicio": "A mérleg eszközoldalán az A) Befektetett eszközök II. Tárgyi eszközök csoportja hét sorból áll: 1. Ingatlanok és a kapcsolódó vagyoni értékű jogok; 2. Műszaki berendezések, gépek, járművek; 3. Egyéb berendezések, felszerelések, járművek; 4. Tenyészállatok – ezek az üzembe helyezett eszközök; 5. Beruházások, felújítások; 6. Beruházásokra adott előlegek – ezek az üzembe NEM helyezett eszközök; 7. Tárgyi eszközök értékhelyesbítése. Oszlopok: Előző év | Előző év(ek) módosításai | Tárgyév.",
+   "kulcselemek": [
+    "1. Ingatlanok és kapcsolódó vagyoni értékű jogok (12)",
+    "2. Műszaki berendezések, gépek, járművek (13)",
+    "3. Egyéb berendezések, felszerelések, járművek (14)",
+    "4. Tenyészállatok (15)",
+    "5. Beruházások, felújítások (161, 162)",
+    "6. Beruházásokra adott előlegek (352)",
+    "7. Tárgyi eszközök értékhelyesbítése (127-157)",
+    "1–4: üzembe helyezett; 5–6: nem üzembe helyezett"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "magas",
+   "forras": "src/elmelet/targyi.txt (Tárgyi eszközök elmélet, diák)"
+  },
+  {
+   "id": "te_f03",
+   "nev": "Ingatlan",
+   "definicio": "Ingatlannak minősülnek a rendeltetésszerűen használatba vett földterületek és minden olyan eszköz, amelyet a földdel tartós kapcsolatban létesítettek. Ide tartozik: földterület, telek, telkesítés, erdő, ültetvény, épület, önálló épületrész, egyéb építmény, üzemkörön kívüli ingatlan, valamint az ingatlanokhoz kapcsolódó vagyoni értékű jogok. Számla: 12. (121–126), értékhelyesbítése 127, terven felüli ÉCS 128, terv szerinti ÉCS 129. Földterületre, telekre, erdőre terv szerinti ÉCS nem számolható el.",
+   "kulcselemek": [
+    "rendeltetésszerűen használatba vett",
+    "földdel tartós kapcsolatban létesített",
+    "földterület, telek, épület, építmény, ültetvény, erdő",
+    "üzemkörön kívüli ingatlan is",
+    "ingatlanhoz kapcsolódó vagyoni értékű jog is",
+    "12. számlacsoport, 1231 Épületek",
+    "földre nincs terv szerinti ÉCS"
+   ],
+   "pelda": "Iroda- vagy üzemépület (1231).",
+   "zh_valoszinuseg": "magas",
+   "forras": "src/elmelet/targyi.txt (Tárgyi eszközök elmélet, diák)"
+  },
+  {
+   "id": "te_f04",
+   "nev": "Ingatlanokhoz kapcsolódó vagyoni értékű jogok",
+   "definicio": "Az ingatlanhoz kapcsolódó jogok, amelyek a mérlegben az ingatlanok sorában (II.1.) és nem az immateriális javak között szerepelnek: földhasználat, haszonélvezet és használat, bérleti jog, szolgalmi jog, az ingatlanok rendeltetésszerű használatához kapcsolódó hozzájárulások, díjak (víziközmű-fejlesztési hozzájárulás, villamosenergia-hálózati csatlakozási díj, gázhálózati csatlakozási díj) megfizetése alapján szerzett használati jog, valamint az ingatlanhoz kapcsolódó egyéb jogok. Számla: 126.",
+   "kulcselemek": [
+    "földhasználat",
+    "haszonélvezet, használat",
+    "bérleti jog",
+    "szolgalmi jog",
+    "közmű-csatlakozási díjjal szerzett használati jog",
+    "mérlegben II.1. Ingatlanok sor (nem immateriális!)",
+    "126. számla"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "kozepes",
+   "forras": "src/elmelet/targyi.txt (Tárgyi eszközök elmélet, diák)"
+  },
+  {
+   "id": "te_f05",
+   "nev": "Műszaki berendezések, gépek, járművek",
+   "definicio": "Azok a rendeltetésszerűen használatba vett, üzembe helyezett eszközök, amelyek a vállalkozó tevékenységét KÖZVETLENÜL szolgálják: erőgépek, erőművi berendezések, egyéb gépek, berendezések, műszerek, szerszámok, szállítóeszközök, hírközlő berendezések, számítástechnikai eszközök, a tevékenységi profilt meghatározó vasúti, közúti, vízi és légi közlekedési eszközök. Itt kell kimutatni a felsorolt, bérbe vett eszközökön végzett és használatba vett, üzembe helyezett beruházást, felújítást is. Számla: 131 Termelő gépek, 132 Termelésben közvetlenül résztvevő járművek; 137 értékhelyesbítés, 138 terven felüli ÉCS, 139 terv szerinti ÉCS.",
+   "kulcselemek": [
+    "üzembe helyezett",
+    "közvetlenül szolgálja a tevékenységet",
+    "gépek, műszerek, szerszámok, szállítóeszközök, számítástechnika",
+    "profilt meghatározó járművek",
+    "bérelt eszközön végzett, üzembe helyezett beruházás/felújítás is",
+    "131, 132 / 137, 138, 139"
+   ],
+   "pelda": "Gyártósor (131), targonca (132).",
+   "zh_valoszinuseg": "magas",
+   "forras": "src/elmelet/targyi.txt (Tárgyi eszközök elmélet, diák)"
+  },
+  {
+   "id": "te_f06",
+   "nev": "Egyéb berendezések, felszerelések, járművek",
+   "definicio": "A rendeltetésszerűen használatba vett, üzembe helyezett, a műszaki berendezések, gépek, járművek közé nem tartozó olyan gépek, berendezések, felszerelések, járművek, amelyek a vállalkozó tevékenységét KÖZVETETTEN szolgálják. Ide tartoznak különösen az egyéb üzemi (üzleti) gépek, berendezések, felszerelések, járművek, az irodai, igazgatási berendezések, felszerelések, az üzemkörön kívüli berendezések, felszerelések, járművek; és a felsorolt, bérbe vett eszközökön végzett, üzembe helyezett beruházás, felújítás. Számla: 141–145 (143 Irodai, igazgatási berendezések), 147, 148, 149.",
+   "kulcselemek": [
+    "üzembe helyezett",
+    "KÖZVETETTEN szolgálja a tevékenységet",
+    "irodai, igazgatási berendezés",
+    "üzemkörön kívüli berendezés",
+    "141–145; 149 terv szerinti ÉCS",
+    "elhatárolás a műszakitól: közvetlen vs. közvetett szolgálat"
+   ],
+   "pelda": "Ügyvezető által használt laptop, tárgyalóasztal (143).",
+   "zh_valoszinuseg": "magas",
+   "forras": "src/elmelet/targyi.txt (Tárgyi eszközök elmélet, diák)"
+  },
+  {
+   "id": "te_f07",
+   "nev": "Tenyészállatok",
+   "definicio": "Azok az állatok – függetlenül attól, hogy meddig szolgálják a vállalkozási tevékenységet –, amelyek a tenyésztés, a tartás során leválasztható terméket termelnek, és a tartási költségek e termékek értékesítése során megtérülnek, vagy a tenyészállatok egyéb hasznosítása biztosítja a tartási költségek megtérülését. A tartósságot nem kell vizsgálni. Ha a vállalkozás az állatot eladási célból szerezte be, akkor az árunak minősül. Számla: 151 Tenyészállatok, 152 Igásállatok, 153 Egyéb állatok; 157, 158, 159.",
+   "kulcselemek": [
+    "leválasztható terméket termel",
+    "tartási költség megtérül",
+    "időtartamtól független (tartósság nem vizsgálandó)",
+    "eladási célú állat = áru",
+    "növendék-, hízóállat = készlet (saját termelésű)",
+    "151–153; 158 terven felüli ÉCS lehetséges"
+   ],
+   "pelda": "Tejelő tehén, tenyészkoca; az órai feladatban az őrkutya 153 Egyéb állatok.",
+   "zh_valoszinuseg": "magas",
+   "forras": "src/elmelet/targyi.txt (Tárgyi eszközök elmélet, diák)"
+  },
+  {
+   "id": "te_f08",
+   "nev": "Beruházás",
+   "definicio": "Beruházásnak minősül a rendeltetésszerűen használatba nem vett, üzembe nem helyezett tárgyi eszközök (ingatlanok, műszaki és egyéb berendezések, tenyészállatok) bekerülési értéke, továbbá a már használatba vett tárgyi eszközökön végzett bővítéssel, rendeltetésváltoztatással, átalakítással, élettartam-növeléssel összefüggő munkák (még használatba nem vett) bekerülési értéke. Tartalma: tárgyi eszköz létesítése (beszerzés, létesítés, saját előállítás), az üzembe helyezés érdekében végzett tevékenység (szállítás, vámkezelés, közvetítés, alapozás, tervezés stb.), illetve a meglévő eszköz értékét növelő tevékenység (hozzáépítés, bővítés, kapacitásnövelés). Nagy volumenű, esetenként hosszabb idejű. Számla: 161 Befejezetlen beruházások; mérlegsor II.5. A beruházás IS tárgyi eszköz; üzembe helyezéséig nem számolható el rá terv szerinti ÉCS és értékhelyesbítés sem.",
+   "kulcselemek": [
+    "üzembe nem helyezett tárgyi eszköz bekerülési értéke",
+    "bővítés, rendeltetésváltoztatás, átalakítás, élettartam-növelés",
+    "kapacitásbővítés, új eszköz létesítése",
+    "161 Befejezetlen beruházások, aktiválás T 12-15 / K 161",
+    "tárgyi eszköz mérlegcsoport része (II.5.)",
+    "nincs terv szerinti ÉCS, nincs értékhelyesbítés",
+    "aktiválás után ÉCS formájában több év alatt költség"
+   ],
+   "pelda": "Leszállított, de még be nem szerelt gép: 161.",
+   "zh_valoszinuseg": "magas",
+   "forras": "src/elmelet/targyi.txt (Tárgyi eszközök elmélet, diák)"
+  },
+  {
+   "id": "te_f09",
+   "nev": "Felújítás",
+   "definicio": "Az eredeti állag helyreállítását szolgáló, időnként visszatérő tevékenység, amelynek eredményeként az eszköz élettartama nő, eredeti állapota megközelítően visszaáll. Felújításnak minősül a korszerűsítés is: ha az eredetitől eltérő megoldással, egyes részek cseréjével nő a teljesítőképesség, a biztonság és a gazdaságosság. Nem számít felújításnak – a költségek nagyságától függetlenül – a rendszeres, tervszerű megelőző karbantartás, valamint az elmaradt és felhalmozódó karbantartás egyszerre történő elvégzése. A felújítás értéke a tárgyi eszközök között (162 Felújítások, mérlegsor II.5.) jelenik meg, aktiválása T 12-15 / K 162, és ÉCS-n keresztül terheli több év eredményét.",
+   "kulcselemek": [
+    "eredeti állag helyreállítása",
+    "időnként visszatérő",
+    "élettartam nő",
+    "korszerűsítés (teljesítőképesség, biztonság, gazdaságosság nő) = FELÚJÍTÁS",
+    "nem felújítás: tervszerű megelőző karbantartás",
+    "nem felújítás: felhalmozott karbantartás egyszerre, összegtől függetlenül",
+    "162 → aktiválás T 131 / K 162"
+   ],
+   "pelda": "Tetőcsere, motor generáljavítása.",
+   "zh_valoszinuseg": "magas",
+   "forras": "src/elmelet/targyi.txt (Tárgyi eszközök elmélet, diák)"
+  },
+  {
+   "id": "te_f10",
+   "nev": "Karbantartás",
+   "definicio": "A tárgyi eszköz folyamatos, zavartalan, biztonságos üzemeltetését szolgáló javítási, karbantartási tevékenység (pl. kopott alkatrész cseréje, éves szerviz). Költsége nem része a bekerülési értéknek és nem növeli a bruttó értéket; a felmerülés évében költségként (524 Javítás, karbantartás költsége) terheli az eredményt. Az elmaradt karbantartások egyszerre történő elvégzése is karbantartás marad, összegtől függetlenül.",
+   "kulcselemek": [
+    "folyamatos, zavartalan, biztonságos üzemelés",
+    "javítás, alkatrészcsere, szerviz",
+    "nem aktiválható, nem növeli a bruttó értéket",
+    "felmerülés évének eredményét csökkenti",
+    "T 524 / K 4543 (+ T 4661 áfa)"
+   ],
+   "pelda": "Éves szerviz 200 000 Ft + áfa → T 524 / K 4543.",
+   "zh_valoszinuseg": "magas",
+   "forras": "src/elmelet/targyi.txt (Tárgyi eszközök elmélet, diák)"
+  },
+  {
+   "id": "te_f11",
+   "nev": "Beruházásokra adott előleg",
+   "definicio": "A beruházási szállítónak, importbeszerzésnél az importálást végző vállalkozónak, ingatlanhoz kapcsolódó vagyoni értékű jog eladójának ilyen címen átutalt (megfizetett, kiegyenlített), a le nem vonható áfát is tartalmazó összeg. A mérlegben a tárgyi eszközök között (II.6.) mutatjuk ki, de tartalma szerint követelés jellegű (megvalósuláskor beszámítást, meghiúsuláskor visszautalást várunk), ezért a számlatükörben a követelések között található: 352. A levonható áfát nem a 352-re, hanem a 4661-re könyveljük. Értékhelyesbítés rá nem számolható el.",
+   "kulcselemek": [
+    "beruházási szállítónak/importőrnek/jogeladónak átutalt összeg",
+    "le nem vonható áfával együtt",
+    "mérlegben II.6. (tárgyi eszköz)",
+    "tartalmilag követelés → 352 a 3. számlaosztályban",
+    "levonható áfa: 4661",
+    "beszámítás: T 4551 / K 352"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "kozepes",
+   "forras": "src/elmelet/targyi.txt (Tárgyi eszközök elmélet, diák)"
+  },
+  {
+   "id": "te_f12",
+   "nev": "Tárgyi eszközök értékhelyesbítése",
+   "definicio": "A tárgyi eszköz piaci értéke és könyv szerinti (nettó) értéke közötti különbözet abban az esetben, ha a piaci érték jelentősen és tartósan nagyobb, és a vállalkozás – számviteli politikájában rögzítve – az értékhelyesbítés alkalmazását választja (nem kötelező). Ellenszámlája a saját tőkében az értékhelyesbítés értékelési tartaléka (4171). Nem lehet értékhelyesbítést elszámolni beruházásokra, felújításokra és beruházásokra adott előlegekre. Ha korábban terven felüli ÉCS-t számoltak el, előbb azt kell visszaírni, és csak a fennmaradó különbözet lehet értékhelyesbítés. Külön mérlegsoron (II.7.) szerepel, ezért nem módosítja az eszköz könyv szerinti értékét, mérlegértékét. Minden évben felül kell vizsgálni és az előző évi értékhelyesbítést korrigálni kell; könyvvizsgálónak felül kell vizsgálnia akkor is, ha a vállalkozás egyébként nem kötelezett könyvvizsgálatra. A kiegészítő mellékletben be kell mutatni nyitó értékét, növekedését, csökkenését, záró értékét és a piaci érték meghatározásának módszereit.",
+   "kulcselemek": [
+    "piaci érték − könyv szerinti érték, ha piaci > könyv szerinti",
+    "jelentős és tartós",
+    "választható, számviteli politikában rögzítve",
+    "T 127/137/147/157 / K 4171",
+    "nem: beruházás, felújítás, előleg",
+    "előbb terven felüli ÉCS visszaírása",
+    "külön mérlegsor II.7., mérlegértéket nem módosítja",
+    "évente felülvizsgálni, könyvvizsgáló ellenőrzi",
+    "kiegészítő mellékletben bemutatni"
+   ],
+   "pelda": "Épület könyv szerinti értéke 170 mFt, piaci 180 mFt → ÉH 10 mFt: T 127 / K 4171.",
+   "zh_valoszinuseg": "magas",
+   "forras": "src/elmelet/targyi.txt (Tárgyi eszközök elmélet, diák)"
+  },
+  {
+   "id": "te_f13",
+   "nev": "Bekerülési érték",
+   "definicio": "A vagyonelem számviteli nyilvántartásba vételi összege; minden eszköznél (és forrásnál) értelmezhető. Pontos meghatározása azért fontos, mert ettől függ a terv szerinti ÉCS, az évközi csökkenések, az eredményt módosító különbözetek és visszaírásaik összege, valamint a mérlegérték. Jogcímenként: beszerzés – beszerzési érték; saját előállítás – előállítási költség; apport – létesítő okirat szerinti érték; térítés nélküli átvétel, ajándék, fellelt leltári többlet – piaci érték; követelés fejében átvétel – szerződés szerinti érték; csere – csereszerződés szerinti érték.",
+   "kulcselemek": [
+    "nyilvántartásba vételi összeg",
+    "beszerzés: beszerzési érték",
+    "saját előállítás: előállítási költség",
+    "apport: létesítő okirat szerinti érték",
+    "térítés nélküli/ajándék/többlet: piaci érték",
+    "követelés fejében: szerződés szerinti",
+    "csere: csereszerződés szerinti",
+    "ettől függ ÉCS és mérlegérték"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "magas",
+   "forras": "src/elmelet/targyi.txt (Tárgyi eszközök elmélet, diák)"
+  },
+  {
+   "id": "te_f14",
+   "nev": "Beszerzési érték (a bekerülési érték elemei beszerzéskor)",
+   "definicio": "Beszerzéskor a bekerülési érték az üzembe helyezésig (aktiválásig) felmerülő, az eszközhöz egyedileg hozzákapcsolható tételek összege: vételár, felár, szállítási költség, vámterhek, bizományosi díj, illetékek, alapozási, szerelési költség, üzembe helyezési költség, időarányos biztosítási díj (aktiválásig), beruházás tervezése, előkészítése, lebonyolítása, betanítás költségei, hatósági, igazgatási, szolgáltatási díjak. Beruházási hitelnél része a hitellel kapcsolatos bankköltség (közjegyzői díj, rendelkezésre tartási és folyósítási jutalék) és az aktiválásig felmerült kamat. Devizás kötelezettségnél az aktiválásig keletkezett realizált és nem realizált árfolyamveszteség növeli, az árfolyamnyereség csökkenti. Csökkenti: kapott engedmény, a próbaüzemeltetés során előállított és raktárra vett termékek, szolgáltatások értéke, a beruházási előleg után kapott kamat, az elkülönített pénzeszköz után kapott kamat (max. az aktiválásig felmerült hitelkamatig). Nem része: levonható áfa (import áfa is), aktiválás utáni tételek, karbantartás.",
+   "kulcselemek": [
+    "csak aktiválásig felmerülő",
+    "egyedileg hozzákapcsolható",
+    "vételár ± felár/engedmény",
+    "szállítás, vám, bizományosi díj, illeték",
+    "alapozás, szerelés, üzembe helyezés, tervezés, betanítás",
+    "hatósági díj",
+    "aktiválásig felmerült hitelkamat, hitel bankköltségei",
+    "aktiválásig árfolyamveszteség +, nyereség −",
+    "levonható áfa NEM része"
+   ],
+   "pelda": "Moodle: 12 M vételár + 0,5 + 0,8 + 0,3 (karbantartás nem) = 13,6 M Ft.",
+   "zh_valoszinuseg": "magas",
+   "forras": "src/elmelet/targyi.txt (Tárgyi eszközök elmélet, diák); tesztkerdesek_moodle.json"
+  },
+  {
+   "id": "te_f15",
+   "nev": "Saját előállítás bekerülési értéke (előállítási költség)",
+   "definicio": "Saját előállításnál a bekerülési érték az előállítási költség: az előállítással KÖZVETLEN kapcsolatban álló költségek (anyagköltség, bérköltség, járulékok stb.), amelyek a tárgyi eszköz előállítása, üzembe helyezése, bővítése, rendeltetésének megváltoztatása, átalakítása, eredeti állagának helyreállítása során közvetlenül felmerültek, az előállítással bizonyíthatóan szoros kapcsolatban vannak, és megfelelő mutatók segítségével az eszközre elszámolhatók. Nem lehet része: a folyamatos, zavartalan, biztonságos üzemelést szolgáló javítási, karbantartási költség; az erdőnevelési, -fenntartási, -felújítási munkák költsége; a saját előállításhoz kapcsolódó igazgatási költség, egyéb általános költség. Az üzembe helyezést hitelt érdemlően (üzembe helyezési nyilatkozat/jegyzőkönyv a dátummal) dokumentálni kell.",
+   "kulcselemek": [
+    "előállítási költség",
+    "csak közvetlen költségek (anyag, bér, járulék)",
+    "bizonyíthatóan szoros kapcsolat",
+    "mutatóval elszámolható",
+    "nem része: általános igazgatási, egyéb általános költség",
+    "nem része: karbantartás",
+    "üzembe helyezési jegyzőkönyv"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "magas",
+   "forras": "src/elmelet/targyi.txt (Tárgyi eszközök elmélet, diák)"
+  },
+  {
+   "id": "te_f16",
+   "nev": "Apport (nem pénzbeli vagyoni hozzájárulás)",
+   "definicio": "A tulajdonos (tag) által a gazdasági társaság rendelkezésére bocsátott nem pénzbeli vagyoni hozzájárulás (pl. ingatlan, gép, vagyoni értékű jog – nem kizárólag tárgyi eszköz). Az átvevőnél a bekerülési érték a létesítő okirat szerinti érték: T 161 (vagy 12-15) / K 479 a rendelkezésre bocsátáskor; bejegyzéskor T 32-33/358 / K 411 jegyzett tőke, majd T 479 / K 32-33. Az átadónál az eszközt ki kell vezetni (technikai számla 368), a kapott részesedést a létesítő okirat szerinti értéken kell felvenni (T 366, majd bejegyzéskor T 17x / K 366); a létesítő okirat szerinti és a könyv szerinti érték különbözete pozitív esetben egyéb bevétel (9642), negatív esetben egyéb ráfordítás (8642).",
+   "kulcselemek": [
+    "nem pénzbeli vagyoni hozzájárulás",
+    "tárgyai: ingatlan, gép, vagyoni értékű jog stb.",
+    "értéke: létesítő okirat szerinti",
+    "átvevő: T 161 / K 479; bejegyzés T 33x / K 411; T 479 / K 33x",
+    "átadó: technikai számla 368, T 366, T 172 / K 366",
+    "különbözet: 9642 nyereség / 8642 veszteség"
+   ],
+   "pelda": "Moodle: 4 M pénz + 6 M gép → 10 M Ft vagyoni hozzájárulás.",
+   "zh_valoszinuseg": "magas",
+   "forras": "src/elmelet/targyi.txt (Tárgyi eszközök elmélet, diák); II_Tárgyi eszközök feladatsor + II_..._megoldása.pdf; tesztkerdesek_moodle.json"
+  },
+  {
+   "id": "te_f17",
+   "nev": "Térítés nélküli átvétel / átadás",
+   "definicio": "Térítés nélküli átvételkor az eszközt a piaci értéken kell állományba venni (T 161 / K 9647 egyéb bevétel). A torzításmentes beszámoló érdekében a bevételt passzív időbeli elhatárolással (halasztott bevétel, 48331) a hasznos élettartam idejére el kell határolni, és az ÉCS elszámolásával egyidejűleg, azzal azonos összegben kell feloldani. Az átadó által kiszámlázott áfa az átvevőnél T 4661 / K 479 (nem szállító, mert nem vásároltunk). Térítés nélküli átadáskor az átadott eszköz könyv szerinti (nettó) értéke egyéb ráfordítás (8647); fizetendő áfa keletkezik (mintha eladnánk): ha kiszámlázza, egyéb követelés (T 368 / K 467), ha nem, ráfordítás (T 8647 / K 467).",
+   "kulcselemek": [
+    "átvevő: piaci értéken, T 161 / K 9647",
+    "elhatárolás T 9647 / K 48331, feloldás ÉCS-sel azonos összegben",
+    "átvett áfa T 4661 / K 479",
+    "átadó: nettó érték egyéb ráfordítás, T 8647 / K 131",
+    "fizetendő áfa: kiszámlázva T 368 / K 467, nem: T 8647 / K 467"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "kozepes",
+   "forras": "src/elmelet/targyi.txt (Tárgyi eszközök elmélet, diák); II_Tárgyi eszközök feladatsor + II_..._megoldása.pdf"
+  },
+  {
+   "id": "te_f18",
+   "nev": "Könyv szerinti érték, nettó érték, mérlegérték, piaci érték",
+   "definicio": "Könyv szerinti (nettó) érték = bruttó (bekerülési) érték − elszámolt terv szerinti ÉCS (halmozott) − terven felüli ÉCS + visszaírt terven felüli ÉCS. A bruttó érték és az ÉCS külön főkönyvi számlán (pl. 131 és 139) jelenik meg; összevont egyenlegük a nettó érték. A mérlegérték a könyv szerinti érték (± devizás árfolyam-különbözet); a piaci érték = mérlegérték + eredményt nem érintő felértékelési különbözet (értékhelyesbítés) − annak visszavezetése. Az értékhelyesbítés nem része a mérlegértéknek, külön soron szerepel.",
+   "kulcselemek": [
+    "bruttó − halmozott terv szerinti ÉCS − terven felüli ÉCS (+ visszaírás)",
+    "bruttó és ÉCS külön számlán (helyesbítő számla)",
+    "mérlegérték",
+    "piaci érték = mérlegérték + értékhelyesbítés"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "kozepes",
+   "forras": "src/elmelet/targyi.txt (Tárgyi eszközök elmélet, diák)"
+  },
+  {
+   "id": "te_f19",
+   "nev": "Terv szerinti értékcsökkenés",
+   "definicio": "Az immateriális javak és tárgyi eszközök többségének értéke az erkölcsi avulás és a fizikai kopás következtében a bekerülési érték alá csökken; e csökkenés pénzben kifejezett értéke az értékcsökkenés. A terv szerinti ÉCS a bekerülési érték (− maradványérték) előre megtervezett, a hasznos élettartam alatt időarányosan vagy teljesítményarányosan, költségként (5711; kisértékűnél 5712) való elszámolása (T 5711 / K 129-159). A tervben rögzíteni kell a várható használati időt, a fizikai és erkölcsi elhasználódást, a tevékenységre jellemző körülményeket, a maradványértéket. Nem számolható el: földterület, telek, erdő, képzőművészeti alkotás, régészeti lelet, üzembe nem helyezett beruházás, a használat során értékét nem vesztő vagy növelő eszköz, a már teljesen leírt eszköz, és a maradványértéket elért eszköz. Az eredménykimutatásban az Értékcsökkenési leírás soron jelenik meg. Megváltoztatható, ha a hasznos élettartam, az eszköz értéke vagy a maradványérték megváltozik, illetve terven felüli ÉCS vagy annak visszaírása miatt – a kiegészítő mellékletben indokolni kell.",
+   "kulcselemek": [
+    "erkölcsi avulás + fizikai kopás",
+    "hasznos élettartam alatt, tervezetten",
+    "alap: bruttó − maradványérték (vagy bruttó, nettó)",
+    "lineáris, degresszív, progresszív, teljesítményarányos, egy összegben",
+    "T 5711 / K 129-159",
+    "üzembe helyezéstől számolható",
+    "nincs: föld, telek, erdő, műalkotás, lelet, beruházás, teljesen leírt",
+    "ER: értékcsökkenési leírás (költség)"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "magas",
+   "forras": "src/elmelet/targyi.txt (Tárgyi eszközök elmélet, diák)"
+  },
+  {
+   "id": "te_f20",
+   "nev": "Terven felüli értékcsökkenés",
+   "definicio": "Akkor kell elszámolni, ha az eszköz értéke tartósan lecsökken, mert feleslegessé vált, megrongálódott, megsemmisült, hiányzik (nem piaci típusú okok), illetve ha a könyv szerinti érték tartósan és jelentősen magasabb, mint az eszköz piaci értéke (piaci típusú ok – csak az év végi értékelés keretében). Összege: könyv szerinti érték − piaci érték (selejtezésnél, hiánynál a teljes nettó érték). Egyéb ráfordítás: T 8664 Tárgyi eszközök elszámolt terven felüli ÉCS / K 128-168. Ha az eszköz nem marad állományban, a terven felüli ÉCS-t (T 128-168) és a terv szerinti ÉCS-t (T 129-159) a bruttó értékkel szemben (K 12-15) ki kell vezetni. A már teljesen leírt eszköznél nem számolható el. Hatására a terv (évi ÉCS, hasznos élettartam, maradványérték) változhat.",
+   "kulcselemek": [
+    "egyéb ráfordítás",
+    "feleslegessé vált, megrongálódott, megsemmisült, hiányzik",
+    "piaci érték tartósan és jelentősen kisebb (év végén)",
+    "összeg: könyv szerinti − piaci érték",
+    "T 8664 / K 138 (128, 148, 158, 168)",
+    "kivezetés: T 138 / K 131, T 139 / K 131",
+    "tenyészállatnál és beruházásnál is lehet (158, 168)"
+   ],
+   "pelda": "Selejtezés: nettó 800 eFt → T 8664 / K 138 800 000.",
+   "zh_valoszinuseg": "magas",
+   "forras": "src/elmelet/targyi.txt (Tárgyi eszközök elmélet, diák); I_Tárgyi eszközök feladatsor + I_..._megoldása_kész.pptx"
+  },
+  {
+   "id": "te_f21",
+   "nev": "Terven felüli értékcsökkenés visszaírása",
+   "definicio": "Ha a terven felüli ÉCS (alacsonyabb értékelés) okai már nem állnak fenn, a korábban elszámolt terven felüli ÉCS-t kötelezően vissza kell írni, a piaci értékre, de legfeljebb a terv szerinti ÉCS-vel meghatározott nettó értékre. Egyéb bevétel: T 128-168 / K 9664. Értékhelyesbítés előtt mindig előbb a terven felüli ÉCS-t kell visszaírni. A kiegészítő mellékletben indokolni kell, és be kell mutatni az eszközre gyakorolt hatását.",
+   "kulcselemek": [
+    "kötelező (vissza KELL írni)",
+    "max. a terv szerinti nettó értékig",
+    "egyéb bevétel",
+    "T 138 / K 9664",
+    "előbb visszaírás, utána értékhelyesbítés"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "magas",
+   "forras": "src/elmelet/targyi.txt (Tárgyi eszközök elmélet, diák)"
+  },
+  {
+   "id": "te_f22",
+   "nev": "Hasznos élettartam",
+   "definicio": "Az az időszak, amely alatt az amortizálható eszköz értékét a gazdálkodó időarányosan vagy teljesítményarányosan költségként (az eredmény terhére) elszámolja: az az időszak, amely alatt a tárgyi eszközt a gazdálkodó várhatóan használni fogja, vagy a megtermelhető darabszám, elvégezhető teljesítmény figyelembevételével meghatározott időszak, amely alatt azt a gazdálkodó várhatóan elő tudja állítani az eszköz használatával. Eltérhet a fizikai élettartamtól (pl. számítógép 10 évig is használható, de 3 év alatt leírják, mert általában 3 évente lecserélik).",
+   "kulcselemek": [
+    "vállalkozás által várhatóan használt időszak",
+    "vagy teljesítmény (darabszám) alapján meghatározott időszak",
+    "ez alatt számoljuk el az ÉCS-t",
+    "≠ fizikai élettartam",
+    "példa: számítógép 3 év"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "magas",
+   "forras": "src/elmelet/targyi.txt (Tárgyi eszközök elmélet, diák); tesztkerdesek_moodle.json"
+  },
+  {
+   "id": "te_f23",
+   "nev": "Maradványérték",
+   "definicio": "A hasznos élettartam végére várhatóan realizálható (becsült) érték, amelyet a rendeltetésszerű használatba vételkor rendelkezésre álló információk alapján kell megállapítani. Nem mindig értelmezhető: csak a vállalkozás szempontjából jelentős eszközök esetén számítják. Az értékcsökkenés csak a maradványértékig számolható el; a maradványértéket elért eszköznél terv szerinti ÉCS nem számolható el. Lineáris leírásnál a leírható összeg = bruttó érték − maradványérték.",
+   "kulcselemek": [
+    "hasznos élettartam végén",
+    "várhatóan realizálható, becsült",
+    "használatba vételkor állapítják meg",
+    "csak jelentős eszközöknél",
+    "ÉCS csak a maradványértékig",
+    "leírható = bruttó − maradványérték"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "magas",
+   "forras": "src/elmelet/targyi.txt (Tárgyi eszközök elmélet, diák)"
+  },
+  {
+   "id": "te_f24",
+   "nev": "Értékcsökkenési leírási módszerek",
+   "definicio": "Terv szerinti leírás lehet lineáris (minden évben azonos összeg: (bruttó − maradvány) / évek), degresszív (idővel csökkenő: évek száma összege módszer, fix kulcsú nettó érték alapú leírás, szorzószámos leírás), progresszív (idővel gyorsuló), vegyes (kombináció); a bruttó érték leírható időarányosan, teljesítményarányosan (egységnyi teljesítményre jutó ÉCS × tényleges teljesítmény), abszolút összeg alapján, vagy egy összegben (kisértékű eszközök). Időarányos leírásnál a számítás alapja lehet bruttó érték − maradványérték, bruttó érték, vagy nettó érték. Tört évben időarányosítani kell (hónapokra).",
+   "kulcselemek": [
+    "lineáris",
+    "degresszív: évek száma összege, fix kulcsú nettó alapú, szorzószámos",
+    "progresszív",
+    "vegyes",
+    "teljesítményarányos",
+    "egy összegben (kisértékű)",
+    "alap: bruttó−MÉ / bruttó / nettó",
+    "tört év: havi arányosítás"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "kozepes",
+   "forras": "src/elmelet/targyi.txt (Tárgyi eszközök elmélet, diák); I_Tárgyi eszközök feladatsor + I_..._megoldása_kész.pptx"
+  },
+  {
+   "id": "te_f25",
+   "nev": "Kisértékű tárgyi eszköz (egy összegű leírás)",
+   "definicio": "A vállalkozás számviteli politikájában meghatározott egyedi bekerülési érték alatti (a számlatükör 5712 számlájának megnevezése szerint 100 ezer Ft, az I. feladatsor 6. feladatában 200 eFt) tárgyi eszközök értékcsökkenése a használatba vételkor egy összegben elszámolható. Könyvelése: T 161 / K 4551 (vagy 3811), aktiválás T 14x / K 161, majd T 5712 Kiemelt, kisértékű eszközök terv szerinti ÉCS / K 149 (vagy 139) a teljes bekerülési értékben.",
+   "kulcselemek": [
+    "egyedi bekerülési érték határ alatt (politika szerint)",
+    "egy összegben leírható",
+    "T 5712 / K 149",
+    "előbb aktiválni kell (T 143 / K 161)"
+   ],
+   "pelda": "3 mobiltelefon 60 eFt/db → T 5712 / K 149 180 000.",
+   "zh_valoszinuseg": "kozepes",
+   "forras": "I_Tárgyi eszközök feladatsor + I_..._megoldása_kész.pptx; tesztkerdesek_moodle.json"
+  },
+  {
+   "id": "te_f26",
+   "nev": "Tárgyi eszköz átsorolása",
+   "definicio": "Ha a tárgyi eszköz használata, rendeltetése az üzembe helyezést követően megváltozik, mert az eszköz a tevékenységet, a működést tartósan már nem szolgálja, akkor besorolását meg kell változtatni: legkésőbb a mérlegkészítés időszakában át kell sorolni a forgóeszközök közé (árukészlet, esetleg anyag). Ugyanígy a továbbértékesítésre vett gép nem tárgyi eszköz, hanem áru.",
+   "kulcselemek": [
+    "rendeltetés változik",
+    "tartósan már nem szolgálja a tevékenységet",
+    "legkésőbb mérlegkészítéskor",
+    "forgóeszközök közé: áru vagy anyag"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "alacsony",
+   "forras": "src/elmelet/targyi.txt (Tárgyi eszközök elmélet, diák)"
+  },
+  {
+   "id": "te_f27",
+   "nev": "Tárgyi eszköz értékesítése",
+   "definicio": "A vállalkozás már aktivált tárgyi eszközét vagy befejezetlen beruházását közvetlenül értékesíti. Értékesítés = a szerződés szerinti (egyéb) bevétel elszámolása + az eszköz állományból való kivezetése + a bevétel és a kivezetett érték közötti különbözet elszámolása. Előbb az értékesítés napjáig el kell számolni a terv szerinti ÉCS-t, majd ezt – a korábbi terven felüli ÉCS-vel és visszaírásával együtt – össze kell vezetni a bruttó értékkel. A kurzus technikai számlát (368) használ; a különbözet nyereség esetén T 368 / K 961 (egyéb bevétel), veszteség esetén egyéb ráfordítás (T 861 / K 368).",
+   "kulcselemek": [
+    "eladási ár (áfa nélkül) egyéb bevétel",
+    "nettó érték kivezetése",
+    "ÉCS a kivezetés napjáig",
+    "technikai számla 368",
+    "különbözet: 961 egyéb bevétel / 861 egyéb ráfordítás",
+    "fizetendő áfa T 311 / K 467"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "kozepes",
+   "forras": "I_Tárgyi eszközök feladatsor + I_..._megoldása_kész.pptx; II_Tárgyi eszközök feladatsor + II_..._megoldása.pdf"
+  },
+  {
+   "id": "te_f28",
+   "nev": "Selejtezés, hiány",
+   "definicio": "Selejtezés indoka: az eszköz használhatatlanná válik (használat során, elemi csapás miatt) vagy feleslegessé válik (pl. termelési struktúra váltása). Ideje általában az üzleti év vége, de év közben is lehet, tervezetten vagy rendkívüli módon. Könyvelése: terven felüli ÉCS a nettó érték összegében (T 8664 / K 138), majd a terven felüli és a terv szerinti ÉCS kivezetése a bruttó értékkel szemben (T 138 / K 131, T 139 / K 131). Ha a selejt hasznosítható, csak hulladékértékre írjuk le, és azt készletre vesszük (T 21-22, 26 / K 131). A hiány az eredménykimutatásban szintén terven felüli ÉCS-ként, egyéb ráfordításként jelenik meg.",
+   "kulcselemek": [
+    "használhatatlanná vagy feleslegessé válik",
+    "általában év végén",
+    "T 8664 / K 138 nettó értékben",
+    "T 138 / K 131; T 139 / K 131",
+    "hasznosítható selejt: T 21-22, 26 / K 131 hulladékértéken",
+    "hiány = terven felüli ÉCS, egyéb ráfordítás"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "alacsony",
+   "forras": "I_Tárgyi eszközök feladatsor + I_..._megoldása_kész.pptx; src/elmelet/targyi.txt (Tárgyi eszközök elmélet, diák)"
+  }
+ ],
+ "szabalyok": [
+  {
+   "id": "te_s01",
+   "cim": "Tárgyi eszköz vagy készlet?",
+   "tartalom": "Tartósan (>1 év) szolgáló anyagi eszköz → tárgyi eszköz; legfeljebb 1 évig szolgáló → készlet a használatba vételig; továbbértékesítési céllal vett eszköz (pl. laptop, gép) → áru; eladási célból vett tenyészállat → áru.",
+   "forras": "src/elmelet/targyi.txt (Tárgyi eszközök elmélet, diák); tesztkerdesek_moodle.json"
+  },
+  {
+   "id": "te_s02",
+   "cim": "Műszaki vs. egyéb berendezés",
+   "tartalom": "A különbség a szolgálat módja: műszaki berendezés, gép, jármű KÖZVETLENÜL, egyéb berendezés KÖZVETETTEN szolgálja a tevékenységet (pl. irodai, igazgatási eszköz, ügyvezető laptopja: 143).",
+   "forras": "src/elmelet/targyi.txt (Tárgyi eszközök elmélet, diák); tesztkerdesek_moodle.json"
+  },
+  {
+   "id": "te_s03",
+   "cim": "Üzembe helyezett / nem üzembe helyezett",
+   "tartalom": "Mérlegsor 1–4: üzembe helyezett eszközök; 5–6: üzembe nem helyezett (beruházás, felújítás, előleg). Az üzembe helyezés időpontját üzembe helyezési jegyzőkönyvvel hitelt érdemlően dokumentálni kell. Amíg nem helyezték rendeltetésszerűen használatba, a gép beruházás (161) – de tárgyi eszköz.",
+   "forras": "src/elmelet/targyi.txt (Tárgyi eszközök elmélet, diák); tesztkerdesek_moodle.json"
+  },
+  {
+   "id": "te_s04",
+   "cim": "Bekerülési érték jogcímenként",
+   "tartalom": "Beszerzés: beszerzési érték; saját előállítás: előállítási költség; apport: létesítő okirat szerinti érték; térítés nélküli átvétel, ajándék, fellelt többlet: piaci érték; követelés fejében: szerződés szerinti érték; csere: csereszerződés szerinti érték.",
+   "forras": "src/elmelet/targyi.txt (Tárgyi eszközök elmélet, diák)"
+  },
+  {
+   "id": "te_s05",
+   "cim": "A beszerzési értéket NÖVELŐ tételek",
+   "tartalom": "Vételár, felár, szállítási költség, vámterhek, bizományosi díj, illetékek, alapozás, szerelés, üzembe helyezés, időarányos biztosítási díj (aktiválásig), tervezés, előkészítés, lebonyolítás, betanítás, hatósági díj; aktiválásig felmerült hitelkamat és a hitel bankköltségei; aktiválásig keletkezett árfolyamveszteség; aktiválásig vett tartozék, alkatrész, tartalék alkatrész (áfa nélkül).",
+   "forras": "src/elmelet/targyi.txt (Tárgyi eszközök elmélet, diák); I_Tárgyi eszközök feladatsor + I_..._megoldása_kész.pptx"
+  },
+  {
+   "id": "te_s06",
+   "cim": "A beszerzési értéket CSÖKKENTŐ tételek",
+   "tartalom": "Kapott engedmény; próbaüzemeltetés során előállított, raktárra vett termék, szolgáltatás értéke; beruházási előleg után járó kamat; elkülönített pénzeszköz kamata (max. az aktiválásig felmerült hitelkamatig); aktiválásig keletkezett árfolyamnyereség.",
+   "forras": "src/elmelet/targyi.txt (Tárgyi eszközök elmélet, diák)"
+  },
+  {
+   "id": "te_s07",
+   "cim": "NEM része a bekerülési értéknek",
+   "tartalom": "Levonható áfa (import áfa is); aktiválás UTÁN felmerült tételek (pl. aktiválás után vett tartalék alkatrész, aktiválás utáni kamat, aktiválás utáni árfolyam-különbözet); folyamatos üzemelést szolgáló javítás, karbantartás; erdőnevelés, -fenntartás; saját előállításnál igazgatási és egyéb általános költség.",
+   "forras": "src/elmelet/targyi.txt (Tárgyi eszközök elmélet, diák); I_Tárgyi eszközök feladatsor + I_..._megoldása_kész.pptx; II_Tárgyi eszközök feladatsor + II_..._megoldása.pdf"
+  },
+  {
+   "id": "te_s08",
+   "cim": "Beruházás / felújítás / karbantartás elhatárolása",
+   "tartalom": "Beruházás: új eszköz, kapacitásbővítés, bővítés, rendeltetésváltoztatás, átalakítás, élettartam/teljesítőképesség közvetlen növelése (161). Felújítás: eredeti állag helyreállítása, időnként visszatérő, élettartam nő; KORSZERŰSÍTÉS (eltérő megoldás, részek cseréje → teljesítőképesség, biztonság, gazdaságosság nő) is felújítás (162). Karbantartás: folyamatos, zavartalan, biztonságos üzemelés, alkatrészcsere, éves szerviz – költség (524). A tervszerű megelőző karbantartás és a felhalmozott karbantartás egyszerre elvégzése nem felújítás, összegtől függetlenül. Hatás: eszközvagyonra, eredményre, TAO-alapra.",
+   "forras": "src/elmelet/targyi.txt (Tárgyi eszközök elmélet, diák); tesztkerdesek_moodle.json"
+  },
+  {
+   "id": "te_s09",
+   "cim": "Mire nem számolható el terv szerinti ÉCS?",
+   "tartalom": "Földterület, telek, erdő, képzőművészeti alkotás, régészeti lelet; üzembe nem helyezett beruházás; olyan eszköz, amely használat során nem veszít értékéből vagy értéke nő; teljesen leírt eszköz (sem terv szerinti, sem terven felüli); a tervezett maradványértéket elért eszköz.",
+   "forras": "src/elmelet/targyi.txt (Tárgyi eszközök elmélet, diák)"
+  },
+  {
+   "id": "te_s10",
+   "cim": "Terven felüli ÉCS esetei",
+   "tartalom": "Nem piaci típusú: feleslegessé vált, megrongálódott, megsemmisült, hiányzik. Piaci típusú: a könyv szerinti érték tartósan és jelentősen magasabb a piaci értéknél (csak év végi értékeléskor). Egyéb ráfordítás (8664). Ha az ok megszűnt, vissza KELL írni (9664, egyéb bevétel), max. a terv szerinti nettó értékig.",
+   "forras": "src/elmelet/targyi.txt (Tárgyi eszközök elmélet, diák); tesztkerdesek_moodle.json"
+  },
+  {
+   "id": "te_s11",
+   "cim": "Értékhelyesbítés szabályai",
+   "tartalom": "Csak ha piaci érték > könyv szerinti érték, jelentősen és tartósan, és a vállalkozás a számviteli politikában ezt választotta. Nem: beruházás, felújítás, beruházási előleg. Sorrend: ha volt terven felüli ÉCS, előbb azt kell visszaírni, csak utána ÉH. Mindig az előző évi ÉH-t kell korrigálni az idei különbözetre (pl. tavaly 10, idén 12 → +2). Ha piaci < könyv szerinti: a teljes ÉH-t vissza kell vezetni (csak az ÉH összegéig), ÉS a piaci és könyv szerinti érték teljes különbözetét terven felüli ÉCS-ként el kell számolni (az ÉH visszavezetése ezt nem csökkenti, mert nem része a mérlegértéknek). Az ÉH külön mérlegsor (II.7.), a mérlegértéket nem befolyásolja; ellenszámlája a 4171 (saját tőke, értékelési tartalék).",
+   "forras": "src/elmelet/targyi.txt (Tárgyi eszközök elmélet, diák); I_Tárgyi eszközök feladatsor + I_..._megoldása_kész.pptx"
+  },
+  {
+   "id": "te_s12",
+   "cim": "Eredménykimutatás-kapcsolatok",
+   "tartalom": "Terv szerinti ÉCS → Értékcsökkenési leírás; terven felüli ÉCS (hiány is) → egyéb ráfordítás; visszaírása → egyéb bevétel; értékesítés: eladási ár (áfa nélkül) vs. könyv szerinti érték → ha ár > könyv szerinti egyéb bevétel, ellenkező esetben egyéb ráfordítás; káreseménnyel kapcsolatos kapott térítés, kártérítés → egyéb bevétel; térítés nélkül átadott és ajándékba adott eszköz könyv szerinti értéke → egyéb ráfordítás; apportba adott eszköz: létesítő okirat szerinti > könyv szerinti → egyéb bevétel, < → egyéb ráfordítás; térítés nélkül átvett eszköz piaci értéke → egyéb bevétel (elhatárolva).",
+   "forras": "src/elmelet/targyi.txt (Tárgyi eszközök elmélet, diák); tesztkerdesek_moodle.json"
+  },
+  {
+   "id": "te_s13",
+   "cim": "Beruházási előleg áfája",
+   "tartalom": "Az előleg áfája nem a 352-re, hanem a 4661 Előzetesen felszámított áfa számlára kerül; a végszámlánál az előleg és az áfája is beszámításra kerül a szállítóval szemben (T 4551 / K 352 és T 4551 / K 4661).",
+   "forras": "I_Tárgyi eszközök feladatsor + I_..._megoldása_kész.pptx; tesztkerdesek_moodle.json"
+  },
+  {
+   "id": "te_s14",
+   "cim": "Import és EU-s beszerzés áfája",
+   "tartalom": "Harmadik országból (import): az import áfa a vámhatározat alapján T 3683 / K 4652, a NAV-nak átutalva T 4652 / K 384, ezután rendezhető (levonható): T 4661 / K 3683. A vám T 161 / K 4651 (része a bekerülési értéknek), átutalása T 4651 / K 384. EU-s tagállamból: fordított adózás, az áfa egyszerre fizetendő és levonható: T 4661 / K 467. Az import áfa nem része a bekerülési értéknek.",
+   "forras": "II_Tárgyi eszközök feladatsor + II_..._megoldása.pdf; órai jegyzet2-1.png (kézírás); szamlaszamok.json"
+  },
+  {
+   "id": "te_s15",
+   "cim": "Devizás beszerzés",
+   "tartalom": "A vételár a teljesítés napján érvényes (választott) árfolyamon kerül a 161 / 4552-re. Aktiválásig keletkezett árfolyamveszteség növeli, nyereség csökkenti a bekerülési értéket; az aktiválás UTÁNI pénzügyi teljesítés árfolyam-különbözete már nem befolyásolja a bekerülési értéket (pénzügyi műveletek eredménye: 8762 / 9762). Választott árfolyam lehet: MNB-árfolyam vagy a választott hitelintézet deviza vételi és eladási árfolyamának átlaga (ritkábban csak vételi vagy csak eladási).",
+   "forras": "src/elmelet/targyi.txt (Tárgyi eszközök elmélet, diák); II_Tárgyi eszközök feladatsor + II_..._megoldása.pdf; órai jegyzet2-1.png (kézírás)"
+  },
+  {
+   "id": "te_s16",
+   "cim": "Kivezetés technikája (nettó vs. bruttó)",
+   "tartalom": "Nettó alapú elszámolás: T 368 (vagy 8647) / K 131 a nettó értékben, és T 139 / K 131 a halmozott ÉCS-ben. Bruttó alapú: T 368 / K 131 a bruttó értékben, és T 139 / K 368 (vagy K 8647). A terven felüli ÉCS kivezetése: T 138 / K 131 (nettó) vagy K 368 (bruttó). Az eredmény ugyanaz.",
+   "forras": "I_Tárgyi eszközök feladatsor + I_..._megoldása_kész.pptx; II_Tárgyi eszközök feladatsor + II_..._megoldása.pdf"
+  },
+  {
+   "id": "te_s17",
+   "cim": "ÉCS a társasági adóban",
+   "tartalom": "Az adózás előtti eredményt növelni kell a számviteli terv szerinti, terven felüli ÉCS-vel és egyösszegű leírással, majd csökkenteni a Tao. tv. szerint megengedett ÉCS-vel (beruházásösztönző hatás).",
+   "forras": "src/elmelet/targyi.txt (Tárgyi eszközök elmélet, diák)"
+  },
+  {
+   "id": "te_s18",
+   "cim": "Kiegészítő melléklet, üzleti jelentés",
+   "tartalom": "Befektetési tükör: bruttó érték és halmozott ÉCS nyitó, növekedés, csökkenés, átsorolás, záró értéke mérlegtételenként; ÉCS-módszerek, hasznos élettartam, maradványérték meghatározása; tárgyévi terv szerinti (lineáris, degresszív, teljesítményarányos), terven felüli ÉCS és visszaírása, jelentős tételeinek indoka; értékhelyesbítés nyitó/növekedés/csökkenés/záró és a piaci érték módszerei; környezetvédelmi tárgyi eszközök külön; vagyonkezelésbe vett kincstári eszközök. Üzleti jelentés: környezetvédelmi fejlesztések, támogatások, politika, intézkedések.",
+   "forras": "src/elmelet/targyi.txt (Tárgyi eszközök elmélet, diák)"
+  }
+ ],
+ "osszefuggesek": [
+  {
+   "id": "te_o01",
+   "cim": "Könyv szerinti (nettó) érték",
+   "leiras": "A bruttó és az ÉCS-számlák összevont egyenlege.",
+   "keplet": "Nettó = Bruttó − halmozott terv szerinti ÉCS − terven felüli ÉCS + visszaírt terven felüli ÉCS",
+   "kapcsolodo": [
+    "te_f18"
+   ]
+  },
+  {
+   "id": "te_o02",
+   "cim": "Lineáris ÉCS",
+   "leiras": "Minden évben azonos összeg.",
+   "keplet": "Évi ÉCS = (Bruttó − Maradványérték) / hasznos élettartam (év); kulcs = 100% / n",
+   "kapcsolodo": [
+    "te_f24",
+    "te_f23"
+   ]
+  },
+  {
+   "id": "te_o03",
+   "cim": "Időarányosítás hónapra",
+   "leiras": "Tört évben (pl. július 1-jei üzembe helyezés) a hónapok arányában; az üzembe helyezés hónapjától számolunk.",
+   "keplet": "Tárgyévi ÉCS = Évi ÉCS / 12 × használatban töltött hónapok; pl. 1 600 000/12 × 6 = 800 000",
+   "kapcsolodo": [
+    "te_o02"
+   ]
+  },
+  {
+   "id": "te_o04",
+   "cim": "Degresszív – évek száma összege",
+   "leiras": "Az évek sorszámának összege a nevező, a hátralévő évek száma a számláló.",
+   "keplet": "Évi ÉCS = (Bruttó − MÉ) × (hátralévő évek, csökkenő) / (n(n+1)/2); n=5: 5/15, 4/15, 3/15, 2/15, 1/15",
+   "kapcsolodo": [
+    "te_f24"
+   ]
+  },
+  {
+   "id": "te_o05",
+   "cim": "Degresszív – fix kulcs, nettó érték alapján",
+   "leiras": "Mindig az előző év végi nettó érték kulcs szerinti hányada.",
+   "keplet": "L = 1 − (M/B)^(1/n); Évi ÉCS = előző nettó érték × L; pl. 1 − (700 000/9 000 000)^(1/5) = 0,4",
+   "kapcsolodo": [
+    "te_f24"
+   ]
+  },
+  {
+   "id": "te_o06",
+   "cim": "Teljesítményarányos ÉCS",
+   "leiras": "1. várható összes teljesítmény, 2. egységre jutó ÉCS, 3. tárgyévi teljesítmény × egységre jutó ÉCS.",
+   "keplet": "Egységre jutó ÉCS = (Bruttó − MÉ) / összes teljesítmény; Évi ÉCS = éves teljesítmény × egységre jutó ÉCS",
+   "kapcsolodo": [
+    "te_f24"
+   ]
+  },
+  {
+   "id": "te_o07",
+   "cim": "Terven felüli ÉCS összege",
+   "leiras": "Piaci típusú oknál a könyv szerinti és a piaci érték különbsége; selejtezésnél/hiánynál/megsemmisülésnél a teljes nettó érték (hasznosítható selejtnél nettó − hulladékérték).",
+   "keplet": "TF ÉCS = könyv szerinti érték − piaci érték",
+   "kapcsolodo": [
+    "te_f20"
+   ]
+  },
+  {
+   "id": "te_o08",
+   "cim": "Terven felüli ÉCS visszaírása",
+   "leiras": "Legfeljebb a terv szerinti ÉCS-vel meghatározott nettó értékig (és legfeljebb a korábban elszámolt TF ÉCS összegéig).",
+   "keplet": "Visszaírás = min(korábbi TF ÉCS; piaci érték − jelenlegi könyv szerinti érték)",
+   "kapcsolodo": [
+    "te_f21"
+   ]
+  },
+  {
+   "id": "te_o09",
+   "cim": "Értékhelyesbítés összege és korrekciója",
+   "leiras": "Előbb TF ÉCS visszaírás, a maradék ÉH; évente az előző évi ÉH-t korrigáljuk.",
+   "keplet": "Szükséges ÉH = piaci érték − könyv szerinti érték (ha >0, TF ÉCS visszaírása után); tárgyévi könyvelés = szükséges ÉH − előző évi ÉH (± → T 127 / K 4171 vagy T 4171 / K 127)",
+   "kapcsolodo": [
+    "te_f12"
+   ]
+  },
+  {
+   "id": "te_o10",
+   "cim": "Értékesítés eredménye technikai számlán",
+   "leiras": "A 368 technikai számla egyenlege a különbözet; nyereség: T 368 / K 961, veszteség: T 861 / K 368.",
+   "keplet": "Eredmény = eladási ár (áfa nélkül) − könyv szerinti (nettó) érték; pl. 1 100 000 − (1 000 000 − 200 000) = +300 000",
+   "kapcsolodo": [
+    "te_f27"
+   ]
+  },
+  {
+   "id": "te_o11",
+   "cim": "Apport különbözete az átadónál",
+   "leiras": "Technikai számlán (368).",
+   "keplet": "Különbözet = létesítő okirat szerinti érték − könyv szerinti érték; + → T 368 / K 9642; − → T 8642 / K 368",
+   "kapcsolodo": [
+    "te_f16"
+   ]
+  },
+  {
+   "id": "te_o12",
+   "cim": "Áfa nélküli érték bruttó összegből",
+   "leiras": "Ha a tétel „ÁFÁ-val” adott, a bekerülési értékbe csak a nettó rész kerül.",
+   "keplet": "Nettó = Bruttó / 1,27; pl. 250 000 / 1,27 = 196 850",
+   "kapcsolodo": [
+    "te_f14"
+   ]
+  },
+  {
+   "id": "te_o13",
+   "cim": "Aktiválásig felmerült kamat",
+   "leiras": "Csak az aktiválásig eső hónapok kamata része a bekerülési értéknek.",
+   "keplet": "Havi kamat = hitelösszeg × éves kamatláb / 12; pl. 1 016 000 × 12% / 12 = 10 160",
+   "kapcsolodo": [
+    "te_f14"
+   ]
+  },
+  {
+   "id": "te_o14",
+   "cim": "Mérlegérték és piaci érték",
+   "leiras": "Az ÉH-val együtt a piaci értéket kapjuk (12x + 127 egyenlege dec. 31-én = piaci érték).",
+   "keplet": "Piaci érték = mérlegérték (II.1.) + értékhelyesbítés (II.7.)",
+   "kapcsolodo": [
+    "te_f12",
+    "te_f18"
+   ]
+  }
+ ],
+ "konyvelesi_minta": [
+  {
+   "id": "te_k01",
+   "esemeny": "Belföldi beszerzés – vételár, szállítás, szerelés",
+   "T": "161",
+   "K": "4551",
+   "osszeg": "nettó számlaérték",
+   "megjegyzes": "Az aktiválásig felmerülő minden egyedileg hozzákapcsolható tétel 161-re."
+  },
+  {
+   "id": "te_k02",
+   "esemeny": "Belföldi beszerzés – előzetesen felszámított áfa",
+   "T": "4661",
+   "K": "4551",
+   "osszeg": "nettó × 27%",
+   "megjegyzes": "A forrás feladatmegoldásai 466-ot írnak; a 4 jegyű 4661."
+  },
+  {
+   "id": "te_k03",
+   "esemeny": "Készpénzes beszerzés",
+   "T": "161 / 4661",
+   "K": "3811",
+   "osszeg": "nettó / áfa",
+   "megjegyzes": "Moodle kisértékű eszköz feladat."
+  },
+  {
+   "id": "te_k04",
+   "esemeny": "Import – vételár devizában",
+   "T": "161",
+   "K": "4552",
+   "osszeg": "deviza × teljesítés napi (választott) árfolyam",
+   "megjegyzes": ""
+  },
+  {
+   "id": "te_k05",
+   "esemeny": "Import – vám",
+   "T": "161",
+   "K": "4651",
+   "osszeg": "vámhatározat szerint",
+   "megjegyzes": "Része a bekerülési értéknek."
+  },
+  {
+   "id": "te_k06",
+   "esemeny": "Import – import áfa előírása",
+   "T": "3683",
+   "K": "4652",
+   "osszeg": "vámhatározat szerint",
+   "megjegyzes": "Nem része a bekerülési értéknek."
+  },
+  {
+   "id": "te_k07",
+   "esemeny": "Import – vám és import áfa átutalása",
+   "T": "4651 / 4652",
+   "K": "384",
+   "osszeg": "vám / import áfa",
+   "megjegyzes": ""
+  },
+  {
+   "id": "te_k08",
+   "esemeny": "Import áfa rendezése (levonhatóvá válik)",
+   "T": "4661",
+   "K": "3683",
+   "osszeg": "import áfa",
+   "megjegyzes": ""
+  },
+  {
+   "id": "te_k09",
+   "esemeny": "EU-s beszerzés áfája (fordított adózás)",
+   "T": "4661",
+   "K": "467",
+   "osszeg": "nettó × 27%",
+   "megjegyzes": ""
+  },
+  {
+   "id": "te_k10",
+   "esemeny": "Beruházási hitel – szállító közvetlen kiegyenlítése",
+   "T": "4551",
+   "K": "4441",
+   "osszeg": "bruttó számlaérték",
+   "megjegyzes": ""
+  },
+  {
+   "id": "te_k11",
+   "esemeny": "Aktiválásig felmerült hitelkamat",
+   "T": "161",
+   "K": "384 (ha elhatárolt: 4823)",
+   "osszeg": "hitel × kamatláb × hónap/12",
+   "megjegyzes": "Aktiválás után: T 8731 / K 384 (pénzügyi ráfordítás)."
+  },
+  {
+   "id": "te_k12",
+   "esemeny": "Beruházási előleg átutalása",
+   "T": "352",
+   "K": "384",
+   "osszeg": "előleg nettó összege",
+   "megjegyzes": ""
+  },
+  {
+   "id": "te_k13",
+   "esemeny": "Beruházási előleg áfája",
+   "T": "4661",
+   "K": "384",
+   "osszeg": "előleg áfája",
+   "megjegyzes": ""
+  },
+  {
+   "id": "te_k14",
+   "esemeny": "Előleg beszámítása a végszámlánál",
+   "T": "4551",
+   "K": "352 / 4661",
+   "osszeg": "előleg nettó / előleg áfa",
+   "megjegyzes": "Fennmaradó tartozás: T 4551 / K 384 = bruttó számla − bruttó előleg."
+  },
+  {
+   "id": "te_k15",
+   "esemeny": "Üzembe helyezés (aktiválás)",
+   "T": "12x / 13x / 14x / 15x",
+   "K": "161",
+   "osszeg": "a 161 egyenlege (bekerülési érték)",
+   "megjegyzes": "Épület 1231, termelőgép 131, jármű 132, irodai 143, egyéb állat 153."
+  },
+  {
+   "id": "te_k16",
+   "esemeny": "Terv szerinti ÉCS",
+   "T": "5711",
+   "K": "129 / 139 / 149 / 159",
+   "osszeg": "évi (időarányos) ÉCS",
+   "megjegyzes": ""
+  },
+  {
+   "id": "te_k17",
+   "esemeny": "Kisértékű eszköz egy összegű leírása",
+   "T": "5712",
+   "K": "149 (139)",
+   "osszeg": "teljes bekerülési érték",
+   "megjegyzes": "Előtte aktiválás T 143 / K 161."
+  },
+  {
+   "id": "te_k18",
+   "esemeny": "Terven felüli ÉCS",
+   "T": "8664",
+   "K": "128 / 138 / 148 / 158 / 168",
+   "osszeg": "könyv szerinti − piaci érték",
+   "megjegyzes": ""
+  },
+  {
+   "id": "te_k19",
+   "esemeny": "Terven felüli ÉCS visszaírása",
+   "T": "128 / 138 / 148 / 158",
+   "K": "9664",
+   "osszeg": "max. a terv szerinti nettó értékig",
+   "megjegyzes": ""
+  },
+  {
+   "id": "te_k20",
+   "esemeny": "Értékhelyesbítés elszámolása / növelése",
+   "T": "127 / 137 / 147 / 157",
+   "K": "4171",
+   "osszeg": "piaci − könyv szerinti érték (− előző évi ÉH)",
+   "megjegyzes": ""
+  },
+  {
+   "id": "te_k21",
+   "esemeny": "Értékhelyesbítés visszavezetése / csökkentése",
+   "T": "4171",
+   "K": "127 / 137 / 147 / 157",
+   "osszeg": "előző évi ÉH − szükséges ÉH",
+   "megjegyzes": ""
+  },
+  {
+   "id": "te_k22",
+   "esemeny": "Értékesítés – eladási ár",
+   "T": "311",
+   "K": "368",
+   "osszeg": "nettó eladási ár",
+   "megjegyzes": "Technikai számla 368 (szamlaszamok.json)."
+  },
+  {
+   "id": "te_k23",
+   "esemeny": "Értékesítés – fizetendő áfa",
+   "T": "311",
+   "K": "467",
+   "osszeg": "eladási ár × 27%",
+   "megjegyzes": ""
+  },
+  {
+   "id": "te_k24",
+   "esemeny": "Értékesítés – nettó érték kivezetése",
+   "T": "368",
+   "K": "131",
+   "osszeg": "bruttó − halmozott ÉCS",
+   "megjegyzes": "Bruttó módszerrel: T 368 / K 131 bruttó, T 139 / K 368."
+  },
+  {
+   "id": "te_k25",
+   "esemeny": "Értékesítés / kivezetés – halmozott terv szerinti ÉCS",
+   "T": "139",
+   "K": "131",
+   "osszeg": "halmozott ÉCS",
+   "megjegyzes": ""
+  },
+  {
+   "id": "te_k26",
+   "esemeny": "Értékesítés nyeresége",
+   "T": "368",
+   "K": "961",
+   "osszeg": "eladási ár − nettó érték (ha +)",
+   "megjegyzes": ""
+  },
+  {
+   "id": "te_k27",
+   "esemeny": "Értékesítés vesztesége",
+   "T": "861",
+   "K": "368",
+   "osszeg": "nettó érték − eladási ár (ha +)",
+   "megjegyzes": "A forrás csak a nyereséges esetet könyveli; a tükör 861 Értékesített tárgyi eszközök könyv szerinti értéke."
+  },
+  {
+   "id": "te_k28",
+   "esemeny": "Térítés nélküli átvétel – állományba vétel piaci értéken",
+   "T": "161",
+   "K": "9647",
+   "osszeg": "piaci érték",
+   "megjegyzes": ""
+  },
+  {
+   "id": "te_k29",
+   "esemeny": "Térítés nélküli átvétel – átadó által kiszámlázott áfa",
+   "T": "4661",
+   "K": "479",
+   "osszeg": "kiszámlázott áfa",
+   "megjegyzes": "Nem szállító, mert nem vásároltunk."
+  },
+  {
+   "id": "te_k30",
+   "esemeny": "Térítés nélküli átvétel – bevétel elhatárolása",
+   "T": "9647",
+   "K": "48331",
+   "osszeg": "piaci érték",
+   "megjegyzes": ""
+  },
+  {
+   "id": "te_k31",
+   "esemeny": "Térítés nélküli átvétel – elhatárolás feloldása",
+   "T": "48331",
+   "K": "9647",
+   "osszeg": "a tárgyévi ÉCS-sel azonos összeg",
+   "megjegyzes": ""
+  },
+  {
+   "id": "te_k32",
+   "esemeny": "Térítés nélküli átadás – nettó érték",
+   "T": "8647",
+   "K": "131",
+   "osszeg": "nettó érték",
+   "megjegyzes": "Bruttó módszerrel: T 8647 / K 131 bruttó, T 139 / K 8647."
+  },
+  {
+   "id": "te_k33",
+   "esemeny": "Térítés nélküli átadás – áfa",
+   "T": "368 (kiszámlázva) / 8647 (nem számlázva)",
+   "K": "467",
+   "osszeg": "piaci érték × 27%",
+   "megjegyzes": ""
+  },
+  {
+   "id": "te_k34",
+   "esemeny": "Apport átadása – létesítő okirat szerinti érték",
+   "T": "366",
+   "K": "368",
+   "osszeg": "létesítő okirat szerinti érték",
+   "megjegyzes": "A forrás nyomtatott megoldásában „3. Technikai számla” – a kézírás és a szamlaszamok.json szerint 368."
+  },
+  {
+   "id": "te_k35",
+   "esemeny": "Apport átadása – nettó érték kivezetése",
+   "T": "368",
+   "K": "131",
+   "osszeg": "nettó érték",
+   "megjegyzes": ""
+  },
+  {
+   "id": "te_k36",
+   "esemeny": "Apport átadása – pozitív különbözet",
+   "T": "368",
+   "K": "9642",
+   "osszeg": "létesítő okirat szerinti − nettó",
+   "megjegyzes": ""
+  },
+  {
+   "id": "te_k37",
+   "esemeny": "Apport átadása – negatív különbözet",
+   "T": "8642",
+   "K": "368",
+   "osszeg": "nettó − létesítő okirat szerinti",
+   "megjegyzes": ""
+  },
+  {
+   "id": "te_k38",
+   "esemeny": "Apport – részesedés állományba vétele bejegyzéskor",
+   "T": "172 (kapcsoltnál 171x)",
+   "K": "366",
+   "osszeg": "létesítő okirat szerinti érték",
+   "megjegyzes": ""
+  },
+  {
+   "id": "te_k39",
+   "esemeny": "Apport átvétele (átvevőnél) rendelkezésre bocsátáskor",
+   "T": "161",
+   "K": "479",
+   "osszeg": "létesítő okirat szerinti érték",
+   "megjegyzes": "szamlaszamok.json: K 479 (nem 4795)."
+  },
+  {
+   "id": "te_k40",
+   "esemeny": "Cégbírósági bejegyzés (átvevőnél)",
+   "T": "32x / 33x / 358",
+   "K": "411",
+   "osszeg": "jegyzett tőke",
+   "megjegyzes": "Anyavállalattól 325, egyéb részesedési viszony 332, nem részesedési viszony 358."
+  },
+  {
+   "id": "te_k41",
+   "esemeny": "Átvevőnél rendező tétel bejegyzés után",
+   "T": "479",
+   "K": "32x / 33x / 358",
+   "osszeg": "apport értéke",
+   "megjegyzes": ""
+  },
+  {
+   "id": "te_k42",
+   "esemeny": "Selejtezés – terven felüli ÉCS a nettó értékben",
+   "T": "8664",
+   "K": "138",
+   "osszeg": "nettó érték",
+   "megjegyzes": ""
+  },
+  {
+   "id": "te_k43",
+   "esemeny": "Selejtezés/hiány – terven felüli ÉCS kivezetése",
+   "T": "138",
+   "K": "131",
+   "osszeg": "terven felüli ÉCS",
+   "megjegyzes": ""
+  },
+  {
+   "id": "te_k44",
+   "esemeny": "Selejtezés – hasznosítható hulladék készletre vétele",
+   "T": "21-22 / 26",
+   "K": "131",
+   "osszeg": "hulladékérték",
+   "megjegyzes": "Ekkor csak (nettó − hulladékérték) a terven felüli ÉCS."
+  },
+  {
+   "id": "te_k45",
+   "esemeny": "Hiány",
+   "T": "8664 (majd T 138, 139 / K 13x)",
+   "K": "138",
+   "osszeg": "nettó érték",
+   "megjegyzes": "Az elmélet: a hiány terven felüli ÉCS-ként egyéb ráfordítás. A tükörben létezik 8692 Hiányzó, megsemmisült tárgyi eszközök könyv szerinti értéke is – a kurzus megoldásai a 8664-et használják."
+  },
+  {
+   "id": "te_k46",
+   "esemeny": "Felújítás költségei",
+   "T": "162 / 4661",
+   "K": "4551",
+   "osszeg": "nettó / áfa",
+   "megjegyzes": ""
+  },
+  {
+   "id": "te_k47",
+   "esemeny": "Felújítás aktiválása",
+   "T": "131 (12-15)",
+   "K": "162",
+   "osszeg": "felújítás értéke",
+   "megjegyzes": ""
+  },
+  {
+   "id": "te_k48",
+   "esemeny": "Karbantartás (nem aktiválható)",
+   "T": "524 / 4661",
+   "K": "4543",
+   "osszeg": "nettó / áfa",
+   "megjegyzes": ""
+  },
+  {
+   "id": "te_k49",
+   "esemeny": "Ingatlan aktiválása",
+   "T": "1231",
+   "K": "161",
+   "osszeg": "bekerülési érték",
+   "megjegyzes": ""
+  },
+  {
+   "id": "te_k50",
+   "esemeny": "Átsorolás áruvá",
+   "T": "26 (21-22)",
+   "K": "13x",
+   "osszeg": "nettó érték (ÉCS kivezetése: T 139 / K 13x)",
+   "megjegyzes": "A forrás csak elméletben említi."
+  }
+ ],
+ "feladatok": [
+  {
+   "id": "te_I_1",
+   "forras": "I_Tárgyi eszközök feladatsor + I_..._megoldása_kész.pptx",
+   "cim": "I/1. Gépsor importbeszerzése – bekerülési érték",
+   "szoveg": "Egy festékgyártó vállalkozás gépsort vásárolt. Határozza meg a gyártó-gépsor bekerülési értékét és könyvelje vegyes naplóban a bekerülési érték részét képező gazdasági eseményeket!",
+   "adatok": {
+    "vetelar": "10 000 euró, 252 Ft/euró",
+    "import_afa": 625000,
+    "tartozekok_afaval": 250000,
+    "szallitas_afa_nelkul": 600000,
+    "bizomanyosi_dij_afa_nelkul": 150000,
+    "alapozas_uzembe_helyezes_afa_nelkul": 80000,
+    "kornyezetvedelmi_hatosagi_dij": 5000,
+    "alkatreszek_afaval": 60000,
+    "aktivalasig_tartalek_alkatreszek_afa_nelkul": 32000,
+    "aktivalas_utani_tartalek_alkatreszek_afaval": 24000,
+    "uzembe_helyezes": "július 1."
+   },
+   "megoldas": {
+    "szamitasok": [
+     {
+      "mit": "Vételár",
+      "keplet": "10 000 € × 252",
+      "eredmeny": 2520000
+     },
+     {
+      "mit": "Import áfa",
+      "keplet": "nem része (levonható)",
+      "eredmeny": 0
+     },
+     {
+      "mit": "Tartozékok nettó",
+      "keplet": "250 000 / 1,27",
+      "eredmeny": 196850
+     },
+     {
+      "mit": "Szállítás",
+      "keplet": "",
+      "eredmeny": 600000
+     },
+     {
+      "mit": "Bizományosi díj",
+      "keplet": "",
+      "eredmeny": 150000
+     },
+     {
+      "mit": "Alapozás, üzembe helyezés",
+      "keplet": "",
+      "eredmeny": 80000
+     },
+     {
+      "mit": "Hatósági díj",
+      "keplet": "",
+      "eredmeny": 5000
+     },
+     {
+      "mit": "Alkatrészek nettó",
+      "keplet": "60 000 / 1,27",
+      "eredmeny": 47244
+     },
+     {
+      "mit": "Aktiválásig vett tartalék alkatrész",
+      "keplet": "",
+      "eredmeny": 32000
+     },
+     {
+      "mit": "Aktiválás utáni tartalék alkatrész",
+      "keplet": "nem része",
+      "eredmeny": 0
+     },
+     {
+      "mit": "Bekerülési érték",
+      "keplet": "összesen",
+      "eredmeny": 3631094
+     }
+    ],
+    "tetelek": [
+     {
+      "sorszam": 1,
+      "esemeny": "Vételár",
+      "T": "161",
+      "K": "4552",
+      "osszeg": 2520000,
+      "szamitas": "10 000 × 252"
+     },
+     {
+      "sorszam": 2,
+      "esemeny": "Tartozékok",
+      "T": "161",
+      "K": "4552",
+      "osszeg": 196850,
+      "szamitas": ""
+     },
+     {
+      "sorszam": 3,
+      "esemeny": "Szállítási díj",
+      "T": "161",
+      "K": "4552",
+      "osszeg": 600000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": 4,
+      "esemeny": "Bizományosi díj",
+      "T": "161",
+      "K": "4552",
+      "osszeg": 150000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": 5,
+      "esemeny": "Alapozás, üzembe helyezés",
+      "T": "161",
+      "K": "4552",
+      "osszeg": 80000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": 6,
+      "esemeny": "Hatósági díj",
+      "T": "161",
+      "K": "4552",
+      "osszeg": 5000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": 7,
+      "esemeny": "Alkatrészek",
+      "T": "161",
+      "K": "4552",
+      "osszeg": 47244,
+      "szamitas": ""
+     },
+     {
+      "sorszam": 8,
+      "esemeny": "Aktiválásig vett tartalék alkatrészek",
+      "T": "161",
+      "K": "4552",
+      "osszeg": 32000,
+      "szamitas": ""
+     }
+    ],
+    "egyeb": {
+     "kiegeszites_nem_kert": "Üzembe helyezés július 1-jén: T 131 / K 161 3 631 094 (a feladat nem kéri)."
+    }
+   },
+   "tanulsagok": [
+    "Az import áfa és az aktiválás után beszerzett tartalék alkatrész nem része a bekerülési értéknek.",
+    "„ÁFÁ-val” megadott tételnél csak a nettó (÷1,27) rész aktiválható.",
+    "Hatósági díj, bizományosi díj, alapozás része a bekerülési értéknek."
+   ],
+   "elteresek_a_forrasban": [
+    "A megoldás minden tételt K 4552 (külföldi beruházási szállító) számlára könyvel; a belföldi szolgáltatók (szállítás, bizományos, alapozás, alkatrész) és a hatósági díj valójában K 4551 (illetve a hatósági díj K 384/479) lenne – a tanári megoldás egyszerűsít.",
+    "A feladatsor „Környezetvédelmi hatósági díj”, a megoldás „Hatósági díj” megnevezést használ (összeg azonos).",
+    "A tartozékok és alkatrészek áfájának könyvelése (T 4661) nem szerepel a megoldásban, mert csak a bekerülési érték részét képező tételeket kéri."
+   ]
+  },
+  {
+   "id": "te_I_2",
+   "forras": "I_Tárgyi eszközök feladatsor + I_..._megoldása_kész.pptx; órai jegyzet 1.docx",
+   "cim": "I/2. Termelőgép beruházási hitelből, aktiválásig felmerült kamat",
+   "szoveg": "1. A termelőgép vételára az átutalásos számla alapján: 800 eFt + 27% ÁFA. 2. A vételár teljes összege beruházási hitelből került kiegyenlítésre tárgyév október 27-én. A hitelkamat 12%/év. 3. A vállalkozás bankszámláját megterhelték a november havi hitelkamattal. 4. A termelőgépet tárgyév december 1-jén vették használatba. Könyvelje le!",
+   "adatok": {
+    "vetelar": 800000,
+    "afa_kulcs": 0.27,
+    "hitel_kiegyenlites": "október 27.",
+    "kamatlab": 0.12,
+    "uzembe_helyezes": "december 1."
+   },
+   "megoldas": {
+    "szamitasok": [
+     {
+      "mit": "Áfa",
+      "keplet": "800 000 × 0,27",
+      "eredmeny": 216000
+     },
+     {
+      "mit": "Hitel",
+      "keplet": "800 000 + 216 000",
+      "eredmeny": 1016000
+     },
+     {
+      "mit": "Éves kamat",
+      "keplet": "1 016 000 × 0,12",
+      "eredmeny": 121920
+     },
+     {
+      "mit": "Novemberi kamat",
+      "keplet": "121 920 / 12",
+      "eredmeny": 10160
+     },
+     {
+      "mit": "Bekerülési érték",
+      "keplet": "800 000 + 10 160",
+      "eredmeny": 810160
+     }
+    ],
+    "tetelek": [
+     {
+      "sorszam": "1a",
+      "esemeny": "Vételár",
+      "T": "161",
+      "K": "4551",
+      "osszeg": 800000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "1b",
+      "esemeny": "Előzetesen felszámított áfa",
+      "T": "4661",
+      "K": "4551",
+      "osszeg": 216000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "2",
+      "esemeny": "Szállító kiegyenlítése beruházási hitelből",
+      "T": "4551",
+      "K": "4441",
+      "osszeg": 1016000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "3",
+      "esemeny": "Novemberi hitelkamat (aktiválás előtti)",
+      "T": "161",
+      "K": "384",
+      "osszeg": 10160,
+      "szamitas": "1 016 000 × 12% / 12"
+     },
+     {
+      "sorszam": "4",
+      "esemeny": "Használatba vétel",
+      "T": "131",
+      "K": "161",
+      "osszeg": 810160,
+      "szamitas": "161 egyenlege"
+     }
+    ],
+    "egyeb": {}
+   },
+   "tanulsagok": [
+    "Az aktiválásig (december 1.) felmerült kamat része a bekerülési értéknek.",
+    "A hitel közvetlenül a szállítót egyenlíti ki: T 4551 / K 4441.",
+    "A kamat a bruttó (áfás) hitelösszegre számolandó."
+   ],
+   "elteresek_a_forrasban": [
+    "A megoldás és az órai jegyzet 466-ot ír, a 4 jegyű számla 4661.",
+    "Az október 27–31. közötti időszak kamatát a feladat nem említi, a megoldás csak a novemberi kamatot aktiválja."
+   ]
+  },
+  {
+   "id": "te_I_3",
+   "forras": "I_Tárgyi eszközök feladatsor + I_..._megoldása_kész.pptx; órai jegyzet 1.docx",
+   "cim": "I/3. Épület értékhelyesbítése és terven felüli ÉCS 4 éven át",
+   "szoveg": "Egy vállalkozás egyik épületéről ismert a bruttó érték, a halmozott terv szerinti ÉCS és a mérlegkészítéskori piaci érték (mFt). Az eltérés minden esetben tartós és jelentős. a) Végezze el az értékhelyesbítéssel kapcsolatos számításokat! b) Határozza meg a mérlegértéket évenként! c) Könyvelje le a tételeket mind a 4 évre!",
+   "adatok": {
+    "brutto_mFt": [
+     200,
+     200,
+     200,
+     200
+    ],
+    "halmozott_terv_szerinti_ECS_mFt": [
+     30,
+     60,
+     90,
+     120
+    ],
+    "piaci_ertek_mFt": [
+     180,
+     145,
+     90,
+     150
+    ]
+   },
+   "megoldas": {
+    "szamitasok": [
+     {
+      "mit": "1. év",
+      "keplet": "könyv szerinti 170, piaci 180, különbözet +10",
+      "eredmeny": "mérlegérték (II.1.) 170 mFt; értékhelyesbítés (II.7.) 10 mFt"
+     },
+     {
+      "mit": "2. év",
+      "keplet": "könyv szerinti 140, piaci 145, különbözet +5",
+      "eredmeny": "mérlegérték (II.1.) 140 mFt; értékhelyesbítés (II.7.) 5 mFt"
+     },
+     {
+      "mit": "3. év",
+      "keplet": "könyv szerinti 110, piaci 90, különbözet -20",
+      "eredmeny": "mérlegérték (II.1.) 90 mFt; értékhelyesbítés (II.7.) 0 mFt"
+     },
+     {
+      "mit": "4. év",
+      "keplet": "könyv szerinti 60, piaci 150, különbözet +90",
+      "eredmeny": "mérlegérték (II.1.) 80 mFt; értékhelyesbítés (II.7.) 70 mFt"
+     }
+    ],
+    "tetelek": [
+     {
+      "sorszam": "1. év",
+      "esemeny": "ÉH elszámolása",
+      "T": "127",
+      "K": "4171",
+      "osszeg": 10000000,
+      "szamitas": "piaci 180 − könyv szerinti 170 = +10 mFt"
+     },
+     {
+      "sorszam": "2. év",
+      "esemeny": "ÉH visszavezetése",
+      "T": "4171",
+      "K": "127",
+      "osszeg": 5000000,
+      "szamitas": "piaci 145 − könyv szerinti 140 = +5 mFt"
+     },
+     {
+      "sorszam": "3. év",
+      "esemeny": "ÉH visszavezetése",
+      "T": "4171",
+      "K": "127",
+      "osszeg": 5000000,
+      "szamitas": "piaci 90 − könyv szerinti 110 = -20 mFt"
+     },
+     {
+      "sorszam": "3. év",
+      "esemeny": "Terven felüli ÉCS",
+      "T": "8664",
+      "K": "128",
+      "osszeg": 20000000,
+      "szamitas": "piaci 90 − könyv szerinti 110 = -20 mFt"
+     },
+     {
+      "sorszam": "4. év",
+      "esemeny": "TF ÉCS visszaírása",
+      "T": "128",
+      "K": "9664",
+      "osszeg": 20000000,
+      "szamitas": "piaci 150 − könyv szerinti 60 = +90 mFt"
+     },
+     {
+      "sorszam": "4. év",
+      "esemeny": "ÉH elszámolása",
+      "T": "127",
+      "K": "4171",
+      "osszeg": 70000000,
+      "szamitas": "piaci 150 − könyv szerinti 60 = +90 mFt"
+     }
+    ],
+    "egyeb": {
+     "merleg_eFt": {
+      "1. év": {
+       "II.1": 170000,
+       "II.7": 10000
+      },
+      "2. év": {
+       "II.1": 140000,
+       "II.7": 5000
+      },
+      "3. év": {
+       "II.1": 90000,
+       "II.7": 0
+      },
+      "4. év": {
+       "II.1": 80000,
+       "II.7": 70000
+      }
+     },
+     "4_ev_magyarazat": "Könyv szerinti érték 200 − 120 − 20 (TF ÉCS) = 60; különbözet +90 → előbb 20 TF ÉCS visszaírás (mérlegérték 80), majd 70 ÉH."
+    }
+   },
+   "tanulsagok": [
+    "Mindig az előző évi ÉH-t kell korrigálni (2. év: 10 → 5, ezért −5).",
+    "Ha a piaci érték a könyv szerinti alá esik: a teljes ÉH-t vissza kell vezetni, ÉS a teljes különbözetet (20) terven felüli ÉCS-ként kell elszámolni.",
+    "Ha van korábbi TF ÉCS, előbb azt kell visszaírni, csak a maradék lehet ÉH.",
+    "Az ÉH nem része a mérlegértéknek; mérlegérték + ÉH = piaci érték."
+   ],
+   "elteresek_a_forrasban": [
+    "A pptx segédtáblájának címe „7. Feladat – segédtábla”, holott ez a 3. feladat.",
+    "A feladat a 4. évre 120 mFt halmozott terv szerinti ÉCS-t ad, bár a 3. évi TF ÉCS után a tervet elvileg módosítani kellene – a megoldás az adott számokkal számol."
+   ]
+  },
+  {
+   "id": "te_I_4",
+   "forras": "I_Tárgyi eszközök feladatsor + I_..._megoldása_kész.pptx; órai jegyzet 1.docx",
+   "cim": "I/4. Beruházási előleg és beszámítása",
+   "szoveg": "1. A beruházási szállítóknak 1 000 eFt (800 eFt + 200 eFt ÁFA) előleget utalt át a vállalkozás. 2. A szállító megküldte a számlát: 2 000 eFt + 500 eFt ÁFA. 3. Az előleg beszámításra került. 4. A vállalkozás átutalta fennmaradó tartozását.",
+   "adatok": {
+    "eloleg_netto": 800000,
+    "eloleg_afa": 200000,
+    "szamla_netto": 2000000,
+    "szamla_afa": 500000
+   },
+   "megoldas": {
+    "szamitasok": [
+     {
+      "mit": "Fennmaradó tartozás",
+      "keplet": "2 500 000 − 1 000 000",
+      "eredmeny": 1500000
+     }
+    ],
+    "tetelek": [
+     {
+      "sorszam": "1a",
+      "esemeny": "Előleg átutalása",
+      "T": "352",
+      "K": "384",
+      "osszeg": 800000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "1b",
+      "esemeny": "Előleg áfája",
+      "T": "4661",
+      "K": "384",
+      "osszeg": 200000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "2a",
+      "esemeny": "Vételár",
+      "T": "161",
+      "K": "4551",
+      "osszeg": 2000000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "2b",
+      "esemeny": "Áfa",
+      "T": "4661",
+      "K": "4551",
+      "osszeg": 500000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "3a",
+      "esemeny": "Előleg beszámítása",
+      "T": "4551",
+      "K": "352",
+      "osszeg": 800000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "3b",
+      "esemeny": "Előleg áfájának beszámítása",
+      "T": "4551",
+      "K": "4661",
+      "osszeg": 200000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "4",
+      "esemeny": "Fennmaradó tartozás átutalása",
+      "T": "4551",
+      "K": "384",
+      "osszeg": 1500000,
+      "szamitas": ""
+     }
+    ],
+    "egyeb": {}
+   },
+   "tanulsagok": [
+    "Az előleg áfája nem a 352-re, hanem a 4661-re kerül.",
+    "A beruházási előleg követelés jellegű (352), de a mérlegben tárgyi eszköz (II.6.)."
+   ],
+   "elteresek_a_forrasban": [
+    "A forrás 466-ot ír (4 jegyre: 4661).",
+    "A megoldás nem könyveli a gép aktiválását (T 131 / K 161 2 000 000), mert a feladat nem említi az üzembe helyezést."
+   ]
+  },
+  {
+   "id": "te_I_5",
+   "forras": "I_Tárgyi eszközök feladatsor + I_..._megoldása_kész.pptx; órai jegyzet 1.docx",
+   "cim": "I/5. Kft. alapítása apporttal (termelőgép) – átvevőnél",
+   "szoveg": "Egy Kft-t 3 000 eFt alaptőkével alapítanak, amely teljes egészében termelőgépek értékéből származik. 1. A tagok az apportot rendelkezésre bocsátották. 2. A Kft-t a cégbíróság bejegyezte.",
+   "adatok": {
+    "jegyzett_toke": 3000000,
+    "apport": "termelőgépek 3 000 eFt"
+   },
+   "megoldas": {
+    "szamitasok": [],
+    "tetelek": [
+     {
+      "sorszam": "1",
+      "esemeny": "Apportként átvett gép állományba vétele",
+      "T": "161",
+      "K": "479",
+      "osszeg": 3000000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "2a",
+      "esemeny": "Cégbírósági bejegyzés",
+      "T": "332",
+      "K": "411",
+      "osszeg": 3000000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "2b",
+      "esemeny": "Rendező tétel (apport már rendelkezésre bocsátva)",
+      "T": "479",
+      "K": "332",
+      "osszeg": 3000000,
+      "szamitas": ""
+     }
+    ],
+    "egyeb": {
+     "aktivalas_ha_kerdes": "Üzembe helyezéskor: T 131 / K 161 3 000 000 (a feladat nem kéri)."
+    }
+   },
+   "tanulsagok": [
+    "Bejegyzés előtt a kapott apport kötelezettség (479), mert meghiúsulás esetén vissza kellene adni.",
+    "Bejegyzéskor a jegyzett, de be nem fizetett tőkét (33x) a rendelkezésre bocsátott apporttal szemben azonnal le kell vezetni."
+   ],
+   "elteresek_a_forrasban": [
+    "A megoldás a 332 (Jegyzett, de be nem fizetett tőke egyéb részesedési viszonyban lévő vállalkozástól) számlát használja, és „egyéb gazdálkodótól”-nak nevezi; ha a tagok magánszemélyek, a tükör szerint pontosabb a 358 (részesedési viszonyban nem lévő).",
+    "A pptx a tételeket „1), 2a), 3b)” sorszámozással jelöli (hibás sorszám, a tartalom helyes).",
+    "A pptx-ből kinyert szövegben a T/K számlanevek felcserélődve jelennek meg (pl. „T 161 Különféle rövid lejáratú kötelezettségek”) – a számlaszámok a helyesek."
+   ]
+  },
+  {
+   "id": "te_I_6",
+   "forras": "I_Tárgyi eszközök feladatsor + I_..._megoldása_kész.pptx; órai jegyzet2-1.png (kézírás)",
+   "cim": "I/6. Mobiltelefonok – kisértékű eszköz egy összegű leírása",
+   "szoveg": "1. December 1-jén 3 db mobiltelefont vásárolt 60 eFt/db + 16,2 eFt ÁFA/db-ért. Tervezett használati idő 3 év. 2. A telefonokat a beszerzés napján használatba vették. Kiegészítő információ: a 200 eFt egyedi bekerülési érték alatti tárgyi eszközök ÉCS-ét egy összegben számolja el.",
+   "adatok": {
+    "db": 3,
+    "egysegar": 60000,
+    "afa_db": 16200,
+    "hasznalati_ido_ev": 3,
+    "egy_osszegu_hatar": 200000
+   },
+   "megoldas": {
+    "szamitasok": [
+     {
+      "mit": "Nettó",
+      "keplet": "3 × 60 000",
+      "eredmeny": 180000
+     },
+     {
+      "mit": "Áfa",
+      "keplet": "3 × 16 200",
+      "eredmeny": 48600
+     }
+    ],
+    "tetelek": [
+     {
+      "sorszam": "1a",
+      "esemeny": "Telefonok beszerzése",
+      "T": "161",
+      "K": "4551",
+      "osszeg": 180000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "1b",
+      "esemeny": "Áfa",
+      "T": "4661",
+      "K": "4551",
+      "osszeg": 48600,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "2a",
+      "esemeny": "Üzembe helyezés",
+      "T": "143",
+      "K": "161",
+      "osszeg": 180000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "2b",
+      "esemeny": "Egy összegű ÉCS",
+      "T": "5712",
+      "K": "149",
+      "osszeg": 180000,
+      "szamitas": ""
+     }
+    ],
+    "egyeb": {}
+   },
+   "tanulsagok": [
+    "Az egyedi érték (60 eFt) számít, nem az összesen (180 eFt).",
+    "A 3 év tervezett használati idő ellenére egy összegben leírható.",
+    "A telefon irodai, igazgatási eszköz → 143, ÉCS-e 149."
+   ],
+   "elteresek_a_forrasban": [
+    "A számlatükör 5712 megnevezése „100 ezer Ft egyedi beszerzési érték alatti”, a feladat 200 eFt-os számviteli politikai határt ad – a feladat adata az irányadó.",
+    "A pptx-ben a 2b) tételnél a számlanevek felcserélve szerepelnek; helyesen T 5712 Kiemelt, kisértékű eszközök ÉCS / K 149 Egyéb berendezések terv szerinti ÉCS.",
+    "A forrás 466-ot ír (4661)."
+   ]
+  },
+  {
+   "id": "te_I_7",
+   "forras": "I_Tárgyi eszközök feladatsor + I_..._megoldása_kész.pptx; órai jegyzet2-1.png (kézírás)",
+   "cim": "I/7. Műszaki gép értékesítése és selejtezése",
+   "szoveg": "Műszaki gép: bruttó érték 1 000 eFt, halmozott ÉCS 200 eFt. Hogyan kell lekönyvelni az állománycsökkenést? 1. Értékesítés: 1 100 eFt + 275 eFt ÁFA. 2. Selejtezés.",
+   "adatok": {
+    "brutto": 1000000,
+    "halmozott_ECS": 200000,
+    "eladasi_ar": 1100000,
+    "afa": 275000
+   },
+   "megoldas": {
+    "szamitasok": [
+     {
+      "mit": "Nettó érték",
+      "keplet": "1 000 000 − 200 000",
+      "eredmeny": 800000
+     },
+     {
+      "mit": "Értékesítés eredménye",
+      "keplet": "1 100 000 − 800 000",
+      "eredmeny": 300000
+     }
+    ],
+    "tetelek": [
+     {
+      "sorszam": "1a",
+      "esemeny": "Eladási ár",
+      "T": "311",
+      "K": "368",
+      "osszeg": 1100000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "1b",
+      "esemeny": "Fizetendő áfa",
+      "T": "311",
+      "K": "467",
+      "osszeg": 275000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "1c",
+      "esemeny": "Nettó érték kivezetése",
+      "T": "368",
+      "K": "131",
+      "osszeg": 800000,
+      "szamitas": "1 000 000 − 200 000"
+     },
+     {
+      "sorszam": "1d",
+      "esemeny": "Halmozott ÉCS kivezetése",
+      "T": "139",
+      "K": "131",
+      "osszeg": 200000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "1e",
+      "esemeny": "Nyereség (368 egyenlege)",
+      "T": "368",
+      "K": "961",
+      "osszeg": 300000,
+      "szamitas": "1 100 000 − 800 000"
+     },
+     {
+      "sorszam": "2a",
+      "esemeny": "TF ÉCS a nettó értékben",
+      "T": "8664",
+      "K": "138",
+      "osszeg": 800000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "2b",
+      "esemeny": "Terv szerinti ÉCS kivezetése",
+      "T": "139",
+      "K": "131",
+      "osszeg": 200000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "2c",
+      "esemeny": "TF ÉCS kivezetése",
+      "T": "138",
+      "K": "131",
+      "osszeg": 800000,
+      "szamitas": ""
+     }
+    ],
+    "egyeb": {
+     "egyenlegek": "131, 139, 138 és 368 egyenlege a végén 0."
+    }
+   },
+   "tanulsagok": [
+    "A 368 technikai számla egyenlege adja az értékesítés eredményét (961 egyéb bevétel).",
+    "Selejtezésnél a teljes nettó érték terven felüli ÉCS (egyéb ráfordítás).",
+    "Korábbi TF ÉCS esetén azt is ki kell vezetni (T 138 / K 131 vagy K 368)."
+   ],
+   "elteresek_a_forrasban": [
+    "Az áfa 275 eFt az 1 100 eFt 25%-a (27%-kal 297 eFt lenne); a Moodle-teszt ugyanerre 297 000-et használ. A forrás adatát vettük át.",
+    "A pptx-ben a selejtezés tételei „4a–4c” sorszámúak, és a dián „1b és 1c lépéssel kivezettük…” áll – másik feladatsorból átvett sorszámozás.",
+    "A pptx-ből kinyert szövegben a T/K számlanevek felcserélődnek (pl. „T 368 Vevők / K 311”); a kézírásos jegyzet és a II. feladatsor szerint helyesen T 311 / K 368."
+   ]
+  },
+  {
+   "id": "te_I_8",
+   "forras": "I_Tárgyi eszközök feladatsor + I_..._megoldása_kész.pptx; órai jegyzet2-1.png (kézírás)",
+   "cim": "I/8. Nils Zrt. – őrkutya (Buksi) beszerzése",
+   "szoveg": "Nils Zrt. takarmánytelepén a tesztludakat aranysakálok ritkították, ezért megvásárolta Buksit, akit lúdvédelemre treníroztak. A tenyésztő 400 eFt + 27% áfát számlázott. A kutya menten szolgálatba áll.",
+   "adatok": {
+    "vetelar": 400000,
+    "afa_kulcs": 0.27
+   },
+   "megoldas": {
+    "szamitasok": [
+     {
+      "mit": "Áfa",
+      "keplet": "400 000 × 0,27",
+      "eredmeny": 108000
+     }
+    ],
+    "tetelek": [
+     {
+      "sorszam": "1a",
+      "esemeny": "Beszerzés",
+      "T": "161",
+      "K": "4551",
+      "osszeg": 400000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "1b",
+      "esemeny": "Áfa",
+      "T": "4661",
+      "K": "4551",
+      "osszeg": 108000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "1c",
+      "esemeny": "Aktiválás",
+      "T": "153",
+      "K": "161",
+      "osszeg": 400000,
+      "szamitas": ""
+     }
+    ],
+    "egyeb": {
+     "merlegsor": "A/II.4. Tenyészállatok (15. számlacsoport, 153 Egyéb állatok)"
+    }
+   },
+   "tanulsagok": [
+    "Az állat tartósan szolgálja a tevékenységet → tárgyi eszköz, nem készlet.",
+    "Az őrkutya nem termel leválasztható terméket, ezért nem 151 Tenyészállat, hanem 153 Egyéb állatok."
+   ],
+   "elteresek_a_forrasban": [
+    "A pptx a tételeket „Tenyészállat beszerzése/aktiválása” címmel jelöli, de 153 Egyéb állatok számlára aktivál – a 153 a helyes (a kutya nem tenyészállat a fogalom szerint).",
+    "A pptx kinyert szövegében a T/K számlanevek felcserélve: helyesen T 161 / K 4551 (kézírás szerint is)."
+   ]
+  },
+  {
+   "id": "te_I_9",
+   "forras": "I_Tárgyi eszközök feladatsor + I_..._megoldása_kész.pptx",
+   "cim": "I/9. ÉCS-módszerek összehasonlítása (9 000 000 Ft, 5 év)",
+   "szoveg": "9 000 000 Ft bekerülési értékű gépsor, terv szerint 5 év. a) Lineáris, maradványérték 1 000 000 Ft. b) Degresszív, évek száma módszer, maradványérték 0. c) Degresszív, nettó érték után állandó kulccsal, maradványérték 700 000 Ft. d) Teljesítményarányos: 20 000 gó (3 500; 4 200; 5 000; 4 000; 3 300), maradványérték 1 000 eFt.",
+   "adatok": {
+    "brutto": 9000000,
+    "ev": 5,
+    "MÉ_a": 1000000,
+    "MÉ_b": 0,
+    "MÉ_c": 700000,
+    "MÉ_d": 1000000,
+    "gepora": [
+     3500,
+     4200,
+     5000,
+     4000,
+     3300
+    ]
+   },
+   "megoldas": {
+    "szamitasok": [
+     {
+      "mit": "a) évi ÉCS",
+      "keplet": "(9 000 000 − 1 000 000) / 5 = 20%",
+      "eredmeny": 1600000
+     },
+     {
+      "mit": "a) tört év (júl. 1.)",
+      "keplet": "1 600 000 / 12 × 6",
+      "eredmeny": 800000
+     },
+     {
+      "mit": "b) kulcsok",
+      "keplet": "5+4+3+2+1 = 15 → 5/15 … 1/15",
+      "eredmeny": "3 000 000; 2 400 000; 1 800 000; 1 200 000; 600 000"
+     },
+     {
+      "mit": "c) leírási kulcs",
+      "keplet": "1 − (700 000 / 9 000 000)^(1/5)",
+      "eredmeny": "0,4 (40%)"
+     },
+     {
+      "mit": "d) 1 gépórára jutó ÉCS",
+      "keplet": "(9 000 000 − 1 000 000) / 20 000",
+      "eredmeny": "400 Ft/gó"
+     }
+    ],
+    "tetelek": [
+     {
+      "sorszam": 1,
+      "esemeny": "Évi terv szerinti ÉCS (bármely módszer)",
+      "T": "5711",
+      "K": "139",
+      "osszeg": "az adott évi összeg",
+      "szamitas": ""
+     }
+    ],
+    "egyeb": {
+     "a_linearis": [
+      {
+       "ev": 1,
+       "evi_ECS": 1600000,
+       "halmozott": 1600000,
+       "netto": 7400000
+      },
+      {
+       "ev": 2,
+       "evi_ECS": 1600000,
+       "halmozott": 3200000,
+       "netto": 5800000
+      },
+      {
+       "ev": 3,
+       "evi_ECS": 1600000,
+       "halmozott": 4800000,
+       "netto": 4200000
+      },
+      {
+       "ev": 4,
+       "evi_ECS": 1600000,
+       "halmozott": 6400000,
+       "netto": 2600000
+      },
+      {
+       "ev": 5,
+       "evi_ECS": 1600000,
+       "halmozott": 8000000,
+       "netto": 1000000
+      }
+     ],
+     "b_evek_szama": [
+      {
+       "ev": 1,
+       "evi_ECS": 3000000,
+       "halmozott": 3000000,
+       "netto": 6000000
+      },
+      {
+       "ev": 2,
+       "evi_ECS": 2400000,
+       "halmozott": 5400000,
+       "netto": 3600000
+      },
+      {
+       "ev": 3,
+       "evi_ECS": 1800000,
+       "halmozott": 7200000,
+       "netto": 1800000
+      },
+      {
+       "ev": 4,
+       "evi_ECS": 1200000,
+       "halmozott": 8400000,
+       "netto": 600000
+      },
+      {
+       "ev": 5,
+       "evi_ECS": 600000,
+       "halmozott": 9000000,
+       "netto": 0
+      }
+     ],
+     "c_fix_kulcs_netto": [
+      {
+       "ev": 1,
+       "evi_ECS": 3600000,
+       "halmozott": 3600000,
+       "netto": 5400000
+      },
+      {
+       "ev": 2,
+       "evi_ECS": 2160000,
+       "halmozott": 5760000,
+       "netto": 3240000
+      },
+      {
+       "ev": 3,
+       "evi_ECS": 1296000,
+       "halmozott": 7056000,
+       "netto": 1944000
+      },
+      {
+       "ev": 4,
+       "evi_ECS": 778000,
+       "halmozott": 7834000,
+       "netto": 1166000
+      },
+      {
+       "ev": 5,
+       "evi_ECS": 466000,
+       "halmozott": 8300000,
+       "netto": 700000
+      }
+     ],
+     "d_teljesitmenyaranyos": [
+      {
+       "ev": 1,
+       "evi_ECS": 1400000,
+       "halmozott": 1400000,
+       "netto": 7600000
+      },
+      {
+       "ev": 2,
+       "evi_ECS": 1680000,
+       "halmozott": 3080000,
+       "netto": 5920000
+      },
+      {
+       "ev": 3,
+       "evi_ECS": 2000000,
+       "halmozott": 5080000,
+       "netto": 3920000
+      },
+      {
+       "ev": 4,
+       "evi_ECS": 1600000,
+       "halmozott": 6680000,
+       "netto": 2320000
+      },
+      {
+       "ev": 5,
+       "evi_ECS": 1320000,
+       "halmozott": 8000000,
+       "netto": 1000000
+      }
+     ]
+    }
+   },
+   "tanulsagok": [
+    "Lineárisnál és teljesítményarányosnál a leírható alap bruttó − MÉ; fix kulcsos degresszívnél mindig az előző nettó érték × kulcs.",
+    "A halmozott ÉCS + nettó érték = bruttó érték.",
+    "Tört évnél havi időarányosítás."
+   ],
+   "elteresek_a_forrasban": [
+    "c) A forrás eFt-ra kerekít (1 944 × 0,4 = 777,6 → 778; 1 166 × 0,4 = 466,4 → 466), így a záró nettó érték pontosan 700 eFt.",
+    "b) A pptx az 1. évnél a nettó érték oszlopba 6 000-et ír, a halmozott oszlopba 3 000-et – helyes."
+   ]
+  },
+  {
+   "id": "te_I_10",
+   "forras": "I_Tárgyi eszközök feladatsor + I_..._megoldása_kész.pptx; órai jegyzet2-1.png (kézírás)",
+   "cim": "I/10. Tárgyalóasztal beszerzése és decemberi ÉCS",
+   "szoveg": "1. Vételár: 600 eFt + ÁFA. 2. Szállítási díj: 20 eFt + 5 eFt ÁFA. 3. Beállították december 1-jén. 4. Decemberi ÉCS: 15 eFt.",
+   "adatok": {
+    "vetelar": 600000,
+    "szallitas": 20000,
+    "szallitas_afa": 5000,
+    "uzembe_helyezes": "december 1.",
+    "decemberi_ECS": 15000
+   },
+   "megoldas": {
+    "szamitasok": [
+     {
+      "mit": "Vételár áfája",
+      "keplet": "600 000 × 0,27",
+      "eredmeny": 162000
+     },
+     {
+      "mit": "Bekerülési érték",
+      "keplet": "600 000 + 20 000",
+      "eredmeny": 620000
+     }
+    ],
+    "tetelek": [
+     {
+      "sorszam": "1a",
+      "esemeny": "Vételár",
+      "T": "161",
+      "K": "4551",
+      "osszeg": 600000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "1b",
+      "esemeny": "Áfa",
+      "T": "4661",
+      "K": "4551",
+      "osszeg": 162000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "2a",
+      "esemeny": "Szállítás",
+      "T": "161",
+      "K": "4551",
+      "osszeg": 20000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "2b",
+      "esemeny": "Szállítás áfája",
+      "T": "4661",
+      "K": "4551",
+      "osszeg": 5000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "3",
+      "esemeny": "Használatba vétel",
+      "T": "143",
+      "K": "161",
+      "osszeg": 620000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "4",
+      "esemeny": "Decemberi ÉCS",
+      "T": "5711",
+      "K": "149",
+      "osszeg": 15000,
+      "szamitas": ""
+     }
+    ],
+    "egyeb": {}
+   },
+   "tanulsagok": [
+    "Irodai bútor: egyéb berendezés (143), ÉCS 149.",
+    "A szállítási díj része a bekerülési értéknek."
+   ],
+   "elteresek_a_forrasban": [
+    "A szállítás áfája 5 eFt a 20 eFt 25%-a (27%-kal 5,4 eFt) – a forrás adatát vettük át.",
+    "A pptx 4. tételénél a számlanevek felcserélve; helyesen T 5711 Terv szerinti ÉCS / K 149."
+   ]
+  },
+  {
+   "id": "te_II_1",
+   "forras": "II_Tárgyi eszközök feladatsor + II_..._megoldása.pdf",
+   "cim": "II/1. CNC gépsor bekerülési értéke (deviza, engedmény, felár, hitelkamat)",
+   "szoveg": "Az Értékcsökkentő Zrt. számítógép-vezérlésű megmunkáló gépsort vásárolt. Határozza meg a gépsor bekerülési értékét! További események: a) 4 000 000 Ft hitel, üzembe helyezésig 60 000 Ft időarányos kamat; b) átutalás a NAV-VPOP-nak, a belföldi szállítóknak, az aktiválásig felmerült kamat és a hitel 20%-a; c) a külföldi szállítók kiegyenlítése a használatba vétel után, eladási árfolyam 150 Ft/P; 19 Ft/DN.",
+   "adatok": {
+    "listaar": "50 000 P × 145 Ft/P",
+    "mennyisegi_engedmeny": "10% (listaárra)",
+    "surgossegi_felar": "6% (listaárra)",
+    "kulfoldi_szallitas": "15 000 DN × 20 Ft/DN",
+    "vam": 680000,
+    "import_afa": "nincs megadva",
+    "belfoldi_szallitas_uzembe_helyezes": "1 000 000 Ft + 27% áfa",
+    "hitel": 4000000,
+    "aktivalasig_kamat": 60000,
+    "kiegyenlites_arfolyam": "150 Ft/P; 19 Ft/DN"
+   },
+   "megoldas": {
+    "szamitasok": [
+     {
+      "mit": "Listaár",
+      "keplet": "145 × 50 000",
+      "eredmeny": 7250000
+     },
+     {
+      "mit": "Mennyiségi engedmény",
+      "keplet": "7 250 000 × 0,10",
+      "eredmeny": -725000
+     },
+     {
+      "mit": "Sürgősségi felár",
+      "keplet": "7 250 000 × 0,06",
+      "eredmeny": 435000
+     },
+     {
+      "mit": "Külföldi szállítás",
+      "keplet": "20 × 15 000",
+      "eredmeny": 300000
+     },
+     {
+      "mit": "Vám",
+      "keplet": "",
+      "eredmeny": 680000
+     },
+     {
+      "mit": "Belföldi szállítás, üzembe helyezés",
+      "keplet": "",
+      "eredmeny": 1000000
+     },
+     {
+      "mit": "Aktiválásig felmerült kamat",
+      "keplet": "",
+      "eredmeny": 60000
+     },
+     {
+      "mit": "Bekerülési érték",
+      "keplet": "összesen",
+      "eredmeny": 9000000
+     },
+     {
+      "mit": "[saját] Import áfa",
+      "keplet": "(6 960 000 + 300 000 + 680 000) × 27% – a forrás nem számolja",
+      "eredmeny": 2143800
+     },
+     {
+      "mit": "[saját] Árfolyam-különbözet P",
+      "keplet": "48 000 P × (150 − 145)",
+      "eredmeny": "240 000 veszteség (nem módosítja a bekerülési értéket)"
+     },
+     {
+      "mit": "[saját] Árfolyam-különbözet DN",
+      "keplet": "15 000 DN × (19 − 20)",
+      "eredmeny": "15 000 nyereség (nem módosítja a bekerülési értéket)"
+     }
+    ],
+    "tetelek": [],
+    "egyeb": {
+     "megjegyzes": "A forrás csak a bekerülési értéket számolja ki (9 000 000 Ft) – ez lesz az I/9. gépsorának bekerülési értéke.",
+     "kovetkeztetes": "Az import áfa és az aktiválás utáni átutalás nem része a bekerülési értéknek."
+    }
+   },
+   "tanulsagok": [
+    "Az engedmény és a felár a LISTAÁRRA vonatkozik.",
+    "Az import áfa nem része a bekerülési értéknek.",
+    "Az aktiválásig felmerült kamat igen, az aktiválás utáni árfolyam-különbözet nem része."
+   ],
+   "elteresek_a_forrasban": [
+    "Az import áfa összege a feladatban „…………Ft” (üres), a forrás nem számolja ki; a [saját] jelű sorok nem a tanári megoldásból valók.",
+    "A forrás a b), c) eseményeket nem könyveli."
+   ]
+  },
+  {
+   "id": "te_II_2",
+   "forras": "II_Tárgyi eszközök feladatsor + II_..._megoldása.pdf; órai jegyzet2-1.png (kézírás)",
+   "cim": "II/2. Termelőgép importja (harmadik országból)",
+   "szoveg": "1) Vételár 10 000 DEV, választott árfolyam 300 Ft/DEV. 2) A vámhatározat alapján vám 500 eFt, import áfa 800 eFt. 3) December 1-jén használatba vették. 4) Átutalták a NAV-val szembeni kötelezettséget (vám + áfa). 5) Az import áfa rendezésre került.",
+   "adatok": {
+    "vetelar_DEV": 10000,
+    "arfolyam": 300,
+    "vam": 500000,
+    "import_afa": 800000
+   },
+   "megoldas": {
+    "szamitasok": [
+     {
+      "mit": "Vételár",
+      "keplet": "10 000 × 300",
+      "eredmeny": 3000000
+     },
+     {
+      "mit": "Bekerülési érték",
+      "keplet": "3 000 000 + 500 000",
+      "eredmeny": 3500000
+     }
+    ],
+    "tetelek": [
+     {
+      "sorszam": "1",
+      "esemeny": "Vételár",
+      "T": "161",
+      "K": "4552",
+      "osszeg": 3000000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "2a",
+      "esemeny": "Vám",
+      "T": "161",
+      "K": "4651",
+      "osszeg": 500000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "2b",
+      "esemeny": "Import áfa",
+      "T": "3683",
+      "K": "4652",
+      "osszeg": 800000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "3",
+      "esemeny": "Használatba vétel",
+      "T": "131",
+      "K": "161",
+      "osszeg": 3500000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "4a",
+      "esemeny": "Vám átutalása",
+      "T": "4651",
+      "K": "384",
+      "osszeg": 500000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "4b",
+      "esemeny": "Import áfa átutalása",
+      "T": "4652",
+      "K": "384",
+      "osszeg": 800000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "5",
+      "esemeny": "Import áfa rendezése",
+      "T": "4661",
+      "K": "3683",
+      "osszeg": 800000,
+      "szamitas": ""
+     }
+    ],
+    "egyeb": {}
+   },
+   "tanulsagok": [
+    "Az import áfa visszaigényelhető, de csak a teljes kötelezettség kiegyenlítése után – addig követelés (3683).",
+    "A vám része a bekerülési értéknek."
+   ],
+   "elteresek_a_forrasban": [
+    "A nyomtatott megoldás 2b)-nél T 368 / 5)-nél K 368 számlát ír; a kézírásos jegyzet 3683-ra javítja, és a szamlaszamok.json is T 3683 / K 4652 – a 3683 a helyes.",
+    "A forrás 466-ot ír (4661).",
+    "A Moodle-teszt azonos feladata (19/21 pont) ugyanezt a 7 tételt adja."
+   ]
+  },
+  {
+   "id": "te_II_3",
+   "forras": "II_Tárgyi eszközök feladatsor + II_..._megoldása.pdf; órai jegyzet2-1.png (kézírás)",
+   "cim": "II/3. Termelőgép beszerzése EU-s tagállamból",
+   "szoveg": "1) Vételár 10 000 EUR, választott árfolyam 250 Ft/DEV. 2) A beszerzéshez 625 eFt áfa kapcsolódik. 3) Június 1-jén használatba vették.",
+   "adatok": {
+    "vetelar_EUR": 10000,
+    "arfolyam": 250,
+    "afa": 625000
+   },
+   "megoldas": {
+    "szamitasok": [
+     {
+      "mit": "Vételár",
+      "keplet": "10 000 × 250",
+      "eredmeny": 2500000
+     },
+     {
+      "mit": "Áfa",
+      "keplet": "2 500 000 × 25%",
+      "eredmeny": 625000
+     }
+    ],
+    "tetelek": [
+     {
+      "sorszam": "1",
+      "esemeny": "Vételár",
+      "T": "161",
+      "K": "4552",
+      "osszeg": 2500000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "2",
+      "esemeny": "Áfa (fordított adózás)",
+      "T": "4661",
+      "K": "467",
+      "osszeg": 625000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "3",
+      "esemeny": "Használatba vétel",
+      "T": "131",
+      "K": "161",
+      "osszeg": 2500000,
+      "szamitas": ""
+     }
+    ],
+    "egyeb": {}
+   },
+   "tanulsagok": [
+    "EU-n belüli beszerzésnél nincs vám és import áfa; az áfa egyszerre fizetendő és levonható (T 4661 / K 467)."
+   ],
+   "elteresek_a_forrasban": [
+    "A 625 eFt a 2 500 eFt 25%-a (27%-kal 675 eFt lenne) – a forrás adatát vettük át.",
+    "A feladat EUR-t ír, az árfolyamot „Ft/DEV”-ben adja meg.",
+    "A forrás 466-ot ír (4661)."
+   ]
+  },
+  {
+   "id": "te_II_4",
+   "forras": "II_Tárgyi eszközök feladatsor + II_..._megoldása.pdf; órai jegyzet2-1.png (kézírás)",
+   "cim": "II/4. Térítés nélkül kapott műszaki gép",
+   "szoveg": "1) A Kft november végén térítés nélkül kapott egy műszaki gépet, piaci értéke 580 eFt, az átadó 145 eFt áfát számlázott ki. 2) Üzembe helyezték. 3) Elszámolták a decemberi ÉCS-t: 10 eFt.",
+   "adatok": {
+    "piaci_ertek": 580000,
+    "kiszamlazott_afa": 145000,
+    "decemberi_ECS": 10000
+   },
+   "megoldas": {
+    "szamitasok": [],
+    "tetelek": [
+     {
+      "sorszam": "1a",
+      "esemeny": "Állományba vétel piaci értéken",
+      "T": "161",
+      "K": "9647",
+      "osszeg": 580000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "1b",
+      "esemeny": "Kiszámlázott áfa",
+      "T": "4661",
+      "K": "479",
+      "osszeg": 145000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "1c",
+      "esemeny": "Bevétel elhatárolása",
+      "T": "9647",
+      "K": "48331",
+      "osszeg": 580000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "2",
+      "esemeny": "Üzembe helyezés",
+      "T": "131",
+      "K": "161",
+      "osszeg": 580000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "3a",
+      "esemeny": "Decemberi ÉCS",
+      "T": "5711",
+      "K": "139",
+      "osszeg": 10000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "3b",
+      "esemeny": "Elhatárolás feloldása az ÉCS-sel azonos összegben",
+      "T": "48331",
+      "K": "9647",
+      "osszeg": 10000,
+      "szamitas": ""
+     }
+    ],
+    "egyeb": {
+     "eredmenyhatas": "Decemberben: −10 000 ÉCS (költség) + 10 000 egyéb bevétel = 0."
+    }
+   },
+   "tanulsagok": [
+    "Térítés nélküli átvétel: piaci érték, egyéb bevétel (9647), amelyet passzív időbeli elhatárolással (48331) a hasznos élettartamra szétterítünk.",
+    "Az áfa ellenszámlája 479, nem szállító.",
+    "Kézírás: AIE → eredmény nő, PIE → eredmény csökken."
+   ],
+   "elteresek_a_forrasban": [
+    "A forrás 571-et ír (4 jegyre: 5711) és 466-ot (4661).",
+    "A 145 eFt a 580 eFt 25%-a (27%-kal 156,6 eFt) – a forrás adata.",
+    "A kézírásos jegyzetben az 1c tétel a 2) után áll (sorrend eltérés, tartalom azonos)."
+   ]
+  },
+  {
+   "id": "te_II_5",
+   "forras": "II_Tárgyi eszközök feladatsor + II_..._megoldása.pdf; órai jegyzet2-1.png (kézírás)",
+   "cim": "II/5. Műszaki gép kivezetése: értékesítés, apport, térítés nélküli átadás, selejtezés",
+   "szoveg": "Bruttó érték 1 000 eFt, halmozott ÉCS 200 eFt. 1) Értékesítés 1 100 eFt + 275 eFt áfa. 2) Apport, létesítő okirat szerinti érték 1 100 eFt. 3) Térítés nélküli átadás, piaci érték 1 100 eFt, kiszámlázott áfa 275 eFt. 4) Selejtezés.",
+   "adatok": {
+    "brutto": 1000000,
+    "halmozott_ECS": 200000,
+    "eladasi_ar": 1100000,
+    "letesito_okirat_szerinti": 1100000,
+    "piaci_ertek": 1100000,
+    "afa": 275000
+   },
+   "megoldas": {
+    "szamitasok": [
+     {
+      "mit": "Nettó érték",
+      "keplet": "1 000 000 − 200 000",
+      "eredmeny": 800000
+     },
+     {
+      "mit": "Értékesítés nyeresége",
+      "keplet": "1 100 000 − 800 000",
+      "eredmeny": 300000
+     },
+     {
+      "mit": "Apport különbözet",
+      "keplet": "1 100 000 − 800 000",
+      "eredmeny": 300000
+     }
+    ],
+    "tetelek": [
+     {
+      "sorszam": "1a",
+      "esemeny": "Eladási ár",
+      "T": "311",
+      "K": "368",
+      "osszeg": 1100000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "1b",
+      "esemeny": "Fizetendő áfa",
+      "T": "311",
+      "K": "467",
+      "osszeg": 275000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "1c",
+      "esemeny": "Nettó érték kivezetése",
+      "T": "368",
+      "K": "131",
+      "osszeg": 800000,
+      "szamitas": "1 000 000 − 200 000"
+     },
+     {
+      "sorszam": "1d",
+      "esemeny": "Halmozott ÉCS kivezetése",
+      "T": "139",
+      "K": "131",
+      "osszeg": 200000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "1e",
+      "esemeny": "Nyereség (368 egyenlege)",
+      "T": "368",
+      "K": "961",
+      "osszeg": 300000,
+      "szamitas": "1 100 000 − 800 000"
+     },
+     {
+      "sorszam": "2a",
+      "esemeny": "Létesítő okirat szerinti érték (részesedés követelés)",
+      "T": "366",
+      "K": "368",
+      "osszeg": 1100000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "2b",
+      "esemeny": "Nettó érték kivezetése",
+      "T": "368",
+      "K": "131",
+      "osszeg": 800000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "2c",
+      "esemeny": "Halmozott ÉCS kivezetése",
+      "T": "139",
+      "K": "131",
+      "osszeg": 200000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "2d",
+      "esemeny": "Pozitív különbözet",
+      "T": "368",
+      "K": "9642",
+      "osszeg": 300000,
+      "szamitas": "1 100 000 − 800 000"
+     },
+     {
+      "sorszam": "2e",
+      "esemeny": "Részesedés állományba vétele bejegyzéskor",
+      "T": "172",
+      "K": "366",
+      "osszeg": 1100000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "3a",
+      "esemeny": "Nettó érték kivezetése",
+      "T": "8647",
+      "K": "131",
+      "osszeg": 800000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "3b",
+      "esemeny": "Halmozott ÉCS kivezetése",
+      "T": "139",
+      "K": "131",
+      "osszeg": 200000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "3c",
+      "esemeny": "Fizetendő áfa (kiszámlázva)",
+      "T": "368",
+      "K": "467",
+      "osszeg": 275000,
+      "szamitas": "ha nem számlázza ki: T 8647 / K 467"
+     },
+     {
+      "sorszam": "4a",
+      "esemeny": "TF ÉCS a nettó értékben",
+      "T": "8664",
+      "K": "138",
+      "osszeg": 800000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "4b",
+      "esemeny": "Terv szerinti ÉCS kivezetése",
+      "T": "139",
+      "K": "131",
+      "osszeg": 200000,
+      "szamitas": ""
+     },
+     {
+      "sorszam": "4c",
+      "esemeny": "TF ÉCS kivezetése",
+      "T": "138",
+      "K": "131",
+      "osszeg": 800000,
+      "szamitas": ""
+     }
+    ],
+    "egyeb": {
+     "brutto_modszer": "Apport: T 368 / K 131 1 000 000 és T 139 / K 368 200 000; térítés nélküli átadás: T 8647 / K 131 1 000 000 és T 139 / K 8647 200 000.",
+     "negativ_apport_kulonbozet": "T 8642 / K 368",
+     "reszesedes_szamla": "172 Egyéb tartós részesedés, mert nem kapcsolt és nem jelentős részesedés."
+    }
+   },
+   "tanulsagok": [
+    "Apportnál a létesítő okirat szerinti érték > könyv szerinti → egyéb bevétel (9642), < → egyéb ráfordítás (8642).",
+    "Térítés nélküli átadás: a nettó érték egyéb ráfordítás (8647); a fizetendő áfa kiszámlázva követelés (368), különben ráfordítás.",
+    "A térítés nélküli átadásnál a piaci érték a könyvelést nem befolyásolja (csak az áfa alapja)."
+   ],
+   "elteresek_a_forrasban": [
+    "A nyomtatott megoldás az apportnál „3. Technikai számla”-t ír; a kézírás és a szamlaszamok.json szerint a technikai számla 368.",
+    "Az áfa 275 eFt az 1 100 eFt 25%-a (27%-kal 297 eFt) – forrásadat.",
+    "A selejtezésnél a dia „1b és 1c lépéssel kivezettük…” szöveget tartalmaz, holott a 4b, 4c tételekről van szó."
+   ]
+  }
+ ],
+ "gyakorlo_kerdesek": [
+  {
+   "id": "te_q01",
+   "tipus": "egyvalasztos",
+   "kerdes": "A teljesítőképességet jelentősen növelő átalakítás:",
+   "opciok": [
+    "Értéknövelő beruházás lehet",
+    "Mindig karbantartás",
+    "Mindig költség",
+    "Nem befolyásolja a tárgyi eszköz értékét"
+   ],
+   "helyes": "Értéknövelő beruházás lehet",
+   "magyarazat": "Átalakítás, teljesítőképesség közvetlen növelése → beruházás (aktiválandó).",
+   "forras": "teszt"
+  },
+  {
+   "id": "te_q02",
+   "tipus": "egyvalasztos",
+   "kerdes": "A karbantartási költség:",
+   "opciok": [
+    "A felmerülés időszakának eredményét terheli",
+    "Növeli a bruttó értéket",
+    "Aktiválni kell",
+    "Több év alatt ÉCS-ként jelenik meg"
+   ],
+   "helyes": "A felmerülés időszakának eredményét terheli",
+   "magyarazat": "Karbantartás a karbantartás évében terheli az eredményt (524).",
+   "forras": "teszt"
+  },
+  {
+   "id": "te_q03",
+   "tipus": "tobbvalasztos",
+   "kerdes": "Melyek lehetnek az apport tárgyai?",
+   "opciok": [
+    "Vagyoni értékű jog",
+    "Ingatlan",
+    "Gép",
+    "Csak tárgyi eszköz lehet"
+   ],
+   "helyes": [
+    "Vagyoni értékű jog",
+    "Ingatlan",
+    "Gép"
+   ],
+   "magyarazat": "Az apport nem pénzbeli vagyoni hozzájárulás, nem csak tárgyi eszköz.",
+   "forras": "teszt"
+  },
+  {
+   "id": "te_q04",
+   "tipus": "igaz_hamis",
+   "kerdes": "A terven felüli ÉCS visszaírása egyéb bevétel.",
+   "opciok": null,
+   "helyes": true,
+   "magyarazat": "T 138 / K 9664 – egyéb bevétel.",
+   "forras": "teszt"
+  },
+  {
+   "id": "te_q05",
+   "tipus": "igaz_hamis",
+   "kerdes": "Üzembe helyezésig nem számolható el terv szerinti ÉCS.",
+   "opciok": null,
+   "helyes": true,
+   "magyarazat": "Üzembe nem helyezett beruházásra nincs terv szerinti ÉCS.",
+   "forras": "teszt"
+  },
+  {
+   "id": "te_q06",
+   "tipus": "szamitas",
+   "kerdes": "Vételár 12 M Ft, szállítás 0,5 M, szerelés 0,8 M, üzembe helyezés 0,3 M, plusz egy későbbi karbantartás. Mennyi a bekerülési érték?",
+   "opciok": null,
+   "helyes": "13 600 000 Ft",
+   "magyarazat": "12 + 0,5 + 0,8 + 0,3 = 13,6 M; a karbantartás nem része.",
+   "forras": "teszt"
+  },
+  {
+   "id": "te_q07",
+   "tipus": "tobbvalasztos",
+   "kerdes": "Melyek növelik a bekerülési értéket?",
+   "opciok": [
+    "Vételár",
+    "Szállítás",
+    "Alapozás, szerelés",
+    "Üzembe helyezés",
+    "Aktiválás utáni karbantartás",
+    "Levonható áfa"
+   ],
+   "helyes": [
+    "Vételár",
+    "Szállítás",
+    "Alapozás, szerelés",
+    "Üzembe helyezés"
+   ],
+   "magyarazat": "Csak az aktiválásig felmerült, egyedileg hozzákapcsolható tételek.",
+   "forras": "teszt"
+  },
+  {
+   "id": "te_q08",
+   "tipus": "szamitas",
+   "kerdes": "Egy tag 4 M Ft pénzt és 6 M Ft értékű gépet ad vagyoni hozzájárulásként. Mennyi a vagyoni hozzájárulás?",
+   "opciok": null,
+   "helyes": "10 000 000 Ft",
+   "magyarazat": "Pénzbeli + nem pénzbeli (apport) együtt.",
+   "forras": "teszt"
+  },
+  {
+   "id": "te_q09",
+   "tipus": "tobbvalasztos",
+   "kerdes": "Egy tag 5 M Ft-os gépet apportál. Mi igaz?",
+   "opciok": [
+    "Vagyoni hozzájárulás teljesítése",
+    "Az eszközállomány nő",
+    "A bekerülési érték 5 M Ft",
+    "Egyéb bevétel keletkezik az átvevőnél"
+   ],
+   "helyes": [
+    "Vagyoni hozzájárulás teljesítése",
+    "Az eszközállomány nő",
+    "A bekerülési érték 5 M Ft"
+   ],
+   "magyarazat": "Apport bekerülési értéke a létesítő okirat szerinti érték.",
+   "forras": "teszt"
+  },
+  {
+   "id": "te_q10",
+   "tipus": "egyvalasztos",
+   "kerdes": "Mi az apport értéke az átvevőnél?",
+   "opciok": [
+    "Létesítő okirat szerinti érték",
+    "Piaci érték",
+    "Az átadó könyv szerinti értéke",
+    "Bruttó érték"
+   ],
+   "helyes": "Létesítő okirat szerinti érték",
+   "magyarazat": "Bekerülési érték jogcímenként.",
+   "forras": "teszt"
+  },
+  {
+   "id": "te_q11",
+   "tipus": "tobbvalasztos",
+   "kerdes": "Egy 20 M Ft-os gépet megvásároltak, de még nem helyezték üzembe. Mi igaz?",
+   "opciok": [
+    "Tárgyi eszköznek minősül",
+    "Beruházásként kell kimutatni",
+    "Nem számolható el terv szerinti ÉCS",
+    "Készletként kell kimutatni"
+   ],
+   "helyes": [
+    "Tárgyi eszköznek minősül",
+    "Beruházásként kell kimutatni",
+    "Nem számolható el terv szerinti ÉCS"
+   ],
+   "magyarazat": "A beruházás is tárgyi eszköz (II.5.) – a Moodle-ban ezt az opciót sokan kihagyják.",
+   "forras": "teszt"
+  },
+  {
+   "id": "te_q12",
+   "tipus": "igaz_hamis",
+   "kerdes": "Apport kizárólag tárgyi eszköz lehet.",
+   "opciok": null,
+   "helyes": false,
+   "magyarazat": "Lehet vagyoni értékű jog, immateriális jószág stb. is.",
+   "forras": "teszt"
+  },
+  {
+   "id": "te_q13",
+   "tipus": "szamitas",
+   "kerdes": "Jegyzett tőke 10 M Ft, ebből 7 M Ft-ot befizettek. Mennyi a jegyzett, de be nem fizetett tőke?",
+   "opciok": null,
+   "helyes": "3 000 000 Ft",
+   "magyarazat": "10 − 7 = 3 M Ft.",
+   "forras": "teszt"
+  },
+  {
+   "id": "te_q14",
+   "tipus": "igaz_hamis",
+   "kerdes": "Az üzembe helyezés időpontját dokumentálni kell.",
+   "opciok": null,
+   "helyes": true,
+   "magyarazat": "Üzembe helyezési nyilatkozat/jegyzőkönyv.",
+   "forras": "teszt"
+  },
+  {
+   "id": "te_q15",
+   "tipus": "szamitas",
+   "kerdes": "Lineáris ÉCS: bekerülési érték 10 M Ft, maradványérték 1 M Ft, 5 év. Mennyi az évi ÉCS?",
+   "opciok": null,
+   "helyes": "1 800 000 Ft",
+   "magyarazat": "(10 − 1) / 5 = 1,8 M Ft.",
+   "forras": "teszt"
+  },
+  {
+   "id": "te_q16",
+   "tipus": "igaz_hamis",
+   "kerdes": "A karbantartás mindig növeli a bruttó értéket.",
+   "opciok": null,
+   "helyes": false,
+   "magyarazat": "Soha nem növeli – költség.",
+   "forras": "teszt"
+  },
+  {
+   "id": "te_q17",
+   "tipus": "tobbvalasztos",
+   "kerdes": "Mire nem számolható el terv szerinti ÉCS?",
+   "opciok": [
+    "Üzembe nem helyezett beruházás",
+    "Földterület",
+    "Épület",
+    "Termelőgép"
+   ],
+   "helyes": [
+    "Üzembe nem helyezett beruházás",
+    "Földterület"
+   ],
+   "magyarazat": "Föld, telek, erdő, műalkotás, beruházás: nincs terv szerinti ÉCS.",
+   "forras": "teszt"
+  },
+  {
+   "id": "te_q18",
+   "tipus": "igaz_hamis",
+   "kerdes": "A terven felüli ÉCS egyéb ráfordítás.",
+   "opciok": null,
+   "helyes": true,
+   "magyarazat": "T 8664 – egyéb ráfordítás.",
+   "forras": "teszt"
+  },
+  {
+   "id": "te_q19",
+   "tipus": "parositas",
+   "kerdes": "Párosítsa a laptopokat a mérlegbeli helyükkel!",
+   "opciok": [
+    "továbbértékesítésre vett",
+    "az ügyvezető használja",
+    "még nincs üzembe helyezve"
+   ],
+   "helyes": {
+    "továbbértékesítésre vett": "Készlet / áru",
+    "az ügyvezető használja": "Egyéb berendezések",
+    "még nincs üzembe helyezve": "Beruházás"
+   },
+   "magyarazat": "Rendeltetés dönt; ügyvezetői laptop közvetett szolgálat → egyéb berendezés.",
+   "forras": "teszt"
+  },
+  {
+   "id": "te_q20",
+   "tipus": "egyvalasztos",
+   "kerdes": "Mikor beruházás a gép?",
+   "opciok": [
+    "Amíg nem helyezték rendeltetésszerűen használatba",
+    "Amíg nincs kifizetve",
+    "Az első évben",
+    "Ha hitelből vették"
+   ],
+   "helyes": "Amíg nem helyezték rendeltetésszerűen használatba",
+   "magyarazat": "Üzembe helyezésig 161.",
+   "forras": "teszt"
+  },
+  {
+   "id": "te_q21",
+   "tipus": "parositas",
+   "kerdes": "Párosítsa az eredménykimutatás soraival!",
+   "opciok": [
+    "Terven felüli ÉCS",
+    "Terven felüli ÉCS visszaírása",
+    "Kapott kártérítés",
+    "Térítés nélkül átadott TE",
+    "Terv szerinti ÉCS"
+   ],
+   "helyes": {
+    "Terven felüli ÉCS": "Egyéb ráfordítás",
+    "Terven felüli ÉCS visszaírása": "Egyéb bevétel",
+    "Kapott kártérítés": "Egyéb bevétel",
+    "Térítés nélkül átadott TE": "Egyéb ráfordítás",
+    "Terv szerinti ÉCS": "Értékcsökkenési leírás"
+   },
+   "magyarazat": "Kapcsolat az eredménykimutatással dia.",
+   "forras": "teszt"
+  },
+  {
+   "id": "te_q22",
+   "tipus": "egyvalasztos",
+   "kerdes": "Mi különbözteti meg a műszaki berendezést az egyéb berendezéstől?",
+   "opciok": [
+    "Közvetlen vagy közvetett szolgálat",
+    "Az értéke",
+    "A hasznos élettartam",
+    "A beszerzés módja"
+   ],
+   "helyes": "Közvetlen vagy közvetett szolgálat",
+   "magyarazat": "Műszaki: közvetlenül, egyéb: közvetetten szolgálja a tevékenységet.",
+   "forras": "teszt"
+  },
+  {
+   "id": "te_q23",
+   "tipus": "egyvalasztos",
+   "kerdes": "Mi nem része a saját előállítású tárgyi eszköz bekerülési értékének?",
+   "opciok": [
+    "Általános igazgatási költség",
+    "Közvetlen anyagköltség",
+    "Közvetlen bérköltség",
+    "Bérjárulék"
+   ],
+   "helyes": "Általános igazgatási költség",
+   "magyarazat": "Saját előállításnál csak közvetlen költség.",
+   "forras": "teszt"
+  },
+  {
+   "id": "te_q24",
+   "tipus": "egyvalasztos",
+   "kerdes": "Mi nem növeli a bekerülési értéket?",
+   "opciok": [
+    "Üzembe helyezés utáni rendszeres karbantartás",
+    "Alapozás",
+    "Vám",
+    "Aktiválásig felmerült hitelkamat"
+   ],
+   "helyes": "Üzembe helyezés utáni rendszeres karbantartás",
+   "magyarazat": "Karbantartás költség.",
+   "forras": "teszt"
+  },
+  {
+   "id": "te_q25",
+   "tipus": "tobbvalasztos",
+   "kerdes": "Mikor kell terven felüli ÉCS-t elszámolni?",
+   "opciok": [
+    "Megsemmisül",
+    "Hiányzik",
+    "Megrongálódik",
+    "Feleslegessé válik",
+    "Piaci értéke nő"
+   ],
+   "helyes": [
+    "Megsemmisül",
+    "Hiányzik",
+    "Megrongálódik",
+    "Feleslegessé válik"
+   ],
+   "magyarazat": "Plusz: piaci érték tartósan, jelentősen a könyv szerinti alatt.",
+   "forras": "teszt"
+  },
+  {
+   "id": "te_q26",
+   "tipus": "igaz_hamis",
+   "kerdes": "A továbbértékesítésre vett gép mindig tárgyi eszköz.",
+   "opciok": null,
+   "helyes": false,
+   "magyarazat": "Továbbértékesítési céllal vett gép áru.",
+   "forras": "teszt"
+  },
+  {
+   "id": "te_q27",
+   "tipus": "egyvalasztos",
+   "kerdes": "A maradványérték:",
+   "opciok": [
+    "A hasznos élettartam végén várhatóan realizálható becsült érték",
+    "A bruttó és nettó érték különbsége",
+    "A piaci érték év végén",
+    "A halmozott ÉCS"
+   ],
+   "helyes": "A hasznos élettartam végén várhatóan realizálható becsült érték",
+   "magyarazat": "Használatba vételkor kell megállapítani.",
+   "forras": "teszt"
+  },
+  {
+   "id": "te_q28",
+   "tipus": "egyvalasztos",
+   "kerdes": "A terven felüli ÉCS oka megszűnt. Mi a teendő?",
+   "opciok": [
+    "Vissza kell írni",
+    "Vissza lehet írni, ha a vállalkozás akarja",
+    "Értékhelyesbítést kell elszámolni",
+    "Semmi"
+   ],
+   "helyes": "Vissza kell írni",
+   "magyarazat": "Kötelező visszaírás (9664).",
+   "forras": "teszt"
+  },
+  {
+   "id": "te_q29",
+   "tipus": "parositas",
+   "kerdes": "Beruházás, felújítás vagy karbantartás?",
+   "opciok": [
+    "Kapacitásbővítés",
+    "Új gép",
+    "Korszerűsítés, teljesítőképesség nő",
+    "Eredeti állag helyreállítása",
+    "Kopott alkatrész cseréje",
+    "Éves szerviz"
+   ],
+   "helyes": {
+    "Kapacitásbővítés": "Beruházás",
+    "Új gép": "Beruházás",
+    "Korszerűsítés, teljesítőképesség nő": "Felújítás",
+    "Eredeti állag helyreállítása": "Felújítás",
+    "Kopott alkatrész cseréje": "Karbantartás",
+    "Éves szerviz": "Karbantartás"
+   },
+   "magyarazat": "A tanár szerint a korszerűsítés FELÚJÍTÁS (gyakori hiba: beruházásnak jelölni).",
+   "forras": "teszt"
+  },
+  {
+   "id": "te_q30",
+   "tipus": "igaz_hamis",
+   "kerdes": "A maradványérték a hasznos élettartam végén várható érték.",
+   "opciok": null,
+   "helyes": true,
+   "magyarazat": "",
+   "forras": "teszt"
+  },
+  {
+   "id": "te_q31",
+   "tipus": "egyvalasztos",
+   "kerdes": "Mit jelent az apport?",
+   "opciok": [
+    "Tulajdonos által rendelkezésre bocsátott nem pénzbeli vagyoni hozzájárulás",
+    "Pénzbeli tőkebefizetés",
+    "Térítés nélkül kapott eszköz",
+    "Ajándék"
+   ],
+   "helyes": "Tulajdonos által rendelkezésre bocsátott nem pénzbeli vagyoni hozzájárulás",
+   "magyarazat": "",
+   "forras": "teszt"
+  },
+  {
+   "id": "te_q32",
+   "tipus": "egyvalasztos",
+   "kerdes": "A hasznos élettartam:",
+   "opciok": [
+    "Az időszak, amely alatt a gazdálkodó várhatóan használja az eszközt",
+    "Az eszköz fizikai élettartama",
+    "A garanciális idő",
+    "Az adótörvény szerinti leírási idő"
+   ],
+   "helyes": "Az időszak, amely alatt a gazdálkodó várhatóan használja az eszközt",
+   "magyarazat": "Pl. számítógép: 3 év.",
+   "forras": "teszt"
+  },
+  {
+   "id": "te_q33",
+   "tipus": "szamitas",
+   "kerdes": "Kisértékű irodai eszköz: 80 000 Ft + 27% áfa, készpénzzel; használatba vétel, egy összegű leírás. Könyvelje!",
+   "opciok": null,
+   "helyes": [
+    {
+     "T": "161",
+     "K": "3811",
+     "osszeg": 80000
+    },
+    {
+     "T": "4661",
+     "K": "3811",
+     "osszeg": 21600
+    },
+    {
+     "T": "143",
+     "K": "161",
+     "osszeg": 80000
+    },
+    {
+     "T": "5712",
+     "K": "149",
+     "osszeg": 80000
+    }
+   ],
+   "magyarazat": "Moodle 12/12 pont.",
+   "forras": "teszt"
+  },
+  {
+   "id": "te_q34",
+   "tipus": "szamitas",
+   "kerdes": "Beruházási előleg 4 M + áfa átutalása, majd 10 M + áfa számla, előleg beszámítása. Mennyi a fennmaradó tartozás?",
+   "opciok": null,
+   "helyes": 7620000,
+   "magyarazat": "12 700 000 − 5 080 000 = 7 620 000 (T 352/4661 – K 384; T 161/4661 – K 4551; T 4551 – K 352/4661).",
+   "forras": "teszt"
+  },
+  {
+   "id": "te_q35",
+   "tipus": "szamitas",
+   "kerdes": "Termelőgép értékesítése: eladási ár 1 100 000 + 297 000 áfa, bruttó érték 1 000 000, halmozott ÉCS 200 000, bruttó módszerrel. Könyvelje!",
+   "opciok": null,
+   "helyes": [
+    {
+     "T": "311",
+     "K": "368",
+     "osszeg": 1100000
+    },
+    {
+     "T": "311",
+     "K": "467",
+     "osszeg": 297000
+    },
+    {
+     "T": "368",
+     "K": "131",
+     "osszeg": 1000000
+    },
+    {
+     "T": "139",
+     "K": "368",
+     "osszeg": 200000
+    },
+    {
+     "T": "368",
+     "K": "961",
+     "osszeg": 300000
+    }
+   ],
+   "magyarazat": "A 368 egyenlege: 1 100 000 + 200 000 − 1 000 000 = 300 000 nyereség. (Moodle: 13/15 – a rendszer nem jelölte a 2 hibás mezőt.)",
+   "forras": "teszt"
+  },
+  {
+   "id": "te_q36",
+   "tipus": "szamitas",
+   "kerdes": "Felújítás aktiválása (2 000 000 Ft) termelőgépen: T ? / K ?",
+   "opciok": null,
+   "helyes": {
+    "T": "131",
+    "K": "162",
+    "osszeg": 2000000
+   },
+   "magyarazat": "Felújítás 162 → aktiválás a gép számlájára.",
+   "forras": "teszt"
+  },
+  {
+   "id": "te_q37",
+   "tipus": "szamitas",
+   "kerdes": "Karbantartás 200 000 + 27% áfa, szolgáltatói számla: könyvelés?",
+   "opciok": null,
+   "helyes": [
+    {
+     "T": "524",
+     "K": "4543",
+     "osszeg": 200000
+    },
+    {
+     "T": "4661",
+     "K": "4543",
+     "osszeg": 54000
+    }
+   ],
+   "magyarazat": "Költség, nem aktiválható.",
+   "forras": "teszt"
+  },
+  {
+   "id": "te_q38",
+   "tipus": "szamitas",
+   "kerdes": "Gép értékhelyesbítése 1 500 000 Ft: T ? / K ?",
+   "opciok": null,
+   "helyes": {
+    "T": "137",
+    "K": "4171",
+    "osszeg": 1500000
+   },
+   "magyarazat": "",
+   "forras": "teszt"
+  },
+  {
+   "id": "te_q39",
+   "tipus": "szamitas",
+   "kerdes": "Üzembe helyezés előtti szerelés 300 000 + áfa belföldi beruházási szállítótól: könyvelés?",
+   "opciok": null,
+   "helyes": [
+    {
+     "T": "161",
+     "K": "4551",
+     "osszeg": 300000
+    },
+    {
+     "T": "4661",
+     "K": "4551",
+     "osszeg": 81000
+    }
+   ],
+   "magyarazat": "Aktiválásig → 161.",
+   "forras": "teszt"
+  },
+  {
+   "id": "te_q40",
+   "tipus": "tobbvalasztos",
+   "kerdes": "(Minta-ZH) A tárgyi eszközökre igaz, hogy…",
+   "opciok": [
+    "a) az eszközökön végzett beruházásokat és felújításokat a beruházások között kell elszámolni",
+    "b) a karbantartás költsége a tárgyévi eredményt csökkenti",
+    "c) a beruházások terv szerinti ÉCS-ének elszámolása tartalmilag megegyezik az ingatlanokéval",
+    "d) a tenyészállatok esetén nem lehet terven felüli ÉCS-t elszámolni",
+    "e) a terven felüli ÉCS-t az egyéb ráfordítások között számoljuk el"
+   ],
+   "helyes": [
+    "b",
+    "e"
+   ],
+   "magyarazat": "c) hamis: beruházásra nincs terv szerinti ÉCS; d) hamis: tenyészállatra is lehet (158).",
+   "forras": "tananyag"
+  },
+  {
+   "id": "te_q41",
+   "tipus": "igaz_hamis",
+   "kerdes": "A beruházásokra adott előleg a mérlegben a követelések között szerepel.",
+   "opciok": null,
+   "helyes": false,
+   "magyarazat": "Mérlegben tárgyi eszköz (II.6.), a számlatükörben a követelések között (352).",
+   "forras": "generalt"
+  },
+  {
+   "id": "te_q42",
+   "tipus": "igaz_hamis",
+   "kerdes": "Értékhelyesbítés felújításra is elszámolható.",
+   "opciok": null,
+   "helyes": false,
+   "magyarazat": "Nem: beruházás, felújítás, előleg.",
+   "forras": "generalt"
+  },
+  {
+   "id": "te_q43",
+   "tipus": "igaz_hamis",
+   "kerdes": "Az értékhelyesbítés növeli az eszköz mérlegértékét.",
+   "opciok": null,
+   "helyes": false,
+   "magyarazat": "Külön mérlegsor (II.7.), a mérlegértéket nem módosítja.",
+   "forras": "generalt"
+  },
+  {
+   "id": "te_q44",
+   "tipus": "igaz_hamis",
+   "kerdes": "A rendszeres, tervszerű megelőző karbantartás nagy összeg esetén felújításnak minősül.",
+   "opciok": null,
+   "helyes": false,
+   "magyarazat": "Összegtől függetlenül nem felújítás.",
+   "forras": "generalt"
+  },
+  {
+   "id": "te_q45",
+   "tipus": "igaz_hamis",
+   "kerdes": "Az import áfa része a tárgyi eszköz bekerülési értékének.",
+   "opciok": null,
+   "helyes": false,
+   "magyarazat": "Levonható, T 3683 / K 4652.",
+   "forras": "generalt"
+  },
+  {
+   "id": "te_q46",
+   "tipus": "igaz_hamis",
+   "kerdes": "A térítés nélkül átvett tárgyi eszközt piaci értéken kell állományba venni.",
+   "opciok": null,
+   "helyes": true,
+   "magyarazat": "T 161 / K 9647, majd elhatárolás 48331.",
+   "forras": "generalt"
+  },
+  {
+   "id": "te_q47",
+   "tipus": "szamitas",
+   "kerdes": "Gép bekerülési értéke 2 400 000 Ft, maradványérték 0, hasznos élettartam 4 év, üzembe helyezés április 1. Mennyi a tárgyévi lineáris ÉCS?",
+   "opciok": null,
+   "helyes": 450000,
+   "magyarazat": "2 400 000 / 4 = 600 000/év; 600 000 / 12 × 9 = 450 000.",
+   "forras": "generalt"
+  },
+  {
+   "id": "te_q48",
+   "tipus": "szamitas",
+   "kerdes": "Évek száma összege módszer: bruttó 6 000 000, MÉ 0, 3 év. Mennyi a 2. évi ÉCS?",
+   "opciok": null,
+   "helyes": 2000000,
+   "magyarazat": "Összeg 6; kulcsok 3/6, 2/6, 1/6 → 6 000 000 × 2/6 = 2 000 000.",
+   "forras": "generalt"
+  },
+  {
+   "id": "te_q49",
+   "tipus": "szamitas",
+   "kerdes": "Teljesítményarányos ÉCS: bruttó 5 000 000, MÉ 1 000 000, összes teljesítmény 10 000 gó, tárgyév 2 500 gó. Mennyi az ÉCS?",
+   "opciok": null,
+   "helyes": 1000000,
+   "magyarazat": "(5 M − 1 M) / 10 000 = 400 Ft/gó × 2 500 = 1 000 000.",
+   "forras": "generalt"
+  },
+  {
+   "id": "te_q50",
+   "tipus": "szamitas",
+   "kerdes": "Gép bruttó 5 000 000, halmozott ÉCS 2 000 000, év végi piaci érték tartósan 2 200 000. Mennyi és hogyan könyvelendő a terven felüli ÉCS?",
+   "opciok": null,
+   "helyes": {
+    "T": "8664",
+    "K": "138",
+    "osszeg": 800000
+   },
+   "magyarazat": "Könyv szerinti 3 000 000 − piaci 2 200 000 = 800 000.",
+   "forras": "generalt"
+  },
+  {
+   "id": "te_q51",
+   "tipus": "szamitas",
+   "kerdes": "Előző évben 10 mFt értékhelyesbítés; tárgyévben könyv szerinti 15 mFt, piaci 27 mFt. Mi a tárgyévi könyvelés?",
+   "opciok": null,
+   "helyes": {
+    "T": "127",
+    "K": "4171",
+    "osszeg": 2000000
+   },
+   "magyarazat": "Szükséges ÉH 12, előző 10 → +2 mFt (I. feladatsor 3. feladat magyarázó diája).",
+   "forras": "generalt"
+  },
+  {
+   "id": "te_q52",
+   "tipus": "szamitas",
+   "kerdes": "Gép bruttó 800 000, halmozott ÉCS 300 000; eladási ár 400 000 + áfa. Mennyi az eredmény és hogyan zárul a 368?",
+   "opciok": null,
+   "helyes": {
+    "eredmeny": -100000,
+    "T": "861",
+    "K": "368",
+    "osszeg": 100000
+   },
+   "magyarazat": "400 000 − 500 000 = −100 000 veszteség (egyéb ráfordítás).",
+   "forras": "generalt"
+  },
+  {
+   "id": "te_q53",
+   "tipus": "szamitas",
+   "kerdes": "Apportba adott gép nettó értéke 900 000, létesítő okirat szerinti értéke 700 000. Különbözet könyvelése az átadónál?",
+   "opciok": null,
+   "helyes": {
+    "T": "8642",
+    "K": "368",
+    "osszeg": 200000
+   },
+   "magyarazat": "Negatív különbözet egyéb ráfordítás.",
+   "forras": "generalt"
+  },
+  {
+   "id": "te_q54",
+   "tipus": "merlegsor",
+   "kerdes": "Melyik mérlegsorba kerül a még üzembe nem helyezett, de kifizetett gép?",
+   "opciok": [
+    "A/II.2. Műszaki berendezések",
+    "A/II.5. Beruházások, felújítások",
+    "A/II.6. Beruházásokra adott előlegek",
+    "B/I. Készletek"
+   ],
+   "helyes": "A/II.5. Beruházások, felújítások",
+   "magyarazat": "161 Befejezetlen beruházások.",
+   "forras": "generalt"
+  },
+  {
+   "id": "te_q55",
+   "tipus": "merlegsor",
+   "kerdes": "Melyik mérlegsorba kerül az ingatlanhoz kapcsolódó bérleti jog?",
+   "opciok": [
+    "A/I.3. Vagyoni értékű jogok",
+    "A/II.1. Ingatlanok és a kapcsolódó vagyoni értékű jogok",
+    "A/II.3. Egyéb berendezések",
+    "C/ Aktív időbeli elhatárolások"
+   ],
+   "helyes": "A/II.1. Ingatlanok és a kapcsolódó vagyoni értékű jogok",
+   "magyarazat": "Ingatlanhoz kapcsolódó vagyoni értékű jog nem immateriális jószág.",
+   "forras": "generalt"
+  },
+  {
+   "id": "te_q56",
+   "tipus": "merlegsor",
+   "kerdes": "Hol szerepel az értékhelyesbítés ellentétele?",
+   "opciok": [
+    "Saját tőke – értékelési tartalék (4171)",
+    "Egyéb bevétel",
+    "Céltartalék",
+    "Passzív időbeli elhatárolás"
+   ],
+   "helyes": "Saját tőke – értékelési tartalék (4171)",
+   "magyarazat": "",
+   "forras": "generalt"
+  },
+  {
+   "id": "te_q57",
+   "tipus": "kifejtes",
+   "kerdes": "Fejtse ki a beruházás fogalmát! (7 pont)",
+   "opciok": null,
+   "helyes": "Lásd te_f08: üzembe nem helyezett TE bekerülési értéke + már használt eszközön bővítés, rendeltetésváltoztatás, átalakítás, élettartam-növelés még használatba nem vett értéke; 161; tárgyi eszköz; nincs terv szerinti ÉCS és ÉH.",
+   "magyarazat": "Kulcselemek a fogalmak között.",
+   "forras": "generalt"
+  },
+  {
+   "id": "te_q58",
+   "tipus": "kifejtes",
+   "kerdes": "Fejtse ki a terven felüli értékcsökkenés fogalmát és elszámolását! (7 pont)",
+   "opciok": null,
+   "helyes": "Lásd te_f20 és te_f21.",
+   "magyarazat": "",
+   "forras": "generalt"
+  },
+  {
+   "id": "te_q59",
+   "tipus": "kifejtes",
+   "kerdes": "Fejtse ki a tárgyi eszközök értékhelyesbítésének fogalmát! (7 pont)",
+   "opciok": null,
+   "helyes": "Lásd te_f12.",
+   "magyarazat": "",
+   "forras": "generalt"
+  },
+  {
+   "id": "te_q60",
+   "tipus": "egyvalasztos",
+   "kerdes": "Egy vállalkozás őrkutyát vásárol a telepe védelmére. Melyik számlára aktiválja (a kurzus megoldása szerint)?",
+   "opciok": [
+    "151 Tenyészállatok",
+    "153 Egyéb állatok",
+    "261 Áruk",
+    "143 Irodai berendezések"
+   ],
+   "helyes": "153 Egyéb állatok",
+   "magyarazat": "I/8. feladat (Buksi).",
+   "forras": "feladat"
+  },
+  {
+   "id": "te_q61",
+   "tipus": "egyvalasztos",
+   "kerdes": "Az import áfa átutalása után melyik tétel teszi levonhatóvá?",
+   "opciok": [
+    "T 4661 / K 3683",
+    "T 3683 / K 4652",
+    "T 4652 / K 384",
+    "T 161 / K 4652"
+   ],
+   "helyes": "T 4661 / K 3683",
+   "magyarazat": "II/2. feladat 5. tétel.",
+   "forras": "feladat"
+  },
+  {
+   "id": "te_q62",
+   "tipus": "egyvalasztos",
+   "kerdes": "Térítés nélkül átadott gép (nettó 800 eFt), az áfát NEM számlázza ki. Hogyan könyveli a 275 eFt áfát?",
+   "opciok": [
+    "T 368 / K 467",
+    "T 8647 / K 467",
+    "T 4661 / K 467",
+    "Nem kell könyvelni"
+   ],
+   "helyes": "T 8647 / K 467",
+   "magyarazat": "Ha nem számlázza ki, ráfordítás.",
+   "forras": "feladat"
+  }
+ ],
+ "csapdak": [
+  "A tanár szerint a teljesítőképességet növelő KORSZERŰSÍTÉS FELÚJÍTÁS, nem beruházás (Moodle 30. kérdésben ez volt a saját hiba). A teljesítőképesség KÖZVETLEN növelését eredményező átalakítás/bővítés viszont beruházás (Moodle 1.: „Értéknövelő beruházás lehet”).",
+  "A beruházás IS tárgyi eszköz (A/II.5.) – üzembe nem helyezett gépnél a „tárgyi eszköznek minősül” opciót is be kell jelölni.",
+  "A beruházásokra adott előleg a mérlegben a tárgyi eszközök között (II.6.), a számlatükörben a követelések között (352) van; az áfája 4661-re megy.",
+  "Az elmélet diái a régi számlaszámokat (8654 / 9654) írják a terven felüli ÉCS-re és visszaírására; a kurzus számlatükre és a tanári megoldások szerint 8664 / 9664 a helyes.",
+  "Az előzetesen felszámított áfa a forrásokban 466, de 4 jegyre 4661; a terv szerinti ÉCS 571 helyett 5711; kisértékűnél 5712.",
+  "Technikai számla: 368 (nem 3, nem 91–92); az értékesítés nyeresége 961 (nem 911).",
+  "Import áfa követelésként: 3683 (a nyomtatott II. megoldás 368-at ír, a kézírás 3683-ra javítja).",
+  "Az import áfa és az aktiválás utáni tételek (tartalék alkatrész, kamat, árfolyam-különbözet) nem részei a bekerülési értéknek; a „ÁFÁ-val” megadott összegből csak a nettót aktiváljuk.",
+  "Engedmény és felár a LISTAÁRRA számolandó, nem egymásra (II/1.).",
+  "Értékhelyesbítés nem számolható el beruházásra, felújításra, előlegre; és csak a terven felüli ÉCS visszaírása UTÁN.",
+  "Ha a piaci érték a könyv szerinti alá esik: az ÉH visszavezetése mellett a TELJES különbözet terven felüli ÉCS (az ÉH nem része a mérlegértéknek).",
+  "Az ÉH-t évente az előző évi ÉH-hoz képest korrigáljuk (csak a változást könyveljük).",
+  "A terven felüli ÉCS visszaírása KÖTELEZŐ (vissza kell írni), az értékhelyesbítés VÁLASZTHATÓ.",
+  "Tenyészállatnál LEHET terven felüli ÉCS (158) – a minta-ZH d) állítása hamis; beruházásra nincs terv szerinti ÉCS – a minta-ZH c) állítása hamis.",
+  "Terv szerinti ÉCS nem számolható el földre, telekre, erdőre, műalkotásra, régészeti leletre és üzembe nem helyezett beruházásra; teljesen leírt eszközre terven felüli sem.",
+  "Kisértékű eszköznél az EGYEDI érték számít (3 × 60 eFt telefon: mind 200 eFt alatt) – előbb aktiválni kell (T 143 / K 161), utána 5712 / 149.",
+  "A tervszerű megelőző karbantartás és a felhalmozott karbantartás egyszerre elvégzése nem felújítás – a költség nagyságától függetlenül.",
+  "Térítés nélkül átvett eszköznél az átadó által kiszámlázott áfa ellenszámlája 479, nem szállító; a bevételt 48331-re el kell határolni és az ÉCS-sel azonos összegben feloldani.",
+  "Apport átvételénél K 479 (nem 4795); bejegyzéskor T 32-33/358 / K 411, majd T 479 / K 32-33.",
+  "A továbbértékesítésre vett gép, laptop áru, nem tárgyi eszköz; eladásra vett tenyészállat is áru.",
+  "Ingatlanhoz kapcsolódó vagyoni értékű jog (bérleti, szolgalmi jog, közmű-hozzájárulás) a II.1. Ingatlanok sorban szerepel, nem az immateriális javak között.",
+  "Az őrkutya (Buksi) nem tenyészállat (nem termel leválasztható terméket), a kurzus 153 Egyéb állatok számlára aktiválja.",
+  "Az órai feladatok több helyen 25%-os áfát adnak meg (275/1 100, 625/2 500, 145/580, 5/20) – a feladat adatával kell számolni, nem 27%-kal újraszámolni."
+ ]
+}

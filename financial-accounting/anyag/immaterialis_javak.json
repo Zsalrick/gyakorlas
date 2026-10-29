@@ -1,0 +1,2644 @@
+{
+ "tema": "Immateriális javak",
+ "forrasok": [
+  "src/elmelet/immaterialis.pdf/.txt",
+  "src/feladat_immaterialis/I_Immateriális javak feladatsor.pdf + megoldása",
+  "src/feladat_immaterialis/I_órai jegyzet-1.png (kézírás)",
+  "src/feladat_immaterialis/II_Immateriális javak feladatsor.pdf + megoldása",
+  "src/feladat_immaterialis/II_órai jegyzet",
+  "zh/tukor.txt",
+  "zh-anyag/tesztkerdesek_moodle.json",
+  "zh-anyag/szamlaszamok.json"
+ ],
+ "zh_relevancia": "MAGAS. A fogalom-kérdés (7 pont) a tanári tipp szerint tárgyi eszközök, immateriális javak vagy készletek témából jön; a minta-ZH fogalma éppen az „alapítás-átszervezés aktivált értéke” volt. Tesztkérdés (7–8 pont) és mérlegsor (A.I. 1–7.) is jöhet. A gyakorlati feladat 2. része (Kft. alapítása + vegyes események) tartalmazhat immateriális tételeket: apport szabadalom (114/479), alapítás-átszervezés (T 111 / K 4543 vagy 582, lekötött tartalék T 413 / K 4142), ÉCS (5711/119), terven felüli ÉCS (8663/118), értékhelyesbítés (117/4171).",
+ "fogalmak": [
+  {
+   "id": "F01",
+   "nev": "Immateriális javak",
+   "definicio": "A mérlegben a befektetett eszközök között (A.I.) kimutatott, NEM ANYAGI MEGJELENÉSŰ, de eszmei és piaci értéket képviselő eszközök, amelyek a vállalkozás tevékenységét KÖZVETLENÜL ÉS TARTÓSAN szolgálják. Itt KELL kimutatni a vagyoni értékű jogokat (az ingatlanhoz kapcsolódók kivételével), a szellemi termékeket, az üzleti vagy cégértéket, az immateriális javakra adott előleget és az immateriális javak értékhelyesbítését; itt LEHET kimutatni az alapítás-átszervezés és a kísérleti fejlesztés aktivált értékét. Jellemzőik: nem tárgyiasultak; az aktiválható érték dokumentációkból (beszerzési érték / előállítási költség) állapítható meg; üzembe helyezés nincs, csak állományba vétel (üzembe helyezés nélküli aktiválás), amely azt jelöli, mikortól számolunk értékcsökkenést; a beruházás fogalmát itt nem használjuk (csak tárgyi eszközöknél).",
+   "kulcselemek": [
+    "nem anyagi megjelenésű, nem tárgyiasult",
+    "eszmei és piaci érték",
+    "közvetlenül és tartósan szolgálja a tevékenységet",
+    "A.I. mérlegsorok: 1. alapítás-átszervezés aktivált értéke, 2. kísérleti fejlesztés aktivált értéke, 3. vagyoni értékű jogok, 4. szellemi termékek, 5. üzleti vagy cégérték, 6. immateriális javakra adott előlegek, 7. immateriális javak értékhelyesbítése",
+    "KELL: 3–7. sor; LEHET: 1–2. sor (vállalkozói döntés)",
+    "nincs üzembe helyezés, csak állományba vétel; nincs beruházás",
+    "mérlegérték = nettó érték"
+   ],
+   "pelda": "Megvásárolt licenc (113), szoftver (114), cégvásárlásnál fizetett többletérték (115).",
+   "zh_valoszinuseg": "magas",
+   "forras": "src/elmelet/immaterialis.txt (Immateriális javak elmélet, 2026.09.30.)"
+  },
+  {
+   "id": "F02",
+   "nev": "Alapítás-átszervezés aktivált értéke",
+   "definicio": "A vállalkozás alapításával, tevékenységének megkezdésével, indításával, jelentős bővítésével, átalakításával, átszervezésével kapcsolatos, BERUHÁZÁSNAK NEM MINŐSÜLŐ, a jövőben a bevételekben várhatóan megtérülő közvetlen költségek és/vagy számlázott tételek, amelyek aktiválásáról a vállalkozó dönt (számviteli politika). Ha nem aktiválja, egy összegben költségként számolja el az eredmény terhére. Fajtái: alapítás (a cégalapítás ELŐTT és UTÁN felmerülő tételek is), szervezeti átalakítás-átszervezés, műszaki-technológiai folyamatok átszervezése (a beruházást és az átszervezést ketté kell választani), minőségbiztosítási rendszer bevezetése, ásványkincs-kutatás költségei (ha beruházás/felújítás értékében nem vehetők figyelembe és a kitermelésből várhatóan megtérülnek). Aktiválás: idegen kivitelezésnél számlázott beszerzési áron (T 111 / K 4541/4543), saját kivitelezésnél előállítási költségen (T 111 / K 582), vegyesnél részben-részben. Befejezetlen és befejezett is lehet. Terv szerinti leírása legfeljebb 5 év; terven felüli ÉCS elszámolható és visszaírható; értékhelyesbítés és 200 eFt alatti egyösszegű leírás nincs. Mérlegértéke nem realizált eredmény, ezért LEKÖTÖTT TARTALÉKNAK minősül: az eredménytartalékból lekötött tartalékba kell átvezetni (T 413 / K 4142), így osztalékfizetési korlátot jelent; osztalékfizetés után a saját tőke nem lehet kisebb a jegyzett tőkénél.",
+   "kulcselemek": [
+    "beruházásnak nem minősülő",
+    "alapítás, indítás, jelentős bővítés, átalakítás, átszervezés",
+    "a jövőbeni bevételekben várhatóan megtérül",
+    "közvetlen költségek és/vagy számlázott tételek",
+    "aktiválás vállalkozói döntés (számviteli politika) – nem kötelező",
+    "nem aktiválva: egy összegben költség",
+    "idegen: beszerzési ár; saját: előállítási költség (582); vegyes",
+    "terv szerinti ÉCS ≤ 5 év",
+    "lekötött tartalék T 413 / K 4142 → osztalékkorlát",
+    "példák: társasági szerződés ügyvédi díja, cégbírósági díjak, számviteli rendszer kialakításának szakértői díja, folyamat-újratervezés (BPR) díja, minőségbiztosítási rendszer, arculatterv/cégembléma, üzlet kialakítása/átrendezése"
+   ],
+   "pelda": "Alapításkor 820 000 Ft ügyvédi és szakértői díj szállítói számlával: T 111 / K 4541 820 000; T 466 / K 4541 áfa; T 413 / K 4142 820 000 (I/5. feladat). Ez volt a minta-ZH fogalom-kérdése.",
+   "zh_valoszinuseg": "magas",
+   "forras": "src/elmelet/immaterialis.txt (Immateriális javak elmélet, 2026.09.30.)"
+  },
+  {
+   "id": "F03",
+   "nev": "Kísérleti fejlesztés aktivált értéke",
+   "definicio": "A kísérleti-kutatási tevékenységgel kapcsolatos, a jövőben a bevételekben várhatóan megtérülő közvetlen költségek és/vagy számlázott tételek, amelyek más eszközök (szellemi termék, tárgyi eszköz, készlet) értékében nem aktiválhatók, és amelyek aktiválásáról a vállalkozó dönt (számviteli politika). Kísérleti fejlesztés: a MEGLÉVŐ tudományos, technológiai, üzleti és egyéb ismeretek és szakértelem megszerzése, összesítése, megosztása, felhasználása ÚJ, MÓDOSÍTOTT VAGY JAVÍTOTT termékek, eljárások, szolgáltatások terveinek létrehozása céljából; korábbi kutatások eredményeire támaszkodik, rendszeres munka (gyártásfejlesztés, gyártmányfejlesztés). Csak a kísérleti fejlesztés aktiválható, az alapkutatás és az alkalmazott kutatás nem. Befejezetlen (még nincs terv szerinti leírás) és befejezett lehet; a befejezett hasznosítható (kísérleti fejlesztésként marad, indul a terv szerinti leírás – max. 5 év –, vagy más eszköz lesz: szellemi termék, tárgyi eszköz, prototípus, készlet) vagy nem hasznosítható (a mérlegben nem szerepelhet, terven felüli ÉCS-t kell elszámolni). Mérlegértéke lekötött tartalék (T 413 / K 4142), osztalékfizetési korlát.",
+   "kulcselemek": [
+    "kísérleti-kutatási tevékenység",
+    "más eszköz értékében nem aktiválható",
+    "várhatóan megtérül",
+    "aktiválás vállalkozói döntés",
+    "meglévő ismeretekre, korábbi kutatásokra épül; új/módosított/javított termék, eljárás",
+    "rendszeres munka",
+    "csak kísérleti fejlesztés aktiválható – alap- és alkalmazott kutatás NEM",
+    "befejezetlen / befejezett (hasznosítható – nem hasznosítható)",
+    "nem hasznosítható → terven felüli ÉCS",
+    "terv szerinti ÉCS ≤ 5 év",
+    "lekötött tartalék"
+   ],
+   "pelda": "Saját gyártószoftver fejlesztése → szellemi termék; prototípusból saját gyártógép → műszaki berendezés, gép; később eladandó új termék → késztermék.",
+   "zh_valoszinuseg": "magas",
+   "forras": "src/elmelet/immaterialis.txt (Immateriális javak elmélet, 2026.09.30.)"
+  },
+  {
+   "id": "F04",
+   "nev": "Alapkutatás",
+   "definicio": "Kísérleti vagy elméleti munka, amelyet új ismeretek megszerzése érdekében folytatnak, anélkül hogy kilátásba helyeznék annak gyakorlati alkalmazását vagy felhasználását. A K+F tevékenység része, de NEM aktiválható, költségként számolandó el.",
+   "kulcselemek": [
+    "kísérleti vagy elméleti munka",
+    "új ismeretek",
+    "gyakorlati alkalmazás kilátásba helyezése nélkül",
+    "nem aktiválható"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "kozepes",
+   "forras": "src/elmelet/immaterialis.txt (Immateriális javak elmélet, 2026.09.30.)"
+  },
+  {
+   "id": "F05",
+   "nev": "Alkalmazott kutatás",
+   "definicio": "Tervezett kutatás vagy kritikus vizsgálat, amelynek célja új ismeretek megszerzése új termékek, szolgáltatások kifejlesztéséhez vagy létező termékek, szolgáltatások jelentős mértékű fejlesztéséhez (a prototípus nem tartozik ide). NEM aktiválható.",
+   "kulcselemek": [
+    "tervezett kutatás / kritikus vizsgálat",
+    "cél: új termékek, szolgáltatások kifejlesztése vagy jelentős fejlesztése",
+    "prototípus nem ide tartozik",
+    "nem aktiválható"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "kozepes",
+   "forras": "src/elmelet/immaterialis.txt (Immateriális javak elmélet, 2026.09.30.)"
+  },
+  {
+   "id": "F06",
+   "nev": "Vagyoni értékű jogok",
+   "definicio": "Olyan megszerzett, tartós jogok, amelyek ingatlanokhoz nem kapcsolódnak és nem tartoznak a szellemi termékek közé. Tartós: minden 1 éven túli jog ide tartozik, kivéve az ingatlanokhoz kapcsolódó vagyoni értékű jogokat (azok a tárgyi eszközök – 12. – között vannak). Nem tulajdonjogok, de a vállalkozás kvázi tulajdonosként viselkedik; az ellenérték szerződés szerinti (egyösszegű) számlázása és elszámolása előre történik. Fajtái: bérleti jog (pl. tartós gépbérlet), használati (üzemeltetői, kezelői) jog, koncessziós jog (rádió-, tv-frekvencia, szerencsejáték), vagyonkezelői jog, játékjog (sportolók), licencek, egyéb jogok (pl. franchise). Bekerülhet beszerzéssel, apporttal, térítés nélkül stb. – KIVÉVE saját előállítás. Számla: 113. Terv szerinti leírásnál nincs időkorlát; terven felüli ÉCS, visszaírás, értékhelyesbítés és 200 eFt alatti egyösszegű leírás lehet.",
+   "kulcselemek": [
+    "megszerzett",
+    "tartós (1 éven túli)",
+    "ingatlanhoz nem kapcsolódik (az ingatlanhoz kapcsolódó jog tárgyi eszköz)",
+    "nem szellemi termék",
+    "nem tulajdonjog",
+    "előre, egy összegben számlázott",
+    "saját előállítással NEM aktiválható",
+    "113",
+    "értékhelyesbíthető"
+   ],
+   "pelda": "Bérleti jog vásárlása 1 500 000 Ft + 27% áfa: T 113 / K 4541 1 500 000; T 466 / K 4541 405 000 (I/1.); koncessziós jog 66 mFt (I/6.).",
+   "zh_valoszinuseg": "magas",
+   "forras": "src/elmelet/immaterialis.txt (Immateriális javak elmélet, 2026.09.30.)"
+  },
+  {
+   "id": "F07",
+   "nev": "Szellemi termékek",
+   "definicio": "Olyan tartós, nem anyagi javak, amelyek felhasználásával (alkalmazásával) hasznosítható anyagi és/vagy nem anyagi javak állíthatók elő. Fajtái: iparjogvédelemben részesülő alkotások (különösen szabadalom, használati minta, formatervezési minta, védjegy, kereskedelmi név); szerzői jogvédelemben részesülő szerzői művek és szomszédos jogok (különösen szoftvertermékek, műszaki tervek); jogvédelemben nem részesülő, de titkosságuk révén monopolizált szellemi javak (különösen know-how) – függetlenül attól, hogy használatba vették-e azokat. Minden mozgásnem előfordulhat (beszerzés, apport, saját előállítás stb.), a mozgásnemnek megfelelő bekerülési értéken. Számla: 114. Terv szerinti leírásnál nincs időkorlát; terven felüli ÉCS, visszaírás, értékhelyesbítés, 200 eFt alatti egyösszegű leírás lehet.",
+   "kulcselemek": [
+    "tartós, nem anyagi",
+    "felhasználásával javak állíthatók elő",
+    "iparjogvédelem: szabadalom, használati/formatervezési minta, védjegy, kereskedelmi név",
+    "szerzői jog: szoftver, műszaki terv",
+    "know-how (titkosság)",
+    "használatba vételtől függetlenül",
+    "saját előállítás is lehet",
+    "114"
+   ],
+   "pelda": "Apportként kapott szabadalom 3 000 000 Ft: T 114 / K 479 (II/1.); térítés nélkül átvett gyártási eljárás: T 114 / K 9647 (II/2.).",
+   "zh_valoszinuseg": "magas",
+   "forras": "src/elmelet/immaterialis.txt (Immateriális javak elmélet, 2026.09.30.)"
+  },
+  {
+   "id": "F08",
+   "nev": "Üzleti vagy cégérték (pozitív, goodwill)",
+   "definicio": "A jövőbeni haszon reményében fizetett (elismert) többletérték. A megvásárolt üzletágért (cégért, cégegységért) fizetett ellenérték és a tételesen állományba vett egyes eszközök piaci értékének a tételesen állományba vett, átvállalt kötelezettségek értékével csökkentett értéke közötti különbözet, HA a fizetett ellenérték a magasabb. Csak külső (szerzett, vásárolt) cégérték aktiválható; a belső, folyamatos működés során keletkező goodwill nem aktiválható. Aktiválás a számított többletérték összegében: T 115 / K 4541 (4551). Terv szerinti leírás min. 5 – max. 10 év; terven felüli ÉCS elszámolható (ha könyv szerinti értéke a jövőbeni gazdasági hasznokra vonatkozó várakozásokat befolyásoló körülmények változása miatt tartósan és jelentősen meghaladja piaci értékét), de VISSZAÍRÁSA NEM ALKALMAZHATÓ; értékhelyesbítés és egyösszegű leírás nincs. Üzletág: szervezetileg független, önállóan működőképes egység (telephely, üzlethálózat is) a hozzá tartozó vagyonnal, amely önálló gazdasági tevékenység tartós folytatására képes.",
+   "kulcselemek": [
+    "jövőbeni haszon reményében fizetett többletérték",
+    "fizetett ellenérték − (eszközök piaci értéke − átvállalt kötelezettségek) > 0",
+    "csak vásárolt (külső) aktiválható",
+    "115",
+    "ÉCS 5–10 év",
+    "terven felüli ÉCS lehet, visszaírás NEM",
+    "értékhelyesbítés nincs"
+   ],
+   "pelda": "1 000 MFt − (2 200 − 1 600) = 400 MFt: T 115 / K 4541(4551) 400 000 000 (I/7. a).",
+   "zh_valoszinuseg": "magas",
+   "forras": "src/elmelet/immaterialis.txt (Immateriális javak elmélet, 2026.09.30.)"
+  },
+  {
+   "id": "F09",
+   "nev": "Negatív üzleti vagy cégérték (badwill)",
+   "definicio": "Ha a megvásárolt cégért (cégegységért) fizetett ellenérték alacsonyabb, mint a tételesen állományba vett eszközök piaci értékének az átvállalt kötelezettségekkel csökkentett értéke: a jövőben haszonként realizálódó, EL NEM ISMERT különbözet. Nem aktiválható, hanem PASSZIVÁLANDÓ: egyéb bevételként számoljuk el (T 4541/4551 / K 9695), majd halasztott bevételként passzív időbeli elhatárolásba helyezzük (T 9695 / K 4834). Az elhatárolást legalább 5, legfeljebb 10 év alatt kell megszüntetni az egyéb bevételekkel szemben (T 4834 / K 9695); ennél hosszabb időt a kiegészítő mellékletben indokolni kell.",
+   "kulcselemek": [
+    "fizetett ellenérték < számított piaci érték",
+    "nem eszköz – passzív időbeli elhatárolás (4834)",
+    "9695 egyéb bevétel",
+    "feloldás 5–10 év"
+   ],
+   "pelda": "400 MFt − 600 MFt = −200 MFt: T 4541 / K 9695 200 M; T 9695 / K 4834 200 M; 10 év esetén évente T 4834 / K 9695 20 M (I/7. b).",
+   "zh_valoszinuseg": "magas",
+   "forras": "src/elmelet/immaterialis.txt (Immateriális javak elmélet, 2026.09.30.)"
+  },
+  {
+   "id": "F10",
+   "nev": "Immateriális javakra adott előlegek",
+   "definicio": "A szállítónak, illetve az importálást végző vállalkozónak immateriális javak vásárlására előre átutalt (kifizetett), levonható áfa nélküli összeg. Követeléstartalmú tétel, a mérlegben mégis az immateriális javak között (A.I.6.) mutatjuk ki; ha mérlegkészítésig kiderül, hogy az eszköz megszerzése nem valósul meg, az előlegből nem lesz immateriális jószág és a forgóeszközök, egyéb követelések között kell értékelni. Állományba vétel: forintban az előlegként teljesített (levonható áfa nélküli) összegben, devizában a választott napi árfolyamon. Számla: 351 (T 351 / K 384; áfa T 466 / K 384). Terv szerinti ÉCS és terven felüli ÉCS NEM számolható el, csak ÉRTÉKVESZTÉS (és annak visszaírása, ha okai már nem vagy csak részben állnak fenn), a mérlegfordulónapra vonatkozó értékelés keretében.",
+   "kulcselemek": [
+    "immateriális jószág vásárlására előre fizetett",
+    "levonható áfa nélkül",
+    "követelés jellegű, de A.I.6. soron",
+    "351",
+    "nincs terv szerinti/terven felüli ÉCS",
+    "csak értékvesztés és visszaírása"
+   ],
+   "pelda": "Szoftverre adott előleg 500 000 + 135 000 áfa: T 351 / K 384 500 000; T 466 / K 384 135 000; végszámlánál T 4541 / K 351 500 000; T 4541 / K 466 135 000.",
+   "zh_valoszinuseg": "kozepes",
+   "forras": "src/elmelet/immaterialis.txt (Immateriális javak elmélet, 2026.09.30.)"
+  },
+  {
+   "id": "F11",
+   "nev": "Immateriális javak értékhelyesbítése",
+   "definicio": "A vagyoni értékű jogok és a szellemi termékek piaci értékének és könyv szerinti értékének pozitív különbözete – csak ezeknél lehetséges, a többi immateriális jószágnál nem. Alkalmazása lehetőség, nem kötelező (számviteli politikában rögzítendő); akkor számolható el, ha a piaci érték jelentősen meghaladja a könyv szerinti értéket (ha korábban terven felüli ÉCS történt, előbb azt kell visszaírni). Meghatározás a mérlegKÉSZÍTÉSKOR (nem a fordulónapon) ismert értékek alapján, állományba vétel fordulónapi dátummal: T 117 / K 4171 (értékhelyesbítés értékelési tartaléka); a korábbi értékhelyesbítést az aktuális különbözetre korrigálni kell, kivezetés T 4171 / K 117. Nem módosítja a könyv szerinti értéket és a mérlegértéket, külön mérlegsoron (A.I.7.) jelenik meg; az értékelési tartalékkal azonos összegű. A leltárnak a piaci értéket is tartalmaznia kell, szabályszerűségét könyvvizsgálónak kell ellenőriznie; a kiegészítő mellékletben nyitó, növekedés, csökkenés, záró értéket be kell mutatni.",
+   "kulcselemek": [
+    "csak 113 és 114",
+    "piaci érték − könyv szerinti érték pozitív különbözete",
+    "nem kötelező (számviteli politika)",
+    "mérlegkészítéskori értékek, fordulónapi dátum",
+    "T 117 / K 4171",
+    "nem változtatja a könyv szerinti értéket",
+    "külön sor A.I.7.",
+    "könyvvizsgálói ellenőrzés"
+   ],
+   "pelda": "Bérleti jog: bruttó 650 000 − ÉCS 150 000 = 500 000; piaci 700 000 → T 117 / K 4171 200 000 (I/2.).",
+   "zh_valoszinuseg": "magas",
+   "forras": "src/elmelet/immaterialis.txt (Immateriális javak elmélet, 2026.09.30.)"
+  },
+  {
+   "id": "F12",
+   "nev": "Terv szerinti értékcsökkenés (immateriális javak)",
+   "definicio": "A várható használati idő alatt a hasznos élettartam végén várható maradványértékkel csökkentett bekerülési (beszerzési/előállítási) értéket fel kell osztani. A módszer (pl. lineáris, degresszív, teljesítményarányos) a tárgyi eszközökhöz hasonló, változtatható, de a kiegészítő mellékletben indokolni kell. Időkorlátok: alapítás-átszervezés és kísérleti fejlesztés ≤ 5 év, üzleti vagy cégérték min. 5 – max. 10 év, vagyoni értékű jog és szellemi termék nincs korlát; 200 eFt alatt a vagyoni értékű jog és a szellemi termék egy összegben leírható. Az adott előlegnél nincs terv szerinti leírás. Az állományba vétel napjától időarányosan számoljuk. Könyvelése: T 5711 / K 119; az eredménykimutatásban az értékcsökkenési leírás sor.",
+   "kulcselemek": [
+    "maradványértékkel csökkentett bekerülési érték felosztása",
+    "módszerváltás KM-ben indokolandó",
+    "időkorlátok: 111/112 ≤5 év, 115 5–10 év, 113/114 nincs",
+    "200 eFt alatt egyösszegű (113, 114)",
+    "előlegnél nincs",
+    "T 5711 / K 119",
+    "időarányosítás"
+   ],
+   "pelda": "Koncessziós jog 66 mFt / 6 év = 11 mFt/év, júl. 1-jétől 2023-ra 5,5 mFt: T 5711 / K 119 (I/6.).",
+   "zh_valoszinuseg": "kozepes",
+   "forras": "src/elmelet/immaterialis.txt (Immateriális javak elmélet, 2026.09.30.)"
+  },
+  {
+   "id": "F13",
+   "nev": "Terven felüli értékcsökkenés (immateriális javak) és visszaírása",
+   "definicio": "Akkor kell elszámolni, ha az immateriális jószág értéke tartósan lecsökken: feleslegessé vált; megrongálódás, megsemmisülés, hiány miatt rendeltetésének megfelelően nem használható; könyv szerinti értéke tartósan és jelentősen magasabb a piaci értékénél; a vagyoni értékű jog a szerződés módosulása miatt csak korlátozottan vagy egyáltalán nem érvényesíthető; a befejezett kísérleti fejlesztés révén megvalósuló tevékenységet korlátozzák, megszüntetik, vagy eredménytelen lesz; az üzleti vagy cégérték, illetve az alapítás-átszervezés könyv szerinti értéke a jövőbeni gazdasági hasznokra vonatkozó várakozások változása miatt tartósan és jelentősen meghaladja piaci értékét (várható megtérülés). Előlegnél nem alkalmazható (ott értékvesztés). Könyvelése: T 8663 / K 118 – egyéb ráfordítás. Visszaírás: ha az elszámolás okai már nem, vagy csak részben állnak fenn, a mérlegfordulónapi értékelés keretében a piaci értékre, legfeljebb a terven felüli ÉCS összegéig vissza kell írni: T 118 / K 9663 – egyéb bevétel. KIVÉVE az üzleti vagy cégértéket: ott visszaírás nem alkalmazható. Kivezetéskor (pl. visszavont jog) a 118 és a 119 egyenlegét is az eszközszámlával szemben kell kivezetni.",
+   "kulcselemek": [
+    "okok: felesleges, megrongálódott/megsemmisült/hiányzik, könyv szerinti >> piaci tartósan, jog korlátozódik, kísérleti fejlesztés eredménytelen",
+    "T 8663 / K 118 (egyéb ráfordítás)",
+    "visszaírás T 118 / K 9663 (egyéb bevétel)",
+    "visszaírás max. a terven felüli ÉCS összegéig, piaci értékre",
+    "cégértéknél visszaírás NEM",
+    "előlegnél nincs, ott értékvesztés",
+    "mérlegfordulónapi értékelés"
+   ],
+   "pelda": "Koncessziós jog visszavonása 2026.12.31.: nettó 27 500 000 → T 8663 / K 118; T 118 / K 113 27 500 000; T 119 / K 113 38 500 000 (I/6.).",
+   "zh_valoszinuseg": "magas",
+   "forras": "src/elmelet/immaterialis.txt (Immateriális javak elmélet, 2026.09.30.)"
+  },
+  {
+   "id": "F14",
+   "nev": "Lekötött tartalék kapcsolata az alapítás-átszervezéssel és a kísérleti fejlesztéssel",
+   "definicio": "Az aktivált alapítás-átszervezés és kísérleti fejlesztés mérlegértéke nem realizált eredmény (a költség nem csökkentette az eredményt), ezért azt az eredménytartalékból lekötött tartalékba kell átvezetni (T 413 / K 4142), és így osztalékfizetési korlátot jelent. A lekötött tartalékot a leírással (értékcsökkenéssel) arányosan fel lehet szabadítani (T 4142 / K 413). A kiegészítő mellékletben részletezni kell a lekötött tartalék elkülönítését és felszabadítását.",
+   "kulcselemek": [
+    "nem realizált eredmény",
+    "T 413 / K 4142",
+    "osztalékfizetési korlát",
+    "saját tőke ≥ jegyzett tőke osztalék után",
+    "KM-ben elkülönítés és felszabadítás"
+   ],
+   "pelda": "I/5.: 820 000 Ft aktiválásakor T 413 / K 4142 820 000.",
+   "zh_valoszinuseg": "magas",
+   "forras": "src/elmelet/immaterialis.txt (Immateriális javak elmélet, 2026.09.30.)"
+  },
+  {
+   "id": "F15",
+   "nev": "Bekerülési érték (állományba vétel) – mozgásnemenként",
+   "definicio": "Beszerzéskor tényleges beszerzési ár + járulékos tételek; saját előállításkor előállítási költség (T 11x / K 582); apport behozatalkor apportérték (létesítő okirat szerinti érték); térítés nélküli átvételkor piaci érték; ajándék, hagyaték esetén piaci érték. Értékelés: bekerüléskor a bekerülési érték, tartós használat során terv szerinti ÉCS és mérlegérték, esetleges értékhelyesbítés, kikerüléskor a könyv szerinti érték megállapítása. Mérlegérték = nettó érték = bruttó érték − terv szerinti ÉCS − terven felüli ÉCS + terven felüli ÉCS visszaírása.",
+   "kulcselemek": [
+    "beszerzés: beszerzési ár + járulékos",
+    "saját előállítás: előállítási költség",
+    "apport: létesítő okirat szerinti érték",
+    "térítés nélkül, ajándék, hagyaték: piaci érték",
+    "nettó érték képlete"
+   ],
+   "pelda": null,
+   "zh_valoszinuseg": "kozepes",
+   "forras": "src/elmelet/immaterialis.txt (Immateriális javak elmélet, 2026.09.30.)"
+  },
+  {
+   "id": "F16",
+   "nev": "Térítés nélkül átvett / átadott immateriális jószág",
+   "definicio": "Átvevőnél piaci értéken kerül állományba: T 11x / K 9647 (egyéb bevétel), majd halasztott bevételként elhatárolandó: T 9647 / K 48331, amelyet az értékcsökkenéssel arányosan oldunk fel: T 48331 / K 9647. Az átadó által kiszámlázott áfa: T 466 / K 479. Átadónál a nyilvántartás szerinti (nettó) érték egyéb ráfordítás: T 8647 / K 11x, a halmozott ÉCS kivezetése T 119 / K 11x, a fizetendő áfa a piaci érték után: kiszámlázva T 368 / K 467, ha nem számlázza ki T 8647 / K 467.",
+   "kulcselemek": [
+    "átvevő: 9647 → 48331 elhatárolás → ÉCS-sel arányos feloldás",
+    "átadó: 8647 egyéb ráfordítás",
+    "áfa a piaci érték után"
+   ],
+   "pelda": "II/2. és II/4. feladat.",
+   "zh_valoszinuseg": "kozepes",
+   "forras": "II_Immateriális javak feladatsor (+ megoldása, II_órai jegyzet)"
+  },
+  {
+   "id": "F17",
+   "nev": "Apportba adott immateriális jószág",
+   "definicio": "A társaságba bevitt eszköz nettó módon: a létesítő okirat szerinti érték követelésként T 366 / K 368; a nettó érték kivezetése T 368 / K 11x; a halmozott ÉCS kivezetése T 119 / K 11x; a különbözet: ha a létesítő okirat szerinti érték a több T 368 / K 9642 (társaságba bevitt eszközök árfolyamnyeresége, egyéb bevétel), ha a kevesebb T 8642 / K 368 (egyéb ráfordítás); cégbírósági bejegyzéskor a részesedés nyilvántartásba vétele T 17x (pl. 172) / K 366.",
+   "kulcselemek": [
+    "366 – 368 technikai számla",
+    "9642 nyereség / 8642 veszteség",
+    "172 (171 kapcsolt vállalkozásnál)"
+   ],
+   "pelda": "II/3. feladat.",
+   "zh_valoszinuseg": "kozepes",
+   "forras": "II_Immateriális javak feladatsor (+ megoldása, II_órai jegyzet)"
+  },
+  {
+   "id": "F18",
+   "nev": "Értékesített immateriális jószág",
+   "definicio": "Nettó módon a 368 technikai számlával: nettó érték kivezetése T 368 / K 11x; halmozott ÉCS kivezetése T 119 / K 11x; eladási ár T 311 / K 368; fizetendő áfa T 311 / K 467; a különbözet: ha az eladási ár > könyv szerinti érték T 368 / K 961 (egyéb bevétel), ellenkező esetben T 861 / K 368 (egyéb ráfordítás).",
+   "kulcselemek": [
+    "368 technikai számla",
+    "961 bevétel / 861 ráfordítás (különbözet)",
+    "áfa az eladási ár után"
+   ],
+   "pelda": "I/3.: 800 000 nettó, 500 000 eladási ár → T 861 / K 368 300 000.",
+   "zh_valoszinuseg": "kozepes",
+   "forras": "I_Immateriális javak feladatsor (+ megoldása, I_órai jegyzet-1.png)"
+  }
+ ],
+ "szabalyok": [
+  {
+   "id": "S01",
+   "cim": "Mérlegsorok (A.I. Immateriális javak)",
+   "tartalom": "1. Alapítás-átszervezés aktivált értéke (111) 2. Kísérleti fejlesztés aktivált értéke (112) 3. Vagyoni értékű jogok (113) 4. Szellemi termékek (114) 5. Üzleti vagy cégérték (115) 6. Immateriális javakra adott előlegek (351 – számlatükörben a 35-ben!) 7. Immateriális javak értékhelyesbítése (117). Halmozott ÉCS: 118 terven felüli, 119 terv szerinti (a mérlegben nettó értéken).",
+   "forras": "src/elmelet/immaterialis.txt (Immateriális javak elmélet, 2026.09.30.)"
+  },
+  {
+   "id": "S02",
+   "cim": "KELL vs. LEHET kimutatni",
+   "tartalom": "KELL: vagyoni értékű jogok (ingatlanhoz kapcsolódók kivételével), szellemi termékek, üzleti vagy cégérték, adott előleg, értékhelyesbítés. LEHET (vállalkozói döntés, számviteli politika): alapítás-átszervezés és kísérleti fejlesztés aktivált értéke.",
+   "forras": "src/elmelet/immaterialis.txt (Immateriális javak elmélet, 2026.09.30.)"
+  },
+  {
+   "id": "S03",
+   "cim": "Állományba vétel mozgásnemenként",
+   "tartalom": "Beszerzés: tényleges beszerzési ár + járulékos tételek; saját előállítás: előállítási költség; apport: apportérték; térítés nélküli átvétel, ajándék, hagyaték: piaci érték.",
+   "forras": "src/elmelet/immaterialis.txt (Immateriális javak elmélet, 2026.09.30.)"
+  },
+  {
+   "id": "S04",
+   "cim": "Időkorlátok és lehetőségek táblája",
+   "tartalom": "Alapítás-átszervezés: terv szerinti ≤5 év, terven felüli ÉCS lehet, visszaírás lehet, értékhelyesbítés nincs, 200 eFt alatti egyösszegű leírás nincs. Kísérleti fejlesztés: ≤5 év, terven felüli lehet, visszaírás lehet, értékhelyesbítés nincs, egyösszegű nincs. Vagyoni értékű jogok: nincs korlát, terven felüli lehet, visszaírás lehet, értékhelyesbítés LEHET, egyösszegű LEHET. Szellemi termékek: nincs korlát, terven felüli lehet, visszaírás lehet, értékhelyesbítés LEHET, egyösszegű LEHET. Üzleti vagy cégérték: min. 5 – max. 10 év, terven felüli lehet, visszaírás NEM LEHET, értékhelyesbítés nincs, egyösszegű nincs. Adott előlegek: terv szerinti leírás nem lehet, terven felüli helyett értékvesztés lehet, értékvesztés visszaírása lehet, értékhelyesbítés nincs, egyösszegű nincs. Értékhelyesbítés: –.",
+   "forras": "src/elmelet/immaterialis.txt (Immateriális javak elmélet, 2026.09.30.) 13. dia (PDF 7. oldal)"
+  },
+  {
+   "id": "S05",
+   "cim": "Terven felüli ÉCS esetei",
+   "tartalom": "Feleslegessé vált; megrongálódás/megsemmisülés/hiány miatt nem használható; könyv szerinti érték tartósan és jelentősen magasabb a piaci értéknél; vagyoni értékű jog szerződés módosulása miatt korlátozottan vagy egyáltalán nem érvényesíthető; befejezett kísérleti fejlesztés révén megvalósuló tevékenységet korlátozzák, megszüntetik, eredménytelen; cégértéknél és alapítás-átszervezésnél a jövőbeni hasznokra vonatkozó várakozások változása miatt a könyv szerinti érték tartósan és jelentősen meghaladja a piaci értéket. Előlegeknél nem alkalmazható.",
+   "forras": "src/elmelet/immaterialis.txt (Immateriális javak elmélet, 2026.09.30.)"
+  },
+  {
+   "id": "S06",
+   "cim": "Terven felüli ÉCS visszaírása",
+   "tartalom": "Ha az elszámolás okai már nem vagy csak részben állnak fenn: meg kell szüntetni, és a piaci értékre (legfeljebb a terven felüli ÉCS összegéig) vissza kell írni, a mérlegfordulónapi értékelés keretében. Üzleti vagy cégértékre nem alkalmazható.",
+   "forras": "src/elmelet/immaterialis.txt (Immateriális javak elmélet, 2026.09.30.)"
+  },
+  {
+   "id": "S07",
+   "cim": "Értékhelyesbítés szabályai",
+   "tartalom": "Csak vagyoni értékű jog és szellemi termék. Nem kötelező. Mérlegkészítéskor ismert piaci érték, fordulónapi dátum. T 117 / K 4171; korrekció a korábbi értékhelyesbítéshez képest; kivezetés T 4171 / K 117. Nem módosítja a könyv szerinti és a mérlegértéket (külön sor). Leltárban piaci érték; könyvvizsgálói ellenőrzés; KM-ben nyitó/növekedés/csökkenés/záró.",
+   "forras": "src/elmelet/immaterialis.txt (Immateriális javak elmélet, 2026.09.30.)"
+  },
+  {
+   "id": "S08",
+   "cim": "Adott előleg értékelése",
+   "tartalom": "Forintban: előlegként teljesített, levonható áfa nélküli összeg; devizában: választott napi árfolyam. Csak értékvesztés (és visszaírása) – ez kizárólag az immateriális javakra adott előlegnél lehetséges ezen a soron.",
+   "forras": "src/elmelet/immaterialis.txt (Immateriális javak elmélet, 2026.09.30.)"
+  },
+  {
+   "id": "S09",
+   "cim": "Vagyoni értékű jog: saját előállítás kizárt",
+   "tartalom": "A vagyoni értékű jogoknál minden mozgásnem előfordulhat (beszerzés, apport stb.), KIVÉVE a saját előállítást. Szellemi termék saját előállítással is keletkezhet.",
+   "forras": "src/elmelet/immaterialis.txt (Immateriális javak elmélet, 2026.09.30.)"
+  },
+  {
+   "id": "S10",
+   "cim": "Alapítás-átszervezés aktiválható tételei (I/4. feladat)",
+   "tartalom": "Aktiválható: alakuló közgyűlés előtti és utáni, alakulással kapcsolatos kiadások; a központi iroda átrendezési költségeiről szóló szállítói számla; technológiai folyamat sorrendiség-változtatásának költségei; az ehhez kapcsolódó gépáthelyezési költségek; minőségbiztosítási rendszer bevezetésének költségei. NEM aktiválható: gépek áthelyezési költségei technológiai változtatás nélkül.",
+   "forras": "I_Immateriális javak feladatsor (+ megoldása, I_órai jegyzet-1.png)"
+  },
+  {
+   "id": "S11",
+   "cim": "Kísérleti fejlesztés elszámolási csoportosítása",
+   "tartalom": "Befejezetlen: terv szerinti leírás még nincs. Befejezett–hasznosítható: kísérleti fejlesztésként terv szerinti leírás indul, vagy más eszköz lesz (szellemi termék, tárgyi eszköz, prototípus, készlet). Befejezett–nem hasznosítható: a mérlegben nem szerepelhet, terven felüli ÉCS.",
+   "forras": "src/elmelet/immaterialis.txt (Immateriális javak elmélet, 2026.09.30.)"
+  },
+  {
+   "id": "S12",
+   "cim": "Kapcsolat az eredménykimutatással",
+   "tartalom": "Terv szerinti ÉCS → Értékcsökkenési leírás. Terven felüli ÉCS → Egyéb ráfordítások. Visszaírás → Egyéb bevételek. Értékesítés: eladási ár > könyv szerinti érték → egyéb bevétel, egyébként egyéb ráfordítás. Térítés nélkül átadott könyv szerinti értéke → egyéb ráfordítás. Apport: létesítő okirat szerinti > könyv szerinti → egyéb bevétel, egyébként egyéb ráfordítás. Alapítás-átszervezés, kísérleti fejlesztés költségeinek aktiválása → Saját előállítású eszközök aktivált értéke.",
+   "forras": "src/elmelet/immaterialis.txt (Immateriális javak elmélet, 2026.09.30.)"
+  },
+  {
+   "id": "S13",
+   "cim": "Kiegészítő melléklet és üzleti jelentés",
+   "tartalom": "KM: értékhelyesbítés nyitó/növekedés/csökkenés/záró, a piaci értékelés elvei; ÉCS-szabályok (módszer, gyakoriság, hasznos élettartam, maradványérték); befektetési tükör (bruttó érték és halmozott ÉCS nyitó, növekedés, csökkenés, átsorolás, záró); tárgyévi ÉCS bemutatása (terv szerinti módszerenként, terven felüli, visszaírt, jelentősebb terven felüli indokai); lekötött tartalék elkülönítése és felszabadítása (alapítás-átszervezés, kísérleti fejlesztés); a kutatás és kísérleti fejlesztés TÁRGYÉVI (nem csak aktivált) költségei. Üzleti jelentés: fordulónap utáni jelentős események; kutatás és kísérleti fejlesztés, ha a vállalkozás ilyennel foglalkozik.",
+   "forras": "src/elmelet/immaterialis.txt (Immateriális javak elmélet, 2026.09.30.)"
+  },
+  {
+   "id": "S14",
+   "cim": "Térítés nélküli átadás áfája",
+   "tartalom": "Az ügylet fizetendő áfát keletkeztet (mintha eladnánk), a piaci érték után. Ha az átadó kiszámlázza: egyéb követelés (T 368 / K 467); ha nem: ráfordítás (T 8647 / K 467).",
+   "forras": "II_Immateriális javak feladatsor (+ megoldása, II_órai jegyzet)"
+  }
+ ],
+ "osszefuggesek": [
+  {
+   "id": "O01",
+   "cim": "Nettó (mérleg)érték",
+   "leiras": "Az immateriális jószág mérlegértéke a nettó érték.",
+   "keplet": "Nettó érték = Bruttó érték − terv szerinti ÉCS (119) − terven felüli ÉCS (118) + terven felüli ÉCS visszaírása",
+   "kapcsolodo": [
+    "F12",
+    "F13"
+   ]
+  },
+  {
+   "id": "O02",
+   "cim": "Üzleti vagy cégérték számítása",
+   "leiras": "Pozitív → 115 aktiválás; negatív → 9695 majd 4834 elhatárolás.",
+   "keplet": "Cégérték = Fizetett ellenérték − (átvett eszközök piaci értéke − átvállalt kötelezettségek)",
+   "kapcsolodo": [
+    "F08",
+    "F09"
+   ]
+  },
+  {
+   "id": "O03",
+   "cim": "Értékhelyesbítés összege",
+   "leiras": "Csak ha jelentős és pozitív; 113/114-nél.",
+   "keplet": "Értékhelyesbítés = Piaci érték (mérlegkészítéskor) − Könyv szerinti (nettó) érték",
+   "kapcsolodo": [
+    "F11"
+   ]
+  },
+  {
+   "id": "O04",
+   "cim": "Időarányos terv szerinti ÉCS",
+   "leiras": "Az állományba vétel napjától.",
+   "keplet": "Éves ÉCS = (Bekerülési érték − maradványérték) / hasznos élettartam; tárgyévi = éves × hónapok/12",
+   "kapcsolodo": [
+    "F12"
+   ]
+  },
+  {
+   "id": "O05",
+   "cim": "Értékesítés / apport eredménye",
+   "leiras": "Különbözet a 368 technikai számlán.",
+   "keplet": "Eredmény = Eladási ár (vagy létesítő okirat szerinti érték) − Könyv szerinti érték; >0 → 961 / 9642; <0 → 861 / 8642",
+   "kapcsolodo": [
+    "F17",
+    "F18"
+   ]
+  },
+  {
+   "id": "O06",
+   "cim": "Aktiválás hatása az eredményre és az adóra",
+   "leiras": "Aktiválásnál a költség nem csökkenti az adózás előtti eredményt; ezért lekötött tartalékot kell képezni.",
+   "keplet": "Eltérés (adózott eredmény) = aktivált összeg × (1 − TAO-kulcs); I/5.: 820 × 0,91 = 746,2 eFt",
+   "kapcsolodo": [
+    "F02",
+    "F14"
+   ]
+  },
+  {
+   "id": "O07",
+   "cim": "Térítés nélkül átvett eszköz halasztott bevételének feloldása",
+   "leiras": "A feloldás összege megegyezik a tárgyévi ÉCS-sel.",
+   "keplet": "Feloldás (T 48331 / K 9647) = tárgyévi terv szerinti ÉCS",
+   "kapcsolodo": [
+    "F16"
+   ]
+  },
+  {
+   "id": "O08",
+   "cim": "Kivezetés a bruttó értékkel",
+   "leiras": "Kivezetéskor a 113/114 egyenlegét a halmozott ÉCS-ek (119, 118) és a nettó érték kivezetése együtt nullázza.",
+   "keplet": "Bruttó = nettó (368/8647/8663→118) + halmozott terv szerinti ÉCS (119)",
+   "kapcsolodo": [
+    "F13",
+    "F17",
+    "F18"
+   ]
+  }
+ ],
+ "konyvelesi_minta": [
+  {
+   "id": "K01",
+   "esemeny": "Vagyoni értékű jog (bérleti, használati jog, licenc, koncesszió) vásárlása",
+   "T": "113",
+   "K": "4541 (vagy 4551, 4543; azonnali fizetésnél 384)",
+   "osszeg": "nettó vételár + járulékos",
+   "megjegyzes": "Tanári kulcs I/1.: K 4541."
+  },
+  {
+   "id": "K02",
+   "esemeny": "Szellemi termék (szabadalom, szoftver, gyártási eljárás, védjegy, know-how) vásárlása",
+   "T": "114",
+   "K": "4541",
+   "osszeg": "nettó vételár + járulékos",
+   "megjegyzes": null
+  },
+  {
+   "id": "K03",
+   "esemeny": "Előzetesen felszámított áfa beszerzéskor",
+   "T": "466",
+   "K": "4541 / 384",
+   "osszeg": "nettó × 27%",
+   "megjegyzes": null
+  },
+  {
+   "id": "K04",
+   "esemeny": "Alapítás-átszervezés idegen kivitelezésben, aktiválva",
+   "T": "111",
+   "K": "4541 (szolgáltatásnál 4543)",
+   "osszeg": "számlázott nettó érték",
+   "megjegyzes": "Tanári kulcs I/5.: K 4541; szamlaszamok.json: 4543 is elfogadott."
+  },
+  {
+   "id": "K05",
+   "esemeny": "Alapítás-átszervezés / kísérleti fejlesztés saját kivitelezésben aktiválva",
+   "T": "111 / 112 (vagy 114, ha szellemi termék lesz)",
+   "K": "582",
+   "osszeg": "előállítási költség",
+   "megjegyzes": "Előtte a költségek 51–57 / 1–4 (költségnem)."
+  },
+  {
+   "id": "K06",
+   "esemeny": "Lekötött tartalék képzése aktivált alapítás-átszervezés / kísérleti fejlesztés után",
+   "T": "413",
+   "K": "4142",
+   "osszeg": "aktivált érték",
+   "megjegyzes": "Felszabadítás: T 4142 / K 413."
+  },
+  {
+   "id": "K07",
+   "esemeny": "Alapítás-átszervezés NEM aktiválva (számla alapján)",
+   "T": "51–53 (pl. 52/529)",
+   "K": "4541",
+   "osszeg": "nettó",
+   "megjegyzes": "Nincs lekötött tartalék."
+  },
+  {
+   "id": "K08",
+   "esemeny": "Immateriális javakra adott előleg átutalása",
+   "T": "351",
+   "K": "384",
+   "osszeg": "levonható áfa nélküli előleg",
+   "megjegyzes": "Áfa: T 466 / K 384."
+  },
+  {
+   "id": "K09",
+   "esemeny": "Végszámla – előleg beszámítása",
+   "T": "4541",
+   "K": "351",
+   "osszeg": "előleg nettó",
+   "megjegyzes": "Előleg áfája: T 4541 / K 466."
+  },
+  {
+   "id": "K10",
+   "esemeny": "Adott előleg értékvesztése",
+   "T": "8662 (követelések értékvesztése)",
+   "K": "359",
+   "osszeg": "értékvesztés összege",
+   "megjegyzes": "Generált: a számlatükör szerinti 359; a forrás konkrét tételt nem ad."
+  },
+  {
+   "id": "K11",
+   "esemeny": "Apportként kapott immateriális jószág (alapításkor)",
+   "T": "113 / 114",
+   "K": "479",
+   "osszeg": "létesítő okirat szerinti érték",
+   "megjegyzes": "Bejegyzéskor T 33 (332) / K 411, majd T 479 / K 33 (332); anyavállalattól 325, részesedési viszonyban nem lévőtől 358."
+  },
+  {
+   "id": "K12",
+   "esemeny": "Térítés nélkül átvett immateriális jószág",
+   "T": "113 / 114",
+   "K": "9647",
+   "osszeg": "piaci érték",
+   "megjegyzes": "Elhatárolás T 9647 / K 48331; feloldás ÉCS-sel arányosan T 48331 / K 9647; átadó által számlázott áfa T 466 / K 479."
+  },
+  {
+   "id": "K13",
+   "esemeny": "Terv szerinti ÉCS",
+   "T": "5711",
+   "K": "119",
+   "osszeg": "(bekerülési − maradvány)/élettartam × időarány",
+   "megjegyzes": "200 eFt alatti 113/114 egy összegben is leírható."
+  },
+  {
+   "id": "K14",
+   "esemeny": "Terven felüli ÉCS",
+   "T": "8663",
+   "K": "118",
+   "osszeg": "könyv szerinti − piaci érték (kivezetésnél a teljes nettó érték)",
+   "megjegyzes": "Egyéb ráfordítás."
+  },
+  {
+   "id": "K15",
+   "esemeny": "Terven felüli ÉCS visszaírása (nem cégérték!)",
+   "T": "118",
+   "K": "9663",
+   "osszeg": "max. a terven felüli ÉCS összege",
+   "megjegyzes": "Egyéb bevétel."
+  },
+  {
+   "id": "K16",
+   "esemeny": "Értékhelyesbítés (113/114)",
+   "T": "117",
+   "K": "4171",
+   "osszeg": "piaci − könyv szerinti",
+   "megjegyzes": "Csökkentés/kivezetés: T 4171 / K 117."
+  },
+  {
+   "id": "K17",
+   "esemeny": "Kivezetés: terven felüli ÉCS és halmozott terv szerinti ÉCS",
+   "T": "118 ill. 119",
+   "K": "113 / 114",
+   "osszeg": "a halmozott egyenlegek",
+   "megjegyzes": "I/6.: T 118 / K 113 27,5 M; T 119 / K 113 38,5 M."
+  },
+  {
+   "id": "K18",
+   "esemeny": "Értékesítés – nettó érték kivezetése",
+   "T": "368",
+   "K": "113 / 114",
+   "osszeg": "bruttó − halmozott ÉCS",
+   "megjegyzes": null
+  },
+  {
+   "id": "K19",
+   "esemeny": "Értékesítés – halmozott ÉCS kivezetése",
+   "T": "119",
+   "K": "113 / 114",
+   "osszeg": "halmozott ÉCS",
+   "megjegyzes": null
+  },
+  {
+   "id": "K20",
+   "esemeny": "Értékesítés – eladási ár és áfa",
+   "T": "311",
+   "K": "368 (ár); 467 (áfa)",
+   "osszeg": "nettó ár; ár × 27%",
+   "megjegyzes": null
+  },
+  {
+   "id": "K21",
+   "esemeny": "Értékesítés – különbözet",
+   "T": "368 (nyereség) / 861 (veszteség)",
+   "K": "961 (nyereség) / 368 (veszteség)",
+   "osszeg": "eladási ár − könyv szerinti érték",
+   "megjegyzes": null
+  },
+  {
+   "id": "K22",
+   "esemeny": "Apportba adás – létesítő okirat szerinti érték",
+   "T": "366",
+   "K": "368",
+   "osszeg": "létesítő okirat szerinti érték",
+   "megjegyzes": null
+  },
+  {
+   "id": "K23",
+   "esemeny": "Apportba adás – különbözet",
+   "T": "368 / 8642",
+   "K": "9642 / 368",
+   "osszeg": "létesítő okirat szerinti − könyv szerinti",
+   "megjegyzes": null
+  },
+  {
+   "id": "K24",
+   "esemeny": "Apportba adás – részesedés bejegyzéskor",
+   "T": "172 (kapcsolt: 171)",
+   "K": "366",
+   "osszeg": "létesítő okirat szerinti érték",
+   "megjegyzes": null
+  },
+  {
+   "id": "K25",
+   "esemeny": "Térítés nélküli átadás – nettó érték",
+   "T": "8647",
+   "K": "113 / 114",
+   "osszeg": "bruttó − halmozott ÉCS",
+   "megjegyzes": "ÉCS kivezetése T 119 / K 11x."
+  },
+  {
+   "id": "K26",
+   "esemeny": "Térítés nélküli átadás – áfa",
+   "T": "368 (kiszámlázva) / 8647 (nem számlázva)",
+   "K": "467",
+   "osszeg": "piaci érték × 27%",
+   "megjegyzes": null
+  },
+  {
+   "id": "K27",
+   "esemeny": "Cégvásárlás – eszközök piaci értéken",
+   "T": "1–3 (11, 12–16, 31–36, 38, 39)",
+   "K": "4541 / 4551",
+   "osszeg": "piaci érték",
+   "megjegyzes": null
+  },
+  {
+   "id": "K28",
+   "esemeny": "Cégvásárlás – átvállalt kötelezettségek",
+   "T": "4541 / 4551",
+   "K": "43–47",
+   "osszeg": "kötelezettségek értéke",
+   "megjegyzes": null
+  },
+  {
+   "id": "K29",
+   "esemeny": "Pozitív üzleti vagy cégérték",
+   "T": "115",
+   "K": "4541 / 4551",
+   "osszeg": "vételár − (eszközök piaci − kötelezettségek)",
+   "megjegyzes": "ÉCS 5–10 év: T 5711 / K 119."
+  },
+  {
+   "id": "K30",
+   "esemeny": "Negatív üzleti vagy cégérték",
+   "T": "4541 / 4551",
+   "K": "9695",
+   "osszeg": "|különbözet|",
+   "megjegyzes": "Majd T 9695 / K 4834; feloldás 5–10 év alatt T 4834 / K 9695."
+  },
+  {
+   "id": "K31",
+   "esemeny": "Szállító kiegyenlítése",
+   "T": "4541",
+   "K": "384",
+   "osszeg": "bruttó",
+   "megjegyzes": null
+  },
+  {
+   "id": "K32",
+   "esemeny": "Nem hasznosítható kísérleti fejlesztés / használhatatlan szoftver",
+   "T": "8663",
+   "K": "118 (majd T 118 / K 112/114 és T 119 / K 112/114)",
+   "osszeg": "nettó érték",
+   "megjegyzes": "Moodle-pontozás szerint a rövid forma T 8663 / K 114 + T 119 / K 114 is elfogadott (lásd javítás 10.)."
+  }
+ ],
+ "feladatok": [
+  {
+   "id": "I-1",
+   "forras": "I_Immateriális javak feladatsor (+ megoldása, I_órai jegyzet-1.png)",
+   "cim": "Bérleti jog vásárlása",
+   "szoveg": "A vállalkozó bérleti jogot vásárolt. A vételár az átutalásos számla alapján 1.500.000 Ft+27% ÁFA. Könyvelje le a gazdasági eseményeket vegyes naplóban!",
+   "adatok": {
+    "vetelar_netto": 1500000,
+    "afa_kulcs": 0.27
+   },
+   "megoldas": {
+    "szamitasok": [
+     {
+      "mit": "Áfa",
+      "keplet": "1 500 000 × 0,27",
+      "eredmeny": 405000
+     }
+    ],
+    "tetelek": [
+     {
+      "sorszam": "1a",
+      "esemeny": "Vagyoni értékű jog ellenértéke",
+      "T": "113",
+      "K": "4541",
+      "osszeg": 1500000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "1b",
+      "esemeny": "Előzetesen felszámított áfa",
+      "T": "466",
+      "K": "4541",
+      "osszeg": 405000,
+      "szamitas": "1 500 000 × 0,27"
+     }
+    ],
+    "egyeb": {}
+   },
+   "tanulsagok": [
+    "A bérleti jog vagyoni értékű jog (113), nem szellemi termék.",
+    "A tanári kulcs K 4541-et használ."
+   ],
+   "elteresek_a_forrasban": []
+  },
+  {
+   "id": "I-2",
+   "forras": "I_Immateriális javak feladatsor (+ megoldása, I_órai jegyzet-1.png)",
+   "cim": "Bérleti jog értékhelyesbítése (fordulónapi értékelés)",
+   "szoveg": "A bérleti jog bruttó értéke a vállalkozó könyvviteli nyilvántartása szerint december 31-én 650.000 Ft, a hozzá kapcsolódó értékcsökkenési számla egyenlege 150.000 Ft. A bérleti jog mérlegkészítéskori piaci értéke 700.000 Ft. Végezze el a fordulónapra vonatkozó értékelést!",
+   "adatok": {
+    "brutto": 650000,
+    "ecs": 150000,
+    "piaci_ertek_merlegkesziteskor": 700000
+   },
+   "megoldas": {
+    "szamitasok": [
+     {
+      "mit": "Könyv szerinti érték",
+      "keplet": "650 000 − 150 000",
+      "eredmeny": 500000
+     },
+     {
+      "mit": "Különbözet",
+      "keplet": "700 000 − 500 000",
+      "eredmeny": 200000
+     }
+    ],
+    "tetelek": [
+     {
+      "sorszam": 1,
+      "esemeny": "Bérleti jog értékhelyesbítése",
+      "T": "117",
+      "K": "4171",
+      "osszeg": 200000,
+      "szamitas": "piaci − könyv szerinti"
+     }
+    ],
+    "egyeb": {
+     "feltetel": "Feltételezzük, hogy a különbség a számviteli politika szerint tartós és jelentős, és a vállalkozás él az értékhelyesbítés lehetőségével."
+    }
+   },
+   "tanulsagok": [
+    "Értékhelyesbítés csak 113/114-nél; mérlegkészítéskori piaci érték, fordulónapi dátum.",
+    "A mérlegben „Értékhelyesbítés” (A.I.7.), a saját tőkében „Értékelési tartalék” (4171)."
+   ],
+   "elteresek_a_forrasban": []
+  },
+  {
+   "id": "I-3",
+   "forras": "I_Immateriális javak feladatsor (+ megoldása, I_órai jegyzet-1.png)",
+   "cim": "Bérleti jog értékesítése",
+   "szoveg": "A vállalkozó értékesíti a bérleti jogát. A bérleti jog eladási ára az átutalásos számla alapján 500.000 Ft+27% ÁFA. Az értékesített bérleti jog bruttó értéke 1.200.000 Ft, az értékesítésig elszámolt terv szerinti értékcsökkenés összege 400.000 Ft. Könyvelje le a gazdasági eseményeket vegyes naplóban!",
+   "adatok": {
+    "eladasi_ar_netto": 500000,
+    "brutto": 1200000,
+    "terv_szerinti_ecs": 400000,
+    "afa_kulcs": 0.27
+   },
+   "megoldas": {
+    "szamitasok": [
+     {
+      "mit": "Nettó érték",
+      "keplet": "1 200 000 − 400 000",
+      "eredmeny": 800000
+     },
+     {
+      "mit": "Áfa",
+      "keplet": "500 000 × 0,27",
+      "eredmeny": 135000
+     },
+     {
+      "mit": "Eredmény",
+      "keplet": "500 000 − 800 000",
+      "eredmeny": -300000
+     }
+    ],
+    "tetelek": [
+     {
+      "sorszam": 1,
+      "esemeny": "Nettó érték kivezetése",
+      "T": "368",
+      "K": "113",
+      "osszeg": 800000,
+      "szamitas": null
+     },
+     {
+      "sorszam": 2,
+      "esemeny": "Halmozott ÉCS kivezetése",
+      "T": "119",
+      "K": "113",
+      "osszeg": 400000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "3a",
+      "esemeny": "Nettó eladási ár",
+      "T": "311",
+      "K": "368",
+      "osszeg": 500000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "3b",
+      "esemeny": "Fizetendő áfa",
+      "T": "311",
+      "K": "467",
+      "osszeg": 135000,
+      "szamitas": "500 000 × 0,27"
+     },
+     {
+      "sorszam": "3c",
+      "esemeny": "Különbözet (veszteség)",
+      "T": "861",
+      "K": "368",
+      "osszeg": 300000,
+      "szamitas": "368 egyenlege: 800 000 T − 500 000 K"
+     }
+    ],
+    "egyeb": {
+     "368_szamla": "T: 800 000 | K: 500 000 + 300 000 → 0"
+    }
+   },
+   "tanulsagok": [
+    "Nettó módszer a 368 technikai számlával.",
+    "Veszteségnél 861 (egyéb ráfordítás), nyereségnél 961 (egyéb bevétel)."
+   ],
+   "elteresek_a_forrasban": []
+  },
+  {
+   "id": "I-4",
+   "forras": "I_Immateriális javak feladatsor (+ megoldása, I_órai jegyzet-1.png)",
+   "cim": "Alapítás-átszervezésként aktiválható tételek",
+   "szoveg": "Határozza meg, hogy az alábbi tételek alapítás-átszervezésként aktiválhatók vagy sem!",
+   "adatok": {
+    "tetelek": [
+     "Alakuló közgyűlés előtt, az alakulással kapcsolatban felmerült kiadások",
+     "Alakuló közgyűlés után, az alakulással kapcsolatban felmerült kiadások",
+     "Szolgáltató/szállító számlája a központi iroda átrendezési költségeiről",
+     "Technológiai folyamat sorrendiség-változtatásának költségei",
+     "Az előbbiekhez kapcsolódóan a gépek áthelyezési költségei",
+     "Gépek áthelyezési költségei (technológiai változtatás nélkül)",
+     "Minőségbiztosítási rendszer bevezetésének költségei"
+    ]
+   },
+   "megoldas": {
+    "szamitasok": [],
+    "tetelek": [],
+    "egyeb": {
+     "aktivalhato": [
+      "Alakuló közgyűlés előtti kiadások",
+      "Alakuló közgyűlés utáni kiadások",
+      "Központi iroda átrendezése (számla)",
+      "Technológiai folyamat sorrendiség-változtatása",
+      "Ehhez kapcsolódó gépáthelyezés",
+      "Minőségbiztosítási rendszer bevezetése"
+     ],
+     "nem_aktivalhato": [
+      "Gépek áthelyezése technológiai változtatás nélkül"
+     ]
+    }
+   },
+   "tanulsagok": [
+    "Alapításnál a cégalapítás előtt és után felmerülő tételek is aktiválhatók.",
+    "Átszervezés csak akkor, ha tényleges szervezeti/technológiai változás van."
+   ],
+   "elteresek_a_forrasban": [
+    "A feladatsorban „Számla a központi iroda…”, a megoldásban „Szolgáltató/Szállító számlája a központi iroda…” – tartalmilag azonos."
+   ]
+  },
+  {
+   "id": "I-5",
+   "forras": "I_Immateriális javak feladatsor (+ megoldása, I_órai jegyzet-1.png)",
+   "cim": "MEG-SZERVEZETT Zrt. – alapítás-átszervezés aktiválása vagy költségként elszámolása",
+   "szoveg": "A MEG-SZERVEZETT Zrt. 20X1. évi kiemelt adatai: Adózás előtti eredmény (alapítás-átszervezés nélkül) 1.000.000 Ft; az alapítás-átszervezés értéke (szállítói számla alapján) 820.000 + 164.000 ÁFA; adóalap-korrekciók összevont egyenlege +50.000; eredménytartalék december 30-án 0; minden más saját tőke elem (kivéve a jegyzett tőkét) 0; TAO 9%. a) Könyvelje az alapítás-átszervezéssel kapcsolatos eseményeket összköltség eljárás szerinti költségnem-elszámolásnál, ha az értéket december 31-én aktiválják, illetve ha nem aktiválják. b) Mi változna saját kivitelezés esetén? c) Határozza meg az adózott eredményt aktiválás és nem aktiválás esetén.",
+   "adatok": {
+    "aee_alapitas_nelkul": 1000000,
+    "alapitas_atszervezes_netto": 820000,
+    "afa": 164000,
+    "adoalap_korrekcio": 50000,
+    "eredmenytartalek_dec30": 0,
+    "tao": 0.09
+   },
+   "megoldas": {
+    "szamitasok": [
+     {
+      "mit": "Aktiválás: adózás előtti eredmény",
+      "keplet": "1 000 000 − 0",
+      "eredmeny": 1000000
+     },
+     {
+      "mit": "Aktiválás: adóalap",
+      "keplet": "1 000 000 + 50 000",
+      "eredmeny": 1050000
+     },
+     {
+      "mit": "Aktiválás: TAO",
+      "keplet": "1 050 000 × 0,09",
+      "eredmeny": 94500
+     },
+     {
+      "mit": "Aktiválás: adózott eredmény",
+      "keplet": "1 000 000 − 94 500",
+      "eredmeny": 905500
+     },
+     {
+      "mit": "Nem aktiválás: adózás előtti eredmény",
+      "keplet": "1 000 000 − 820 000",
+      "eredmeny": 180000
+     },
+     {
+      "mit": "Nem aktiválás: adóalap",
+      "keplet": "180 000 + 50 000",
+      "eredmeny": 230000
+     },
+     {
+      "mit": "Nem aktiválás: TAO",
+      "keplet": "230 000 × 0,09",
+      "eredmeny": 20700
+     },
+     {
+      "mit": "Nem aktiválás: adózott eredmény",
+      "keplet": "180 000 − 20 700",
+      "eredmeny": 159300
+     },
+     {
+      "mit": "Eltérés adózott eredményben",
+      "keplet": "159 300 − 905 500 (= −820 000 × 0,91)",
+      "eredmeny": -746200
+     },
+     {
+      "mit": "Eltérés TAO-ban",
+      "keplet": "20 700 − 94 500",
+      "eredmeny": -73800
+     }
+    ],
+    "tetelek": [
+     {
+      "sorszam": "1a",
+      "esemeny": "AKTIVÁLÁS – költségek számla alapján",
+      "T": "111",
+      "K": "4541",
+      "osszeg": 820000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "1b",
+      "esemeny": "AKTIVÁLÁS – előzetes áfa",
+      "T": "466",
+      "K": "4541",
+      "osszeg": 164000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "1c",
+      "esemeny": "AKTIVÁLÁS – lekötött tartalék képzése",
+      "T": "413",
+      "K": "4142",
+      "osszeg": 820000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "1d",
+      "esemeny": "NINCS AKTIVÁLÁS – költség számla alapján",
+      "T": "51–53",
+      "K": "4541",
+      "osszeg": 820000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "1e",
+      "esemeny": "NINCS AKTIVÁLÁS – előzetes áfa",
+      "T": "466",
+      "K": "4541",
+      "osszeg": 164000,
+      "szamitas": "nincs lekötött tartalék"
+     },
+     {
+      "sorszam": "1h",
+      "esemeny": "SAJÁT KIVITELEZÉS – költségek felmerülése (megelőzi az aktiválást)",
+      "T": "51–57",
+      "K": "1–4 (11, 12–16, 21, 38, 45–47)",
+      "osszeg": 820000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "1i",
+      "esemeny": "SAJÁT KIVITELEZÉS – fizetendő áfa (a tanári kulcs szerint)",
+      "T": "466",
+      "K": "467",
+      "osszeg": 164000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "1f",
+      "esemeny": "SAJÁT KIVITELEZÉS + AKTIVÁLÁS – aktiválás",
+      "T": "111",
+      "K": "582",
+      "osszeg": 820000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "1g",
+      "esemeny": "SAJÁT KIVITELEZÉS + AKTIVÁLÁS – lekötött tartalék",
+      "T": "413",
+      "K": "4142",
+      "osszeg": 820000,
+      "szamitas": null
+     }
+    ],
+    "egyeb": {
+     "adozott_eredmeny_tabla_eFt": {
+      "sorok": [
+       "1. Eredmény (alapítás-átszervezés nélkül)",
+       "2. Alapítás-átszervezés költségeiből ráfordítás",
+       "3. Adózás előtti eredmény (1−2)",
+       "4. Adóalap-korrekciók",
+       "5. Adóalap",
+       "6. TAO (5. × 0,09)",
+       "7. Adózott eredmény (3−6)"
+      ],
+      "aktivaljak": [
+       1000,
+       0,
+       1000,
+       50,
+       1050,
+       94.5,
+       905.5
+      ],
+      "nem_aktivaljak": [
+       1000,
+       820,
+       180,
+       50,
+       230,
+       20.7,
+       159.3
+      ],
+      "elteres": [
+       null,
+       820,
+       -820,
+       null,
+       -820,
+       -73.8,
+       -746.2
+      ]
+     },
+     "b_valasz": "Saját kivitelezésnél a költségek előbb költségnemeken (51–57) merülnek fel; aktiválásnál T 111 / K 582 (saját előállítású eszközök aktivált értéke – a költséget ellentételezi), plusz lekötött tartalék T 413 / K 4142; nem aktiválásnál csak a költségnemek."
+    }
+   },
+   "tanulsagok": [
+    "Aktiválásnál az eredményt nem csökkenti a költség, ezért lekötött tartalék kell (T 413 / K 4142).",
+    "Az aktiválás 820 × 0,91 = 746,2 eFt-tal nagyobb adózott eredményt ad.",
+    "Saját kivitelezésnél az aktiválás K 582."
+   ],
+   "elteresek_a_forrasban": [
+    "Az áfa 164 000 Ft a 820 000 Ft 20%-a, nem 27% (az lenne 221 400). A forrás adatát használjuk.",
+    "A megoldás az adózott eredmény táblát „b)” betűvel jelöli, holott a feladatsorban ez a c) kérdés.",
+    "1i: a kulcs saját kivitelezésnél T 466 / K 467 164 000 tételt ad (a kézírásos jegyzet mindkét saját kivitelezéses esethez köti). Ez számvitelileg kérdéses (saját előállításnál általában nincs áfa-tétel), de a tanári kulcs így tartalmazza.",
+    "A lekötött tartalékot 820 000 Ft-ban az eredménytartalékból képezik, miközben az eredménytartalék dec. 30-án 0 – a kulcs ezzel nem foglalkozik (az eredménytartalék negatívba fordulna)."
+   ]
+  },
+  {
+   "id": "I-6",
+   "forras": "I_Immateriális javak feladatsor (+ megoldása, I_órai jegyzet-1.png)",
+   "cim": "Szerencsejáték koncessziós jog – beszerzés, ÉCS, visszavonás",
+   "szoveg": "Egy Kft. megnyerte egy szerencsejáték koncessziós jogát 2023. április 1-jén. Díja 66 mFt, amelynek befizetéséről a bankértesítés május 1-jén megérkezett. A koncessziót nyújtó az ÁFÁ-t is kiszámlázta. A játékengedély kezdete július 1. A játékengedély 6 évre szól, lineáris terv szerinti leírással. 2026. év végén (december 31-én) visszavonják a koncessziós jogot. Könyvelje le vegyes naplóban!",
+   "adatok": {
+    "dij": 66000000,
+    "afa_kulcs": 0.27,
+    "kezdet": "2023-07-01",
+    "elettartam_ev": 6,
+    "visszavonas": "2026-12-31"
+   },
+   "megoldas": {
+    "szamitasok": [
+     {
+      "mit": "Éves ÉCS",
+      "keplet": "66 000 000 / 6",
+      "eredmeny": 11000000
+     },
+     {
+      "mit": "2023. évi ÉCS (júl.–dec.)",
+      "keplet": "11 000 000 × 6/12",
+      "eredmeny": 5500000
+     },
+     {
+      "mit": "Halmozott ÉCS 2026.12.31.",
+      "keplet": "5,5 + 11 + 11 + 11 M",
+      "eredmeny": 38500000
+     },
+     {
+      "mit": "Nettó érték visszavonáskor",
+      "keplet": "66 000 000 − 38 500 000",
+      "eredmeny": 27500000
+     },
+     {
+      "mit": "Áfa",
+      "keplet": "66 000 000 × 0,27",
+      "eredmeny": 17820000
+     }
+    ],
+    "tetelek": [
+     {
+      "sorszam": "1a",
+      "esemeny": "Állományba vétel (2023.05.01., bankértesítés)",
+      "T": "113",
+      "K": "384",
+      "osszeg": 66000000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "1b",
+      "esemeny": "Előzetes áfa",
+      "T": "466",
+      "K": "384",
+      "osszeg": 17820000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "2",
+      "esemeny": "2023. évi terv szerinti ÉCS (2023.12.31.)",
+      "T": "5711",
+      "K": "119",
+      "osszeg": 5500000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "2b",
+      "esemeny": "2024. évi ÉCS",
+      "T": "5711",
+      "K": "119",
+      "osszeg": 11000000,
+      "szamitas": "a nyomtatott kulcsban nem szerepel, a kézírásos jegyzetben igen"
+     },
+     {
+      "sorszam": "2c",
+      "esemeny": "2025. évi ÉCS",
+      "T": "5711",
+      "K": "119",
+      "osszeg": 11000000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "2d",
+      "esemeny": "2026. évi ÉCS (visszavonás előtt)",
+      "T": "5711",
+      "K": "119",
+      "osszeg": 11000000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "3a",
+      "esemeny": "Terven felüli ÉCS a nettó értékben",
+      "T": "8663",
+      "K": "118",
+      "osszeg": 27500000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "3b",
+      "esemeny": "Terven felüli ÉCS kivezetése",
+      "T": "118",
+      "K": "113",
+      "osszeg": 27500000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "3c",
+      "esemeny": "Halmozott terv szerinti ÉCS kivezetése",
+      "T": "119",
+      "K": "113",
+      "osszeg": 38500000,
+      "szamitas": null
+     }
+    ],
+    "egyeb": {
+     "ecs_utemterv_mFt": {
+      "2023": 5.5,
+      "2024": 11,
+      "2025": 11,
+      "2026": 11,
+      "2027": 11,
+      "2028": 11,
+      "2029": 5.5,
+      "osszesen": 66
+     },
+     "113_kivezetes": "27 500 000 + 38 500 000 = 66 000 000 (bruttó)"
+    }
+   },
+   "tanulsagok": [
+    "Koncessziós jog = vagyoni értékű jog (113).",
+    "Az ÉCS a játékengedély kezdetétől (júl. 1.) indul.",
+    "Visszavont jog: a nettó értékre terven felüli ÉCS, majd a 118 és 119 kivezetése a 113-mal szemben."
+   ],
+   "elteresek_a_forrasban": [
+    "A feladatsorban „bankértékesítés” – helyesen bankértesítés.",
+    "A nyomtatott megoldás csak a 2023. évi ÉCS-t könyveli (5,5 M); a 2024–2026. évi 11–11 M tételeket csak a kézírásos órai jegyzet tartalmazza, de a 27,5 M nettó érték ezekkel számol.",
+    "A kézírásos jegyzetben a 384 mellett „(4541)” alternatíva is szerepel (ha nem azonnal fizetnek)."
+   ]
+  },
+  {
+   "id": "I-7",
+   "forras": "I_Immateriális javak feladatsor (+ megoldása, I_órai jegyzet-1.png)",
+   "cim": "Gyáregység vásárlása – pozitív és negatív üzleti vagy cégérték",
+   "szoveg": "Egy Rt megvásárolja egy Kft egyik gyáregységét. A vételár: a) 1.000 M Ft (ÁFA 300 M Ft); b) 400 M Ft (ÁFA 150 M Ft). A gyáregységhez tartozó eszközök mérlegértéke 2.000 M Ft, piaci értéke 2.200 M Ft. Az átvett kötelezettségek értéke 1.600 M Ft. Könyvelje le vegyes naplóban!",
+   "adatok": {
+    "vetelar_a": 1000000000,
+    "afa_a": 300000000,
+    "vetelar_b": 400000000,
+    "afa_b": 150000000,
+    "eszkozok_merlegerteke": 2000000000,
+    "eszkozok_piaci_erteke": 2200000000,
+    "atvett_kotelezettsegek": 1600000000
+   },
+   "megoldas": {
+    "szamitasok": [
+     {
+      "mit": "Nettó eszközérték piaci áron",
+      "keplet": "2 200 − 1 600 MFt",
+      "eredmeny": 600000000
+     },
+     {
+      "mit": "a) cégérték",
+      "keplet": "1 000 − 600 MFt",
+      "eredmeny": 400000000
+     },
+     {
+      "mit": "b) negatív cégérték",
+      "keplet": "400 − 600 MFt",
+      "eredmeny": -200000000
+     },
+     {
+      "mit": "a) szállító egyenlege (ellenőrzés)",
+      "keplet": "2 200 + 300 + 400 − 1 600 MFt = 1 000 + 300",
+      "eredmeny": 1300000000
+     },
+     {
+      "mit": "b) szállító egyenlege (ellenőrzés)",
+      "keplet": "2 200 + 150 − 1 600 − 200 MFt = 400 + 150",
+      "eredmeny": 550000000
+     }
+    ],
+    "tetelek": [
+     {
+      "sorszam": "a1a",
+      "esemeny": "a) Eszközök állományba vétele piaci értéken",
+      "T": "1–3 (11, 12–16, 31–36, 38, 39)",
+      "K": "4541 / 4551",
+      "osszeg": 2200000000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "a1b",
+      "esemeny": "a) Előzetes áfa",
+      "T": "466",
+      "K": "4541 / 4551",
+      "osszeg": 300000000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "a1c",
+      "esemeny": "a) Kötelezettségek állományba vétele",
+      "T": "4541 / 4551",
+      "K": "43–47",
+      "osszeg": 1600000000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "a1d",
+      "esemeny": "a) Üzleti vagy cégérték",
+      "T": "115",
+      "K": "4541 / 4551",
+      "osszeg": 400000000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "b1a",
+      "esemeny": "b) Eszközök piaci értéken",
+      "T": "1–3",
+      "K": "4541 / 4551",
+      "osszeg": 2200000000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "b1b",
+      "esemeny": "b) Előzetes áfa",
+      "T": "466",
+      "K": "4541 / 4551",
+      "osszeg": 150000000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "b1c",
+      "esemeny": "b) Kötelezettségek",
+      "T": "4541 / 4551",
+      "K": "43–47",
+      "osszeg": 1600000000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "b1d",
+      "esemeny": "b) Negatív üzleti vagy cégérték elszámolása",
+      "T": "4541 / 4551",
+      "K": "9695",
+      "osszeg": 200000000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "b1e",
+      "esemeny": "b) Negatív cégérték elhatárolása (halasztott bevétel)",
+      "T": "9695",
+      "K": "4834",
+      "osszeg": 200000000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "b1f",
+      "esemeny": "b) Elhatárolás éves feloldása (pl. 10 év – kézírásos jegyzet)",
+      "T": "4834",
+      "K": "9695",
+      "osszeg": 20000000,
+      "szamitas": "200 M / 10 év"
+     }
+    ],
+    "egyeb": {}
+   },
+   "tanulsagok": [
+    "Az eszközöket PIACI értéken (nem mérlegértéken) vesszük állományba.",
+    "Goodwill → 115; badwill → 9695, majd 4834, 5–10 év alatt feloldva."
+   ],
+   "elteresek_a_forrasban": [
+    "Az áfa-adatok nem a 27%-os kulcsnak felelnek meg (300 M a 1 000 M 30%-a, 150 M a 400 M 37,5%-a) – a forrás adatait használjuk.",
+    "A b1f (éves feloldás) tétel csak a kézírásos jegyzetben szerepel (pl. 10 év → 20 M)."
+   ]
+  },
+  {
+   "id": "II-1",
+   "forras": "II_Immateriális javak feladatsor (+ megoldása, II_órai jegyzet)",
+   "cim": "Szabadalom apportként alapításkor",
+   "szoveg": "Az alapított vállalkozó apportba kapott egy szabadalmat. A szabadalom létesítő okirat szerinti értéke 3.000.000 Ft. Könyvelje le vegyes naplóban!",
+   "adatok": {
+    "letesito_okirat_szerinti_ertek": 3000000
+   },
+   "megoldas": {
+    "szamitasok": [],
+    "tetelek": [
+     {
+      "sorszam": "1a",
+      "esemeny": "Szabadalom állományba vétele",
+      "T": "114",
+      "K": "479",
+      "osszeg": 3000000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "1b",
+      "esemeny": "Jegyzett tőke növekedése cégbírósági bejegyzéskor",
+      "T": "332 (33)",
+      "K": "411",
+      "osszeg": 3000000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "1c",
+      "esemeny": "Technikai átvezetés",
+      "T": "479",
+      "K": "332 (33)",
+      "osszeg": 3000000,
+      "szamitas": null
+     }
+    ],
+    "egyeb": {}
+   },
+   "tanulsagok": [
+    "Szabadalom = szellemi termék (114), nem vagyoni értékű jog.",
+    "Az apport a 479-en keresztül: bejegyzés előtt kötelezettség, bejegyzéskor 33/411, majd átvezetés."
+   ],
+   "elteresek_a_forrasban": [
+    "A nyomtatott megoldásban a számlaszám csonka: „3. Jegyzett, de még be nem fizetett tőke egyéb gazdálkodótól”; az órai jegyzet 332-t ír. A számlatükörben 332 = egyéb részesedési viszonyban lévő vállalkozástól; anyavállalattól 325, részesedési viszonyban nem lévőtől 358. A Moodle a „33”-at elfogadta.",
+    "A megoldás tételszámozása 1a, 1b, 1d (1c kimaradt)."
+   ]
+  },
+  {
+   "id": "II-2",
+   "forras": "II_Immateriális javak feladatsor (+ megoldása, II_órai jegyzet)",
+   "cim": "Gyártási eljárás térítés nélküli átvétele",
+   "szoveg": "A vállalkozó térítés nélkül átvesz egy gyártási eljárást, melynek piaci értéke 1.200.000 Ft. Leírása 3 év alatt történik, az átvétel időpontja július 1. Az ÁFÁ-t az átadó kiszámlázza. Könyvelje le vegyes naplóban!",
+   "adatok": {
+    "piaci_ertek": 1200000,
+    "elettartam_ev": 3,
+    "atvetel": "07-01",
+    "afa_kulcs": 0.27
+   },
+   "megoldas": {
+    "szamitasok": [
+     {
+      "mit": "Áfa",
+      "keplet": "1 200 000 × 0,27",
+      "eredmeny": 324000
+     },
+     {
+      "mit": "Éves ÉCS",
+      "keplet": "1 200 000 / 3",
+      "eredmeny": 400000
+     },
+     {
+      "mit": "Tárgyévi ÉCS",
+      "keplet": "400 000 × 6/12",
+      "eredmeny": 200000
+     }
+    ],
+    "tetelek": [
+     {
+      "sorszam": "1a",
+      "esemeny": "Állományba vétel piaci értéken",
+      "T": "114",
+      "K": "9647",
+      "osszeg": 1200000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "1b",
+      "esemeny": "Bevétel időbeli elhatárolása",
+      "T": "9647",
+      "K": "48331",
+      "osszeg": 1200000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "1c",
+      "esemeny": "Átadó által kiszámlázott áfa",
+      "T": "466",
+      "K": "479",
+      "osszeg": 324000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "1d",
+      "esemeny": "Tárgyévi terv szerinti ÉCS",
+      "T": "571 (5711)",
+      "K": "119",
+      "osszeg": 200000,
+      "szamitas": null
+     },
+     {
+      "sorszam": "1e",
+      "esemeny": "Halasztott bevétel feloldása",
+      "T": "48331",
+      "K": "9647",
+      "osszeg": 200000,
+      "szamitas": "= tárgyévi ÉCS"
+     }
+    ],
+    "egyeb": {}
+   },
+   "tanulsagok": [
+    "Gyártási eljárás = szellemi termék (114).",
+    "Térítés nélküli átvétel: 9647 → 48331, feloldás az ÉCS-sel azonos összegben.",
+    "Az áfát nem az átadónak fizetjük szállítóként, hanem 479-re."
+   ],
+   "elteresek_a_forrasban": [
+    "1b-ben K 48331, 1e-ben T 4833 – ugyanaz a számla, helyesen 48331 (az órai jegyzet is 48331).",
+    "A megoldás „rendkívüli bevétel”-ről ír – a 2016 óta hatályos szabályok szerint egyéb bevétel (9647).",
+    "1c dián az „Összeg” mellett előbb 1 200 000 Ft áll, a tényleges összeg 324 000 Ft."
+   ]
+  },
+  {
+   "id": "II-3",
+   "forras": "II_Immateriális javak feladatsor (+ megoldása, II_órai jegyzet)",
+   "cim": "Szellemi termék apportba adása",
+   "szoveg": "„A” vállalkozó nem pénzbeli hozzájárulásként „B” vállalkozónak átadott szellemi terméket, melynek számviteli nyilvántartás szerinti értékcsökkenése 150.000 Ft. Az átadott szellemi termék bruttó értéke 300.000 Ft, társasági szerződés szerinti értéke 200.000 Ft. Könyvelje le!",
+   "adatok": {
+    "brutto": 300000,
+    "ecs": 150000,
+    "letesito_okirat_szerinti_ertek": 200000
+   },
+   "megoldas": {
+    "szamitasok": [
+     {
+      "mit": "Nettó érték",
+      "keplet": "300 000 − 150 000",
+      "eredmeny": 150000
+     },
+     {
+      "mit": "Nyereség",
+      "keplet": "200 000 − 150 000",
+      "eredmeny": 50000
+     }
+    ],
+    "tetelek": [
+     {
+      "sorszam": 1,
+      "esemeny": "Létesítő okirat szerinti érték",
+      "T": "366",
+      "K": "368",
+      "osszeg": 200000,
+      "szamitas": null
+     },
+     {
+      "sorszam": 2,
+      "esemeny": "Nettó érték kivezetése",
+      "T": "368",
+      "K": "114",
+      "osszeg": 150000,
+      "szamitas": null
+     },
+     {
+      "sorszam": 3,
+      "esemeny": "Halmozott ÉCS kivezetése",
+      "T": "119",
+      "K": "114",
+      "osszeg": 150000,
+      "szamitas": null
+     },
+     {
+      "sorszam": 4,
+      "esemeny": "Különbözet (nyereség)",
+      "T": "368",
+      "K": "9642",
+      "osszeg": 50000,
+      "szamitas": null
+     },
+     {
+      "sorszam": 5,
+      "esemeny": "Részesedés nyilvántartásba vétele cégbírósági bejegyzéskor",
+      "T": "172",
+      "K": "366",
+      "osszeg": 200000,
+      "szamitas": null
+     }
+    ],
+    "egyeb": {}
+   },
+   "tanulsagok": [
+    "Apport: a létesítő okirat szerinti és a könyv szerinti érték különbözete 9642 (nyereség) vagy 8642 (veszteség).",
+    "Részesedés: 172 (kapcsolt vállalkozásnál 171)."
+   ],
+   "elteresek_a_forrasban": [
+    "A nyomtatott megoldás a technikai számlát csonkán „3.”-nak írja; az órai jegyzet 368.",
+    "A megoldásban kétszer szerepel „3)” sorszám.",
+    "Az órai jegyzet T-számláján elírás: „150.0000”."
+   ]
+  },
+  {
+   "id": "II-4",
+   "forras": "II_Immateriális javak feladatsor (+ megoldása, II_órai jegyzet)",
+   "cim": "Bérleti jog térítés nélküli átadása iskolának",
+   "szoveg": "Egy vállalkozó térítés nélkül egy bérleti jogot ad át egy iskolának. A bérleti jog nyilvántartás szerinti bruttó értéke 300.000 Ft, az átadásig elszámolt terv szerinti értékcsökkenés 120.000 Ft. Az ÁFA kiszámlázásra került az átvevő felé. A bérleti jog piaci értéke 200.000 Ft. Könyvelje le!",
+   "adatok": {
+    "brutto": 300000,
+    "ecs": 120000,
+    "piaci_ertek": 200000,
+    "afa_kulcs": 0.27,
+    "afa_kiszamlazva": true
+   },
+   "megoldas": {
+    "szamitasok": [
+     {
+      "mit": "Nettó érték",
+      "keplet": "300 000 − 120 000",
+      "eredmeny": 180000
+     },
+     {
+      "mit": "Áfa a piaci érték után",
+      "keplet": "200 000 × 0,27",
+      "eredmeny": 54000
+     }
+    ],
+    "tetelek": [
+     {
+      "sorszam": 1,
+      "esemeny": "Nettó érték kivezetése",
+      "T": "8647",
+      "K": "113",
+      "osszeg": 180000,
+      "szamitas": null
+     },
+     {
+      "sorszam": 2,
+      "esemeny": "Halmozott ÉCS kivezetése",
+      "T": "119",
+      "K": "113",
+      "osszeg": 120000,
+      "szamitas": null
+     },
+     {
+      "sorszam": 3,
+      "esemeny": "Fizetendő áfa (kiszámlázva)",
+      "T": "368",
+      "K": "467",
+      "osszeg": 54000,
+      "szamitas": null
+     }
+    ],
+    "egyeb": {
+     "ha_nem_szamlazza_ki": "T 8647 / K 467 54 000"
+    }
+   },
+   "tanulsagok": [
+    "Térítés nélküli átadás: nettó érték 8647 egyéb ráfordítás.",
+    "Áfa a PIACI érték után; kiszámlázva 368 követelés."
+   ],
+   "elteresek_a_forrasban": []
+  }
+ ],
+ "moodle_konyvelesi_teszt_javitas": {
+  "modszer": "A pontozás tételsoronként T, K és összeg = 1-1 pont. A beadott válasz és az elért pont alapján meghatározható, hány mező volt rossz; ezt a forrás (I–II. feladatsor megoldásai, órai jegyzetek) tételeivel vetettük össze. Ahol a kérdés azonos egy feladatsorbeli feladattal, ott a megoldókulcs a döntő. A Moodle elfogadta a 3 jegyű főszámlát ott, ahol a forrás 4 jegyűt ír (454, 417, 571, 33), de NEM fogadta el a 36-ot (366/368 helyett) és a 96-ot (9647/9642/9663 helyett). A ZH-n a 4–5 jegyű számot érdemes írni.",
+  "kerdesek": [
+   {
+    "n": 1,
+    "cim": "Szabadalom apportként alapításkor",
+    "pont": "8/9",
+    "helyes": [
+     {
+      "T": "114",
+      "K": "479",
+      "osszeg": 3000000
+     },
+     {
+      "T": "33 (332)",
+      "K": "411",
+      "osszeg": 3000000
+     },
+     {
+      "T": "479",
+      "K": "33 (332)",
+      "osszeg": 3000000
+     }
+    ],
+    "hiba_a_beadottban": "1. sor T 112 → 114 (a szabadalom szellemi termék). 1 hibás mező = 8/9.",
+    "indoklas": "II/1. feladat."
+   },
+   {
+    "n": 2,
+    "cim": "Mobilalkalmazás terven felüli ÉCS",
+    "pont": "1/3",
+    "helyes": [
+     {
+      "T": "8663",
+      "K": "118",
+      "osszeg": 1200000
+     }
+    ],
+    "hiba_a_beadottban": "T 572 → 8663, K 119 → 118 (2 hibás mező).",
+    "indoklas": "Terven felüli ÉCS egyéb ráfordítás; 119 a terv szerinti."
+   },
+   {
+    "n": 3,
+    "cim": "Bérleti jog térítés nélküli átadása",
+    "pont": "4/9",
+    "helyes": [
+     {
+      "T": "8647",
+      "K": "113",
+      "osszeg": 180000
+     },
+     {
+      "T": "119",
+      "K": "113",
+      "osszeg": 120000
+     },
+     {
+      "T": "368",
+      "K": "467",
+      "osszeg": 54000
+     }
+    ],
+    "hiba_a_beadottban": "T 869 → 8647; K 112 → 113 (két sorban); T 118 → 119; T 36 → 368. 5 hibás mező = 4/9.",
+    "indoklas": "II/4. feladat. A tesztkerdesek_moodle.json javaslata az áfánál „T 36”-ot ír – a pontszám szerint az is hibás volt, helyesen 368."
+   },
+   {
+    "n": 4,
+    "cim": "Szellemi termék értékhelyesbítése",
+    "pont": "3/3",
+    "helyes": [
+     {
+      "T": "117",
+      "K": "4171",
+      "osszeg": 1200000
+     }
+    ],
+    "hiba_a_beadottban": "Nincs hiba (a 417-et elfogadta; pontosan 4171).",
+    "indoklas": "I/2. feladat logikája."
+   },
+   {
+    "n": 5,
+    "cim": "ERP használati jog vásárlása",
+    "pont": "5/6",
+    "helyes": [
+     {
+      "T": "113",
+      "K": "4541",
+      "osszeg": 3000000
+     },
+     {
+      "T": "466",
+      "K": "4541",
+      "osszeg": 810000
+     }
+    ],
+    "hiba_a_beadottban": "T 112 → 113 (használati jog = vagyoni értékű jog). 1 hibás mező.",
+    "indoklas": "I/1. feladat logikája; 454 elfogadva, pontosan 4541."
+   },
+   {
+    "n": 6,
+    "cim": "Gyártási eljárás térítés nélküli átvétele",
+    "pont": "9/15",
+    "helyes": [
+     {
+      "T": "114",
+      "K": "9647",
+      "osszeg": 1200000
+     },
+     {
+      "T": "9647",
+      "K": "48331",
+      "osszeg": 1200000
+     },
+     {
+      "T": "466",
+      "K": "479",
+      "osszeg": 324000
+     },
+     {
+      "T": "571 (5711)",
+      "K": "119",
+      "osszeg": 200000
+     },
+     {
+      "T": "48331",
+      "K": "9647",
+      "osszeg": 200000
+     }
+    ],
+    "hiba_a_beadottban": "K 96 → 9647; T 96 → 9647 és K 482 → 48331; K 118 → 119; T 482 → 48331 és K 96 → 9647. 6 hibás mező = 9/15.",
+    "indoklas": "II/2. feladat – tételre azonos."
+   },
+   {
+    "n": 7,
+    "cim": "Szoftver éves ÉCS",
+    "pont": "2/3",
+    "helyes": [
+     {
+      "T": "571 (5711)",
+      "K": "119",
+      "osszeg": 1200000
+     }
+    ],
+    "hiba_a_beadottban": "K 118 → 119.",
+    "indoklas": "Terv szerinti ÉCS: 119."
+   },
+   {
+    "n": 8,
+    "cim": "Szellemi termék terven felüli ÉCS visszaírása",
+    "pont": "1/3",
+    "helyes": [
+     {
+      "T": "118",
+      "K": "9663",
+      "osszeg": 300000
+     }
+    ],
+    "hiba_a_beadottban": "T 119 → 118, K 96 → 9663.",
+    "indoklas": "Visszaírás: T 118 / K 9663."
+   },
+   {
+    "n": 9,
+    "cim": "Szabadalom vásárlása",
+    "pont": "6/6",
+    "helyes": [
+     {
+      "T": "114",
+      "K": "4541",
+      "osszeg": 2000000
+     },
+     {
+      "T": "466",
+      "K": "4541",
+      "osszeg": 540000
+     }
+    ],
+    "hiba_a_beadottban": "Nincs hiba.",
+    "indoklas": null
+   },
+   {
+    "n": 10,
+    "cim": "Használhatatlan szoftver kivezetése",
+    "pont": "4/6",
+    "helyes": [
+     {
+      "T": "8663",
+      "K": "114",
+      "osszeg": 150000
+     },
+     {
+      "T": "119",
+      "K": "114",
+      "osszeg": 750000
+     }
+    ],
+    "hiba_a_beadottban": "T 572 → 8663 (vagy 8692); T 118 → 119. 2 hibás mező: K 114 és az összegek jók voltak.",
+    "indoklas": "A pontszám csak azt igazolja, hogy a 572 és a 118 rossz; a forrás (I/6.) logikája szerint a nettó érték terven felüli ÉCS (8663), a halmozott terv szerinti ÉCS kivezetése T 119. Teljes formában: T 8663 / K 118 150 000, T 118 / K 114 150 000, T 119 / K 114 750 000. A 2 soros Moodle-válaszban a nettó érték közvetlenül K 114. Hogy 8663 vagy 8692 a kulcs, a forrásból nem dönthető el biztosan; a kurzus konvenciója (szamlaszamok.json) 8663."
+   },
+   {
+    "n": 11,
+    "cim": "Szoftverre adott előleg",
+    "pont": "5/6",
+    "helyes": [
+     {
+      "T": "351",
+      "K": "384",
+      "osszeg": 500000
+     },
+     {
+      "T": "466",
+      "K": "384",
+      "osszeg": 135000
+     }
+    ],
+    "hiba_a_beadottban": "T 116 → 351 (116 számla nem létezik a számlatükörben).",
+    "indoklas": "Immateriális javakra adott előleg: 351."
+   },
+   {
+    "n": 12,
+    "cim": "Szoftver végszámla előleg-beszámítással",
+    "pont": "11/12",
+    "helyes": [
+     {
+      "T": "114",
+      "K": "4541",
+      "osszeg": 1500000
+     },
+     {
+      "T": "466",
+      "K": "4541",
+      "osszeg": 405000
+     },
+     {
+      "T": "4541",
+      "K": "351",
+      "osszeg": 500000
+     },
+     {
+      "T": "4541",
+      "K": "466",
+      "osszeg": 135000
+     }
+    ],
+    "hiba_a_beadottban": "K 116 → 351.",
+    "indoklas": null
+   },
+   {
+    "n": 13,
+    "cim": "Gyártási eljárás értékesítése (368)",
+    "pont": "13/15",
+    "helyes": [
+     {
+      "T": "311",
+      "K": "368",
+      "osszeg": 800000
+     },
+     {
+      "T": "311",
+      "K": "467",
+      "osszeg": 216000
+     },
+     {
+      "T": "368",
+      "K": "114",
+      "osszeg": 600000
+     },
+     {
+      "T": "119",
+      "K": "114",
+      "osszeg": 900000
+     },
+     {
+      "T": "368",
+      "K": "961",
+      "osszeg": 200000
+     }
+    ],
+    "hiba_a_beadottban": "T 118 → 119; K 96 → 961. 2 hibás mező.",
+    "indoklas": "I/3. feladat módszere; itt nyereség (800 000 > 600 000) → K 961."
+   },
+   {
+    "n": 14,
+    "cim": "Szellemi termék apportba adása (368)",
+    "pont": "10/15",
+    "helyes": [
+     {
+      "T": "366",
+      "K": "368",
+      "osszeg": 200000
+     },
+     {
+      "T": "368",
+      "K": "114",
+      "osszeg": 150000
+     },
+     {
+      "T": "119",
+      "K": "114",
+      "osszeg": 150000
+     },
+     {
+      "T": "368",
+      "K": "9642",
+      "osszeg": 50000
+     },
+     {
+      "T": "172",
+      "K": "366",
+      "osszeg": 200000
+     }
+    ],
+    "hiba_a_beadottban": "T 36 → 366; T 118 → 119; K 96 → 9642; T 17 → 172 és K 36 → 366. 5 hibás mező = 10/15.",
+    "indoklas": "II/3. feladat – tételre azonos; részesedés 172 (nem 171)."
+   },
+   {
+    "n": 15,
+    "cim": "Szoftver szállítói tartozás kiegyenlítése",
+    "pont": "3/3",
+    "helyes": [
+     {
+      "T": "4541",
+      "K": "384",
+      "osszeg": 1270000
+     }
+    ],
+    "hiba_a_beadottban": "Nincs hiba.",
+    "indoklas": null
+   }
+  ]
+ },
+ "gyakorlo_kerdesek": [
+  {
+   "id": "Q01",
+   "tipus": "egyvalasztos",
+   "kerdes": "Melyik immateriális jószágnál NEM lehet terv szerinti értékcsökkenést elszámolni?",
+   "opciok": [
+    "Szellemi termékek",
+    "Immateriális javakra adott előleg",
+    "Üzleti vagy cégérték",
+    "Alapítás-átszervezés aktivált értéke"
+   ],
+   "helyes": "Immateriális javakra adott előleg",
+   "magyarazat": "Előlegnél nincs terv szerinti leírás, csak értékvesztés.",
+   "forras": "teszt"
+  },
+  {
+   "id": "Q02",
+   "tipus": "egyvalasztos",
+   "kerdes": "Melyik igaz a vagyoni értékű jogokra?",
+   "opciok": [
+    "Saját előállítással is aktiválhatók",
+    "Saját előállítással nem aktiválhatók",
+    "Csak apporttal kerülhetnek be",
+    "Az ingatlanhoz kapcsolódó jogok is ide tartoznak"
+   ],
+   "helyes": "Saját előállítással nem aktiválhatók",
+   "magyarazat": "Minden mozgásnem lehet, kivéve a saját előállítást.",
+   "forras": "teszt"
+  },
+  {
+   "id": "Q03",
+   "tipus": "tobbvalasztos",
+   "kerdes": "Melyek az immateriális javak mérlegsorai?",
+   "opciok": [
+    "Alapítás-átszervezés aktivált értéke",
+    "Kísérleti fejlesztés aktivált értéke",
+    "Szellemi termékek",
+    "Beruházások",
+    "Alapkutatás aktivált értéke"
+   ],
+   "helyes": [
+    "Alapítás-átszervezés aktivált értéke",
+    "Kísérleti fejlesztés aktivált értéke",
+    "Szellemi termékek"
+   ],
+   "magyarazat": "A beruházás tárgyi eszköz; az alapkutatás nem aktiválható.",
+   "forras": "teszt"
+  },
+  {
+   "id": "Q04",
+   "tipus": "egyvalasztos",
+   "kerdes": "Mi a teendő a befejezett, de nem hasznosítható kísérleti fejlesztéssel?",
+   "opciok": [
+    "Tovább kell vinni a terv szerinti leírást",
+    "Terven felüli ÉCS-t kell elszámolni",
+    "Értékhelyesbítést kell elszámolni",
+    "Át kell sorolni szellemi termékbe"
+   ],
+   "helyes": "Terven felüli ÉCS-t kell elszámolni",
+   "magyarazat": "A mérlegben már nem szerepelhet.",
+   "forras": "teszt"
+  },
+  {
+   "id": "Q05",
+   "tipus": "egyvalasztos",
+   "kerdes": "Mikor keletkezik pozitív üzleti vagy cégérték?",
+   "opciok": [
+    "Fizetett ellenérték > számított piaci érték",
+    "Fizetett ellenérték < számított piaci érték",
+    "Mérlegérték > piaci érték",
+    "Belső működés során"
+   ],
+   "helyes": "Fizetett ellenérték > számított piaci érték",
+   "magyarazat": "Számított piaci érték = eszközök piaci értéke − átvállalt kötelezettségek.",
+   "forras": "teszt"
+  },
+  {
+   "id": "Q06",
+   "tipus": "tobbvalasztos",
+   "kerdes": "Melyek az immateriális javak jellemzői?",
+   "opciok": [
+    "Nem tárgyiasultak",
+    "Közvetlenül és tartósan szolgálják a tevékenységet",
+    "Üzembe helyezéssel aktiválódnak",
+    "Beruházásként tartjuk nyilván"
+   ],
+   "helyes": [
+    "Nem tárgyiasultak",
+    "Közvetlenül és tartósan szolgálják a tevékenységet"
+   ],
+   "magyarazat": "Üzembe helyezés és beruházás nincs, csak állományba vétel.",
+   "forras": "teszt"
+  },
+  {
+   "id": "Q07",
+   "tipus": "egyvalasztos",
+   "kerdes": "Kísérleti fejlesztés eredményeként saját használatú gyártógép készül. Hová soroljuk?",
+   "opciok": [
+    "Kísérleti fejlesztés aktivált értéke",
+    "Szellemi termék",
+    "Tárgyi eszköz – műszaki berendezés, gép",
+    "Késztermék"
+   ],
+   "helyes": "Tárgyi eszköz – műszaki berendezés, gép",
+   "magyarazat": "A sikeres prototípusból lett saját gép tárgyi eszköz.",
+   "forras": "teszt"
+  },
+  {
+   "id": "Q08",
+   "tipus": "tobbvalasztos",
+   "kerdes": "Mi NEM aktiválható?",
+   "opciok": [
+    "Alapkutatás",
+    "Alkalmazott kutatás",
+    "Kísérleti fejlesztés",
+    "Minőségbiztosítási rendszer bevezetése"
+   ],
+   "helyes": [
+    "Alapkutatás",
+    "Alkalmazott kutatás"
+   ],
+   "magyarazat": "Csak a kísérleti fejlesztés aktiválható a K+F-ből; a minőségbiztosítás alapítás-átszervezésként aktiválható.",
+   "forras": "teszt"
+  },
+  {
+   "id": "Q09",
+   "tipus": "tobbvalasztos",
+   "kerdes": "Melyiknél NEM írható vissza a terven felüli ÉCS?",
+   "opciok": [
+    "Üzleti vagy cégérték",
+    "Alapítás-átszervezés aktivált értéke",
+    "Szellemi termékek",
+    "Vagyoni értékű jogok"
+   ],
+   "helyes": [
+    "Üzleti vagy cégérték"
+   ],
+   "magyarazat": "Csak a cégértéknél tilos a visszaírás – az alapítás-átszervezést tévesen jelölte be a beadott teszt.",
+   "forras": "teszt"
+  },
+  {
+   "id": "Q10",
+   "tipus": "tobbvalasztos",
+   "kerdes": "Melyek alapítás-átszervezés tételei?",
+   "opciok": [
+    "Társasági szerződés ügyvédi díja",
+    "Számviteli rendszer kialakításának szakértői díja",
+    "Folyamat-újratervezés szakértői díja",
+    "Új gép vételára",
+    "Alapkutatás költsége"
+   ],
+   "helyes": [
+    "Társasági szerződés ügyvédi díja",
+    "Számviteli rendszer kialakításának szakértői díja",
+    "Folyamat-újratervezés szakértői díja"
+   ],
+   "magyarazat": "A gép beruházás, az alapkutatás nem aktiválható.",
+   "forras": "teszt"
+  },
+  {
+   "id": "Q11",
+   "tipus": "tobbvalasztos",
+   "kerdes": "Melyek a kísérleti fejlesztés jellemzői?",
+   "opciok": [
+    "Új/javított termék, eljárás létrehozása",
+    "Korábbi kutatásokra támaszkodik",
+    "Rendszeres munka",
+    "Gyakorlati alkalmazás kilátásba helyezése nélküli"
+   ],
+   "helyes": [
+    "Új/javított termék, eljárás létrehozása",
+    "Korábbi kutatásokra támaszkodik",
+    "Rendszeres munka"
+   ],
+   "magyarazat": "Az utolsó az alapkutatás jellemzője.",
+   "forras": "teszt"
+  },
+  {
+   "id": "Q12",
+   "tipus": "egyvalasztos",
+   "kerdes": "Melyik NEM vagyoni értékű jog?",
+   "opciok": [
+    "Bérleti jog",
+    "Licenc",
+    "Szabadalom",
+    "Koncessziós jog"
+   ],
+   "helyes": "Szabadalom",
+   "magyarazat": "A szabadalom szellemi termék (iparjogvédelem).",
+   "forras": "teszt"
+  },
+  {
+   "id": "Q13",
+   "tipus": "egyvalasztos",
+   "kerdes": "Immateriális javakra adott előlegnél mi számolható el?",
+   "opciok": [
+    "Terv szerinti ÉCS",
+    "Terven felüli ÉCS",
+    "Értékvesztés",
+    "Értékhelyesbítés"
+   ],
+   "helyes": "Értékvesztés",
+   "magyarazat": "Előlegnél csak értékvesztés és annak visszaírása.",
+   "forras": "teszt"
+  },
+  {
+   "id": "Q14",
+   "tipus": "tobbvalasztos",
+   "kerdes": "Mikor indokolt terven felüli ÉCS?",
+   "opciok": [
+    "Könyv szerinti érték tartósan, jelentősen > piaci érték",
+    "Feleslegessé vált",
+    "Megrongálódás miatt nem használható",
+    "A piaci érték jelentősen > könyv szerinti érték"
+   ],
+   "helyes": [
+    "Könyv szerinti érték tartósan, jelentősen > piaci érték",
+    "Feleslegessé vált",
+    "Megrongálódás miatt nem használható"
+   ],
+   "magyarazat": "Az utolsó az értékhelyesbítés feltétele.",
+   "forras": "teszt"
+  },
+  {
+   "id": "Q15",
+   "tipus": "tobbvalasztos",
+   "kerdes": "Mely immateriális javak írhatók le 200 eFt alatt egy összegben?",
+   "opciok": [
+    "Vagyoni értékű jogok",
+    "Szellemi termékek",
+    "Üzleti vagy cégérték",
+    "Alapítás-átszervezés aktivált értéke"
+   ],
+   "helyes": [
+    "Vagyoni értékű jogok",
+    "Szellemi termékek"
+   ],
+   "magyarazat": "Időkorlát-tábla.",
+   "forras": "teszt"
+  },
+  {
+   "id": "Q16",
+   "tipus": "egyvalasztos",
+   "kerdes": "Mikor kell a terven felüli ÉCS-t visszaírni?",
+   "opciok": [
+    "Minden év végén",
+    "Ha az okok már nem vagy csak részben állnak fenn",
+    "Ha a vállalkozás úgy dönt, bármikor",
+    "Soha"
+   ],
+   "helyes": "Ha az okok már nem vagy csak részben állnak fenn",
+   "magyarazat": "Mérlegfordulónapi értékelés keretében, max. a terven felüli ÉCS összegéig.",
+   "forras": "teszt"
+  },
+  {
+   "id": "Q17",
+   "tipus": "egyvalasztos",
+   "kerdes": "Az alapítás-átszervezés aktiválása…",
+   "opciok": [
+    "kötelező",
+    "tilos",
+    "a vállalkozó döntésétől függ",
+    "csak saját kivitelezésnél lehet"
+   ],
+   "helyes": "a vállalkozó döntésétől függ",
+   "magyarazat": "Számviteli politikában rögzítve.",
+   "forras": "teszt"
+  },
+  {
+   "id": "Q18",
+   "tipus": "egyvalasztos",
+   "kerdes": "Saját fejlesztésű, használatba vett gyártószoftver mérlegbeli besorolása:",
+   "opciok": [
+    "Kísérleti fejlesztés aktivált értéke",
+    "Szellemi termék",
+    "Vagyoni értékű jog",
+    "Műszaki berendezés"
+   ],
+   "helyes": "Szellemi termék",
+   "magyarazat": "Szoftver = szerzői jogvédelem alá eső szellemi termék.",
+   "forras": "teszt"
+  },
+  {
+   "id": "Q19",
+   "tipus": "egyvalasztos",
+   "kerdes": "Beszerzett immateriális jószág bekerülési értéke:",
+   "opciok": [
+    "Piaci érték",
+    "Tényleges beszerzési ár + járulékos tételek",
+    "Apportérték",
+    "Előállítási költség"
+   ],
+   "helyes": "Tényleges beszerzési ár + járulékos tételek",
+   "magyarazat": null,
+   "forras": "teszt"
+  },
+  {
+   "id": "Q20",
+   "tipus": "egyvalasztos",
+   "kerdes": "Az alapítás-átszervezés aktivált értéke mellé a saját tőkében mit kell képezni?",
+   "opciok": [
+    "Értékelési tartalékot",
+    "Tőketartalékot",
+    "Lekötött tartalékot",
+    "Céltartalékot"
+   ],
+   "helyes": "Lekötött tartalékot",
+   "magyarazat": "T 413 / K 4142 – osztalékfizetési korlát.",
+   "forras": "teszt"
+  },
+  {
+   "id": "Q21",
+   "tipus": "tobbvalasztos",
+   "kerdes": "Mely immateriális javaknál alkalmazható értékhelyesbítés?",
+   "opciok": [
+    "Vagyoni értékű jogok",
+    "Szellemi termékek",
+    "Üzleti vagy cégérték",
+    "Kísérleti fejlesztés"
+   ],
+   "helyes": [
+    "Vagyoni értékű jogok",
+    "Szellemi termékek"
+   ],
+   "magyarazat": null,
+   "forras": "teszt"
+  },
+  {
+   "id": "Q22",
+   "tipus": "kifejtes",
+   "kerdes": "Fejtse ki az alapítás-átszervezés aktivált értéke fogalmát! (7 pont)",
+   "opciok": null,
+   "helyes": "Lásd F02: beruházásnak nem minősülő; alapítás/indítás/bővítés/átalakítás/átszervezés; jövőbeni bevételekben megtérülő; közvetlen költségek/számlázott tételek; aktiválás vállalkozói döntés, különben költség; idegen/saját/vegyes kivitelezés értékelése; ≤5 év leírás; lekötött tartalék, osztalékkorlát; példák.",
+   "magyarazat": "Minta-ZH fogalom-kérdés.",
+   "forras": "tananyag"
+  },
+  {
+   "id": "Q23",
+   "tipus": "kifejtes",
+   "kerdes": "Fejtse ki a kísérleti fejlesztés aktivált értéke fogalmát!",
+   "opciok": null,
+   "helyes": "Lásd F03.",
+   "magyarazat": null,
+   "forras": "tananyag"
+  },
+  {
+   "id": "Q24",
+   "tipus": "kifejtes",
+   "kerdes": "Fejtse ki az üzleti vagy cégérték (pozitív és negatív) fogalmát és elszámolását!",
+   "opciok": null,
+   "helyes": "Lásd F08, F09.",
+   "magyarazat": null,
+   "forras": "tananyag"
+  },
+  {
+   "id": "Q25",
+   "tipus": "kifejtes",
+   "kerdes": "Mutassa be az immateriális javak értékhelyesbítését!",
+   "opciok": null,
+   "helyes": "Lásd F11.",
+   "magyarazat": null,
+   "forras": "tananyag"
+  },
+  {
+   "id": "Q26",
+   "tipus": "kifejtes",
+   "kerdes": "Mutassa be az immateriális javak terven felüli értékcsökkenését és visszaírását!",
+   "opciok": null,
+   "helyes": "Lásd F13.",
+   "magyarazat": null,
+   "forras": "tananyag"
+  },
+  {
+   "id": "Q27",
+   "tipus": "igaz_hamis",
+   "kerdes": "Az ingatlanhoz kapcsolódó vagyoni értékű jog az immateriális javak között szerepel.",
+   "opciok": null,
+   "helyes": false,
+   "magyarazat": "A tárgyi eszközök (12.) között.",
+   "forras": "tananyag"
+  },
+  {
+   "id": "Q28",
+   "tipus": "igaz_hamis",
+   "kerdes": "Az értékhelyesbítés módosítja az immateriális jószág könyv szerinti értékét.",
+   "opciok": null,
+   "helyes": false,
+   "magyarazat": "Külön soron jelenik meg, a könyv szerinti értéket nem módosítja.",
+   "forras": "tananyag"
+  },
+  {
+   "id": "Q29",
+   "tipus": "igaz_hamis",
+   "kerdes": "Az értékhelyesbítést a fordulónapon ismert piaci érték alapján kell meghatározni.",
+   "opciok": null,
+   "helyes": false,
+   "magyarazat": "A mérlegKÉSZÍTÉSKOR ismert értékek alapján, de fordulónapi dátummal.",
+   "forras": "tananyag"
+  },
+  {
+   "id": "Q30",
+   "tipus": "igaz_hamis",
+   "kerdes": "Az alapítás-átszervezésnél a cégalapítás előtt felmerült tételek is aktiválhatók.",
+   "opciok": null,
+   "helyes": true,
+   "magyarazat": "Előtte és utána felmerülők is.",
+   "forras": "tananyag"
+  },
+  {
+   "id": "Q31",
+   "tipus": "igaz_hamis",
+   "kerdes": "Az üzleti vagy cégérték terv szerinti leírása legfeljebb 5 év.",
+   "opciok": null,
+   "helyes": false,
+   "magyarazat": "Min. 5 – max. 10 év; ≤5 év az alapítás-átszervezésnél és a kísérleti fejlesztésnél.",
+   "forras": "tananyag"
+  },
+  {
+   "id": "Q32",
+   "tipus": "egyvalasztos",
+   "kerdes": "Gépek áthelyezése technológiai változtatás nélkül:",
+   "opciok": [
+    "Alapítás-átszervezésként aktiválható",
+    "Nem aktiválható alapítás-átszervezésként",
+    "Kísérleti fejlesztés",
+    "Felújítás"
+   ],
+   "helyes": "Nem aktiválható alapítás-átszervezésként",
+   "magyarazat": "I/4. feladat.",
+   "forras": "feladat"
+  },
+  {
+   "id": "Q33",
+   "tipus": "parositas",
+   "kerdes": "Párosítsa a jogot / terméket a számlával!",
+   "opciok": [
+    "Bérleti jog",
+    "Szabadalom",
+    "Szoftver",
+    "Licenc",
+    "Know-how",
+    "Koncessziós jog",
+    "Védjegy",
+    "Használati jog"
+   ],
+   "helyes": {
+    "Bérleti jog": "113",
+    "Szabadalom": "114",
+    "Szoftver": "114",
+    "Licenc": "113",
+    "Know-how": "114",
+    "Koncessziós jog": "113",
+    "Védjegy": "114",
+    "Használati jog": "113"
+   },
+   "magyarazat": "113 vagyoni értékű jog, 114 szellemi termék.",
+   "forras": "generalt"
+  },
+  {
+   "id": "Q34",
+   "tipus": "szamitas",
+   "kerdes": "Bérleti jog bruttó 650 000, ÉCS 150 000, mérlegkészítéskori piaci érték 700 000. Mennyi az értékhelyesbítés és a tétel?",
+   "opciok": null,
+   "helyes": "200 000 Ft; T 117 / K 4171",
+   "magyarazat": "700 000 − 500 000.",
+   "forras": "feladat"
+  },
+  {
+   "id": "Q35",
+   "tipus": "szamitas",
+   "kerdes": "Bruttó 1 200 000, ÉCS 400 000 bérleti jogot 500 000 + áfáért adunk el. Mennyi és hol az eredmény?",
+   "opciok": null,
+   "helyes": "−300 000 Ft; T 861 / K 368",
+   "magyarazat": "I/3.",
+   "forras": "feladat"
+  },
+  {
+   "id": "Q36",
+   "tipus": "szamitas",
+   "kerdes": "820 000 Ft alapítás-átszervezést aktiválunk, TAO 9%. Mennyivel nagyobb az adózott eredmény, mint nem aktiválásnál?",
+   "opciok": null,
+   "helyes": 746200,
+   "magyarazat": "820 000 × 0,91; I/5.",
+   "forras": "feladat"
+  },
+  {
+   "id": "Q37",
+   "tipus": "szamitas",
+   "kerdes": "66 mFt koncessziós jog, 6 év lineáris, kezdet 2023.07.01., visszavonás 2026.12.31. Mennyi a terven felüli ÉCS?",
+   "opciok": null,
+   "helyes": 27500000,
+   "magyarazat": "66 − 5,5 − 3 × 11 = 27,5 mFt; T 8663 / K 118.",
+   "forras": "feladat"
+  },
+  {
+   "id": "Q38",
+   "tipus": "szamitas",
+   "kerdes": "Vételár 1 000 MFt, eszközök piaci értéke 2 200 MFt, mérlegértéke 2 000 MFt, átvállalt kötelezettség 1 600 MFt. Cégérték?",
+   "opciok": null,
+   "helyes": "400 MFt pozitív; T 115",
+   "magyarazat": "A mérlegérték nem számít, a piaci érték igen.",
+   "forras": "feladat"
+  },
+  {
+   "id": "Q39",
+   "tipus": "szamitas",
+   "kerdes": "Ugyanez 400 MFt vételárral? Tételek?",
+   "opciok": null,
+   "helyes": "−200 MFt: T 4541 / K 9695; T 9695 / K 4834; feloldás 10 év esetén évi 20 M (T 4834 / K 9695)",
+   "magyarazat": null,
+   "forras": "feladat"
+  },
+  {
+   "id": "Q40",
+   "tipus": "szamitas",
+   "kerdes": "Térítés nélkül átvett gyártási eljárás 1 200 000 Ft, 3 év, július 1. Tárgyévi ÉCS és feloldás?",
+   "opciok": null,
+   "helyes": "200 000 Ft: T 5711 / K 119 és T 48331 / K 9647",
+   "magyarazat": "II/2.",
+   "forras": "feladat"
+  },
+  {
+   "id": "Q41",
+   "tipus": "szamitas",
+   "kerdes": "Apportba adott szellemi termék: bruttó 300 000, ÉCS 150 000, létesítő okirat szerinti érték 200 000. Különbözet és számla?",
+   "opciok": null,
+   "helyes": "+50 000 Ft: T 368 / K 9642",
+   "magyarazat": "II/3.",
+   "forras": "feladat"
+  },
+  {
+   "id": "Q42",
+   "tipus": "szamitas",
+   "kerdes": "Térítés nélkül átadott bérleti jog: bruttó 300 000, ÉCS 120 000, piaci érték 200 000, áfa kiszámlázva. Tételek?",
+   "opciok": null,
+   "helyes": "T 8647 / K 113 180 000; T 119 / K 113 120 000; T 368 / K 467 54 000",
+   "magyarazat": "Áfa a piaci érték után.",
+   "forras": "feladat"
+  },
+  {
+   "id": "Q43",
+   "tipus": "egyvalasztos",
+   "kerdes": "Melyik a terven felüli ÉCS visszaírásának könyvelése immateriális jószágnál?",
+   "opciok": [
+    "T 119 / K 9663",
+    "T 118 / K 9663",
+    "T 118 / K 9664",
+    "T 8663 / K 118"
+   ],
+   "helyes": "T 118 / K 9663",
+   "magyarazat": "9664 a tárgyi eszközöké.",
+   "forras": "generalt"
+  },
+  {
+   "id": "Q44",
+   "tipus": "egyvalasztos",
+   "kerdes": "Szoftverre adott előleg átutalása:",
+   "opciok": [
+    "T 114 / K 384",
+    "T 351 / K 384",
+    "T 352 / K 384",
+    "T 116 / K 384"
+   ],
+   "helyes": "T 351 / K 384",
+   "magyarazat": "352 a beruházásokra adott előleg; 116 nem létezik.",
+   "forras": "generalt"
+  },
+  {
+   "id": "Q45",
+   "tipus": "merlegsor",
+   "kerdes": "Melyik mérlegsoron jelenik meg a negatív üzleti vagy cégérték?",
+   "opciok": null,
+   "helyes": "Forrásoldal: Passzív időbeli elhatárolások (Halasztott bevételek) – 4834; NEM az A.I. immateriális javak között.",
+   "magyarazat": null,
+   "forras": "generalt"
+  },
+  {
+   "id": "Q46",
+   "tipus": "merlegsor",
+   "kerdes": "Melyik mérlegsoron jelenik meg a szoftverre adott előleg?",
+   "opciok": null,
+   "helyes": "A.I.6. Immateriális javakra adott előlegek (számla: 351).",
+   "magyarazat": null,
+   "forras": "generalt"
+  },
+  {
+   "id": "Q47",
+   "tipus": "egyvalasztos",
+   "kerdes": "Melyik eredménykimutatás-sorba kerül a terven felüli ÉCS?",
+   "opciok": [
+    "Értékcsökkenési leírás",
+    "Egyéb ráfordítások",
+    "Pénzügyi műveletek ráfordításai",
+    "Anyagjellegű ráfordítások"
+   ],
+   "helyes": "Egyéb ráfordítások",
+   "magyarazat": "Visszaírása egyéb bevétel; terv szerinti ÉCS → értékcsökkenési leírás.",
+   "forras": "tananyag"
+  },
+  {
+   "id": "Q48",
+   "tipus": "egyvalasztos",
+   "kerdes": "Saját kivitelezésű alapítás-átszervezés aktiválása:",
+   "opciok": [
+    "T 111 / K 4541",
+    "T 111 / K 582",
+    "T 112 / K 582",
+    "T 111 / K 4142"
+   ],
+   "helyes": "T 111 / K 582",
+   "magyarazat": "I/5. b).",
+   "forras": "feladat"
+  }
+ ],
+ "csapdak": [
+  "A szabadalom, védjegy, szoftver, gyártási eljárás, know-how SZELLEMI TERMÉK (114), nem vagyoni értékű jog (113) – és nem 112 (az a kísérleti fejlesztés).",
+  "Bérleti jog, használati jog, licenc, koncesszió, franchise = VAGYONI ÉRTÉKŰ JOG (113).",
+  "118 = TERVEN FELÜLI ÉCS (és visszaírása), 119 = TERV SZERINTI ÉCS. Éves ÉCS: T 5711 / K 119; terven felüli: T 8663 / K 118; kivezetéskor a halmozott terv szerinti ÉCS T 119.",
+  "A terven felüli ÉCS NEM írható vissza az üzleti vagy cégértéknél – az alapítás-átszervezésnél viszont igen (a beadott tesztben ez volt a hiba).",
+  "Terven felüli ÉCS ráfordítása 8663 (immateriális), nem 8664 (tárgyi), nem 572; visszaírás 9663, nem 9664 és nem 96.",
+  "Immateriális javakra adott előleg: 351 (a 35. adott előlegeknél, nem 11x – 116 nincs!), de a mérlegben az A.I.6. soron; 352 a beruházásra adott előleg.",
+  "Előlegnél nincs terv szerinti és terven felüli ÉCS – csak értékvesztés.",
+  "Értékhelyesbítés csak 113 és 114; K 4171 (értékelési tartalék), nem eredmény; nem változtatja a könyv szerinti értéket.",
+  "Értékhelyesbítés: mérlegKÉSZÍTÉSKORI piaci érték, de FORDULÓNAPI dátum.",
+  "Vagyoni értékű jog saját előállítással nem aktiválható; az ingatlanhoz kapcsolódó vagyoni értékű jog tárgyi eszköz.",
+  "Alap- és alkalmazott kutatás nem aktiválható, csak a kísérleti fejlesztés.",
+  "Alapítás-átszervezés aktiválása nem kötelező; aktiválásnál lekötött tartalék T 413 / K 4142 kell; nem aktiválásnál költség és nincs lekötött tartalék.",
+  "Cégvásárlásnál az eszközöket PIACI értéken vesszük fel, a mérlegérték (2 000 M) csak zavaró adat.",
+  "Negatív cégérték nem eszköz: 9695 egyéb bevétel, majd 4834 passzív elhatárolás, 5–10 év alatt feloldva.",
+  "Térítés nélkül átvett jószág: K 9647, elhatárolás 48331 (nem 482 – az költségek elhatárolása); a feloldás összege = a tárgyévi ÉCS; az átadó áfája K 479.",
+  "Térítés nélküli átadás: nettó érték 8647 (nem 869); kiszámlázott áfa T 368 (nem 36); a piaci érték után.",
+  "Apport: 366 / 368 / 9642 (nyereség) vagy 8642 (veszteség) / 172 – nem 36, 96, 17 szinten.",
+  "Értékesítés: nyereség K 961, veszteség T 861 (nem 91–92, nem 911).",
+  "Időkorlátok: alapítás-átszervezés és kísérleti fejlesztés ≤5 év, cégérték 5–10 év, 113/114 nincs korlát; 200 eFt alatti egyösszegű leírás csak 113/114.",
+  "Időarányosítás: az ÉCS a használatba vételtől (koncesszió: játékengedély kezdete júl. 1., nem a megnyerés ápr. 1.) indul."
+ ]
+}

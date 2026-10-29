@@ -12,6 +12,7 @@ CLAUDE.md           ez a fájl: a hub szabályai
   CLAUDE.md         a tárgy saját leírása: fájlok, bővítés, tananyag-sajátosságok
 statistics/         Statistics (angol nyelvű)
 analysis-methodology/  Elemzés módszertan (magyar nyelvű)
+financial-accounting/  Pénzügyi számvitel I. (magyar; nem generátoros, a tartalom az anyag/ JSON-adatbázis)
 ```
 Egy tárgyon dolgozva **először a tárgy `CLAUDE.md`-jét olvasd el**.
 
